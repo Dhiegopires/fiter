@@ -1,0 +1,654 @@
+{
+  "semantic": {
+    "type": {
+      "family": {
+        "display": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_FAMILY"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "text",
+          "$value": "{brand.font.family.display}"
+        },
+        "body": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_FAMILY"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "text",
+          "$value": "{brand.font.family.body}"
+        },
+        "ui": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_FAMILY"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "text",
+          "$value": "{brand.font.family.ui}"
+        }
+      },
+      "size": {
+        "display": {
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.display.2xl}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.display.xl}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.display.lg}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.display.md}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.display.sm}"
+          },
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.display.xs}"
+          }
+        },
+        "body": {
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.body.2xl}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.body.xl}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.body.lg}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.body.md}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.body.sm}"
+          },
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.body.xs}"
+          }
+        },
+        "ui": {
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.ui.xs}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.ui.sm}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.ui.md}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.ui.lg}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.ui.xl}"
+          },
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "FONT_SIZE"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.size.ui.2xl}"
+          }
+        }
+      },
+      "line": {
+        "display": {
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.display.xs}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.display.sm}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.display.md}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.display.lg}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.display.xl}"
+          },
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.display.2xl}"
+          }
+        },
+        "body": {
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.body.xs}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.body.md}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.body.md}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.body.lg}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.body.xl}"
+          },
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.display.2xl}"
+          }
+        },
+        "ui": {
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.ui.xs}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.ui.sm}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.ui.md}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.ui.lg}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.ui.xl}"
+          },
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LINE_HEIGHT"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.line.ui.2xl}"
+          }
+        }
+      },
+      "tracking": {
+        "display": {
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.display.xs}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.display.sm}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.display.md}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.display.lg}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.display.xl}"
+          },
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.display.2xl}"
+          }
+        },
+        "body": {
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.body.xs}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.body.sm}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.body.md}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.body.lg}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.body.xl}"
+          },
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.body.2xl}"
+          }
+        },
+        "ui": {
+          "xs": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.ui.xs}"
+          },
+          "sm": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.ui.sm}"
+          },
+          "md": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.ui.md}"
+          },
+          "lg": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.ui.lg}"
+          },
+          "xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.ui.xl}"
+          },
+          "2xl": {
+            "$extensions": {
+              "com.figma.scopes": [
+                "LETTER_SPACING"
+              ],
+              "com.figma.hiddenFromPublishing": false
+            },
+            "$type": "number",
+            "$value": "{brand.font.tracking.ui.2xl}"
+          }
+        }
+      },
+      "weight": {
+        "light": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_WEIGHT"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "number",
+          "$value": "{brand.font.weight.light}"
+        },
+        "regular": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_WEIGHT"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "number",
+          "$value": "{brand.font.weight.regular}"
+        },
+        "medium": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_WEIGHT"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "number",
+          "$value": "{brand.font.weight.medium}"
+        },
+        "semibold": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_WEIGHT"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "number",
+          "$value": "{brand.font.weight.semibold}"
+        },
+        "bold": {
+          "$extensions": {
+            "com.figma.scopes": [
+              "FONT_WEIGHT"
+            ],
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "number",
+          "$value": "{brand.font.weight.bold}"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "tokenSetOrder": [
+    "core/base",
+    "palette/base",
+    "brand/vellumwire",
+    "brand/wireframe",
+    "semantic/size/desktop",
+    "semantic/size/tablet",
+    "semantic/size/mobile",
+    "semantic/type/desktop",
+    "semantic/type/tablet",
+    "semantic/type/mobile",
+    "semantic/color/light",
+    "semantic/color/dark"
+  ]
+}

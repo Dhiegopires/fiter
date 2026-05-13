@@ -1,0 +1,1898 @@
+{
+  "palette": {
+    "color": {
+      "green": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f6fef9"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ecfdf3"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#dcfae6"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#abefc6"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#75e0a7"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#47cd89"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#17b26a"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#079455"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#067647"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#085d3a"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#074d31"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#053321"
+        }
+      },
+      "stone": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fffffe"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fafaf9"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f5f5f4"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e7e5e4"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d6d3d1"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a8a29e"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#78716c"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#57534e"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#44403c"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#292524"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#1c1917"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0c0a09"
+        }
+      },
+      "red": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fffbfa"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fef3f2"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fee4e2"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fecdca"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fca19a"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f97066"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f04438"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d92d20"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#b42318"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#912018"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#7a271a"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#55160c"
+        }
+      },
+      "yellow": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fffcf5"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fefce8"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fef9c3"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fef08a"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fde047"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#facc15"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#eab308"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ca8a04"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a16207"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#854d0e"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#713f12"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#422006"
+        }
+      },
+      "lime": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fafef5"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f3fee7"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e3fbcc"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d0f8ab"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a6ef67"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#85e13a"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#66c61c"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#4ca30d"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#3b7c0f"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#326212"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#2b5314"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#15290a"
+        }
+      },
+      "teal": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f6fefc"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f0fdf9"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ccfbef"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#99f6e0"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#5fe9d0"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#2ed3b7"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#15b79e"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0e9384"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#107569"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#125d56"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#134e48"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0a2926"
+        }
+      },
+      "blue": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f5f8ff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#eff4ff"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d1e0ff"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#b2ccff"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#84adff"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#528bff"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#2970ff"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#155eef"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#004eeb"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0040c1"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#00359e"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#002266"
+        }
+      },
+      "fuchsia": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fefaff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fdf4ff"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fbe8ff"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f6d0fe"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#eeaafd"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e478fa"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d444f1"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ba24d5"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#9f1ab1"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#821890"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#6f1877"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#47104c"
+        }
+      },
+      "rose": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fff3f4"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fff1f2"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ffe4e6"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fecdd3"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fda4af"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fb7185"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f43f5e"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e11d48"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#be123c"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#9f1239"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#881337"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#4c0519"
+        }
+      },
+      "violet": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f9f8ff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f5f3ff"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ede9fe"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ddd6fe"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#c4b5fd"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a78bfa"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#8b5cf6"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#7c3aed"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#6d28d9"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#5b21b6"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#4c1d95"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#2e1065"
+        }
+      },
+      "purple": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f9f8ff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#faf5ff"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f3e8ff"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e9d5ff"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d8b4fe"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#c084fc"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a855f7"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#9333ea"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#7e22ce"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#6b21a8"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#581c87"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#3b0764"
+        }
+      },
+      "pink": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fff4fa"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fdf2f8"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fce7f3"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fbcfe8"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f9a8d4"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f472b6"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ec4899"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#db2777"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#be185d"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#9d174d"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#831843"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#500724"
+        }
+      },
+      "sky": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f4fbff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f0f9ff"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e0f2fe"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#bae6fd"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#7dd3fc"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#38bdf8"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0ea5e9"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0284c7"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0369a1"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#075985"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0c4a6e"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#082f49"
+        }
+      },
+      "cyan": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f4fbff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ecfeff"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#cffafe"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a5f3fc"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#67e8f9"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#22d3ee"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#06b6d4"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0891b2"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0e7490"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#155e75"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#164e63"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#083344"
+        }
+      },
+      "indigo": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f4f7ff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#eef2ff"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e0e7ff"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#c7d2fe"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a5b4fc"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#818cf8"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#6366f1"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#4f46e5"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#4338ca"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#3730a3"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#312e81"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#1e1b4b"
+        }
+      },
+      "emerald": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f4fffa"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ecfdf5"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d1fae5"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a7f3d0"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#6ee7b7"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#34d399"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#10b981"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#059669"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#047857"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#065f46"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#064e3b"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#022c22"
+        }
+      },
+      "amber": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fffcf5"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fffbeb"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fef3c7"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fde68a"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fcd34d"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fbbf24"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f59e0b"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d97706"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#b45309"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#92400e"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#78350f"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#451a03"
+        }
+      },
+      "orange": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fffaf4"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fff7ed"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ffedd5"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fed7aa"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fdba74"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fb923c"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f97316"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#ea580c"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#c2410c"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#9a3412"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#7c2d12"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#431407"
+        }
+      },
+      "grey": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fffefe"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fafafa"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f5f5f5"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e5e5e5"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d4d4d4"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a3a3a3"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#737373"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#525252"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#404040"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#262626"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#171717"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0a0a0a"
+        }
+      },
+      "zinc": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fdfdff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f4f4f5"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e4e4e7"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d4d4d8"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d4d4d4"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#a1a1aa"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#71717a"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#52525b"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#3f3f46"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#27272a"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#18181b"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#09090b"
+        }
+      },
+      "slate": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fdfeff"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f8fafc"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f1f5f9"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#e2e8f0"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#cbd5e1"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#94a3b8"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#64748b"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#475569"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#334155"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#1e293b"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0f172a"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#020617"
+        }
+      },
+      "tinted": {
+        "25": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#fcfcfd"
+        },
+        "50": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f9fafb"
+        },
+        "100": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#f2f4f7"
+        },
+        "200": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#eaecf0"
+        },
+        "300": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#d0d5dd"
+        },
+        "400": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#98a2b3"
+        },
+        "500": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#667085"
+        },
+        "600": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#475467"
+        },
+        "700": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#344054"
+        },
+        "800": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#182230"
+        },
+        "900": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#101828"
+        },
+        "950": {
+          "$extensions": {
+            "com.figma.hiddenFromPublishing": false
+          },
+          "$type": "color",
+          "$value": "#0c111d"
+        }
+      }
+    }
+  }
+}
