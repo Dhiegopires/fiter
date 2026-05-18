@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como a IA prevê o turnover antes dele acontecer | Fiter Blog</title>
+    <meta name="description" content="Entenda o padrão comportamental que colaboradores demonstram até 90 dias antes de pedirem demissão e como a IA da Fiter identifica esses sinais.">
+    
+    <!-- Adicionando o plugin Typography para estilizar os posts do blog automaticamente -->
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-base': '#050505',
+                        'bg-surface': '#0f0f0f',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#a3a3a3',
+                        'text-tertiary': '#737373',
+                        'border-subtle': '#171717',
+                        'border-default': '#262626',
+                        'accent-brand': '#3b82f6',
+                    }
+                },
+                fontFamily: {
+                    sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #ffffff; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased font-sans">
+
+    <!-- NAV -->
+    <nav class="border-b border-border-subtle py-6 bg-bg-base/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-serif italic text-text-primary">Fiter.</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="produto.html" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Produto</a>
+                <a href="blog.html" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Blog</a>
+            </div>
+            <a href="#" class="inline-flex items-center justify-center px-5 py-2 rounded-full font-medium bg-accent-brand text-white text-sm hover:bg-blue-600 transition-colors">Solicitar Demo</a>
+        </div>
+    </nav>
+
+    <!-- POST HEADER -->
+    <article class="pt-20 pb-20 bg-bg-base">
+        <div class="max-w-3xl mx-auto px-6 fade-in">
+            <!-- Breadcrumbs -->
+            <div class="flex items-center gap-2 text-sm text-text-tertiary mb-10 font-medium">
+                <a href="index.html" class="hover:text-text-primary">Home</a>
+                <span>›</span>
+                <a href="blog.html" class="hover:text-text-primary">Blog</a>
+                <span>›</span>
+                <span class="text-accent-brand">Turnover</span>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-serif text-text-primary mb-8 leading-snug">Como a IA prevê o turnover antes dele acontecer</h1>
+            
+            <div class="flex items-center gap-4 text-sm text-text-secondary border-b border-border-subtle pb-10 mb-10">
+                <div class="w-12 h-12 rounded-full bg-border-default overflow-hidden flex items-center justify-center font-bold text-text-tertiary">
+                    EF
+                </div>
+                <div>
+                    <div class="font-medium text-text-primary text-base">Equipe Fiter</div>
+                    <div>14 de Maio, 2026 · 5 min de leitura</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- THUMBNAIL (Opcional) -->
+        <div class="max-w-4xl mx-auto px-6 mb-12 fade-in">
+            <div class="w-full aspect-video bg-border-subtle rounded-2xl flex items-center justify-center">
+                <p class="text-text-tertiary font-mono">Imagem de Capa do Artigo</p>
+            </div>
+        </div>
+
+        <!-- POST CONTENT (Usando Prose do Tailwind) -->
+        <div class="max-w-3xl mx-auto px-6 prose prose-invert prose-lg prose-a:text-accent-brand prose-headings:font-serif fade-in">
+            <p class="lead text-xl text-text-primary">
+                A maioria das demissões voluntárias não é surpresa — só não foi detectada a tempo. Entenda como o monitoramento contínuo transforma a forma como o RH atua.
+            </p>
+            
+            <p>
+                Substituir um colaborador custa entre 50% e 200% do salário anual — recrutamento, treinamento, curva de aprendizado e impacto na equipe. Mas o problema não é a demissão em si. É que ela quase sempre poderia ter sido evitada se o sinal de desengajamento tivesse sido captado três meses antes.
+            </p>
+            
+            <h2>O rastro de dados do desengajamento</h2>
+            <p>
+                O colaborador que está prestes a sair deixa rastros antes de tomar a decisão. Queda na taxa de resposta aos pulse surveys, alteração nos padrões de avaliação da liderança, e alertas de saúde mental ou burnout. 
+            </p>
+            <blockquote>
+                <p>Uma conversa de carreira no momento certo custa R$ 0. Um processo seletivo emergencial pode custar dezenas de milhares de reais.</p>
+            </blockquote>
+
+            <h2>Como funciona a predição na prática?</h2>
+            <p>A Inteligência Artificial da Fiter cruza os sinais dos pulse surveys e gera um <strong>índice de risco por área</strong> — não por nome individual para proteger a privacidade, mas por cluster de comportamento.</p>
+            <ul>
+                <li><strong>Mapeamento em Tempo Real:</strong> Esqueça a pesquisa anual. A análise é semanal/quinzenal.</li>
+                <li><strong>Ação Antecipada:</strong> O gestor de RH recebe o alerta antes que a decisão de sair seja consolidada.</li>
+                <li><strong>Soluções Sugeridas:</strong> A plataforma sugere conversas 1:1, realinhamento de expectativas ou pausas.</li>
+            </ul>
+
+            <p>A IA entrega o diagnóstico, mas a decisão sempre é do RH. É a tecnologia trabalhando para potencializar a capacidade humana de liderar.</p>
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#020202] pt-20 pb-10 border-t border-border-subtle">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif italic text-text-primary mb-4">Fiter.</h2>
+            <p class="text-sm text-text-secondary mb-6">Assine nossa newsletter para receber mais insights como este.</p>
+            <div class="flex max-w-md mx-auto gap-2">
+                <input type="email" placeholder="Seu melhor e-mail" class="flex-1 bg-bg-surface border border-border-default rounded-full px-4 py-2 text-white focus:outline-none focus:border-accent-brand">
+                <button class="bg-text-primary text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors">Assinar</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

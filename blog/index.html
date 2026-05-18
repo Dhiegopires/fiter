@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog sobre Engajamento e RH | Fiter</title>
+    <meta name="description" content="Artigos, estudos de caso e melhores práticas sobre engajamento de colaboradores, saúde mental no trabalho e clima escolar.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-base': '#050505',
+                        'bg-surface': '#0f0f0f',
+                        'bg-surface-hover': '#171717',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#a3a3a3',
+                        'text-tertiary': '#737373',
+                        'border-subtle': '#171717',
+                        'border-default': '#262626',
+                        'border-strong': '#404040',
+                        'accent-brand': '#3b82f6',
+                        'accent-brand-hover': '#2563eb',
+                        'accent-text': '#ffffff',
+                    }
+                },
+                fontFamily: {
+                    sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    mono: ['"Fira Code"', 'ui-monospace', 'monospace'],
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .btn { @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300; }
+            .btn-primary { @apply bg-accent-brand text-accent-text hover:bg-accent-brand-hover shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]; }
+            .card { @apply bg-bg-surface border border-border-default rounded-2xl transition-all duration-300 hover:border-border-strong; }
+        }
+        body { background-color: #050505; color: #ffffff; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased font-sans">
+
+    <!-- NAV FIXO -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent py-6 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-serif italic text-text-primary">Fiter.</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="produto.html" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Produto</a>
+                <a href="#" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Educação</a>
+                <a href="blog.html" class="text-sm font-medium text-accent-brand hover:text-accent-brand transition-colors">Blog</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="#" class="btn btn-primary text-sm px-5 py-2">Solicitar Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BLOG -->
+    <section class="pt-40 pb-20 bg-bg-base border-b border-border-subtle relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.15)_0%,transparent_60%)]"></div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10 fade-in">
+            <h1 class="text-5xl md:text-6xl font-serif text-text-primary mb-6">Fiter Insights</h1>
+            <p class="text-xl text-text-secondary max-w-2xl mx-auto">Dados, neurociência e estratégias para transformar o clima e reter os melhores talentos.</p>
+        </div>
+    </section>
+
+    <!-- BLOG GRID -->
+    <section class="py-24 bg-bg-surface">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Artigo 1 -->
+            <a href="post-template.html" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group">
+                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH Corporativo</div>
+                    <i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>
+                </div>
+                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">Como a IA prevê o turnover antes dele acontecer</h3>
+                <p class="text-text-secondary mb-6 flex-1">Entenda o padrão comportamental que colaboradores demonstram até 90 dias antes de pedirem demissão e como agir.</p>
+                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
+                    <span>14 de Maio, 2026</span>
+                    <span>5 min de leitura</span>
+                </div>
+            </a>
+
+            <!-- Artigo 2 -->
+            <a href="post-template.html" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 100ms;">
+                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Educação</div>
+                    <i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>
+                </div>
+                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">Sinais ocultos da evasão escolar</h3>
+                <p class="text-text-secondary mb-6 flex-1">A evasão não acontece do dia para a noite. Veja como medir o clima na sala de aula pode antecipar a perda de alunos.</p>
+                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
+                    <span>10 de Maio, 2026</span>
+                    <span>4 min de leitura</span>
+                </div>
+            </a>
+
+            <!-- Artigo 3 -->
+            <a href="post-template.html" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 200ms;">
+                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Cultura</div>
+                    <i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>
+                </div>
+                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">Pesquisa Anual x Pulse Survey</h3>
+                <p class="text-text-secondary mb-6 flex-1">Por que olhar para uma fotografia de 6 meses atrás não vai te ajudar a liderar sua equipe hoje.</p>
+                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
+                    <span>02 de Maio, 2026</span>
+                    <span>7 min de leitura</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#020202] pt-20 pb-10 border-t border-border-subtle">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-serif italic text-text-primary mb-4">Fiter.</h2>
+            <p class="text-sm text-text-secondary">© 2026 Fiter. HTML e CSS Puro.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 20) nav.classList.add('bg-bg-base/80', 'backdrop-blur-md', 'border-border-subtle', 'py-4');
+            else nav.classList.remove('bg-bg-base/80', 'backdrop-blur-md', 'border-border-subtle', 'py-4');
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

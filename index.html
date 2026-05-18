@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software de Engajamento de Colaboradores | Fiter</title>
+    <meta name="description" content="Meça felicidade, engajamento e saúde mental com IA e neurociência. Pulse survey em 8 cliques via WhatsApp, predição de turnover em tempo real.">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Fiter",
+      "url": "https://www.fiter.com.br",
+      "description": "DeepTech com IA e neurociência para medir felicidade e engajamento de colaboradores"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body data-theme="base">
+
+    <!-- NAV -->
+    <nav class="fixed top-0 left-0 right-0 z-50 py-6" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-default);">
+        <div class="ds-container flex items-center justify-between px-6">
+            <a href="/" style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); text-decoration: none;">Fiter.</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 0.875rem;">Home</a>
+                <div class="relative group">
+                    <a href="/produtos" class="flex items-center gap-1" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; cursor: pointer;">
+                        Produtos <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+                    </a>
+                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 0.5rem; width: max-content; min-width: 220px; display: flex; flex-direction: column; gap: 0.25rem;">
+                            <a href="/produtos/pulse" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Fiter Pulse</a>
+                            <a href="/produtos/nr01" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">NR-01</a>
+                            <a href="/produtos/transparencia" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Portal de Transparência</a>
+                            <a href="/produtos/guia-riscos-psicossociais" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Guia de Riscos Psicossociais</a>
+                            <a href="/produtos/ebook-riscos-psicossociais" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">E-book</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/blog" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Blog</a>
+                <a href="/contato" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Contato</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="/contato" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Agendar demonstração</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content" style="padding-top: 120px;">
+        <div class="ds-container px-6">
+
+            <!-- HERO -->
+            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 70vh; margin-bottom: 8rem;">
+                <div class="flex-1 z-10">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-surface); margin-bottom: 2rem;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-brand); box-shadow: 0 0 10px var(--accent-glow);"></span>
+                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">DeepTech validada por USP e Mackenzie</span>
+                    </div>
+                    <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
+                        8 cliques. 2 minutos.<br>Seu time revelado.
+                    </h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 550px; margin-bottom: 2.5rem; line-height: 1.6;">
+                        A Fiter mede felicidade, engajamento e riscos em tempo real — via WhatsApp, sem app, com IA que age antes do problema chegar.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/contato" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Ver demonstração</a>
+                        <a href="/contato" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+                    </div>
+                </div>
+                <div class="flex-1 hidden md:flex items-center justify-center relative w-full h-full z-0">
+                    <style>
+                        @keyframes float-hero {
+                            0% { transform: translateY(0px); }
+                            50% { transform: translateY(-15px); }
+                            100% { transform: translateY(0px); }
+                        }
+                    </style>
+                    <div style="position: relative; width: 100%; max-width: 500px; animation: float-hero 6s ease-in-out infinite;">
+                        <div style="position: absolute; inset: -30px; background: radial-gradient(circle at center, var(--accent-brand) 0%, transparent 60%); opacity: 0.2; filter: blur(40px); z-index: -1;"></div>
+                        <img src="/assets/img/hero_dashboard.png" alt="Dashboard Fiter em tempo real" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg), 0 0 30px var(--glow-subtle); display: block;">
+                    </div>
+                </div>
+            </section>
+
+            <!-- PROVA SOCIAL -->
+            <section class="ds-section" style="margin-bottom: 8rem; padding: 4rem 0; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); overflow: hidden; background: var(--bg-surface); border-radius: var(--radius-lg);">
+                <div class="flex flex-col items-center text-center mb-10">
+                    <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">De startups à Marinha do Brasil</p>
+                    <h2 style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--text-primary); font-style: italic;">+500.000 pessoas medidas</h2>
+                </div>
+                <style>
+                    @keyframes scroll-logos { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+                    .logo-marquee { display: flex; width: 200%; animation: scroll-logos 25s linear infinite; }
+                    .logo-marquee:hover { animation-play-state: paused; }
+                    .logo-item { flex: 1; display: flex; justify-content: center; align-items: center; padding: 0 2rem; opacity: 0.4; filter: grayscale(100%); transition: all 0.4s ease; font-size: 1.75rem; color: var(--text-secondary); }
+                    .logo-item:hover { opacity: 1; filter: grayscale(0%); color: var(--text-primary); transform: scale(1.05); }
+                    .marquee-mask { mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
+                </style>
+                <div class="marquee-mask" style="overflow: hidden; white-space: nowrap; position: relative;">
+                    <div class="logo-marquee">
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-style: italic;">Kroton</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-style: italic;">Kroton</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- MÉTRICAS -->
+            <section class="ds-section" style="margin-bottom: 8rem; background: var(--bg-surface); padding: 4rem 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
+                <div class="text-center mb-12">
+                    <h2 class="ds-section-title">Números que não precisam de slide deck</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                    <div>
+                        <div style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--accent-brand); font-style: italic; margin-bottom: 0.5rem; line-height: 1;">500k+</div>
+                        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.5;">pessoas medidas<br><span style="font-size: 0.85rem;">Em organizações de todos os portes, do Brasil inteiro.</span></p>
+                    </div>
+                    <div>
+                        <div style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--accent-brand); font-style: italic; margin-bottom: 0.5rem; line-height: 1;">8</div>
+                        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.5;">cliques para uma pesquisa<br><span style="font-size: 0.85rem;">Da criação ao envio. Sem TI, sem burocracia.</span></p>
+                    </div>
+                    <div>
+                        <div style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--accent-brand); font-style: italic; margin-bottom: 0.5rem; line-height: 1;">2 min</div>
+                        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.5;">tempo de resposta<br><span style="font-size: 0.85rem;">Via WhatsApp. A taxa de adesão agradece.</span></p>
+                    </div>
+                    <div>
+                        <div style="font-family: var(--font-serif); font-size: 3.5rem; color: var(--accent-brand); font-style: italic; margin-bottom: 0.5rem; line-height: 1;">92%</div>
+                        <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.5;">menos tempo no NR1<br><span style="font-size: 0.85rem;">O Agente NR1 faz em minutos o que levava meses.</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- GRID DE PRODUTOS -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="flex flex-col items-center text-center mb-12">
+                    <h2 class="ds-section-title" style="margin-bottom: 1rem;">Uma plataforma. Cinco produtos. Resultado em tempo real.</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px;">Cada produto resolve um problema específico. Juntos, entregam a visão completa do capital humano da sua organização.</p>
+                </div>
+                <div class="ds-card-grid">
+                    <!-- Pulse -->
+                    <div class="card flex flex-col h-full" style="background: linear-gradient(180deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default);">
+                        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Engajamento contínuo</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary); font-style: italic;">Pulse</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; flex-grow: 1; line-height: 1.6;">Meça felicidade, fit cultural e saúde mental de cada colaborador em tempo real. Pulse survey via WhatsApp, sem app, em 2 minutos.</p>
+                        <a href="/produtos/pulse" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Conhecer o Pulse →</a>
+                    </div>
+                    <!-- Agente NR1 -->
+                    <div class="card flex flex-col h-full" style="background: linear-gradient(180deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default);">
+                        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Conformidade automática</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary); font-style: italic;">Agente NR1</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; flex-grow: 1; line-height: 1.6;">O primeiro robô do Brasil para NR1. Laudo de risco por cargo em minutos, integrado ao Ministério do Trabalho. 92% mais rápido que o processo manual.</p>
+                        <a href="/produtos/nr01" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Conhecer o Agente NR1 →</a>
+                    </div>
+                    <!-- Pesquisa de Clima -->
+                    <div class="card flex flex-col h-full" style="background: linear-gradient(180deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default);">
+                        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Diagnóstico mensal</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary); font-style: italic;">Pesquisa de Clima</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; flex-grow: 1; line-height: 1.6;">Não espere um ano para saber o que seu time pensa. Pesquisa anônima via WhatsApp, todo mês, com planos de ação gerados por IA.</p>
+                        <a href="/produtos" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Conhecer a Pesquisa de Clima →</a>
+                    </div>
+                    <!-- Ouvidoria -->
+                    <div class="card flex flex-col h-full" style="background: linear-gradient(180deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default);">
+                        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Conformidade legal</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary); font-style: italic;">Ouvidoria</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; flex-grow: 1; line-height: 1.6;">Canal seguro e anônimo para denúncias — exigido por lei. Classificação automática por tipo, protocolo gerado na hora, histórico para compliance.</p>
+                        <a href="/produtos" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Conhecer a Ouvidoria →</a>
+                    </div>
+                    <!-- Educação -->
+                    <div class="card flex flex-col h-full" style="background: linear-gradient(180deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default);">
+                        <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #a855f7; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Retenção de alunos</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary); font-style: italic;">Pulse Educação</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 2rem; flex-grow: 1; line-height: 1.6;">Preveja a evasão antes que o aluno desapareça. Índice de Felicidade na Educação (IFE) em 8 cliques, com alertas automáticos para coordenadores.</p>
+                        <a href="/solucoes/educacao" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Conhecer a solução para Educação →</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CREDIBILIDADE CIENTÍFICA -->
+            <section class="ds-section" style="margin-bottom: 8rem; padding: 4rem 2rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="flex-1">
+                        <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.1em;">Base científica</div>
+                        <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); color: var(--text-primary); margin-bottom: 1.5rem; line-height: 1.1;">Não é startup. É deeptech com DNA na USP.</h2>
+                        <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.6;">A metodologia da Fiter foi desenvolvida e validada ao longo de anos de pesquisa científica — teses de mestrado, parceria com USP e Mackenzie, e publicada no livro <em>Felicidade: Ciência de Dados</em>.</p>
+                        <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.6;">As perguntas não foram escritas por uma equipe de produto. Foram testadas cientificamente para medir o que dizem medir — sem viés, sem achismo.</p>
+                        <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
+                            <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Metodologia publicada em livro acadêmico</li>
+                            <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Validada em teses de mestrado (USP e Mackenzie)</li>
+                            <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Base científica em neurociência e ciência comportamental</li>
+                            <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Primeiro produto contratado pela divisão de submarinos nucleares da Marinha do Brasil</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- COMO FUNCIONA -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-16">
+                    <h2 class="ds-section-title">Três passos. Do dado à decisão.</h2>
+                </div>
+                <div class="ds-card-grid relative">
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-[var(--border-default)] to-transparent -translate-y-1/2 z-0"></div>
+                    <div class="card relative z-10 transition-transform duration-300 hover:-translate-y-2" style="background: var(--bg-surface); border: 1px solid var(--border-default); box-shadow: var(--shadow-md);">
+                        <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--bg-base); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 1.25rem; color: var(--accent-brand); margin-bottom: 1.5rem; box-shadow: 0 0 20px var(--accent-glow);">01</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary);">Meça</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Pulse survey em 8 cliques, enviado via WhatsApp. 2 minutos de resposta. Sem app para baixar, sem login para criar. A coleta é automática e a frequência é configurável.</p>
+                    </div>
+                    <div class="card relative z-10 transition-transform duration-300 hover:-translate-y-2" style="background: var(--bg-surface); border: 1px solid var(--border-default); box-shadow: var(--shadow-md);">
+                        <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--bg-base); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 1.25rem; color: var(--accent-brand); margin-bottom: 1.5rem; box-shadow: 0 0 20px var(--accent-glow);">02</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary);">Entenda</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">A IA processa os dados e entrega diagnóstico em tempo real — por área, por liderança, por turno. Não é nota. É o porquê da nota.</p>
+                    </div>
+                    <div class="card relative z-10 transition-transform duration-300 hover:-translate-y-2" style="background: var(--bg-surface); border: 1px solid var(--border-default); box-shadow: var(--shadow-md);">
+                        <div style="width: 3.5rem; height: 3.5rem; border-radius: 50%; background: var(--bg-base); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-family: var(--font-mono); font-size: 1.25rem; color: var(--accent-brand); margin-bottom: 1.5rem; box-shadow: 0 0 20px var(--accent-glow);">03</div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 1rem; color: var(--text-primary);">Aja</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Planos de ação gerados automaticamente, calibrados para o diagnóstico específico de cada equipe. Sem precisar de analista. Sem esperar a reunião de RH.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DEPOIMENTOS -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <h2 class="ds-section-title text-center" style="margin-bottom: 3rem;">O que dizem os clientes</h2>
+                <div class="ds-card-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                    <div class="card" style="padding: 2.5rem; border: 1px solid var(--border-default); background: var(--bg-surface); display: flex; flex-direction: column;">
+                        <div style="color: var(--accent-brand); margin-bottom: 1rem;"><i data-lucide="quote" style="width: 32px; height: 32px; opacity: 0.5;"></i></div>
+                        <p style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 2rem; line-height: 1.5; font-style: italic; flex-grow: 1;">"A Fiter transformou a forma como olhamos para a nossa operação. Antes, reagíamos aos desligamentos. Hoje, conseguimos prever e reter os nossos melhores talentos."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-default); padding-top: 1.5rem;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg-base); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="user" style="width: 20px; height: 20px; color: var(--text-secondary);"></i>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">[Nome — confirmar com Sergio]</strong>
+                                <span style="color: var(--text-secondary); font-size: 0.85rem;">Diretor de RH, Braspress / Kroton / Arcor</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="padding: 2.5rem; border: 1px solid var(--border-default); background: var(--bg-surface); display: flex; flex-direction: column;">
+                        <div style="color: var(--accent-brand); margin-bottom: 1rem;"><i data-lucide="quote" style="width: 32px; height: 32px; opacity: 0.5;"></i></div>
+                        <p style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 2rem; line-height: 1.5; font-style: italic; flex-grow: 1;">"Tínhamos um problema sério de evasão invisível. Com o mapeamento da Fiter, passamos a intervir antes do aluno pensar em trancar a matrícula."</p>
+                        <div style="display: flex; align-items: center; gap: 1rem; border-top: 1px solid var(--border-default); padding-top: 1.5rem;">
+                            <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--bg-base); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center;">
+                                <i data-lucide="user" style="width: 20px; height: 20px; color: var(--text-secondary);"></i>
+                            </div>
+                            <div>
+                                <strong style="color: var(--text-primary); display: block; font-size: 0.95rem;">[Nome — confirmar com Sergio]</strong>
+                                <span style="color: var(--text-secondary); font-size: 0.85rem;">Reitor, USP / Fatec</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-12">
+                    <h2 class="ds-section-title">Perguntas frequentes</h2>
+                </div>
+                <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden;">
+                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
+                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">O que a Fiter mede exatamente? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
+                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">A Fiter mede felicidade, engajamento, fit cultural, saúde mental e riscos organizacionais. A coleta é feita via pulse survey enviado pelo WhatsApp — em 8 cliques e 2 minutos. Os dados são processados por IA com metodologia validada por USP e Mackenzie, e os resultados aparecem em tempo real no painel do gestor.</div>
+                    </details>
+                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
+                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">Como a Fiter é diferente do GPTW ou de uma pesquisa de clima tradicional? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
+                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">O GPTW faz uma pesquisa por ano. A Fiter faz todo mês — anônima, via WhatsApp, com benchmarking de mercado e planos de ação automáticos gerados por IA. Você toma decisão hoje, não no próximo relatório anual.</div>
+                    </details>
+                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
+                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">A Fiter funciona para empresas pequenas? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
+                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">Atende organizações a partir de 5 colaboradores. O modelo é modular — você contrata só o produto que faz sentido para o momento da empresa.</div>
+                    </details>
+                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
+                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">Precisa de app? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
+                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">Não. A pesquisa é enviada e respondida pelo WhatsApp. Sem app para baixar, sem login para criar, sem nenhuma fricção para o colaborador.</div>
+                    </details>
+                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
+                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">Quanto tempo leva para implementar? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
+                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">A ativação inclui assinatura, treinamento de 1h30 e importação em lote dos colaboradores. A primeira pesquisa pode ser enviada no mesmo dia.</div>
+                    </details>
+                    <details style="background: var(--bg-surface);">
+                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">Os dados dos colaboradores são confidenciais? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
+                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">Sim. A Fiter garante anonimato nas respostas e segue as exigências da LGPD. Os gestores visualizam dados agregados — nunca a resposta individual de nenhum colaborador.</div>
+                    </details>
+                </div>
+            </section>
+
+            <!-- CTA FINAL -->
+            <section class="ds-section" style="margin-bottom: 4rem;">
+                <div class="card" style="background: linear-gradient(135deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default); padding: 4rem; display: flex; flex-direction: column; gap: 4rem; align-items: center;">
+                    <div class="flex-1 w-full" style="text-align: center;">
+                        <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 3rem); color: var(--text-primary); margin-bottom: 1rem; line-height: 1.1; font-style: italic;">Pronto para saber o que seu time realmente sente?</h2>
+                        <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 3rem; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto;">Demonstração de 30 minutos. Sem compromisso. Com dados reais.</p>
+                    </div>
+                    <div class="flex-1 w-full" style="max-width: 480px; margin: 0 auto;">
+                        <form style="display: flex; flex-direction: column; gap: 1rem; background: var(--bg-base); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg);">
+                            <p style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 0.5rem;">Agendar demonstração</p>
+                            <div>
+                                <label style="display: block; font-size: 0.875rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase; font-size: 0.7rem;">Nome</label>
+                                <input type="text" required placeholder="Seu nome completo" style="width: 100%; background: var(--bg-surface); border: 1px solid var(--border-default); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none; transition: border-color 0.2s; font-size: 0.9rem;" onfocus="this.style.borderColor='var(--accent-brand)'" onblur="this.style.borderColor='var(--border-default)'">
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase;">Empresa</label>
+                                <input type="text" required placeholder="Nome da empresa" style="width: 100%; background: var(--bg-surface); border: 1px solid var(--border-default); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none; transition: border-color 0.2s; font-size: 0.9rem;" onfocus="this.style.borderColor='var(--accent-brand)'" onblur="this.style.borderColor='var(--border-default)'">
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase;">Segmento</label>
+                                <select required style="width: 100%; background: var(--bg-surface); border: 1px solid var(--border-default); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-secondary); outline: none; transition: border-color 0.2s; appearance: none; cursor: pointer; font-size: 0.9rem;" onfocus="this.style.borderColor='var(--accent-brand)'" onblur="this.style.borderColor='var(--border-default)'">
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="rh">RH Corporativo</option>
+                                    <option value="educacao">Educação</option>
+                                    <option value="ambos">Ambos</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label style="display: block; font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase;">E-mail corporativo</label>
+                                <input type="email" required placeholder="nome@empresa.com.br" style="width: 100%; background: var(--bg-surface); border: 1px solid var(--border-default); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none; transition: border-color 0.2s; font-size: 0.9rem;" onfocus="this.style.borderColor='var(--accent-brand)'" onblur="this.style.borderColor='var(--border-default)'">
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-animate-chars" style="width: 100%; margin-top: 0.5rem; padding: 1rem; justify-content: center;">Agendar demonstração</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="ds-footer">
+        <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+            <h2 style="font-family: var(--font-serif); font-style: italic;">Fiter.</h2>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; max-width: 480px; margin-left: auto; margin-right: auto;">DeepTech validada por USP e Mackenzie. Metodologia publicada no livro <em>Felicidade: Ciência de Dados</em>.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 2.5rem; max-width: 600px; margin: 0 auto 3rem;">
+            <div>
+                <p style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Produto</p>
+                <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+                    <a href="/produtos/pulse" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Pulse</a>
+                    <a href="/produtos/nr01" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Agente NR1</a>
+                    <a href="/produtos" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Pesquisa de Clima</a>
+                    <a href="/produtos" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Ouvidoria</a>
+                    <a href="/solucoes/educacao" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Educação</a>
+                </div>
+            </div>
+            <div>
+                <p style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Empresa</p>
+                <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+                    <a href="/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Sobre a Fiter</a>
+                    <a href="/blog" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Blog</a>
+                    <a href="/contato" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Contato</a>
+                </div>
+            </div>
+            <div>
+                <p style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Conformidade</p>
+                <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+                    <a href="#" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">LGPD</a>
+                    <a href="#" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Política de privacidade</a>
+                    <a href="#" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Termos de uso</a>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); align-items: center;">
+            <span>Mackenzie</span><span>·</span><span>ABES</span><span>·</span><span>Sebrae for Startups</span>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); text-align: center;">© 2026 Fiter. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
