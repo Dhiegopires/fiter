@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução Educação | Fiter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body data-theme="base">
+    <nav class="fixed top-0 left-0 right-0 z-50 py-6" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-default);">
+        <div class="ds-container flex items-center justify-between px-6">
+            <a href="/" style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); text-decoration: none;">Fiter.</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 0.875rem;">Home</a>
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; cursor: pointer;">
+                        Soluções <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+                    </a>
+                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 0.5rem; width: max-content; min-width: 220px; display: flex; flex-direction: column; gap: 0.25rem;">
+                            <a href="/solucoes/rh/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução RH</a>
+                            <a href="/solucoes/educacao/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução Educação</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/clientes/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Clientes</a>
+                <a href="/sobre/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Sobre</a>
+                <a href="/blog/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Blog</a>
+                <a href="/contato/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Contato</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Agendar demonstração</a>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content" style="padding-top: 120px;">
+        <div class="ds-container px-6">
+            
+            <!-- Hero -->
+            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 70vh; margin-bottom: 8rem;">
+                <div class="flex-1 z-10">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-surface); margin-bottom: 2rem;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: #a855f7; box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);"></span>
+                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Solução Educação</span>
+                    </div>
+                    <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
+                        Preveja a evasão antes<br>que ela aconteça.
+                    </h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 550px; margin-bottom: 2.5rem; line-height: 1.6;">
+                        Meça o Índice de Felicidade na Educação (IFE), preveja o risco de trancamento de matrícula e mantenha sua instituição em conformidade com o CNE 3/2025.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Solicitar demonstração</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problemas que resolve -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-16">
+                    <h2 class="ds-section-title">O que tiramos da sua frente</h2>
+                </div>
+                <div class="ds-card-grid">
+                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
+                        <i data-lucide="user-minus" style="width: 32px; height: 32px; color: #a855f7; margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Evasão Invisível</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Identifique alunos em risco de evasão através de sinais comportamentais, antes que a decisão de sair seja tomada.</p>
+                    </div>
+                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
+                        <i data-lucide="shield-alert" style="width: 32px; height: 32px; color: #a855f7; margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Conformidade CNE 3/2025</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Mantenha-se alinhado às novas diretrizes do MEC para os cursos de medicina, evitando penalidades.</p>
+                    </div>
+                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
+                        <i data-lucide="bar-chart-2" style="width: 32px; height: 32px; color: #a855f7; margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Clima Acadêmico</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Saiba o que os alunos realmente pensam sobre o curso e a instituição, com dados contínuos e não apenas anuais.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulo Detalhe -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 4rem;">
+                    <h3 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem;">Pulse Educação</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px;">O primeiro módulo desenhado exclusivamente para retenção de alunos usando IA e neurociência.</p>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                        <div>
+                            <i data-lucide="smartphone" style="width: 24px; height: 24px; color: #a855f7; margin-bottom: 1rem;"></i>
+                            <h4 style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">Fácil Adesão</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">Questionário em 8 cliques via WhatsApp. Sem necessidade de logins ou downloads de aplicativos, garantindo altas taxas de resposta.</p>
+                        </div>
+                        <div>
+                            <i data-lucide="activity" style="width: 24px; height: 24px; color: #a855f7; margin-bottom: 1rem;"></i>
+                            <h4 style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">Cálculo do IFE</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">Métrica exclusiva: Índice de Felicidade na Educação. Avalia o bem-estar e o nível de satisfação do aluno com a sua jornada acadêmica.</p>
+                        </div>
+                        <div>
+                            <i data-lucide="bell" style="width: 24px; height: 24px; color: #a855f7; margin-bottom: 1rem;"></i>
+                            <h4 style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">Alertas Automáticos</h4>
+                            <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">Coordenadores de curso recebem notificações em tempo real quando as turmas apresentam alto risco de evasão, permitindo intervenções cirúrgicas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CNE 3/2025 -->
+            <section class="ds-section" style="margin-bottom: 8rem; text-align: center; padding: 4rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
+                <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-base); margin-bottom: 1.5rem;">
+                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #a855f7; text-transform: uppercase; letter-spacing: 0.05em;">Atenção Regulamentar</span>
+                </div>
+                <h2 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem; font-style: italic;">Conformidade CNE 3/2025</h2>
+                <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">As novas resoluções do MEC exigem acompanhamento psicopedagógico e da saúde mental, com prazo crítico até Setembro para cursos de medicina.</p>
+                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none; background: #a855f7; color: white;">Adequar minha instituição agora</a>
+            </section>
+
+            <!-- Cases -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-12">
+                    <h2 class="ds-section-title">Aprovado por quem forma o Brasil</h2>
+                </div>
+                <div class="ds-card-grid">
+                    <div class="card" style="background: var(--bg-surface); padding: 3rem; border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">USP</div>
+                        <p style="color: var(--text-secondary); font-style: italic;">"Com o mapeamento da Fiter, passamos a intervir de maneira mais estratégica na jornada do aluno."</p>
+                    </div>
+                    <div class="card" style="background: var(--bg-surface); padding: 3rem; border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Fatec</div>
+                        <p style="color: var(--text-secondary); font-style: italic;">"Reduzimos significativamente os índices de abandono no primeiro semestre utilizando a predição da IA."</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementação -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-12">
+                    <h2 class="ds-section-title">Como funciona a implementação</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">1</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Assinatura</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Contrato e termos de confidencialidade.</p>
+                    </div>
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">2</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Integração</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Importação segura dos contatos dos alunos.</p>
+                    </div>
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">3</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Alinhamento</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Capacitação da coordenação pedagógica.</p>
+                    </div>
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">4</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Lançamento</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">O envio do primeiro ciclo do Pulse Educação.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="ds-footer">
+        <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+            <h2 style="font-family: var(--font-serif); font-style: italic;">Fiter.</h2>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; max-width: 480px; margin-left: auto; margin-right: auto;">DeepTech validada por USP e Mackenzie.</p>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); align-items: center;">
+            <span>Mackenzie</span><span>·</span><span>ABES</span><span>·</span><span>Sebrae for Startups</span>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); text-align: center;">© 2026 Fiter. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solução RH | Fiter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body data-theme="base">
+    <nav class="fixed top-0 left-0 right-0 z-50 py-6" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-default);">
+        <div class="ds-container flex items-center justify-between px-6">
+            <a href="/" style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); text-decoration: none;">Fiter.</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 0.875rem;">Home</a>
+                <div class="relative group">
+                    <a href="#" class="flex items-center gap-1" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; cursor: pointer;">
+                        Soluções <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+                    </a>
+                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 0.5rem; width: max-content; min-width: 220px; display: flex; flex-direction: column; gap: 0.25rem;">
+                            <a href="/solucoes/rh/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução RH</a>
+                            <a href="/solucoes/educacao/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução Educação</a>
+                        </div>
+                    </div>
+                </div>
+                <a href="/clientes/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Clientes</a>
+                <a href="/sobre/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Sobre</a>
+                <a href="/blog/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Blog</a>
+                <a href="/contato/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Contato</a>
+            </div>
+            <div class="hidden md:flex items-center gap-4">
+                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Agendar demonstração</a>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content" style="padding-top: 120px;">
+        <div class="ds-container px-6">
+            
+            <!-- Hero -->
+            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 70vh; margin-bottom: 8rem;">
+                <div class="flex-1 z-10">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-surface); margin-bottom: 2rem;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-brand); box-shadow: 0 0 10px var(--accent-glow);"></span>
+                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Solução RH Completa</span>
+                    </div>
+                    <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
+                        O RH do futuro<br>em 8 cliques e 2 minutos.
+                    </h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 550px; margin-bottom: 2.5rem; line-height: 1.6;">
+                        A Fiter oferece uma suíte modular completa para engajamento, predição de turnover, compliance NR1 e muito mais. Tudo em tempo real.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Ver demonstração</a>
+                        <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Problemas que resolve -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-16">
+                    <h2 class="ds-section-title">O que tiramos da sua frente</h2>
+                </div>
+                <div class="ds-card-grid">
+                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
+                        <i data-lucide="users-minus" style="width: 32px; height: 32px; color: var(--accent-brand); margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Turnover Surpresa</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Saiba quem está prestes a sair antes da carta de demissão. A IA identifica os sinais de desengajamento cedo.</p>
+                    </div>
+                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
+                        <i data-lucide="file-warning" style="width: 32px; height: 32px; color: var(--accent-brand); margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Risco NR1</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Laudos de risco ocupacional por cargo não precisam demorar meses. O Agente NR1 faz o cruzamento de dados em minutos.</p>
+                    </div>
+                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
+                        <i data-lucide="calendar-x" style="width: 32px; height: 32px; color: var(--accent-brand); margin-bottom: 1.5rem;"></i>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Dados Atrasados</h3>
+                        <p style="color: var(--text-secondary); line-height: 1.6;">Pesquisas de clima anuais são como ver a foto de um acidente já ocorrido. Tenha o diagnóstico mensal para agir hoje.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulos - Resumo -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-12">
+                    <h2 class="ds-section-title">Módulos da Suíte RH</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem;">Contrate o que precisar, combine como quiser.</p>
+                </div>
+                <div class="ds-card-grid">
+                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Pulse</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Engajamento contínuo</p>
+                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Mede felicidade, fit cultural e produtividade via WhatsApp.</p>
+                    </div>
+                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Agente NR1</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Conformidade ocupacional</p>
+                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Primeiro robô do Brasil focado na NR1. 92% menos tempo.</p>
+                    </div>
+                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Pesquisa de Clima</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Diagnóstico Mensal</p>
+                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Anônima, mensal, com planos de ação gerados por IA.</p>
+                    </div>
+                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
+                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Ouvidoria</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Canal de denúncias</p>
+                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Canal anônimo obrigatório por lei, com governança completa.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Módulos em Detalhe -->
+            <section class="ds-section" style="margin-bottom: 8rem; display: flex; flex-direction: column; gap: 4rem;">
+                <!-- Pulse Detalhe -->
+                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
+                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Pulse</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">A pesquisa que não cansa o colaborador.</p>
+                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> 8 cliques, 2 minutos, via WhatsApp, sem app.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Mede: felicidade, fit cultural, saúde mental, produtividade.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Gera: PDI para colaborador + painel em tempo real para RH.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> AI prevê: turnover, absenteísmo, riscos por departamento.</li>
+                    </ul>
+                </div>
+
+                <!-- NR1 Detalhe -->
+                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
+                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Agente NR1</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">Primeiro robô do Brasil focado na NR1.</p>
+                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> 92% menos tempo em análises de risco.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> 100% segurança jurídica.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Integra Ministério do Trabalho, CID e OMS.</li>
+                    </ul>
+                </div>
+
+                <!-- Pesquisa de Clima Detalhe -->
+                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
+                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Pesquisa de Clima</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">Contínua, não anual.</p>
+                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Anônima, mensal, via WhatsApp.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Benchmarking de mercado.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> IA cria planos de ação automáticos.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Diferencial vs GPTW: você age mês a mês.</li>
+                    </ul>
+                </div>
+
+                <!-- Ouvidoria Detalhe -->
+                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
+                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Ouvidoria</h3>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">Proteção legal para a sua empresa.</p>
+                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Canal anônimo de denúncias — obrigação legal.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> IA classifica ocorrências automaticamente.</li>
+                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Governança e compliance completos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Modularidade -->
+            <section class="ds-section" style="margin-bottom: 8rem; text-align: center; padding: 4rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
+                <h2 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem; font-style: italic;">Contrate só o que você precisa.<br>Escale quando quiser.</h2>
+                <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">Nossa suíte é 100% modular. Você pode começar apenas com a Ouvidoria ou assinar a suíte completa com desconto.</p>
+                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+            </section>
+
+            <!-- Implementação -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="text-center mb-12">
+                    <h2 class="ds-section-title">Como funciona a implementação</h2>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">1</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Assinatura</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Contrato digital rápido.</p>
+                    </div>
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">2</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Onboarding CS</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Alinhamento e importação de base.</p>
+                    </div>
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">3</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Treinamento</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">1h30 para capacitar os gestores.</p>
+                    </div>
+                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                        <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">4</div>
+                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Go Live</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Primeira pesquisa no ar.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="ds-footer">
+        <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+            <h2 style="font-family: var(--font-serif); font-style: italic;">Fiter.</h2>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; max-width: 480px; margin-left: auto; margin-right: auto;">DeepTech validada por USP e Mackenzie.</p>
+        </div>
+        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); align-items: center;">
+            <span>Mackenzie</span><span>·</span><span>ABES</span><span>·</span><span>Sebrae for Startups</span>
+        </div>
+        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); text-align: center;">© 2026 Fiter. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+</html>
