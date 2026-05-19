@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rtk grep *)",
+      "Bash(rtk read *)",
+      "Bash(findstr /R \"class=\\\\\"[^\\\\\"]*\\\\\" design-system.html | findstr /E \"space-y-)",
+      "Bash(py-)",
+      "Bash(mb-)",
+      "Bash(text-[0-9])",
+      "Bash(text-text-\" | head -20)",
+      "Bash(rtk wc *)"
+    ]
+  }
+}
