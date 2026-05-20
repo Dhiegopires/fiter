@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PAGE_TITLE}}</title>
+    <meta name="description" content="{{META_DESCRIPTION}}">
+    <link rel="canonical" href="https://www.fiter.com.br/blog/{{SLUG}}/" />
+    <meta property="og:title" content="{{PAGE_TITLE}}" />
+    <meta property="og:description" content="{{META_DESCRIPTION}}" />
+    <meta property="og:url" content="https://www.fiter.com.br/blog/{{SLUG}}/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Fiter" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-base': '#050505',
+                        'bg-surface': '#0f0f0f',
+                        'text-primary': '#ffffff',
+                        'text-secondary': '#a3a3a3',
+                        'text-tertiary': '#737373',
+                        'border-subtle': '#171717',
+                        'border-default': '#262626',
+                        'accent-brand': '#3b82f6',
+                    }
+                },
+                fontFamily: {
+                    sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+                    serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #050505; color: #ffffff; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased font-sans">
+
+    <!-- NAV -->
+    <nav class="border-b border-border-subtle py-6 bg-bg-base/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+            <a href="../../" class="text-2xl font-serif italic text-text-primary">Fiter.</a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="../../produtos/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Produtos</a>
+                <a href="../../solucoes/rh/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">RH</a>
+                <a href="../../solucoes/educacao/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Educação</a>
+                <a href="../../blog/" class="text-sm font-medium text-accent-brand hover:text-accent-brand transition-colors">Blog</a>
+            </div>
+            <a href="../../contato/" class="inline-flex items-center justify-center px-5 py-2 rounded-full font-medium bg-accent-brand text-white text-sm hover:bg-blue-600 transition-colors">Agendar Demo</a>
+        </div>
+    </nav>
+
+    <!-- POST HEADER -->
+    <article class="pt-20 pb-20 bg-bg-base">
+        <div class="max-w-3xl mx-auto px-6 fade-in">
+            <!-- Breadcrumbs -->
+            <div class="flex items-center gap-2 text-sm text-text-tertiary mb-10 font-medium">
+                <a href="../../" class="hover:text-text-primary">Home</a>
+                <span>›</span>
+                <a href="../../blog/" class="hover:text-text-primary">Blog</a>
+                <span>›</span>
+                <span class="text-accent-brand">{{CATEGORY}}</span>
+            </div>
+
+            <h1 class="text-4xl md:text-5xl font-serif text-text-primary mb-8 leading-snug">{{TITLE}}</h1>
+
+            <div class="flex items-center gap-4 text-sm text-text-secondary border-b border-border-subtle pb-10 mb-10">
+                <div class="w-12 h-12 rounded-full bg-border-default overflow-hidden flex items-center justify-center font-bold text-text-tertiary">
+                    {{AUTHOR_INITIALS}}
+                </div>
+                <div>
+                    <div class="font-medium text-text-primary text-base">{{AUTHOR}}</div>
+                    <div>{{DATE}} · {{READING_TIME}} min de leitura</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- THUMBNAIL (Opcional) -->
+        {{IMAGE_SECTION}}
+
+        <!-- POST CONTENT -->
+        <div class="max-w-3xl mx-auto px-6 prose prose-invert prose-lg prose-a:text-accent-brand prose-headings:font-serif fade-in">
+            {{CONTENT}}
+        </div>
+    </article>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#020202] pt-20 pb-10 border-t border-border-subtle">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-serif italic text-text-primary mb-4">Fiter.</h2>
+            <p class="text-sm text-text-secondary mb-6">Assine nossa newsletter para receber mais insights como este.</p>
+            <div class="flex max-w-md mx-auto gap-2">
+                <input type="email" placeholder="Seu melhor e-mail" class="flex-1 bg-bg-surface border border-border-default rounded-full px-4 py-2 text-white focus:outline-none focus:border-accent-brand">
+                <button class="bg-text-primary text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors">Assinar</button>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

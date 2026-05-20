@@ -52,14 +52,15 @@
     <!-- NAV FIXO -->
     <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent py-6 bg-transparent">
         <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-serif italic text-text-primary">Fiter.</a>
+            <a href="../" class="text-2xl font-serif italic text-text-primary">Fiter.</a>
             <div class="hidden md:flex items-center gap-8">
-                <a href="produto.html" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Produto</a>
-                <a href="#" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Educação</a>
-                <a href="blog.html" class="text-sm font-medium text-accent-brand hover:text-accent-brand transition-colors">Blog</a>
+                <a href="../produtos/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Produtos</a>
+                <a href="../solucoes/rh/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">RH</a>
+                <a href="../solucoes/educacao/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Educação</a>
+                <a href="./" class="text-sm font-medium text-accent-brand hover:text-accent-brand transition-colors">Blog</a>
             </div>
             <div class="hidden md:flex items-center gap-4">
-                <a href="#" class="btn btn-primary text-sm px-5 py-2">Solicitar Demo</a>
+                <a href="../contato/" class="btn btn-primary text-sm px-5 py-2">Agendar Demo</a>
             </div>
         </div>
     </nav>
@@ -76,49 +77,34 @@
     <!-- BLOG GRID -->
     <section class="py-24 bg-bg-surface">
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Artigo 1 -->
-            <a href="post-template.html" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH Corporativo</div>
-                    <i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>
-                </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">Como a IA prevê o turnover antes dele acontecer</h3>
-                <p class="text-text-secondary mb-6 flex-1">Entenda o padrão comportamental que colaboradores demonstram até 90 dias antes de pedirem demissão e como agir.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
-                    <span>14 de Maio, 2026</span>
-                    <span>5 min de leitura</span>
-                </div>
-            </a>
+            <!-- BLOG_GRID_START -->
 
-            <!-- Artigo 2 -->
-            <a href="post-template.html" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 100ms;">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Educação</div>
-                    <i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>
-                </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">Sinais ocultos da evasão escolar</h3>
-                <p class="text-text-secondary mb-6 flex-1">A evasão não acontece do dia para a noite. Veja como medir o clima na sala de aula pode antecipar a perda de alunos.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
-                    <span>10 de Maio, 2026</span>
-                    <span>4 min de leitura</span>
-                </div>
-            </a>
-
-            <!-- Artigo 3 -->
-            <a href="post-template.html" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 200ms;">
+            <a href="o-que-e-pulse-survey/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 0ms;">
                 <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
                     <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Cultura</div>
-                    <i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>
+                    <img src="o-que-e-pulse-survey/default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">Pesquisa Anual x Pulse Survey</h3>
-                <p class="text-text-secondary mb-6 flex-1">Por que olhar para uma fotografia de 6 meses atrás não vai te ajudar a liderar sua equipe hoje.</p>
+                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">O que é pulse survey e por que substituir a pesquisa anual</h3>
+                <p class="text-text-secondary mb-6 flex-1">Entenda como os pulse surveys funcionam na prática e por que as empresas estão migrando para esse modelo de escuta contínua.</p>
                 <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
-                    <span>02 de Maio, 2026</span>
-                    <span>7 min de leitura</span>
+                    <span>18 de Maio, 2026</span>
+                    <span>6 min de leitura</span>
                 </div>
             </a>
 
+            <a href="o-teste-do-afonso/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 100ms;">
+                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
+                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">teste</div>
+                    <img src="o-teste-do-afonso/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">É um titulo muito bacana criado por mim. </h3>
+                <p class="text-text-secondary mb-6 flex-1">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
+                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
+                    <span>18 de Maio, 2026</span>
+                    <span>10 min de leitura</span>
+                </div>
+            </a>
+            <!-- BLOG_GRID_END -->
         </div>
     </section>
 
