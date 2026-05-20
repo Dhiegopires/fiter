@@ -9,30 +9,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     window.addEventListener('resize', updateFooter);
     window.addEventListener('load', updateFooter);
-    updateFooter(); // Executa logo de cara
+    updateFooter();
 
     // Button Character Animation Splitter
     document.querySelectorAll('.btn-animate-chars').forEach(btn => {
-        // Extrai o texto do botão
         const textNodes = Array.from(btn.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
         if (textNodes.length === 0) return;
-        
         const text = textNodes.map(n => n.textContent).join('').trim();
-        btn.innerHTML = ''; // Limpa o botão
-        
+        btn.innerHTML = '';
         const wrapper = document.createElement('span');
         wrapper.className = 'btn-text';
-        
-        // Separa cada letra em um <span> com delay
         [...text].forEach((char, i) => {
             const span = document.createElement('span');
             span.className = 'char';
             span.textContent = char;
-            span.dataset.char = char; // Usado no ::after para a animação perfeita
-            span.style.transitionDelay = `${i * 0.015}s`; // Atraso escalonado
+            span.dataset.char = char;
+            span.style.transitionDelay = `${i * 0.015}s`;
             wrapper.appendChild(span);
         });
-        
         btn.appendChild(wrapper);
     });
 
@@ -44,4 +38,133 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.setAttribute('data-theme', e.target.dataset.theme);
         });
     });
+
+    // ── Navbar ───────────────────────────────────────────────
+    (function () {
+        const nav       = document.getElementById('site-nav');
+        const hamburger = document.getElementById('nav-hamburger');
+        const drawer    = document.getElementById('nav-drawer');
+        const backdrop  = document.getElementById('nav-backdrop');
+        if (!nav) return;
+
+        const scrollObs = () => nav.classList.toggle('scrolled', window.scrollY > 10);
+        window.addEventListener('scroll', scrollObs, { passive: true });
+        scrollObs();
+
+        document.querySelectorAll('[data-nav-item]').forEach(item => {
+            let timer;
+            item.addEventListener('mouseenter', () => { clearTimeout(timer); item.classList.add('is-open'); });
+            item.addEventListener('mouseleave', () => { timer = setTimeout(() => item.classList.remove('is-open'), 120); });
+            const panel = item.querySelector('.nav-drop');
+            if (panel) {
+                panel.addEventListener('mouseenter', () => clearTimeout(timer));
+                panel.addEventListener('mouseleave', () => { timer = setTimeout(() => item.classList.remove('is-open'), 120); });
+            }
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('[data-nav-item].is-open').forEach(i => i.classList.remove('is-open'));
+                closeMobile();
+            }
+        });
+
+        function openMobile() {
+            nav.classList.add('menu-open');
+            drawer && drawer.setAttribute('aria-hidden', 'false');
+            hamburger && hamburger.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMobile() {
+            nav.classList.remove('menu-open');
+            drawer && drawer.setAttribute('aria-hidden', 'true');
+            hamburger && hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+        }
+        hamburger && hamburger.addEventListener('click', () => nav.classList.contains('menu-open') ? closeMobile() : openMobile());
+        backdrop  && backdrop.addEventListener('click', closeMobile);
+
+        document.querySelectorAll('[data-drawer-item]').forEach(item => {
+            item.querySelector('.drawer-trigger').addEventListener('click', () => {
+                const open = item.classList.contains('is-open');
+                document.querySelectorAll('[data-drawer-item].is-open').forEach(i => i.classList.remove('is-open'));
+                if (!open) item.classList.add('is-open');
+            });
+        });
+    })();
+
+    // ── FAQ Accordion ────────────────────────────────────────
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const item   = trigger.closest('.faq-item');
+            const isOpen = item.classList.contains('is-open');
+            trigger.closest('.faq-list').querySelectorAll('.faq-item').forEach(i => i.classList.remove('is-open'));
+            if (!isOpen) item.classList.add('is-open');
+        });
+    });
+
+    // ── IntersectionObservers ────────────────────────────────
+    const ioOnce = (selector, cls, threshold) => {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add(cls); obs.unobserve(e.target); } });
+        }, { threshold });
+        document.querySelectorAll(selector).forEach(el => obs.observe(el));
+    };
+
+    ioOnce('.testi-card', 'in-view', 0.15);
+    ioOnce('.fade-up',    'in-view', 0.1);
+    ioOnce('[data-steps]', 'in-view', 0.2);
+
+    // ── Text Reveal (bar wipe) ───────────────────────────────────
+    (function () {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('[data-reveal]').forEach(el => {
+            const delay = el.dataset.revealDelay || '0s';
+            const html  = el.innerHTML;
+            const wrap  = document.createElement('span');
+            wrap.className = 'reveal-wrap';
+            wrap.style.setProperty('--reveal-delay', delay);
+            wrap.innerHTML = `<span class="reveal-bar" aria-hidden="true"></span><span class="reveal-content">${html}</span>`;
+            el.innerHTML = '';
+            el.appendChild(wrap);
+            obs.observe(wrap);
+        });
+
+        document.querySelectorAll('.ds-section-title, [data-fade]').forEach(el => {
+            el.classList.add('fade-up');
+            obs.observe(el);
+        });
+    })();
+
+    // ── Metric Counter Animation ─────────────────────────────
+    (function () {
+        const easeOut = t => 1 - Math.pow(1 - t, 3);
+        function animateCounter(el, target, suffix, duration) {
+            const valueEl = el.querySelector('.metric-value');
+            if (!valueEl) return;
+            const start = performance.now();
+            function tick(now) {
+                const p = Math.min((now - start) / duration, 1);
+                const val = Math.round(easeOut(p) * target);
+                valueEl.textContent = val + suffix;
+                if (p < 1) requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+        }
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                const el     = e.target;
+                const target = parseInt(el.dataset.metric, 10);
+                const suffix = el.dataset.suffix || '';
+                const delay  = parseFloat(getComputedStyle(el).getPropertyValue('--reveal-delay')) || 0;
+                setTimeout(() => animateCounter(el, target, suffix, 1200), delay * 1000);
+                obs.unobserve(el);
+            });
+        }, { threshold: 0.3 });
+        document.querySelectorAll('.metric-card[data-metric]').forEach(el => obs.observe(el));
+    })();
 });

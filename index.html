@@ -7,6 +7,7 @@
     <meta name="description" content="Meça felicidade, engajamento e saúde mental com IA e neurociência. Pulse survey em 8 cliques via WhatsApp, predição de turnover em tempo real.">
     <link rel="canonical" href="https://fiter.com.br/">
 
+
     <!-- Open Graph -->
     <meta property="og:title" content="8 cliques. 2 minutos. Seu time revelado. — Fiter">
     <meta property="og:description" content="DeepTech validada por USP e Mackenzie. +500k pessoas medidas. Pulse, NR1, Pesquisa de Clima e Ouvidoria em uma plataforma. De startups à Marinha do Brasil.">
@@ -41,9 +42,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -64,6 +67,51 @@
                     <a class="drop-link" href="/pulse/">
                         <span class="drop-link-dot" style="background:#ffffff"></span>
                         <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+<!-- NAV -->
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+        <a class="nav-logo" href="/">Fiter.</a>
+
+        <ul class="nav-links">
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/pulse/">
+                        <span class="drop-link-dot" style="background:#ffffff"></span>
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    </a>
+                    <a class="drop-link" href="/nr1/">
+                        <span class="drop-link-dot" style="background:#f59e0b"></span>
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/pesquisa-de-clima/">
+                        <span class="drop-link-dot" style="background:#3b82f6"></span>
+                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div>
+                    </a>
+                    <a class="drop-link" href="/ouvidoria/">
+                        <span class="drop-link-dot" style="background:#8b5cf6"></span>
+                        <div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Conformidade legal</div></div>
+                    </a>
+                    <div class="drop-divider"></div>
+                    <a class="drop-link" href="/educacao/">
+                        <span class="drop-link-dot" style="background:#10b981"></span>
+                        <div><div class="drop-link-name">Pulse Educação</div><div class="drop-link-tag">Retenção de alunos</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/recursos-humanos/">
+                        <span class="drop-link-dot" style="background:#10b981"></span>
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
+                    </a>
+                    <a class="drop-link" href="/educacao/">
+                        <span class="drop-link-dot" style="background:#f59e0b"></span>
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
                     </a>
                     <a class="drop-link" href="/nr1/">
                         <span class="drop-link-dot" style="background:#f59e0b"></span>
@@ -136,6 +184,45 @@
                     <a class="drawer-sub-link" href="/recursos-humanos/"><span class="drop-link-dot" style="background:#10b981"></span>Recursos Humanos</a>
                     <a class="drawer-sub-link" href="/educacao/"><span class="drop-link-dot" style="background:#f59e0b"></span>Educação</a>
                 </div></div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo">Fiter.</div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/pulse/"><span class="drop-link-dot" style="background:#ffffff"></span>Pulse</a>
+                    <a class="drawer-sub-link" href="/nr1/"><span class="drop-link-dot" style="background:#f59e0b"></span>Agente NR1</a>
+                    <a class="drawer-sub-link" href="/pesquisa-de-clima/"><span class="drop-link-dot" style="background:#3b82f6"></span>Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/ouvidoria/"><span class="drop-link-dot" style="background:#8b5cf6"></span>Ouvidoria</a>
+                    <a class="drawer-sub-link" href="/educacao/"><span class="drop-link-dot" style="background:#10b981"></span>Pulse Educação</a>
+                </div></div>
+            </div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/recursos-humanos/"><span class="drop-link-dot" style="background:#10b981"></span>Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/educacao/"><span class="drop-link-dot" style="background:#f59e0b"></span>Educação</a>
+                </div></div>
             </div>
 
             <a class="drawer-plain-link" href="/sobre/">Sobre</a>
@@ -148,6 +235,42 @@
     </div>
 </nav>
 
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+
+            <div class="drawer-cta">
+                <a class="btn btn-primary w-full" href="/contato/" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="main-content">
+    <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
+    <!-- HERO -->
+    <section id="hero-section" class="relative" style="min-height:720px; display:flex; flex-direction:column; overflow:hidden; margin-bottom: 8rem;">
+        <canvas id="hero-brain-canvas"></canvas>
+        <div style="flex:1; display:flex; align-items:center; justify-content:center; padding:5rem 5rem 1.5rem; position:relative;">
+            <button class="hero-nav-btn" style="left:2rem;" onclick="heroNav(-1)" aria-label="Anterior">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L6 8l4 5"/></svg>
+            </button>
+            <div id="heroCardsWrap" style="position:relative; width:300px; height:400px; flex-shrink:0;"></div>
+            <button class="hero-nav-btn" style="right:2rem;" onclick="heroNav(1)" aria-label="Próximo">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l4 5-4 5"/></svg>
+            </button>
+        </div>
+        <div id="heroDots" style="display:flex; gap:6px; justify-content:center; padding-bottom:1.5rem;"></div>
+        <div style="display:flex; justify-content:space-between; align-items:flex-end; padding:2.25rem 3rem; border-top:1px solid var(--border-subtle); gap:3rem;">
+            <div style="flex:1; max-width:500px;">
+                <h1 id="heroHeading" style="font-family:var(--font-serif); font-size:2.5rem; font-weight:800; letter-spacing:-0.01em; line-height:1.1; color:var(--text-primary); transition:opacity 0.22s ease;"></h1>
+            </div>
+            <div style="flex-shrink:0; max-width:280px; display:flex; flex-direction:column; align-items:flex-end; gap:1.25rem;">
+                <p id="heroDesc" style="color:var(--text-secondary); font-size:0.875rem; line-height:1.6; text-align:right; transition:opacity 0.22s ease;"></p>
+                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Agendar Demo</a>
+            </div>
+        </div>
+    </section>
 <main class="main-content">
     <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
     <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
@@ -200,7 +323,43 @@
     </section>
 
     <div class="ds-container px-6">
+    <!-- PROVA SOCIAL (full width) -->
+    <section style="margin-bottom: 8rem; padding: 4rem 0; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); overflow: hidden; background: var(--bg-surface);">
+        <div class="flex flex-col items-center text-center mb-10">
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">De startups à Marinha do Brasil</p>
+            <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--text-primary); font-weight: 700; letter-spacing: -0.02em;">+500.000 pessoas medidas</h2>
+        </div>
+        <div class="marquee-mask" style="overflow: hidden; white-space: nowrap; position: relative;">
+            <div class="logo-marquee">
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
+                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
+                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+            </div>
+        </div>
+    </section>
 
+    <div class="ds-container px-6">
+
+        <!-- MÉTRICAS -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <div class="text-center mb-12">
+                <h2 class="ds-section-title">Números que não precisam de slide deck</h2>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+                <div class="metric-card fade-up" data-metric="500" data-suffix="k+" style="--reveal-delay: 0s">
+                    <span class="metric-value">0</span>
+                    <span class="metric-trend">↑ Nacionais</span>
+                    <span class="metric-label">pessoas medidas</span>
+                    <span class="metric-sub">Em organizações de todos os portes, do Brasil inteiro.</span>
         <!-- MÉTRICAS -->
         <section class="ds-section" style="margin-bottom: 8rem;">
             <div class="text-center mb-12">
@@ -233,47 +392,104 @@
                 </div>
             </div>
         </section>
+                <div class="metric-card fade-up" data-metric="8" data-suffix="" style="--reveal-delay: 0.08s">
+                    <span class="metric-value">0</span>
+                    <span class="metric-trend">↓ Cliques</span>
+                    <span class="metric-label">para criar uma pesquisa</span>
+                    <span class="metric-sub">Da criação ao envio. Sem TI, sem burocracia.</span>
+                </div>
+                <div class="metric-card fade-up" data-metric="2" data-suffix=" min" style="--reveal-delay: 0.16s">
+                    <span class="metric-value">0</span>
+                    <span class="metric-trend">⚡ WhatsApp</span>
+                    <span class="metric-label">tempo de resposta</span>
+                    <span class="metric-sub">Via WhatsApp. A taxa de adesão agradece.</span>
+                </div>
+                <div class="metric-card fade-up" data-metric="92" data-suffix="%" style="--reveal-delay: 0.24s">
+                    <span class="metric-value">0</span>
+                    <span class="metric-trend">↓ Redução</span>
+                    <span class="metric-label">menos tempo no NR1</span>
+                    <span class="metric-sub">O Agente NR1 faz em minutos o que levava meses.</span>
+                </div>
+            </div>
+        </section>
 
         <!-- GRID DE PRODUTOS -->
         <section class="ds-section" style="margin-bottom: 8rem;">
             <div class="flex flex-col items-center text-center mb-12">
                 <h2 class="ds-section-title" style="margin-bottom: 1rem;">Uma plataforma. Cinco produtos. Resultado em tempo real.</h2>
-                <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px;">Cada produto resolve um problema específico. Juntos, entregam a visão completa do capital humano da sua organização.</p>
+                <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 560px;">Cada produto resolve um problema específico. Juntos, entregam a visão completa do capital humano da sua organização.</p>
             </div>
-            <div class="ds-card-grid">
-                <div class="card flex flex-col h-full">
-                    <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Engajamento contínuo</div>
+            <div class="product-bento">
+
+                <!-- Pulse — featured 2×2 -->
+                <div class="product-card is-featured fade-up" style="--product-color: var(--accent-brand);">
+                    <span class="product-card-num">01</span>
+                    <div style="flex: 1;"></div>
+                    <span class="product-card-tag">Engajamento contínuo</span>
                     <h3>Pulse</h3>
-                    <p style="flex-grow: 1;">Meça felicidade, fit cultural e saúde mental de cada colaborador em tempo real. Pulse survey via WhatsApp, sem app, em 2 minutos.</p>
-                    <a href="/pulse/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content;">Conhecer o Pulse →</a>
+                    <p>Meça felicidade, fit cultural e saúde mental de cada colaborador em tempo real. Survey via WhatsApp, sem app, sem login — e o time responde em 2 minutos.</p>
+                    <div class="product-card-footer">
+                        <span class="product-card-stat">2 min<small> de resposta</small></span>
+                        <a href="/pulse/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Conhecer o Pulse →</a>
+                    </div>
                 </div>
-                <div class="card flex flex-col h-full">
-                    <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Conformidade automática</div>
+
+                <!-- Agente NR1 -->
+                <div class="product-card fade-up" style="--product-color: #f59e0b; --reveal-delay: 0.06s;">
+                    <span class="product-card-num">02</span>
+                    <span class="product-card-tag">Conformidade automática</span>
                     <h3>Agente NR1</h3>
-                    <p style="flex-grow: 1;">O primeiro robô do Brasil para NR1. Laudo de risco por cargo em minutos, integrado ao Ministério do Trabalho. 92% mais rápido que o processo manual.</p>
-                    <a href="/nr1/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content;">Conhecer o Agente NR1 →</a>
+                    <p>Laudo de risco por cargo em minutos, integrado ao Ministério do Trabalho. 92% mais rápido que o processo manual.</p>
+                    <a href="/nr1/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content; margin-top: auto;">Ver produto →</a>
                 </div>
-                <div class="card flex flex-col h-full">
-                    <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Diagnóstico mensal</div>
+
+                <!-- Pesquisa de Clima -->
+                <div class="product-card fade-up" style="--product-color: #3b82f6; --reveal-delay: 0.1s;">
+                    <span class="product-card-num">03</span>
+                    <span class="product-card-tag">Diagnóstico mensal</span>
                     <h3>Pesquisa de Clima</h3>
-                    <p style="flex-grow: 1;">Não espere um ano para saber o que seu time pensa. Pesquisa anônima via WhatsApp, todo mês, com planos de ação gerados por IA.</p>
-                    <a href="/pesquisa-de-clima/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content;">Conhecer a Pesquisa de Clima →</a>
+                    <p>Não espere um ano. Pesquisa anônima via WhatsApp todo mês, com planos de ação gerados por IA.</p>
+                    <a href="/pesquisa-de-clima/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content; margin-top: auto;">Ver produto →</a>
                 </div>
-                <div class="card flex flex-col h-full">
-                    <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Conformidade legal</div>
+
+                <!-- Ouvidoria -->
+                <div class="product-card fade-up" style="--product-color: #f43f5e; --reveal-delay: 0.14s;">
+                    <span class="product-card-num">04</span>
+                    <span class="product-card-tag">Conformidade legal</span>
                     <h3>Ouvidoria</h3>
-                    <p style="flex-grow: 1;">Canal seguro e anônimo para denúncias — exigido por lei. Classificação automática por tipo, protocolo gerado na hora, histórico para compliance.</p>
-                    <a href="/ouvidoria/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content;">Conhecer a Ouvidoria →</a>
+                    <p>Canal anônimo para denúncias — exigido por lei. Classificação automática, protocolo gerado na hora, histórico para compliance.</p>
+                    <a href="/ouvidoria/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content; margin-top: auto;">Ver produto →</a>
                 </div>
-                <div class="card flex flex-col h-full">
-                    <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #a855f7; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Retenção de alunos</div>
+
+                <!-- Pulse Educação -->
+                <div class="product-card fade-up" style="--product-color: #a855f7; --reveal-delay: 0.18s;">
+                    <span class="product-card-num">05</span>
+                    <span class="product-card-tag">Retenção de alunos</span>
                     <h3>Pulse Educação</h3>
-                    <p style="flex-grow: 1;">Preveja a evasão antes que o aluno desapareça. Índice de Felicidade na Educação (IFE) em 8 cliques, com alertas automáticos para coordenadores.</p>
-                    <a href="/educacao/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content;">Conhecer a solução para Educação →</a>
+                    <p>Preveja a evasão antes que o aluno desapareça. IFE em 8 cliques, com alertas automáticos para coordenadores.</p>
+                    <a href="/educacao/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; width: fit-content; margin-top: auto;">Ver produto →</a>
                 </div>
+
             </div>
         </section>
 
+        <!-- CREDIBILIDADE CIENTÍFICA -->
+        <section class="ds-section" style="margin-bottom: 8rem; padding: 4rem 2rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
+            <div class="flex flex-col md:flex-row gap-12 items-center">
+                <div class="flex-1">
+                    <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.1em;">Base científica</div>
+                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 1.5rem; line-height: 1.1;">Não é startup. É deeptech com DNA na USP.</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.6;">A metodologia da Fiter foi desenvolvida e validada ao longo de anos de pesquisa científica — teses de mestrado, parceria com USP e Mackenzie, e publicada no livro <em>Felicidade: Ciência de Dados</em>.</p>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.6;">As perguntas não foram escritas por uma equipe de produto. Foram testadas cientificamente para medir o que dizem medir — sem viés, sem achismo.</p>
+                    <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Metodologia publicada em livro acadêmico</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Validada em teses de mestrado (USP e Mackenzie)</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Base científica em neurociência e ciência comportamental</li>
+                        <li style="display: flex; align-items: center; gap: 0.75rem;"><i data-lucide="check-circle-2" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0;"></i> Primeiro produto contratado pela divisão de submarinos nucleares da Marinha do Brasil</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <!-- CREDIBILIDADE CIENTÍFICA -->
         <section class="ds-section" style="margin-bottom: 8rem; padding: 4rem 2rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
             <div class="flex flex-col md:flex-row gap-12 items-center">
@@ -315,7 +531,41 @@
                 </div>
             </div>
         </section>
+        <!-- COMO FUNCIONA -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <div class="text-center mb-16">
+                <h2 class="ds-section-title">Três passos. Do dado à decisão.</h2>
+            </div>
+            <div class="steps-h" data-steps>
+                <div class="step-h" style="--step-delay: 0s">
+                    <div class="step-h-num">01</div>
+                    <h3 class="step-h-title">Meça</h3>
+                    <p class="step-h-body">Pulse survey em 8 cliques, enviado via WhatsApp. 2 minutos de resposta. Sem app para baixar, sem login para criar. A coleta é automática e a frequência é configurável.</p>
+                </div>
+                <div class="step-h" style="--step-delay: 0.15s">
+                    <div class="step-h-num">02</div>
+                    <h3 class="step-h-title">Entenda</h3>
+                    <p class="step-h-body">A IA processa os dados e entrega diagnóstico em tempo real — por área, por liderança, por turno. Não é nota. É o porquê da nota.</p>
+                </div>
+                <div class="step-h" style="--step-delay: 0.3s">
+                    <div class="step-h-num">03</div>
+                    <h3 class="step-h-title">Aja</h3>
+                    <p class="step-h-body">Planos de ação gerados automaticamente, calibrados para o diagnóstico específico de cada equipe. Sem precisar de analista. Sem esperar a reunião de RH.</p>
+                </div>
+            </div>
+        </section>
 
+        <!-- DEPOIMENTOS -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <h2 class="ds-section-title" style="margin-bottom: 3rem;">O que dizem os clientes</h2>
+            <div class="testi-grid">
+                <div class="testi-card" style="--testi-delay: 0s">
+                    <p class="testi-quote">"A Fiter <strong>transformou a forma como olhamos para a nossa operação.</strong> Antes, reagíamos aos desligamentos. Hoje, conseguimos prever e reter os nossos melhores talentos."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">RH</div>
+                        <div>
+                            <div class="testi-name">[Nome — confirmar com Sergio]</div>
+                            <div class="testi-role">Diretor de RH · Braspress</div>
         <!-- DEPOIMENTOS -->
         <section class="ds-section" style="margin-bottom: 8rem;">
             <h2 class="ds-section-title" style="margin-bottom: 3rem;">O que dizem os clientes</h2>
@@ -342,7 +592,84 @@
                 </div>
             </div>
         </section>
+                </div>
+                <div class="testi-card" style="--testi-delay: 0.15s">
+                    <p class="testi-quote">"Tínhamos um problema sério de evasão invisível. Com o <strong>mapeamento da Fiter, passamos a intervir antes do aluno pensar em trancar</strong> a matrícula."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">ED</div>
+                        <div>
+                            <div class="testi-name">[Nome — confirmar com Sergio]</div>
+                            <div class="testi-role">Reitor · USP / Fatec</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- FAQ -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <div class="text-center mb-12">
+                <h2 class="ds-section-title">Perguntas frequentes</h2>
+            </div>
+            <div style="max-width: 760px; margin: 0 auto;">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">O que a Fiter mede exatamente?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">A Fiter mede felicidade, engajamento, fit cultural, saúde mental e riscos organizacionais. A coleta é feita via pulse survey enviado pelo WhatsApp — em 8 cliques e 2 minutos. Os dados são processados por IA com metodologia validada por USP e Mackenzie, e os resultados aparecem em tempo real no painel do gestor.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Como a Fiter é diferente do GPTW ou de uma pesquisa de clima tradicional?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">O GPTW faz uma pesquisa por ano. A Fiter faz todo mês — anônima, via WhatsApp, com benchmarking de mercado e planos de ação automáticos gerados por IA. Você toma decisão hoje, não no próximo relatório anual.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">A Fiter funciona para empresas pequenas?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Atende organizações a partir de 5 colaboradores. O modelo é modular — você contrata só o produto que faz sentido para o momento da empresa.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Precisa de app?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Não. A pesquisa é enviada e respondida pelo WhatsApp. Sem app para baixar, sem login para criar, sem nenhuma fricção para o colaborador.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Quanto tempo leva para implementar?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">A ativação inclui assinatura, treinamento de 1h30 e importação em lote dos colaboradores. A primeira pesquisa pode ser enviada no mesmo dia.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Os dados dos colaboradores são confidenciais?</span>
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Sim. A Fiter garante anonimato nas respostas e segue as exigências da LGPD. Os gestores visualizam dados agregados — nunca a resposta individual de nenhum colaborador.</p>
+                        </div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- FAQ -->
         <section class="ds-section" style="margin-bottom: 8rem;">
             <div class="text-center mb-12">
@@ -430,6 +757,28 @@
                             <label class="form-label">Segmento</label>
                             <div class="form-select-wrap">
                                 <select required class="form-select">
+        <!-- CTA FINAL -->
+        <section class="ds-section" style="margin-bottom: 4rem;">
+            <div class="card" style="padding: 4rem; display: flex; flex-direction: column; gap: 4rem; align-items: center;">
+                <div class="w-full" style="text-align: center;">
+                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 3rem); font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.1;">Pronto para saber o que seu time realmente sente?</h2>
+                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 0; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto;">Demonstração de 30 minutos. Sem compromisso. Com dados reais.</p>
+                </div>
+                <div style="width: 100%; max-width: 480px; margin: 0 auto;">
+                    <form style="background: var(--bg-base); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg);">
+                        <p style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1.5rem;">Agendar demonstração</p>
+                        <div class="form-field" style="margin-bottom: 1rem;">
+                            <label class="form-label">Nome</label>
+                            <input type="text" required placeholder="Seu nome completo" class="form-input">
+                        </div>
+                        <div class="form-field" style="margin-bottom: 1rem;">
+                            <label class="form-label">Empresa</label>
+                            <input type="text" required placeholder="Nome da empresa" class="form-input">
+                        </div>
+                        <div class="form-field" style="margin-bottom: 1rem;">
+                            <label class="form-label">Segmento</label>
+                            <div class="form-select-wrap">
+                                <select required class="form-select">
                                     <option value="" disabled selected>Selecione</option>
                                     <option value="rh">RH Corporativo</option>
                                     <option value="educacao">Educação</option>
@@ -446,7 +795,19 @@
                 </div>
             </div>
         </section>
+                        </div>
+                        <div class="form-field" style="margin-bottom: 1.5rem;">
+                            <label class="form-label">E-mail corporativo</label>
+                            <input type="email" required placeholder="nome@empresa.com.br" class="form-input">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-animate-chars w-full" style="padding: 1rem; justify-content: center;">Agendar demonstração</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
+    </div>
+</main>
     </div>
 </main>
 
@@ -460,10 +821,27 @@
             <div>
                 <a class="btn btn-primary btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
             </div>
+<!-- FOOTER -->
+<footer class="ds-footer">
+    <div class="footer-inner">
+
+        <div class="footer-statement">
+            <span class="footer-eyebrow">Fiter · People Analytics</span>
+            <h2 class="footer-headline" data-reveal>Meça o que realmente <em>importa.</em></h2>
+            <div>
+                <a class="btn btn-primary btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+            </div>
         </div>
 
         <div class="footer-nav">
+
+        <div class="footer-nav">
             <div>
+                <div class="footer-col-title">Soluções</div>
+                <ul class="footer-links">
+                    <li><a href="/recursos-humanos/">Recursos Humanos</a></li>
+                    <li><a href="/educacao/">Educação</a></li>
+                </ul>
                 <div class="footer-col-title">Soluções</div>
                 <ul class="footer-links">
                     <li><a href="/recursos-humanos/">Recursos Humanos</a></li>
@@ -477,8 +855,20 @@
                     <li><a href="/blog/">Blog</a></li>
                     <li><a href="/contato/">Contato</a></li>
                 </ul>
+                <div class="footer-col-title">Empresa</div>
+                <ul class="footer-links">
+                    <li><a href="/sobre/">Sobre</a></li>
+                    <li><a href="/blog/">Blog</a></li>
+                    <li><a href="/contato/">Contato</a></li>
+                </ul>
             </div>
             <div>
+                <div class="footer-col-title">Conformidade</div>
+                <ul class="footer-links">
+                    <li><a href="#">LGPD</a></li>
+                    <li><a href="#">Política de privacidade</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                </ul>
                 <div class="footer-col-title">Conformidade</div>
                 <ul class="footer-links">
                     <li><a href="#">LGPD</a></li>
@@ -495,11 +885,294 @@
                 <a href="#">Termos de uso</a>
                 <a href="#">LGPD</a>
             </div>
+
+        <div class="footer-bottom">
+            <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
+            <div class="footer-legal">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos de uso</a>
+                <a href="#">LGPD</a>
+            </div>
         </div>
 
     </div>
 </footer>
 
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+
+<script>
+// ── Hero V2 — Product Carousel ──────────────────────────────────
+(function () {
+    const PRODUCTS = [
+        {
+            name: 'Pulse',
+            tagline: 'Engajamento contínuo',
+            heading: 'Meça felicidade e preveja resultados reais.',
+            desc: 'A primeira plataforma brasileira que une IA e neurociência para monitorar engajamento em tempo real via WhatsApp.',
+            accent: '#ffffff',
+            glowBg: 'rgba(255,255,255,0.07)',
+            borderActive: 'rgba(255,255,255,0.18)',
+        },
+        {
+            name: 'Recursos\nHumanos',
+            tagline: 'Gestão de pessoas inteligente',
+            heading: 'Antecipe o turnover antes que aconteça.',
+            desc: 'Motor de IA preditiva que analisa sinais de evasão e sugere ações preventivas para o seu RH.',
+            accent: '#3b82f6',
+            glowBg: 'rgba(59,130,246,0.13)',
+            borderActive: 'rgba(59,130,246,0.42)',
+        },
+        {
+            name: 'Educação',
+            tagline: 'Retenção de alunos com IA',
+            heading: 'Engajamento real em cada jornada de aprendizado.',
+            desc: 'Preveja a evasão antes que o aluno desapareça. IFE em 8 cliques, com alertas automáticos para coordenadores.',
+            accent: '#10b981',
+            glowBg: 'rgba(16,185,129,0.13)',
+            borderActive: 'rgba(16,185,129,0.42)',
+        },
+        {
+            name: 'Agente\nNR1',
+            tagline: 'Conformidade automática',
+            heading: 'Laudo de risco por cargo. Em minutos.',
+            desc: 'O primeiro robô do Brasil para NR1. 92% mais rápido que o processo manual, integrado ao Ministério do Trabalho.',
+            accent: '#f59e0b',
+            glowBg: 'rgba(245,158,11,0.13)',
+            borderActive: 'rgba(245,158,11,0.42)',
+        },
+    ];
+
+    let activeIdx = 0;
+
+    function addTiltToCard(card) {
+        let tilting = false;
+        card.addEventListener('mousemove', function(e) {
+            if (!this.classList.contains('is-active')) return;
+            const r = this.getBoundingClientRect();
+            const x = (e.clientX - r.left) / r.width  - 0.5;
+            const y = (e.clientY - r.top)  / r.height - 0.5;
+            tilting = true;
+            this.style.animation  = 'none';
+            this.style.transition = 'transform 0.08s linear';
+            this.style.transform  = `perspective(900px) rotateX(${-y * 18}deg) rotateY(${x * 22}deg) translateZ(10px)`;
+        });
+        card.addEventListener('mouseleave', function() {
+            if (!tilting) return;
+            tilting = false;
+            this.style.transition = 'transform 0.65s cubic-bezier(0.23, 1, 0.32, 1)';
+            this.style.transform  = 'perspective(900px) rotateX(0deg) rotateY(0deg) translateZ(0px)';
+            const el = this;
+            setTimeout(() => { el.style.animation = ''; el.style.transform = ''; el.style.transition = ''; }, 650);
+        });
+    }
+
+    function buildCard(p) {
+        const el = document.createElement('div');
+        el.className = 'hero-product-card';
+        const nameParts = p.name.split('\n');
+        const nameStr = nameParts.join(' ');
+        const fontSize = nameStr.length > 10 ? '1.55rem' : '2.1rem';
+        el.innerHTML = `
+            <div style="position:absolute;inset:0;background:radial-gradient(circle at 75% 15%,${p.glowBg} 0%,transparent 65%);pointer-events:none;border-radius:inherit;"></div>
+            <div style="position:relative;z-index:1;height:100%;display:flex;flex-direction:column;">
+                <div style="display:flex;align-items:center;gap:0.6rem;">
+                    <div style="width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                        <div style="width:11px;height:11px;border-radius:2px;background:${p.accent};"></div>
+                    </div>
+                    <span style="font-family:var(--font-mono);font-size:0.63rem;text-transform:uppercase;letter-spacing:0.1em;color:${p.accent};opacity:0.75;">Fiter</span>
+                </div>
+                <div style="margin-top:auto;padding-top:1.5rem;">
+                    <div style="font-family:var(--font-serif);font-size:${fontSize};font-weight:800;letter-spacing:-0.01em;color:var(--text-primary);line-height:1.1;margin-bottom:0.625rem;">
+                        ${nameParts.map(l => `<span style="display:block;">${l}</span>`).join('')}
+                    </div>
+                    <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.4;">${p.tagline}</p>
+                </div>
+            </div>
+        `;
+        addTiltToCard(el);
+        return el;
+    }
+
+    function render() {
+        const wrap = document.getElementById('heroCardsWrap');
+        const dotsEl = document.getElementById('heroDots');
+        if (!wrap) return;
+        const n = PRODUCTS.length;
+
+        if (!wrap.querySelector('.hero-product-card')) {
+            PRODUCTS.forEach(p => wrap.appendChild(buildCard(p)));
+        }
+
+        const cards = wrap.querySelectorAll('.hero-product-card');
+        cards.forEach((card, i) => {
+            const offset = ((i - activeIdx) % n + n) % n;
+            card.classList.remove('is-active', 'is-next', 'is-prev', 'is-hidden');
+            card.onclick = null;
+
+            if (offset === 0) {
+                card.classList.add('is-active');
+                card.style.borderColor = PRODUCTS[i].borderActive;
+                card.style.zIndex = '10';
+                card.style.cursor = 'default';
+            } else if (offset === 1) {
+                card.classList.add('is-next');
+                card.style.borderColor = 'rgba(255,255,255,0.05)';
+                card.style.zIndex = '5';
+                card.onclick = () => heroNav(1);
+            } else if (offset === n - 1) {
+                card.classList.add('is-prev');
+                card.style.borderColor = 'rgba(255,255,255,0.05)';
+                card.style.zIndex = '5';
+                card.onclick = () => heroNav(-1);
+            } else {
+                card.classList.add('is-hidden');
+                card.style.borderColor = 'transparent';
+                card.style.zIndex = '1';
+            }
+        });
+
+        if (dotsEl) {
+            dotsEl.innerHTML = '';
+            PRODUCTS.forEach((p, i) => {
+                const dot = document.createElement('button');
+                dot.style.cssText = `width:${i===activeIdx?'20px':'6px'};height:6px;border-radius:3px;border:none;padding:0;outline:none;background:${i===activeIdx?p.accent:'rgba(255,255,255,0.12)'};cursor:pointer;transition:all 0.3s ease;`;
+                dot.onclick = () => { activeIdx = i; render(); updateText(); };
+                dotsEl.appendChild(dot);
+            });
+        }
+
+        if (window.setBrainColor) setBrainColor(PRODUCTS[activeIdx].accent);
+
+        const heroEl = document.getElementById('hero-section');
+        if (heroEl) {
+            const p = PRODUCTS[activeIdx];
+            const isLight = p.accent === '#ffffff';
+            heroEl.style.setProperty('--accent-brand', p.accent);
+            heroEl.style.setProperty('--accent-text',  isLight ? '#050505' : '#ffffff');
+            heroEl.style.setProperty('--accent-glow',  p.glowBg);
+        }
+    }
+
+    function updateText(animate) {
+        const p = PRODUCTS[activeIdx];
+        const h = document.getElementById('heroHeading');
+        const d = document.getElementById('heroDesc');
+        if (!h || !d) return;
+        if (animate === false) {
+            h.textContent = p.heading;
+            d.textContent = p.desc;
+            return;
+        }
+        h.style.opacity = '0'; d.style.opacity = '0';
+        setTimeout(() => {
+            h.textContent = p.heading;
+            d.textContent = p.desc;
+            h.style.opacity = '1'; d.style.opacity = '1';
+        }, 220);
+    }
+
+    function heroNav(dir) {
+        activeIdx = ((activeIdx + dir) % PRODUCTS.length + PRODUCTS.length) % PRODUCTS.length;
+        render();
+        updateText();
+    }
+    window.heroNav = heroNav;
+
+    render();
+    updateText(false);
+})();
+
+// ── Brain WebGL ──────────────────────────────────────────────────
+(function initBrain() {
+    if (typeof THREE === 'undefined') return;
+    const canvas = document.getElementById('hero-brain-canvas');
+    if (!canvas) return;
+
+    const parent = canvas.parentElement;
+    const W = parent.offsetWidth || 800;
+    const H = parent.offsetHeight || 720;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(W, H);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(55, W / H, 1, 2000);
+    camera.position.z = 400;
+
+    const N = 1000, R = 160;
+    const pts = [];
+    for (let i = 0; i < N; i++) {
+        const phi   = Math.acos(1 - 2 * (i + 0.5) / N);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+        pts.push(R * Math.sin(phi) * Math.cos(theta), R * Math.cos(phi), R * Math.sin(phi) * Math.sin(theta));
+    }
+
+    const linePts = [];
+    const maxDist2 = 52 * 52, maxConn = 3;
+    for (let i = 0; i < N; i++) {
+        let count = 0;
+        const ix = pts[i*3], iy = pts[i*3+1], iz = pts[i*3+2];
+        for (let j = i + 1; j < N && count < maxConn; j++) {
+            const dx = ix - pts[j*3], dy = iy - pts[j*3+1], dz = iz - pts[j*3+2];
+            if (dx*dx + dy*dy + dz*dz < maxDist2) { linePts.push(ix, iy, iz, pts[j*3], pts[j*3+1], pts[j*3+2]); count++; }
+        }
+    }
+
+    const ptGeo = new THREE.BufferGeometry();
+    ptGeo.setAttribute('position', new THREE.Float32BufferAttribute(pts, 3));
+    const ptMat = new THREE.PointsMaterial({ color: 0xe9d5ff, size: 2.6, sizeAttenuation: true, transparent: true, opacity: 0.85 });
+
+    const lineGeo = new THREE.BufferGeometry();
+    lineGeo.setAttribute('position', new THREE.Float32BufferAttribute(linePts, 3));
+    const lineMat = new THREE.LineBasicMaterial({ color: 0x6366f1, transparent: true, opacity: 0.22 });
+
+    const brain = new THREE.Group();
+    brain.add(new THREE.LineSegments(lineGeo, lineMat));
+    brain.add(new THREE.Points(ptGeo, ptMat));
+    scene.add(brain);
+
+    function hexToInt(hex) { return parseInt(hex.replace('#', ''), 16); }
+    function lighten(hex, t) {
+        const n = hexToInt(hex);
+        const r = (n >> 16) & 0xff, g = (n >> 8) & 0xff, b = n & 0xff;
+        return (Math.round(r + (255-r)*t) << 16) | (Math.round(g + (255-g)*t) << 8) | Math.round(b + (255-b)*t);
+    }
+    function setBrainColor(accentHex) {
+        ptMat.color.setHex(lighten(accentHex, 0.55));
+        lineMat.color.setHex(hexToInt(accentHex));
+    }
+    window.setBrainColor = setBrainColor;
+    setBrainColor('#ffffff');
+
+    let tY = 0, tX = 0, cY = 0, cX = 0;
+    window.addEventListener('mousemove', (e) => {
+        tY = ((e.clientX / window.innerWidth)  - 0.5) * 1.4;
+        tX = ((e.clientY / window.innerHeight) - 0.5) * 0.7;
+    }, { passive: true });
+
+    let autoRot = 0;
+    (function tick() {
+        requestAnimationFrame(tick);
+        autoRot += 0.0004;
+        cY += (tY - cY) * 0.045;
+        cX += (tX - cX) * 0.045;
+        brain.rotation.y = autoRot + cY;
+        brain.rotation.x = cX * 0.45;
+        renderer.render(scene, camera);
+    })();
+
+    window.addEventListener('resize', () => {
+        const w = parent.offsetWidth, h = parent.offsetHeight;
+        camera.aspect = w / h;
+        camera.updateProjectionMatrix();
+        renderer.setSize(w, h);
+    });
+})();
+</script>
 <script>lucide.createIcons();</script>
 
 <script>
