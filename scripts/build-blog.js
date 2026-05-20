@@ -120,6 +120,15 @@ posts.forEach(post => {
     console.log(`  ✓ Gerado: blog/${data.slug}/index.html`);
 });
 
+// Generate category filter badges
+const categories = [...new Set(posts.map(p => p.data.category))];
+const filterBadges = `
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="category-filter active text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-accent-brand text-white border-accent-brand" data-category="all">Todos</button>
+                ${categories.map(cat => `
+                <button class="category-filter text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-bg-base text-text-secondary border-border-default hover:border-accent-brand hover:text-accent-brand" data-category="${cat}">${cat}</button>`).join('\n')}
+            </div>`;
+
 // Generate blog listing cards
 const cardsHtml = posts.map((post, i) => {
     const delay = i * 100;
@@ -127,7 +136,7 @@ const cardsHtml = posts.map((post, i) => {
         ? `<img src="${post.data.slug}/${post.imageFilename}" alt="${post.data.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">`
         : `<i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>`;
     return `
-            <a href="${post.data.slug}/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: ${delay}ms;">
+            <a href="${post.data.slug}/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: ${delay}ms;" data-category="${post.data.category}">
                 <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
                     <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">${post.data.category}</div>
                     ${cardImage}
@@ -147,10 +156,18 @@ let indexContent = fs.readFileSync(INDEX_FILE, 'utf-8');
 const gridRegex = /<!-- BLOG_GRID_START -->[\s\S]*?<!-- BLOG_GRID_END -->/;
 if (gridRegex.test(indexContent)) {
     indexContent = indexContent.replace(gridRegex, `<!-- BLOG_GRID_START -->\n${cardsHtml}\n            <!-- BLOG_GRID_END -->`);
-    fs.writeFileSync(INDEX_FILE, indexContent, 'utf-8');
-    console.log('  ✓ Atualizado: blog/index.html');
 } else {
     console.error('  ✗ Marcadores <!-- BLOG_GRID_START --> / <!-- BLOG_GRID_END --> não encontrados em blog/index.html');
 }
+
+const categoryRegex = /<!-- CATEGORY_FILTER_START -->[\s\S]*?<!-- CATEGORY_FILTER_END -->/;
+if (categoryRegex.test(indexContent)) {
+    indexContent = indexContent.replace(categoryRegex, `<!-- CATEGORY_FILTER_START -->\n${filterBadges}\n            <!-- CATEGORY_FILTER_END -->`);
+} else {
+    console.error('  ✗ Marcadores <!-- CATEGORY_FILTER_START --> / <!-- CATEGORY_FILTER_END --> não encontrados em blog/index.html');
+}
+
+fs.writeFileSync(INDEX_FILE, indexContent, 'utf-8');
+console.log('  ✓ Atualizado: blog/index.html');
 
 console.log(`\n✅ Blog atualizado com ${posts.length} post(ns)!`);

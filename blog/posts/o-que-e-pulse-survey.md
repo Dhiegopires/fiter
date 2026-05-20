@@ -2,7 +2,7 @@
 title: "O que é pulse survey e por que substituir a pesquisa anual"
 slug: o-que-e-pulse-survey
 date: 2026-05-18
-category: "Cultura"
+category: "Educação"
 readingTime: 6
 description: "Entenda como os pulse surveys funcionam na prática e por que as empresas estão migrando para esse modelo de escuta contínua."
 author: "Equipe Fiter"

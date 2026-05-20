@@ -74,14 +74,31 @@
         </div>
     </section>
 
+    <!-- SEARCH FILTER -->
+    <section class="py-12 bg-bg-surface border-b border-border-subtle">
+        <div class="max-w-xl mx-auto px-6">
+            <div class="relative mb-6">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary w-5 h-5 pointer-events-none"></i>
+                <input type="text" id="blogSearch" placeholder="Buscar por título..." class="w-full bg-bg-base border border-border-default rounded-full pl-12 pr-6 py-3 text-text-primary placeholder:text-text-tertiary text-sm focus:outline-none focus:border-accent-brand focus:ring-1 focus:ring-accent-brand transition-colors">
+            </div>
+            <!-- CATEGORY_FILTER_START -->
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="category-filter active text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-accent-brand text-white border-accent-brand" data-category="all">Todos</button>
+                <button class="category-filter text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-bg-base text-text-secondary border-border-default hover:border-accent-brand hover:text-accent-brand" data-category="Educação">Educação</button>
+                <button class="category-filter text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-bg-base text-text-secondary border-border-default hover:border-accent-brand hover:text-accent-brand" data-category="RH">RH</button>
+            </div>
+            <!-- CATEGORY_FILTER_END -->
+        </div>
+    </section>
+
     <!-- BLOG GRID -->
     <section class="py-24 bg-bg-surface">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div id="blogGrid" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- BLOG_GRID_START -->
 
-            <a href="o-que-e-pulse-survey/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 0ms;">
+            <a href="o-que-e-pulse-survey/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 0ms;" data-category="Educação">
                 <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Cultura</div>
+                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Educação</div>
                     <img src="o-que-e-pulse-survey/default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">O que é pulse survey e por que substituir a pesquisa anual</h3>
@@ -92,9 +109,9 @@
                 </div>
             </a>
 
-            <a href="o-teste-do-afonso/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 100ms;">
+            <a href="o-teste-do-afonso/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 100ms;" data-category="RH">
                 <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">teste</div>
+                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH</div>
                     <img src="o-teste-do-afonso/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">É um titulo muito bacana criado por mim. </h3>
@@ -105,9 +122,9 @@
                 </div>
             </a>
 
-            <a href="teste-dhiego/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 200ms;">
+            <a href="teste-dhiego/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 200ms;" data-category="RH">
                 <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">teste 2</div>
+                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH</div>
                     <img src="teste-dhiego/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                 </div>
                 <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">É um titulo muito bacana criado por mim. </h3>
@@ -118,6 +135,9 @@
                 </div>
             </a>
             <!-- BLOG_GRID_END -->
+        </div>
+        <div id="noResults" class="max-w-7xl mx-auto px-6 text-center py-20 hidden">
+            <p class="text-lg text-text-tertiary">Nenhuma notícia encontrada.</p>
         </div>
     </section>
 
@@ -147,6 +167,42 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        const searchInput = document.getElementById('blogSearch');
+        const noResults = document.getElementById('noResults');
+        let activeCategory = 'all';
+
+        document.querySelectorAll('.category-filter').forEach(btn => {
+            btn.addEventListener('click', function () {
+                document.querySelectorAll('.category-filter').forEach(b => {
+                    b.classList.remove('bg-accent-brand', 'text-white', 'border-accent-brand');
+                    b.classList.add('bg-bg-base', 'text-text-secondary', 'border-border-default');
+                });
+                this.classList.remove('bg-bg-base', 'text-text-secondary', 'border-border-default');
+                this.classList.add('bg-accent-brand', 'text-white', 'border-accent-brand');
+                activeCategory = this.dataset.category;
+                filterPosts();
+            });
+        });
+
+        function filterPosts() {
+            const term = searchInput ? searchInput.value.toLowerCase().trim() : '';
+            let visibleCount = 0;
+            document.querySelectorAll('#blogGrid .card').forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const category = card.dataset.category || '';
+                const matchesSearch = !term || title.includes(term);
+                const matchesCategory = activeCategory === 'all' || category === activeCategory;
+                const match = matchesSearch && matchesCategory;
+                card.style.display = match ? '' : 'none';
+                if (match) visibleCount++;
+            });
+            noResults.classList.toggle('hidden', visibleCount > 0 || (!term && activeCategory === 'all'));
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', filterPosts);
+        }
     </script>
 </body>
 </html>
