@@ -7,6 +7,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    
+    # Esta linha garante o acesso de escrita para salvar as alterações do blog
+    permissions:
+      contents: write
+
     steps:
       - uses: actions/checkout@v4
         with:
