@@ -6,80 +6,487 @@
     <title>Blog sobre Engajamento e RH | Fiter</title>
     <meta name="description" content="Artigos, estudos de caso e melhores práticas sobre engajamento de colaboradores, saúde mental no trabalho e clima escolar.">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
+            corePlugins: { preflight: false },
             theme: {
                 extend: {
                     colors: {
-                        'bg-base': '#050505',
-                        'bg-surface': '#0f0f0f',
-                        'bg-surface-hover': '#171717',
-                        'text-primary': '#ffffff',
-                        'text-secondary': '#a3a3a3',
-                        'text-tertiary': '#737373',
-                        'border-subtle': '#171717',
-                        'border-default': '#262626',
-                        'border-strong': '#404040',
-                        'accent-brand': '#3b82f6',
-                        'accent-brand-hover': '#2563eb',
-                        'accent-text': '#ffffff',
+                        'bg-base': 'var(--bg-base)',
+                        'bg-surface': 'var(--bg-surface)',
+                        'bg-surface-hover': 'var(--bg-surface-hover)',
+                        'text-primary': 'var(--text-primary)',
+                        'text-secondary': 'var(--text-secondary)',
+                        'text-tertiary': 'var(--text-tertiary)',
+                        'border-subtle': 'var(--border-subtle)',
+                        'border-default': 'var(--border-default)',
+                        'accent-brand': 'var(--accent-brand)',
+                        'accent-glow': 'var(--accent-glow)',
+                    },
+                    fontFamily: {
+                        sans: ['"IBM Plex Sans"', 'sans-serif'],
+                        serif: ['"Geist"', 'sans-serif'],
+                        mono: ['"IBM Plex Mono"', 'monospace'],
                     }
-                },
-                fontFamily: {
-                    sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-                    serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                    mono: ['"Fira Code"', 'ui-monospace', 'monospace'],
                 }
             }
         }
     </script>
-    <style type="text/tailwindcss">
-        @layer components {
-            .btn { @apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300; }
-            .btn-primary { @apply bg-accent-brand text-accent-text hover:bg-accent-brand-hover shadow-[0_0_20px_rgba(59,130,246,0.15)] hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]; }
-            .card { @apply bg-bg-surface border border-border-default rounded-2xl transition-all duration-300 hover:border-border-strong; }
+    <style>
+        :root {
+            --semantic-color-background-base: #050505;
+            --semantic-color-background-surface: #0e0e0e;
+            --semantic-color-background-surface-hover: #141414;
+            --semantic-color-foreground-primary: #f5f5f5;
+            --semantic-color-foreground-secondary: #a8a8b3;
+            --semantic-color-foreground-tertiary: #80808c;
+            --semantic-color-border-subtle: rgba(255, 255, 255, 0.04);
+            --semantic-color-border-default: rgba(255, 255, 255, 0.08);
+            --semantic-color-border-hover: rgba(255, 255, 255, 0.15);
+            --semantic-color-accent-brand: #3b82f6;
+            --semantic-color-accent-glow: rgba(59, 130, 246, 0.15);
+            --semantic-color-accent-glow-solid: rgba(59, 130, 246, 0.20);
+            --semantic-color-accent-text: #ffffff;
+            --bg-base: var(--semantic-color-background-base);
+            --bg-surface: var(--semantic-color-background-surface);
+            --bg-surface-hover: var(--semantic-color-background-surface-hover);
+            --text-primary: var(--semantic-color-foreground-primary);
+            --text-secondary: var(--semantic-color-foreground-secondary);
+            --text-tertiary: var(--semantic-color-foreground-tertiary);
+            --border-default: var(--semantic-color-border-default);
+            --border-subtle: var(--semantic-color-border-subtle);
+            --border-hover: var(--semantic-color-border-hover);
+            --accent-brand: var(--semantic-color-accent-brand);
+            --accent-glow: var(--semantic-color-accent-glow);
+            --accent-glow-solid: var(--semantic-color-accent-glow-solid);
+            --accent-text: var(--semantic-color-accent-text);
+            --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            --font-serif: 'Geist', sans-serif;
+            --font-mono: 'IBM Plex Mono', monospace;
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-full: 9999px;
+            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
         }
-        body { background-color: #050505; color: #ffffff; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { overflow-x: hidden; }
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.625rem 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-decoration: none;
+            border: 1px solid transparent;
+            font-family: var(--font-sans);
+        }
+        .btn-primary {
+            background-color: var(--accent-brand);
+            color: var(--accent-text);
+            border: 1px solid transparent;
+        }
+        .btn-primary:hover {
+            transform: scale(0.98);
+            box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-brand) 50%, transparent), 0 0 30px var(--accent-glow);
+        }
+        .site-nav {
+            position: sticky;
+            top: 0;
+            z-index: 200;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            border-bottom: 1px solid transparent;
+            transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+        }
+        .site-nav.scrolled {
+            background: rgba(10,10,10,0.82);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-color: rgba(255,255,255,0.07);
+        }
+        .nav-inner {
+            width: 100%;
+            padding: 0 2.5rem;
+            display: flex;
+            align-items: center;
+        }
+        .nav-logo {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            text-decoration: none;
+            margin-right: 3rem;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex: 1;
+        }
+        .nav-item { position: relative; }
+        .nav-link {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0 0.85rem;
+            height: 64px;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: color 0.2s;
+            font-family: var(--font-sans);
+            position: relative;
+        }
+        .nav-link:hover { color: var(--text-primary); }
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0.85rem;
+            right: 0.85rem;
+            height: 2px;
+            background: var(--accent-brand);
+            border-radius: 2px 2px 0 0;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-left: auto;
+        }
+        .nav-cta { font-size: 0.8rem; padding: 0.5rem 1.1rem; white-space: nowrap; }
+        .nav-hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            margin-left: 0.5rem;
+        }
+        .nav-hamburger span {
+            display: block;
+            width: 22px;
+            height: 1.5px;
+            background: var(--text-secondary);
+            transition: transform 0.3s, opacity 0.3s, width 0.3s;
+            transform-origin: center;
+        }
+        @media (max-width: 900px) {
+            .nav-links, .nav-cta { display: none; }
+            .nav-hamburger { display: flex; }
+        }
+        .ds-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        .ds-hero {
+            padding: 8rem 2rem 5rem;
+            border-bottom: 1px solid var(--border-subtle);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        .ds-hero-bg {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at top, var(--accent-glow-solid) 0%, transparent 60%);
+        }
+        .ds-hero-title {
+            font-family: var(--font-serif);
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        .ds-hero-sub {
+            font-size: 1.125rem;
+            color: var(--text-secondary);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .ds-filter-bar {
+            padding: 3rem 0;
+            background: var(--bg-surface);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .ds-input {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-full);
+            padding: 0.75rem 1.25rem 0.75rem 3rem;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            outline: none;
+            transition: all var(--transition-fast);
+        }
+        .ds-input:focus {
+            border-color: var(--accent-brand);
+            box-shadow: 0 0 0 1px var(--accent-brand);
+        }
+        .ds-input::placeholder { color: var(--text-tertiary); }
+        .filter-btn {
+            font-family: var(--font-mono);
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--radius-full);
+            border: 1px solid var(--border-default);
+            background: transparent;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .filter-btn:hover {
+            border-color: var(--accent-brand);
+            color: var(--accent-brand);
+        }
+        .filter-btn.active {
+            background: var(--accent-brand);
+            color: var(--accent-text);
+            border-color: var(--accent-brand);
+        }
+        .ds-section {
+            padding: 6rem 0;
+            background: var(--bg-surface);
+        }
+        #blogGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: rgba(14,14,14,0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            transition: all var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+        }
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent-brand), transparent);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+        }
+        .card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+        .card:hover::before {
+            opacity: 0.5;
+        }
+        .post-thumb {
+            aspect-ratio: 16/9;
+            background: var(--bg-base);
+            border: 1px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .post-tag {
+            position: absolute;
+            top: 0.75rem;
+            left: 0.75rem;
+            z-index: 2;
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            color: var(--accent-brand);
+            border: 1px solid var(--border-subtle);
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+        }
+        .post-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .card:hover .post-img { transform: scale(1.1); }
+        .post-title {
+            font-family: var(--font-serif);
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.2;
+            transition: color var(--transition-fast);
+        }
+        .card:hover .post-title { color: var(--accent-brand); }
+        .post-excerpt {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+        .post-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--text-tertiary);
+            border-top: 1px solid var(--border-subtle);
+            padding-top: 1rem;
+            font-family: var(--font-mono);
+        }
+        .ds-footer {
+            background-color: #020202;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-tertiary);
+        }
+        .footer-inner {
+            padding: 4rem 2.5rem 2.5rem;
+        }
+        .footer-statement {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .footer-eyebrow {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            color: var(--text-tertiary);
+        }
+        .footer-headline {
+            font-family: var(--font-serif);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.05;
+            color: var(--text-primary);
+        }
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border-subtle);
+        }
+        .footer-copy {
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: var(--text-tertiary);
+            letter-spacing: 0.03em;
+        }
+        .footer-legal {
+            display: flex;
+            gap: 2rem;
+        }
+        .footer-legal a {
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: var(--text-tertiary);
+            text-decoration: none;
+            transition: color var(--transition-fast);
+        }
+        .footer-legal a:hover { color: var(--text-secondary); }
         .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased font-sans">
+<body data-theme="base">
 
-    <!-- NAV FIXO -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent py-6 bg-transparent">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="../" class="text-2xl font-serif italic text-text-primary">Fiter.</a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="../produtos/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Produtos</a>
-                <a href="../solucoes/rh/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">RH</a>
-                <a href="../solucoes/educacao/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Educação</a>
-                <a href="./" class="text-sm font-medium text-accent-brand hover:text-accent-brand transition-colors">Blog</a>
-            </div>
-            <div class="hidden md:flex items-center gap-4">
-                <a href="../contato/" class="btn btn-primary text-sm px-5 py-2">Agendar Demo</a>
+    <!-- NAV -->
+    <nav class="site-nav" id="site-nav">
+        <div class="nav-inner">
+            <a class="nav-logo" href="../">Fiter.</a>
+            <ul class="nav-links">
+                <li class="nav-item"><a class="nav-link" href="../produtos/">Produtos</a></li>
+                <li class="nav-item"><a class="nav-link" href="../solucoes/rh/">RH</a></li>
+                <li class="nav-item"><a class="nav-link" href="../solucoes/educacao/">Educação</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./">Blog</a></li>
+            </ul>
+            <div class="nav-right">
+                <a class="btn btn-primary nav-cta" href="../contato/">Agendar Demonstração</a>
+                <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- HERO BLOG -->
-    <section class="pt-40 pb-20 bg-bg-base border-b border-border-subtle relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.15)_0%,transparent_60%)]"></div>
-        <div class="max-w-7xl mx-auto px-6 text-center relative z-10 fade-in">
-            <h1 class="text-5xl md:text-6xl font-serif text-text-primary mb-6">Fiter Insights</h1>
-            <p class="text-xl text-text-secondary max-w-2xl mx-auto">Dados, neurociência e estratégias para transformar o clima e reter os melhores talentos.</p>
+    <section class="ds-hero">
+        <div class="ds-hero-bg"></div>
+        <div class="ds-container px-6 text-center relative z-10 fade-in">
+            <h1 class="ds-hero-title">Fiter Insights</h1>
+            <p class="ds-hero-sub">Dados, neurociência e estratégias para transformar o clima e reter os melhores talentos.</p>
         </div>
     </section>
 
     <!-- SEARCH FILTER -->
-    <section class="py-12 bg-bg-surface border-b border-border-subtle">
+    <section class="ds-filter-bar">
         <div class="max-w-xl mx-auto px-6">
             <div class="relative mb-6">
-                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary w-5 h-5 pointer-events-none"></i>
-                <input type="text" id="blogSearch" placeholder="Buscar por título..." class="w-full bg-bg-base border border-border-default rounded-full pl-12 pr-6 py-3 text-text-primary placeholder:text-text-tertiary text-sm focus:outline-none focus:border-accent-brand focus:ring-1 focus:ring-accent-brand transition-colors">
+                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none" style="color: var(--text-tertiary);"></i>
+                <input type="text" id="blogSearch" placeholder="Buscar por título..." class="ds-input">
             </div>
             <!-- CATEGORY_FILTER_START -->
 
@@ -90,74 +497,82 @@
 
                 <button class="category-filter text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-bg-base text-text-secondary border-border-default hover:border-accent-brand hover:text-accent-brand" data-category="RH">RH</button>
             </div>
-            <!-- CATEGORY_FILTER_END -->
         </div>
     </section>
 
     <!-- BLOG GRID -->
-    <section class="py-24 bg-bg-surface">
-        <div id="blogGrid" class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section class="ds-section">
+        <div id="blogGrid" class="ds-container px-6">
             <!-- BLOG_GRID_START -->
 
-            <a href="o-que-e-pulse-survey/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 0ms;" data-category="Educação">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Educação</div>
-                    <img src="o-que-e-pulse-survey/default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="o-que-e-pulse-survey/" class="card fade-in" style="transition-delay: 0ms;" data-category="Educação">
+                <div class="post-thumb">
+                    <span class="post-tag">Educação</span>
+                    <img src="o-que-e-pulse-survey/default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" class="post-img">
                 </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">O que é pulse survey e por que substituir a pesquisa anual</h3>
-                <p class="text-text-secondary mb-6 flex-1">Entenda como os pulse surveys funcionam na prática e por que as empresas estão migrando para esse modelo de escuta contínua.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
+                <h3 class="post-title">O que é pulse survey e por que substituir a pesquisa anual</h3>
+                <p class="post-excerpt">Entenda como os pulse surveys funcionam na prática e por que as empresas estão migrando para esse modelo de escuta contínua.</p>
+                <div class="post-meta">
                     <span>18 de Maio, 2026</span>
                     <span>6 min de leitura</span>
                 </div>
             </a>
 
-            <a href="o-teste-do-afonso/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 100ms;" data-category="RH">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH</div>
-                    <img src="o-teste-do-afonso/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="o-teste-do-afonso/" class="card fade-in" style="transition-delay: 100ms;" data-category="RH">
+                <div class="post-thumb">
+                    <span class="post-tag">RH</span>
+                    <img src="o-teste-do-afonso/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim." class="post-img">
                 </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">É um titulo muito bacana criado por mim. </h3>
-                <p class="text-text-secondary mb-6 flex-1">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
+                <h3 class="post-title">É um titulo muito bacana criado por mim.</h3>
+                <p class="post-excerpt">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
+                <div class="post-meta">
                     <span>18 de Maio, 2026</span>
                     <span>10 min de leitura</span>
                 </div>
             </a>
 
-            <a href="teste-dhiego/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 200ms;" data-category="RH">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH</div>
-                    <img src="teste-dhiego/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="teste-dhiego/" class="card fade-in" style="transition-delay: 200ms;" data-category="RH">
+                <div class="post-thumb">
+                    <span class="post-tag">RH</span>
+                    <img src="teste-dhiego/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim." class="post-img">
                 </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">É um titulo muito bacana criado por mim. </h3>
-                <p class="text-text-secondary mb-6 flex-1">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
+                <h3 class="post-title">É um titulo muito bacana criado por mim.</h3>
+                <p class="post-excerpt">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
+                <div class="post-meta">
                     <span>18 de Maio, 2026</span>
                     <span>10 min de leitura</span>
                 </div>
             </a>
             <!-- BLOG_GRID_END -->
         </div>
-        <div id="noResults" class="max-w-7xl mx-auto px-6 text-center py-20 hidden">
-            <p class="text-lg text-text-tertiary">Nenhuma notícia encontrada.</p>
+        <div id="noResults" class="ds-container px-6 text-center py-20 hidden">
+            <p style="color: var(--text-tertiary);">Nenhuma notícia encontrada.</p>
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-[#020202] pt-20 pb-10 border-t border-border-subtle">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-3xl font-serif italic text-text-primary mb-4">Fiter.</h2>
-            <p class="text-sm text-text-secondary">© 2026 Fiter. HTML e CSS Puro.</p>
+    <footer class="ds-footer">
+        <div class="footer-inner">
+            <div class="footer-statement">
+                <div class="footer-eyebrow">Fiter</div>
+                <div class="footer-headline">Pronto para<br>medir o que importa?</div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copy">© 2026 Fiter. HTML e CSS Puro.</div>
+                <div class="footer-legal">
+                    <a href="#">Privacidade</a>
+                    <a href="#">Termos</a>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
         window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 20) nav.classList.add('bg-bg-base/80', 'backdrop-blur-md', 'border-border-subtle', 'py-4');
-            else nav.classList.remove('bg-bg-base/80', 'backdrop-blur-md', 'border-border-subtle', 'py-4');
+            const nav = document.getElementById('site-nav');
+            if (window.scrollY > 20) nav.classList.add('scrolled');
+            else nav.classList.remove('scrolled');
         });
 
         const observer = new IntersectionObserver((entries) => {
@@ -175,14 +590,10 @@
         const noResults = document.getElementById('noResults');
         let activeCategory = 'all';
 
-        document.querySelectorAll('.category-filter').forEach(btn => {
+        document.querySelectorAll('.filter-btn').forEach(btn => {
             btn.addEventListener('click', function () {
-                document.querySelectorAll('.category-filter').forEach(b => {
-                    b.classList.remove('bg-accent-brand', 'text-white', 'border-accent-brand');
-                    b.classList.add('bg-bg-base', 'text-text-secondary', 'border-border-default');
-                });
-                this.classList.remove('bg-bg-base', 'text-text-secondary', 'border-border-default');
-                this.classList.add('bg-accent-brand', 'text-white', 'border-accent-brand');
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
                 activeCategory = this.dataset.category;
                 filterPosts();
             });
