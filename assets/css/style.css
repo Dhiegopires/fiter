@@ -553,6 +553,7 @@
 
         /* Reveal Footer */
         .main-content {
+            padding-top: 64px;
             background-color: var(--bg-base);
             background-image: 
                 radial-gradient(circle at 15% 15%, var(--accent-glow) 0%, transparent 40%),
@@ -792,8 +793,10 @@
            NAVBAR
            ========================================================= */
         .site-nav {
-            position: sticky;
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 200;
             height: 64px;
             display: flex;
@@ -1071,7 +1074,7 @@
         .testi-card::before {
             content: '\201C';
             position: absolute;
-            top: -0.5rem; right: 1.5rem;
+            top: 1.25rem; right: 1.5rem;
             font-family: var(--font-serif);
             font-size: 7rem;
             line-height: 1;

@@ -8,7 +8,8 @@
       "Bash(mb-)",
       "Bash(text-[0-9])",
       "Bash(text-text-\" | head -20)",
-      "Bash(rtk wc *)"
+      "Bash(rtk wc *)",
+      "Bash(rtk git *)"
     ]
   }
 }
