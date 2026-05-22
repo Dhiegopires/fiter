@@ -12,7 +12,8 @@
       "Bash(rtk git *)",
       "Read(//mnt/c/Users/Dhiego/Desktop/Github/**)",
       "Bash(node -e ' *)",
-      "WebFetch(domain:enerblock.net)"
+      "WebFetch(domain:enerblock.net)",
+      "Bash(git checkout *)"
     ]
   }
 }
