@@ -120,29 +120,30 @@ posts.forEach(post => {
 // Generate category filter badges
 const categories = [...new Set(posts.map(p => p.data.category))];
 const filterBadges = `
-            <div class="flex flex-wrap justify-center gap-3">
-                <button class="category-filter active text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-accent-brand text-white border-accent-brand" data-category="all">Todos</button>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
+                <button class="filter-btn active" data-category="all">Todos</button>
                 ${categories.map(cat => `
-                <button class="category-filter text-xs font-bold px-4 py-2 rounded-full border transition-all duration-300 bg-bg-base text-text-secondary border-border-default hover:border-accent-brand hover:text-accent-brand" data-category="${cat}">${cat}</button>`).join('\n')}
+                <button class="filter-btn" data-category="${cat}">${cat}</button>`).join('\n')}
             </div>`;
 
 // Generate blog listing cards
 const cardsHtml = posts.map((post, i) => {
-    const delay = i * 100;
     const cardImage = post.imageFilename
-        ? `<img src="${post.data.slug}/${post.imageFilename}" alt="${post.data.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">`
-        : `<i data-lucide="image" class="text-border-strong w-12 h-12 group-hover:scale-110 transition-transform"></i>`;
+        ? `<img src="${post.data.slug}/${post.imageFilename}" alt="${post.data.title}" class="post-img">`
+        : '';
     return `
-            <a href="${post.data.slug}/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: ${delay}ms;" data-category="${post.data.category}">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">${post.data.category}</div>
+            <a href="${post.data.slug}/" class="post-card" data-category="${post.data.category}">
+                <div class="post-thumb">
+                    <span class="post-tag">${post.data.category}</span>
                     ${cardImage}
                 </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">${post.data.title}</h3>
-                <p class="text-text-secondary mb-6 flex-1">${post.data.description}</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
-                    <span>${formatDate(post.data.date)}</span>
-                    <span>${post.data.readingTime} min de leitura</span>
+                <div class="post-body">
+                    <h3 class="post-title">${post.data.title}</h3>
+                    <p class="post-excerpt">${post.data.description}</p>
+                    <div class="post-meta">
+                        <span>${formatDate(post.data.date)}</span>
+                        <span>${post.data.readingTime} min de leitura</span>
+                    </div>
                 </div>
             </a>`;
 }).join('\n');
