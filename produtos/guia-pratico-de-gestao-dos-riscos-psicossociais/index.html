@@ -139,7 +139,8 @@
                 <div class="flex-1 hidden md:flex items-center justify-center relative w-full h-full z-0">
                     <style>
                         @keyframes float-guia { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
-                    </style>
+                            .ds-footer { position: static; }
+    </style>
                     <div style="position: relative; width: 100%; max-width: 400px; animation: float-guia 6s ease-in-out infinite;">
                         <div style="position: absolute; inset: -30px; background: radial-gradient(circle at center, var(--accent-brand) 0%, transparent 60%); opacity: 0.15; filter: blur(40px); z-index: -1;"></div>
                         <a href="https://lab.fiter.com.br/wp-content/uploads/2026/02/por-site-capa-1.pdf" target="_blank">
@@ -246,14 +247,46 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="ds-footer" style="padding: 3rem 2rem;">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <div style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); margin-bottom: 1.5rem;">Fiter.</div>
-            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); line-height: 1.7;">
-                &copy; Copyright 2026 | fiter | Política de Privacidade | Todos os direitos reservados | Site desenvolvido por <a href="http://b-rain.digital/" target="_blank" style="color: rgb(255, 15, 226); text-decoration: none;">B-rain.digital</a>
-            </p>
-        </div>
-    </footer>
+        <footer class="ds-footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <img src="/assets/img/logo.png" alt="Fiter">
+                        <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
+                    </div>
+                    <div class="footer-nav">
+                        <div>
+                            <div class="footer-col-title">Soluções</div>
+                            <ul class="footer-links">
+                                <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
+                                <li><a href="/solucoes/educacao/">Educação</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="footer-col-title">Empresa</div>
+                            <ul class="footer-links">
+                                <li><a href="/sobre/">Sobre</a></li>
+                                <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/contato/">Contato</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="footer-col-title">Conformidade</div>
+                            <ul class="footer-links">
+                                <li><a href="#">LGPD</a></li>
+                                <li><a href="#">Política de privacidade</a></li>
+                                <li><a href="#">Termos de uso</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
+                    <span class="footer-copy" style="display:flex;align-items:center;gap:0.3rem;">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a> <span style="color:var(--text-tertiary);">&#10084;</span></span>
+                </div>
+            </div>
+        </footer>
 
     <script>lucide.createIcons();</script>
 </body>

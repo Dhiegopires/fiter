@@ -59,6 +59,7 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.4; }
         }
+            .ds-footer { position: static; }
     </style>
 </head>
 <body data-theme="analytics">
@@ -160,7 +161,7 @@
         <div style="position: relative; z-index: 1;">
 
             <!-- Hero -->
-            <section id="hero-rh" class="ds-section" style="min-height: 100vh; padding-top: 5rem; padding-bottom: 5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; position: relative; overflow: hidden;">
+            <section id="hero-rh" class="ds-section" style="padding-top: 5rem; padding-bottom: 5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; position: relative; overflow: hidden;">
                 <!-- Background network canvas -->
                 <canvas id="canvas-rh" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
 
@@ -436,231 +437,240 @@
                 </div>
             </section>
 
-            <!-- Por que a Fiter existe — horizontal scroll narrative -->
-            <div id="nrr-wrapper" style="height: 380vh; position: relative; margin-bottom: 8rem;">
+            <!-- Por que a Fiter existe — scrollytelling 50/50 -->
+            <div id="nrr-wrapper" style="height: 300vh; position: relative; margin-bottom: 8rem;">
                 <style>
-                    .nrr-sticky {
+                    .nrr-panel {
                         position: sticky;
                         top: 64px;
                         height: calc(100vh - 64px);
-                        overflow: hidden;
-                        display: flex;
-                        background: var(--bg-page);
-                    }
-                    .nrr-left {
-                        width: 300px;
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: center;
-                        padding: 3rem 2.5rem 3rem 4rem;
-                        border-right: 1px solid var(--border-subtle);
-                        position: relative;
-                        z-index: 2;
-                    }
-                    .nrr-right {
-                        flex: 1;
-                        min-width: 0;
-                        overflow: hidden;
-                        display: flex;
-                        align-items: center;
-                    }
-                    .nrr-track {
-                        display: flex;
-                        flex-direction: row;
-                        gap: 5rem;
-                        padding: 0 5rem;
-                        flex-shrink: 0;
-                        width: max-content;
-                        will-change: transform;
-                    }
-                    .nrr-ch {
-                        flex-shrink: 0;
-                        width: calc(100vw - 300px - 10rem);
                         display: grid;
                         grid-template-columns: 1fr 1fr;
-                        gap: 3rem;
+                        background: var(--bg-page);
+                        overflow: hidden;
+                    }
+                    .nrr-panel-left {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2.5rem;
+                        padding: 4rem 4rem 5rem;
+                        border-right: 1px solid var(--border-subtle);
+                        position: relative;
+                        justify-content: center;
+                    }
+                    .nrr-panel-right {
+                        display: flex;
                         align-items: center;
+                        justify-content: center;
+                        padding: 4rem;
+                        position: relative;
+                    }
+                    .nrr-chapter {
+                        position: absolute;
+                        inset: 4rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        transform: translateY(18px);
+                        transition: opacity 0.45s ease, transform 0.45s ease;
+                        pointer-events: none;
+                    }
+                    .nrr-chapter.active {
+                        opacity: 1;
+                        transform: translateY(0);
+                        pointer-events: auto;
+                    }
+                    .nrr-bottom {
+                        position: absolute;
+                        bottom: 0; left: 0; right: 0;
+                        padding: 0 4rem 1.5rem;
+                    }
+                    .nrr-caption {
+                        position: absolute;
+                        bottom: 4rem; left: 4rem; right: 4rem;
+                        opacity: 0;
+                        transform: translateY(10px);
+                        transition: opacity 0.4s ease, transform 0.4s ease;
+                        pointer-events: none;
+                    }
+                    .nrr-caption.active {
+                        opacity: 1;
+                        transform: translateY(0);
+                        pointer-events: auto;
                     }
                     .nrr-ndot {
                         width: 6px; height: 6px; border-radius: 50%;
                         background: var(--border-default);
-                        transition: width 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
-                        cursor: default;
+                        transition: width 0.3s, background 0.3s, border-radius 0.3s;
+                        display: inline-block;
                     }
-                    .nrr-ndot.active {
-                        width: 22px; border-radius: 3px; background: var(--accent-brand);
-                    }
-                    .tl-row {
-                        display: flex; align-items: center; gap: 0.75rem;
-                        font-family: var(--font-mono); font-size: 0.65rem;
-                    }
-                    .tl-label { width: 5rem; flex-shrink: 0; color: var(--text-tertiary); }
-                    .tl-line  { flex: 1; height: 1px; background: var(--border-subtle); position: relative; }
-                    .tl-dot   { position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-radius: 50%; }
+                    .nrr-ndot.active { width: 22px; border-radius: 3px; background: var(--accent-brand); }
+                    .tl-row { display:flex; align-items:center; gap:0.75rem; font-family:var(--font-mono); font-size:0.65rem; }
+                    .tl-label { width:5rem; flex-shrink:0; color:var(--text-tertiary); }
+                    .tl-line  { flex:1; height:1px; background:var(--border-subtle); position:relative; }
+                    .tl-dot   { position:absolute; right:0; top:-3px; width:7px; height:7px; border-radius:50%; }
                     @media (max-width: 768px) {
                         #nrr-wrapper { height: auto; }
-                        .nrr-sticky { position: static; height: auto; flex-direction: column; }
-                        .nrr-left { width: 100%; border-right: none; border-bottom: 1px solid var(--border-subtle); padding: 2.5rem 2rem; }
-                        .nrr-right { overflow: visible; height: auto; }
-                        .nrr-track { flex-direction: column; padding: 2.5rem 2rem; gap: 3rem; transform: none !important; }
-                        .nrr-ch { width: 100%; grid-template-columns: 1fr; gap: 1.5rem; }
+                        .nrr-panel { position: static; grid-template-columns: 1fr; height: auto; }
+                        .nrr-panel-left { padding: 2.5rem 1.5rem 8rem; border-right: none; border-bottom: 1px solid var(--border-subtle); }
+                        .nrr-panel-right { padding: 2.5rem 1.5rem; min-height: 360px; }
+                        .nrr-chapter, .nrr-caption { position: static; opacity: 1; transform: none; display: block; }
+                        .nrr-chapter { inset: auto; display: none; }
+                        .nrr-chapter.active { display: flex; }
+                        .nrr-caption { display: none; }
+                        .nrr-caption.active { display: block; }
+                        .nrr-bottom { position: static; }
                     }
                 </style>
 
-                <div class="nrr-sticky">
+                <div class="nrr-panel">
 
-                    <!-- LEFT PANEL -->
-                    <div class="nrr-left">
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.25rem;">Por que a Fiter existe</p>
-                        <h2 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.6vw,2rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">O problema não é falta de dados.<br>É chegar tarde.</h2>
-                        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.65;margin-bottom:2.5rem;">Três realidades que todo RH conhece — e que a Fiter resolveu.</p>
-                        <div style="display:flex;gap:0.5rem;align-items:center;" id="nrr-dots">
-                            <div class="nrr-ndot active"></div>
-                            <div class="nrr-ndot"></div>
-                            <div class="nrr-ndot"></div>
+                    <!-- LEFT: big title stays + caption swaps at bottom -->
+                    <div class="nrr-panel-left">
+                        <div>
+                            <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.5rem;">Por que a Fiter existe</p>
+                            <h2 style="font-family:var(--font-serif);font-size:clamp(2.25rem,3.5vw,4rem);font-weight:800;letter-spacing:-0.03em;line-height:1.05;color:var(--text-primary);">O problema não é falta de dados.<br>É chegar tarde.</h2>
                         </div>
-                        <div style="position:absolute;bottom:2.5rem;left:4rem;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">
-                            <span id="nrr-counter">01</span><span style="opacity:0.4;"> / 03</span>
+
+                        <!-- Captions that swap -->
+                        <div style="position:relative; height: 130px;">
+                            <div class="nrr-caption active" id="nrr-cap-0">
+                                <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">01 — Retenção</p>
+                                <p style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.2;">O talento avisa antes de sair.</p>
+                                <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;">Queda de felicidade e fit cultural aparecem semanas antes da decisão. A IA alerta para você agir antes de perder o talento.</p>
+                            </div>
+                            <div class="nrr-caption" id="nrr-cap-1">
+                                <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">02 — Conformidade</p>
+                                <p style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.2;">NR1 sem meses de espera.</p>
+                                <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;">Laudos de risco psicossocial integrados ao Ministério do Trabalho. O que levaria meses de consultoria, o Agente NR1 entrega em minutos.</p>
+                            </div>
+                            <div class="nrr-caption" id="nrr-cap-2">
+                                <p style="font-family:var(--font-mono);font-size:0.6rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">03 — Diagnóstico</p>
+                                <p style="font-family:var(--font-serif);font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.2;">Pesquisa anual é foto de acidente.</p>
+                                <p style="font-size:0.82rem;color:var(--text-secondary);line-height:1.7;">O GPTW entrega resultado quando o dano já aconteceu. A Fiter mede mensalmente via WhatsApp — 87% de adesão, 2 minutos por resposta.</p>
+                            </div>
                         </div>
-                        <!-- Bottom progress bar -->
-                        <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--border-subtle);">
-                            <div id="nrr-bar" style="height:100%;width:0%;background:var(--accent-brand);"></div>
+
+                        <!-- Progress dots + bar -->
+                        <div class="nrr-bottom">
+                            <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.5rem;">
+                                <div class="nrr-ndot active" data-dot="0"></div>
+                                <div class="nrr-ndot" data-dot="1"></div>
+                                <div class="nrr-ndot" data-dot="2"></div>
+                                <span style="margin-left:auto;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);"><span id="nrr-counter">01</span><span style="opacity:0.4;"> / 03</span></span>
+                            </div>
+                            <div style="height:2px;background:var(--border-subtle);">
+                                <div id="nrr-bar" style="height:100%;width:0%;background:var(--accent-brand);transition:width 0.1s linear;"></div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- RIGHT: horizontal track -->
-                    <div class="nrr-right">
-                        <div id="nrr-track" class="nrr-track">
+                    <!-- RIGHT: visuals that swap -->
+                    <div class="nrr-panel-right">
 
-                            <!-- Chapter 01 — Retenção -->
-                            <div class="nrr-ch">
-                                <div>
-                                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">01 — Retenção</p>
-                                    <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.8vw,2.1rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--text-primary);margin-bottom:0.6rem;">O talento avisa<br>antes de sair.</h3>
-                                    <p style="font-family:var(--font-serif);font-size:0.95rem;font-style:italic;color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.4;">Mas ninguém estava ouvindo.</p>
-                                    <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.75;">Queda de felicidade, engajamento, fit cultural — sinais que aparecem semanas antes da decisão. A Fiter os captura via WhatsApp e a IA alerta para você agir antes de perder o talento.</p>
+                        <!-- Visual 01: timeline -->
+                        <div class="nrr-chapter active" id="nrr-vis-0">
+                            <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:2rem;width:100%;max-width:380px;">
+                                <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.5rem;">Com Fiter</p>
+                                <div style="display:flex;flex-direction:column;gap:1rem;margin-bottom:1.5rem;">
+                                    <div class="tl-row"><span class="tl-label">Semana 1</span><div class="tl-line"><div class="tl-dot" style="background:var(--accent-brand);"></div></div><span style="color:var(--accent-brand);">IA detecta queda</span></div>
+                                    <div class="tl-row"><span class="tl-label">Semana 2</span><div class="tl-line"><div class="tl-dot" style="background:var(--accent-brand);"></div></div><span style="color:var(--text-primary);">RH recebe alerta</span></div>
+                                    <div class="tl-row"><span class="tl-label">Semana 3</span><div class="tl-line"><div class="tl-dot" style="background:#10b981;"></div></div><span style="color:#10b981;">Você age. Talento fica.</span></div>
                                 </div>
-                                <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.75rem;">
-                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Com Fiter</p>
-                                    <div style="display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1.25rem;">
-                                        <div class="tl-row"><span class="tl-label">Semana 1</span><div class="tl-line"><div class="tl-dot" style="background:var(--accent-brand);"></div></div><span style="color:var(--accent-brand);">IA detecta queda</span></div>
-                                        <div class="tl-row"><span class="tl-label">Semana 2</span><div class="tl-line"><div class="tl-dot" style="background:var(--accent-brand);"></div></div><span style="color:var(--text-primary);">RH recebe alerta</span></div>
-                                        <div class="tl-row"><span class="tl-label">Semana 3</span><div class="tl-line"><div class="tl-dot" style="background:#10b981;"></div></div><span style="color:#10b981;">Você age. Talento fica.</span></div>
-                                    </div>
-                                    <div style="border-top:1px solid var(--border-subtle);padding-top:1.1rem;opacity:0.45;">
-                                        <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">Sem Fiter</p>
-                                        <div class="tl-row"><span class="tl-label">Mês 3</span><div class="tl-line" style="background:rgba(239,68,68,0.3);"><div class="tl-dot" style="background:#ef4444;"></div></div><span style="color:#ef4444;">Aviso de demissão</span></div>
-                                    </div>
+                                <div style="border-top:1px solid var(--border-subtle);padding-top:1.25rem;opacity:0.5;">
+                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">Sem Fiter</p>
+                                    <div class="tl-row"><span class="tl-label">Mês 3</span><div class="tl-line" style="background:rgba(239,68,68,0.25);"><div class="tl-dot" style="background:#ef4444;"></div></div><span style="color:#ef4444;">Aviso de demissão</span></div>
                                 </div>
                             </div>
-
-                            <!-- Chapter 02 — Conformidade -->
-                            <div class="nrr-ch">
-                                <div>
-                                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">02 — Conformidade</p>
-                                    <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.8vw,2.1rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--text-primary);margin-bottom:0.6rem;">NR1 sem meses<br>de espera.</h3>
-                                    <p style="font-family:var(--font-serif);font-size:0.95rem;font-style:italic;color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.4;">Laudo que demora não protege.</p>
-                                    <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.75;">Laudos de risco psicossocial por cargo, integrados ao Ministério do Trabalho, CID e OMS. O que levaria meses de consultoria o Agente NR1 entrega em minutos — com validade jurídica.</p>
-                                </div>
-                                <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.75rem;">
-                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.5rem;">Tempo para o laudo</p>
-                                    <div style="display:flex;align-items:flex-end;gap:1.5rem;">
-                                        <div style="flex:1;text-align:center;">
-                                            <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:1.5rem 1rem;margin-bottom:0.6rem;">
-                                                <span style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:#ef4444;letter-spacing:-0.03em;line-height:1;">6m</span>
-                                            </div>
-                                            <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;">Consultoria</span>
-                                        </div>
-                                        <div style="color:var(--text-tertiary);font-family:var(--font-mono);font-size:0.7rem;padding-bottom:2.5rem;">vs</div>
-                                        <div style="flex:1;text-align:center;">
-                                            <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-radius:10px;padding:1.5rem 1rem;margin-bottom:0.6rem;">
-                                                <span style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--accent-brand);letter-spacing:-0.03em;line-height:1;">4min</span>
-                                            </div>
-                                            <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--accent-brand);text-transform:uppercase;">Agente NR1</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Chapter 03 — Diagnóstico -->
-                            <div class="nrr-ch">
-                                <div>
-                                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">03 — Diagnóstico</p>
-                                    <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.8vw,2.1rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--text-primary);margin-bottom:0.6rem;">Pesquisa anual é<br>foto de acidente.</h3>
-                                    <p style="font-family:var(--font-serif);font-size:0.95rem;font-style:italic;color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.4;">O problema veio no mês 3. O relatório, no mês 12.</p>
-                                    <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.75;">O GPTW entrega resultado quando o dano já aconteceu. A Fiter mede mensalmente via WhatsApp — porque colaborador responde no celular, não quando abre formulário corporativo.</p>
-                                </div>
-                                <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.75rem;">
-                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Frequência de medição</p>
-                                    <div style="display:flex;flex-direction:column;gap:1.1rem;margin-bottom:1.25rem;">
-                                        <div>
-                                            <div style="display:flex;justify-content:space-between;margin-bottom:0.45rem;">
-                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-tertiary);">GPTW / Pesquisa anual</span>
-                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:#ef4444;">1×/ano</span>
-                                            </div>
-                                            <div style="height:6px;background:var(--border-subtle);border-radius:3px;overflow:hidden;">
-                                                <div style="width:8.33%;height:100%;background:rgba(239,68,68,0.5);border-radius:3px;"></div>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div style="display:flex;justify-content:space-between;margin-bottom:0.45rem;">
-                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-secondary);">Fiter via WhatsApp</span>
-                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--accent-brand);">12×/ano</span>
-                                            </div>
-                                            <div style="height:6px;background:var(--border-subtle);border-radius:3px;overflow:hidden;">
-                                                <div style="width:100%;height:100%;background:var(--accent-brand);border-radius:3px;"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);">87% de adesão · resposta em 2 minutos</p>
-                                </div>
-                            </div>
-
                         </div>
+
+                        <!-- Visual 02: 6m vs 4min -->
+                        <div class="nrr-chapter" id="nrr-vis-1">
+                            <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:2rem;width:100%;max-width:380px;">
+                                <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2rem;">Tempo para o laudo NR1</p>
+                                <div style="display:flex;align-items:flex-end;gap:2rem;justify-content:center;">
+                                    <div style="text-align:center;">
+                                        <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:12px;padding:2rem 1.5rem;margin-bottom:0.75rem;">
+                                            <span style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:#ef4444;letter-spacing:-0.03em;line-height:1;">6m</span>
+                                        </div>
+                                        <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;">Consultoria</span>
+                                    </div>
+                                    <div style="color:var(--text-tertiary);font-family:var(--font-mono);font-size:0.7rem;padding-bottom:2rem;">vs</div>
+                                    <div style="text-align:center;">
+                                        <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-radius:12px;padding:2rem 1.5rem;margin-bottom:0.75rem;">
+                                            <span style="font-family:var(--font-serif);font-size:3rem;font-weight:800;color:var(--accent-brand);letter-spacing:-0.03em;line-height:1;">4min</span>
+                                        </div>
+                                        <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--accent-brand);text-transform:uppercase;">Agente NR1</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual 03: frequência -->
+                        <div class="nrr-chapter" id="nrr-vis-2">
+                            <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);padding:2rem;width:100%;max-width:380px;">
+                                <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.75rem;">Frequência de medição</p>
+                                <div style="display:flex;flex-direction:column;gap:1.25rem;margin-bottom:1.5rem;">
+                                    <div>
+                                        <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+                                            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-tertiary);">GPTW / Pesquisa anual</span>
+                                            <span style="font-family:var(--font-mono);font-size:0.62rem;color:#ef4444;">1×/ano</span>
+                                        </div>
+                                        <div style="height:6px;background:var(--border-subtle);border-radius:3px;overflow:hidden;">
+                                            <div style="width:8.33%;height:100%;background:rgba(239,68,68,0.5);border-radius:3px;"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;">
+                                            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-secondary);">Fiter via WhatsApp</span>
+                                            <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--accent-brand);">12×/ano</span>
+                                        </div>
+                                        <div style="height:6px;background:var(--border-subtle);border-radius:3px;overflow:hidden;">
+                                            <div style="width:100%;height:100%;background:var(--accent-brand);border-radius:3px;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);">87% de adesão · resposta em 2 minutos</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
                 <script>
                 (function () {
-                    const wrapper = document.getElementById('nrr-wrapper');
-                    const track   = document.getElementById('nrr-track');
-                    const right   = document.querySelector('.nrr-right');
-                    const dots    = document.querySelectorAll('#nrr-dots .nrr-ndot');
-                    const counter = document.getElementById('nrr-counter');
-                    const bar     = document.getElementById('nrr-bar');
-                    if (!wrapper || !track || !right) return;
+                    var wrapper  = document.getElementById('nrr-wrapper');
+                    var bar      = document.getElementById('nrr-bar');
+                    var counter  = document.getElementById('nrr-counter');
+                    var dots     = document.querySelectorAll('[data-dot]');
+                    var captions = [document.getElementById('nrr-cap-0'), document.getElementById('nrr-cap-1'), document.getElementById('nrr-cap-2')];
+                    var visuals  = [document.getElementById('nrr-vis-0'), document.getElementById('nrr-vis-1'), document.getElementById('nrr-vis-2')];
+                    if (!wrapper) return;
 
-                    const N = 3;
-                    let maxShift = 0;
+                    var N = 3, current = -1;
 
-                    function recalc() {
-                        maxShift = track.scrollWidth - right.clientWidth;
+                    function setChapter(idx) {
+                        if (idx === current) return;
+                        current = idx;
+                        captions.forEach(function(el, i) { el.classList.toggle('active', i === idx); });
+                        visuals.forEach(function(el, i)  { el.classList.toggle('active', i === idx); });
+                        dots.forEach(function(el) { el.classList.toggle('active', parseInt(el.dataset.dot) === idx); });
+                        counter.textContent = String(idx + 1).padStart(2, '0');
                     }
 
                     function update() {
-                        const rect     = wrapper.getBoundingClientRect();
-                        const scrolled = Math.max(0, -rect.top);
-                        const total    = wrapper.offsetHeight - window.innerHeight;
+                        var rect    = wrapper.getBoundingClientRect();
+                        var scrolled = Math.max(0, -rect.top);
+                        var total    = wrapper.offsetHeight - window.innerHeight;
                         if (total <= 0) return;
-                        const p = Math.min(1, scrolled / total);
-
-                        track.style.transform = 'translateX(' + (-p * maxShift) + 'px)';
-
-                        const idx = Math.min(N - 1, Math.round(p * (N - 1)));
-                        dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
-                        counter.textContent = String(idx + 1).padStart(2, '0');
+                        var p = Math.min(1, scrolled / total);
                         bar.style.width = (p * 100) + '%';
+                        setChapter(Math.min(N - 1, Math.floor(p * N)));
                     }
 
                     window.addEventListener('scroll', update, { passive: true });
-                    window.addEventListener('resize', function() { recalc(); update(); });
-
-                    if (document.readyState === 'complete') {
-                        recalc(); update();
-                    } else {
-                        window.addEventListener('load', function() { recalc(); update(); });
-                    }
+                    window.addEventListener('load', update);
                 })();
                 </script>
             </div>
@@ -1160,16 +1170,46 @@
     </script>
 
     <!-- FOOTER -->
-    <footer class="ds-footer">
-        <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
-            <h2 style="font-family: var(--font-serif); font-style: italic;">Fiter.</h2>
-            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; max-width: 480px; margin-left: auto; margin-right: auto;">DeepTech validada por USP e Mackenzie.</p>
-        </div>
-        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); align-items: center;">
-            <span>Mackenzie</span><span>·</span><span>ABES</span><span>·</span><span>Sebrae for Startups</span>
-        </div>
-        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); text-align: center;">© 2026 Fiter. Todos os direitos reservados.</p>
-    </footer>
+        <footer class="ds-footer">
+            <div class="footer-inner">
+                <div class="footer-top">
+                    <div class="footer-brand">
+                        <img src="/assets/img/logo.png" alt="Fiter">
+                        <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
+                    </div>
+                    <div class="footer-nav">
+                        <div>
+                            <div class="footer-col-title">Soluções</div>
+                            <ul class="footer-links">
+                                <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
+                                <li><a href="/solucoes/educacao/">Educação</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="footer-col-title">Empresa</div>
+                            <ul class="footer-links">
+                                <li><a href="/sobre/">Sobre</a></li>
+                                <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/contato/">Contato</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="footer-col-title">Conformidade</div>
+                            <ul class="footer-links">
+                                <li><a href="#">LGPD</a></li>
+                                <li><a href="#">Política de privacidade</a></li>
+                                <li><a href="#">Termos de uso</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-bottom">
+                    <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
+                    <span class="footer-copy" style="display:flex;align-items:center;gap:0.3rem;">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a> <span style="color:var(--text-tertiary);">&#10084;</span></span>
+                </div>
+            </div>
+        </footer>
 
     <script>lucide.createIcons();</script>
 </body>
