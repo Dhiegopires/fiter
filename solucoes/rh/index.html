@@ -460,6 +460,7 @@
                     }
                     .nrr-right {
                         flex: 1;
+                        min-width: 0;
                         overflow: hidden;
                         display: flex;
                         align-items: center;
@@ -469,6 +470,8 @@
                         flex-direction: row;
                         gap: 5rem;
                         padding: 0 5rem;
+                        flex-shrink: 0;
+                        width: max-content;
                         will-change: transform;
                     }
                     .nrr-ch {
@@ -622,18 +625,17 @@
                 (function () {
                     const wrapper = document.getElementById('nrr-wrapper');
                     const track   = document.getElementById('nrr-track');
+                    const right   = document.querySelector('.nrr-right');
                     const dots    = document.querySelectorAll('#nrr-dots .nrr-ndot');
                     const counter = document.getElementById('nrr-counter');
                     const bar     = document.getElementById('nrr-bar');
-                    if (!wrapper || !track) return;
+                    if (!wrapper || !track || !right) return;
 
                     const N = 3;
-                    let step = 0;
+                    let maxShift = 0;
 
-                    function calcStep() {
-                        const chs = track.querySelectorAll('.nrr-ch');
-                        if (chs.length < 2) return chs[0]?.offsetWidth || 0;
-                        return chs[1].offsetLeft - chs[0].offsetLeft;
+                    function recalc() {
+                        maxShift = track.scrollWidth - right.clientWidth;
                     }
 
                     function update() {
@@ -643,19 +645,22 @@
                         if (total <= 0) return;
                         const p = Math.min(1, scrolled / total);
 
-                        track.style.transform = `translateX(${-(p * step * (N - 1))}px)`;
+                        track.style.transform = 'translateX(' + (-p * maxShift) + 'px)';
 
                         const idx = Math.min(N - 1, Math.round(p * (N - 1)));
-                        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+                        dots.forEach(function(d, i) { d.classList.toggle('active', i === idx); });
                         counter.textContent = String(idx + 1).padStart(2, '0');
                         bar.style.width = (p * 100) + '%';
                     }
 
-                    function init() { step = calcStep(); update(); }
-
                     window.addEventListener('scroll', update, { passive: true });
-                    window.addEventListener('resize', () => { step = calcStep(); update(); });
-                    requestAnimationFrame(init);
+                    window.addEventListener('resize', function() { recalc(); update(); });
+
+                    if (document.readyState === 'complete') {
+                        recalc(); update();
+                    } else {
+                        window.addEventListener('load', function() { recalc(); update(); });
+                    }
                 })();
                 </script>
             </div>
