@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auditoria SEO — Fiter × VellumWire · 5 Páginas</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --surface2: #18181f;
+    --border: #2a2a35;
+    --accent: #6c63ff;
+    --accent2: #ff6584;
+    --accent3: #43e97b;
+    --accent4: #f9a825;
+    --text: #e8e8f0;
+    --muted: #888899;
+    --danger: #ff4d6d;
+    --warn: #ffb703;
+    --ok: #43e97b;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 15px; line-height: 1.7; }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0d0d1a 0%, #13101f 50%, #0a1020 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 56px 48px 48px; position: relative; overflow: hidden;
+  }
+  .header::before {
+    content: ''; position: absolute; top: -80px; right: -80px; width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(108,99,255,0.15) 0%, transparent 70%); pointer-events: none;
+  }
+  .header::after {
+    content: ''; position: absolute; bottom: -60px; left: 20%; width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(255,101,132,0.1) 0%, transparent 70%); pointer-events: none;
+  }
+  .badge {
+    display: inline-block; background: rgba(108,99,255,0.15); border: 1px solid rgba(108,99,255,0.4);
+    color: #a89fff; font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;
+  }
+  .header h1 { font-family: 'Syne', sans-serif; font-size: clamp(28px, 4vw, 46px); font-weight: 800; line-height: 1.15; margin-bottom: 12px; position: relative; z-index: 1; }
+  .header h1 span { color: var(--accent); }
+  .header p { color: var(--muted); max-width: 600px; font-size: 15px; position: relative; z-index: 1; }
+  .header-meta { display: flex; gap: 32px; margin-top: 32px; flex-wrap: wrap; position: relative; z-index: 1; }
+  .meta-item { display: flex; flex-direction: column; }
+  .meta-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+  .meta-value { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 15px; }
+
+  /* SCORE BAR */
+  .score-bar {
+    background: var(--surface); border-bottom: 1px solid var(--border);
+    padding: 24px 48px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;
+  }
+  .score-item {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 10px 16px;
+  }
+  .score-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+  .score-item .label { font-size: 12px; color: var(--muted); }
+  .score-item .val { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 16px; }
+
+  /* LAYOUT */
+  .container { max-width: 1200px; margin: 0 auto; padding: 48px; }
+  .section { margin-bottom: 64px; }
+  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; }
+  .section-num {
+    width: 36px; height: 36px; background: var(--accent); color: #fff;
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px;
+    border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .section h2 { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; }
+  .section-sub { color: var(--muted); font-size: 14px; margin-top: 4px; }
+
+  /* AUDIT CARDS */
+  .audit-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+  .audit-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px; position: relative; overflow: hidden;
+  }
+  .audit-card::before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 3px; height: 100%; border-radius: 14px 0 0 14px;
+  }
+  .audit-card.danger::before { background: var(--danger); }
+  .audit-card.warn::before { background: var(--warn); }
+  .audit-card.ok::before { background: var(--ok); }
+  .audit-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .tag { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; }
+  .tag.danger { background: rgba(255,77,109,0.15); color: #ff8fa3; }
+  .tag.warn { background: rgba(255,183,3,0.15); color: #ffd166; }
+  .tag.ok { background: rgba(67,233,123,0.12); color: #6ee7b7; }
+  .audit-card h3 { font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; }
+  .audit-card p { font-size: 13px; color: var(--muted); margin-bottom: 12px; line-height: 1.6; }
+  .rec-box {
+    background: rgba(108,99,255,0.08); border: 1px solid rgba(108,99,255,0.2);
+    border-radius: 8px; padding: 10px 12px; font-size: 12.5px; color: #c4bbff; line-height: 1.5;
+  }
+  .rec-box strong { color: #a89fff; }
+
+  /* TABLES */
+  .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  thead { background: var(--surface2); }
+  th { font-family: 'Syne', sans-serif; font-weight: 600; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); white-space: nowrap; }
+  td { padding: 12px 16px; border-bottom: 1px solid rgba(42,42,53,0.6); vertical-align: top; line-height: 1.5; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,0.02); }
+  .kw { font-weight: 500; color: var(--text); }
+
+  /* PILLS */
+  .pill { display: inline-block; font-size: 10.5px; font-weight: 600; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+  .pill.alto { background: rgba(67,233,123,0.15); color: #6ee7b7; }
+  .pill.medio { background: rgba(249,168,37,0.15); color: #fcd34d; }
+  .pill.baixo { background: rgba(255,77,109,0.12); color: #fca5a5; }
+  .pill.info { background: rgba(99,179,237,0.15); color: #93c5fd; }
+  .pill.comercial { background: rgba(196,139,255,0.15); color: #d8b4fe; }
+  .pill.transacional { background: rgba(251,113,133,0.2); color: #fda4af; }
+  .pill.dif-baixo { background: rgba(67,233,123,0.15); color: #6ee7b7; }
+  .pill.dif-medio { background: rgba(249,168,37,0.15); color: #fcd34d; }
+  .pill.dif-alto { background: rgba(255,77,109,0.15); color: #fca5a5; }
+
+  /* CLUSTER LABELS */
+  .cluster-label { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-bottom: 4px; }
+  .cl1 { background: rgba(108,99,255,0.2); color: #a89fff; }
+  .cl2 { background: rgba(255,101,132,0.18); color: #fda4af; }
+  .cl3 { background: rgba(67,233,123,0.15); color: #6ee7b7; }
+  .cl4 { background: rgba(249,168,37,0.15); color: #fcd34d; }
+  .cl5 { background: rgba(99,179,237,0.15); color: #93c5fd; }
+
+  /* PAGE TAGS */
+  .page-tag { font-size: 11px; color: var(--accent); }
+  .page-pill {
+    display: inline-flex; align-items: center; gap: 5px;
+    background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.25);
+    border-radius: 6px; padding: 2px 8px; font-size: 11px; color: #a89fff; white-space: nowrap;
+  }
+
+  /* COMPETITOR */
+  .comp-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+  .comp-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+  .comp-name { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+  .comp-url { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  .comp-section { margin-bottom: 16px; }
+  .comp-section-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .comp-list { list-style: none; }
+  .comp-list li { font-size: 13px; color: var(--text); padding: 5px 0 5px 16px; position: relative; border-bottom: 1px solid rgba(42,42,53,0.5); }
+  .comp-list li:last-child { border-bottom: none; }
+  .comp-list li::before { content: '▸'; position: absolute; left: 0; font-size: 10px; }
+  .comp-list.strengths li::before { color: var(--accent3); }
+  .comp-list.opps li::before { color: var(--accent); }
+
+  /* ROADMAP */
+  .roadmap { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+  .rm-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; position: relative; overflow: hidden; }
+  .rm-card.phase1 { border-top: 2px solid var(--danger); }
+  .rm-card.phase2 { border-top: 2px solid var(--warn); }
+  .rm-card.phase3 { border-top: 2px solid var(--ok); }
+  .rm-card h3 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+  .rm-card .phase { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 14px; }
+  .rm-list { list-style: none; }
+  .rm-list li { font-size: 13px; padding: 6px 0 6px 20px; position: relative; border-bottom: 1px solid rgba(42,42,53,0.5); color: var(--text); }
+  .rm-list li:last-child { border-bottom: none; }
+  .rm-list li::before { content: ''; position: absolute; left: 4px; top: 50%; transform: translateY(-50%); width: 6px; height: 6px; border-radius: 50%; background: var(--muted); }
+  .rm-card.phase1 .rm-list li::before { background: var(--danger); }
+  .rm-card.phase2 .rm-list li::before { background: var(--warn); }
+  .rm-card.phase3 .rm-list li::before { background: var(--ok); }
+
+  /* URL ARCH */
+  .url-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+  .url-block { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; }
+  .url-block-title { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 10px; }
+  .url-item { font-size: 13px; line-height: 2.1; }
+  .url-item .url { color: var(--accent); }
+  .url-item .desc { font-size: 11px; color: var(--muted); margin-left: 8px; }
+
+  /* CRITICAL BAR */
+  .critical-bar {
+    background: rgba(255,77,109,0.08); border: 1px solid rgba(255,77,109,0.25);
+    border-radius: 12px; padding: 16px 20px; margin-bottom: 28px;
+    display: flex; align-items: flex-start; gap: 12px;
+  }
+  .critical-bar .icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+  .critical-bar p { font-size: 13.5px; color: #ffb3c1; line-height: 1.6; }
+  .critical-bar strong { color: #ff8fa3; }
+
+  /* TOC */
+  .toc { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px 24px; margin-bottom: 48px; }
+  .toc h3 { font-family: 'Syne', sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 12px; }
+  .toc ol { list-style: decimal; padding-left: 20px; columns: 2; column-gap: 24px; }
+  .toc li { font-size: 13px; padding: 3px 0; }
+  .toc a { color: var(--accent); text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+
+  /* DIVIDER */
+  .divider { height: 1px; background: linear-gradient(90deg, transparent, var(--border), transparent); margin: 48px 0; }
+
+  /* FOOTER */
+  footer { border-top: 1px solid var(--border); padding: 32px 48px; color: var(--muted); font-size: 12px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  footer .accent { color: var(--accent); }
+
+  @media(max-width: 768px) {
+    .roadmap { grid-template-columns: 1fr; }
+    .audit-grid { grid-template-columns: 1fr; }
+    .comp-grid { grid-template-columns: 1fr; }
+    .container { padding: 24px; }
+    .header { padding: 32px 24px; }
+    .score-bar { padding: 16px 24px; }
+    .toc ol { columns: 1; }
+    footer { padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">Auditoria SEO · Escopo VellumWire × Fiter</div>
+  <h1>SEO On-page para<br><span>as 5 Páginas do Contrato</span></h1>
+  <p>Diagnóstico do site atual, keyword map e recomendações de conteúdo — tudo mapeado diretamente nas 5 páginas, template de blog e LPs que entram no Pacote Profissional.</p>
+  <div class="header-meta">
+    <div class="meta-item">
+      <span class="meta-label">Data</span>
+      <span class="meta-value">Maio 2026</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Score SEO atual</span>
+      <span class="meta-value" style="color:var(--danger)">22 / 100</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Páginas no escopo</span>
+      <span class="meta-value" style="color:var(--accent)">5 páginas + blog + LPs</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Problemas críticos</span>
+      <span class="meta-value" style="color:var(--danger)">9 encontrados</span>
+    </div>
+  </div>
+</div>
+
+<div class="score-bar">
+  <div class="score-item"><div class="score-dot" style="background:var(--danger)"></div><div><div class="label">Títulos & Meta</div><div class="val" style="color:var(--danger)">3/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--danger)"></div><div><div class="label">Estrutura de Headings</div><div class="val" style="color:var(--danger)">2/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--danger)"></div><div><div class="label">Conteúdo On-page</div><div class="val" style="color:var(--danger)">3/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Links Internos</div><div class="val" style="color:var(--warn)">5/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--danger)"></div><div><div class="label">Schema Markup</div><div class="val" style="color:var(--danger)">0/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--danger)"></div><div><div class="label">Arquitetura de URLs</div><div class="val" style="color:var(--danger)">2/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Mobile-friendly</div><div class="val" style="color:var(--warn)">6/10</div></div></div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h3>Índice do Relatório</h3>
+    <ol>
+      <li><a href="#auditoria">Auditoria do Site Atual</a></li>
+      <li><a href="#keywords">Keyword Map — 5 Páginas</a></li>
+      <li><a href="#concorrentes">Top 3 Concorrentes</a></li>
+      <li><a href="#roadmap">Roadmap das 2 Semanas</a></li>
+      <li><a href="#urls">URLs das 5 Páginas</a></li>
+    </ol>
+  </div>
+
+  <!-- ═══ SEÇÃO 1: AUDITORIA ═══ -->
+  <div class="section" id="auditoria">
+    <div class="section-header">
+      <div class="section-num">1</div>
+      <div>
+        <h2>Auditoria SEO do Site Atual</h2>
+        <div class="section-sub">O que está quebrando o ranqueamento hoje — e o que cada problema vira numa entrega concreta do contrato</div>
+      </div>
+    </div>
+
+    <div class="critical-bar">
+      <div class="icon">🚨</div>
+      <p><strong>Diagnóstico geral:</strong> O site atual é um template Joomla one-page com score SEO de 22/100. Title com "fiter", meta description com "parallax one page", zero schema, zero estrutura de headings semântica e blog em subdomínio separado. Cada um dos 9 problemas abaixo tem resolução direta nas 5 páginas do contrato.</p>
+    </div>
+
+    <div class="audit-grid">
+
+      <div class="audit-card danger">
+        <div class="audit-card-header"><span class="tag danger">Crítico</span><h3>Title Tag sem keyword</h3></div>
+        <p>Homepage com <code>&lt;title&gt;fiter&lt;/title&gt;</code> — 5 caracteres, sem nenhuma keyword. Produto tem <em>"fiter - Produtos"</em>. O Google não tem contexto do que o site faz.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Homepage e página Produto. Novas titles com keyword primária de cada página, até 60 caracteres. Ver keyword map (Seção 2).</div>
+      </div>
+
+      <div class="audit-card danger">
+        <div class="audit-card-header"><span class="tag danger">Crítico</span><h3>Meta description com texto de template</h3></div>
+        <p>Meta description cadastrada: <em>"parallax one page"</em> — nome literal do template Joomla. O Google gera snippets aleatórios, destruindo o CTR no SERP.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Todas as 5 páginas recebem meta description única de 145–155 chars com keyword + proposta de valor + CTA. Ver especificações na Seção 2.</div>
+      </div>
+
+      <div class="audit-card danger">
+        <div class="audit-card-header"><span class="tag danger">Crítico</span><h3>H1 ausente ou sem keyword</h3></div>
+        <p>Homepage: primeiro texto de destaque é <em>"Bem-Vindo :)"</em>. Página Produto: H1 é <em>"Produtos"</em> — sem nenhuma keyword de produto. A hierarquia de headings está completamente quebrada.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Cada uma das 5 páginas recebe exatamente 1 H1 com keyword primária. H2/H3 estruturados por seção de conteúdo.</div>
+      </div>
+
+      <div class="audit-card danger">
+        <div class="audit-card-header"><span class="tag danger">Crítico</span><h3>Zero Schema Markup</h3></div>
+        <p>Nenhum dado estruturado no site — sem Organization, SoftwareApplication, Article, BreadcrumbList ou FAQPage. Sem chance de rich snippets no SERP.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Homepage recebe Organization. Página Produto recebe SoftwareApplication. Template de Post recebe Article + BreadcrumbList. Tudo via JSON-LD no &lt;head&gt;.</div>
+      </div>
+
+      <div class="audit-card danger">
+        <div class="audit-card-header"><span class="tag danger">Crítico</span><h3>Uma página para dois segmentos</h3></div>
+        <p>RH e Educação — dois produtos completamente diferentes, dois buyers distintos — dividem a mesma <code>/produto.html</code>. O Google não consegue ranquear uma página para keywords de dois segmentos simultaneamente.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Página Produto redesenhada com seções claramente separadas por segmento, H2s por produto com keyword própria, e conteúdo denso para cada um. Ver URL recomendada na Seção 5.</div>
+      </div>
+
+      <div class="audit-card danger">
+        <div class="audit-card-header"><span class="tag danger">Crítico</span><h3>Imagens sem alt text</h3></div>
+        <p>Logo, screenshots de produto e logos de clientes (Braspress, Kroton, Arcor) todos sem <code>alt</code> ou com alt vazio. Oportunidade de keyword perdida + acessibilidade comprometida.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Todas as imagens das 5 páginas recebem alt descritivo com keyword contextual. Logos de clientes: <em>"Braspress usa Fiter para pesquisa de clima"</em>. Screenshots: <em>"Dashboard pulse survey Fiter"</em>.</div>
+      </div>
+
+      <div class="audit-card danger">
+        <div class="audit-card-header"><span class="tag danger">Crítico</span><h3>Blog em subdomínio separado</h3></div>
+        <p><code>lab.fiter.com.br</code> não acumula autoridade do domínio principal. Cada backlink, cada visita orgânica, cada sinal de SEO fica isolado — sem beneficiar <code>fiter.com.br</code>.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Listagem do Blog entregue em <code>fiter.com.br/blog</code>. Migração do lab com redirects 301 por URL consolida toda a autoridade existente no domínio principal.</div>
+      </div>
+
+      <div class="audit-card warn">
+        <div class="audit-card-header"><span class="tag warn">Atenção</span><h3>Anchor text de links sem keyword</h3></div>
+        <p>CTAs do site usam <em>"Ver Sobre"</em> e <em>"Agendar Demo"</em> (link externo Calendly). Nenhum anchor text passa relevância temática entre páginas.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Links internos entre as 5 páginas com anchor text descritivo — <em>"Conheça o Pulse Survey"</em>, <em>"Ver solução para Educação"</em>. CTA de demo mantida em domínio próprio ou com UTM.</div>
+      </div>
+
+      <div class="audit-card warn">
+        <div class="audit-card-header"><span class="tag warn">Atenção</span><h3>Performance e Core Web Vitals</h3></div>
+        <p>Template Joomla com carrossel pesado, sem lazy loading e JavaScript bloqueante impacta LCP e CLS em mobile — fatores diretos de ranqueamento desde o Google Page Experience Update.</p>
+        <div class="rec-box"><strong>✦ Resolve em:</strong> Novo desenvolvimento HTML/CSS mobile-first com imagens em WebP, lazy loading nativo e sem scripts bloqueantes. Target: LCP &lt; 2.5s, CLS &lt; 0.1.</div>
+      </div>
+
+      <div class="audit-card ok">
+        <div class="audit-card-header"><span class="tag ok">Positivo</span><h3>Backlinks editoriais de alta autoridade</h3></div>
+        <p>Fiter aparece em Folha de SP, Estadão, Forbes Brasil, CBN e Terra — backlinks de DA alto que já conferem autoridade de domínio real.</p>
+        <div class="rec-box"><strong>✦ Aproveitar em:</strong> Seção "Na Mídia" na Homepage com links para as matérias reforça o sinal de autoridade. Criar página <code>/imprensa</code> futuramente (fora deste contrato).</div>
+      </div>
+
+      <div class="audit-card ok">
+        <div class="audit-card-header"><span class="tag ok">Positivo</span><h3>GTM já implementado</h3></div>
+        <p>Google Tag Manager (GTM-MJFN5ZG) está no site. Base para analytics e rastreamento de conversões já existe.</p>
+        <div class="rec-box"><strong>✦ Migrar:</strong> Container GTM para o novo site. Configurar GA4 + GSC + eventos de conversão (demo agendada, formulário enviado) durante o desenvolvimento.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══ SEÇÃO 2: KEYWORD MAP ═══ -->
+  <div class="section" id="keywords">
+    <div class="section-header">
+      <div class="section-num">2</div>
+      <div>
+        <h2>Keyword Map — Mapeado nas 5 Páginas</h2>
+        <div class="section-sub">Cada keyword alocada em uma das páginas do contrato — com title, H1 e meta description recomendados para cada uma</div>
+      </div>
+    </div>
+
+    <!-- Cluster 1 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span class="cluster-label cl1">Cluster 1</span>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px;">Produto / Solução</span>
+        <span style="font-size:12px;color:var(--muted)">— Intenção comercial · Página Produto e Homepage</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Volume</th><th>Intenção</th><th>Dificuldade</th><th>Página</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">pesquisa de clima organizacional</span></td><td><span class="pill alto">Alto</span></td><td><span class="pill comercial">Comercial</span></td><td><span class="pill dif-alto">Alta</span></td><td><span class="page-pill">Produto</span></td></tr>
+            <tr><td><span class="kw">software pesquisa de clima</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Produto</span></td></tr>
+            <tr><td><span class="kw">pulse survey</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill comercial">Comercial</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Produto</span></td></tr>
+            <tr><td><span class="kw">engajamento de colaboradores</span></td><td><span class="pill alto">Alto</span></td><td><span class="pill comercial">Comercial</span></td><td><span class="pill dif-alto">Alta</span></td><td><span class="page-pill">Home</span></td></tr>
+            <tr><td><span class="kw">predição de turnover IA</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto</span></td></tr>
+            <tr><td><span class="kw">plataforma de engajamento RH</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Produto</span></td></tr>
+            <tr><td><span class="kw">predição de evasão escolar</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto</span></td></tr>
+            <tr><td><span class="kw">onboarding digital colaboradores</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill comercial">Comercial</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto</span></td></tr>
+            <tr><td><span class="kw">fit cultural software</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cluster 2 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span class="cluster-label cl2">Cluster 2</span>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px;">Dor do Usuário</span>
+        <span style="font-size:12px;color:var(--muted)">— Intenção informacional · Blog (template de post + listagem)</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Volume</th><th>Intenção</th><th>Dificuldade</th><th>Página</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">como reduzir turnover nas empresas</span></td><td><span class="pill alto">Alto</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">como medir felicidade no trabalho</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">como melhorar clima organizacional</span></td><td><span class="pill alto">Alto</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">custo do turnover para empresa</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">indicadores de saúde mental no trabalho</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">retenção de talentos estratégias</span></td><td><span class="pill alto">Alto</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">como reduzir evasão no ensino superior</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cluster 3 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span class="cluster-label cl3">Cluster 3</span>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px;">Segmento Educação</span>
+        <span style="font-size:12px;color:var(--muted)">— Território exclusivo · Página Produto (seção Educação) + Posts</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Volume</th><th>Intenção</th><th>Dificuldade</th><th>Página</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">predição de evasão escolar</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill comercial">Comercial</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto — seção Edu</span></td></tr>
+            <tr><td><span class="kw">software evasão escolar universidade</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto — seção Edu</span></td></tr>
+            <tr><td><span class="kw">clima escolar pesquisa</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">engajamento de alunos plataforma</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill comercial">Comercial</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto — seção Edu</span></td></tr>
+            <tr><td><span class="kw">IA para educação desempenho alunos</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill comercial">Comercial</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Produto — seção Edu</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cluster 4 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span class="cluster-label cl4">Cluster 4</span>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px;">Comparação / Alternativas</span>
+        <span style="font-size:12px;color:var(--muted)">— Alta conversão · Homepage (copy) + Posts comparativos no Blog</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Volume</th><th>Intenção</th><th>Dificuldade</th><th>Página</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">alternativa ao Great Place to Work</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">melhor software clima organizacional Brasil</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">software engajamento colaboradores preço</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Produto (CTA)</span></td></tr>
+            <tr><td><span class="kw">Fiter vs Feedz</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill transacional">Transacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cluster 5 -->
+    <div style="margin-bottom:36px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span class="cluster-label cl5">Cluster 5</span>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:16px;">Cauda Longa / Blog</span>
+        <span style="font-size:12px;color:var(--muted)">— Topo de funil · Template de Post (suporte 3 meses)</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Keyword</th><th>Volume</th><th>Intenção</th><th>Dificuldade</th><th>Página</th></tr></thead>
+          <tbody>
+            <tr><td><span class="kw">o que é fit cultural na empresa</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">eNPS o que é como calcular</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">neurociência nas empresas gestão de pessoas</span></td><td><span class="pill baixo">Baixo</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">indicadores RH mais importantes</span></td><td><span class="pill alto">Alto</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">burnout no trabalho como identificar</span></td><td><span class="pill alto">Alto</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">como fazer pesquisa de clima organizacional</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">inteligência artificial no RH exemplos</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-baixo">Baixa</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+            <tr><td><span class="kw">cultura organizacional como medir</span></td><td><span class="pill medio">Médio</span></td><td><span class="pill info">Informacional</span></td><td><span class="pill dif-medio">Média</span></td><td><span class="page-pill">Post do Blog</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══ SEÇÃO 3: CONCORRENTES ═══ -->
+  <div class="section" id="concorrentes">
+    <div class="section-header">
+      <div class="section-num">3</div>
+      <div>
+        <h2>Top 3 Concorrentes — Busca Orgânica Brasil</h2>
+        <div class="section-sub">Onde eles vencem e onde as 5 páginas do contrato podem superar cada um</div>
+      </div>
+    </div>
+
+    <div class="comp-grid">
+
+      <div class="comp-card">
+        <div class="comp-name">Feedz</div>
+        <div class="comp-url">feedz.com.br</div>
+        <div class="comp-section">
+          <div class="comp-section-title" style="color:var(--ok)">✦ Pontos fortes de SEO</div>
+          <ul class="comp-list strengths">
+            <li>Blog extremamente ativo — dezenas de artigos capturando todo o topo de funil de RH. Title e H1s otimizados em cada post.</li>
+            <li>Páginas de produto bem estruturadas com H1s específicos por funcionalidade e schema markup implementado.</li>
+            <li>Forte em listas de comparação (G2, Capterra) — gera backlinks de autoridade continuamente.</li>
+          </ul>
+        </div>
+        <div class="comp-section">
+          <div class="comp-section-title" style="color:var(--accent)">▸ Onde as 5 páginas superam</div>
+          <ul class="comp-list opps">
+            <li><strong>Feedz não tem segmento educação</strong> — a seção Educação da página Produto e posts sobre evasão escolar abrem território sem concorrência direta.</li>
+            <li>Feedz não usa neurociência como diferencial narrativo — a Homepage pode criar categoria própria com copy específico.</li>
+            <li>A seção "Na Mídia" (Folha, Forbes, Estadão) na Homepage é um sinal de autoridade que Feedz não tem de forma tão concentrada.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-name">TeamCulture</div>
+        <div class="comp-url">teamculture.com.br</div>
+        <div class="comp-section">
+          <div class="comp-section-title" style="color:var(--ok)">✦ Pontos fortes de SEO</div>
+          <ul class="comp-list strengths">
+            <li>Site com páginas dedicadas por funcionalidade — cada feature tem URL, title e H1 próprios. Alta densidade temática por URL.</li>
+            <li>Depoimentos de clientes com nome, cargo e empresa — sinal de autoridade para E-E-A-T do Google.</li>
+            <li>Forte em OKRs e gestão de desempenho — captura um segmento adjacente ao de engajamento.</li>
+          </ul>
+        </div>
+        <div class="comp-section">
+          <div class="comp-section-title" style="color:var(--accent)">▸ Onde as 5 páginas superam</div>
+          <ul class="comp-list opps">
+            <li><strong>TeamCulture não explora "predição de turnover por IA"</strong> como keyword — a página Produto pode dominar esse cluster transacional com dificuldade baixa.</li>
+            <li>Fiter tem dado quantificável único (500 mil pessoas medidas) — TeamCulture não tem número equivalente em destaque na Homepage.</li>
+            <li>Presença editorial em grandes veículos (Folha, Estadão) que TeamCulture não possui — usar na Homepage como social proof de marca.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="comp-card">
+        <div class="comp-name">GPTW Brasil</div>
+        <div class="comp-url">gptw.com.br</div>
+        <div class="comp-section">
+          <div class="comp-section-title" style="color:var(--ok)">✦ Pontos fortes de SEO</div>
+          <ul class="comp-list strengths">
+            <li>Autoridade de domínio muito alta — domina keywords de cabeça como "pesquisa de clima" e "melhor empresa para trabalhar" quase sem disputa.</li>
+            <li>O selo é buscado ativamente pelas empresas — tráfego de marca massivo e orgânico que não depende de produção de conteúdo.</li>
+            <li>Centenas de artigos e relatórios gerando backlinks editoriais espontâneos.</li>
+          </ul>
+        </div>
+        <div class="comp-section">
+          <div class="comp-section-title" style="color:var(--accent)">▸ Onde as 5 páginas superam</div>
+          <ul class="comp-list opps">
+            <li><strong>GPTW é percebido como caro e burocrático</strong> — um post do blog "Alternativa ao Great Place to Work" captura buyers em avaliação com alta intenção de compra e dificuldade média.</li>
+            <li>GPTW não tem predição por IA nem pulse surveys contínuos — a página Produto pode destacar agilidade e tecnologia onde GPTW é lento.</li>
+            <li>GPTW não atende educação de forma nativa — posts sobre evasão escolar entram em território que GPTW não ocupa.</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══ SEÇÃO 4: ROADMAP ═══ -->
+  <div class="section" id="roadmap">
+    <div class="section-header">
+      <div class="section-num">4</div>
+      <div>
+        <h2>Roadmap das 2 Semanas do Contrato</h2>
+        <div class="section-sub">O que move o ponteiro de SEO dentro do prazo de entrega — priorizado por impacto</div>
+      </div>
+    </div>
+
+    <div class="roadmap">
+      <div class="rm-card phase1">
+        <h3>Dias 1–3</h3>
+        <div class="phase">Kick-off · Definições SEO</div>
+        <ul class="rm-list">
+          <li>Confirmar URLs definitivas das 5 páginas com a Fiter</li>
+          <li>Definir title tags e H1s de cada página (baseados no keyword map)</li>
+          <li>Fiter entrega textos de produto (+150 palavras por segmento)</li>
+          <li>Fiter confirma meta descriptions ou aprova sugestões</li>
+          <li>Mapear URLs do lab.fiter.com.br para redirects 301</li>
+          <li>Migrar container GTM para o novo domínio</li>
+        </ul>
+      </div>
+      <div class="rm-card phase2">
+        <h3>Dias 4–10</h3>
+        <div class="phase">Desenvolvimento · Implementação SEO</div>
+        <ul class="rm-list">
+          <li>Implementar title, meta e H1 nas 5 páginas</li>
+          <li>Estruturar hierarquia H2/H3 por seção de conteúdo</li>
+          <li>Alt text em todas as imagens das 5 páginas</li>
+          <li>Schema Organization (Homepage) e SoftwareApplication (Produto)</li>
+          <li>Schema Article + BreadcrumbList + OG tags no Template de Post</li>
+          <li>Links internos com anchor text descritivo entre as páginas</li>
+          <li>Slug padrão (lowercase, hífens, sem acentos) no template de blog</li>
+          <li>Paginação rel="next/prev" na listagem do blog</li>
+          <li>Redirects 301 do lab.fiter.com.br → fiter.com.br/blog</li>
+        </ul>
+      </div>
+      <div class="rm-card phase3">
+        <h3>Dias 11–14</h3>
+        <div class="phase">QA + Entrega · Revisão final de SEO</div>
+        <ul class="rm-list">
+          <li>Validar todas as title tags e meta descriptions no browser</li>
+          <li>Testar schema com o Rich Results Test do Google</li>
+          <li>Verificar Core Web Vitals com PageSpeed Insights (mobile)</li>
+          <li>Confirmar que nenhuma imagem está sem alt text</li>
+          <li>Testar redirects 301 do subdomínio</li>
+          <li>Submeter sitemap.xml ao Google Search Console</li>
+          <li>Adaptar CSS das LPs + corrigir title/meta/H1/alt durante a passagem</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══ SEÇÃO 5: URLS ═══ -->
+  <div class="section" id="urls">
+    <div class="section-header">
+      <div class="section-num">5</div>
+      <div>
+        <h2>URLs Recomendadas — As 5 Páginas</h2>
+        <div class="section-sub">Estrutura orientada a SEO para cada entregável do contrato</div>
+      </div>
+    </div>
+
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px;margin-bottom:16px;">
+      <div class="url-grid">
+
+        <div class="url-block">
+          <div class="url-block-title">🏠 Home</div>
+          <div class="url-item">
+            <span class="url">fiter.com.br/</span><br>
+            <span style="font-size:12px;color:var(--muted);">Title: <em>Fiter | Software de Engajamento e Pesquisa de Clima com IA</em></span><br>
+            <span style="font-size:12px;color:var(--muted);">H1: <em>Software de Engajamento e Pesquisa de Clima com IA</em></span>
+          </div>
+        </div>
+
+        <div class="url-block">
+          <div class="url-block-title">📦 Produto</div>
+          <div class="url-item">
+            <span class="url">fiter.com.br/solucoes</span><br>
+            <span style="font-size:12px;color:var(--muted);">Title: <em>Pulse Survey, Pesquisa de Clima e Predição de Evasão com IA | Fiter</em></span><br>
+            <span style="font-size:12px;color:var(--muted);">H1: <em>Soluções de Engajamento com IA para RH e Educação</em></span><br>
+            <span style="font-size:12px;color:var(--muted);">H2s: <em>"Pulse Survey para Empresas"</em> · <em>"Predição de Evasão para Educação"</em></span>
+          </div>
+        </div>
+
+        <div class="url-block">
+          <div class="url-block-title">✉️ Contato</div>
+          <div class="url-item">
+            <span class="url">fiter.com.br/contato</span><br>
+            <span style="font-size:12px;color:var(--muted);">Title: <em>Fale com a Fiter — Agende uma Demo ou Entre em Contato</em></span><br>
+            <span style="font-size:12px;color:var(--muted);">H1: <em>Fale com a Fiter</em></span>
+          </div>
+        </div>
+
+        <div class="url-block">
+          <div class="url-block-title">📰 Blog (listagem)</div>
+          <div class="url-item">
+            <span class="url">fiter.com.br/blog</span><br>
+            <span style="font-size:12px;color:var(--muted);">Migrado de lab.fiter.com.br com redirects 301</span><br>
+            <span style="font-size:12px;color:var(--muted);">Title: <em>Blog Fiter — RH, Engajamento, Saúde Mental e Educação</em></span><br>
+            <span style="font-size:12px;color:var(--muted);">H1: <em>Blog Fiter</em></span>
+          </div>
+        </div>
+
+        <div class="url-block">
+          <div class="url-block-title">✍️ Template de Post</div>
+          <div class="url-item">
+            <span class="url">fiter.com.br/blog/[slug]</span><br>
+            <span style="font-size:12px;color:var(--muted);">Slug: lowercase, hífens, sem acentos</span><br>
+            <span style="font-size:12px;color:var(--muted);">Title: dinâmica — [Título do Post] | Blog Fiter</span><br>
+            <span style="font-size:12px;color:var(--muted);">Schema: Article + BreadcrumbList + OG tags</span>
+          </div>
+        </div>
+
+        <div class="url-block">
+          <div class="url-block-title">🔗 LPs (adaptação CSS)</div>
+          <div class="url-item">
+            <span class="url">URLs existentes mantidas</span><br>
+            <span style="font-size:12px;color:var(--muted);">Sem mudança de URL (apenas CSS)</span><br>
+            <span style="font-size:12px;color:var(--muted);">Aproveitar passagem: corrigir title/meta/H1/alt text que estiverem com texto de template</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="background:rgba(108,99,255,0.07);border:1px solid rgba(108,99,255,0.2);border-radius:10px;padding:14px 18px;font-size:13px;color:#c4bbff;line-height:1.6;">
+      <strong style="color:#a89fff;">ℹ️ Fora do escopo deste contrato mas recomendados como próximo passo:</strong> Páginas dedicadas por produto (<code>/rh/pesquisa-de-clima</code>, <code>/educacao/predicao-evasao</code>), páginas de comparação (<code>/alternativas/great-place-to-work</code>) e hub de guias. Cada uma dessas URLs capturaria um cluster de keywords específico que hoje não tem onde ranquear dentro das 5 páginas contratadas.
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <span>Auditoria SEO · <span class="accent">Fiter × VellumWire</span> · Pacote Profissional · Maio 2026</span>
+  <span style="color:var(--muted);">Documento estratégico de referência para o projeto</span>
+</footer>
+
+</body>
+</html>
