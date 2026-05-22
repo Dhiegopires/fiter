@@ -222,7 +222,7 @@
     </div>
     <div class="meta-item">
       <span class="meta-label">Score atual</span>
-      <span class="meta-value" style="color:var(--accent3)">65 / 100</span>
+      <span class="meta-value" style="color:var(--accent3)">70 / 100</span>
     </div>
     <div class="meta-item">
       <span class="meta-label">Score anterior</span>
@@ -230,7 +230,7 @@
     </div>
     <div class="meta-item">
       <span class="meta-label">Evolução</span>
-      <span class="meta-value" style="color:var(--accent3)">▲ +43 pontos</span>
+      <span class="meta-value" style="color:var(--accent3)">▲ +48 pontos</span>
     </div>
   </div>
 </div>
@@ -238,7 +238,7 @@
 <div class="evolution-bar">
   <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;">Evolução por categoria:</span>
   <div class="evo-item"><span style="color:var(--ok);">●</span> Títulos & Meta <span class="evo-arrow">3→10</span></div>
-  <div class="evo-item"><span style="color:var(--ok);">●</span> Headings <span class="evo-arrow">2→6</span></div>
+  <div class="evo-item"><span style="color:var(--ok);">●</span> Headings <span class="evo-arrow">2→9</span></div>
   <div class="evo-item"><span style="color:var(--ok);">●</span> Conteúdo <span class="evo-arrow">3→6</span></div>
   <div class="evo-item"><span style="color:var(--warn);">●</span> Links Internos <span class="evo-arrow">5→6</span></div>
   <div class="evo-item"><span style="color:var(--ok);">●</span> Schema <span class="evo-arrow">0→5</span></div>
@@ -248,7 +248,7 @@
 
 <div class="score-bar">
   <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Títulos & Meta</div><div class="val" style="color:var(--ok)">10/10</div></div></div>
-  <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Estrutura de Headings</div><div class="val" style="color:var(--warn)">6/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Estrutura de Headings</div><div class="val" style="color:var(--ok)">9/10</div></div></div>
   <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Conteúdo On-page</div><div class="val" style="color:var(--warn)">6/10</div></div></div>
   <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Links Internos</div><div class="val" style="color:var(--warn)">6/10</div></div></div>
   <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Schema Markup</div><div class="val" style="color:var(--warn)">5/10</div></div></div>
@@ -282,7 +282,7 @@
 
     <div class="success-bar">
       <div class="icon">✅</div>
-      <p><strong>7 de 9 problemas originais foram resolvidos.</strong> O salto de 22 para 65 pontos reflete a migração do template Joomla para o novo site HTML/CSS com titles, meta descriptions, H1s, schema parcial, blog no domínio principal e URLs organizadas por segmento.</p>
+      <p><strong>8 de 9 problemas originais foram resolvidos.</strong> O salto de 22 para 70 pontos reflete a migração do template Joomla para o novo site HTML/CSS com titles, meta descriptions, H1s, schema parcial, blog no domínio principal e URLs organizadas por segmento. Headings corrigidos: H1 estático na Home, H2 adicionados em 4 páginas e blog com H2s.</p>
     </div>
 
     <div class="audit-grid">
@@ -299,10 +299,10 @@
         <div class="rec-box"><strong>✦ Impacto:</strong> CTR no SERP tende a subir. Google não precisa mais gerar snippets aleatórios.</div>
       </div>
 
-      <div class="audit-card parcial">
-        <div class="audit-card-header"><span class="tag parcial">Parcial</span><h3>H1 ausente ou sem keyword</h3></div>
-        <p>Antes: <em>"Bem-Vindo :)"</em> na Home. Agora: H1 implementado em todas as páginas. Porém a Home usa H1 dinâmico via JavaScript (carrossel de headlines) — crawlers podem não renderizar.</p>
-        <div class="rec-box"><strong>✦ Melhoria:</strong> Considerar H1 estático com fallback para crawlers, mantendo o carrossel como enhancement visual.</div>
+      <div class="audit-card resolvido">
+        <div class="audit-card-header"><span class="tag resolvido">Resolvido</span><h3>H1 ausente ou sem keyword</h3></div>
+        <p>Antes: <em>"Bem-Vindo :)"</em> na Home e H1 dinâmico via JS vazio no HTML. Agora: H1 estático com o primeiro headline no HTML + JS mantém interatividade do carrossel. Crawlers veem o conteúdo desde o primeiro byte.</p>
+        <div class="rec-box"><strong>✦ Impacto:</strong> Home agora tem H1 indexável com "Seu time parece bem. Os dados contam outra história."</div>
       </div>
 
       <div class="audit-card parcial">
@@ -358,7 +358,7 @@
 
     <div class="critical-bar">
       <div class="icon">🚨</div>
-      <p><strong>5 novos problemas críticos encontrados.</strong> A migração do template Joomla resolveu os problemas estruturais, mas introduziu issues novos: assets em subdomínio legado, conteúdo placeholder em produção e inconsistências de OG tags entre páginas.</p>
+      <p><strong>4 novos problemas críticos encontrados.</strong> A migração do template Joomla resolveu os problemas estruturais, mas introduziu issues novos: assets em subdomínio legado, conteúdo placeholder em produção e inconsistências de OG tags entre páginas.</p>
     </div>
 
     <div class="audit-grid">
@@ -375,10 +375,10 @@
         <div class="rec-box"><strong>✦ Resolve:</strong> Substituir OG tags do Portal de Transparência pelo título e descrição corretos do próprio produto.</div>
       </div>
 
-      <div class="audit-card novo">
-        <div class="audit-card-header"><span class="tag novo">Crítico</span><h3>Posts de teste no ar e indexáveis</h3></div>
-        <p>Três posts de teste/draft estão publicados sem <code>noindex</code>: <code>/blog/o-teste-do-afonso/</code>, <code>/blog/teste-afonso-2.0/</code>, <code>/blog/teste-dhiego/</code>. Títulos placeholder como "É um titulo muito bacana criado por mim." Estão no sitemap.</p>
-        <div class="rec-box"><strong>✦ Resolve:</strong> Adicionar <code>&lt;meta name="robots" content="noindex"&gt;</code> ou remover os arquivos. Remover do sitemap.xml.</div>
+      <div class="audit-card resolvido">
+        <div class="audit-card-header"><span class="tag resolvido">Resolvido</span><h3>Posts de teste no ar e indexáveis</h3></div>
+        <p>Três posts receberam <code>noindex, nofollow</code>, títulos corrigidos ("Teste — Afonso", "Teste — Afonso 2.0", "Teste — Dhiego") e headings H1→H2→H3 hierarquizados. Não indexam mais.</p>
+        <div class="rec-box"><strong>✦ Pendência:</strong> Remover do sitemap.xml ou excluir os arquivos.</div>
       </div>
 
       <div class="audit-card novo">
@@ -413,11 +413,11 @@
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/</span>
-          <span class="page-score alto">85%</span>
+          <span class="page-score alto">90%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Software de Engajamento de Colaboradores | Fiter"</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Meta description: 151 chars, keyword + proposta de valor</div></div>
-        <div class="check-item"><span class="check-icon">⚠️</span><div class="check-text">H1: dinâmico via JS (carrossel)<div class="desc">Crawlers podem não renderizar o conteúdo do H1</div></div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H1: estático com fallback + JS para interação do carrossel<div class="desc">Primeiro headline no HTML, crawlers veem o conteúdo</div></div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical: fiter.com.br/</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG tags: title, description, url, image, type</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: Organization + WebSite (SearchAction)</div></div>
@@ -494,18 +494,20 @@
           <span class="page-score medio">50%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical corrigido</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H2 adicionado: "A ponte entre a legislação e a prática organizacional." como heading da seção</div></div>
         <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">OG image: lab.fiter.com.br</div></div>
         <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">Imagens carregando de lab.fiter.com.br</div></div>
         <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: nenhum</div></div>
       </div>
-
+      
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/contato/</span>
-          <span class="page-score alto">85%</span>
+          <span class="page-score alto">90%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Fale com a Fiter — Agende uma Demonstração"</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Meta description: 155 chars com "demo plataforma de engajamento"</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H2 adicionado: "Agende sua demonstração" como heading do formulário</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical: fiter.com.br/contato/</div></div>
         <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: ContactPage</div></div>
@@ -514,9 +516,10 @@
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/sobre/</span>
-          <span class="page-score alto">80%</span>
+          <span class="page-score alto">85%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Sobre a Fiter | DeepTech de RH e Educação"</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H2 adicionado: "Pesquisa e Ciência na Prática" como wrapper dos 4 cards H3</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical: fiter.com.br/sobre/</div></div>
         <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: AboutPage + Organization + founder</div></div>
@@ -535,12 +538,13 @@
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/blog/</span>
-          <span class="page-score medio">50%</span>
+          <span class="page-score medio">65%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title + canonical + OG tags adicionados</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Post titles migrados de H3 para H2 (hierarquia H1→H2 corrigida)</div></div>
         <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
         <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: nenhum (Blog ou CollectionPage)</div></div>
-        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">3 posts de teste no ar com conteúdo placeholder</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">3 posts de teste: noindex + headings corrigidos</div></div>
       </div>
 
       <div class="page-card">
@@ -650,7 +654,7 @@
 
     <div class="summary-grid">
       <div class="summary-card">
-        <div class="num green">65</div>
+        <div class="num green">70</div>
         <div class="lbl">Score SEO atual (de 100)</div>
       </div>
       <div class="summary-card">
@@ -658,15 +662,15 @@
         <div class="lbl">Score original (auditoria v2)</div>
       </div>
       <div class="summary-card">
-        <div class="num green">+43</div>
+        <div class="num green">+48</div>
         <div class="lbl">Pontos evoluídos</div>
       </div>
       <div class="summary-card">
-        <div class="num green">7</div>
+        <div class="num green">8</div>
         <div class="lbl">Problemas originais resolvidos</div>
       </div>
       <div class="summary-card">
-        <div class="num red">5</div>
+        <div class="num red">4</div>
         <div class="lbl">Novos problemas críticos</div>
       </div>
       <div class="summary-card">
