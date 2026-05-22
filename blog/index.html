@@ -421,7 +421,9 @@
     </footer>
 
     <script>
-        lucide.createIcons();
+        if (typeof lucide !== 'undefined') {
+            try { lucide.createIcons(); } catch (_) {}
+        }
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -451,8 +453,9 @@
             let visibleCount = 0;
             document.querySelectorAll('#blogGrid .post-card').forEach(card => {
                 const title = card.querySelector('.post-title').textContent.toLowerCase();
+                const desc = card.querySelector('.post-excerpt').textContent.toLowerCase();
                 const category = card.dataset.category || '';
-                const match = (!term || title.includes(term)) && (activeCategory === 'all' || category === activeCategory);
+                const match = (!term || title.includes(term) || desc.includes(term)) && (activeCategory === 'all' || category === activeCategory);
                 card.style.display = match ? '' : 'none';
                 if (match) visibleCount++;
             });
