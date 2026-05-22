@@ -155,7 +155,7 @@ Destacar variedade:
 - DNA científico — USP, teses de mestrado
 - Livro: "Felicidade: Ciência de Dados"
 - Selos: Mackenzie, ABES, Sebrae for Startups
-- Sergio Amad — fundador e história
+- Sergio Amad | Fundador e história
 - Definição de deeptech (não é startup convencional)
 - Parceiros acadêmicos
 
