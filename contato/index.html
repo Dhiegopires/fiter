@@ -261,54 +261,22 @@
 
         <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
 
-        <section style="padding: 5rem 2rem 7rem; position: relative; z-index: 1;">
-            <div style="max-width: 1080px; margin: 0 auto;">
+        <section style="padding: 5rem 2rem 7rem; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center;">
 
-                <!-- Topo — título em coluna única -->
-                <div style="max-width: 600px; margin-bottom: 4rem;">
-                    <p data-reveal style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent-brand);margin-bottom:1rem;">Fale conosco</p>
-                    <h1 data-reveal style="font-family:var(--font-serif);font-size:clamp(2.25rem,4vw,3.5rem);font-weight:800;letter-spacing:-0.03em;line-height:1.08;color:var(--text-primary);margin-bottom:1.25rem;--reveal-delay:0.05s;">
-                        Veja a Fiter funcionando para a sua realidade
-                    </h1>
-                    <p data-reveal style="font-size:1.05rem;color:var(--text-secondary);line-height:1.7;--reveal-delay:0.1s;">
-                        Nossa equipe especializada vai mostrar como a escuta contínua transforma dados em decisões. Sem enrolação.
-                    </p>
-                </div>
+            <!-- Topo — título -->
+            <div style="max-width: 720px; margin-bottom: 4rem; text-align: center;">
+                <p data-reveal style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent-brand);margin-bottom:1rem;">Fale conosco</p>
+                <h1 data-reveal style="font-family:var(--font-serif);font-size:clamp(2.25rem,4vw,3.5rem);font-weight:800;letter-spacing:-0.03em;line-height:1.08;color:var(--text-primary);margin-bottom:1.25rem;--reveal-delay:0.05s;">
+                    Veja a Fiter funcionando para a sua realidade
+                </h1>
+                <p data-reveal style="font-size:1.05rem;color:var(--text-secondary);line-height:1.7;--reveal-delay:0.1s;">
+                    Nossa equipe especializada vai mostrar como a escuta contínua transforma dados em decisões. Sem enrolação.
+                </p>
+            </div>
 
-                <!-- Baixo — 2 colunas: info + formulário -->
-                <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;">
-
-                    <!-- Coluna esquerda — diferenciais -->
-                    <div style="display:flex;flex-direction:column;gap:2rem;">
-
-                        <div data-reveal style="--reveal-delay:0.15s;">
-                            <p style="font-size:0.9rem;font-weight:600;color:var(--text-primary);margin-bottom:0.35rem;">Resposta em até 1 dia útil</p>
-                            <p style="font-size:0.875rem;color:var(--text-tertiary);line-height:1.6;">Nenhuma mensagem fica sem retorno. Prometemos.</p>
-                        </div>
-
-                        <div data-reveal style="--reveal-delay:0.2s;">
-                            <p style="font-size:0.9rem;font-weight:600;color:var(--text-primary);margin-bottom:0.35rem;">Demo personalizada, sem script</p>
-                            <p style="font-size:0.875rem;color:var(--text-tertiary);line-height:1.6;">Mostramos o produto com dados do seu setor, não cases genéricos.</p>
-                        </div>
-
-                        <div data-reveal style="--reveal-delay:0.25s;">
-                            <p style="font-size:0.9rem;font-weight:600;color:var(--text-primary);margin-bottom:0.35rem;">Sem pressão de vendas</p>
-                            <p style="font-size:0.875rem;color:var(--text-tertiary);line-height:1.6;">Se não fizer sentido para você, é uma boa conversa e nada mais.</p>
-                        </div>
-
-    <main class="main-content" style="padding-top: 64px; min-height: 80vh;">
-        <div class="ds-container px-6">
-            <section class="ds-section" style="margin-top: 4rem; text-align: center;">
-                <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; color: var(--text-primary); letter-spacing: -0.025em;">Fale conosco</h1>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem; font-size: 1.125rem;">Nossa equipe está pronta para demonstrar como a IA pode transformar os resultados da sua empresa.</p>
-                <div class="ds-form-container" style="max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; background: var(--bg-surface); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg); text-align: left;">
-                    <div>
-                        <label style="display: block; font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase;">Nome completo</label>
-                        <input type="text" class="input" placeholder="Seu nome" style="width: 100%; background: var(--bg-surface); border: 1px solid var(--border-default); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none; transition: border-color 0.2s; font-size: 0.9rem;">
-                    </div>
-
-                    <!-- Coluna direita — formulário -->
-                    <div data-reveal style="--reveal-delay:0.1s;">
+            <!-- Formulário -->
+            <div style="max-width: 720px;">
+                <div data-reveal style="--reveal-delay:0.1s;">
                     <div style="background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;">
                         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%, var(--accent-glow) 0%, transparent 60%);pointer-events:none;" aria-hidden="true"></div>
 
@@ -382,12 +350,10 @@
                                 <a href="/" class="btn btn-secondary" style="margin-top:0.5rem;text-decoration:none;">Voltar ao início</a>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
 
-                </div><!-- /grid 2 colunas -->
-
-            </div><!-- /max-width container -->
         </section>
 
     </main>
