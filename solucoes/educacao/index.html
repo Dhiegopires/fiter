@@ -3,218 +3,506 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse Educação — Previna a Evasão Escolar com IA | Fiter</title>
+    <title>Pulse Educação | Previna a Evasão Escolar com IA | Fiter</title>
     <meta name="description" content="Meça o Índice de Felicidade na Educação e preveja a evasão antes que ocorra. 8 cliques, 2 minutos. Alinhado à CNE 3/2025. Usado na USP e Fatec.">
     <link rel="canonical" href="https://fiter.com.br/solucoes/educacao/">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Pulse Educação — Previna a Evasão Escolar com IA | Fiter">
+    <meta property="og:title" content="Pulse Educação | Previna a Evasão Escolar com IA | Fiter">
     <meta property="og:description" content="Meça o Índice de Felicidade na Educação e preveja a evasão antes que ocorra. 8 cliques, 2 minutos. Alinhado à CNE 3/2025. Usado na USP e Fatec.">
     <meta property="og:url" content="https://fiter.com.br/solucoes/educacao/">
     <meta property="og:type" content="website">
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "Pulse Educação Fiter",
-      "operatingSystem": "Web, WhatsApp",
-      "applicationCategory": "EducationalApplication",
-      "description": "Meça o Índice de Felicidade na Educação e preveja a evasão antes que ocorra. Alinhado à CNE 3/2025."
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [{
-        "@type": "Question",
-        "name": "Como a Fiter reduz a evasão escolar?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A Fiter mede o Índice de Felicidade na Educação (IFE) e utiliza inteligência artificial para prever a evasão com base em sinais comportamentais contínuos."
-        }
-      }]
-    }
-    </script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Pulse Educação Fiter","operatingSystem":"Web, WhatsApp","applicationCategory":"EducationalApplication","description":"Meça o Índice de Felicidade na Educação e preveja a evasão antes que ocorra. Alinhado à CNE 3/2025."}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Como a Fiter reduz a evasão escolar?","acceptedAnswer":{"@type":"Answer","text":"A Fiter mede o Índice de Felicidade na Educação (IFE) e utiliza inteligência artificial para prever a evasão com base em sinais comportamentais contínuos."}}]}</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+      [data-theme="connect"]{--accent-text:#050505}
+      .edu-hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;margin-top:-64px;margin-left:-2rem;margin-right:-2rem;padding:6rem 2rem 3rem}
+      .edu-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 80% 50%,rgba(16,185,129,0.08),transparent 70%),radial-gradient(ellipse 50% 50% at 20% 80%,rgba(16,185,129,0.04),transparent 60%);pointer-events:none}
+      .edu-hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;width:100%;max-width:1200px;margin:0 auto;position:relative;z-index:1}
+      .edu-hero-metrics{display:flex;gap:2rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle)}
+      .edu-hero-metric-item{display:flex;flex-direction:column;gap:0.15rem}
+      .edu-hero-metric-item .val{font-family:var(--font-serif);font-size:1.75rem;font-weight:800;color:var(--accent-brand);line-height:1;letter-spacing:-0.03em}
+      .edu-hero-metric-item .lbl{font-size:0.65rem;color:var(--text-tertiary);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em}
+      .ife-display{width:100%;max-width:400px;margin:0 auto;text-align:center}
+      .ife-ring{position:relative;width:260px;height:260px;margin:0 auto 1.5rem}
+      .ife-ring svg{transform:rotate(-90deg)}
+      .ife-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+      .ife-center .score{font-family:var(--font-serif);font-size:4.5rem;font-weight:800;color:var(--text-primary);line-height:1;letter-spacing:-0.04em}
+      .ife-center .label{font-size:0.6rem;color:var(--text-tertiary);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.1em;margin-top:0.25rem}
+      .ife-legend{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap}
+      .ife-legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.72rem;color:var(--text-secondary)}
+      .ife-legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+      .edu-section-dark{margin-left:-2rem;margin-right:-2rem;padding:7rem 5vw;position:relative;overflow:hidden;background:var(--bg-surface);border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default)}
+      .edu-section-dark .bg-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);font-family:var(--font-serif);font-size:clamp(16rem,30vw,28rem);font-weight:800;color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;letter-spacing:-0.04em}
+      .edu-section-green{margin-left:-2rem;margin-right:-2rem;padding:7rem 5vw;position:relative;overflow:hidden;background:rgba(16,185,129,0.03);border-top:1px solid rgba(16,185,129,0.08);border-bottom:1px solid rgba(16,185,129,0.08)}
+      .edu-section-green .bg-num{position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);font-family:var(--font-serif);font-size:clamp(16rem,30vw,28rem);font-weight:800;color:rgba(16,185,129,0.04);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;letter-spacing:-0.04em}
+      .edu-stats-grid{display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--border-default);border-radius:var(--radius-lg);overflow:hidden}
+      .edu-stat-cell{padding:2.5rem 3rem;border-right:1px solid var(--border-default)}
+      .edu-stat-cell:last-child{border-right:none}
+      .edu-stat-cell .num{font-family:var(--font-serif);font-size:3.25rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.75rem}
+      .edu-stat-cell .desc{font-size:0.85rem;color:var(--text-secondary);line-height:1.55}
+      .edu-solution-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
+      .edu-solution-card{padding:2.5rem 2rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;transition:border-color 0.25s,transform 0.25s}
+      .edu-solution-card:hover{border-color:rgba(16,185,129,0.25);transform:translateY(-3px)}
+      .edu-solution-card .step{width:36px;height:36px;border-radius:50%;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.8rem;color:var(--accent-brand);font-family:var(--font-mono);font-weight:600;margin-bottom:1.25rem}
+      .edu-solution-card h3{font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.2}
+      .edu-solution-card p{font-size:0.85rem;color:var(--text-secondary);line-height:1.6}
+      .edu-cta-full{margin-left:-2rem;margin-right:-2rem;padding:6rem 5vw;position:relative;overflow:hidden;background:rgba(16,185,129,0.04);border-top:1px solid var(--border-default);text-align:center}
+      .edu-cta-full::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(16,185,129,0.06),transparent 70%);pointer-events:none}
+      .edu-counter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;max-width:900px;margin:0 auto}
+      .edu-counter-cell{padding:2rem;text-align:center;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);transition:border-color 0.25s,transform 0.25s}
+      .edu-counter-cell:hover{border-color:var(--border-default);transform:translateY(-3px)}
+      .edu-counter-cell .num{font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.35rem;letter-spacing:-0.03em}
+      .edu-counter-cell .lbl{font-size:0.72rem;color:var(--text-secondary);line-height:1.4}
+      @media(max-width:768px){
+        .edu-hero-grid{grid-template-columns:1fr;gap:2.5rem}
+        .ife-ring{width:200px;height:200px}
+        .ife-center .score{font-size:3.5rem}
+        .edu-stats-grid{grid-template-columns:1fr}
+        .edu-stat-cell{border-right:none;border-bottom:1px solid var(--border-default)}
+        .edu-stat-cell:last-child{border-bottom:none}
+        .edu-solution-cards{grid-template-columns:1fr}
+        .edu-counter-grid{grid-template-columns:1fr 1fr}
+        .edu-hero-metrics{flex-wrap:wrap;gap:1.25rem}
+      }
+      @media(max-width:540px){
+        .edu-counter-grid{grid-template-columns:1fr}
+      }
+    </style>
 </head>
-<body data-theme="base">
-    <nav class="fixed top-0 left-0 right-0 z-50 py-6" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-default);">
-        <div class="ds-container flex items-center justify-between px-6">
-            <a href="/" style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); text-decoration: none;">Fiter.</a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 0.875rem;">Home</a>
-                <div class="relative group">
-                    <a href="#" class="flex items-center gap-1" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; cursor: pointer;">
-                        Soluções <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
-                    </a>
-                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 0.5rem; width: max-content; min-width: 220px; display: flex; flex-direction: column; gap: 0.25rem;">
-                            <a href="/solucoes/rh/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução RH</a>
-                            <a href="/solucoes/educacao/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução Educação</a>
-                        </div>
-                    </div>
+<body data-theme="connect">
+
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+        <ul class="nav-links">
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/solucoes/rh/"><div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div></a>
+                    <a class="drop-link" href="/solucoes/educacao/"><div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div></a>
                 </div>
-                <a href="/clientes/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Clientes</a>
-                <a href="/sobre/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Sobre</a>
-                <a href="/blog/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Blog</a>
-                <a href="/contato/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Contato</a>
+            </li>
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/produtos/pulse/"><div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div></a>
+                    <a class="drop-link" href="/produtos/nr01/"><div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div></a>
+                    <a class="drop-link" href="/produtos/pesquisa-de-clima/"><div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div></a>
+                    <a class="drop-link" href="/produtos/portal-de-transparencia/"><div><div class="drop-link-name">Portal de Transparência</div><div class="drop-link-tag">Dados abertos</div></div></a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/"><div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div></a>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+        </ul>
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </div>
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
             </div>
-            <div class="hidden md:flex items-center gap-4">
-                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Agendar demonstração</a>
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/produtos/portal-de-transparencia/">Portal de Transparência</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
+                </div></div>
+            </div>
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+            <div class="drawer-cta"><a class="btn btn-primary w-full" href="/contato/" style="text-decoration:none;justify-content:center;">Agendar demonstração</a></div>
+        </div>
+    </div>
+</nav>
+
+<main class="main-content">
+    <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
+
+    <!-- HERO - full viewport -->
+    <section class="edu-hero">
+        <div class="edu-hero-grid">
+            <div>
+                <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 1rem;border-radius:var(--radius-full);border:1px solid var(--border-default);background:var(--bg-surface);margin-bottom:2rem;">
+                    <span style="width:8px;height:8px;border-radius:50%;background:var(--accent-brand);box-shadow:0 0 10px var(--accent-glow);"></span>
+                    <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">Solução Educação</span>
+                </div>
+                <h1 style="font-family:var(--font-serif);font-size:clamp(2.5rem,4.5vw,4rem);font-weight:800;letter-spacing:-0.03em;line-height:1.02;margin-bottom:1.25rem;color:var(--text-primary);">
+                    O IFE revela o que<br>o aluno não diz.
+                </h1>
+                <p style="font-size:1.05rem;color:var(--text-secondary);max-width:480px;margin-bottom:2rem;line-height:1.65;">
+                    Índice de Felicidade na Educação. Oito perguntas via WhatsApp. IA que prevê evasão com 3 meses de antecedência. Tudo alinhado à CNE 3/2025.
+                </p>
+                <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+                    <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Solicitar demonstração</a>
+                </div>
+                <div class="edu-hero-metrics">
+                    <div class="edu-hero-metric-item"><span class="val">87%</span><span class="lbl">taxa de resposta</span></div>
+                    <div class="edu-hero-metric-item"><span class="val">8</span><span class="lbl">perguntas</span></div>
+                    <div class="edu-hero-metric-item"><span class="val">2 min</span><span class="lbl">para responder</span></div>
+                    <div class="edu-hero-metric-item"><span class="val">+500k</span><span class="lbl">alunos medidos</span></div>
+                </div>
+            </div>
+            <div>
+                <div class="ife-display">
+                    <div class="ife-ring">
+                        <svg viewBox="0 0 120 120" width="260" height="260">
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
+                            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--accent-brand)" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="75.4" stroke-linecap="round" style="transition:stroke-dashoffset 1.5s ease 0.5s;"/>
+                        </svg>
+                        <div class="ife-center">
+                            <div class="score">70</div>
+                            <div class="label">IFE médio</div>
+                        </div>
+                    </div>
+                    <div class="ife-legend">
+                        <div class="ife-legend-item"><span class="ife-legend-dot" style="background:var(--accent-brand);"></span>Engajado (70+)</div>
+                        <div class="ife-legend-item"><span class="ife-legend-dot" style="background:#f59e0b;"></span>Atenção (50-70)</div>
+                        <div class="ife-legend-item"><span class="ife-legend-dot" style="background:#ef4444;"></span>Risco (-50)</div>
+                    </div>
+                </div>
             </div>
         </div>
-    </nav>
-    <main class="main-content" style="padding-top: 120px;">
-        <div class="ds-container px-6">
-            
-            <!-- Hero -->
-            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 70vh; margin-bottom: 8rem;">
-                <div class="flex-1 z-10">
-                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-surface); margin-bottom: 2rem;">
-                        <span style="width: 8px; height: 8px; border-radius: 50%; background: #a855f7; box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);"></span>
-                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Solução Educação</span>
-                    </div>
-                    <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
-                        Preveja a evasão antes<br>que ela aconteça.
-                    </h1>
-                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 550px; margin-bottom: 2.5rem; line-height: 1.6;">
-                        Meça o Índice de Felicidade na Educação (IFE), preveja o risco de trancamento de matrícula e mantenha sua instituição em conformidade com o CNE 3/2025.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Solicitar demonstração</a>
-                    </div>
-                </div>
-            </section>
+    </section>
 
-            <!-- Problemas que resolve -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-16">
-                    <h2 class="ds-section-title">O que tiramos da sua frente</h2>
+    <!-- PROBLEMA - full-bleed escuro -->
+    <section class="edu-section-dark" style="margin-bottom:8rem;">
+        <div class="bg-num">47%</div>
+        <div style="position:relative;z-index:1;max-width:1200px;margin:0 auto;">
+            <div style="text-align:center;margin-bottom:4rem;">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.5rem;">O custo do silêncio</p>
+                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;">
+                    Quase metade dos alunos<br>abandona antes de concluir.
+                </h2>
+                <p style="color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">
+                    60% das evasões acontecem no primeiro ano. O aluno não avisa que vai sair: ele simplesmente some. A pesquisa semestral detecta o problema quando ja virou estatistica.
+                </p>
+            </div>
+            <div class="edu-stats-grid">
+                <div class="edu-stat-cell fade-up" style="--reveal-delay:0s;">
+                    <div class="num">R$ 7,2<span style="font-size:1.5rem;">bi</span></div>
+                    <div class="desc">em perdas anuais no Brasil com evasão no ensino superior</div>
                 </div>
-                <div class="ds-card-grid">
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
-                        <i data-lucide="user-minus" style="width: 32px; height: 32px; color: #a855f7; margin-bottom: 1.5rem;"></i>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Evasão Invisível</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6;">Identifique alunos em risco de evasão através de sinais comportamentais, antes que a decisão de sair seja tomada.</p>
-                    </div>
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
-                        <i data-lucide="shield-alert" style="width: 32px; height: 32px; color: #a855f7; margin-bottom: 1.5rem;"></i>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Conformidade CNE 3/2025</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6;">Mantenha-se alinhado às novas diretrizes do MEC para os cursos de medicina, evitando penalidades.</p>
-                    </div>
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
-                        <i data-lucide="bar-chart-2" style="width: 32px; height: 32px; color: #a855f7; margin-bottom: 1.5rem;"></i>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Clima Acadêmico</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6;">Saiba o que os alunos realmente pensam sobre o curso e a instituição, com dados contínuos e não apenas anuais.</p>
-                    </div>
+                <div class="edu-stat-cell fade-up" style="--reveal-delay:0.1s;">
+                    <div class="num">60%</div>
+                    <div class="desc">das evasões concentradas no primeiro ano de curso</div>
                 </div>
-            </section>
-
-            <!-- Módulo Detalhe -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 4rem;">
-                    <h3 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem;">Pulse Educação</h3>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; max-width: 600px;">O primeiro módulo desenhado exclusivamente para retenção de alunos usando IA e neurociência.</p>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                        <div>
-                            <i data-lucide="smartphone" style="width: 24px; height: 24px; color: #a855f7; margin-bottom: 1rem;"></i>
-                            <h4 style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">Fácil Adesão</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">Questionário em 8 cliques via WhatsApp. Sem necessidade de logins ou downloads de aplicativos, garantindo altas taxas de resposta.</p>
-                        </div>
-                        <div>
-                            <i data-lucide="activity" style="width: 24px; height: 24px; color: #a855f7; margin-bottom: 1rem;"></i>
-                            <h4 style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">Cálculo do IFE</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">Métrica exclusiva: Índice de Felicidade na Educação. Avalia o bem-estar e o nível de satisfação do aluno com a sua jornada acadêmica.</p>
-                        </div>
-                        <div>
-                            <i data-lucide="bell" style="width: 24px; height: 24px; color: #a855f7; margin-bottom: 1rem;"></i>
-                            <h4 style="font-weight: 500; color: var(--text-primary); margin-bottom: 0.5rem;">Alertas Automáticos</h4>
-                            <p style="color: var(--text-secondary); font-size: 0.875rem; line-height: 1.6;">Coordenadores de curso recebem notificações em tempo real quando as turmas apresentam alto risco de evasão, permitindo intervenções cirúrgicas.</p>
-                        </div>
-                    </div>
+                <div class="edu-stat-cell fade-up" style="--reveal-delay:0.2s;">
+                    <div class="num">1 ano</div>
+                    <div class="desc">intervalo medio entre pesquisas de clima tradicionais</div>
                 </div>
-            </section>
-
-            <!-- CNE 3/2025 -->
-            <section class="ds-section" style="margin-bottom: 8rem; text-align: center; padding: 4rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
-                <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-base); margin-bottom: 1.5rem;">
-                    <span style="font-family: var(--font-mono); font-size: 0.75rem; color: #a855f7; text-transform: uppercase; letter-spacing: 0.05em;">Atenção Regulamentar</span>
-                </div>
-                <h2 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem; font-style: italic;">Conformidade CNE 3/2025</h2>
-                <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">As novas resoluções do MEC exigem acompanhamento psicopedagógico e da saúde mental, com prazo crítico até Setembro para cursos de medicina.</p>
-                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none; background: #a855f7; color: white;">Adequar minha instituição agora</a>
-            </section>
-
-            <!-- Cases -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-12">
-                    <h2 class="ds-section-title">Aprovado por quem forma o Brasil</h2>
-                </div>
-                <div class="ds-card-grid">
-                    <div class="card" style="background: var(--bg-surface); padding: 3rem; border: 1px solid var(--border-default); text-align: center;">
-                        <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">USP</div>
-                        <p style="color: var(--text-secondary); font-style: italic;">"Com o mapeamento da Fiter, passamos a intervir de maneira mais estratégica na jornada do aluno."</p>
-                    </div>
-                    <div class="card" style="background: var(--bg-surface); padding: 3rem; border: 1px solid var(--border-default); text-align: center;">
-                        <div style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Fatec</div>
-                        <p style="color: var(--text-secondary); font-style: italic;">"Reduzimos significativamente os índices de abandono no primeiro semestre utilizando a predição da IA."</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Implementação -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-12">
-                    <h2 class="ds-section-title">Como funciona a implementação</h2>
-                </div>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
-                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">1</div>
-                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Assinatura</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Contrato e termos de confidencialidade.</p>
-                    </div>
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
-                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">2</div>
-                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Integração</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Importação segura dos contatos dos alunos.</p>
-                    </div>
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
-                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">3</div>
-                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Alinhamento</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.875rem;">Capacitação da coordenação pedagógica.</p>
-                    </div>
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
-                        <div style="font-family: var(--font-mono); color: #a855f7; font-size: 2rem; margin-bottom: 1rem;">4</div>
-                        <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Lançamento</h4>
-                        <p style="color: var(--text-secondary); font-size: 0.875rem;">O envio do primeiro ciclo do Pulse Educação.</p>
-                    </div>
-                </div>
-            </section>
-
+            </div>
         </div>
-    </main>
+    </section>
 
-    <!-- FOOTER -->
-    <footer class="ds-footer">
-        <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
-            <h2 style="font-family: var(--font-serif); font-style: italic;">Fiter.</h2>
-            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; max-width: 480px; margin-left: auto; margin-right: auto;">DeepTech validada por USP e Mackenzie.</p>
-        </div>
-        <div style="display: flex; gap: 1rem; justify-content: center; margin-bottom: 2rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-tertiary); align-items: center;">
-            <span>Mackenzie</span><span>·</span><span>ABES</span><span>·</span><span>Sebrae for Startups</span>
-        </div>
-        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); text-align: center;">© 2026 Fiter. Todos os direitos reservados.</p>
-    </footer>
+    <div class="ds-container px-6">
 
-    <script>lucide.createIcons();</script>
+        <!-- COMO A FITER RESOLVE -->
+        <section class="ds-section" style="margin-bottom:8rem;">
+            <div class="text-center mb-12">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Como funciona</p>
+                <h2 class="ds-section-title">Do dado a decisao em 3 passos</h2>
+            </div>
+            <div class="edu-solution-cards">
+                <div class="edu-solution-card fade-up" style="--reveal-delay:0s;">
+                    <div class="step">1</div>
+                    <h3>Medir o IFE semanalmente</h3>
+                    <p>Oito perguntas enviadas por WhatsApp. O aluno responde entre uma aula e outra. Sem app, sem login, sem friccao. 87% de taxa de resposta.</p>
+                </div>
+                <div class="edu-solution-card fade-up" style="--reveal-delay:0.12s;">
+                    <div class="step">2</div>
+                    <h3>IA alerta antes da evasao</h3>
+                    <p>O algoritmo detecta padroes de queda no IFE e alerta o coordenador com ate 3 meses de antecedencia. O plano de acao ja vem sugerido.</p>
+                </div>
+                <div class="edu-solution-card fade-up" style="--reveal-delay:0.24s;">
+                    <div class="step">3</div>
+                    <h3>Relatorios para o MEC</h3>
+                    <p>Documentacao automatica alinhada a CNE 3/2025. Pronto para auditoria sem retrabalho. A conformidade vira consequencia, nao uma corrida.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTITUIÇÕES (marquee) -->
+        <section style="margin-bottom:8rem;margin-left:-2rem;margin-right:-2rem;padding:4rem 5vw;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);overflow:hidden;background:var(--bg-surface);">
+            <div class="flex flex-col items-center text-center mb-10">
+                <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Instituições que confiam na Fiter</p>
+                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.25rem);color:var(--text-primary);font-weight:700;letter-spacing:-0.02em;">+500.000 alunos impactados</h2>
+            </div>
+            <div class="marquee-mask" style="overflow:hidden;white-space:nowrap;position:relative;">
+                <div class="logo-marquee">
+                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:800;">USP</div>
+                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
+                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Kroton</div>
+                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">Mackenzie</div>
+                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:700;letter-spacing:-1px;">ANEC</div>
+                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">UNIP</div>
+                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:800;">USP</div>
+                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
+                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Kroton</div>
+                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">Mackenzie</div>
+                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:700;letter-spacing:-1px;">ANEC</div>
+                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">UNIP</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MÓDULOS (showcase accordion) -->
+        <section class="ds-section" style="margin-bottom:8rem;">
+            <div class="text-center mb-12">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Modulos Pulse Educação</p>
+                <h2 class="ds-section-title">Cada modulo cobre uma frente da retencao</h2>
+            </div>
+            <div class="showcase-list">
+                <div class="showcase-row is-open">
+                    <div class="showcase-num">01</div>
+                    <div class="showcase-content">
+                        <div class="showcase-collapsed-tag">Indice de Felicidade na Educação</div>
+                        <div class="showcase-tag">Indice de Felicidade na Educação</div>
+                        <h3 class="showcase-heading">IFE</h3>
+                        <p class="showcase-desc">Metrica proprietaria que calcula o bem-estar academico em tempo real. Dashboard por turma, curso e instituicao. 87% de taxa de resposta. Base validada por USP e Mackenzie.</p>
+                        <a href="/produtos/pulse/" class="showcase-cta">Conhecer o IFE</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(16,185,129,0.04),rgba(16,185,129,0.01));">
+                            <div class="showcase-visual-grid"></div>
+                            <div class="showcase-visual-bg">
+                                <div style="text-align:center;">
+                                    <div style="font-family:var(--font-serif);font-size:3.5rem;font-weight:800;color:var(--accent-brand);line-height:1;">87%</div>
+                                    <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;">taxa de resposta</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-row">
+                    <div class="showcase-num">02</div>
+                    <div class="showcase-content">
+                        <div class="showcase-collapsed-tag">Predicao de evasao</div>
+                        <div class="showcase-tag">Predicao</div>
+                        <h3 class="showcase-heading">Alerta de Evasao</h3>
+                        <p class="showcase-desc">IA treinada com milhares de alunos identifica padroes de risco com ate 3 meses de antecedencia. Coordenadores recebem alertas no WhatsApp com planos de acao sugeridos.</p>
+                        <a href="/produtos/pulse/" class="showcase-cta">Ver modulo</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(239,68,68,0.04),rgba(239,68,68,0.01));">
+                            <div class="showcase-visual-grid"></div>
+                            <div class="showcase-visual-bg">
+                                <div style="text-align:center;">
+                                    <div style="font-family:var(--font-serif);font-size:3.5rem;font-weight:800;color:#ef4444;line-height:1;">3</div>
+                                    <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;">meses de antecedencia</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-row">
+                    <div class="showcase-num">03</div>
+                    <div class="showcase-content">
+                        <div class="showcase-collapsed-tag">Conformidade CNE 3/2025</div>
+                        <div class="showcase-tag">Conformidade</div>
+                        <h3 class="showcase-heading">CNE 3/2025</h3>
+                        <p class="showcase-desc">Adequacao automatica as novas diretrizes do MEC. Relatorios de acompanhamento psicopedagogico prontos para auditoria. Sem retrabalho, sem burocracia.</p>
+                        <a href="/contato/" class="showcase-cta">Adequar instituicao</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(245,158,11,0.04),rgba(245,158,11,0.01));">
+                            <div class="showcase-visual-grid"></div>
+                            <div class="showcase-visual-bg">
+                                <div style="text-align:center;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-tertiary);">CNE 3/2025<br><span style="font-size:0.6rem;">Resolucao do MEC</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="showcase-row">
+                    <div class="showcase-num">04</div>
+                    <div class="showcase-content">
+                        <div class="showcase-collapsed-tag">Painel de gestao academica</div>
+                        <div class="showcase-tag">Gestao</div>
+                        <h3 class="showcase-heading">Portal do Coordenador</h3>
+                        <p class="showcase-desc">Painel completo com IFE por turma, ranking de risco, historico de evolucao e planos de acao sugeridos por IA para cada turma critica.</p>
+                        <a href="/produtos/portal-de-transparencia/" class="showcase-cta">Ver modulo</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(139,92,246,0.04),rgba(139,92,246,0.01));">
+                            <div class="showcase-visual-grid"></div>
+                            <div class="showcase-visual-bg">
+                                <div style="text-align:center;font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);">Dashboard<br>em tempo real</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESULTADOS - contadores + bar chart -->
+        <section class="ds-section" style="margin-bottom:8rem;">
+            <div class="text-center mb-12">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Resultados comprovados</p>
+                <h2 class="ds-section-title">O que muda com a Fiter</h2>
+            </div>
+            <div class="edu-counter-grid" style="margin-bottom:3rem;">
+                <div class="edu-counter-cell fade-up" style="--reveal-delay:0s;">
+                    <div class="num">87%</div>
+                    <div class="lbl">taxa de resposta dos alunos</div>
+                </div>
+                <div class="edu-counter-cell fade-up" style="--reveal-delay:0.08s;">
+                    <div class="num">73%</div>
+                    <div class="lbl">reducao de evasao</div>
+                </div>
+                <div class="edu-counter-cell fade-up" style="--reveal-delay:0.16s;">
+                    <div class="num">92%</div>
+                    <div class="lbl">aderencia a CNE 3/2025</div>
+                </div>
+                <div class="edu-counter-cell fade-up" style="--reveal-delay:0.24s;">
+                    <div class="num">+60%</div>
+                    <div class="lbl">engajamento 1 semestre</div>
+                </div>
+            </div>
+            <div class="chart-container">
+                <div class="chart-bars">
+                    <div class="bar-row fade-up" style="--bar-delay:0s;--bar-target:87%;">
+                        <span class="bar-label">Taxa de resposta</span>
+                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
+                        <span class="bar-value-label">87%</span>
+                    </div>
+                    <div class="bar-row fade-up" style="--bar-delay:0.1s;--bar-target:73%;">
+                        <span class="bar-label">Reducao de evasao</span>
+                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
+                        <span class="bar-value-label">73%</span>
+                    </div>
+                    <div class="bar-row fade-up" style="--bar-delay:0.2s;--bar-target:92%;">
+                        <span class="bar-label">Aderencia CNE 3/2025</span>
+                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
+                        <span class="bar-value-label">92%</span>
+                    </div>
+                    <div class="bar-row fade-up" style="--bar-delay:0.3s;--bar-target:60%;">
+                        <span class="bar-label">Engajamento 1 semestre</span>
+                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
+                        <span class="bar-value-label">+60%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="ds-section" style="margin-bottom:8rem;">
+            <div class="text-center mb-12">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Vozes da academia</p>
+                <h2 class="ds-section-title">Quem usa recomenda</h2>
+            </div>
+            <div class="testi-grid">
+                <div class="testi-card" style="--testi-delay:0s">
+                    <p class="testi-quote">"Com o <strong>mapeamento da Fiter, passamos a intervir antes do aluno pensar em trancar</strong> a matricula. O IFE nos da visibilidade que nenhuma pesquisa semestral conseguia."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">US</div>
+                        <div><div class="testi-name">Coordenador Academico</div><div class="testi-role">USP</div></div>
+                    </div>
+                </div>
+                <div class="testi-card" style="--testi-delay:0.15s">
+                    <p class="testi-quote">"<strong>Reduzimos significativamente os indices de abandono no primeiro semestre</strong> utilizando a predicao da IA. Os alertas nos permitiram agir com precisao cirurgica."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">FT</div>
+                        <div><div class="testi-name">Diretor Academico</div><div class="testi-role">Fatec</div></div>
+                    </div>
+                </div>
+                <div class="testi-card" style="--testi-delay:0.3s">
+                    <p class="testi-quote">"O Pulse Educação nos ajudou a <strong>atingir a conformidade com a CNE 3/2025</strong> de forma natural. O que seria uma correria burocratica se tornou parte do acompanhamento pedagogico regular."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">ME</div>
+                        <div><div class="testi-name">Pro-Reitor</div><div class="testi-role">Mackenzie</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="ds-section" style="margin-bottom:6rem;">
+            <div class="text-center mb-12">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Duvidas comuns</p>
+                <h2 class="ds-section-title">Perguntas frequentes</h2>
+            </div>
+            <div style="max-width:760px;margin:0 auto;">
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-trigger"><span class="faq-question">O que e o IFE?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">O IFE (Indice de Felicidade na Educação) e uma metrica proprietaria da Fiter que mede bem-estar, engajamento e satisfacao dos alunos. Calculado a partir de 8 perguntas via WhatsApp, varia de 0 a 100 e permite comparar turmas, cursos e instituicoes em tempo real.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger"><span class="faq-question">Como a Fiter se alinha a CNE 3/2025?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">A Resolucao CNE 3/2025 exige acompanhamento psicopedagogico continuo e monitoramento da saude mental dos estudantes. O Pulse Educação atende com coleta sistematica de dados de bem-estar, alertas precoces de risco e relatorios prontos para auditoria do MEC.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger"><span class="faq-question">Precisa de integracao com o sistema academico?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">Nao. O aluno responde pelo WhatsApp sem app nem login. A integracao com o sistema academico e opcional: importamos a lista de alunos por planilha ou API.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger"><span class="faq-question">Quanto tempo leva para implementar?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">A ativacao inclui assinatura, alinhamento com a coordenacao pedagogica e importacao dos contatos. A primeira pesquisa pode ser enviada em ate 2 dias uteis.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger"><span class="faq-question">Funciona para qualquer tipo de IES?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">Sim. Atende desde faculdades isoladas ate universidades com dezenas de milhares de alunos, presenciais e EAD. O modelo e modular: voce contrata os modulos que fazem sentido para sua instituicao.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- CTA full-bleed -->
+    <section class="edu-cta-full" style="margin-bottom:0;">
+        <div style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
+            <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Demonstracao gratuita</p>
+            <h2 style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;color:var(--text-primary);margin-bottom:1rem;">Quer ver o IFE da sua IES?</h2>
+            <p style="color:var(--text-secondary);font-size:1rem;line-height:1.6;margin-bottom:2rem;">20 minutos com um especialista em retencao academica. Sem compromisso, sem pitch de uma hora.</p>
+            <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Agendar demonstracao</a>
+        </div>
+    </section>
+
+</main>
+
+<footer class="ds-footer">
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand"><img src="/assets/img/logo.png" alt="Fiter"><p>DeepTech com IA e neurociencia. +500k alunos medidos.</p></div>
+            <div class="footer-nav">
+                <div><div class="footer-col-title">Solucoes</div><ul class="footer-links"><li><a href="/solucoes/rh/">Recursos Humanos</a></li><li><a href="/solucoes/educacao/">Educação</a></li></ul></div>
+                <div><div class="footer-col-title">Empresa</div><ul class="footer-links"><li><a href="/sobre/">Sobre</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contato/">Contato</a></li></ul></div>
+                <div><div class="footer-col-title">Conformidade</div><ul class="footer-links"><li><a href="#">LGPD</a></li><li><a href="#">Politica de privacidade</a></li><li><a href="#">Termos de uso</a></li></ul></div>
+            </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom">
+            <span class="footer-copy">&copy; 2026 Fiter Tecnologia LTDA &middot; Todos os direitos reservados.</span>
+            <span class="footer-copy" style="display:flex;align-items:center;gap:0.3rem;">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a> <span style="color:var(--text-tertiary);">&hearts;</span></span>
+        </div>
+    </div>
+</footer>
+
+<script>lucide.createIcons();</script>
+<script>
+(function(){var e=document.querySelectorAll('.showcase-row');e.forEach(function(t){t.addEventListener('click',function(){e.forEach(function(e){e!==t&&e.classList.remove('is-open')});t.classList.toggle('is-open')})})})();
+(function(){var e=document.querySelectorAll('.bar-row');var t=new IntersectionObserver(function(n){n.forEach(function(n){if(n.isIntersecting){n.target.classList.add('in-view');t.unobserve(n.target)}})},{threshold:0.2});e.forEach(function(e){t.observe(e)})})();
+</script>
 </body>
 </html>

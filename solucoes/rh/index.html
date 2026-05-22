@@ -50,189 +50,998 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @media (max-width: 900px) {
+            #hero-rh { grid-template-columns: 1fr !important; }
+            #hero-rh-visual { display: none !important; }
+        }
+        @keyframes heroPulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+    </style>
 </head>
-<body data-theme="base">
-    <nav class="fixed top-0 left-0 right-0 z-50 py-6" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-default);">
-        <div class="ds-container flex items-center justify-between px-6">
-            <a href="/" style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); text-decoration: none;">Fiter.</a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="/" style="color: var(--text-primary); text-decoration: none; font-size: 0.875rem;">Home</a>
-                <div class="relative group">
-                    <a href="#" class="flex items-center gap-1" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; cursor: pointer;">
-                        Soluções <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+<body data-theme="analytics">
+    <!-- NAV -->
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+
+        <ul class="nav-links">
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/solucoes/rh/">
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
                     </a>
-                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 0.5rem; width: max-content; min-width: 220px; display: flex; flex-direction: column; gap: 0.25rem;">
-                            <a href="/solucoes/rh/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução RH</a>
-                            <a href="/solucoes/educacao/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Solução Educação</a>
+                    <a class="drop-link" href="/solucoes/educacao/">
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/produtos/pulse/">
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/nr01/">
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/pesquisa-de-clima/">
+                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/portal-de-transparencia/">
+                        <div><div class="drop-link-name">Portal de Transparência</div><div class="drop-link-tag">Dados abertos</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">
+                        <div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
+            </div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/produtos/portal-de-transparencia/">Portal de Transparência</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
+                </div></div>
+            </div>
+
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+
+            <div class="drawer-cta">
+                <a class="btn btn-primary w-full" href="/contato/" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <main class="main-content" style="padding-top: 64px;">
+
+        <!-- Ambient glow orbs -->
+        <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+        <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
+
+        <div style="position: relative; z-index: 1;">
+
+            <!-- Hero -->
+            <section id="hero-rh" class="ds-section" style="min-height: 100vh; padding-top: 5rem; padding-bottom: 5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; position: relative; overflow: hidden;">
+                <!-- Background network canvas -->
+                <canvas id="canvas-rh" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
+
+                <!-- Urgency strip — NR1 deadline -->
+                <div style="grid-column: 1 / -1; align-self: start; position: relative; z-index: 1;">
+                    <div class="urgency-strip" id="urgency-nr1">
+                        <div class="urgency-icon">⚠</div>
+                        <div class="urgency-body">
+                            <div class="urgency-headline">Prazo NR1: empresas têm até 26 de maio de 2026 para se adequar</div>
+                            <div class="urgency-sub">Fora da conformidade = exposição a processos trabalhistas. O Agente NR1 faz a adequação em minutos.</div>
+                        </div>
+                        <a href="/produtos/nr01/" class="btn urgency-cta">Ver o Agente NR1 →</a>
+                        <button class="urgency-dismiss" aria-label="Fechar" onclick="this.closest('.urgency-strip').classList.add('is-dismissed')">✕</button>
+                    </div>
+                </div>
+
+                <!-- Left: copy -->
+                <div style="position: relative; z-index: 1;">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid rgba(37,211,102,0.25); background: rgba(37,211,102,0.06); margin-bottom: 2.5rem; width: fit-content;">
+                        <span style="width: 8px; height: 8px; border-radius: 50%; background: #25D366; box-shadow: 0 0 8px rgba(37,211,102,0.5);"></span>
+                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: rgba(37,211,102,0.85); text-transform: uppercase; letter-spacing: 0.05em;">Via WhatsApp · Sem app</span>
+                    </div>
+                    <h1 data-reveal style="font-family: var(--font-serif); font-size: clamp(2.25rem, 3.5vw, 3.25rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 2rem; color: var(--text-primary);">
+                        Retenha quem importa.<br>Antes do pedido chegar.
+                    </h1>
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 3rem; line-height: 1.7;">
+                        8 perguntas via WhatsApp — sem app, sem login. Em 2 minutos o colaborador diz como está. O dashboard mostra felicidade, engajamento e fit cultural por área em tempo real, para você agir antes de perder o talento.
+                    </p>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Ver demonstração ao vivo</a>
+                    </div>
+                </div>
+
+                <!-- Right: phone mockup with RH dashboard -->
+                <div id="hero-rh-visual" style="position: relative; height: 820px; z-index: 1; display: flex; align-items: center; justify-content: center;">
+
+                    <!-- perspective wrapper -->
+                    <div class="fade-up" style="--reveal-delay: 0.1s; perspective: 1600px; perspective-origin: 45% 50%;">
+
+                        <!-- 3D root -->
+                        <div style="position: relative; transform-style: preserve-3d; transform: rotateY(-22deg) rotateX(5deg); display: inline-block;">
+
+                            <!-- left buttons -->
+                            <div style="position: absolute; left: -5px; top: 18%; width: 4px; height: 28px; background: linear-gradient(90deg,#424248,#262628); border-radius: 3px 0 0 3px;"></div>
+                            <div style="position: absolute; left: -5px; top: 28%; width: 4px; height: 52px; background: linear-gradient(90deg,#424248,#262628); border-radius: 3px 0 0 3px;"></div>
+                            <div style="position: absolute; left: -5px; top: 38%; width: 4px; height: 52px; background: linear-gradient(90deg,#424248,#262628); border-radius: 3px 0 0 3px;"></div>
+                            <!-- power -->
+                            <div style="position: absolute; right: -5px; top: 30%; width: 4px; height: 72px; background: linear-gradient(270deg,#424248,#262628); border-radius: 0 3px 3px 0;"></div>
+
+                            <!-- ── FRONT FACE ── -->
+                            <div style="
+                                width: 320px;
+                                background: linear-gradient(148deg,
+                                    #565660 0%,
+                                    #3e3e46 16%,
+                                    #282830 38%,
+                                    #1a1a22 60%,
+                                    #0e0e16 100%
+                                );
+                                border-radius: 56px;
+                                padding: 6px;
+                                position: relative;
+                                box-shadow:
+                                    0 0 0 0.5px rgba(255,255,255,0.3),
+                                    inset 0 1px 0 rgba(255,255,255,0.16),
+                                    inset 0 -1px 0 rgba(0,0,0,0.8),
+                                    0 100px 200px rgba(0,0,0,1),
+                                    0 50px 100px rgba(0,0,0,0.75),
+                                    0 20px 40px rgba(0,0,0,0.55);
+                            ">
+                                <!-- specular highlight -->
+                                <div style="position: absolute; top: 0; left: 10%; width: 40%; height: 3px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent); border-radius: 50%; z-index: 10; pointer-events: none;"></div>
+
+                                <!-- Screen — fixed height = 308px × 2.167 = 667px -->
+                                <div style="background: #06060e; border-radius: 50px; overflow: hidden; position: relative; height: 667px; display: flex; flex-direction: column;">
+
+                                    <!-- Dynamic Island -->
+                                    <div style="flex-shrink: 0; position: relative; height: 60px; background: #05050c; display: flex; align-items: flex-end; padding-bottom: 9px;">
+                                        <div style="position: absolute; top: 11px; left: 50%; transform: translateX(-50%); width: 132px; height: 38px; background: #000; border-radius: 24px;"></div>
+                                        <div style="width: 100%; display: flex; justify-content: space-between; padding: 0 1.6rem; position: relative; z-index: 1;">
+                                            <span style="font-family: var(--font-mono); font-size: 0.62rem; font-weight: 600; color: rgba(255,255,255,0.68);">9:41</span>
+                                            <span style="font-family: var(--font-mono); font-size: 0.62rem; color: rgba(255,255,255,0.68);">▐▐ 100%</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- App header -->
+                                    <div style="flex-shrink: 0; background: #0e0e1a; padding: 0.8rem 1.1rem 0.65rem; border-bottom: 1px solid rgba(255,255,255,0.06); display: flex; align-items: center; justify-content: space-between;">
+                                        <div>
+                                            <div style="font-size: 0.72rem; font-weight: 700; color: #fff; letter-spacing: 0.01em;">Fiter RH</div>
+                                            <div style="font-size: 0.57rem; color: rgba(255,255,255,0.3); font-family: var(--font-mono); margin-top: 1px;">Dashboard · maio 2026</div>
+                                        </div>
+                                        <div style="display: flex; align-items: center; gap: 0.35rem;">
+                                            <span style="width: 7px; height: 7px; border-radius: 50%; background: #25d366; box-shadow: 0 0 7px rgba(37,211,102,0.65);"></span>
+                                            <span style="font-size: 0.55rem; color: rgba(37,211,102,0.85); font-family: var(--font-mono);">ao vivo</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dashboard body — fills remaining height -->
+                                    <div style="flex: 1; background: #090914; padding: 1rem 0.95rem; display: flex; flex-direction: column; gap: 0.7rem; overflow: hidden;">
+
+                                        <!-- Score row -->
+                                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
+                                            <div style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.24); border-radius: 12px; padding: 0.7rem 0.4rem; text-align: center;">
+                                                <div style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: #3b82f6; line-height: 1;">87</div>
+                                                <div style="font-size: 0.52rem; color: rgba(255,255,255,0.38); margin-top: 0.25rem; line-height: 1.3;">Felici&shy;dade</div>
+                                            </div>
+                                            <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.24); border-radius: 12px; padding: 0.7rem 0.4rem; text-align: center;">
+                                                <div style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: #10b981; line-height: 1;">82</div>
+                                                <div style="font-size: 0.52rem; color: rgba(255,255,255,0.38); margin-top: 0.25rem; line-height: 1.3;">Engaja&shy;mento</div>
+                                            </div>
+                                            <div style="background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.24); border-radius: 12px; padding: 0.7rem 0.4rem; text-align: center;">
+                                                <div style="font-family: var(--font-mono); font-size: 1.25rem; font-weight: 700; color: #a78bfa; line-height: 1;">91</div>
+                                                <div style="font-size: 0.52rem; color: rgba(255,255,255,0.38); margin-top: 0.25rem; line-height: 1.3;">Fit cul&shy;tural</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Sparkline -->
+                                        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 0.75rem 0.8rem;">
+                                            <div style="font-size: 0.52rem; color: rgba(255,255,255,0.3); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.55rem;">Tendência — últimos 90 dias</div>
+                                            <svg width="100%" viewBox="0 0 260 60" fill="none" preserveAspectRatio="none" style="display: block;">
+                                                <defs>
+                                                    <linearGradient id="sg2" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+                                                        <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <polygon points="0,50 44,43 88,44 132,30 176,22 220,13 260,8 260,60 0,60" fill="url(#sg2)"/>
+                                                <polyline points="0,50 44,43 88,44 132,30 176,22 220,13 260,8" stroke="#3b82f6" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                                                <circle cx="260" cy="8" r="3.5" fill="#3b82f6" filter="drop-shadow(0 0 5px #3b82f6)"/>
+                                            </svg>
+                                            <div style="display: flex; justify-content: space-between; margin-top: 0.35rem;">
+                                                <span style="font-size: 0.48rem; color: rgba(255,255,255,0.18); font-family: var(--font-mono);">Fev</span>
+                                                <span style="font-size: 0.48rem; color: rgba(255,255,255,0.18); font-family: var(--font-mono);">Mar</span>
+                                                <span style="font-size: 0.48rem; color: rgba(255,255,255,0.18); font-family: var(--font-mono);">Abr</span>
+                                                <span style="font-size: 0.48rem; color: rgba(255,255,255,0.18); font-family: var(--font-mono);">Mai</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Turnover alert -->
+                                        <div style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.28); border-radius: 12px; padding: 0.7rem 0.8rem; display: flex; align-items: flex-start; gap: 0.55rem;">
+                                            <span style="font-size: 0.8rem; flex-shrink: 0; line-height: 1.1; margin-top: 0.05rem;">⚠</span>
+                                            <div style="flex: 1; min-width: 0;">
+                                                <div style="font-size: 0.62rem; font-weight: 600; color: #f59e0b; line-height: 1.2;">Risco de turnover detectado</div>
+                                                <div style="font-size: 0.53rem; color: rgba(255,255,255,0.38); margin-top: 0.2rem; line-height: 1.5;">3 pessoas · Equipe de Operações<br>Queda de 18 pts em 4 semanas</div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Dept bars -->
+                                        <div style="display: flex; flex-direction: column; gap: 0.45rem;">
+                                            <div style="font-size: 0.5rem; color: rgba(255,255,255,0.22); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.1rem;">Por departamento</div>
+                                            <div style="display: flex; align-items: center; gap: 0.55rem;">
+                                                <span style="font-size: 0.52rem; color: rgba(255,255,255,0.28); font-family: var(--font-mono); width: 62px; flex-shrink: 0;">Comercial</span>
+                                                <div style="flex: 1; height: 5px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden;"><div style="width: 91%; height: 100%; background: #3b82f6; border-radius: 3px;"></div></div>
+                                                <span style="font-size: 0.5rem; color: rgba(255,255,255,0.32); font-family: var(--font-mono); width: 22px; text-align: right;">91</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.55rem;">
+                                                <span style="font-size: 0.52rem; color: rgba(255,255,255,0.28); font-family: var(--font-mono); width: 62px; flex-shrink: 0;">TI</span>
+                                                <div style="flex: 1; height: 5px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden;"><div style="width: 85%; height: 100%; background: #3b82f6; border-radius: 3px;"></div></div>
+                                                <span style="font-size: 0.5rem; color: rgba(255,255,255,0.32); font-family: var(--font-mono); width: 22px; text-align: right;">85</span>
+                                            </div>
+                                            <div style="display: flex; align-items: center; gap: 0.55rem;">
+                                                <span style="font-size: 0.52rem; color: rgba(255,255,255,0.28); font-family: var(--font-mono); width: 62px; flex-shrink: 0;">Operações</span>
+                                                <div style="flex: 1; height: 5px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden;"><div style="width: 61%; height: 100%; background: #f59e0b; border-radius: 3px;"></div></div>
+                                                <span style="font-size: 0.5rem; color: #f59e0b; font-family: var(--font-mono); width: 22px; text-align: right;">61</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- IA action card -->
+                                        <div style="background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.14); border-radius: 12px; padding: 0.75rem 0.85rem; margin-top: auto;">
+                                            <div style="display: flex; align-items: center; gap: 0.45rem; margin-bottom: 0.45rem;">
+                                                <span style="font-size: 0.58rem; color: #3b82f6;">✦</span>
+                                                <span style="font-size: 0.52rem; color: rgba(255,255,255,0.35); font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em;">Ação gerada por IA</span>
+                                            </div>
+                                            <div style="font-size: 0.6rem; color: rgba(255,255,255,0.68); line-height: 1.55;">Agende 1:1 com 3 colaboradores de Operações antes de 30/05. Risco de perda confirmado.</div>
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Bottom nav bar -->
+                                    <div style="flex-shrink: 0; background: rgba(8,8,16,0.96); border-top: 1px solid rgba(255,255,255,0.06); padding: 0.55rem 1.2rem 0.3rem; display: flex; justify-content: space-around; align-items: center; backdrop-filter: blur(16px);">
+                                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.2rem; opacity: 1;">
+                                            <div style="width: 18px; height: 18px; border-radius: 5px; background: #3b82f6; display: flex; align-items: center; justify-content: center;"><div style="width: 8px; height: 8px; border-radius: 2px; background: white; opacity: 0.9;"></div></div>
+                                            <span style="font-size: 0.44rem; color: #3b82f6; font-family: var(--font-mono);">Dashboard</span>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.2rem; opacity: 0.35;">
+                                            <div style="width: 18px; height: 2px; background: rgba(255,255,255,0.4); border-radius: 1px; margin-top: 8px;"></div>
+                                            <span style="font-size: 0.44rem; color: rgba(255,255,255,0.4); font-family: var(--font-mono); margin-top: 6px;">Equipes</span>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.2rem; opacity: 0.35;">
+                                            <div style="width: 18px; height: 2px; background: rgba(255,255,255,0.4); border-radius: 1px; margin-top: 8px;"></div>
+                                            <span style="font-size: 0.44rem; color: rgba(255,255,255,0.4); font-family: var(--font-mono); margin-top: 6px;">Relatórios</span>
+                                        </div>
+                                        <div style="display: flex; flex-direction: column; align-items: center; gap: 0.2rem; opacity: 0.35;">
+                                            <div style="width: 18px; height: 2px; background: rgba(255,255,255,0.4); border-radius: 1px; margin-top: 8px;"></div>
+                                            <span style="font-size: 0.44rem; color: rgba(255,255,255,0.4); font-family: var(--font-mono); margin-top: 6px;">Config.</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Home indicator -->
+                                    <div style="flex-shrink: 0; background: #07070f; padding: 0.45rem; display: flex; justify-content: center;">
+                                        <div style="width: 120px; height: 4px; background: rgba(255,255,255,0.22); border-radius: 2px;"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- ── RIGHT SIDE FACE (CSS 3D — phone thickness) ── -->
+                            <div style="
+                                position: absolute;
+                                left: 320px;
+                                top: 6%;
+                                width: 14px;
+                                height: 88%;
+                                transform-origin: left center;
+                                transform: rotateY(-90deg);
+                                background: linear-gradient(to right,
+                                    rgba(68,68,76,0.98) 0%,
+                                    rgba(36,36,42,1)    45%,
+                                    rgba(14,14,20,1)    100%
+                                );
+                                border-radius: 0 14px 14px 0;
+                            "></div>
+
+
+                        </div>
+                    </div>
+
+                    <!-- Floating insight card — overlaid on phone bottom-right -->
+                    <div class="fade-up" style="--reveal-delay: 0.5s; position: absolute; bottom: 52px; left: calc(50% + 50px); z-index: 10; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); padding: 1.25rem 1.25rem; width: 210px; box-shadow: 0 24px 60px rgba(0,0,0,0.7);">
+                        <div style="font-family: var(--font-mono); font-size: 0.52rem; color: var(--text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Resultado ao vivo</div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 0.75rem;">
+                            <div style="padding-right: 0.875rem; border-right: 1px solid var(--border-subtle);">
+                                <div style="font-family: var(--font-serif); font-size: 1.65rem; font-weight: 800; color: var(--accent-brand); line-height: 1;">87%</div>
+                                <div style="font-family: var(--font-mono); font-size: 0.58rem; color: var(--text-secondary); margin-top: 0.3rem; line-height: 1.4;">taxa de<br>adesão</div>
+                            </div>
+                            <div style="padding-left: 0.875rem;">
+                                <div style="font-family: var(--font-serif); font-size: 1.65rem; font-weight: 800; color: var(--text-primary); line-height: 1;">2min</div>
+                                <div style="font-family: var(--font-mono); font-size: 0.58rem; color: var(--text-secondary); margin-top: 0.3rem; line-height: 1.4;">tempo de<br>resposta</div>
+                            </div>
+                        </div>
+                        <div style="height: 1px; background: var(--border-subtle); margin-bottom: 0.6rem;"></div>
+                        <div style="font-family: var(--font-mono); font-size: 0.58rem; color: #10b981;">↑ +23 pts vs. formulário web</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Proof: Marquee — full bleed -->
+            <section style="margin-bottom: 8rem; margin-inline: -2rem;">
+                <p class="sp-label" style="padding-inline: 2rem;">87% de adesão porque é via WhatsApp — e eles já usam</p>
+                <div class="sp-marquee-wrap">
+                    <div class="sp-marquee-track">
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Braspress</div><div class="sp-logo-sub">Logística</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Arcor</div><div class="sp-logo-sub">Alimentos</div></div>
+                        <div class="sp-marquee-item sp-featured"><div class="sp-logo-text">Marinha do Brasil</div><div class="sp-logo-sub">Defesa Nacional</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Sebrae</div><div class="sp-logo-sub">Empreendedorismo</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">ABES</div><div class="sp-logo-sub">Tecnologia</div></div>
+                        <!-- duplicate set for seamless loop -->
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Braspress</div><div class="sp-logo-sub">Logística</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Arcor</div><div class="sp-logo-sub">Alimentos</div></div>
+                        <div class="sp-marquee-item sp-featured"><div class="sp-logo-text">Marinha do Brasil</div><div class="sp-logo-sub">Defesa Nacional</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">Sebrae</div><div class="sp-logo-sub">Empreendedorismo</div></div>
+                        <div class="sp-marquee-item"><div class="sp-logo-text">ABES</div><div class="sp-logo-sub">Tecnologia</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Por que a Fiter existe — horizontal scroll narrative -->
+            <div id="nrr-wrapper" style="height: 380vh; position: relative; margin-bottom: 8rem;">
+                <style>
+                    .nrr-sticky {
+                        position: sticky;
+                        top: 64px;
+                        height: calc(100vh - 64px);
+                        overflow: hidden;
+                        display: flex;
+                        background: var(--bg-page);
+                    }
+                    .nrr-left {
+                        width: 300px;
+                        flex-shrink: 0;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding: 3rem 2.5rem 3rem 4rem;
+                        border-right: 1px solid var(--border-subtle);
+                        position: relative;
+                        z-index: 2;
+                    }
+                    .nrr-right {
+                        flex: 1;
+                        overflow: hidden;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .nrr-track {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 5rem;
+                        padding: 0 5rem;
+                        will-change: transform;
+                    }
+                    .nrr-ch {
+                        flex-shrink: 0;
+                        width: calc(100vw - 300px - 10rem);
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 3rem;
+                        align-items: center;
+                    }
+                    .nrr-ndot {
+                        width: 6px; height: 6px; border-radius: 50%;
+                        background: var(--border-default);
+                        transition: width 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
+                        cursor: default;
+                    }
+                    .nrr-ndot.active {
+                        width: 22px; border-radius: 3px; background: var(--accent-brand);
+                    }
+                    .tl-row {
+                        display: flex; align-items: center; gap: 0.75rem;
+                        font-family: var(--font-mono); font-size: 0.65rem;
+                    }
+                    .tl-label { width: 5rem; flex-shrink: 0; color: var(--text-tertiary); }
+                    .tl-line  { flex: 1; height: 1px; background: var(--border-subtle); position: relative; }
+                    .tl-dot   { position: absolute; right: 0; top: -3px; width: 7px; height: 7px; border-radius: 50%; }
+                    @media (max-width: 768px) {
+                        #nrr-wrapper { height: auto; }
+                        .nrr-sticky { position: static; height: auto; flex-direction: column; }
+                        .nrr-left { width: 100%; border-right: none; border-bottom: 1px solid var(--border-subtle); padding: 2.5rem 2rem; }
+                        .nrr-right { overflow: visible; height: auto; }
+                        .nrr-track { flex-direction: column; padding: 2.5rem 2rem; gap: 3rem; transform: none !important; }
+                        .nrr-ch { width: 100%; grid-template-columns: 1fr; gap: 1.5rem; }
+                    }
+                </style>
+
+                <div class="nrr-sticky">
+
+                    <!-- LEFT PANEL -->
+                    <div class="nrr-left">
+                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1.25rem;">Por que a Fiter existe</p>
+                        <h2 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.6vw,2rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">O problema não é falta de dados.<br>É chegar tarde.</h2>
+                        <p style="font-size:0.8rem;color:var(--text-secondary);line-height:1.65;margin-bottom:2.5rem;">Três realidades que todo RH conhece — e que a Fiter resolveu.</p>
+                        <div style="display:flex;gap:0.5rem;align-items:center;" id="nrr-dots">
+                            <div class="nrr-ndot active"></div>
+                            <div class="nrr-ndot"></div>
+                            <div class="nrr-ndot"></div>
+                        </div>
+                        <div style="position:absolute;bottom:2.5rem;left:4rem;font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">
+                            <span id="nrr-counter">01</span><span style="opacity:0.4;"> / 03</span>
+                        </div>
+                        <!-- Bottom progress bar -->
+                        <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--border-subtle);">
+                            <div id="nrr-bar" style="height:100%;width:0%;background:var(--accent-brand);"></div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: horizontal track -->
+                    <div class="nrr-right">
+                        <div id="nrr-track" class="nrr-track">
+
+                            <!-- Chapter 01 — Retenção -->
+                            <div class="nrr-ch">
+                                <div>
+                                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">01 — Retenção</p>
+                                    <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.8vw,2.1rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--text-primary);margin-bottom:0.6rem;">O talento avisa<br>antes de sair.</h3>
+                                    <p style="font-family:var(--font-serif);font-size:0.95rem;font-style:italic;color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.4;">Mas ninguém estava ouvindo.</p>
+                                    <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.75;">Queda de felicidade, engajamento, fit cultural — sinais que aparecem semanas antes da decisão. A Fiter os captura via WhatsApp e a IA alerta para você agir antes de perder o talento.</p>
+                                </div>
+                                <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.75rem;">
+                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Com Fiter</p>
+                                    <div style="display:flex;flex-direction:column;gap:0.9rem;margin-bottom:1.25rem;">
+                                        <div class="tl-row"><span class="tl-label">Semana 1</span><div class="tl-line"><div class="tl-dot" style="background:var(--accent-brand);"></div></div><span style="color:var(--accent-brand);">IA detecta queda</span></div>
+                                        <div class="tl-row"><span class="tl-label">Semana 2</span><div class="tl-line"><div class="tl-dot" style="background:var(--accent-brand);"></div></div><span style="color:var(--text-primary);">RH recebe alerta</span></div>
+                                        <div class="tl-row"><span class="tl-label">Semana 3</span><div class="tl-line"><div class="tl-dot" style="background:#10b981;"></div></div><span style="color:#10b981;">Você age. Talento fica.</span></div>
+                                    </div>
+                                    <div style="border-top:1px solid var(--border-subtle);padding-top:1.1rem;opacity:0.45;">
+                                        <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">Sem Fiter</p>
+                                        <div class="tl-row"><span class="tl-label">Mês 3</span><div class="tl-line" style="background:rgba(239,68,68,0.3);"><div class="tl-dot" style="background:#ef4444;"></div></div><span style="color:#ef4444;">Aviso de demissão</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chapter 02 — Conformidade -->
+                            <div class="nrr-ch">
+                                <div>
+                                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">02 — Conformidade</p>
+                                    <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.8vw,2.1rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--text-primary);margin-bottom:0.6rem;">NR1 sem meses<br>de espera.</h3>
+                                    <p style="font-family:var(--font-serif);font-size:0.95rem;font-style:italic;color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.4;">Laudo que demora não protege.</p>
+                                    <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.75;">Laudos de risco psicossocial por cargo, integrados ao Ministério do Trabalho, CID e OMS. O que levaria meses de consultoria o Agente NR1 entrega em minutos — com validade jurídica.</p>
+                                </div>
+                                <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.75rem;">
+                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.5rem;">Tempo para o laudo</p>
+                                    <div style="display:flex;align-items:flex-end;gap:1.5rem;">
+                                        <div style="flex:1;text-align:center;">
+                                            <div style="background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:10px;padding:1.5rem 1rem;margin-bottom:0.6rem;">
+                                                <span style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:#ef4444;letter-spacing:-0.03em;line-height:1;">6m</span>
+                                            </div>
+                                            <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;">Consultoria</span>
+                                        </div>
+                                        <div style="color:var(--text-tertiary);font-family:var(--font-mono);font-size:0.7rem;padding-bottom:2.5rem;">vs</div>
+                                        <div style="flex:1;text-align:center;">
+                                            <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-radius:10px;padding:1.5rem 1rem;margin-bottom:0.6rem;">
+                                                <span style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--accent-brand);letter-spacing:-0.03em;line-height:1;">4min</span>
+                                            </div>
+                                            <span style="font-family:var(--font-mono);font-size:0.58rem;color:var(--accent-brand);text-transform:uppercase;">Agente NR1</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Chapter 03 — Diagnóstico -->
+                            <div class="nrr-ch">
+                                <div>
+                                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:1rem;">03 — Diagnóstico</p>
+                                    <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,1.8vw,2.1rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;color:var(--text-primary);margin-bottom:0.6rem;">Pesquisa anual é<br>foto de acidente.</h3>
+                                    <p style="font-family:var(--font-serif);font-size:0.95rem;font-style:italic;color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.4;">O problema veio no mês 3. O relatório, no mês 12.</p>
+                                    <p style="color:var(--text-secondary);font-size:0.85rem;line-height:1.75;">O GPTW entrega resultado quando o dano já aconteceu. A Fiter mede mensalmente via WhatsApp — porque colaborador responde no celular, não quando abre formulário corporativo.</p>
+                                </div>
+                                <div style="background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-md);padding:1.75rem;">
+                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1.25rem;">Frequência de medição</p>
+                                    <div style="display:flex;flex-direction:column;gap:1.1rem;margin-bottom:1.25rem;">
+                                        <div>
+                                            <div style="display:flex;justify-content:space-between;margin-bottom:0.45rem;">
+                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-tertiary);">GPTW / Pesquisa anual</span>
+                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:#ef4444;">1×/ano</span>
+                                            </div>
+                                            <div style="height:6px;background:var(--border-subtle);border-radius:3px;overflow:hidden;">
+                                                <div style="width:8.33%;height:100%;background:rgba(239,68,68,0.5);border-radius:3px;"></div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div style="display:flex;justify-content:space-between;margin-bottom:0.45rem;">
+                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-secondary);">Fiter via WhatsApp</span>
+                                                <span style="font-family:var(--font-mono);font-size:0.62rem;color:var(--accent-brand);">12×/ano</span>
+                                            </div>
+                                            <div style="height:6px;background:var(--border-subtle);border-radius:3px;overflow:hidden;">
+                                                <div style="width:100%;height:100%;background:var(--accent-brand);border-radius:3px;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p style="font-family:var(--font-mono);font-size:0.58rem;color:var(--text-tertiary);">87% de adesão · resposta em 2 minutos</p>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-                <a href="/clientes/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Clientes</a>
-                <a href="/sobre/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Sobre</a>
-                <a href="/blog/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Blog</a>
-                <a href="/contato/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Contato</a>
+
+                <script>
+                (function () {
+                    const wrapper = document.getElementById('nrr-wrapper');
+                    const track   = document.getElementById('nrr-track');
+                    const dots    = document.querySelectorAll('#nrr-dots .nrr-ndot');
+                    const counter = document.getElementById('nrr-counter');
+                    const bar     = document.getElementById('nrr-bar');
+                    if (!wrapper || !track) return;
+
+                    const N = 3;
+                    let step = 0;
+
+                    function calcStep() {
+                        const chs = track.querySelectorAll('.nrr-ch');
+                        if (chs.length < 2) return chs[0]?.offsetWidth || 0;
+                        return chs[1].offsetLeft - chs[0].offsetLeft;
+                    }
+
+                    function update() {
+                        const rect     = wrapper.getBoundingClientRect();
+                        const scrolled = Math.max(0, -rect.top);
+                        const total    = wrapper.offsetHeight - window.innerHeight;
+                        if (total <= 0) return;
+                        const p = Math.min(1, scrolled / total);
+
+                        track.style.transform = `translateX(${-(p * step * (N - 1))}px)`;
+
+                        const idx = Math.min(N - 1, Math.round(p * (N - 1)));
+                        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+                        counter.textContent = String(idx + 1).padStart(2, '0');
+                        bar.style.width = (p * 100) + '%';
+                    }
+
+                    function init() { step = calcStep(); update(); }
+
+                    window.addEventListener('scroll', update, { passive: true });
+                    window.addEventListener('resize', () => { step = calcStep(); update(); });
+                    requestAnimationFrame(init);
+                })();
+                </script>
             </div>
-            <div class="hidden md:flex items-center gap-4">
-                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Agendar demonstração</a>
-            </div>
-        </div>
-    </nav>
-    <main class="main-content" style="padding-top: 120px;">
-        <div class="ds-container px-6">
-            
-            <!-- Hero -->
-            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 70vh; margin-bottom: 8rem;">
-                <div class="flex-1 z-10">
-                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-surface); margin-bottom: 2rem;">
-                        <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-brand); box-shadow: 0 0 10px var(--accent-glow);"></span>
-                        <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Solução RH Completa</span>
+
+            <!-- Comparativo: Fiter vs alternativas -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <h2 class="ds-section-title">Comparativo</h2>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Fiter vs. o jeito<br>que todo mundo faz.</p>
+                <div style="overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.07);">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Pesquisa tradicional</th>
+                                <th>GPTW / Consultoria</th>
+                                <th class="cmp-featured">Fiter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Canal de resposta</td>
+                                <td><span class="cmp-cross">Formulário web ou papel</span></td>
+                                <td><span class="cmp-cross">Formulário web</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">WhatsApp — sem app</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tempo de resposta</td>
+                                <td><span class="cmp-cross">15–30 minutos</span></td>
+                                <td><span class="cmp-cross">20–40 minutos</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">2 minutos</span></td>
+                            </tr>
+                            <tr>
+                                <td>Taxa de adesão típica</td>
+                                <td><span class="cmp-cross">20–35%</span></td>
+                                <td><span class="cmp-cross">30–50%</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">80–94%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Resultado disponível</td>
+                                <td><span class="cmp-cross">Semanas</span></td>
+                                <td><span class="cmp-cross">Meses</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">Tempo real</span></td>
+                            </tr>
+                            <tr>
+                                <td>Predição de turnover</td>
+                                <td><span class="cmp-cross">Não</span></td>
+                                <td><span class="cmp-cross">Não</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">Sim — até 90 dias</span></td>
+                            </tr>
+                            <tr>
+                                <td>Implementação</td>
+                                <td><span class="cmp-cross">Semanas ou meses</span></td>
+                                <td><span class="cmp-cross">1–3 meses</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">Dias — sem TI</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Metric Cards + Bar Chart -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <h2 class="ds-section-title">Resultados comprovados</h2>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Números que os clientes<br>obtêm na prática.</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                    <div class="metric-card" data-metric="87" data-suffix="%">
+                        <span class="metric-value">0%</span>
+                        <div class="metric-trend">↑ +23 pts vs. formulário</div>
+                        <span class="metric-label">Taxa de adesão média</span>
+                        <span class="metric-sub">colaboradores que respondem</span>
                     </div>
-                    <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
-                        A Suíte Completa de Engajamento, Conformidade e Clima para RH
-                    </h1>
-                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 550px; margin-bottom: 2.5rem; line-height: 1.6;">
-                        A Fiter oferece uma suíte modular completa para engajamento, predição de turnover, compliance NR1 e muito mais. Tudo em tempo real.
+                    <div class="metric-card" data-metric="92" data-suffix="%">
+                        <span class="metric-value">0%</span>
+                        <div class="metric-trend">↑ 12× mais rápido</div>
+                        <span class="metric-label">Menos tempo no NR1</span>
+                        <span class="metric-sub">análise de risco por cargo</span>
+                    </div>
+                    <div class="metric-card" data-metric="2" data-suffix="min">
+                        <span class="metric-value">0min</span>
+                        <div class="metric-trend">→ via WhatsApp</div>
+                        <span class="metric-label">Tempo de resposta</span>
+                        <span class="metric-sub">sem app, sem login</span>
+                    </div>
+                    <div class="metric-card" data-metric="89" data-suffix="">
+                        <span class="metric-value">0</span>
+                        <div class="metric-trend">↑ 2× benchmark setor</div>
+                        <span class="metric-label">eNPS Score médio</span>
+                        <span class="metric-sub">benchmark setor: 42</span>
+                    </div>
+                </div>
+
+                <!-- Horizontal bar chart: canal comparison -->
+                <div class="chart-container">
+                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem;">
+                        <div>
+                            <h3 style="font-family:var(--font-serif); font-size:1.4rem; font-weight:700; letter-spacing:-0.01em; color:var(--text-primary); margin-bottom:0.3rem;">Taxa de resposta por canal</h3>
+                            <p style="font-size:0.75rem; color:var(--text-tertiary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Comparativo — mesma base de colaboradores</p>
+                        </div>
+                        <div style="display:flex; align-items:center; gap:0.6rem; font-family:var(--font-mono); font-size:0.68rem; color:var(--text-tertiary);">
+                            <span style="display:inline-block; width:1px; height:14px; background:rgba(255,255,255,0.2);"></span>
+                            Meta 80%
+                        </div>
+                    </div>
+                    <div class="chart-bars">
+                        <div class="bar-row" style="--bar-delay:0s">
+                            <span class="bar-label">WhatsApp (Fiter)</span>
+                            <div class="bar-track"><div class="bar-fill" style="--bar-target:87%"><span class="bar-tooltip">87%</span></div></div>
+                            <span class="bar-value-label">87%</span>
+                        </div>
+                        <div class="bar-row" style="--bar-delay:0.07s">
+                            <span class="bar-label">E-mail</span>
+                            <div class="bar-track"><div class="bar-fill" style="--bar-target:34%"><span class="bar-tooltip">34%</span></div></div>
+                            <span class="bar-value-label">34%</span>
+                        </div>
+                        <div class="bar-row" style="--bar-delay:0.14s">
+                            <span class="bar-label">Formulário web</span>
+                            <div class="bar-track"><div class="bar-fill" style="--bar-target:31%"><span class="bar-tooltip">31%</span></div></div>
+                            <span class="bar-value-label">31%</span>
+                        </div>
+                        <div class="bar-row" style="--bar-delay:0.21s">
+                            <span class="bar-label">App mobile</span>
+                            <div class="bar-track"><div class="bar-fill" style="--bar-target:22%"><span class="bar-tooltip">22%</span></div></div>
+                            <span class="bar-value-label">22%</span>
+                        </div>
+                        <div class="bar-row" style="--bar-delay:0.28s">
+                            <span class="bar-label">Papel físico</span>
+                            <div class="bar-track"><div class="bar-fill" style="--bar-target:17%"><span class="bar-tooltip">17%</span></div></div>
+                            <span class="bar-value-label">17%</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Product Showcase Accordion -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <h2 class="ds-section-title">Módulos da suíte</h2>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Cada módulo resolve<br>um problema específico.</p>
+
+                <div class="showcase-list" id="showcase-rh">
+
+                    <!-- Row 1 — Pulse -->
+                    <div class="showcase-row is-open" data-index="0">
+                        <div class="showcase-num">01 /</div>
+                        <div class="showcase-content">
+                            <div class="showcase-collapsed-tag">Pulse — Engajamento contínuo</div>
+                            <p class="showcase-tag">Pulse — Engajamento contínuo</p>
+                            <h3 class="showcase-heading">A pesquisa que<br>não cansa ninguém</h3>
+                            <p class="showcase-desc">8 cliques, 2 minutos, via WhatsApp, sem app. Mede felicidade, fit cultural, saúde mental e produtividade. A IA prevê turnover e absenteísmo por departamento — com 90 dias de antecedência.</p>
+                            <a class="showcase-cta" href="/produtos/pulse/">Explorar o Pulse <span>→</span></a>
+                        </div>
+                        <div class="showcase-visual">
+                            <div class="showcase-visual-inner" style="background: rgba(59,130,246,0.08); border: 1px solid rgba(59,130,246,0.15);">
+                                <div class="showcase-visual-grid"></div>
+                                <div class="showcase-visual-bg">
+                                    <svg width="240" height="200" viewBox="0 0 240 200" fill="none" style="opacity:0.75;">
+                                        <rect x="20" y="20" width="200" height="160" rx="8" fill="rgba(59,130,246,0.06)" stroke="rgba(59,130,246,0.2)" stroke-width="1"/>
+                                        <rect x="30" y="35" width="100" height="16" rx="8" fill="rgba(59,130,246,0.3)"/>
+                                        <rect x="30" y="60" width="140" height="12" rx="6" fill="rgba(255,255,255,0.08)"/>
+                                        <rect x="30" y="78" width="120" height="12" rx="6" fill="rgba(255,255,255,0.08)"/>
+                                        <rect x="30" y="105" width="80" height="22" rx="11" fill="rgba(59,130,246,0.25)" stroke="#3b82f6" stroke-width="1"/>
+                                        <rect x="120" y="105" width="80" height="22" rx="11" fill="rgba(59,130,246,0.1)" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+                                        <rect x="30" y="145" width="180" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
+                                        <rect x="30" y="145" width="126" height="4" rx="2" fill="#3b82f6"/>
+                                        <text x="172" y="143" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.4)">7/8</text>
+                                        <circle cx="202" cy="60" r="6" fill="rgba(59,130,246,0.3)" stroke="#3b82f6" stroke-width="1"/>
+                                        <path d="M199 60 L201 62 L205 58" stroke="#3b82f6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 — Agente NR1 -->
+                    <div class="showcase-row" data-index="1">
+                        <div class="showcase-num">02 /</div>
+                        <div class="showcase-content">
+                            <div class="showcase-collapsed-tag">Agente NR1 — Conformidade ocupacional</div>
+                            <p class="showcase-tag">Agente NR1 — Conformidade ocupacional</p>
+                            <h3 class="showcase-heading">Primeiro robô do Brasil<br>focado na NR1</h3>
+                            <p class="showcase-desc">92% menos tempo em análises de risco ocupacional. 100% de segurança jurídica. Integra Ministério do Trabalho, CID e OMS automaticamente. Prazo NR1: maio 2026 — não espere.</p>
+                            <a class="showcase-cta" href="/produtos/nr01/">Explorar o Agente NR1 <span>→</span></a>
+                        </div>
+                        <div class="showcase-visual">
+                            <div class="showcase-visual-inner" style="background: rgba(245,158,11,0.06); border: 1px solid rgba(245,158,11,0.15);">
+                                <div class="showcase-visual-grid"></div>
+                                <div class="showcase-visual-bg">
+                                    <svg width="240" height="200" viewBox="0 0 240 200" fill="none" style="opacity:0.75;">
+                                        <rect x="20" y="20" width="200" height="50" rx="6" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+                                        <text x="30" y="40" font-family="monospace" font-size="8" fill="rgba(245,158,11,0.8)">LAUDO NR1 · CARGO: OPERADOR</text>
+                                        <rect x="30" y="48" width="68" height="13" rx="3" fill="rgba(16,185,129,0.3)" stroke="rgba(16,185,129,0.5)" stroke-width="1"/>
+                                        <text x="34" y="59" font-family="monospace" font-size="7" fill="#10b981">✓ CONFORME</text>
+                                        <text x="20" y="88" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.4)">Psicossocial</text>
+                                        <rect x="20" y="92" width="200" height="7" rx="3" fill="rgba(255,255,255,0.05)"/>
+                                        <rect x="20" y="92" width="168" height="7" rx="3" fill="rgba(16,185,129,0.6)"/>
+                                        <text x="20" y="114" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.4)">Ergonômico</text>
+                                        <rect x="20" y="118" width="200" height="7" rx="3" fill="rgba(255,255,255,0.05)"/>
+                                        <rect x="20" y="118" width="50" height="7" rx="3" fill="rgba(245,158,11,0.6)"/>
+                                        <text x="20" y="140" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.4)">Físico-mecânico</text>
+                                        <rect x="20" y="144" width="200" height="7" rx="3" fill="rgba(255,255,255,0.05)"/>
+                                        <rect x="20" y="144" width="190" height="7" rx="3" fill="rgba(16,185,129,0.6)"/>
+                                        <rect x="20" y="162" width="200" height="28" rx="6" fill="rgba(245,158,11,0.08)" stroke="rgba(245,158,11,0.2)" stroke-width="1"/>
+                                        <text x="30" y="176" font-family="monospace" font-size="8" fill="rgba(245,158,11,0.7)">PRAZO: 26/05/2026 · 5 dias</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 3 — Pesquisa de Clima -->
+                    <div class="showcase-row" data-index="2">
+                        <div class="showcase-num">03 /</div>
+                        <div class="showcase-content">
+                            <div class="showcase-collapsed-tag">Pesquisa de Clima — Diagnóstico mensal</div>
+                            <p class="showcase-tag">Pesquisa de Clima — Diagnóstico mensal</p>
+                            <h3 class="showcase-heading">Não anual. Mensal.<br>Com plano de ação da IA.</h3>
+                            <p class="showcase-desc">Anônima, via WhatsApp, com benchmarking de mercado. A IA gera planos de ação automáticos calibrados ao diagnóstico de cada equipe. Saia do GPTW que chega tarde demais.</p>
+                            <a class="showcase-cta" href="/produtos/pesquisa-de-clima/">Explorar Pesquisa de Clima <span>→</span></a>
+                        </div>
+                        <div class="showcase-visual">
+                            <div class="showcase-visual-inner" style="background: rgba(59,130,246,0.06); border: 1px solid rgba(59,130,246,0.12);">
+                                <div class="showcase-visual-grid"></div>
+                                <div class="showcase-visual-bg">
+                                    <svg width="240" height="200" viewBox="0 0 240 200" fill="none" style="opacity:0.7;">
+                                        <text x="15" y="22" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">Clima — últimos 6 meses</text>
+                                        <polyline points="20,155 60,125 100,135 140,95 180,72 220,50" stroke="#3b82f6" stroke-width="2" fill="none" opacity="0.9"/>
+                                        <polyline points="20,175 60,170 100,165 140,160 180,152 220,144" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+                                        <circle cx="220" cy="50" r="5" fill="#3b82f6"/>
+                                        <circle cx="20" cy="155" r="3" fill="rgba(59,130,246,0.5)"/>
+                                        <text x="17" y="190" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">Jan</text>
+                                        <text x="57" y="190" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">Fev</text>
+                                        <text x="97" y="190" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">Mar</text>
+                                        <text x="137" y="190" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">Abr</text>
+                                        <text x="177" y="190" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">Mai</text>
+                                        <text x="215" y="190" font-family="monospace" font-size="7" fill="rgba(255,255,255,0.3)">Jun</text>
+                                        <rect x="168" y="24" width="56" height="20" rx="4" fill="rgba(59,130,246,0.2)" stroke="rgba(59,130,246,0.4)" stroke-width="1"/>
+                                        <text x="176" y="38" font-family="monospace" font-size="8" fill="#3b82f6">NPS 89↑</text>
+                                        <line x1="15" y1="160" x2="225" y2="160" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 4 — Ouvidoria -->
+                    <div class="showcase-row" data-index="3">
+                        <div class="showcase-num">04 /</div>
+                        <div class="showcase-content">
+                            <div class="showcase-collapsed-tag">Ouvidoria — Canal de denúncias</div>
+                            <p class="showcase-tag">Ouvidoria — Canal de denúncias</p>
+                            <h3 class="showcase-heading">Canal anônimo obrigatório.<br>Governança completa.</h3>
+                            <p class="showcase-desc">Obrigação legal para empresas com mais de 300 colaboradores. Canal anônimo via WhatsApp. A IA classifica ocorrências automaticamente. Compliance e rastreabilidade garantidos.</p>
+                            <a class="showcase-cta" href="/contato/">Conhecer a Ouvidoria <span>→</span></a>
+                        </div>
+                        <div class="showcase-visual">
+                            <div class="showcase-visual-inner" style="background: rgba(139,92,246,0.06); border: 1px solid rgba(139,92,246,0.12);">
+                                <div class="showcase-visual-grid"></div>
+                                <div class="showcase-visual-bg">
+                                    <svg width="240" height="200" viewBox="0 0 240 200" fill="none" style="opacity:0.7;">
+                                        <circle cx="40" cy="65" r="22" fill="rgba(139,92,246,0.15)" stroke="#8b5cf6" stroke-width="1"/>
+                                        <text x="28" y="61" font-family="monospace" font-size="7" fill="#8b5cf6">ANON</text>
+                                        <text x="26" y="72" font-family="monospace" font-size="7" fill="#8b5cf6">CANAL</text>
+                                        <line x1="62" y1="65" x2="95" y2="65" stroke="rgba(139,92,246,0.4)" stroke-width="1.5"/>
+                                        <polygon points="95,61 102,65 95,69" fill="rgba(139,92,246,0.6)"/>
+                                        <circle cx="120" cy="65" r="22" fill="rgba(139,92,246,0.12)" stroke="rgba(139,92,246,0.5)" stroke-width="1"/>
+                                        <text x="113" y="61" font-family="monospace" font-size="7" fill="rgba(139,92,246,0.8)">IA</text>
+                                        <text x="105" y="72" font-family="monospace" font-size="7" fill="rgba(139,92,246,0.8)">CLASSIF.</text>
+                                        <line x1="142" y1="65" x2="175" y2="65" stroke="rgba(139,92,246,0.4)" stroke-width="1.5"/>
+                                        <polygon points="175,61 182,65 175,69" fill="rgba(16,185,129,0.6)"/>
+                                        <circle cx="200" cy="65" r="22" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.5)" stroke-width="1"/>
+                                        <text x="190" y="61" font-family="monospace" font-size="7" fill="#10b981">COMPL.</text>
+                                        <text x="195" y="72" font-family="monospace" font-size="7" fill="#10b981">OK</text>
+                                        <rect x="20" y="102" width="200" height="1" fill="rgba(255,255,255,0.06)"/>
+                                        <text x="20" y="122" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.5)">Ocorrências esta semana</text>
+                                        <rect x="20" y="128" width="200" height="8" rx="4" fill="rgba(255,255,255,0.04)"/>
+                                        <rect x="20" y="128" width="140" height="8" rx="4" fill="rgba(139,92,246,0.4)"/>
+                                        <text x="20" y="152" font-family="monospace" font-size="8" fill="rgba(255,255,255,0.5)">Resolução em 48h</text>
+                                        <rect x="20" y="158" width="200" height="8" rx="4" fill="rgba(255,255,255,0.04)"/>
+                                        <rect x="20" y="158" width="186" height="8" rx="4" fill="rgba(16,185,129,0.4)"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Depoimentos -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <h2 class="ds-section-title">Clientes</h2>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Resultados reais.<br>Palavras deles.</p>
+
+                <!-- Featured -->
+                <div class="testi-featured fade-up" style="--reveal-delay:0.1s; margin-bottom: 2.5rem;">
+                    <p class="testi-featured-quote">
+                        "Implementamos em uma semana. Na segunda semana já tínhamos dados que levávamos meses para coletar. <em>A taxa de adesão superou 80% já na primeira pesquisa</em> — nunca conseguimos isso com formulário web."
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Ver demonstração</a>
-                        <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+                    <div class="testi-featured-author">
+                        <div class="testi-featured-avatar">RO</div>
+                        <div>
+                            <div class="testi-featured-name">Renata Oliveira</div>
+                            <div class="testi-featured-role">Diretora de RH · Braspress</div>
+                        </div>
+                        <div class="testi-featured-divider"></div>
+                        <div class="testi-featured-company">BRASPRESS<br>Logística</div>
                     </div>
                 </div>
+
             </section>
 
-            <!-- Problemas que resolve -->
+            <!-- FAQ -->
             <section class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-16">
-                    <h2 class="ds-section-title">O que tiramos da sua frente</h2>
-                </div>
-                <div class="ds-card-grid">
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
-                        <i data-lucide="users-minus" style="width: 32px; height: 32px; color: var(--accent-brand); margin-bottom: 1.5rem;"></i>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Turnover Surpresa</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6;">Saiba quem está prestes a sair antes da carta de demissão. A IA identifica os sinais de desengajamento cedo.</p>
+                <h2 class="ds-section-title">Perguntas frequentes</h2>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Tudo o que você precisa<br>saber antes de contratar.</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Precisa instalar algum app ou sistema de TI?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Não. Os colaboradores respondem diretamente pelo WhatsApp, sem baixar nada. O painel do RH é web — basta um link. A implantação não envolve TI.</p>
+                        </div></div>
                     </div>
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
-                        <i data-lucide="file-warning" style="width: 32px; height: 32px; color: var(--accent-brand); margin-bottom: 1.5rem;"></i>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Risco NR1</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6;">Laudos de risco ocupacional por cargo não precisam demorar meses. O Agente NR1 faz o cruzamento de dados em minutos.</p>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Os dados ficam anônimos? Conformidade com LGPD?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Sim. O anonimato é garantido por design — gestores veem dados agregados, nunca a resposta individual de um colaborador. A Fiter é 100% em conformidade com a LGPD.</p>
+                        </div></div>
                     </div>
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
-                        <i data-lucide="calendar-x" style="width: 32px; height: 32px; color: var(--accent-brand); margin-bottom: 1.5rem;"></i>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">Dados Atrasados</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6;">Pesquisas de clima anuais são como ver a foto de um acidente já ocorrido. Tenha o diagnóstico mensal para agir hoje.</p>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Quanto tempo leva a implementação?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Do contrato ao primeiro diagnóstico em dias. O processo é: assinatura → onboarding CS (importação da base) → treinamento de 1h30 → primeira pesquisa no ar. Sem projeto de meses.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Posso contratar só um módulo?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Sim. A suíte é 100% modular. Você pode começar apenas com a Ouvidoria, só com o Agente NR1 ou com a suíte completa. Não há obrigação de contratar tudo de uma vez.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Qual a diferença do Pulse vs GPTW/pesquisa anual?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">GPTW é anual, demorado e o resultado chega quando o problema já ocorreu. O Pulse é mensal, dura 2 minutos, e o diagnóstico sai em tempo real com plano de ação gerado por IA. Você age no mês, não no ano seguinte.</p>
+                        </div></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Módulos - Resumo -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-12">
-                    <h2 class="ds-section-title">Módulos da Suíte RH</h2>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem;">Contrate o que precisar, combine como quiser.</p>
-                </div>
-                <div class="ds-card-grid">
-                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Pulse</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Engajamento contínuo</p>
-                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Mede felicidade, fit cultural e produtividade via WhatsApp.</p>
-                    </div>
-                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Agente NR1</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Conformidade ocupacional</p>
-                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Primeiro robô do Brasil focado na NR1. 92% menos tempo.</p>
-                    </div>
-                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Pesquisa de Clima</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Diagnóstico Mensal</p>
-                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Anônima, mensal, com planos de ação gerados por IA.</p>
-                    </div>
-                    <div class="card" style="border: 1px solid var(--border-default); background: var(--bg-surface);">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary);">Ouvidoria</h3>
-                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Canal de denúncias</p>
-                        <p style="color: var(--text-tertiary); font-size: 0.875rem;">Canal anônimo obrigatório por lei, com governança completa.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Módulos em Detalhe -->
-            <section class="ds-section" style="margin-bottom: 8rem; display: flex; flex-direction: column; gap: 4rem;">
-                <!-- Pulse Detalhe -->
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
-                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Pulse</h3>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">A pesquisa que não cansa o colaborador.</p>
-                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> 8 cliques, 2 minutos, via WhatsApp, sem app.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Mede: felicidade, fit cultural, saúde mental, produtividade.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Gera: PDI para colaborador + painel em tempo real para RH.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> AI prevê: turnover, absenteísmo, riscos por departamento.</li>
-                    </ul>
-                </div>
-
-                <!-- NR1 Detalhe -->
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
-                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Agente NR1</h3>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">Primeiro robô do Brasil focado na NR1.</p>
-                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> 92% menos tempo em análises de risco.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> 100% segurança jurídica.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Integra Ministério do Trabalho, CID e OMS.</li>
-                    </ul>
-                </div>
-
-                <!-- Pesquisa de Clima Detalhe -->
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
-                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Pesquisa de Clima</h3>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">Contínua, não anual.</p>
-                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Anônima, mensal, via WhatsApp.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Benchmarking de mercado.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> IA cria planos de ação automáticos.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Diferencial vs GPTW: você age mês a mês.</li>
-                    </ul>
-                </div>
-
-                <!-- Ouvidoria Detalhe -->
-                <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); padding: 3rem;">
-                    <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem;">Ouvidoria</h3>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem;">Proteção legal para a sua empresa.</p>
-                    <ul style="list-style: none; display: grid; gap: 1rem; color: var(--text-secondary);">
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Canal anônimo de denúncias — obrigação legal.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> IA classifica ocorrências automaticamente.</li>
-                        <li style="display: flex; gap: 0.75rem; align-items: flex-start;"><i data-lucide="check" style="color: var(--accent-brand); flex-shrink: 0; margin-top: 0.2rem;"></i> Governança e compliance completos.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Modularidade -->
-            <section class="ds-section" style="margin-bottom: 8rem; text-align: center; padding: 4rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
-                <h2 style="font-family: var(--font-serif); font-size: 2.5rem; color: var(--text-primary); margin-bottom: 1rem; font-style: italic;">Contrate só o que você precisa.<br>Escale quando quiser.</h2>
-                <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px; margin: 0 auto 2rem;">Nossa suíte é 100% modular. Você pode começar apenas com a Ouvidoria ou assinar a suíte completa com desconto.</p>
-                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
-            </section>
 
             <!-- Implementação -->
             <section class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-12">
-                    <h2 class="ds-section-title">Como funciona a implementação</h2>
-                </div>
+                <h2 class="ds-section-title">Implementação</h2>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Do contrato ao primeiro<br>diagnóstico em dias.</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                    <div class="fade-up" style="--reveal-delay:0s; background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
                         <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">1</div>
                         <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Assinatura</h4>
                         <p style="color: var(--text-secondary); font-size: 0.875rem;">Contrato digital rápido.</p>
                     </div>
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                    <div class="fade-up" style="--reveal-delay:0.1s; background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
                         <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">2</div>
                         <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Onboarding CS</h4>
                         <p style="color: var(--text-secondary); font-size: 0.875rem;">Alinhamento e importação de base.</p>
                     </div>
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                    <div class="fade-up" style="--reveal-delay:0.2s; background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
                         <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">3</div>
                         <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Treinamento</h4>
                         <p style="color: var(--text-secondary); font-size: 0.875rem;">1h30 para capacitar os gestores.</p>
                     </div>
-                    <div style="background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
+                    <div class="fade-up" style="--reveal-delay:0.3s; background: var(--bg-base); padding: 2rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); text-align: center;">
                         <div style="font-family: var(--font-mono); color: var(--accent-brand); font-size: 2rem; margin-bottom: 1rem;">4</div>
                         <h4 style="color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 500;">Go Live</h4>
                         <p style="color: var(--text-secondary); font-size: 0.875rem;">Primeira pesquisa no ar.</p>
@@ -242,6 +1051,108 @@
 
         </div>
     </main>
+
+    <script>
+    // Hero background — organic particle field
+    (function () {
+        const canvas = document.getElementById('canvas-rh');
+        if (!canvas) return;
+        const ctx = canvas.getContext('2d');
+        let W, H, nodes, raf, frame = 0;
+        const C = '59,130,246';
+        const N = 88;
+        const DIST = 120;
+
+        function resize() {
+            const r = canvas.getBoundingClientRect();
+            W = canvas.width  = r.width;
+            H = canvas.height = r.height;
+        }
+
+        function init() {
+            resize();
+            nodes = Array.from({ length: N }, (_, i) => ({
+                x:  Math.random() * W,
+                y:  Math.random() * H,
+                vx: (Math.random() - 0.5) * 0.22,
+                vy: (Math.random() - 0.5) * 0.22,
+                r:  i < 6 ? 3.2 : i < 20 ? 2.0 : 1.3,
+                a:  i < 6 ? 0.88 : i < 20 ? 0.50 : 0.22,
+                ph: Math.random() * Math.PI * 2,
+            }));
+            if (raf) cancelAnimationFrame(raf);
+            loop();
+        }
+
+        function loop() {
+            frame++;
+            ctx.clearRect(0, 0, W, H);
+
+            for (const n of nodes) {
+                n.x += n.vx + Math.sin(frame * 0.0035 + n.ph) * 0.12;
+                n.y += n.vy + Math.cos(frame * 0.0028 + n.ph * 1.4) * 0.09;
+                if (n.x < 0) n.x = W;  if (n.x > W) n.x = 0;
+                if (n.y < 0) n.y = H;  if (n.y > H) n.y = 0;
+            }
+
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const a = nodes[i], b = nodes[j];
+                    const dx = a.x - b.x, dy = a.y - b.y;
+                    const d2 = dx * dx + dy * dy;
+                    if (d2 < DIST * DIST) {
+                        ctx.globalAlpha = (1 - Math.sqrt(d2) / DIST) * 0.16;
+                        ctx.strokeStyle = `rgb(${C})`;
+                        ctx.lineWidth = 0.65;
+                        ctx.beginPath();
+                        ctx.moveTo(a.x, a.y);
+                        ctx.lineTo(b.x, b.y);
+                        ctx.stroke();
+                    }
+                }
+            }
+            ctx.globalAlpha = 1;
+
+            for (const n of nodes) {
+                if (n.r >= 3) { ctx.shadowColor = `rgba(${C},0.65)`; ctx.shadowBlur = 14; }
+                ctx.beginPath();
+                ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(${C},${n.a})`;
+                ctx.fill();
+                if (n.r >= 3) ctx.shadowBlur = 0;
+            }
+
+            raf = requestAnimationFrame(loop);
+        }
+
+        window.addEventListener('resize', resize);
+        requestAnimationFrame(init);
+    })();
+
+    // Showcase accordion
+    (function () {
+        const list = document.getElementById('showcase-rh');
+        if (!list) return;
+        const rows = list.querySelectorAll('.showcase-row');
+        rows.forEach(row => {
+            row.addEventListener('click', () => {
+                const isOpen = row.classList.contains('is-open');
+                rows.forEach(r => r.classList.remove('is-open'));
+                if (!isOpen) row.classList.add('is-open');
+            });
+        });
+    })();
+
+    // Bar chart in-view trigger
+    (function () {
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.bar-row').forEach(el => obs.observe(el));
+    })();
+    </script>
 
     <!-- FOOTER -->
     <footer class="ds-footer">

@@ -45,18 +45,94 @@
 <body class="antialiased font-sans">
 
     <!-- NAV -->
-    <nav class="border-b border-border-subtle py-6 bg-bg-base/80 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
-            <a href="../../" class="text-2xl font-serif italic text-text-primary">Fiter.</a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="../../produtos/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Produtos</a>
-                <a href="../../solucoes/rh/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">RH</a>
-                <a href="../../solucoes/educacao/" class="text-sm font-medium text-text-secondary hover:text-accent-brand transition-colors">Educação</a>
-                <a href="../../blog/" class="text-sm font-medium text-accent-brand hover:text-accent-brand transition-colors">Blog</a>
-            </div>
-            <a href="../../contato/" class="inline-flex items-center justify-center px-5 py-2 rounded-full font-medium bg-accent-brand text-white text-sm hover:bg-blue-600 transition-colors">Agendar Demo</a>
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+
+        <ul class="nav-links">
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/solucoes/rh/">
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
+                    </a>
+                    <a class="drop-link" href="/solucoes/educacao/">
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/produtos/pulse/">
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/nr01/">
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/pesquisa-de-clima/">
+                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/portal-de-transparencia/">
+                        <div><div class="drop-link-name">Portal de Transparência</div><div class="drop-link-tag">Dados abertos</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">
+                        <div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </nav>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
+            </div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/produtos/portal-de-transparencia/">Portal de Transparência</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
+                </div></div>
+            </div>
+
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+
+            <div class="drawer-cta">
+                <a class="btn btn-primary w-full" href="/contato/" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+            </div>
+        </div>
+    </div>
+</nav>
 
     <!-- POST HEADER -->
     <article class="pt-20 pb-20 bg-bg-base">

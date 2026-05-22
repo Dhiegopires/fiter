@@ -63,7 +63,7 @@
     .demo-option { width:100%; padding:.55rem .75rem; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:8px; color:rgba(255,255,255,.75); font-size:.78rem; cursor:pointer; text-align:left; transition:background .15s,border-color .15s; font-family:inherit; }
     .demo-option:hover { background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.18); }
     .hero-bottom-bar { position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:space-between; align-items:flex-end; padding:2.25rem 3rem; border-top:1px solid var(--border-subtle); gap:3rem; z-index:2; }
-    .hero-bottom-right { flex-shrink:0; max-width:320px; display:flex; flex-direction:column; align-items:flex-end; gap:1.25rem; }
+    .hero-bottom-right { flex-shrink:0; max-width:480px; display:flex; flex-direction:column; align-items:flex-end; gap:1.25rem; }
     .hero-bottom-right p { text-align:right; }
     .hero-nav-inline { display:none; position:static; transform:none; }
     /* Metric cards — enhanced entrance */
@@ -122,6 +122,7 @@
     #como-funciona .step-num { font-family:var(--font-mono); font-size:0.65rem; color:var(--text-tertiary); letter-spacing:0.12em; flex-shrink:0; }
     #como-funciona .step-h-title { font-size:1.375rem; font-style:normal; font-weight:800; letter-spacing:-0.025em; margin-bottom:0; }
     #como-funciona .step-h-body { font-size:0.875rem; line-height:1.65; max-width:28ch; }
+    @media(max-width:820px){ #cta-section .cta-grid { grid-template-columns:1fr !important; gap:2.5rem !important; } }
     </style>
 </head>
 <body data-theme="base">
@@ -130,47 +131,39 @@
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/">Fiter.</a>
+        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
 
         <ul class="nav-links">
 
             <li class="nav-item has-drop" data-nav-item>
-                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
                 <div class="nav-drop">
-                    <a class="drop-link" href="/pulse/">
-                        <span class="drop-link-dot" style="background:#ffffff"></span>
-                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    <a class="drop-link" href="/solucoes/rh/">
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
                     </a>
-                    <a class="drop-link" href="/nr1/">
-                        <span class="drop-link-dot" style="background:#f59e0b"></span>
-                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
-                    </a>
-                    <a class="drop-link" href="/pesquisa-de-clima/">
-                        <span class="drop-link-dot" style="background:#3b82f6"></span>
-                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div>
-                    </a>
-                    <a class="drop-link" href="/ouvidoria/">
-                        <span class="drop-link-dot" style="background:#8b5cf6"></span>
-                        <div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Conformidade legal</div></div>
-                    </a>
-                    <div class="drop-divider"></div>
-                    <a class="drop-link" href="/educacao/">
-                        <span class="drop-link-dot" style="background:#10b981"></span>
-                        <div><div class="drop-link-name">Pulse Educação</div><div class="drop-link-tag">Retenção de alunos</div></div>
+                    <a class="drop-link" href="/solucoes/educacao/">
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
                     </a>
                 </div>
             </li>
 
             <li class="nav-item has-drop" data-nav-item>
-                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
                 <div class="nav-drop">
-                    <a class="drop-link" href="/recursos-humanos/">
-                        <span class="drop-link-dot" style="background:#10b981"></span>
-                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
+                    <a class="drop-link" href="/produtos/pulse/">
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
                     </a>
-                    <a class="drop-link" href="/educacao/">
-                        <span class="drop-link-dot" style="background:#f59e0b"></span>
-                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
+                    <a class="drop-link" href="/produtos/nr01/">
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/pesquisa-de-clima/">
+                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/portal-de-transparencia/">
+                        <div><div class="drop-link-name">Portal de Transparência</div><div class="drop-link-tag">Dados abertos</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">
+                        <div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div>
                     </a>
                 </div>
             </li>
@@ -193,24 +186,24 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo">Fiter.</div>
-
-            <div class="drawer-item" data-drawer-item>
-                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
-                <div class="drawer-sub"><div class="drawer-sub-inner">
-                    <a class="drawer-sub-link" href="/pulse/"><span class="drop-link-dot" style="background:#ffffff"></span>Pulse</a>
-                    <a class="drawer-sub-link" href="/nr1/"><span class="drop-link-dot" style="background:#f59e0b"></span>Agente NR1</a>
-                    <a class="drawer-sub-link" href="/pesquisa-de-clima/"><span class="drop-link-dot" style="background:#3b82f6"></span>Pesquisa de Clima</a>
-                    <a class="drawer-sub-link" href="/ouvidoria/"><span class="drop-link-dot" style="background:#8b5cf6"></span>Ouvidoria</a>
-                    <a class="drawer-sub-link" href="/educacao/"><span class="drop-link-dot" style="background:#10b981"></span>Pulse Educação</a>
-                </div></div>
-            </div>
+            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
                 <div class="drawer-sub"><div class="drawer-sub-inner">
-                    <a class="drawer-sub-link" href="/recursos-humanos/"><span class="drop-link-dot" style="background:#10b981"></span>Recursos Humanos</a>
-                    <a class="drawer-sub-link" href="/educacao/"><span class="drop-link-dot" style="background:#f59e0b"></span>Educação</a>
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
+            </div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/produtos/portal-de-transparencia/">Portal de Transparência</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
                 </div></div>
             </div>
 
@@ -259,14 +252,14 @@
                 <p id="heroDesc" style="color:var(--text-secondary); font-size:0.875rem; line-height:1.6; transition:opacity 0.22s ease;"></p>
                 <div class="hero-btns" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
                     <a id="heroSecondaryBtn" href="#" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;"></a>
-                    <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Agendar Demo</a>
+                    <a id="heroDemoBtn" href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Agendar Demo</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PROVA SOCIAL (full width) -->
-    <section style="margin-bottom: 0; margin-left: -2rem; margin-right: -2rem; padding: 4rem 2rem; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); overflow: hidden; background: var(--bg-surface);">
+    <section id="prova-social" style="margin-bottom: 0; margin-left: -2rem; margin-right: -2rem; padding: 4rem 2rem; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); overflow: hidden; background: var(--bg-surface);">
         <div class="flex flex-col items-center text-center mb-10">
             <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">De startups à Marinha do Brasil</p>
             <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--text-primary); font-weight: 700; letter-spacing: -0.02em;">+500.000 pessoas medidas</h2>
@@ -401,7 +394,7 @@
                     <p style="color:var(--text-secondary);font-size:0.9375rem;line-height:1.55;">Meça felicidade, fit cultural e saúde mental de cada colaborador em tempo real. Survey via WhatsApp, sem app, sem login — e o time responde em 2 minutos.</p>
                     <div style="display:flex;align-items:center;justify-content:space-between;padding-top:1rem;border-top:1px solid var(--border-subtle);margin-top:auto;">
                         <span style="font-family:var(--font-mono);font-size:0.72rem;color:var(--text-secondary);">2 min resposta média</span>
-                        <a href="/pulse/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;font-size:0.875rem;">Conhecer o Pulse →</a>
+                        <a href="/produtos/pulse/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;font-size:0.875rem;">Conhecer o Pulse →</a>
                     </div>
                 </div>
 
@@ -410,7 +403,7 @@
                     <div style="font-family:var(--font-mono);font-size:0.65rem;color:#f59e0b;text-transform:uppercase;letter-spacing:0.1em;">02 · Conformidade</div>
                     <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:800;color:var(--text-primary);line-height:1.1;margin-top:auto;">Agente NR1</h3>
                     <p style="color:var(--text-secondary);font-size:0.8125rem;line-height:1.5;flex:1;">Laudo de risco por cargo em minutos. 92% mais rápido que o processo manual, integrado ao Ministério do Trabalho.</p>
-                    <a href="/nr1/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
+                    <a href="/produtos/nr01/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
                 </div>
 
                 <!-- Pesquisa de Clima -->
@@ -418,7 +411,7 @@
                     <div style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.1em;">03 · Diagnóstico</div>
                     <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:800;color:var(--text-primary);line-height:1.1;margin-top:auto;">Pesquisa de Clima</h3>
                     <p style="color:var(--text-secondary);font-size:0.8125rem;line-height:1.5;flex:1;">Não espere um ano. Pesquisa anônima via WhatsApp todo mês, com planos de ação gerados por IA.</p>
-                    <a href="/pesquisa-de-clima/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
+                    <a href="/produtos/portal-de-transparencia/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
                 </div>
 
                 <!-- Ouvidoria -->
@@ -426,7 +419,7 @@
                     <div style="font-family:var(--font-mono);font-size:0.65rem;color:#8b5cf6;text-transform:uppercase;letter-spacing:0.1em;">04 · Compliance</div>
                     <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:800;color:var(--text-primary);line-height:1.1;margin-top:auto;">Ouvidoria</h3>
                     <p style="color:var(--text-secondary);font-size:0.8125rem;line-height:1.5;flex:1;">Canal anônimo para denúncias — exigido por lei. Classificação automática, protocolo gerado na hora, histórico para compliance.</p>
-                    <a href="/ouvidoria/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
+                    <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
                 </div>
 
                 <!-- Pulse Educação -->
@@ -434,7 +427,7 @@
                     <div style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.1em;">05 · Educação</div>
                     <h3 style="font-family:var(--font-serif);font-size:1.5rem;font-weight:800;color:var(--text-primary);line-height:1.1;margin-top:auto;">Pulse Educação</h3>
                     <p style="color:var(--text-secondary);font-size:0.8125rem;line-height:1.5;flex:1;">Preveja a evasão antes que o aluno desapareça. IFE em 8 cliques, com alertas automáticos para coordenadores.</p>
-                    <a href="/educacao/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
+                    <a href="/solucoes/educacao/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;width:fit-content;font-size:0.8125rem;">Ver produto →</a>
                 </div>
 
             </div>
@@ -622,7 +615,7 @@
                     <div class="faq-item">
                         <button class="faq-trigger">
                             <span class="faq-question">O que a Fiter mede exatamente?</span>
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon"></span>
                         </button>
                         <div class="faq-body"><div class="faq-body-inner">
                             <p class="faq-answer">A Fiter mede felicidade, engajamento, fit cultural, saúde mental e riscos organizacionais. A coleta é feita via pulse survey enviado pelo WhatsApp — em 8 cliques e 2 minutos. Os dados são processados por IA com metodologia validada por USP e Mackenzie, e os resultados aparecem em tempo real no painel do gestor.</p>
@@ -631,7 +624,7 @@
                     <div class="faq-item">
                         <button class="faq-trigger">
                             <span class="faq-question">Como a Fiter é diferente do GPTW ou de uma pesquisa de clima tradicional?</span>
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon"></span>
                         </button>
                         <div class="faq-body"><div class="faq-body-inner">
                             <p class="faq-answer">O GPTW faz uma pesquisa por ano. A Fiter faz todo mês — anônima, via WhatsApp, com benchmarking de mercado e planos de ação automáticos gerados por IA. Você toma decisão hoje, não no próximo relatório anual.</p>
@@ -640,7 +633,7 @@
                     <div class="faq-item">
                         <button class="faq-trigger">
                             <span class="faq-question">A Fiter funciona para empresas pequenas?</span>
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon"></span>
                         </button>
                         <div class="faq-body"><div class="faq-body-inner">
                             <p class="faq-answer">Atende organizações a partir de 5 colaboradores. O modelo é modular — você contrata só o produto que faz sentido para o momento da empresa.</p>
@@ -649,7 +642,7 @@
                     <div class="faq-item">
                         <button class="faq-trigger">
                             <span class="faq-question">Precisa de app?</span>
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon"></span>
                         </button>
                         <div class="faq-body"><div class="faq-body-inner">
                             <p class="faq-answer">Não. A pesquisa é enviada e respondida pelo WhatsApp. Sem app para baixar, sem login para criar, sem nenhuma fricção para o colaborador.</p>
@@ -658,7 +651,7 @@
                     <div class="faq-item">
                         <button class="faq-trigger">
                             <span class="faq-question">Quanto tempo leva para implementar?</span>
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon"></span>
                         </button>
                         <div class="faq-body"><div class="faq-body-inner">
                             <p class="faq-answer">A ativação inclui assinatura, treinamento de 1h30 e importação em lote dos colaboradores. A primeira pesquisa pode ser enviada no mesmo dia.</p>
@@ -667,7 +660,7 @@
                     <div class="faq-item">
                         <button class="faq-trigger">
                             <span class="faq-question">Os dados dos colaboradores são confidenciais?</span>
-                            <span class="faq-icon">+</span>
+                            <span class="faq-icon"></span>
                         </button>
                         <div class="faq-body"><div class="faq-body-inner">
                             <p class="faq-answer">Sim. A Fiter garante anonimato nas respostas e segue as exigências da LGPD. Os gestores visualizam dados agregados — nunca a resposta individual de nenhum colaborador.</p>
@@ -678,40 +671,76 @@
         </section>
 
         <!-- CTA FINAL -->
-        <section class="ds-section" style="margin-bottom: 4rem;">
-            <div class="card" style="padding: 4rem; display: flex; flex-direction: column; gap: 4rem; align-items: center;">
-                <div class="w-full" style="text-align: center;">
-                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 3rem); font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); margin-bottom: 1rem; line-height: 1.1;">Pronto para saber o que seu time realmente sente?</h2>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 0; line-height: 1.6; max-width: 500px; margin-left: auto; margin-right: auto;">Demonstração de 30 minutos. Sem compromisso. Com dados reais.</p>
+        <section id="cta-section" class="ds-section" style="margin-bottom:4rem; padding:5rem 3.5rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
+            <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none;"></div>
+            <div class="cta-grid" style="display:grid; grid-template-columns:1fr 1.2fr; gap:5rem; align-items:start; position:relative; z-index:1;">
+                <!-- Left: contexto -->
+                <div>
+                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
+                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">Pronto para saber<br>o que seu time<br>realmente sente?</h2>
+                    <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;max-width:420px;margin-bottom:2rem;">30 minutos. Um especialista. Você entende se a Fiter resolve o que você precisa — sem compromisso, sem pitch de uma hora.</p>
+                    <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                        <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
+                            <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Plataforma real — não um slide
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
+                            <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Especialista que conhece as objeções
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
+                            <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Proposta no mesmo dia, se fizer sentido
+                        </div>
+                    </div>
                 </div>
-                <div style="width: 100%; max-width: 480px; margin: 0 auto;">
-                    <form style="background: var(--bg-base); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg);">
-                        <p style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1.5rem;">Agendar demonstração</p>
-                        <div class="form-field" style="margin-bottom: 1rem;">
-                            <label class="form-label">Nome</label>
-                            <input type="text" required placeholder="Seu nome completo" class="form-input">
-                        </div>
-                        <div class="form-field" style="margin-bottom: 1rem;">
-                            <label class="form-label">Empresa</label>
-                            <input type="text" required placeholder="Nome da empresa" class="form-input">
-                        </div>
-                        <div class="form-field" style="margin-bottom: 1rem;">
-                            <label class="form-label">Segmento</label>
-                            <div class="form-select-wrap">
-                                <select required class="form-select">
-                                    <option value="" disabled selected>Selecione</option>
-                                    <option value="rh">RH Corporativo</option>
-                                    <option value="educacao">Educação</option>
-                                    <option value="ambos">Ambos</option>
-                                </select>
+                <!-- Right: form -->
+                <div>
+                    <div id="cta-form-wrap">
+                        <form id="cta-form" novalidate style="display:flex;flex-direction:column;gap:1.25rem;">
+                            <div class="form-field" id="field-nome">
+                                <label class="form-label" for="f-nome">
+                                    Nome <span class="form-label-required">*</span>
+                                </label>
+                                <input class="form-input" id="f-nome" type="text" placeholder="Seu nome completo" autocomplete="name" required>
                             </div>
-                        </div>
-                        <div class="form-field" style="margin-bottom: 1.5rem;">
-                            <label class="form-label">E-mail corporativo</label>
-                            <input type="email" required placeholder="nome@empresa.com.br" class="form-input">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-animate-chars w-full" style="padding: 1rem; justify-content: center;">Agendar demonstração</button>
-                    </form>
+                            <div class="form-field" id="field-email">
+                                <label class="form-label" for="f-email">
+                                    E-mail corporativo <span class="form-label-required">*</span>
+                                </label>
+                                <input class="form-input" id="f-email" type="email" placeholder="nome@empresa.com.br" autocomplete="email" required>
+                                <span class="form-hint">Não usamos e-mails pessoais.</span>
+                            </div>
+                            <div class="form-field" id="field-empresa">
+                                <label class="form-label" for="f-empresa">
+                                    Empresa <span class="form-label-required">*</span>
+                                </label>
+                                <input class="form-input" id="f-empresa" type="text" placeholder="Nome da empresa" autocomplete="organization" required>
+                            </div>
+                            <div class="form-field" id="field-segmento">
+                                <label class="form-label" for="f-segmento">
+                                    Segmento <span class="form-label-required">*</span>
+                                </label>
+                                <div class="form-select-wrap">
+                                    <select class="form-select" id="f-segmento" required>
+                                        <option value="" disabled selected>Selecione</option>
+                                        <option value="rh">RH Corporativo</option>
+                                        <option value="educacao">Educação</option>
+                                        <option value="ambos">Ambos</option>
+                                    </select>
+                                    <span class="form-select-chevron" aria-hidden="true">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l4 5 4-5"/></svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="form-submit-row">
+                                <button type="submit" class="btn btn-primary btn-animate-chars w-full" style="padding:1rem;justify-content:center;">Agendar demonstração</button>
+                                <p class="form-confirm">Respondemos em até 1 dia útil. Na maioria dos casos, o retorno acontece em menos de 4&nbsp;horas.</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form-success-screen" id="cta-success">
+                        <div class="form-success-icon">✓</div>
+                        <div class="form-success-title">Solicitação enviada!</div>
+                        <p class="form-success-sub">Você receberá uma resposta em até 1 dia útil. Na maioria dos casos, o retorno acontece em menos de 4&nbsp;horas.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -723,47 +752,43 @@
 <footer class="ds-footer">
     <div class="footer-inner">
 
-        <div class="footer-statement">
-            <span class="footer-eyebrow">Fiter · People Analytics</span>
-            <h2 class="footer-headline" data-reveal>Meça o que realmente <em>importa.</em></h2>
-            <div>
-                <a class="btn btn-primary btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <img src="/assets/img/logo.png" alt="Fiter">
+                <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
+            </div>
+            <div class="footer-nav">
+                <div>
+                    <div class="footer-col-title">Soluções</div>
+                    <ul class="footer-links">
+                        <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
+                        <li><a href="/solucoes/educacao/">Educação</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Empresa</div>
+                    <ul class="footer-links">
+                        <li><a href="/sobre/">Sobre</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/contato/">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-col-title">Conformidade</div>
+                    <ul class="footer-links">
+                        <li><a href="#">LGPD</a></li>
+                        <li><a href="#">Política de privacidade</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
-        <div class="footer-nav">
-            <div>
-                <div class="footer-col-title">Soluções</div>
-                <ul class="footer-links">
-                    <li><a href="/recursos-humanos/">Recursos Humanos</a></li>
-                    <li><a href="/educacao/">Educação</a></li>
-                </ul>
-            </div>
-            <div>
-                <div class="footer-col-title">Empresa</div>
-                <ul class="footer-links">
-                    <li><a href="/sobre/">Sobre</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                    <li><a href="/contato/">Contato</a></li>
-                </ul>
-            </div>
-            <div>
-                <div class="footer-col-title">Conformidade</div>
-                <ul class="footer-links">
-                    <li><a href="#">LGPD</a></li>
-                    <li><a href="#">Política de privacidade</a></li>
-                    <li><a href="#">Termos de uso</a></li>
-                </ul>
-            </div>
-        </div>
+        <div class="footer-divider"></div>
 
         <div class="footer-bottom">
             <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
-            <div class="footer-legal">
-                <a href="#">Privacidade</a>
-                <a href="#">Termos de uso</a>
-                <a href="#">LGPD</a>
-            </div>
+            <span class="footer-copy" style="display:flex;align-items:center;gap:0.3rem;">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a> <span style="color:var(--text-tertiary);">&#10084;</span></span>
         </div>
 
     </div>
@@ -783,7 +808,7 @@
             accent: '#ffffff',
             glowBg: 'rgba(255,255,255,0.07)',
             borderActive: 'rgba(255,255,255,0.18)',
-            link: '#como-funciona',
+            link: '#prova-social',
             linkLabel: 'Como funciona →',
         },
         {
@@ -794,7 +819,7 @@
             accent: '#3b82f6',
             glowBg: 'rgba(59,130,246,0.13)',
             borderActive: 'rgba(59,130,246,0.42)',
-            link: '/recursos-humanos/',
+            link: '/solucoes/rh/',
             linkLabel: 'Ver solução →',
         },
         {
@@ -805,7 +830,7 @@
             accent: '#10b981',
             glowBg: 'rgba(16,185,129,0.13)',
             borderActive: 'rgba(16,185,129,0.42)',
-            link: '/educacao/',
+            link: '/solucoes/educacao/',
             linkLabel: 'Ver solução →',
         },
         {
@@ -952,18 +977,26 @@
         const h = document.getElementById('heroHeading');
         const d = document.getElementById('heroDesc');
         const sec = document.getElementById('heroSecondaryBtn');
+        const demo = document.getElementById('heroDemoBtn');
         if (!h || !d) return;
+        const isBlog = p.name === 'Blog';
+        const setBtn = () => {
+            if (sec) { sec.href = p.link; splitBtnChars(sec, p.linkLabel); }
+            sec.className = 'btn ' + (isBlog ? 'btn-primary' : 'btn-secondary') + ' btn-animate-chars';
+            sec.style.textDecoration = 'none';
+            if (demo) demo.style.display = isBlog ? 'none' : '';
+        };
         if (animate === false) {
             h.innerHTML = p.heading;
             d.textContent = p.desc;
-            if (sec) { sec.href = p.link; splitBtnChars(sec, p.linkLabel); }
+            setBtn();
             return;
         }
         h.style.opacity = '0'; d.style.opacity = '0';
         setTimeout(() => {
             h.innerHTML = p.heading;
             d.textContent = p.desc;
-            if (sec) { sec.href = p.link; splitBtnChars(sec, p.linkLabel); }
+            setBtn();
             h.style.opacity = '1'; d.style.opacity = '1';
         }, 220);
     }
@@ -1334,6 +1367,68 @@
 
     renderProgress();
     renderChat();
+})();
+
+// ── CTA Form ─────────────────────────────────────────────────────────────────
+(function () {
+    const form    = document.getElementById('cta-form');
+    const success = document.getElementById('cta-success');
+    if (!form) return;
+
+    const personalDomains = ['gmail','hotmail','yahoo','outlook','icloud','live','uol','bol','terra'];
+
+    function getError(id, value) {
+        if (!value.trim()) return 'Campo obrigatório';
+        if (id === 'f-email') {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'E-mail inválido';
+            const domain = value.split('@')[1]?.split('.')[0]?.toLowerCase();
+            if (personalDomains.includes(domain)) return 'Use um e-mail corporativo';
+        }
+        return null;
+    }
+
+    function setFieldState(fieldEl, inputEl, error) {
+        const prev = fieldEl.querySelector('.form-error-msg, .form-success-msg');
+        if (prev) prev.remove();
+        fieldEl.classList.remove('is-error','is-success');
+        if (error) {
+            fieldEl.classList.add('is-error');
+            const msg = document.createElement('span');
+            msg.className = 'form-error-msg';
+            msg.textContent = '✕ ' + error;
+            const wrap = inputEl.closest('.form-select-wrap');
+            (wrap || inputEl).after(msg);
+        } else if (inputEl.value.trim()) {
+            fieldEl.classList.add('is-success');
+        }
+    }
+
+    form.querySelectorAll('.form-input, .form-select').forEach(input => {
+        input.addEventListener('blur', () => {
+            if (!input.required && !input.value.trim()) return;
+            const field = input.closest('.form-field');
+            if (field) setFieldState(field, input, getError(input.id, input.value));
+        });
+    });
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(input => {
+            const field = input.closest('.form-field');
+            const error = getError(input.id, input.value);
+            if (field) setFieldState(field, input, error);
+            if (error) valid = false;
+        });
+        if (!valid) return;
+        const btn = form.querySelector('[type="submit"]');
+        btn.classList.add('is-loading');
+        btn.textContent = 'Enviando…';
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.classList.add('is-visible');
+        }, 1400);
+    });
 })();
 </script>
 </body>

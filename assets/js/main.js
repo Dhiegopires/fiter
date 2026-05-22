@@ -53,13 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelectorAll('[data-nav-item]').forEach(item => {
             let timer;
-            item.addEventListener('mouseenter', () => { clearTimeout(timer); item.classList.add('is-open'); });
-            item.addEventListener('mouseleave', () => { timer = setTimeout(() => item.classList.remove('is-open'), 120); });
-            const panel = item.querySelector('.nav-drop');
-            if (panel) {
-                panel.addEventListener('mouseenter', () => clearTimeout(timer));
-                panel.addEventListener('mouseleave', () => { timer = setTimeout(() => item.classList.remove('is-open'), 120); });
-            }
+            item.addEventListener('mouseenter', () => {
+                document.querySelectorAll('[data-nav-item].is-open').forEach(i => i.classList.remove('is-open'));
+                clearTimeout(timer);
+                item.classList.add('is-open');
+            });
+            item.addEventListener('mouseleave', () => { timer = setTimeout(() => item.classList.remove('is-open'), 200); });
         });
 
         document.addEventListener('keydown', e => {

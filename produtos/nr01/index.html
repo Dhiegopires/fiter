@@ -26,37 +26,96 @@
 <body data-theme="base">
 
     <!-- NAV -->
-    <nav class="fixed top-0 left-0 right-0 z-50 py-6" style="background: rgba(5,5,5,0.8); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border-default);">
-        <div class="ds-container flex items-center justify-between px-6">
-            <a href="/" style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); text-decoration: none;">Fiter.</a>
-            <div class="hidden md:flex items-center gap-8">
-                <a href="/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Home</a>
-                <div class="relative group">
-                    <a href="/produtos/" class="flex items-center gap-1" style="color: var(--text-primary); text-decoration: none; font-size: 0.875rem; cursor: pointer;">
-                        Produtos <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+
+        <ul class="nav-links">
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/solucoes/rh/">
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
                     </a>
-                    <div class="absolute left-0 top-full pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                        <div style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-md); box-shadow: var(--shadow-lg); padding: 0.5rem; width: max-content; min-width: 220px; display: flex; flex-direction: column; gap: 0.25rem;">
-                            <a href="/produtos/pulse/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Pulse</a>
-                            <a href="/produtos/nr1/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Agente NR1</a>
-                            <a href="/pesquisa-de-clima/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Pesquisa de Clima</a>
-                            <a href="/ouvidoria/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Ouvidoria</a>
-                            <a href="/educacao/" style="color: var(--text-secondary); font-size: 0.875rem; text-decoration: none; padding: 0.5rem 1rem; border-radius: var(--radius-sm); transition: all 0.2s; display: block;" onmouseover="this.style.background='var(--bg-base)'; this.style.color='var(--text-primary)'" onmouseout="this.style.background='transparent'; this.style.color='var(--text-secondary)'">Educação</a>
-                        </div>
-                    </div>
+                    <a class="drop-link" href="/solucoes/educacao/">
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
+                    </a>
                 </div>
-                <a href="/clientes/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Clientes</a>
-                <a href="/sobre/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Sobre</a>
-                <a href="/blog/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Blog</a>
-                <a href="/contato/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;">Contato</a>
+            </li>
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/produtos/pulse/">
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/nr01/">
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/pesquisa-de-clima/">
+                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/portal-de-transparencia/">
+                        <div><div class="drop-link-name">Portal de Transparência</div><div class="drop-link-tag">Dados abertos</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">
+                        <div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
             </div>
-            <div class="hidden md:flex items-center gap-4">
-                <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Falar com Especialistas</a>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/produtos/portal-de-transparencia/">Portal de Transparência</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
+                </div></div>
+            </div>
+
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+
+            <div class="drawer-cta">
+                <a class="btn btn-primary w-full" href="/contato/" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <main class="main-content" style="padding-top: 120px;">
+    <main class="main-content" style="padding-top: 64px;">
         <div class="ds-container px-6">
 
             <!-- HERO -->
@@ -288,10 +347,10 @@
                 <p style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Produto</p>
                 <div style="display: flex; flex-direction: column; gap: 0.625rem;">
                     <a href="/produtos/pulse/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Pulse</a>
-                    <a href="/produtos/nr1/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Agente NR1</a>
-                    <a href="/pesquisa-de-clima/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Pesquisa de Clima</a>
-                    <a href="/ouvidoria/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Ouvidoria</a>
-                    <a href="/educacao/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Educação</a>
+                    <a href="/produtos/nr01/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Agente NR1</a>
+                    <a href="/produtos/portal-de-transparencia/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Portal de Transparência</a>
+                    <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Guia Prático</a>
+                    <a href="/solucoes/educacao/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Educação</a>
                 </div>
             </div>
             <div>

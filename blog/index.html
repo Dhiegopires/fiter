@@ -8,228 +8,28 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            corePlugins: { preflight: false },
-            theme: {
-                extend: {
-                    colors: {
-                        'bg-base': 'var(--bg-base)',
-                        'bg-surface': 'var(--bg-surface)',
-                        'bg-surface-hover': 'var(--bg-surface-hover)',
-                        'text-primary': 'var(--text-primary)',
-                        'text-secondary': 'var(--text-secondary)',
-                        'text-tertiary': 'var(--text-tertiary)',
-                        'border-subtle': 'var(--border-subtle)',
-                        'border-default': 'var(--border-default)',
-                        'accent-brand': 'var(--accent-brand)',
-                        'accent-glow': 'var(--accent-glow)',
-                    },
-                    fontFamily: {
-                        sans: ['"IBM Plex Sans"', 'sans-serif'],
-                        serif: ['"Geist"', 'sans-serif'],
-                        mono: ['"IBM Plex Mono"', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        :root {
-            --semantic-color-background-base: #050505;
-            --semantic-color-background-surface: #0e0e0e;
-            --semantic-color-background-surface-hover: #141414;
-            --semantic-color-foreground-primary: #f5f5f5;
-            --semantic-color-foreground-secondary: #a8a8b3;
-            --semantic-color-foreground-tertiary: #80808c;
-            --semantic-color-border-subtle: rgba(255, 255, 255, 0.04);
-            --semantic-color-border-default: rgba(255, 255, 255, 0.08);
-            --semantic-color-border-hover: rgba(255, 255, 255, 0.15);
-            --semantic-color-accent-brand: #3b82f6;
-            --semantic-color-accent-glow: rgba(59, 130, 246, 0.15);
-            --semantic-color-accent-glow-solid: rgba(59, 130, 246, 0.20);
-            --semantic-color-accent-text: #ffffff;
-            --bg-base: var(--semantic-color-background-base);
-            --bg-surface: var(--semantic-color-background-surface);
-            --bg-surface-hover: var(--semantic-color-background-surface-hover);
-            --text-primary: var(--semantic-color-foreground-primary);
-            --text-secondary: var(--semantic-color-foreground-secondary);
-            --text-tertiary: var(--semantic-color-foreground-tertiary);
-            --border-default: var(--semantic-color-border-default);
-            --border-subtle: var(--semantic-color-border-subtle);
-            --border-hover: var(--semantic-color-border-hover);
-            --accent-brand: var(--semantic-color-accent-brand);
-            --accent-glow: var(--semantic-color-accent-glow);
-            --accent-glow-solid: var(--semantic-color-accent-glow-solid);
-            --accent-text: var(--semantic-color-accent-text);
-            --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            --font-serif: 'Geist', sans-serif;
-            --font-mono: 'IBM Plex Mono', monospace;
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            --radius-full: 9999px;
-            --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-            --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { overflow-x: hidden; }
-        body {
-            background-color: var(--bg-base);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            overflow-x: hidden;
-        }
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.625rem 1.25rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            border-radius: var(--radius-md);
-            cursor: pointer;
-            transition: all var(--transition-fast);
-            text-decoration: none;
-            border: 1px solid transparent;
-            font-family: var(--font-sans);
-        }
-        .btn-primary {
-            background-color: var(--accent-brand);
-            color: var(--accent-text);
-            border: 1px solid transparent;
-        }
-        .btn-primary:hover {
-            transform: scale(0.98);
-            box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent-brand) 50%, transparent), 0 0 30px var(--accent-glow);
-        }
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 200;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            background: transparent;
-            border-bottom: 1px solid transparent;
-            transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
-        }
-        .site-nav.scrolled {
-            background: rgba(10,10,10,0.82);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-color: rgba(255,255,255,0.07);
-        }
-        .nav-inner {
-            width: 100%;
-            padding: 0 2.5rem;
-            display: flex;
-            align-items: center;
-        }
-        .nav-logo {
-            font-family: var(--font-serif);
-            font-size: 1.2rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-            text-decoration: none;
-            margin-right: 3rem;
-            flex-shrink: 0;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 0;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            flex: 1;
-        }
-        .nav-item { position: relative; }
-        .nav-link {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0 0.85rem;
-            height: 64px;
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            background: none;
-            border: none;
-            cursor: pointer;
-            text-decoration: none;
-            white-space: nowrap;
-            transition: color 0.2s;
-            font-family: var(--font-sans);
-            position: relative;
-        }
-        .nav-link:hover { color: var(--text-primary); }
-        .nav-link.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0.85rem;
-            right: 0.85rem;
-            height: 2px;
-            background: var(--accent-brand);
-            border-radius: 2px 2px 0 0;
-        }
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            margin-left: auto;
-        }
-        .nav-cta { font-size: 0.8rem; padding: 0.5rem 1.1rem; white-space: nowrap; }
-        .nav-hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 0.5rem;
-            margin-left: 0.5rem;
-        }
-        .nav-hamburger span {
-            display: block;
-            width: 22px;
-            height: 1.5px;
-            background: var(--text-secondary);
-            transition: transform 0.3s, opacity 0.3s, width 0.3s;
-            transform-origin: center;
-        }
-        @media (max-width: 900px) {
-            .nav-links, .nav-cta { display: none; }
-            .nav-hamburger { display: flex; }
-        }
-        .ds-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
-        .ds-hero {
+        /* Blog-specific */
+        .blog-hero {
             padding: 8rem 2rem 5rem;
             border-bottom: 1px solid var(--border-subtle);
             position: relative;
             overflow: hidden;
             text-align: center;
         }
-        .ds-hero-bg {
+        .blog-hero-bg {
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse at top, var(--accent-glow-solid) 0%, transparent 60%);
+            background: radial-gradient(ellipse at top, rgba(255,255,255,0.03) 0%, transparent 60%);
+            pointer-events: none;
         }
-        .ds-hero-title {
+        .blog-hero-title {
             font-family: var(--font-serif);
             font-size: clamp(2.8rem, 5vw, 5rem);
             font-weight: 800;
@@ -237,22 +37,26 @@
             line-height: 1.05;
             color: var(--text-primary);
             margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
-        .ds-hero-sub {
+        .blog-hero-sub {
             font-size: 1.125rem;
             color: var(--text-secondary);
             max-width: 560px;
             margin: 0 auto;
             line-height: 1.6;
+            position: relative;
+            z-index: 1;
         }
-        .ds-filter-bar {
-            padding: 3rem 0;
+        .blog-filter-bar {
+            padding: 2.5rem 0;
             background: var(--bg-surface);
             border-bottom: 1px solid var(--border-subtle);
         }
-        .ds-input {
+        .blog-search-input {
             width: 100%;
-            background: rgba(0, 0, 0, 0.2);
+            background: rgba(0,0,0,0.2);
             border: 1px solid var(--border-default);
             border-radius: var(--radius-full);
             padding: 0.75rem 1.25rem 0.75rem 3rem;
@@ -260,13 +64,13 @@
             font-family: var(--font-sans);
             font-size: 0.875rem;
             outline: none;
-            transition: all var(--transition-fast);
+            transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
         }
-        .ds-input:focus {
+        .blog-search-input:focus {
             border-color: var(--accent-brand);
             box-shadow: 0 0 0 1px var(--accent-brand);
         }
-        .ds-input::placeholder { color: var(--text-tertiary); }
+        .blog-search-input::placeholder { color: var(--text-tertiary); }
         .filter-btn {
             font-family: var(--font-mono);
             font-size: 0.72rem;
@@ -280,17 +84,10 @@
             cursor: pointer;
             transition: all var(--transition-fast);
         }
-        .filter-btn:hover {
-            border-color: var(--accent-brand);
-            color: var(--accent-brand);
-        }
-        .filter-btn.active {
-            background: var(--accent-brand);
-            color: var(--accent-text);
-            border-color: var(--accent-brand);
-        }
-        .ds-section {
-            padding: 6rem 0;
+        .filter-btn:hover { border-color: var(--accent-brand); color: var(--accent-brand); }
+        .filter-btn.active { background: var(--accent-brand); color: var(--accent-text); border-color: var(--accent-brand); }
+        .blog-grid-section {
+            padding: 5rem 0;
             background: var(--bg-surface);
         }
         #blogGrid {
@@ -298,22 +95,22 @@
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 2rem;
         }
-        .card {
+        .post-card {
             background: rgba(14,14,14,0.4);
             backdrop-filter: blur(24px);
             -webkit-backdrop-filter: blur(24px);
             border: 1px solid var(--border-default);
             border-radius: var(--radius-lg);
-            padding: 1.5rem;
+            padding: 0;
             transition: all var(--transition-normal);
             position: relative;
             overflow: hidden;
             display: flex;
             flex-direction: column;
             text-decoration: none;
-            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.3);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
         }
-        .card::before {
+        .post-card::before {
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0;
@@ -322,22 +119,13 @@
             opacity: 0;
             transition: opacity var(--transition-normal);
         }
-        .card:hover {
-            border-color: var(--border-hover);
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
-        }
-        .card:hover::before {
-            opacity: 0.5;
-        }
+        .post-card:hover { border-color: var(--border-hover); transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+        .post-card:hover::before { opacity: 0.4; }
         .post-thumb {
             aspect-ratio: 16/9;
-            background: var(--bg-base);
-            border: 1px solid var(--border-subtle);
-            border-radius: var(--radius-md);
-            margin-bottom: 1.25rem;
             overflow: hidden;
             position: relative;
+            border-bottom: 1px solid var(--border-subtle);
         }
         .post-tag {
             position: absolute;
@@ -348,10 +136,10 @@
             font-size: 0.6rem;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0,0,0,0.65);
             backdrop-filter: blur(8px);
             color: var(--accent-brand);
-            border: 1px solid var(--border-subtle);
+            border: 1px solid rgba(255,255,255,0.1);
             padding: 0.25rem 0.75rem;
             border-radius: var(--radius-full);
         }
@@ -361,219 +149,260 @@
             object-fit: cover;
             transition: transform 0.5s ease;
         }
-        .card:hover .post-img { transform: scale(1.1); }
+        .post-card:hover .post-img { transform: scale(1.06); }
+        .post-body { padding: 1.5rem; display: flex; flex-direction: column; flex: 1; }
         .post-title {
             font-family: var(--font-serif);
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             color: var(--text-primary);
             margin-bottom: 0.75rem;
-            line-height: 1.2;
+            line-height: 1.25;
             transition: color var(--transition-fast);
         }
-        .card:hover .post-title { color: var(--accent-brand); }
+        .post-card:hover .post-title { color: var(--accent-brand); }
         .post-excerpt {
             font-size: 0.875rem;
             color: var(--text-secondary);
             line-height: 1.6;
-            margin-bottom: 1.5rem;
             flex: 1;
+            margin-bottom: 1.5rem;
         }
         .post-meta {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: var(--text-tertiary);
             border-top: 1px solid var(--border-subtle);
             padding-top: 1rem;
             font-family: var(--font-mono);
         }
-        .ds-footer {
-            background-color: #020202;
-            border-top: 1px solid var(--border-subtle);
-            color: var(--text-tertiary);
-        }
-        .footer-inner {
-            padding: 4rem 2.5rem 2.5rem;
-        }
-        .footer-statement {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-        .footer-eyebrow {
-            font-family: var(--font-mono);
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 0.14em;
-            color: var(--text-tertiary);
-        }
-        .footer-headline {
-            font-family: var(--font-serif);
-            font-size: clamp(2rem, 4vw, 3rem);
-            font-weight: 800;
-            letter-spacing: -0.03em;
-            line-height: 1.05;
-            color: var(--text-primary);
-        }
-        .footer-bottom {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 2rem;
-            flex-wrap: wrap;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-subtle);
-        }
-        .footer-copy {
-            font-family: var(--font-mono);
-            font-size: 0.68rem;
-            color: var(--text-tertiary);
-            letter-spacing: 0.03em;
-        }
-        .footer-legal {
-            display: flex;
-            gap: 2rem;
-        }
-        .footer-legal a {
-            font-family: var(--font-mono);
-            font-size: 0.68rem;
-            color: var(--text-tertiary);
-            text-decoration: none;
-            transition: color var(--transition-fast);
-        }
-        .footer-legal a:hover { color: var(--text-secondary); }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-in { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        /* Override — style.css usa fixed footer para design-system.html; blog usa footer normal */
+        .ds-footer { position: static; }
     </style>
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body data-theme="base">
+<body data-theme="studio">
 
     <!-- NAV -->
-    <nav class="site-nav" id="site-nav">
-        <div class="nav-inner">
-            <a class="nav-logo" href="../">Fiter.</a>
-            <ul class="nav-links">
-                <li class="nav-item"><a class="nav-link" href="../produtos/">Produtos</a></li>
-                <li class="nav-item"><a class="nav-link" href="../solucoes/rh/">RH</a></li>
-                <li class="nav-item"><a class="nav-link" href="../solucoes/educacao/">Educação</a></li>
-                <li class="nav-item"><a class="nav-link active" href="./">Blog</a></li>
-            </ul>
-            <div class="nav-right">
-                <a class="btn btn-primary nav-cta" href="../contato/">Agendar Demonstração</a>
-                <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+
+        <ul class="nav-links">
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/solucoes/rh/">
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
+                    </a>
+                    <a class="drop-link" href="/solucoes/educacao/">
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/produtos/pulse/">
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/nr01/">
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/pesquisa-de-clima/">
+                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico mensal</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/portal-de-transparencia/">
+                        <div><div class="drop-link-name">Portal de Transparência</div><div class="drop-link-tag">Dados abertos</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">
+                        <div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
+            </div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/produtos/portal-de-transparencia/">Portal de Transparência</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
+                </div></div>
+            </div>
+
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+
+            <div class="drawer-cta">
+                <a class="btn btn-primary w-full" href="/contato/" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
             </div>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- HERO BLOG -->
-    <section class="ds-hero">
-        <div class="ds-hero-bg"></div>
-        <div class="ds-container px-6 text-center relative z-10 fade-in">
-            <h1 class="ds-hero-title">Fiter Insights</h1>
-            <p class="ds-hero-sub">Dados, neurociência e estratégias para transformar o clima e reter os melhores talentos.</p>
+    <section class="blog-hero">
+        <div class="blog-hero-bg" aria-hidden="true"></div>
+        <div class="fade-in">
+            <h1 class="blog-hero-title">Fiter Insights</h1>
+            <p class="blog-hero-sub">Dados, neurociência e estratégias para transformar o clima e reter os melhores talentos.</p>
         </div>
     </section>
 
     <!-- SEARCH FILTER -->
-    <section class="ds-filter-bar">
-        <div class="max-w-xl mx-auto px-6">
-            <div class="relative mb-6">
-                <i data-lucide="search" class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 pointer-events-none" style="color: var(--text-tertiary);"></i>
-                <input type="text" id="blogSearch" placeholder="Buscar por título..." class="ds-input">
+    <section class="blog-filter-bar">
+        <div style="max-width: 560px; margin: 0 auto; padding: 0 1.5rem;">
+            <div style="position: relative; margin-bottom: 1.5rem;">
+                <i data-lucide="search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-tertiary); pointer-events: none;"></i>
+                <input type="text" id="blogSearch" placeholder="Buscar por título..." class="blog-search-input">
             </div>
             <!-- CATEGORY_FILTER_START -->
-
-            <div class="flex flex-wrap justify-center gap-3">
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
                 <button class="filter-btn active" data-category="all">Todos</button>
-                
                 <button class="filter-btn" data-category="Educação">Educação</button>
-
                 <button class="filter-btn" data-category="RH">RH</button>
             </div>
         </div>
     </section>
 
     <!-- BLOG GRID -->
-    <section class="ds-section">
-        <div id="blogGrid" class="ds-container px-6">
+    <section class="blog-grid-section">
+        <div id="blogGrid" class="ds-container" style="padding: 0 1.5rem;">
             <!-- BLOG_GRID_START -->
 
-            <a href="o-que-e-pulse-survey/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 0ms;" data-category="Educação">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">Educação</div>
-                    <img src="o-que-e-pulse-survey/default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="o-que-e-pulse-survey/" class="post-card fade-in" style="transition-delay: 0ms;" data-category="Educação">
+                <div class="post-thumb">
+                    <span class="post-tag">Educação</span>
+                    <img src="o-que-e-pulse-survey/default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" class="post-img">
                 </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">O que é pulse survey e por que substituir a pesquisa anual</h3>
-                <p class="text-text-secondary mb-6 flex-1">Entenda como os pulse surveys funcionam na prática e por que as empresas estão migrando para esse modelo de escuta contínua.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
-                    <span>18 de Maio, 2026</span>
-                    <span>6 min de leitura</span>
-                </div>
-            </a>
-
-            <a href="o-teste-do-afonso/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 100ms;" data-category="RH">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH</div>
-                    <img src="o-teste-do-afonso/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
-                </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">É um titulo muito bacana criado por mim. </h3>
-                <p class="text-text-secondary mb-6 flex-1">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
-                    <span>18 de Maio, 2026</span>
-                    <span>10 min de leitura</span>
+                <div class="post-body">
+                    <h3 class="post-title">O que é pulse survey e por que substituir a pesquisa anual</h3>
+                    <p class="post-excerpt">Entenda como os pulse surveys funcionam na prática e por que as empresas estão migrando para esse modelo de escuta contínua.</p>
+                    <div class="post-meta">
+                        <span>18 de Maio, 2026</span>
+                        <span>6 min de leitura</span>
+                    </div>
                 </div>
             </a>
 
-            <a href="teste-dhiego/" class="card flex flex-col p-6 fade-in cursor-pointer hover:-translate-y-2 group" style="transition-delay: 200ms;" data-category="RH">
-                <div class="aspect-video bg-bg-base border border-border-subtle rounded-xl mb-6 flex items-center justify-center overflow-hidden relative">
-                    <div class="absolute top-4 left-4 bg-bg-base/80 backdrop-blur text-accent-brand border border-border-subtle text-xs font-bold px-3 py-1 rounded-full">RH</div>
-                    <img src="teste-dhiego/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <a href="o-teste-do-afonso/" class="post-card fade-in" style="transition-delay: 100ms;" data-category="RH">
+                <div class="post-thumb">
+                    <span class="post-tag">RH</span>
+                    <img src="o-teste-do-afonso/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim." class="post-img">
                 </div>
-                <h3 class="text-2xl font-serif text-text-primary mb-3 group-hover:text-accent-brand transition-colors">É um titulo muito bacana criado por mim. </h3>
-                <p class="text-text-secondary mb-6 flex-1">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
-                <div class="flex items-center justify-between text-sm text-text-tertiary border-t border-border-subtle pt-4 mt-auto">
-                    <span>18 de Maio, 2026</span>
-                    <span>10 min de leitura</span>
+                <div class="post-body">
+                    <h3 class="post-title">É um titulo muito bacana criado por mim.</h3>
+                    <p class="post-excerpt">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
+                    <div class="post-meta">
+                        <span>18 de Maio, 2026</span>
+                        <span>10 min de leitura</span>
+                    </div>
+                </div>
+            </a>
+
+            <a href="teste-dhiego/" class="post-card fade-in" style="transition-delay: 200ms;" data-category="RH">
+                <div class="post-thumb">
+                    <span class="post-tag">RH</span>
+                    <img src="teste-dhiego/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim." class="post-img">
+                </div>
+                <div class="post-body">
+                    <h3 class="post-title">É um titulo muito bacana criado por mim.</h3>
+                    <p class="post-excerpt">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
+                    <div class="post-meta">
+                        <span>18 de Maio, 2026</span>
+                        <span>10 min de leitura</span>
+                    </div>
                 </div>
             </a>
             <!-- BLOG_GRID_END -->
         </div>
-        <div id="noResults" class="ds-container px-6 text-center py-20 hidden">
-            <p style="color: var(--text-tertiary);">Nenhuma notícia encontrada.</p>
+        <div id="noResults" style="display: none; text-align: center; padding: 5rem 1.5rem;">
+            <p style="color: var(--text-tertiary); font-family: var(--font-mono); font-size: 0.875rem;">Nenhuma notícia encontrada.</p>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="ds-footer">
         <div class="footer-inner">
-            <div class="footer-statement">
-                <div class="footer-eyebrow">Fiter</div>
-                <div class="footer-headline">Pronto para<br>medir o que importa?</div>
-            </div>
-            <div class="footer-bottom">
-                <div class="footer-copy">© 2026 Fiter. HTML e CSS Puro.</div>
-                <div class="footer-legal">
-                    <a href="#">Privacidade</a>
-                    <a href="#">Termos</a>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/assets/img/logo.png" alt="Fiter">
+                    <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
                 </div>
+                <nav class="footer-nav" aria-label="Links do rodapé">
+                    <div>
+                        <div class="footer-col-title">Soluções</div>
+                        <ul class="footer-links">
+                            <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
+                            <li><a href="/solucoes/educacao/">Educação</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Empresa</div>
+                        <ul class="footer-links">
+                            <li><a href="/sobre/">Sobre</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/contato/">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Conformidade</div>
+                        <ul class="footer-links">
+                            <li><a href="#">LGPD</a></li>
+                            <li><a href="#">Política de privacidade</a></li>
+                            <li><a href="#">Termos de uso</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
+                <span class="footer-copy">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a></span>
             </div>
         </div>
     </footer>
 
     <script>
         lucide.createIcons();
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('site-nav');
-            if (window.scrollY > 20) nav.classList.add('scrolled');
-            else nav.classList.remove('scrolled');
-        });
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -583,7 +412,6 @@
                 }
             });
         }, { threshold: 0.1 });
-
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
         const searchInput = document.getElementById('blogSearch');
@@ -602,21 +430,17 @@
         function filterPosts() {
             const term = searchInput ? searchInput.value.toLowerCase().trim() : '';
             let visibleCount = 0;
-            document.querySelectorAll('#blogGrid .card').forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
+            document.querySelectorAll('#blogGrid .post-card').forEach(card => {
+                const title = card.querySelector('.post-title').textContent.toLowerCase();
                 const category = card.dataset.category || '';
-                const matchesSearch = !term || title.includes(term);
-                const matchesCategory = activeCategory === 'all' || category === activeCategory;
-                const match = matchesSearch && matchesCategory;
+                const match = (!term || title.includes(term)) && (activeCategory === 'all' || category === activeCategory);
                 card.style.display = match ? '' : 'none';
                 if (match) visibleCount++;
             });
-            noResults.classList.toggle('hidden', visibleCount > 0 || (!term && activeCategory === 'all'));
+            noResults.style.display = visibleCount === 0 ? '' : 'none';
         }
 
-        if (searchInput) {
-            searchInput.addEventListener('input', filterPosts);
-        }
+        if (searchInput) searchInput.addEventListener('input', filterPosts);
     </script>
 </body>
 </html>
