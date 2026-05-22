@@ -47,19 +47,56 @@
       .edu-stat-cell:last-child{border-right:none}
       .edu-stat-cell .num{font-family:var(--font-serif);font-size:3.25rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.75rem}
       .edu-stat-cell .desc{font-size:0.85rem;color:var(--text-secondary);line-height:1.55}
-      .edu-solution-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:1.5rem}
-      .edu-solution-card{padding:2.5rem 2rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;transition:border-color 0.25s,transform 0.25s}
-      .edu-solution-card:hover{border-color:rgba(16,185,129,0.25);transform:translateY(-3px)}
-      .edu-solution-card .step{width:36px;height:36px;border-radius:50%;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:0.8rem;color:var(--accent-brand);font-family:var(--font-mono);font-weight:600;margin-bottom:1.25rem}
-      .edu-solution-card h3{font-family:var(--font-serif);font-size:1.2rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;line-height:1.2}
-      .edu-solution-card p{font-size:0.85rem;color:var(--text-secondary);line-height:1.6}
-      .edu-cta-full{margin-left:-2rem;margin-right:-2rem;padding:6rem 5vw;position:relative;overflow:hidden;background:rgba(16,185,129,0.04);border-top:1px solid var(--border-default);text-align:center}
-      .edu-cta-full::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(16,185,129,0.06),transparent 70%);pointer-events:none}
       .edu-counter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;max-width:900px;margin:0 auto}
       .edu-counter-cell{padding:2rem;text-align:center;background:var(--bg-surface);border:1px solid var(--border-subtle);border-radius:var(--radius-lg);transition:border-color 0.25s,transform 0.25s}
       .edu-counter-cell:hover{border-color:var(--border-default);transform:translateY(-3px)}
       .edu-counter-cell .num{font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.35rem;letter-spacing:-0.03em}
       .edu-counter-cell .lbl{font-size:0.72rem;color:var(--text-secondary);line-height:1.4}
+
+      /* Scientific proof tiles */
+      .sci-tile{display:flex;gap:1.25rem;align-items:center;padding:1.25rem 1.5rem;border-bottom:1px solid var(--border-default);flex:1}
+      .sci-tile:last-child{border-bottom:none}
+      .sci-icon{width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent-brand)}
+      .sci-title{font-size:0.8125rem;font-weight:600;color:var(--text-primary);margin-bottom:0.25rem;line-height:1.3}
+      .sci-sub{font-size:0.78rem;color:var(--text-secondary);line-height:1.5}
+      .sci-tile.fade-up{transform:translateX(24px);opacity:0;transition:transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94) var(--reveal-delay,0s),opacity 0.5s ease var(--reveal-delay,0s)}
+      .sci-tile.fade-up.in-view{transform:translateX(0);opacity:1}
+      @media(max-width:768px){.sci-section-grid{grid-template-columns:1fr!important}}
+
+      /* Donut Chart */
+      .donut-chart-wrap{position:relative;width:220px;height:220px;flex-shrink:0}
+      .donut-chart-wrap svg{display:block}
+      .donut-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none}
+      .donut-center-value{font-family:var(--font-serif);font-size:1.9rem;font-weight:800;letter-spacing:-0.02em;color:var(--text-primary);line-height:1;transition:all 0.18s ease}
+      .donut-center-label{font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-secondary);margin-top:0.3rem;transition:all 0.18s ease}
+      .donut-legend{display:flex;flex-direction:column;gap:0.9rem}
+      .legend-item{display:flex;align-items:center;gap:0.75rem;cursor:pointer;transition:opacity 0.2s}
+      .legend-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;transition:transform 0.2s}
+      .legend-item:hover .legend-dot{transform:scale(1.5)}
+      .legend-label{font-size:0.85rem;color:var(--text-secondary);flex:1;transition:color 0.2s}
+      .legend-item:hover .legend-label{color:var(--text-primary)}
+      .legend-pct{font-family:var(--font-mono);font-size:0.85rem;font-weight:600;min-width:36px;text-align:right}
+
+      /* Vertical Bar Chart */
+      .vchart-wrap{display:flex;flex-direction:column;gap:0}
+      .vchart-bars-area{display:flex;align-items:flex-end;gap:10px;height:200px;position:relative}
+      .vchart-grid{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;pointer-events:none}
+      .vchart-grid-line{width:100%;height:1px;background:rgba(255,255,255,0.05)}
+      .vchart-grid-line:last-child{background:rgba(255,255,255,0.10)}
+      .vchart-col{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end;position:relative}
+      .vchart-bar{width:100%;border-radius:6px 6px 0 0;height:0;transition:height 0.75s cubic-bezier(0.4,0,0.2,1) var(--bar-delay,0s),opacity 0.3s ease,filter 0.2s ease;position:relative;cursor:pointer;will-change:height}
+      .vchart-bar::after{content:attr(data-value);position:absolute;top:-26px;left:50%;transform:translateX(-50%);font-family:var(--font-mono);font-size:0.7rem;font-weight:600;color:var(--text-primary);background:var(--bg-surface);border:1px solid rgba(255,255,255,0.1);padding:2px 7px;border-radius:4px;white-space:nowrap;opacity:0;transition:opacity 0.15s ease;pointer-events:none}
+      .vchart-col:hover .vchart-bar::after{opacity:1}
+      .vchart-col:hover .vchart-bar{filter:brightness(1.25)}
+      .vchart-bars-area.loaded .vchart-col:not(:hover) .vchart-bar{opacity:0.6}
+      .vchart-bars-area.loaded .vchart-col:hover .vchart-bar{opacity:1}
+      .vchart-x-axis{display:flex;gap:10px;margin-top:10px}
+      .vchart-x-label{flex:1;text-align:center;font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.04em;transition:color 0.2s}
+      .vchart-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:1.75rem}
+      .vchart-legend{display:flex;gap:1.25rem;flex-wrap:wrap}
+      .vchart-legend-item{display:flex;align-items:center;gap:0.45rem;font-family:var(--font-mono);font-size:0.68rem;color:var(--text-tertiary)}
+      .vchart-legend-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
       @media(max-width:768px){
         .edu-hero-grid{grid-template-columns:1fr;gap:2.5rem}
         .ife-ring{width:200px;height:200px}
@@ -67,14 +104,19 @@
         .edu-stats-grid{grid-template-columns:1fr}
         .edu-stat-cell{border-right:none;border-bottom:1px solid var(--border-default)}
         .edu-stat-cell:last-child{border-bottom:none}
-        .edu-solution-cards{grid-template-columns:1fr}
         .edu-counter-grid{grid-template-columns:1fr 1fr}
         .edu-hero-metrics{flex-wrap:wrap;gap:1.25rem}
+        .analytics-grid{grid-template-columns:1fr!important}
+        .cta-edu-grid{grid-template-columns:1fr!important}
+        .impl-edu-grid{grid-template-columns:1fr!important}
+        .impl-edu-grid>div:first-child{position:static!important}
+        #hero-edu>div:last-child{grid-template-columns:1fr!important;gap:2.5rem!important}
+        #hero-edu>div:last-child>div:first-child{padding-left:0!important}
+        #hero-edu-visual{display:none!important}
       }
       @media(max-width:540px){
         .edu-counter-grid{grid-template-columns:1fr}
       }
-            .ds-footer { position: static; }
     </style>
 </head>
 <body data-theme="connect">
@@ -134,52 +176,227 @@
     </div>
 </nav>
 
-<main class="main-content">
+<main class="main-content" style="padding-top: 64px;">
     <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
     <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
 
     <!-- HERO - full viewport -->
-    <section class="edu-hero">
-        <div class="edu-hero-grid">
-            <div>
-                <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.25rem 1rem;border-radius:var(--radius-full);border:1px solid var(--border-default);background:var(--bg-surface);margin-bottom:2rem;">
-                    <span style="width:8px;height:8px;border-radius:50%;background:var(--accent-brand);box-shadow:0 0 10px var(--accent-glow);"></span>
-                    <span style="font-family:var(--font-mono);font-size:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.05em;">Solução Educação</span>
+    <section id="hero-edu" class="ds-section" style="display:flex;flex-direction:column;position:relative;overflow:hidden;min-height:calc(100vh - 64px);">
+        <!-- Background particle canvas (green) -->
+        <canvas id="canvas-edu" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
+
+        <!-- Urgency strip CNE 3/2025 -->
+        <div style="flex-shrink:0;position:relative;z-index:1;">
+            <div class="urgency-strip" id="urgency-cne">
+                <div class="urgency-icon">📋</div>
+                <div class="urgency-body">
+                    <div class="urgency-headline">CNE 3/2025: IES têm até dezembro de 2025 para mapear riscos psicossociais de alunos</div>
+                    <div class="urgency-sub">O IFE cumpre essa obrigação em 8 cliques por aluno. Implementação em 7 dias, sem TI.</div>
                 </div>
-                <h1 style="font-family:var(--font-serif);font-size:clamp(2.5rem,4.5vw,4rem);font-weight:800;letter-spacing:-0.03em;line-height:1.02;margin-bottom:1.25rem;color:var(--text-primary);">
+                <a href="/contato/" class="btn urgency-cta">Implementar agora →</a>
+                <button class="urgency-dismiss" aria-label="Fechar" onclick="this.closest('.urgency-strip').classList.add('is-dismissed')">✕</button>
+            </div>
+        </div>
+
+        <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-content:center;align-items:center;">
+
+            <!-- Left: copy -->
+            <div style="position:relative;z-index:1;padding-left:4rem;">
+                <h1 data-reveal style="font-family:var(--font-serif);font-size:clamp(2.25rem,3.5vw,3.25rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;margin-bottom:2rem;color:var(--text-primary);">
                     O IFE revela o que<br>o aluno não diz.
                 </h1>
-                <p style="font-size:1.05rem;color:var(--text-secondary);max-width:480px;margin-bottom:2rem;line-height:1.65;">
-                    Índice de Felicidade na Educação. Oito perguntas via WhatsApp. IA que prevê evasão com 3 meses de antecedência. Tudo alinhado à CNE 3/2025.
+                <p style="font-size:1.125rem;color:var(--text-secondary);margin-bottom:3rem;line-height:1.7;max-width:80%;">
+                    8 perguntas via WhatsApp. IA que prevê evasão com 3 meses de antecedência. Dashboard por turma, curso e campus. Alinhado à CNE 3/2025.
                 </p>
-                <div style="display:flex;gap:1rem;flex-wrap:wrap;">
-                    <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Solicitar demonstração</a>
-                </div>
-                <div class="edu-hero-metrics">
-                    <div class="edu-hero-metric-item"><span class="val">87%</span><span class="lbl">taxa de resposta</span></div>
-                    <div class="edu-hero-metric-item"><span class="val">8</span><span class="lbl">perguntas</span></div>
-                    <div class="edu-hero-metric-item"><span class="val">2 min</span><span class="lbl">para responder</span></div>
-                    <div class="edu-hero-metric-item"><span class="val">+500k</span><span class="lbl">alunos medidos</span></div>
+                <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+                    <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;">Falar com especialista</a>
+                    <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Ver demonstração ao vivo</a>
                 </div>
             </div>
-            <div>
-                <div class="ife-display">
-                    <div class="ife-ring">
-                        <svg viewBox="0 0 120 120" width="260" height="260">
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="8"/>
-                            <circle cx="60" cy="60" r="50" fill="none" stroke="var(--accent-brand)" stroke-width="8" stroke-dasharray="251.2" stroke-dashoffset="75.4" stroke-linecap="round" style="transition:stroke-dashoffset 1.5s ease 0.5s;"/>
-                        </svg>
-                        <div class="ife-center">
-                            <div class="score">70</div>
-                            <div class="label">IFE médio</div>
+
+            <!-- Right: MacBook mockup with IFE dashboard -->
+            <div id="hero-edu-visual" style="position:relative;height:700px;z-index:1;display:flex;align-items:center;justify-content:center;">
+
+                <!-- perspective wrapper -->
+                <div class="fade-up" style="--reveal-delay:0.1s;perspective:1600px;perspective-origin:55% 50%;">
+
+                    <!-- 3D root -->
+                    <div style="position:relative;transform-style:preserve-3d;transform:rotateY(-20deg) rotateX(7deg);display:inline-block;">
+
+                        <!-- Screen bezel -->
+                        <div style="
+                            width:480px;
+                            background:linear-gradient(145deg,#3a3a42 0%,#2a2a32 30%,#1c1c24 60%,#101018 100%);
+                            border-radius:12px 12px 0 0;
+                            padding:10px 10px 0;
+                            position:relative;
+                            box-shadow:
+                                0 0 0 0.5px rgba(255,255,255,0.18),
+                                inset 0 1px 0 rgba(255,255,255,0.12),
+                                0 80px 160px rgba(0,0,0,0.9),
+                                0 40px 80px rgba(0,0,0,0.65),
+                                0 16px 32px rgba(0,0,0,0.5);
+                        ">
+                            <!-- Camera dot -->
+                            <div style="width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,0.15);margin:0 auto 6px;"></div>
+
+                            <!-- Screen -->
+                            <div style="background:#06060e;border-radius:6px 6px 0 0;overflow:hidden;position:relative;height:360px;display:flex;flex-direction:column;">
+
+                                <!-- Browser chrome -->
+                                <div style="flex-shrink:0;background:#0d0d18;padding:0.45rem 0.7rem;display:flex;align-items:center;gap:0.45rem;border-bottom:1px solid rgba(255,255,255,0.06);">
+                                    <div style="display:flex;gap:4px;">
+                                        <div style="width:9px;height:9px;border-radius:50%;background:#ef4444;opacity:0.7;"></div>
+                                        <div style="width:9px;height:9px;border-radius:50%;background:#f59e0b;opacity:0.7;"></div>
+                                        <div style="width:9px;height:9px;border-radius:50%;background:#28c840;opacity:0.7;"></div>
+                                    </div>
+                                    <div style="flex:1;background:rgba(255,255,255,0.06);border-radius:4px;padding:0.18rem 0.55rem;display:flex;align-items:center;gap:0.3rem;">
+                                        <span style="font-size:0.55rem;color:rgba(255,255,255,0.2);">🔒</span>
+                                        <span style="font-family:var(--font-mono);font-size:0.55rem;color:rgba(255,255,255,0.28);">app.fiter.com.br/educacao/dashboard</span>
+                                    </div>
+                                </div>
+
+                                <!-- App header -->
+                                <div style="flex-shrink:0;background:#0e0e1a;padding:0.6rem 0.9rem 0.5rem;border-bottom:1px solid rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:space-between;">
+                                    <div>
+                                        <div style="font-size:0.65rem;font-weight:700;color:#fff;letter-spacing:0.01em;">Fiter Educação</div>
+                                        <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);font-family:var(--font-mono);margin-top:1px;">Dashboard · S1 2026</div>
+                                    </div>
+                                    <div style="display:flex;align-items:center;gap:0.35rem;">
+                                        <span style="width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 7px rgba(16,185,129,0.65);"></span>
+                                        <span style="font-size:0.5rem;color:rgba(16,185,129,0.85);font-family:var(--font-mono);">ao vivo</span>
+                                    </div>
+                                </div>
+
+                                <!-- Dashboard body -->
+                                <div style="flex:1;background:#090914;padding:0.75rem 0.8rem;display:flex;flex-direction:column;gap:0.6rem;overflow:hidden;">
+
+                                    <!-- Score tiles -->
+                                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.45rem;">
+                                        <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.24);border-radius:8px;padding:0.6rem 0.4rem;text-align:center;">
+                                            <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:700;color:#10b981;line-height:1;">72</div>
+                                            <div style="font-size:0.48rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;line-height:1.3;">IFE médio</div>
+                                        </div>
+                                        <div style="background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.2);border-radius:8px;padding:0.6rem 0.4rem;text-align:center;">
+                                            <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:700;color:#3b82f6;line-height:1;">52%</div>
+                                            <div style="font-size:0.48rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;line-height:1.3;">Engajados</div>
+                                        </div>
+                                        <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.18);border-radius:8px;padding:0.6rem 0.4rem;text-align:center;">
+                                            <div style="font-family:var(--font-mono);font-size:1.2rem;font-weight:700;color:#ef4444;line-height:1;">20%</div>
+                                            <div style="font-size:0.48rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;line-height:1.3;">Em Risco</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Green sparkline -->
+                                    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:0.65rem 0.7rem;">
+                                        <div style="font-size:0.48rem;color:rgba(255,255,255,0.28);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">IFE — tendência semestral</div>
+                                        <svg width="100%" viewBox="0 0 420 52" fill="none" preserveAspectRatio="none" style="display:block;">
+                                            <defs>
+                                                <linearGradient id="sg-edu" x1="0" y1="0" x2="0" y2="1">
+                                                    <stop offset="0%" stop-color="#10b981" stop-opacity="0.3"/>
+                                                    <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+                                                </linearGradient>
+                                            </defs>
+                                            <polygon points="0,46 84,41 168,43 252,31 336,22 420,12 420,52 0,52" fill="url(#sg-edu)"/>
+                                            <polyline points="0,46 84,41 168,43 252,31 336,22 420,12" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                                            <circle cx="420" cy="12" r="3.5" fill="#10b981" filter="drop-shadow(0 0 5px #10b981)"/>
+                                        </svg>
+                                        <div style="display:flex;justify-content:space-between;margin-top:0.3rem;">
+                                            <span style="font-size:0.43rem;color:rgba(255,255,255,0.18);font-family:var(--font-mono);">S1 24</span>
+                                            <span style="font-size:0.43rem;color:rgba(255,255,255,0.18);font-family:var(--font-mono);">S2 24</span>
+                                            <span style="font-size:0.43rem;color:rgba(255,255,255,0.18);font-family:var(--font-mono);">S1 25</span>
+                                            <span style="font-size:0.43rem;color:rgba(255,255,255,0.18);font-family:var(--font-mono);">S2 25</span>
+                                            <span style="font-size:0.43rem;color:rgba(255,255,255,0.18);font-family:var(--font-mono);">S1 26</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Evasion alert -->
+                                    <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.25);border-radius:8px;padding:0.6rem 0.7rem;display:flex;align-items:flex-start;gap:0.45rem;">
+                                        <span style="font-size:0.85rem;flex-shrink:0;line-height:1.1;margin-top:0.05rem;">⚠</span>
+                                        <div style="flex:1;min-width:0;">
+                                            <div style="font-size:0.6rem;font-weight:600;color:#ef4444;line-height:1.2;">Evasão iminente detectada</div>
+                                            <div style="font-size:0.5rem;color:rgba(255,255,255,0.35);margin-top:0.18rem;line-height:1.5;">3 alunos · Turma ADS 3° · IFE caiu 22 pts em 3 semanas</div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Turma bars -->
+                                    <div style="display:flex;flex-direction:column;gap:0.38rem;">
+                                        <div style="font-size:0.46rem;color:rgba(255,255,255,0.22);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.12rem;">Por turma</div>
+                                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                                            <span style="font-size:0.48rem;color:rgba(255,255,255,0.28);font-family:var(--font-mono);width:62px;flex-shrink:0;">Dir. Civil 2°</span>
+                                            <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;"><div style="width:88%;height:100%;background:#10b981;border-radius:3px;"></div></div>
+                                            <span style="font-size:0.46rem;color:rgba(255,255,255,0.3);font-family:var(--font-mono);width:18px;text-align:right;">88</span>
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                                            <span style="font-size:0.48rem;color:rgba(255,255,255,0.28);font-family:var(--font-mono);width:62px;flex-shrink:0;">Enf. 2°</span>
+                                            <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;"><div style="width:76%;height:100%;background:#10b981;border-radius:3px;"></div></div>
+                                            <span style="font-size:0.46rem;color:rgba(255,255,255,0.3);font-family:var(--font-mono);width:18px;text-align:right;">76</span>
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                                            <span style="font-size:0.48rem;color:rgba(255,255,255,0.28);font-family:var(--font-mono);width:62px;flex-shrink:0;">ADS 3°</span>
+                                            <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;"><div style="width:44%;height:100%;background:#ef4444;border-radius:3px;"></div></div>
+                                            <span style="font-size:0.46rem;color:#ef4444;font-family:var(--font-mono);width:18px;text-align:right;">44</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- IA action card -->
+                                    <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.14);border-radius:8px;padding:0.65rem 0.75rem;margin-top:auto;">
+                                        <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.38rem;">
+                                            <span style="font-size:0.58rem;color:#10b981;">✦</span>
+                                            <span style="font-size:0.48rem;color:rgba(255,255,255,0.35);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.05em;">Ação gerada por IA</span>
+                                        </div>
+                                        <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);line-height:1.55;">Contatar coordenador da Turma ADS 3° antes de 10/06. Risco de evasão de 3 alunos confirmado.</div>
+                                    </div>
+
+                                </div>
+
+                            </div>
                         </div>
-                    </div>
-                    <div class="ife-legend">
-                        <div class="ife-legend-item"><span class="ife-legend-dot" style="background:var(--accent-brand);"></span>Engajado (70+)</div>
-                        <div class="ife-legend-item"><span class="ife-legend-dot" style="background:#f59e0b;"></span>Atenção (50-70)</div>
-                        <div class="ife-legend-item"><span class="ife-legend-dot" style="background:#ef4444;"></span>Risco (-50)</div>
+
+                        <!-- Laptop base/keyboard -->
+                        <div style="
+                            width:480px;
+                            height:22px;
+                            background:linear-gradient(180deg,#28282e 0%,#16161c 100%);
+                            border-radius:0 0 6px 6px;
+                            box-shadow:0 10px 40px rgba(0,0,0,0.7);
+                            display:flex;
+                            align-items:center;
+                            justify-content:center;
+                        ">
+                            <div style="width:90px;height:11px;background:rgba(255,255,255,0.05);border-radius:3px;border:0.5px solid rgba(255,255,255,0.07);"></div>
+                        </div>
+
+                        <!-- Right side 3D thickness -->
+                        <div style="
+                            position:absolute;
+                            left:480px;
+                            top:4%;
+                            width:12px;
+                            height:92%;
+                            transform-origin:left center;
+                            transform:rotateY(-90deg);
+                            background:linear-gradient(to right,rgba(50,50,58,0.9) 0%,rgba(22,22,28,1) 60%,rgba(10,10,16,1) 100%);
+                            border-radius:0 10px 10px 0;
+                        "></div>
+
                     </div>
                 </div>
+
+                <!-- Floating insight card -->
+                <div class="fade-up" style="--reveal-delay:0.5s;position:absolute;bottom:80px;left:calc(50% + 100px);z-index:10;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:1.25rem;width:220px;box-shadow:0 24px 60px rgba(0,0,0,0.7);">
+                    <div style="font-family:var(--font-mono);font-size:0.52rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">Alerta em tempo real</div>
+                    <div style="display:flex;align-items:center;gap:0.65rem;margin-bottom:0.65rem;">
+                        <span style="font-size:1.2rem;flex-shrink:0;">⚠</span>
+                        <div>
+                            <div style="font-size:0.72rem;font-weight:600;color:#ef4444;line-height:1.25;">Evasão detectada</div>
+                            <div style="font-size:0.6rem;color:var(--text-secondary);margin-top:0.15rem;">Turma ADS 3° · 3 alunos</div>
+                        </div>
+                    </div>
+                    <div style="height:1px;background:var(--border-subtle);margin-bottom:0.6rem;"></div>
+                    <div style="font-family:var(--font-mono);font-size:0.58rem;color:#10b981;">↑ 3 meses de antecedência</div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -194,7 +411,7 @@
                     Quase metade dos alunos<br>abandona antes de concluir.
                 </h2>
                 <p style="color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">
-                    60% das evasões acontecem no primeiro ano. O aluno não avisa que vai sair: ele simplesmente some. A pesquisa semestral detecta o problema quando ja virou estatistica.
+                    60% das evasões acontecem no primeiro ano. O aluno não avisa que vai sair: ele simplesmente some. A pesquisa semestral detecta o problema quando já virou estatística.
                 </p>
             </div>
             <div class="edu-stats-grid">
@@ -208,7 +425,7 @@
                 </div>
                 <div class="edu-stat-cell fade-up" style="--reveal-delay:0.2s;">
                     <div class="num">1 ano</div>
-                    <div class="desc">intervalo medio entre pesquisas de clima tradicionais</div>
+                    <div class="desc">intervalo médio entre pesquisas de clima tradicionais</div>
                 </div>
             </div>
         </div>
@@ -216,78 +433,511 @@
 
     <div class="ds-container px-6">
 
-        <!-- COMO A FITER RESOLVE -->
+        <!-- COMO FUNCIONA - Variante 2: sticky left + steps right -->
         <section class="ds-section" style="margin-bottom:8rem;">
-            <div class="text-center mb-12">
-                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Como funciona</p>
-                <h2 class="ds-section-title">Do dado a decisao em 3 passos</h2>
-            </div>
-            <div class="edu-solution-cards">
-                <div class="edu-solution-card fade-up" style="--reveal-delay:0s;">
-                    <div class="step">1</div>
-                    <h3>Medir o IFE semanalmente</h3>
-                    <p>Oito perguntas enviadas por WhatsApp. O aluno responde entre uma aula e outra. Sem app, sem login, sem friccao. 87% de taxa de resposta.</p>
+            <div class="impl-edu-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
+
+                <div style="position:sticky;top:6rem;">
+                    <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;" data-reveal>Como funciona</p>
+                    <h2 style="font-size:clamp(2rem,3vw,2.75rem);font-family:var(--font-serif);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;" data-reveal>Do dado à decisão em minutos.</h2>
+                    <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:2.5rem;">Três passos que transformam respostas de WhatsApp em retenção real.</p>
+
+                    <div class="chart-container">
+                        <div class="chart-bars">
+                            <div class="bar-row" style="--bar-delay:0s;">
+                                <span class="bar-label">Taxa de resposta</span>
+                                <div class="bar-track"><div class="bar-fill" style="--bar-target:87%;"></div></div>
+                                <span class="bar-value-label">87%</span>
+                            </div>
+                            <div class="bar-row" style="--bar-delay:0.1s;">
+                                <span class="bar-label">Redução de evasão</span>
+                                <div class="bar-track"><div class="bar-fill" style="--bar-target:73%;"></div></div>
+                                <span class="bar-value-label">73%</span>
+                            </div>
+                            <div class="bar-row" style="--bar-delay:0.2s;">
+                                <span class="bar-label">Aderência CNE 3/2025</span>
+                                <div class="bar-track"><div class="bar-fill" style="--bar-target:92%;"></div></div>
+                                <span class="bar-value-label">92%</span>
+                            </div>
+                            <div class="bar-row" style="--bar-delay:0.3s;">
+                                <span class="bar-label">Engajamento 1 semestre</span>
+                                <div class="bar-track"><div class="bar-fill" style="--bar-target:60%;"></div></div>
+                                <span class="bar-value-label">+60%</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="edu-solution-card fade-up" style="--reveal-delay:0.12s;">
-                    <div class="step">2</div>
-                    <h3>IA alerta antes da evasao</h3>
-                    <p>O algoritmo detecta padroes de queda no IFE e alerta o coordenador com ate 3 meses de antecedencia. O plano de acao ja vem sugerido.</p>
+
+                <div class="steps-v" data-steps>
+                    <div class="step-v" style="--step-delay:0s">
+                        <div class="step-v-num">01</div>
+                        <div class="step-v-content">
+                            <p class="step-v-tag">Medição</p>
+                            <h3 class="step-v-title">Medir o IFE semanalmente</h3>
+                            <p class="step-v-body">Oito perguntas enviadas por WhatsApp. O aluno responde entre uma aula e outra. Sem app, sem login, sem fricção. 87% de taxa de resposta.</p>
+                        </div>
+                    </div>
+                    <div class="step-v" style="--step-delay:0.1s">
+                        <div class="step-v-num">02</div>
+                        <div class="step-v-content">
+                            <p class="step-v-tag">Alerta</p>
+                            <h3 class="step-v-title">IA alerta antes da evasão</h3>
+                            <p class="step-v-body">O algoritmo detecta padrões de queda no IFE e alerta o coordenador com até 3 meses de antecedência. O plano de ação já vem sugerido.</p>
+                        </div>
+                    </div>
+                    <div class="step-v" style="--step-delay:0.2s">
+                        <div class="step-v-num">03</div>
+                        <div class="step-v-content">
+                            <p class="step-v-tag">Conformidade</p>
+                            <h3 class="step-v-title">Relatórios prontos para o MEC</h3>
+                            <p class="step-v-body">Documentação automática alinhada à CNE 3/2025. Pronto para auditoria sem retrabalho. A conformidade vira consequência, não uma corrida.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="edu-solution-card fade-up" style="--reveal-delay:0.24s;">
-                    <div class="step">3</div>
-                    <h3>Relatorios para o MEC</h3>
-                    <p>Documentacao automatica alinhada a CNE 3/2025. Pronto para auditoria sem retrabalho. A conformidade vira consequencia, nao uma corrida.</p>
-                </div>
+
             </div>
         </section>
 
-        <!-- INSTITUIÇÕES (marquee) -->
+        <!-- INSTITUIÇÕES (marquee - DS components) -->
         <section style="margin-bottom:8rem;margin-left:-2rem;margin-right:-2rem;padding:4rem 5vw;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);overflow:hidden;background:var(--bg-surface);">
             <div class="flex flex-col items-center text-center mb-10">
                 <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Instituições que confiam na Fiter</p>
                 <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.25rem);color:var(--text-primary);font-weight:700;letter-spacing:-0.02em;">+500.000 alunos impactados</h2>
             </div>
-            <div class="marquee-mask" style="overflow:hidden;white-space:nowrap;position:relative;">
-                <div class="logo-marquee">
-                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:800;">USP</div>
-                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
-                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Kroton</div>
-                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">Mackenzie</div>
-                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:700;letter-spacing:-1px;">ANEC</div>
-                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">UNIP</div>
-                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:800;">USP</div>
-                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
-                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Kroton</div>
-                    <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">Mackenzie</div>
-                    <div class="logo-item" style="font-family:var(--font-mono);font-weight:700;letter-spacing:-1px;">ANEC</div>
-                    <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">UNIP</div>
+            <div class="sp-marquee-wrap">
+                <div class="sp-marquee-track">
+                    <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">ANEC</div><div class="sp-logo-sub">Associação</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">UNIP</div><div class="sp-logo-sub">Universidade</div></div>
+                    <!-- duplicate set for seamless loop -->
+                    <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">ANEC</div><div class="sp-logo-sub">Associação</div></div>
+                    <div class="sp-marquee-item"><div class="sp-logo-text">UNIP</div><div class="sp-logo-sub">Universidade</div></div>
                 </div>
             </div>
         </section>
 
-        <!-- MÓDULOS (showcase accordion) -->
-        <section class="ds-section" style="margin-bottom:8rem;">
-            <div class="text-center mb-12">
-                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Modulos Pulse Educação</p>
-                <h2 class="ds-section-title">Cada modulo cobre uma frente da retencao</h2>
+        <!-- IFE — Índice de Felicidade na Educação -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
+                <div>
+                    <h2 class="ds-section-title">IFE — Índice de Felicidade na Educação</h2>
+                    <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">Oito perguntas que<br>revelam tudo.</p>
+                    <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:2rem;">Métrica proprietária calculada por IA a partir de 8 perguntas via WhatsApp — 2 minutos para o aluno. Dashboard ao vivo com IFE por turma, curso e campus. Sem app, sem login, sem projeto de TI. Base validada por USP, Fatec e Mackenzie.</p>
+                    <a href="/produtos/pulse/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;">Conhecer o IFE <span>→</span></a>
+                </div>
+                <div style="background:#09090f;border:1px solid rgba(16,185,129,0.18);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
+                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                        <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">IFE · Dashboard</div>
+                    </div>
+                    <div style="background:#0e0e1a;padding:0.7rem 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div>
+                            <div style="font-size:0.68rem;font-weight:700;color:#fff;">Fatec SP · Coordenação Geral</div>
+                            <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Diagnóstico · S1 2026</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.35rem;">
+                            <span style="width:7px;height:7px;border-radius:50%;background:#10b981;box-shadow:0 0 7px rgba(16,185,129,0.65);"></span>
+                            <span style="font-size:0.5rem;color:rgba(16,185,129,0.85);">ao vivo</span>
+                        </div>
+                    </div>
+                    <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.9rem;">
+                        <div style="display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center;padding-bottom:0.9rem;border-bottom:1px solid rgba(255,255,255,0.05);">
+                            <div style="text-align:center;">
+                                <div style="font-family:var(--font-serif);font-size:3.25rem;font-weight:800;color:#10b981;line-height:1;">87</div>
+                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-top:0.18rem;">IFE médio</div>
+                                <div style="font-size:0.55rem;color:#10b981;margin-top:0.1rem;">↑ +4 pts</div>
+                            </div>
+                            <div>
+                                <div style="font-size:0.48rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.4rem;">Evolução semestral</div>
+                                <svg width="100%" viewBox="0 0 260 50" fill="none" preserveAspectRatio="none" style="display:block;margin-bottom:0.3rem;">
+                                    <defs><linearGradient id="ife-sp" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10b981" stop-opacity="0.22"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs>
+                                    <polygon points="0,42 52,38 104,40 156,26 208,18 260,10 260,50 0,50" fill="url(#ife-sp)"/>
+                                    <polyline points="0,42 52,38 104,40 156,26 208,18 260,10" stroke="#10b981" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+                                    <circle cx="260" cy="10" r="3" fill="#10b981" filter="drop-shadow(0 0 4px #10b981)"/>
+                                </svg>
+                                <div style="display:flex;justify-content:space-between;">
+                                    <span style="font-size:0.44rem;color:rgba(255,255,255,0.18);">S1 24</span>
+                                    <span style="font-size:0.44rem;color:rgba(255,255,255,0.18);">S2 24</span>
+                                    <span style="font-size:0.44rem;color:rgba(255,255,255,0.18);">S1 25</span>
+                                    <span style="font-size:0.44rem;color:rgba(255,255,255,0.18);">S2 25</span>
+                                    <span style="font-size:0.44rem;color:rgba(255,255,255,0.18);">S1 26</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.45rem;">
+                                    <span style="font-size:0.46rem;color:rgba(255,255,255,0.22);">Respondentes</span>
+                                    <span style="font-size:0.52rem;color:#10b981;font-weight:600;">1.247 / 1.430 (87%)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="font-size:0.48rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">IFE por curso</div>
+                            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.42rem;">
+                                <span style="font-size:0.5rem;color:rgba(255,255,255,0.3);width:64px;flex-shrink:0;">Engenharia</span>
+                                <div style="flex:1;height:5px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;"><div style="width:91%;height:100%;background:#10b981;border-radius:3px;"></div></div>
+                                <span style="font-size:0.5rem;color:#10b981;">91 ↑</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.42rem;">
+                                <span style="font-size:0.5rem;color:rgba(255,255,255,0.3);width:64px;flex-shrink:0;">ADS</span>
+                                <div style="flex:1;height:5px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;"><div style="width:84%;height:100%;background:#10b981;border-radius:3px;"></div></div>
+                                <span style="font-size:0.5rem;color:#10b981;">84 →</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.42rem;">
+                                <span style="font-size:0.5rem;color:rgba(255,255,255,0.3);width:64px;flex-shrink:0;">Direito</span>
+                                <div style="flex:1;height:5px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;"><div style="width:78%;height:100%;background:#3b82f6;border-radius:3px;"></div></div>
+                                <span style="font-size:0.5rem;color:#3b82f6;">78 →</span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:0.6rem;">
+                                <span style="font-size:0.5rem;color:rgba(255,255,255,0.3);width:64px;flex-shrink:0;">Admin</span>
+                                <div style="flex:1;height:5px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;"><div style="width:62%;height:100%;background:#f59e0b;border-radius:3px;"></div></div>
+                                <span style="font-size:0.5rem;color:#f59e0b;">62 ↓</span>
+                            </div>
+                        </div>
+                        <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.14);border-radius:10px;padding:0.75rem 0.9rem;display:flex;align-items:flex-start;gap:0.5rem;">
+                            <span style="font-size:0.65rem;color:#10b981;flex-shrink:0;line-height:1.2;">✦</span>
+                            <div>
+                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem;">Insight gerado por IA</div>
+                                <div style="font-size:0.6rem;color:rgba(255,255,255,0.65);line-height:1.55;">Admin em queda consistente há 2 semestres. Recomenda-se revisão do suporte pedagógico antes do S2.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="showcase-list">
+        </section>
+
+        <!-- Predição de Evasão -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
+                <div style="order:2;">
+                    <h2 class="ds-section-title">Predição de Evasão — IA</h2>
+                    <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">3 meses antes.<br>Não depois.</p>
+                    <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:2rem;">A IA analisa a trajetória do IFE e identifica padrões de risco com até 3 meses de antecedência. O coordenador recebe um alerta no WhatsApp com o nome do aluno, o score atual e o plano de ação sugerido — antes que ele desapareça.</p>
+                    <a href="/produtos/pulse/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;">Ver o módulo <span>→</span></a>
+                </div>
+                <div style="order:1;background:#09090f;border:1px solid rgba(239,68,68,0.18);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
+                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                        <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">Alerta de Evasão</div>
+                    </div>
+                    <div style="background:#0e0e1a;padding:0.7rem 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div>
+                            <div style="font-size:0.68rem;font-weight:700;color:#fff;">Monitoramento IA</div>
+                            <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Alertas em tempo real · S1 2026</div>
+                        </div>
+                        <div style="background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.35);border-radius:5px;padding:0.22rem 0.55rem;">
+                            <span style="font-size:0.52rem;color:#ef4444;font-weight:600;">3 alertas hoje</span>
+                        </div>
+                    </div>
+                    <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.75rem;">
+                        <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.22);border-radius:10px;padding:0.75rem 0.9rem;">
+                            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.5rem;">
+                                <div>
+                                    <div style="font-size:0.65rem;font-weight:600;color:rgba(255,255,255,0.85);">Ana Souza</div>
+                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-top:0.08rem;">ADS 3° sem. · IFE atual: 38</div>
+                                </div>
+                                <div style="background:rgba(239,68,68,0.2);border:1px solid rgba(239,68,68,0.45);border-radius:4px;padding:0.18rem 0.5rem;">
+                                    <span style="font-size:0.48rem;color:#ef4444;font-weight:700;">CRÍTICO</span>
+                                </div>
+                            </div>
+                            <svg width="100%" viewBox="0 0 260 30" fill="none" preserveAspectRatio="none" style="display:block;margin-bottom:0.35rem;">
+                                <polyline points="0,5 52,6 104,9 156,16 208,23 260,28" stroke="#ef4444" stroke-width="1.5" fill="none" stroke-linejoin="round" opacity="0.85"/>
+                                <circle cx="260" cy="28" r="3" fill="#ef4444"/>
+                            </svg>
+                            <div style="display:flex;justify-content:space-between;align-items:center;">
+                                <span style="font-size:0.46rem;color:rgba(255,255,255,0.22);">Queda de 22 pts em 3 semanas</span>
+                                <div style="display:flex;align-items:center;gap:0.3rem;">
+                                    <span style="font-size:0.46rem;color:rgba(239,68,68,0.65);">Risco:</span>
+                                    <span style="font-size:0.58rem;color:#ef4444;font-weight:700;">78%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:0.7rem 0.9rem;display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <div style="font-size:0.62rem;font-weight:600;color:rgba(255,255,255,0.78);">Carlos Lima</div>
+                                <div style="font-size:0.48rem;color:rgba(255,255,255,0.3);margin-top:0.08rem;">Admin 4° · IFE: 51 · queda -11 pts · 42% risco</div>
+                            </div>
+                            <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:4px;padding:0.18rem 0.5rem;">
+                                <span style="font-size:0.48rem;color:#f59e0b;font-weight:600;">ALERTA</span>
+                            </div>
+                        </div>
+                        <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.15);border-radius:10px;padding:0.7rem 0.9rem;display:flex;justify-content:space-between;align-items:center;">
+                            <div>
+                                <div style="font-size:0.62rem;font-weight:600;color:rgba(255,255,255,0.78);">Bruna Carvalho</div>
+                                <div style="font-size:0.48rem;color:rgba(255,255,255,0.3);margin-top:0.08rem;">Engenharia 2° · IFE: 74 · estável</div>
+                            </div>
+                            <div style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);border-radius:4px;padding:0.18rem 0.5rem;">
+                                <span style="font-size:0.48rem;color:#10b981;font-weight:600;">OK</span>
+                            </div>
+                        </div>
+                        <div style="background:rgba(37,211,102,0.06);border:1px solid rgba(37,211,102,0.16);border-radius:10px;padding:0.65rem 0.9rem;display:flex;align-items:center;gap:0.55rem;">
+                            <span style="font-size:1rem;flex-shrink:0;">💬</span>
+                            <div style="flex:1;min-width:0;">
+                                <div style="font-size:0.55rem;font-weight:600;color:rgba(255,255,255,0.65);">WhatsApp enviado para Coord. ADS</div>
+                                <div style="font-size:0.48rem;color:rgba(255,255,255,0.28);margin-top:0.08rem;">Agora mesmo · Ana Souza em risco crítico</div>
+                            </div>
+                        </div>
+                        <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.12);border-radius:10px;padding:0.7rem 0.9rem;display:flex;align-items:flex-start;gap:0.5rem;">
+                            <span style="font-size:0.6rem;color:#10b981;flex-shrink:0;line-height:1.2;">✦</span>
+                            <div>
+                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.28rem;">Ação gerada por IA</div>
+                                <div style="font-size:0.6rem;color:rgba(255,255,255,0.62);line-height:1.55;">Encaminhar Ana Souza para psicopedagogia. Probabilidade de recuperação com intervenção: 84%.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CNE 3/2025 — Conformidade -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
+                <div>
+                    <h2 class="ds-section-title">Conformidade — CNE 3/2025</h2>
+                    <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">Adequação automática.<br>Sem retrabalho.</p>
+                    <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:2rem;">O IFE já mapeia os riscos psicossociais exigidos pela CNE 3/2025. Os laudos são gerados por IA e ficam disponíveis para auditoria em minutos — não semanas de trabalho manual. Conformidade verificada a cada ciclo, sem depender de consultoria externa.</p>
+                    <a href="/contato/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;">Adequar minha instituição <span>→</span></a>
+                </div>
+                <div style="background:#09090f;border:1px solid rgba(245,158,11,0.18);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
+                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                        <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">Conformidade MEC</div>
+                    </div>
+                    <div style="background:#0e0e1a;padding:0.7rem 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div>
+                            <div style="font-size:0.52rem;color:rgba(245,158,11,0.75);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:2px;">LAUDO CNE 3/2025 · GERADO POR IA</div>
+                            <div style="font-size:0.7rem;font-weight:700;color:#fff;">Fatec São Paulo</div>
+                        </div>
+                        <div style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.4);border-radius:6px;padding:0.3rem 0.6rem;">
+                            <span style="font-size:0.55rem;color:#10b981;font-weight:700;">✓ CONFORME</span>
+                        </div>
+                    </div>
+                    <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.85rem;">
+                        <div>
+                            <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Requisitos CNE 3/2025</div>
+                            <div style="display:flex;flex-direction:column;gap:0.35rem;">
+                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:8px;padding:0.5rem 0.75rem;display:flex;justify-content:space-between;align-items:center;">
+                                    <span style="font-size:0.55rem;color:rgba(255,255,255,0.62);">Mapeamento de riscos psicossociais</span>
+                                    <span style="font-size:0.68rem;color:#10b981;">✓</span>
+                                </div>
+                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:8px;padding:0.5rem 0.75rem;display:flex;justify-content:space-between;align-items:center;">
+                                    <span style="font-size:0.55rem;color:rgba(255,255,255,0.62);">Acompanhamento psicopedagógico contínuo</span>
+                                    <span style="font-size:0.68rem;color:#10b981;">✓</span>
+                                </div>
+                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:8px;padding:0.5rem 0.75rem;display:flex;justify-content:space-between;align-items:center;">
+                                    <span style="font-size:0.55rem;color:rgba(255,255,255,0.62);">Relatório semestral para o MEC</span>
+                                    <span style="font-size:0.68rem;color:#10b981;">✓</span>
+                                </div>
+                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:8px;padding:0.5rem 0.75rem;display:flex;justify-content:space-between;align-items:center;">
+                                    <span style="font-size:0.55rem;color:rgba(255,255,255,0.62);">Capacitação docente em saúde mental</span>
+                                    <span style="font-size:0.68rem;color:#10b981;">✓</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.2);border-radius:10px;padding:0.75rem 0.9rem;">
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.4rem;">
+                                <span style="font-size:0.5rem;color:rgba(245,158,11,0.7);text-transform:uppercase;letter-spacing:0.05em;">Prazo legal CNE 3/2025</span>
+                                <span style="font-size:0.6rem;color:#f59e0b;font-weight:600;">Dezembro 2025</span>
+                            </div>
+                            <div style="height:5px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;margin-bottom:0.3rem;">
+                                <div style="width:100%;height:100%;background:#10b981;border-radius:3px;"></div>
+                            </div>
+                            <div style="font-size:0.46rem;color:#10b981;">✓ Instituição regularizada dentro do prazo</div>
+                        </div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
+                            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:0.65rem;text-align:center;">
+                                <div style="font-size:1.5rem;font-weight:700;color:#f59e0b;line-height:1;">847</div>
+                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.15rem;">laudos gerados</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:0.65rem;text-align:center;">
+                                <div style="font-size:1.5rem;font-weight:700;color:#10b981;line-height:1;">92%</div>
+                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.15rem;">menos tempo</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:0.65rem;text-align:center;">
+                                <div style="font-size:1.5rem;font-weight:700;color:#3b82f6;line-height:1;">3min</div>
+                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.15rem;">vs 40h manual</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portal do Coordenador -->
+        <section class="ds-section" style="margin-bottom: 8rem;">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
+                <div style="order:2;">
+                    <h2 class="ds-section-title">Portal do Coordenador — Gestão Acadêmica</h2>
+                    <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">Tudo que o coordenador<br>precisa. Em um lugar.</p>
+                    <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:2rem;">Ranking de turmas por IFE, histórico semestral, alertas de risco com nome e plano de ação gerado por IA. O coordenador sabe exatamente qual turma priorizar — antes que o aluno desapareça.</p>
+                    <a href="/produtos/portal-de-transparencia/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;">Ver o portal <span>→</span></a>
+                </div>
+                <div style="order:1;background:#09090f;border:1px solid rgba(139,92,246,0.18);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
+                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
+                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                        <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">Portal do Coordenador</div>
+                    </div>
+                    <div style="background:#0e0e1a;padding:0.7rem 1.1rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div>
+                            <div style="font-size:0.68rem;font-weight:700;color:#fff;">Coordenação Geral</div>
+                            <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Fatec SP · S1 2026</div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:0.5rem;">
+                            <div style="text-align:right;">
+                                <div style="font-size:1rem;font-weight:700;color:#a78bfa;line-height:1;">78</div>
+                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);">IFE geral</div>
+                            </div>
+                            <span style="font-size:0.7rem;color:#10b981;">↑</span>
+                        </div>
+                    </div>
+                    <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.7rem;">
+                        <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;">Ranking por turma</div>
+                        <div style="display:flex;flex-direction:column;gap:0.38rem;">
+                            <div style="background:rgba(16,185,129,0.07);border:1px solid rgba(16,185,129,0.18);border-radius:8px;padding:0.55rem 0.8rem;display:flex;justify-content:space-between;align-items:center;">
+                                <div>
+                                    <div style="font-size:0.62rem;font-weight:600;color:rgba(255,255,255,0.82);">Dir. Civil 2° sem.</div>
+                                    <div style="font-size:0.46rem;color:rgba(255,255,255,0.28);margin-top:0.05rem;">38 alunos · 92% respondentes</div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:0.38rem;">
+                                    <span style="font-size:0.88rem;font-weight:700;color:#10b981;line-height:1;">88</span>
+                                    <span style="font-size:0.6rem;color:#10b981;">↑ +3</span>
+                                </div>
+                            </div>
+                            <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.16);border-radius:8px;padding:0.55rem 0.8rem;display:flex;justify-content:space-between;align-items:center;">
+                                <div>
+                                    <div style="font-size:0.62rem;font-weight:600;color:rgba(255,255,255,0.82);">Enf. 2° sem.</div>
+                                    <div style="font-size:0.46rem;color:rgba(255,255,255,0.28);margin-top:0.05rem;">45 alunos · 88% respondentes</div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:0.38rem;">
+                                    <span style="font-size:0.88rem;font-weight:700;color:#3b82f6;line-height:1;">76</span>
+                                    <span style="font-size:0.6rem;color:rgba(255,255,255,0.3);">→</span>
+                                </div>
+                            </div>
+                            <div style="background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.18);border-radius:8px;padding:0.55rem 0.8rem;display:flex;justify-content:space-between;align-items:center;">
+                                <div>
+                                    <div style="font-size:0.62rem;font-weight:600;color:rgba(255,255,255,0.82);">ADS 3° sem.</div>
+                                    <div style="font-size:0.46rem;color:rgba(255,255,255,0.28);margin-top:0.05rem;">32 alunos · 3 em risco de evasão</div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:0.38rem;">
+                                    <span style="font-size:0.88rem;font-weight:700;color:#f59e0b;line-height:1;">62</span>
+                                    <span style="font-size:0.6rem;color:#f59e0b;">↓ -9</span>
+                                </div>
+                            </div>
+                            <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:8px;padding:0.55rem 0.8rem;display:flex;justify-content:space-between;align-items:center;">
+                                <div>
+                                    <div style="font-size:0.62rem;font-weight:600;color:rgba(255,255,255,0.82);">Admin 4° sem.</div>
+                                    <div style="font-size:0.46rem;color:#ef4444;margin-top:0.05rem;">41 alunos · CRÍTICO · intervenção urgente</div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:0.38rem;">
+                                    <span style="font-size:0.88rem;font-weight:700;color:#ef4444;line-height:1;">44</span>
+                                    <span style="font-size:0.6rem;color:#ef4444;">↓↓</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="background:rgba(139,92,246,0.07);border:1px solid rgba(139,92,246,0.18);border-radius:10px;padding:0.8rem 0.9rem;display:flex;align-items:flex-start;gap:0.55rem;">
+                            <span style="font-size:0.65rem;color:#a78bfa;flex-shrink:0;line-height:1.2;">✦</span>
+                            <div>
+                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem;">Plano de ação · IA</div>
+                                <div style="font-size:0.6rem;color:rgba(255,255,255,0.65);line-height:1.55;">2 turmas críticas. Contatar coordenadores de ADS 3° e Admin 4° antes de 15/06. Risco de evasão em 5 alunos confirmado.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- hidden legacy accordion -->
+        <div style="display:none">
                 <div class="showcase-row is-open">
                     <div class="showcase-num">01</div>
                     <div class="showcase-content">
-                        <div class="showcase-collapsed-tag">Indice de Felicidade na Educação</div>
-                        <div class="showcase-tag">Indice de Felicidade na Educação</div>
+                        <div class="showcase-collapsed-tag">Índice de Felicidade na Educação</div>
+                        <div class="showcase-tag">Índice de Felicidade na Educação</div>
                         <h3 class="showcase-heading">IFE</h3>
-                        <p class="showcase-desc">Metrica proprietaria que calcula o bem-estar academico em tempo real. Dashboard por turma, curso e instituicao. 87% de taxa de resposta. Base validada por USP e Mackenzie.</p>
+                        <p class="showcase-desc">Métrica proprietária que calcula o bem-estar acadêmico em tempo real. Dashboard por turma, curso e instituição. 87% de taxa de resposta. Base validada por USP e Mackenzie.</p>
                         <a href="/produtos/pulse/" class="showcase-cta">Conhecer o IFE</a>
                     </div>
                     <div class="showcase-visual">
                         <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(16,185,129,0.04),rgba(16,185,129,0.01));">
                             <div class="showcase-visual-grid"></div>
                             <div class="showcase-visual-bg">
-                                <div style="text-align:center;">
-                                    <div style="font-family:var(--font-serif);font-size:3.5rem;font-weight:800;color:var(--accent-brand);line-height:1;">87%</div>
-                                    <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;">taxa de resposta</div>
+                                <div style="background:#09090f;border:1px solid rgba(16,185,129,0.2);border-radius:12px;overflow:hidden;font-family:var(--font-mono);width:100%;max-width:360px;margin:0 auto;">
+                                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.55rem 0.9rem;display:flex;align-items:center;gap:0.4rem;">
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                                        <div style="flex:1;margin:0 0.6rem;background:rgba(255,255,255,0.06);border-radius:5px;padding:0.2rem 0.6rem;font-size:0.5rem;color:rgba(255,255,255,0.3);">IFE · Dashboard</div>
+                                    </div>
+                                    <div style="background:#0e0e1a;padding:0.5rem 0.9rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                                        <div style="font-size:0.58rem;font-weight:700;color:#fff;">Fatec SP</div>
+                                        <div style="display:flex;align-items:center;gap:0.3rem;">
+                                            <span style="width:6px;height:6px;border-radius:50%;background:#10b981;box-shadow:0 0 5px rgba(16,185,129,0.6);"></span>
+                                            <span style="font-size:0.46rem;color:rgba(16,185,129,0.8);">ao vivo · S1 2026</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding:0.9rem 1rem;display:flex;flex-direction:column;gap:0.65rem;">
+                                        <div style="display:grid;grid-template-columns:auto 1fr;gap:0.75rem;align-items:center;padding-bottom:0.65rem;border-bottom:1px solid rgba(255,255,255,0.05);">
+                                            <div style="text-align:center;">
+                                                <div style="font-family:var(--font-serif);font-size:2.75rem;font-weight:800;color:#10b981;line-height:1;">87</div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.12rem;">IFE médio</div>
+                                                <div style="font-size:0.48rem;color:#10b981;margin-top:0.1rem;">↑ +4 pts</div>
+                                            </div>
+                                            <div>
+                                                <div style="font-size:0.42rem;color:rgba(255,255,255,0.22);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem;">Evolução semestral</div>
+                                                <svg width="100%" viewBox="0 0 160 36" fill="none" preserveAspectRatio="none" style="display:block;margin-bottom:0.2rem;">
+                                                    <defs><linearGradient id="ife-g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10b981" stop-opacity="0.25"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs>
+                                                    <polygon points="0,30 32,27 64,28 96,18 128,12 160,7 160,36 0,36" fill="url(#ife-g1)"/>
+                                                    <polyline points="0,30 32,27 64,28 96,18 128,12 160,7" stroke="#10b981" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                                                    <circle cx="160" cy="7" r="2.5" fill="#10b981"/>
+                                                </svg>
+                                                <div style="display:flex;justify-content:space-between;">
+                                                    <span style="font-size:0.38rem;color:rgba(255,255,255,0.16);">S1 24</span>
+                                                    <span style="font-size:0.38rem;color:rgba(255,255,255,0.16);">S2 24</span>
+                                                    <span style="font-size:0.38rem;color:rgba(255,255,255,0.16);">S1 25</span>
+                                                    <span style="font-size:0.38rem;color:rgba(255,255,255,0.16);">S2 25</span>
+                                                    <span style="font-size:0.38rem;color:rgba(255,255,255,0.16);">S1 26</span>
+                                                </div>
+                                                <div style="display:flex;justify-content:space-between;align-items:center;margin-top:0.35rem;">
+                                                    <span style="font-size:0.42rem;color:rgba(255,255,255,0.22);">Respondentes</span>
+                                                    <span style="font-size:0.48rem;color:#10b981;">1.247 / 1.430</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div style="font-size:0.42rem;color:rgba(255,255,255,0.22);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.38rem;">Por curso</div>
+                                            <div style="display:flex;align-items:center;gap:0.45rem;margin-bottom:0.32rem;">
+                                                <span style="font-size:0.46rem;color:rgba(255,255,255,0.28);width:58px;flex-shrink:0;">Engenharia</span>
+                                                <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;"><div style="width:91%;height:100%;background:#10b981;border-radius:3px;"></div></div>
+                                                <span style="font-size:0.46rem;color:#10b981;">91 ↑</span>
+                                            </div>
+                                            <div style="display:flex;align-items:center;gap:0.45rem;margin-bottom:0.32rem;">
+                                                <span style="font-size:0.46rem;color:rgba(255,255,255,0.28);width:58px;flex-shrink:0;">ADS</span>
+                                                <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;"><div style="width:84%;height:100%;background:#10b981;border-radius:3px;"></div></div>
+                                                <span style="font-size:0.46rem;color:#10b981;">84 →</span>
+                                            </div>
+                                            <div style="display:flex;align-items:center;gap:0.45rem;">
+                                                <span style="font-size:0.46rem;color:rgba(255,255,255,0.28);width:58px;flex-shrink:0;">Admin</span>
+                                                <div style="flex:1;height:4px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;"><div style="width:62%;height:100%;background:#f59e0b;border-radius:3px;"></div></div>
+                                                <span style="font-size:0.46rem;color:#f59e0b;">62 ↓</span>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.14);border-radius:7px;padding:0.5rem 0.65rem;display:flex;align-items:flex-start;gap:0.4rem;">
+                                            <span style="font-size:0.52rem;color:#10b981;flex-shrink:0;margin-top:0.05rem;">✦</span>
+                                            <span style="font-size:0.48rem;color:rgba(255,255,255,0.58);line-height:1.5;">Admin precisa de atenção. IFE caiu 6 pts em 2 semestres. Recomenda-se revisão do suporte pedagógico.</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -296,19 +946,76 @@
                 <div class="showcase-row">
                     <div class="showcase-num">02</div>
                     <div class="showcase-content">
-                        <div class="showcase-collapsed-tag">Predicao de evasao</div>
-                        <div class="showcase-tag">Predicao</div>
-                        <h3 class="showcase-heading">Alerta de Evasao</h3>
-                        <p class="showcase-desc">IA treinada com milhares de alunos identifica padroes de risco com ate 3 meses de antecedencia. Coordenadores recebem alertas no WhatsApp com planos de acao sugeridos.</p>
-                        <a href="/produtos/pulse/" class="showcase-cta">Ver modulo</a>
+                        <div class="showcase-collapsed-tag">Predição de evasão</div>
+                        <div class="showcase-tag">Predição</div>
+                        <h3 class="showcase-heading">Alerta de Evasão</h3>
+                        <p class="showcase-desc">IA treinada com milhares de alunos identifica padrões de risco com até 3 meses de antecedência. Coordenadores recebem alertas no WhatsApp com planos de ação sugeridos.</p>
+                        <a href="/produtos/pulse/" class="showcase-cta">Ver módulo</a>
                     </div>
                     <div class="showcase-visual">
                         <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(239,68,68,0.04),rgba(239,68,68,0.01));">
                             <div class="showcase-visual-grid"></div>
                             <div class="showcase-visual-bg">
-                                <div style="text-align:center;">
-                                    <div style="font-family:var(--font-serif);font-size:3.5rem;font-weight:800;color:#ef4444;line-height:1;">3</div>
-                                    <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;">meses de antecedencia</div>
+                                <div style="background:#09090f;border:1px solid rgba(239,68,68,0.2);border-radius:12px;overflow:hidden;font-family:var(--font-mono);width:100%;max-width:360px;margin:0 auto;">
+                                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.55rem 0.9rem;display:flex;align-items:center;gap:0.4rem;">
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                                        <div style="flex:1;margin:0 0.6rem;background:rgba(255,255,255,0.06);border-radius:5px;padding:0.2rem 0.6rem;font-size:0.5rem;color:rgba(255,255,255,0.3);">Alerta de Evasão</div>
+                                    </div>
+                                    <div style="background:#0e0e1a;padding:0.5rem 0.9rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                                        <span style="font-size:0.58rem;font-weight:700;color:#fff;">Monitoramento IA</span>
+                                        <div style="background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.35);border-radius:4px;padding:0.15rem 0.45rem;">
+                                            <span style="font-size:0.46rem;color:#ef4444;font-weight:600;">3 alertas hoje</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding:0.85rem 1rem;display:flex;flex-direction:column;gap:0.5rem;">
+                                        <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.22);border-radius:9px;padding:0.6rem 0.75rem;">
+                                            <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.35rem;">
+                                                <div>
+                                                    <div style="font-size:0.6rem;font-weight:600;color:rgba(255,255,255,0.8);">Ana Souza</div>
+                                                    <div style="font-size:0.46rem;color:rgba(255,255,255,0.3);margin-top:0.06rem;">ADS 3° sem. · IFE: 38</div>
+                                                </div>
+                                                <div style="background:rgba(239,68,68,0.2);border:1px solid rgba(239,68,68,0.45);border-radius:4px;padding:0.15rem 0.45rem;">
+                                                    <span style="font-size:0.44rem;color:#ef4444;font-weight:700;">CRÍTICO</span>
+                                                </div>
+                                            </div>
+                                            <svg width="100%" viewBox="0 0 200 24" fill="none" preserveAspectRatio="none" style="display:block;margin-bottom:0.28rem;">
+                                                <polyline points="0,4 40,5 80,8 120,14 160,20 200,23" stroke="#ef4444" stroke-width="1.4" fill="none" stroke-linejoin="round" opacity="0.8"/>
+                                                <circle cx="200" cy="23" r="2.5" fill="#ef4444"/>
+                                            </svg>
+                                            <div style="display:flex;justify-content:space-between;align-items:center;">
+                                                <span style="font-size:0.42rem;color:rgba(255,255,255,0.2);">Queda -22 pts em 3 semanas</span>
+                                                <div style="display:flex;align-items:center;gap:0.3rem;">
+                                                    <span style="font-size:0.44rem;color:rgba(239,68,68,0.65);">Risco:</span>
+                                                    <span style="font-size:0.52rem;color:#ef4444;font-weight:700;">78%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.2);border-radius:9px;padding:0.55rem 0.75rem;display:flex;justify-content:space-between;align-items:center;">
+                                            <div>
+                                                <div style="font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.75);">Carlos Lima</div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.06rem;">Admin 4° · IFE: 51 · queda -11 pts</div>
+                                            </div>
+                                            <div style="text-align:right;">
+                                                <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:4px;padding:0.15rem 0.45rem;margin-bottom:0.18rem;">
+                                                    <span style="font-size:0.44rem;color:#f59e0b;font-weight:600;">ALERTA</span>
+                                                </div>
+                                                <div style="font-size:0.44rem;color:rgba(245,158,11,0.65);">42% risco</div>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(37,211,102,0.06);border:1px solid rgba(37,211,102,0.16);border-radius:9px;padding:0.5rem 0.7rem;display:flex;align-items:center;gap:0.45rem;">
+                                            <span style="font-size:0.85rem;flex-shrink:0;">💬</span>
+                                            <div style="flex:1;min-width:0;">
+                                                <div style="font-size:0.5rem;font-weight:600;color:rgba(255,255,255,0.62);">WhatsApp enviado → Coord. ADS</div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.06rem;">Agora mesmo · 3 alunos em risco</div>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.12);border-radius:7px;padding:0.5rem 0.65rem;display:flex;align-items:flex-start;gap:0.38rem;">
+                                            <span style="font-size:0.52rem;color:#10b981;flex-shrink:0;margin-top:0.05rem;">✦</span>
+                                            <span style="font-size:0.48rem;color:rgba(255,255,255,0.55);line-height:1.5;">Encaminhar Ana para psicopedagogia. Prob. de recuperação com intervenção: 84%.</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -320,14 +1027,73 @@
                         <div class="showcase-collapsed-tag">Conformidade CNE 3/2025</div>
                         <div class="showcase-tag">Conformidade</div>
                         <h3 class="showcase-heading">CNE 3/2025</h3>
-                        <p class="showcase-desc">Adequacao automatica as novas diretrizes do MEC. Relatorios de acompanhamento psicopedagogico prontos para auditoria. Sem retrabalho, sem burocracia.</p>
-                        <a href="/contato/" class="showcase-cta">Adequar instituicao</a>
+                        <p class="showcase-desc">Adequação automática às novas diretrizes do MEC. Relatórios de acompanhamento psicopedagógico prontos para auditoria. Sem retrabalho, sem burocracia.</p>
+                        <a href="/contato/" class="showcase-cta">Adequar instituição</a>
                     </div>
                     <div class="showcase-visual">
                         <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(245,158,11,0.04),rgba(245,158,11,0.01));">
                             <div class="showcase-visual-grid"></div>
                             <div class="showcase-visual-bg">
-                                <div style="text-align:center;font-family:var(--font-mono);font-size:0.75rem;color:var(--text-tertiary);">CNE 3/2025<br><span style="font-size:0.6rem;">Resolucao do MEC</span></div>
+                                <div style="background:#09090f;border:1px solid rgba(245,158,11,0.2);border-radius:12px;overflow:hidden;font-family:var(--font-mono);width:100%;max-width:360px;margin:0 auto;">
+                                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.55rem 0.9rem;display:flex;align-items:center;gap:0.4rem;">
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                                        <div style="flex:1;margin:0 0.6rem;background:rgba(255,255,255,0.06);border-radius:5px;padding:0.2rem 0.6rem;font-size:0.5rem;color:rgba(255,255,255,0.3);">Conformidade MEC</div>
+                                    </div>
+                                    <div style="background:#0e0e1a;padding:0.5rem 0.9rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                                        <div>
+                                            <div style="font-size:0.5rem;color:rgba(245,158,11,0.7);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:1px;">LAUDO CNE 3/2025 · IA</div>
+                                            <div style="font-size:0.6rem;font-weight:700;color:#fff;">Fatec São Paulo</div>
+                                        </div>
+                                        <div style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.4);border-radius:5px;padding:0.22rem 0.6rem;">
+                                            <span style="font-size:0.5rem;color:#10b981;font-weight:700;">✓ CONFORME</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding:0.9rem 1rem;display:flex;flex-direction:column;gap:0.58rem;">
+                                        <div>
+                                            <div style="font-size:0.42rem;color:rgba(255,255,255,0.22);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.38rem;">Requisitos CNE 3/2025</div>
+                                            <div style="display:flex;flex-direction:column;gap:0.28rem;">
+                                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:7px;padding:0.42rem 0.65rem;display:flex;justify-content:space-between;align-items:center;">
+                                                    <span style="font-size:0.5rem;color:rgba(255,255,255,0.58);">Mapeamento de riscos psicossociais</span>
+                                                    <span style="font-size:0.6rem;color:#10b981;">✓</span>
+                                                </div>
+                                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:7px;padding:0.42rem 0.65rem;display:flex;justify-content:space-between;align-items:center;">
+                                                    <span style="font-size:0.5rem;color:rgba(255,255,255,0.58);">Acompanhamento psicopedagógico</span>
+                                                    <span style="font-size:0.6rem;color:#10b981;">✓</span>
+                                                </div>
+                                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:7px;padding:0.42rem 0.65rem;display:flex;justify-content:space-between;align-items:center;">
+                                                    <span style="font-size:0.5rem;color:rgba(255,255,255,0.58);">Relatório semestral MEC</span>
+                                                    <span style="font-size:0.6rem;color:#10b981;">✓</span>
+                                                </div>
+                                                <div style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.14);border-radius:7px;padding:0.42rem 0.65rem;display:flex;justify-content:space-between;align-items:center;">
+                                                    <span style="font-size:0.5rem;color:rgba(255,255,255,0.58);">Capacitação docente · saúde mental</span>
+                                                    <span style="font-size:0.6rem;color:#10b981;">✓</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.18);border-radius:9px;padding:0.55rem 0.75rem;">
+                                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem;">
+                                                <span style="font-size:0.44rem;color:rgba(245,158,11,0.65);text-transform:uppercase;letter-spacing:0.05em;">Prazo CNE 3/2025</span>
+                                                <span style="font-size:0.5rem;color:#f59e0b;font-weight:600;">Dez 2025</span>
+                                            </div>
+                                            <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;margin-bottom:0.28rem;">
+                                                <div style="width:100%;height:100%;background:#10b981;border-radius:3px;"></div>
+                                            </div>
+                                            <div style="font-size:0.42rem;color:#10b981;">✓ Instituição dentro do prazo</div>
+                                        </div>
+                                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.45rem;">
+                                            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:7px;padding:0.5rem 0.6rem;text-align:center;">
+                                                <div style="font-size:1.2rem;font-weight:700;color:#f59e0b;line-height:1;">847</div>
+                                                <div style="font-size:0.4rem;color:rgba(255,255,255,0.28);margin-top:0.12rem;">laudos gerados</div>
+                                            </div>
+                                            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:7px;padding:0.5rem 0.6rem;text-align:center;">
+                                                <div style="font-size:1.2rem;font-weight:700;color:#10b981;line-height:1;">92%</div>
+                                                <div style="font-size:0.4rem;color:rgba(255,255,255,0.28);margin-top:0.12rem;">menos tempo</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -335,17 +1101,87 @@
                 <div class="showcase-row">
                     <div class="showcase-num">04</div>
                     <div class="showcase-content">
-                        <div class="showcase-collapsed-tag">Painel de gestao academica</div>
-                        <div class="showcase-tag">Gestao</div>
+                        <div class="showcase-collapsed-tag">Painel de gestão acadêmica</div>
+                        <div class="showcase-tag">Gestão</div>
                         <h3 class="showcase-heading">Portal do Coordenador</h3>
-                        <p class="showcase-desc">Painel completo com IFE por turma, ranking de risco, historico de evolucao e planos de acao sugeridos por IA para cada turma critica.</p>
-                        <a href="/produtos/portal-de-transparencia/" class="showcase-cta">Ver modulo</a>
+                        <p class="showcase-desc">Painel completo com IFE por turma, ranking de risco, histórico de evolução e planos de ação sugeridos por IA para cada turma crítica.</p>
+                        <a href="/produtos/portal-de-transparencia/" class="showcase-cta">Ver módulo</a>
                     </div>
                     <div class="showcase-visual">
                         <div class="showcase-visual-inner" style="background:linear-gradient(135deg,rgba(139,92,246,0.04),rgba(139,92,246,0.01));">
                             <div class="showcase-visual-grid"></div>
                             <div class="showcase-visual-bg">
-                                <div style="text-align:center;font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);">Dashboard<br>em tempo real</div>
+                                <div style="background:#09090f;border:1px solid rgba(139,92,246,0.2);border-radius:12px;overflow:hidden;font-family:var(--font-mono);width:100%;max-width:360px;margin:0 auto;">
+                                    <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.55rem 0.9rem;display:flex;align-items:center;gap:0.4rem;">
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                                        <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                                        <div style="flex:1;margin:0 0.6rem;background:rgba(255,255,255,0.06);border-radius:5px;padding:0.2rem 0.6rem;font-size:0.5rem;color:rgba(255,255,255,0.3);">Portal do Coordenador</div>
+                                    </div>
+                                    <div style="background:#0e0e1a;padding:0.5rem 0.9rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                                        <div>
+                                            <div style="font-size:0.58rem;font-weight:700;color:#fff;">Coordenação Geral</div>
+                                            <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:1px;">S1 2026 · Fatec SP</div>
+                                        </div>
+                                        <div style="display:flex;align-items:center;gap:0.45rem;">
+                                            <div style="text-align:right;">
+                                                <div style="font-size:0.82rem;font-weight:700;color:#a78bfa;line-height:1;">78</div>
+                                                <div style="font-size:0.4rem;color:rgba(255,255,255,0.28);">IFE geral</div>
+                                            </div>
+                                            <span style="font-size:0.7rem;color:#10b981;">↑</span>
+                                        </div>
+                                    </div>
+                                    <div style="padding:0.85rem 1rem;display:flex;flex-direction:column;gap:0.5rem;">
+                                        <div style="font-size:0.42rem;color:rgba(255,255,255,0.22);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.1rem;">Ranking por turma</div>
+                                        <div style="background:rgba(16,185,129,0.07);border:1px solid rgba(16,185,129,0.18);border-radius:8px;padding:0.5rem 0.7rem;display:flex;justify-content:space-between;align-items:center;">
+                                            <div>
+                                                <div style="font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.78);">Dir. Civil 2° sem.</div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.05rem;">38 alunos</div>
+                                            </div>
+                                            <div style="display:flex;align-items:center;gap:0.32rem;">
+                                                <span style="font-size:0.78rem;font-weight:700;color:#10b981;line-height:1;">88</span>
+                                                <span style="font-size:0.58rem;color:#10b981;">↑ +3</span>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.16);border-radius:8px;padding:0.5rem 0.7rem;display:flex;justify-content:space-between;align-items:center;">
+                                            <div>
+                                                <div style="font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.78);">Enf. 2° sem.</div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.05rem;">45 alunos</div>
+                                            </div>
+                                            <div style="display:flex;align-items:center;gap:0.32rem;">
+                                                <span style="font-size:0.78rem;font-weight:700;color:#3b82f6;line-height:1;">76</span>
+                                                <span style="font-size:0.58rem;color:rgba(255,255,255,0.28);">→</span>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(245,158,11,0.06);border:1px solid rgba(245,158,11,0.18);border-radius:8px;padding:0.5rem 0.7rem;display:flex;justify-content:space-between;align-items:center;">
+                                            <div>
+                                                <div style="font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.78);">ADS 3° sem.</div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.05rem;">32 alunos</div>
+                                            </div>
+                                            <div style="display:flex;align-items:center;gap:0.32rem;">
+                                                <span style="font-size:0.78rem;font-weight:700;color:#f59e0b;line-height:1;">62</span>
+                                                <span style="font-size:0.58rem;color:#f59e0b;">↓ -9</span>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.2);border-radius:8px;padding:0.5rem 0.7rem;display:flex;justify-content:space-between;align-items:center;">
+                                            <div>
+                                                <div style="font-size:0.58rem;font-weight:600;color:rgba(255,255,255,0.78);">Admin 4° sem.</div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);margin-top:0.05rem;">41 alunos · CRÍTICO</div>
+                                            </div>
+                                            <div style="display:flex;align-items:center;gap:0.32rem;">
+                                                <span style="font-size:0.78rem;font-weight:700;color:#ef4444;line-height:1;">44</span>
+                                                <span style="font-size:0.58rem;color:#ef4444;">↓↓</span>
+                                            </div>
+                                        </div>
+                                        <div style="background:rgba(139,92,246,0.06);border:1px solid rgba(139,92,246,0.16);border-radius:8px;padding:0.52rem 0.7rem;display:flex;align-items:flex-start;gap:0.38rem;">
+                                            <span style="font-size:0.52rem;color:#a78bfa;flex-shrink:0;margin-top:0.05rem;">✦</span>
+                                            <div>
+                                                <div style="font-size:0.44rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.18rem;">Plano de ação · IA</div>
+                                                <div style="font-size:0.48rem;color:rgba(255,255,255,0.58);line-height:1.5;">Contatar coord. ADS 3° e Admin 4° antes de 15/06. Risco de evasão confirmado em 2 turmas.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -353,53 +1189,126 @@
             </div>
         </section>
 
-        <!-- RESULTADOS - contadores + bar chart -->
+        <!-- RESULTADOS - contadores -->
         <section class="ds-section" style="margin-bottom:8rem;">
             <div class="text-center mb-12">
                 <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Resultados comprovados</p>
                 <h2 class="ds-section-title">O que muda com a Fiter</h2>
             </div>
-            <div class="edu-counter-grid" style="margin-bottom:3rem;">
+            <div class="edu-counter-grid">
                 <div class="edu-counter-cell fade-up" style="--reveal-delay:0s;">
                     <div class="num">87%</div>
                     <div class="lbl">taxa de resposta dos alunos</div>
                 </div>
                 <div class="edu-counter-cell fade-up" style="--reveal-delay:0.08s;">
                     <div class="num">73%</div>
-                    <div class="lbl">reducao de evasao</div>
+                    <div class="lbl">redução de evasão</div>
                 </div>
                 <div class="edu-counter-cell fade-up" style="--reveal-delay:0.16s;">
                     <div class="num">92%</div>
-                    <div class="lbl">aderencia a CNE 3/2025</div>
+                    <div class="lbl">aderência à CNE 3/2025</div>
                 </div>
                 <div class="edu-counter-cell fade-up" style="--reveal-delay:0.24s;">
                     <div class="num">+60%</div>
                     <div class="lbl">engajamento 1 semestre</div>
                 </div>
             </div>
-            <div class="chart-container">
-                <div class="chart-bars">
-                    <div class="bar-row fade-up" style="--bar-delay:0s;--bar-target:87%;">
-                        <span class="bar-label">Taxa de resposta</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
-                        <span class="bar-value-label">87%</span>
+        </section>
+
+        <!-- CREDIBILIDADE CIENTÍFICA -->
+        <section class="ds-section" style="margin-bottom:8rem;padding:4rem 3.5rem;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border-default);position:relative;overflow:hidden;">
+            <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(16,185,129,0.05) 0%,transparent 70%);pointer-events:none;"></div>
+            <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
+                <div>
+                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
+                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">É deeptech com<br>DNA na USP.</h2>
+                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica — teses de mestrado em parceria com USP e Mackenzie, e publicada no livro <em>Felicidade: Ciência de Dados</em>.</p>
+                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir — sem viés, sem achismo.</p>
+                </div>
+                <div style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-4rem;margin-right:-3.5rem;margin-bottom:-4rem;overflow:hidden;">
+                    <div class="sci-tile fade-up" style="--reveal-delay:0s;">
+                        <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Publicação acadêmica</div>
+                            <div class="sci-sub" style="font-style:italic;">Felicidade: Ciência de Dados</div>
+                        </div>
                     </div>
-                    <div class="bar-row fade-up" style="--bar-delay:0.1s;--bar-target:73%;">
-                        <span class="bar-label">Reducao de evasao</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
-                        <span class="bar-value-label">73%</span>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
+                        <div class="sci-icon"><i data-lucide="graduation-cap" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Validado academicamente</div>
+                            <div class="sci-sub">Teses de mestrado · USP e Mackenzie</div>
+                        </div>
                     </div>
-                    <div class="bar-row fade-up" style="--bar-delay:0.2s;--bar-target:92%;">
-                        <span class="bar-label">Aderencia CNE 3/2025</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
-                        <span class="bar-value-label">92%</span>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
+                        <div class="sci-icon"><i data-lucide="brain" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Neurociência aplicada à educação</div>
+                            <div class="sci-sub">Metodologia IFE validada para bem-estar e retenção acadêmica</div>
+                        </div>
                     </div>
-                    <div class="bar-row fade-up" style="--bar-delay:0.3s;--bar-target:60%;">
-                        <span class="bar-label">Engajamento 1 semestre</span>
-                        <div class="bar-track"><div class="bar-fill" style="width:0;"></div></div>
-                        <span class="bar-value-label">+60%</span>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
+                        <div class="sci-icon"><i data-lucide="anchor" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Parceria USP e Mackenzie</div>
+                            <div class="sci-sub">IFE desenvolvido e validado em pesquisas de pós-graduação</div>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- ANALYTICS -->
+        <section class="ds-section" style="margin-bottom:8rem;">
+            <h2 class="ds-section-title">Analytics</h2>
+            <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Cada aluno. Cada turma.<br>Em tempo real.</p>
+
+            <div class="analytics-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+
+                <!-- Donut Chart -->
+                <div class="chart-container" style="padding:2.5rem;">
+                    <div style="margin-bottom:2rem;">
+                        <p style="font-family:var(--font-mono);font-size:0.62rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Distribuição de Engajamento</p>
+                        <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;letter-spacing:-0.01em;color:var(--text-primary);margin-bottom:0.25rem;">Situação dos alunos por IFE</h3>
+                        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;">Últimos 30 dias · +500k respondentes</p>
+                    </div>
+                    <div style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;">
+                        <div class="donut-chart-wrap" id="donut-edu" data-chart='[
+                            {"label":"Engajados","pct":52,"color":"#10b981"},
+                            {"label":"Atenção","pct":28,"color":"#f59e0b"},
+                            {"label":"Em Risco","pct":20,"color":"#ef4444"}
+                        ]'></div>
+                        <div class="donut-legend" id="donut-legend-edu"></div>
+                    </div>
+                </div>
+
+                <!-- Vertical Bar Chart -->
+                <div class="chart-container" style="padding:2.5rem;">
+                    <div class="vchart-header">
+                        <div>
+                            <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;letter-spacing:-0.01em;color:var(--text-primary);margin-bottom:0.25rem;">Evolução do IFE</h3>
+                            <p style="font-size:0.72rem;color:var(--text-tertiary);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.05em;">Score médio — últimas 8 semanas</p>
+                        </div>
+                        <div class="vchart-legend">
+                            <div class="vchart-legend-item">
+                                <span class="vchart-legend-dot" style="background:var(--accent-brand)"></span>
+                                IFE
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vchart-bars-area" id="vchart-edu-ife" data-chart='[
+                        {"label":"S1","value":62},
+                        {"label":"S2","value":65},
+                        {"label":"S3","value":61},
+                        {"label":"S4","value":68},
+                        {"label":"S5","value":72},
+                        {"label":"S6","value":70},
+                        {"label":"S7","value":75},
+                        {"label":"S8","value":79}
+                    ]' data-max="100"></div>
+                    <div class="vchart-x-axis" id="vchart-edu-ife-x"></div>
+                </div>
+
             </div>
         </section>
 
@@ -409,26 +1318,41 @@
                 <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Vozes da academia</p>
                 <h2 class="ds-section-title">Quem usa recomenda</h2>
             </div>
+
+            <!-- testi-featured -->
+            <div class="testi-featured fade-up" style="--reveal-delay:0.1s; margin-bottom: 2.5rem;">
+                <p class="testi-featured-quote">"Reduzimos a evasão em <em>73% no primeiro semestre</em> com a Fiter. A IA nos avisou sobre alunos em risco três meses antes — tempo suficiente para intervir antes que a decisão fosse irreversível."</p>
+                <div class="testi-featured-author">
+                    <div class="testi-featured-avatar">RC</div>
+                    <div>
+                        <div class="testi-featured-name">Ricardo Carvalho</div>
+                        <div class="testi-featured-role">Pró-Reitor Acadêmico · Fatec SP</div>
+                    </div>
+                    <div class="testi-featured-divider"></div>
+                    <div class="testi-featured-company">FATEC<br>Tecnologia</div>
+                </div>
+            </div>
+
             <div class="testi-grid">
                 <div class="testi-card" style="--testi-delay:0s">
-                    <p class="testi-quote">"Com o <strong>mapeamento da Fiter, passamos a intervir antes do aluno pensar em trancar</strong> a matricula. O IFE nos da visibilidade que nenhuma pesquisa semestral conseguia."</p>
+                    <p class="testi-quote">"Com o <strong>mapeamento da Fiter, passamos a intervir antes do aluno pensar em trancar</strong> a matrícula. O IFE nos dá visibilidade que nenhuma pesquisa semestral conseguia."</p>
                     <div class="testi-author">
                         <div class="testi-avatar">US</div>
-                        <div><div class="testi-name">Coordenador Academico</div><div class="testi-role">USP</div></div>
+                        <div><div class="testi-name">Coordenador Acadêmico</div><div class="testi-role">USP</div></div>
                     </div>
                 </div>
                 <div class="testi-card" style="--testi-delay:0.15s">
-                    <p class="testi-quote">"<strong>Reduzimos significativamente os indices de abandono no primeiro semestre</strong> utilizando a predicao da IA. Os alertas nos permitiram agir com precisao cirurgica."</p>
+                    <p class="testi-quote">"<strong>Reduzimos significativamente os índices de abandono no primeiro semestre</strong> utilizando a predição da IA. Os alertas nos permitiram agir com precisão cirúrgica."</p>
                     <div class="testi-author">
                         <div class="testi-avatar">FT</div>
-                        <div><div class="testi-name">Diretor Academico</div><div class="testi-role">Fatec</div></div>
+                        <div><div class="testi-name">Diretor Acadêmico</div><div class="testi-role">Fatec</div></div>
                     </div>
                 </div>
                 <div class="testi-card" style="--testi-delay:0.3s">
-                    <p class="testi-quote">"O Pulse Educação nos ajudou a <strong>atingir a conformidade com a CNE 3/2025</strong> de forma natural. O que seria uma correria burocratica se tornou parte do acompanhamento pedagogico regular."</p>
+                    <p class="testi-quote">"O Pulse Educação nos ajudou a <strong>atingir a conformidade com a CNE 3/2025</strong> de forma natural. O que seria uma correria burocrática se tornou parte do acompanhamento pedagógico regular."</p>
                     <div class="testi-author">
                         <div class="testi-avatar">ME</div>
-                        <div><div class="testi-name">Pro-Reitor</div><div class="testi-role">Mackenzie</div></div>
+                        <div><div class="testi-name">Pró-Reitor</div><div class="testi-role">Mackenzie</div></div>
                     </div>
                 </div>
             </div>
@@ -437,30 +1361,30 @@
         <!-- FAQ -->
         <section class="ds-section" style="margin-bottom:6rem;">
             <div class="text-center mb-12">
-                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Duvidas comuns</p>
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Dúvidas comuns</p>
                 <h2 class="ds-section-title">Perguntas frequentes</h2>
             </div>
             <div style="max-width:760px;margin:0 auto;">
                 <div class="faq-list">
                     <div class="faq-item">
-                        <button class="faq-trigger"><span class="faq-question">O que e o IFE?</span><span class="faq-icon"></span></button>
-                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">O IFE (Indice de Felicidade na Educação) e uma metrica proprietaria da Fiter que mede bem-estar, engajamento e satisfacao dos alunos. Calculado a partir de 8 perguntas via WhatsApp, varia de 0 a 100 e permite comparar turmas, cursos e instituicoes em tempo real.</p></div></div>
+                        <button class="faq-trigger"><span class="faq-question">O que é o IFE?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">O IFE (Índice de Felicidade na Educação) é uma métrica proprietária da Fiter que mede bem-estar, engajamento e satisfação dos alunos. Calculado a partir de 8 perguntas via WhatsApp, varia de 0 a 100 e permite comparar turmas, cursos e instituições em tempo real.</p></div></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-trigger"><span class="faq-question">Como a Fiter se alinha a CNE 3/2025?</span><span class="faq-icon"></span></button>
-                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">A Resolucao CNE 3/2025 exige acompanhamento psicopedagogico continuo e monitoramento da saude mental dos estudantes. O Pulse Educação atende com coleta sistematica de dados de bem-estar, alertas precoces de risco e relatorios prontos para auditoria do MEC.</p></div></div>
+                        <button class="faq-trigger"><span class="faq-question">Como a Fiter se alinha à CNE 3/2025?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">A Resolução CNE 3/2025 exige acompanhamento psicopedagógico contínuo e monitoramento da saúde mental dos estudantes. O Pulse Educação atende com coleta sistemática de dados de bem-estar, alertas precoces de risco e relatórios prontos para auditoria do MEC.</p></div></div>
                     </div>
                     <div class="faq-item">
-                        <button class="faq-trigger"><span class="faq-question">Precisa de integracao com o sistema academico?</span><span class="faq-icon"></span></button>
-                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">Nao. O aluno responde pelo WhatsApp sem app nem login. A integracao com o sistema academico e opcional: importamos a lista de alunos por planilha ou API.</p></div></div>
+                        <button class="faq-trigger"><span class="faq-question">Precisa de integração com o sistema acadêmico?</span><span class="faq-icon"></span></button>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">Não. O aluno responde pelo WhatsApp sem app nem login. A integração com o sistema acadêmico é opcional: importamos a lista de alunos por planilha ou API.</p></div></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-trigger"><span class="faq-question">Quanto tempo leva para implementar?</span><span class="faq-icon"></span></button>
-                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">A ativacao inclui assinatura, alinhamento com a coordenacao pedagogica e importacao dos contatos. A primeira pesquisa pode ser enviada em ate 2 dias uteis.</p></div></div>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">A ativação inclui assinatura, alinhamento com a coordenação pedagógica e importação dos contatos. A primeira pesquisa pode ser enviada em até 2 dias úteis.</p></div></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-trigger"><span class="faq-question">Funciona para qualquer tipo de IES?</span><span class="faq-icon"></span></button>
-                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">Sim. Atende desde faculdades isoladas ate universidades com dezenas de milhares de alunos, presenciais e EAD. O modelo e modular: voce contrata os modulos que fazem sentido para sua instituicao.</p></div></div>
+                        <div class="faq-body"><div class="faq-body-inner"><p class="faq-answer">Sim. Atende desde faculdades isoladas até universidades com dezenas de milhares de alunos, presenciais e EAD. O modelo é modular: você contrata os módulos que fazem sentido para sua instituição.</p></div></div>
                     </div>
                 </div>
             </div>
@@ -468,13 +1392,73 @@
 
     </div>
 
-    <!-- CTA full-bleed -->
-    <section class="edu-cta-full" style="margin-bottom:0;">
-        <div style="position:relative;z-index:1;max-width:600px;margin:0 auto;">
-            <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Demonstracao gratuita</p>
-            <h2 style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;color:var(--text-primary);margin-bottom:1rem;">Quer ver o IFE da sua IES?</h2>
-            <p style="color:var(--text-secondary);font-size:1rem;line-height:1.6;margin-bottom:2rem;">20 minutos com um especialista em retencao academica. Sem compromisso, sem pitch de uma hora.</p>
-            <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Agendar demonstracao</a>
+    <!-- CTA FINAL - grid 2 colunas com formulário -->
+    <section id="cta-edu-section" style="margin-left:-2rem;margin-right:-2rem;margin-bottom:0;padding:5rem 5vw;background:var(--bg-surface);border-top:1px solid var(--border-default);position:relative;overflow:hidden;">
+        <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(16,185,129,0.06) 0%,transparent 70%);pointer-events:none;"></div>
+        <div class="cta-edu-grid" style="display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;position:relative;z-index:1;max-width:1200px;margin:0 auto;">
+            <!-- Left -->
+            <div>
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
+                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">Quer ver o IFE<br>da sua IES?</h2>
+                <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;max-width:420px;margin-bottom:2rem;">20 minutos com um especialista em retenção acadêmica. Sem compromisso, sem pitch de uma hora.</p>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
+                        <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">&#10003;</span> Plataforma real — não um slide
+                    </div>
+                    <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
+                        <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">&#10003;</span> Especialista que conhece os desafios de IES
+                    </div>
+                    <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
+                        <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">&#10003;</span> Proposta no mesmo dia, se fizer sentido
+                    </div>
+                </div>
+            </div>
+            <!-- Right: form -->
+            <div>
+                <div id="cta-edu-form-wrap">
+                    <form id="cta-edu-form" novalidate style="display:flex;flex-direction:column;gap:1.25rem;">
+                        <div class="form-field">
+                            <label class="form-label" for="fedu-nome">Nome <span class="form-label-required">*</span></label>
+                            <input class="form-input" id="fedu-nome" type="text" placeholder="Seu nome completo" autocomplete="name" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="fedu-email">E-mail corporativo <span class="form-label-required">*</span></label>
+                            <input class="form-input" id="fedu-email" type="email" placeholder="nome@instituicao.edu.br" autocomplete="email" required>
+                            <span class="form-hint">Não usamos e-mails pessoais.</span>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="fedu-inst">Instituição <span class="form-label-required">*</span></label>
+                            <input class="form-input" id="fedu-inst" type="text" placeholder="Nome da instituição" autocomplete="organization" required>
+                        </div>
+                        <div class="form-field">
+                            <label class="form-label" for="fedu-tipo">Tipo de IES <span class="form-label-required">*</span></label>
+                            <div class="form-select-wrap">
+                                <select class="form-select" id="fedu-tipo" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="universidade">Universidade</option>
+                                    <option value="centro-universitario">Centro Universitário</option>
+                                    <option value="faculdade">Faculdade</option>
+                                    <option value="instituto-federal">Instituto Federal</option>
+                                    <option value="fatec">Fatec / Etec</option>
+                                    <option value="rede-ensino">Rede de Ensino</option>
+                                </select>
+                                <span class="form-select-chevron" aria-hidden="true">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4l4 5 4-5"/></svg>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-submit-row">
+                            <button type="submit" class="btn btn-primary btn-animate-chars w-full" style="padding:1rem;justify-content:center;">Agendar demonstração</button>
+                            <p class="form-confirm">Respondemos em até 1 dia útil. Na maioria dos casos, o retorno acontece em menos de 4&nbsp;horas.</p>
+                        </div>
+                    </form>
+                </div>
+                <div class="form-success-screen" id="cta-edu-success">
+                    <div class="form-success-icon">&#10003;</div>
+                    <div class="form-success-title">Solicitação enviada!</div>
+                    <p class="form-success-sub">Você receberá uma resposta em até 1 dia útil. Na maioria dos casos, o retorno acontece em menos de 4&nbsp;horas.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -525,7 +1509,284 @@
 <script>lucide.createIcons();</script>
 <script>
 (function(){var e=document.querySelectorAll('.showcase-row');e.forEach(function(t){t.addEventListener('click',function(){e.forEach(function(e){e!==t&&e.classList.remove('is-open')});t.classList.toggle('is-open')})})})();
-(function(){var e=document.querySelectorAll('.bar-row');var t=new IntersectionObserver(function(n){n.forEach(function(n){if(n.isIntersecting){n.target.classList.add('in-view');t.unobserve(n.target)}})},{threshold:0.2});e.forEach(function(e){t.observe(e)})})();
+
+// Vertical Bar Chart
+(function () {
+    function buildVChart(areaEl) {
+        const data    = JSON.parse(areaEl.dataset.chart);
+        const maxVal  = parseFloat(areaEl.dataset.max || 100);
+        const xEl     = document.getElementById(areaEl.id + '-x');
+        const grid = document.createElement('div');
+        grid.className = 'vchart-grid';
+        for (let i = 0; i < 6; i++) {
+            const line = document.createElement('div');
+            line.className = 'vchart-grid-line';
+            grid.appendChild(line);
+        }
+        areaEl.appendChild(grid);
+        data.forEach((d, i) => {
+            const col = document.createElement('div');
+            col.className = 'vchart-col';
+            const bar = document.createElement('div');
+            bar.className = 'vchart-bar';
+            bar.style.setProperty('--bar-delay', (i * 0.08) + 's');
+            bar.style.background = 'var(--accent-brand)';
+            bar.dataset.value = d.value;
+            bar.dataset.targetPct = (d.value / maxVal * 100).toFixed(1);
+            col.appendChild(bar);
+            areaEl.appendChild(col);
+            if (xEl) {
+                const lbl = document.createElement('div');
+                lbl.className = 'vchart-x-label';
+                lbl.textContent = d.label;
+                xEl.appendChild(lbl);
+                col.addEventListener('mouseenter', () => lbl.style.color = 'var(--text-primary)');
+                col.addEventListener('mouseleave', () => lbl.style.color = '');
+            }
+        });
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                obs.unobserve(e.target);
+                e.target.querySelectorAll('.vchart-bar').forEach(bar => {
+                    bar.style.height = bar.dataset.targetPct + '%';
+                });
+                setTimeout(() => e.target.classList.add('loaded'), 800);
+            });
+        }, { threshold: 0.2 });
+        obs.observe(areaEl);
+    }
+    document.querySelectorAll('.vchart-bars-area[data-chart]').forEach(buildVChart);
+})();
+
+// Donut Chart
+(function () {
+    const R = 90, STROKE = 20, CX = 110, CY = 110;
+    const circumference = 2 * Math.PI * R;
+    function buildDonutChart(wrapEl) {
+        const data = JSON.parse(wrapEl.dataset.chart);
+        const legendId = wrapEl.id.replace('donut-', 'donut-legend-');
+        const legendEl = document.getElementById(legendId);
+        if (!legendEl) return;
+        const svgNS = 'http://www.w3.org/2000/svg';
+        const svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('viewBox', '0 0 220 220');
+        svg.setAttribute('width', '220');
+        svg.setAttribute('height', '220');
+        const bg = document.createElementNS(svgNS, 'circle');
+        bg.setAttribute('cx', CX); bg.setAttribute('cy', CY); bg.setAttribute('r', R);
+        bg.setAttribute('fill', 'none');
+        bg.setAttribute('stroke', 'rgba(255,255,255,0.04)');
+        bg.setAttribute('stroke-width', STROKE);
+        svg.appendChild(bg);
+        const segments = [];
+        let offset = -90;
+        data.forEach((d, i) => {
+            const frac = d.pct / 100;
+            const dash = frac * circumference;
+            const gap  = circumference - dash;
+            const circle = document.createElementNS(svgNS, 'circle');
+            circle.setAttribute('cx', CX); circle.setAttribute('cy', CY); circle.setAttribute('r', R);
+            circle.setAttribute('fill', 'none');
+            circle.setAttribute('stroke', d.color);
+            circle.setAttribute('stroke-width', STROKE);
+            circle.setAttribute('stroke-dasharray', `0 ${circumference}`);
+            circle.setAttribute('stroke-dashoffset', -offset / 360 * circumference);
+            circle.setAttribute('stroke-linecap', 'butt');
+            circle.style.transition = `stroke-dasharray 0.7s cubic-bezier(0.4,0,0.2,1) ${i * 0.12}s, stroke-width 0.2s ease, opacity 0.2s ease`;
+            circle.style.transformOrigin = `${CX}px ${CY}px`;
+            svg.appendChild(circle);
+            segments.push({ circle, dash, gap, d });
+            offset += frac * 360;
+        });
+        wrapEl.appendChild(svg);
+        const center = document.createElement('div');
+        center.className = 'donut-center';
+        center.innerHTML = `<div class="donut-center-value" id="${wrapEl.id}-cv">${data[0].pct}%</div><div class="donut-center-label" id="${wrapEl.id}-cl">${data[0].label}</div>`;
+        wrapEl.appendChild(center);
+        const cv = document.getElementById(`${wrapEl.id}-cv`);
+        const cl = document.getElementById(`${wrapEl.id}-cl`);
+        data.forEach((d, i) => {
+            const item = document.createElement('div');
+            item.className = 'legend-item';
+            item.innerHTML = `<span class="legend-dot" style="background:${d.color}"></span><span class="legend-label">${d.label}</span><span class="legend-pct" style="color:${d.color}">${d.pct}%</span>`;
+            legendEl.appendChild(item);
+            item.addEventListener('mouseenter', () => highlight(i));
+            item.addEventListener('mouseleave', reset);
+        });
+        segments.forEach(({ circle }, i) => {
+            circle.style.cursor = 'pointer';
+            circle.addEventListener('mouseenter', () => highlight(i));
+            circle.addEventListener('mouseleave', reset);
+        });
+        function highlight(idx) {
+            const d = data[idx];
+            cv.textContent = d.pct + '%'; cl.textContent = d.label; cv.style.color = d.color;
+            segments.forEach(({ circle }, j) => {
+                circle.setAttribute('stroke-width', j === idx ? STROKE + 6 : STROKE - 3);
+                circle.style.opacity = j === idx ? '1' : '0.35';
+            });
+            legendEl.querySelectorAll('.legend-item').forEach((item, j) => item.style.opacity = j === idx ? '1' : '0.35');
+        }
+        function reset() {
+            cv.textContent = data[0].pct + '%'; cl.textContent = data[0].label; cv.style.color = '';
+            segments.forEach(({ circle }) => { circle.setAttribute('stroke-width', STROKE); circle.style.opacity = '1'; });
+            legendEl.querySelectorAll('.legend-item').forEach(item => item.style.opacity = '1');
+        }
+        const donutObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (!e.isIntersecting) return;
+                donutObs.unobserve(e.target);
+                segments.forEach(({ circle, dash, gap }) => circle.setAttribute('stroke-dasharray', `${dash} ${gap}`));
+            });
+        }, { threshold: 0.3 });
+        donutObs.observe(wrapEl);
+    }
+    document.querySelectorAll('.donut-chart-wrap[data-chart]').forEach(buildDonutChart);
+})();
+
+// In-view trigger for bars and steps
+(function () {
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.bar-row, .steps-v, .sci-tile.fade-up').forEach(el => obs.observe(el));
+})();
+
+// Hero background particle field (education - green)
+(function () {
+    const canvas = document.getElementById('canvas-edu');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let W, H, nodes, raf, frame = 0;
+    const C = '16,185,129';
+    const N = 88;
+    const DIST = 120;
+
+    function resize() {
+        const r = canvas.getBoundingClientRect();
+        W = canvas.width  = r.width;
+        H = canvas.height = r.height;
+    }
+
+    function init() {
+        resize();
+        nodes = Array.from({ length: N }, (_, i) => ({
+            x:  Math.random() * W,
+            y:  Math.random() * H,
+            vx: (Math.random() - 0.5) * 0.22,
+            vy: (Math.random() - 0.5) * 0.22,
+            r:  i < 6 ? 3.2 : i < 20 ? 2.0 : 1.3,
+            a:  i < 6 ? 0.88 : i < 20 ? 0.50 : 0.22,
+            ph: Math.random() * Math.PI * 2,
+        }));
+        if (raf) cancelAnimationFrame(raf);
+        loop();
+    }
+
+    function loop() {
+        frame++;
+        ctx.clearRect(0, 0, W, H);
+
+        for (const n of nodes) {
+            n.x += n.vx + Math.sin(frame * 0.0035 + n.ph) * 0.12;
+            n.y += n.vy + Math.cos(frame * 0.0028 + n.ph * 1.4) * 0.09;
+            if (n.x < 0) n.x = W;  if (n.x > W) n.x = 0;
+            if (n.y < 0) n.y = H;  if (n.y > H) n.y = 0;
+        }
+
+        for (let i = 0; i < nodes.length; i++) {
+            for (let j = i + 1; j < nodes.length; j++) {
+                const a = nodes[i], b = nodes[j];
+                const dx = a.x - b.x, dy = a.y - b.y;
+                const d2 = dx * dx + dy * dy;
+                if (d2 < DIST * DIST) {
+                    ctx.globalAlpha = (1 - Math.sqrt(d2) / DIST) * 0.16;
+                    ctx.strokeStyle = `rgb(${C})`;
+                    ctx.lineWidth = 0.65;
+                    ctx.beginPath();
+                    ctx.moveTo(a.x, a.y);
+                    ctx.lineTo(b.x, b.y);
+                    ctx.stroke();
+                }
+            }
+        }
+        ctx.globalAlpha = 1;
+
+        for (const n of nodes) {
+            if (n.r >= 3) { ctx.shadowColor = `rgba(${C},0.65)`; ctx.shadowBlur = 14; }
+            ctx.beginPath();
+            ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${C},${n.a})`;
+            ctx.fill();
+            if (n.r >= 3) ctx.shadowBlur = 0;
+        }
+
+        raf = requestAnimationFrame(loop);
+    }
+
+    window.addEventListener('resize', resize);
+    requestAnimationFrame(init);
+})();
+
+// CTA Form - Educação
+(function () {
+    const form    = document.getElementById('cta-edu-form');
+    const success = document.getElementById('cta-edu-success');
+    if (!form) return;
+    const personalDomains = ['gmail','hotmail','yahoo','outlook','icloud','live','uol','bol','terra'];
+    function getError(id, value) {
+        if (!value.trim()) return 'Campo obrigatório';
+        if (id === 'fedu-email') {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'E-mail inválido';
+            const domain = value.split('@')[1]?.split('.')[0]?.toLowerCase();
+            if (personalDomains.includes(domain)) return 'Use um e-mail corporativo';
+        }
+        return null;
+    }
+    function setFieldState(fieldEl, inputEl, error) {
+        const prev = fieldEl.querySelector('.form-error-msg, .form-success-msg');
+        if (prev) prev.remove();
+        fieldEl.classList.remove('is-error','is-success');
+        if (error) {
+            fieldEl.classList.add('is-error');
+            const msg = document.createElement('span');
+            msg.className = 'form-error-msg';
+            msg.textContent = '✕ ' + error;
+            const wrap = inputEl.closest('.form-select-wrap');
+            (wrap || inputEl).after(msg);
+        } else if (inputEl.value.trim()) {
+            fieldEl.classList.add('is-success');
+        }
+    }
+    form.querySelectorAll('.form-input, .form-select').forEach(input => {
+        input.addEventListener('blur', () => {
+            if (!input.required && !input.value.trim()) return;
+            const field = input.closest('.form-field');
+            if (field) setFieldState(field, input, getError(input.id, input.value));
+        });
+    });
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        form.querySelectorAll('[required]').forEach(input => {
+            const field = input.closest('.form-field');
+            const error = getError(input.id, input.value);
+            if (field) setFieldState(field, input, error);
+            if (error) valid = false;
+        });
+        if (!valid) return;
+        const btn = form.querySelector('[type="submit"]');
+        btn.classList.add('is-loading');
+        btn.textContent = 'Enviando…';
+        setTimeout(() => {
+            form.style.display = 'none';
+            success.classList.add('is-visible');
+        }, 1400);
+    });
+})();
 </script>
 </body>
 </html>
