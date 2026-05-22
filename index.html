@@ -42,9 +42,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+        }
+    }
+    </script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -1012,9 +1018,13 @@
     updateText(false);
 })();
 
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
 // ── Brain WebGL ──────────────────────────────────────────────────
 (function initBrain() {
-    if (typeof THREE === 'undefined') return;
     const canvas = document.getElementById('hero-brain-canvas');
     if (!canvas) return;
 
@@ -1113,7 +1123,9 @@
         brain.scale.setScalar(brainScale(w));
     });
 })();
+</script>
 
+<script>
 // ── Pulse Sparkline ──────────────────────────────────────────────
 (function () {
     const line   = document.getElementById('sl-line');

@@ -7,7 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+        }
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -5080,11 +5086,15 @@
         });
     });
 
-    // =========================================================
-    // BRAIN WEBGL
-    // =========================================================
-    (function initBrain() {
-        if (typeof THREE === 'undefined') return;
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+
+// =========================================================
+// BRAIN WEBGL
+// =========================================================
+(function initBrain() {
         const canvas = document.getElementById('hero-brain-canvas');
         if (!canvas) return;
 
@@ -5210,5 +5220,6 @@
         });
     })();
 </script>
+
 </body>
 </html>

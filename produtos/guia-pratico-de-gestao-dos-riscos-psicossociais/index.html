@@ -15,10 +15,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -115,23 +115,22 @@
 </nav>
 
     <main class="main-content" style="padding-top: 64px;">
-        <div class="ds-container px-6">
 
-            <!-- HERO -->
-            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 80vh; margin-bottom: 8rem;">
+        <!-- HERO -->
+        <section class="ds-section relative flex flex-col md:flex-row items-start gap-8" style="margin-bottom: 8rem; margin-left: -2rem; margin-right: -2rem; padding-top: 5rem; padding-left: 2rem; padding-right: 2rem;">
                 <div class="flex-1 z-10">
                     <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-surface); margin-bottom: 2rem;">
                         <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent-brand); box-shadow: 0 0 10px var(--accent-glow);"></span>
                         <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">LIVRO DIGITAL EXCLUSIVO</span>
                     </div>
-                    <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
-                        GUIA PRÁTICO DE GESTÃO DOS<br>
-                        <span style="color: var(--accent-brand);">RISCOS PSICOSSOCIAIS</span>
+                    <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary); letter-spacing: -0.025em;">
+                        <strong>GUIA PRÁTICO DE GESTÃO DOS<br>
+                        <span style="color: var(--accent-brand);">RISCOS PSICOSSOCIAIS</span></strong>
                     </h1>
                     <p style="font-size: 1.25rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; line-height: 1.4;">
                         Sua empresa está pronta para a nova gestão de riscos mentais?
                     </p>
-                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 540px; margin-bottom: 2.5rem; line-height: 1.6;">
+                    <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 2.5rem; line-height: 1.6;">
                         Domine a NR-01 com Sérgio Amad: a visão do pesquisador da USP e CEO da Fiter aplicada à gestão real de riscos psicossociais.
                     </p>
                     <a href="#form" class="btn btn-primary btn-animate-chars" style="text-decoration: none; font-weight: 600;">Baixar Guia Gratuito</a>
@@ -149,6 +148,8 @@
                 </div>
             </section>
 
+        <div class="ds-container px-6">
+
             <!-- SOBRE O GUIA -->
             <section id="sobre" class="ds-section" style="margin-bottom: 8rem;">
                 <div class="flex flex-col md:flex-row items-center gap-12">
@@ -156,7 +157,7 @@
                         <img src="https://lab.fiter.com.br/wp-content/uploads/2026/02/por-site-capa-1-pdf.jpg" alt="Guia Prático de Gestão dos Riscos Psicossociais" loading="lazy" style="width: 100%; max-width: 320px; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg);">
                     </div>
                     <div class="flex-1">
-                        <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-primary); font-style: italic; margin-bottom: 2rem;">
+                        <p style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.025em; margin-bottom: 2rem;">
                             A ponte entre a legislação e a prática organizacional.
                         </p>
                         <div style="display: flex; flex-direction: column; gap: 1.5rem;">
@@ -183,7 +184,7 @@
             <!-- PÚBLICO-ALVO -->
             <section id="publico" class="ds-section" style="margin-bottom: 8rem; padding: 4rem 2rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
                 <div class="text-center mb-12">
-                    <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 2.5rem); color: var(--text-primary); margin-bottom: 1rem; font-weight: 400; line-height: 1.2;">
+                    <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 3.5vw, 2.5rem); color: var(--text-primary); margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.025em; line-height: 1.2;">
                         O guia definitivo para quem lidera a nova era da saúde ocupacional.
                     </h2>
                 </div>
@@ -218,7 +219,7 @@
                     </div>
                 </div>
                 <div style="margin-top: 3rem; padding: 2rem; background: var(--bg-base); border: 1px solid var(--border-default); border-radius: var(--radius-lg); text-align: center;">
-                    <p style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); font-style: italic; line-height: 1.6;">
+                    <p style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.025em; line-height: 1.6;">
                         O ser humano é o propósito, a tecnologia é o meio. Junte-se à primeira empresa brasileira de neurociência a certificar os especialistas que as organizações do futuro exigem.
                     </p>
                 </div>
@@ -228,7 +229,7 @@
             <section id="form" class="ds-section" style="margin-bottom: 8rem;">
                 <div style="max-width: 640px; margin: 0 auto;">
                     <div class="text-center mb-10">
-                        <h2 style="font-family: var(--font-serif); font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--text-primary); margin-bottom: 1rem; font-weight: 400; line-height: 1.2;">
+                        <h2 style="font-family: var(--font-serif); font-size: clamp(1.75rem, 3vw, 2.25rem); color: var(--text-primary); margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.025em; line-height: 1.2;">
                             Pronto para adequar sua empresa à nova NR-01?
                         </h2>
                         <p style="color: var(--text-secondary); font-size: 1.125rem; line-height: 1.6;">
@@ -246,12 +247,17 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="ds-footer" style="padding: 3rem 2rem;">
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <div style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary); margin-bottom: 1.5rem;">Fiter.</div>
-            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-tertiary); line-height: 1.7;">
-                &copy; Copyright 2026 | fiter | Política de Privacidade | Todos os direitos reservados | Site desenvolvido por <a href="http://b-rain.digital/" target="_blank" style="color: rgb(255, 15, 226); text-decoration: none;">B-rain.digital</a>
-            </p>
+    <footer class="ds-footer">
+        <div class="footer-inner">
+            <div class="footer-top" style="justify-content: center; margin-bottom: 1rem;">
+                <div class="footer-brand" style="gap: 0;">
+                    <div style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary);">Fiter.</div>
+                </div>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom" style="justify-content: center;">
+                <span class="footer-copy">&copy; Copyright 2026 | fiter | Política de Privacidade | Todos os direitos reservados | Site desenvolvido por <a href="http://b-rain.digital/" target="_blank" style="color: rgb(255, 15, 226); text-decoration: none;">B-rain.digital</a></span>
+            </div>
         </div>
     </footer>
 
