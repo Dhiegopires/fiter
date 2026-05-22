@@ -12,37 +12,117 @@
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Fiter" />
 
-    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'bg-base': '#050505',
-                        'bg-surface': '#0f0f0f',
-                        'text-primary': '#ffffff',
-                        'text-secondary': '#a3a3a3',
-                        'text-tertiary': '#737373',
-                        'border-subtle': '#171717',
-                        'border-default': '#262626',
-                        'accent-brand': '#3b82f6',
-                    }
-                },
-                fontFamily: {
-                    sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-                    serif: ['"Playfair Display"', 'Georgia', 'serif'],
-                }
-            }
-        }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "O que é pulse survey e por que substituir a pesquisa anual",
+      "author": { "@type": "Organization", "name": "Fiter" },
+      "publisher": { "@type": "Organization", "name": "Fiter", "url": "https://fiter.com.br" },
+      "datePublished": "2026-05-18",
+      "url": "https://www.fiter.com.br/blog/o-que-e-pulse-survey/"
+    }
     </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/main.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
     <style>
-        body { background-color: #050505; color: #ffffff; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .ds-footer { position: static; }
+
+        .article-body {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+        .article-body p { margin-bottom: 1.65rem; }
+        .article-body h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(1.35rem, 2vw, 1.75rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin-top: 3.5rem;
+            margin-bottom: 1.1rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.25rem;
+            margin-bottom: 1.65rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .article-body ul li { list-style: disc; padding-left: 0.25rem; }
+        .article-body ol li { list-style: decimal; padding-left: 0.25rem; }
+        .article-body strong { color: var(--text-primary); font-weight: 600; }
+        .article-body em { font-style: italic; }
+        .article-body a { color: var(--accent-brand); text-decoration: underline; text-underline-offset: 3px; }
+        .article-body a:hover { opacity: 0.8; }
+        .article-body blockquote {
+            border-left: 2px solid var(--accent-brand);
+            padding: 1rem 0 1rem 1.5rem;
+            margin: 2.5rem 0;
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .article-lead {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .share-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-top: 4rem;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            background: var(--bg-surface);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-md);
+            padding: 0.45rem 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .share-btn:hover { color: var(--text-primary); border-color: var(--border-hover); }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased font-sans">
+<body data-theme="studio">
 
     <!-- NAV -->
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
@@ -86,7 +166,7 @@
             </li>
 
             <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/blog/">Blog</a></li>
 
         </ul>
 
@@ -134,84 +214,156 @@
     </div>
 </nav>
 
-    <!-- POST HEADER -->
-    <article class="pt-20 pb-20 bg-bg-base">
-        <div class="max-w-3xl mx-auto px-6 fade-in">
-            <!-- Breadcrumbs -->
-            <div class="flex items-center gap-2 text-sm text-text-tertiary mb-10 font-medium">
-                <a href="../../" class="hover:text-text-primary">Home</a>
-                <span>›</span>
-                <a href="../../blog/" class="hover:text-text-primary">Blog</a>
-                <span>›</span>
-                <span class="text-accent-brand">Educação</span>
-            </div>
+    <main class="main-content" style="padding-top: 64px;">
 
-            <h1 class="text-4xl md:text-5xl font-serif text-text-primary mb-8 leading-snug">O que é pulse survey e por que substituir a pesquisa anual</h1>
+        <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
 
-            <div class="flex items-center gap-4 text-sm text-text-secondary border-b border-border-subtle pb-10 mb-10">
-                <div class="w-12 h-12 rounded-full bg-border-default overflow-hidden flex items-center justify-center font-bold text-text-tertiary">
-                    EF
+        <div style="position: relative; z-index: 1;">
+
+            <!-- POST HEADER -->
+            <section style="padding-top: 5rem; padding-bottom: 2rem;">
+                <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem;">
+
+                    <!-- Breadcrumb -->
+                    <div style="margin-bottom:2.5rem;" data-reveal>
+                        <a href="/blog/" style="font-family:var(--font-mono);font-size:0.62rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-tertiary)'">← Blog</a>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3.25rem);font-weight:800;letter-spacing:-0.03em;line-height:1.08;color:var(--text-primary);margin-bottom:1.75rem;--reveal-delay:0.1s;">
+                        O que é pulse survey e por que substituir a pesquisa anual
+                    </h1>
+
+                    <!-- Meta -->
+                    <div data-reveal style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;padding-bottom:2rem;border-bottom:1px solid var(--border-subtle);--reveal-delay:0.2s;">
+                        <div style="width:36px;height:36px;border-radius:50%;background:var(--bg-surface);border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.55rem;color:var(--text-tertiary);flex-shrink:0;letter-spacing:0.05em;">EF</div>
+                        <span style="font-size:0.875rem;font-weight:500;color:var(--text-primary);">Equipe Fiter</span>
+                        <span style="width:3px;height:3px;border-radius:50%;background:var(--border-default);flex-shrink:0;"></span>
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">18 de Maio, 2026</span>
+                        <span style="width:3px;height:3px;border-radius:50%;background:var(--border-default);flex-shrink:0;"></span>
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);display:flex;align-items:center;gap:0.3rem;"><i data-lucide="clock" style="width:11px;height:11px;"></i> 6 min de leitura</span>
+                    </div>
+
                 </div>
-                <div>
-                    <div class="font-medium text-text-primary text-base">Equipe Fiter</div>
-                    <div>18 de Maio, 2026 · 6 min de leitura</div>
+            </section>
+
+            <!-- HERO IMAGE -->
+            <section style="padding-bottom: 3rem;">
+                <div style="max-width: 960px; margin: 0 auto; padding: 0 2rem;">
+                    <img src="default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" style="width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);display:block;">
                 </div>
-            </div>
+            </section>
+
+            <!-- ARTICLE BODY -->
+            <section style="padding-bottom: 5rem;">
+                <div style="max-width: 720px; margin: 0 auto; padding: 0 2rem;">
+
+                    <div class="article-body">
+
+                        <p class="article-lead">
+                            Se a sua empresa ainda depende da pesquisa anual de clima para entender os colaboradores, você está tomando decisões com dados de 6 a 12 meses atrás. O pulse survey surge como alternativa para quem precisa de informações em tempo real.
+                        </p>
+
+                        <h2>O que é um pulse survey?</h2>
+                        <p>Pulse survey é uma pesquisa curta e frequente — geralmente de 2 a 5 minutos, aplicada semanal ou quinzenalmente — que captura o pulso da organização naquele momento. Diferente da pesquisa anual, que tenta medir tudo de uma vez, o pulse survey foca em tópicos específicos e permite uma visão contínua do engajamento.</p>
+                        <p>O nome vem da analogia com o pulso cardíaco: em vez de tirar uma foto estática da saúde da empresa uma vez por ano, você monitora os sinais vitais continuamente. Qualquer variação é detectada antes de virar sintoma.</p>
+
+                        <h2>Por que as empresas estão migrando?</h2>
+                        <ul>
+                            <li><strong>Velocidade:</strong> Resultados em dias, não meses.</li>
+                            <li><strong>Taxa de resposta maior:</strong> Pesquisas curtas têm adesão muito superior — a Fiter registra 87% via WhatsApp.</li>
+                            <li><strong>Detecção precoce:</strong> Problemas são identificados antes de virarem crises.</li>
+                            <li><strong>Menos viés:</strong> O colaborador responde sobre o momento presente, não sobre o que aconteceu há meses.</li>
+                        </ul>
+
+                        <blockquote>
+                            "O problema não é falta de dados. É chegar tarde."
+                        </blockquote>
+
+                        <h2>Como implementar na prática</h2>
+                        <p>Uma boa estratégia de pulse survey começa com perguntas claras e objetivas. A Fiter recomenda:</p>
+                        <ol>
+                            <li><strong>Defina a frequência:</strong> Semanal ou quinzenal, sem ultrapassar 5 minutos.</li>
+                            <li><strong>Escolha as dimensões:</strong> Engajamento, liderança, bem-estar, pertencimento.</li>
+                            <li><strong>Garanta o anonimato:</strong> Respostas confidenciais geram dados mais honestos.</li>
+                            <li><strong>Feche o loop:</strong> Compartilhe os resultados e mostre as ações tomadas.</li>
+                        </ol>
+                        <p>O mais importante não é a ferramenta, mas a cultura de escuta ativa. O pulse survey é o meio, não o fim.</p>
+
+                        <h2>A diferença que o canal faz</h2>
+                        <p>Boa parte das pesquisas de clima corporativas ainda é enviada por e-mail ou formulário web — canais onde a taxa de resposta raramente passa de 30%. O motivo é simples: o colaborador precisa sair do fluxo de trabalho, abrir um sistema diferente e dedicar tempo.</p>
+                        <p>A Fiter envia as pesquisas diretamente pelo WhatsApp. O colaborador responde em 2 minutos, sem sair da conversa. Resultado: taxa de resposta de 87% — três vezes acima da média do mercado.</p>
+
+                        <h2>Pulse survey vs. pesquisa anual</h2>
+                        <p>Não é sobre substituir uma pela outra — é sobre combinar as duas com inteligência. A pesquisa anual oferece profundidade e benchmarks históricos. O pulse survey oferece velocidade e reatividade. Juntos, eles formam um sistema completo de escuta organizacional.</p>
+                        <p>Empresas que adotam as duas abordagens conseguem tanto a visão estratégica de longo prazo quanto a capacidade de agir rápido quando algo muda.</p>
+
+                    </div>
+
+                    <!-- Share bar -->
+                    <div class="share-bar">
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin-right:0.25rem;">Compartilhar</span>
+                        <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.fiter.com.br/blog/o-que-e-pulse-survey/" target="_blank" rel="noopener">
+                            <i data-lucide="linkedin" style="width:12px;height:12px;"></i> LinkedIn
+                        </a>
+                        <a class="share-btn" href="https://twitter.com/intent/tweet?url=https://www.fiter.com.br/blog/o-que-e-pulse-survey/&text=O+que+%C3%A9+pulse+survey" target="_blank" rel="noopener">
+                            <i data-lucide="twitter" style="width:12px;height:12px;"></i> Twitter
+                        </a>
+                    </div>
+
+                    <!-- CTA -->
+                    <div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
+                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
+                        <div style="position:relative;">
+                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Fiter Pulse</p>
+                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Veja como funciona na prática</h3>
+                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">87% de taxa de resposta via WhatsApp. Configure sua primeira pesquisa em menos de 10 minutos.</p>
+                            <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;">Agendar demonstração</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
         </div>
 
-        <!-- THUMBNAIL (Opcional) -->
-        
-        <div class="max-w-4xl mx-auto px-6 mb-12 fade-in">
-            <img src="default.svg" alt="O que é pulse survey e por que substituir a pesquisa anual" class="w-full aspect-video object-cover rounded-2xl">
-        </div>
-
-        <!-- POST CONTENT -->
-        <div class="max-w-3xl mx-auto px-6 prose prose-invert prose-lg prose-a:text-accent-brand prose-headings:font-serif fade-in">
-            <p class="lead text-xl text-text-primary">Se a sua empresa ainda depende da pesquisa anual de clima para entender os colaboradores, você está tomando decisões com dados de 6 a 12 meses atrás. O pulse survey surge como alternativa para quem precisa de informações em tempo real.</p>
-<h2>O que é um pulse survey?</h2>
-<p>Pulse survey é uma pesquisa curta e frequente — geralmente de 2 a 5 minutos, aplicada semanal ou quinzenalmente — que captura o pulso da organização naquele momento. Diferente da pesquisa anual, que tenta medir tudo de uma vez, o pulse survey foca em tópicos específicos e permite uma visão contínua do engajamento.</p>
-<h2>Por que as empresas estão migrando?</h2>
-<ul>
-<li><strong>Velocidade:</strong> Resultados em dias, não meses.</li>
-<li><strong>Taxa de resposta maior:</strong> Pesquisas curtas têm adesão muito superior.</li>
-<li><strong>Detecção precoce:</strong> Problemas são identificados antes de virarem crises.</li>
-<li><strong>Menos viés:</strong> O colaborador responde sobre o momento presente, não sobre o que aconteceu há meses.</li>
-</ul>
-<h2>Como implementar na prática</h2>
-<p>Uma boa estratégia de pulse survey começa com perguntas claras e objetivas. A Fiter recomenda:</p>
-<ol>
-<li><strong>Defina a frequência:</strong> Semanal ou quinzenal, sem ultrapassar 5 minutos.</li>
-<li><strong>Escolha as dimensões:</strong> Engajamento, liderança, bem-estar, pertencimento.</li>
-<li><strong>Garanta o anonimato:</strong> Respostas confidenciais geram dados mais honestos.</li>
-<li><strong>Feche o loop:</strong> Compartilhe os resultados e mostre as ações tomadas.</li>
-</ol>
-<p>O mais importante não é a ferramenta, mas a cultura de escuta ativa. O pulse survey é o meio, não o fim.</p>
-
-        </div>
-    </article>
+    </main>
 
     <!-- FOOTER -->
-    <footer class="bg-[#020202] pt-20 pb-10 border-t border-border-subtle">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-serif italic text-text-primary mb-4">Fiter.</h2>
-            <p class="text-sm text-text-secondary mb-6">Assine nossa newsletter para receber mais insights como este.</p>
-            <div class="flex max-w-md mx-auto gap-2">
-                <input type="email" placeholder="Seu melhor e-mail" class="flex-1 bg-bg-surface border border-border-default rounded-full px-4 py-2 text-white focus:outline-none focus:border-accent-brand">
-                <button class="bg-text-primary text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition-colors">Assinar</button>
+    <footer class="ds-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></a>
+                    <p class="footer-tagline">Escuta contínua para organizações que se importam com pessoas.</p>
+                </div>
+                <nav class="footer-nav" aria-label="Links do rodapé">
+                    <div class="footer-col">
+                        <span class="footer-col-title">Soluções</span>
+                        <a class="footer-link" href="/solucoes/rh/">Recursos Humanos</a>
+                        <a class="footer-link" href="/solucoes/educacao/">Educação</a>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">Produtos</span>
+                        <a class="footer-link" href="/produtos/pulse/">Pulse</a>
+                        <a class="footer-link" href="/produtos/nr01/">Agente NR1</a>
+                        <a class="footer-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                        <a class="footer-link" href="/produtos/portal-de-transparencia/">Portal de Transparência</a>
+                    </div>
+                    <div class="footer-col">
+                        <span class="footer-col-title">Empresa</span>
+                        <a class="footer-link" href="/sobre/">Sobre</a>
+                        <a class="footer-link" href="/blog/">Blog</a>
+                        <a class="footer-link" href="/contato/">Contato</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <p class="footer-copy">© 2026 Fiter. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>

@@ -44,7 +44,7 @@ const posts = files.map(file => {
     // Convert markdown to HTML
     let htmlContent = marked.parse(mdContent);
     // Style the first paragraph as lead
-    htmlContent = htmlContent.replace('<p>', '<p class="lead text-xl text-text-primary">');
+    htmlContent = htmlContent.replace('<p>', '<p class="article-lead">');
 
     return { data, htmlContent, file };
 });
@@ -91,16 +91,13 @@ posts.forEach(post => {
     let imageSection;
     if (imageFilename) {
         imageSection = `
-        <div class="max-w-4xl mx-auto px-6 mb-12 fade-in">
-            <img src="${imageFilename}" alt="${data.title}" class="w-full aspect-video object-cover rounded-2xl">
-        </div>`;
-    } else {
-        imageSection = `
-        <div class="max-w-4xl mx-auto px-6 mb-12 fade-in">
-            <div class="w-full aspect-video bg-border-subtle rounded-2xl flex items-center justify-center">
-                <p class="text-text-tertiary font-mono">Imagem de Capa do Artigo</p>
+        <section style="padding-bottom: 3rem;">
+            <div style="max-width: 960px; margin: 0 auto; padding: 0 2rem;">
+                <img src="${imageFilename}" alt="${data.title}" style="width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);display:block;">
             </div>
-        </div>`;
+        </section>`;
+    } else {
+        imageSection = '';
     }
 
     let pageHtml = layoutTemplate
