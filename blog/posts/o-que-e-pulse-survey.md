@@ -9,7 +9,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 ---
 
-Se a sua empresa ainda depende da pesquisa anual de clima para entender os colaboradores, você está tomando decisões com dados de 6 a 12 meses atrás. O pulse survey surge como alternativa para quem precisa de informações em tempo real.
+Se a sua empresa ainda depende da pesquisa anual de clima para entender osdadasdasdadss colaboradores, você está tomando decisões com dados de 6 a 12 meses atrás. O pulse survey surge como alternativa para quem precisa de informações em tempo real.
 
 ## O que é um pulse survey?
 
