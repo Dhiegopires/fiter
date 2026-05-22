@@ -16,10 +16,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -116,27 +116,26 @@
 </nav>
 
     <main class="main-content" style="padding-top: 64px;">
-        <div class="ds-container px-6">
 
-            <!-- HERO -->
-            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 60vh; margin-bottom: 6rem;">
-                <div class="flex-1 z-10 text-center md:text-left">
+        <!-- HERO -->
+        <section class="ds-section relative flex flex-col md:flex-row items-start gap-8" style="margin-bottom: 8rem; padding-top: 5rem; padding-left: 2rem; padding-right: 2rem; width: 100%;">
+                <div class="flex-1 z-10">
                     <div style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.25rem 1rem; border-radius: var(--radius-full); border: 1px solid var(--border-default); background: var(--bg-surface); margin-bottom: 1.5rem;">
                         <span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em;">Novidade: Conformidade NR1</span>
                     </div>
-                    <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 4rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
-                        NR1, sua empresa precisa mapear riscos psicossociais até <span style="color: #ff453a;">26 de maio de 2026</span>
+                    <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary); letter-spacing: -0.025em;">
+                        <strong>NR1, sua empresa precisa mapear riscos psicossociais até <span style="color: var(--color-error);">26 de maio de 2026</span></strong>
                     </h1>
-                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 2.5rem; line-height: 1.6; margin-left: auto; margin-right: auto;" class="md:mx-0">
+                    <p style="font-size: 1.125rem; font-weight: 600; color: var(--text-secondary); max-width: 580px; margin-bottom: 2.5rem; line-height: 1.6;">
                         A atualização da NR1 passou a exigir que empresas identifiquem e documentem riscos psicossociais no ambiente de trabalho, como estresse, assédio, sobrecarga e clima organizacional.
                     </p>
 
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-8">
-                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Quero adequar minha empresa à NR-01 agora →</a>
-                        <a href="#como-funciona" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Agendar demonstração da plataforma</a>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none; font-weight: 600;">Quero adequar minha empresa à NR-01 agora →</a>
+                        <a href="#como-funciona" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; font-weight: 600;">Agendar demonstração da plataforma</a>
                     </div>
                     
-                    <div class="flex flex-wrap gap-4 justify-center md:justify-start mt-6 text-sm color-[var(--text-secondary)] font-mono">
+                    <div class="flex flex-wrap gap-4 mt-6 text-sm color-[var(--text-secondary)] font-mono">
                         <div class="flex items-center gap-2">
                             <i data-lucide="check-circle" style="width: 16px; height: 16px; color: var(--text-primary);"></i> Inventário automático
                         </div>
@@ -150,6 +149,8 @@
                 </div>
             </section>
 
+        <div class="ds-container px-6">
+
             <!-- PREPARADA? -->
             <section class="ds-section" style="margin-bottom: 8rem; border-top: 1px solid var(--border-default); padding-top: 4rem;">
                 <div class="flex flex-col md:flex-row gap-12 items-start">
@@ -157,15 +158,15 @@
                         <h2 class="ds-section-title">Sua empresa está preparada para a nova exigência da NR-01?</h2>
                         <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 1.5rem; line-height: 1.6;">A norma passou a exigir que as empresas incluam <strong>riscos psicossociais</strong> no Programa de Gerenciamento de Riscos (PGR). Entre eles:</p>
                         <ul style="list-style: none; padding: 0; margin: 0 0 1.5rem 0; color: var(--text-secondary); display: flex; flex-direction: column; gap: 0.75rem;">
-                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: #ff453a;"></i> estresse ocupacional</li>
-                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: #ff453a;"></i> assédio moral</li>
-                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: #ff453a;"></i> sobrecarga de trabalho</li>
-                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: #ff453a;"></i> conflitos organizacionais</li>
-                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: #ff453a;"></i> clima de trabalho desfavorável</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: var(--color-error);"></i> estresse ocupacional</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: var(--color-error);"></i> assédio moral</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: var(--color-error);"></i> sobrecarga de trabalho</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: var(--color-error);"></i> conflitos organizacionais</li>
+                            <li style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="alert-circle" style="width: 16px; height: 16px; color: var(--color-error);"></i> clima de trabalho desfavorável</li>
                         </ul>
-                        <div style="background: rgba(255, 69, 58, 0.1); border: 1px solid rgba(255, 69, 58, 0.3); border-radius: var(--radius-sm); padding: 1rem; display: inline-flex; align-items: flex-start; gap: 0.75rem;">
-                            <i data-lucide="alert-triangle" style="width: 20px; height: 20px; color: #ff453a; flex-shrink: 0; margin-top: 2px;"></i>
-                            <p style="color: #ff453a; font-size: 0.875rem; line-height: 1.5;">Sem esse mapeamento, a empresa pode estar em não conformidade com a legislação trabalhista.</p>
+                        <div style="background: var(--color-error-bg); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: var(--radius-sm); padding: 1rem; display: inline-flex; align-items: flex-start; gap: 0.75rem;">
+                            <i data-lucide="alert-triangle" style="width: 20px; height: 20px; color: var(--color-error); flex-shrink: 0; margin-top: 2px;"></i>
+                            <p style="color: var(--color-error); font-size: 0.875rem; line-height: 1.5;">Sem esse mapeamento, a empresa pode estar em não conformidade com a legislação trabalhista.</p>
                         </div>
                     </div>
                 </div>
@@ -175,7 +176,7 @@
             <section class="ds-section" style="margin-bottom: 8rem;">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="card p-8 md:p-10" style="background: var(--bg-surface); border: 1px solid var(--border-default);">
-                        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem; font-style: italic;">O Problema</h2>
+                        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.025em;">O Problema</h2>
                         <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-primary); margin-bottom: 1rem;">Por que tantas empresas ainda não estão adequadas?</h3>
                         <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">Identificar riscos psicossociais manualmente é um processo complexo que exige:</p>
                         <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -187,7 +188,7 @@
                         <p style="color: var(--text-primary); font-weight: 500;">Esse processo normalmente leva semanas ou meses quando feito manualmente.</p>
                     </div>
                     <div class="card p-8 md:p-10" style="background: linear-gradient(135deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--text-primary);">
-                        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem; font-style: italic;">A Solução</h2>
+                        <h2 style="font-family: var(--font-serif); font-size: 2rem; color: var(--text-primary); margin-bottom: 1rem; font-weight: 800; letter-spacing: -0.025em;">A Solução</h2>
                         <h3 style="font-size: 1.25rem; font-weight: 500; color: var(--text-primary); margin-bottom: 1rem;">A primeira inteligência artificial que automatiza a NR-01</h3>
                         <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">A plataforma da Fiter utiliza inteligência artificial para:</p>
                         <ul style="list-style-type: disc; padding-left: 1.5rem; color: var(--text-secondary); margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -300,35 +301,58 @@
             <section class="ds-section" style="margin-bottom: 8rem;">
                 <div class="text-center mb-12">
                     <h2 class="ds-section-title">Perguntas Frequentes</h2>
+                    <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 0.5rem; font-weight: 600;">Tire suas dúvidas sobre o Agente NR01.</p>
                 </div>
-                <div style="max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden;">
-                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
-                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">O que é o Agente NR01 da Fiter? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
-                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">É uma inteligência artificial desenvolvida especificamente para atender à nova NR01 – Anexo de Riscos Psicossociais. Automatizamos o diagnóstico dos riscos psicossociais dos cargos, gerando laudos e planilhas prontos em tempo real.</div>
-                    </details>
-                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
-                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">Como funciona o Agente NR01? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
-                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">O sistema realiza análise semântica neuropsicodinâmica dos cargos, classifica riscos com base em CID e diretrizes da OMS, e gera automaticamente toda a documentação necessária para conformidade legal.</div>
-                    </details>
-                    <details style="background: var(--bg-surface); border-bottom: 1px solid var(--border-default);">
-                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">Quais são os benefícios de usar o Agente NR01? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
-                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">Conformidade imediata com a NR01, diagnóstico automatizado sem vieses, economia de tempo e recursos, visão estratégica da saúde mental organizacional e atualizações automáticas conforme mudanças nas normas.</div>
-                    </details>
-                    <details style="background: var(--bg-surface);">
-                        <summary style="padding: 1.5rem 2rem; cursor: pointer; font-size: 1rem; color: var(--text-primary); font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">O sistema é atualizado conforme mudanças na legislação? <i data-lucide="chevron-down" style="width: 18px; height: 18px; color: var(--text-secondary); flex-shrink: 0;"></i></summary>
-                        <div style="padding: 0 2rem 1.5rem; color: var(--text-secondary); line-height: 1.7;">Sim, nosso sistema é constantemente atualizado para refletir as mais recentes mudanças na legislação e nas diretrizes de saúde ocupacional, garantindo conformidade contínua.</div>
-                    </details>
+                <div style="max-width: 760px; margin: 0 auto;">
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <span class="faq-question">O que é o Agente NR01 da Fiter?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <div class="faq-body"><div class="faq-body-inner">
+                                <p class="faq-answer">É uma inteligência artificial desenvolvida especificamente para atender à nova NR01 – Anexo de Riscos Psicossociais. Automatizamos o diagnóstico dos riscos psicossociais dos cargos, gerando laudos e planilhas prontos em tempo real.</p>
+                            </div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <span class="faq-question">Como funciona o Agente NR01?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <div class="faq-body"><div class="faq-body-inner">
+                                <p class="faq-answer">O sistema realiza análise semântica neuropsicodinâmica dos cargos, classifica riscos com base em CID e diretrizes da OMS, e gera automaticamente toda a documentação necessária para conformidade legal.</p>
+                            </div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <span class="faq-question">Quais são os benefícios de usar o Agente NR01?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <div class="faq-body"><div class="faq-body-inner">
+                                <p class="faq-answer">Conformidade imediata com a NR01, diagnóstico automatizado sem vieses, economia de tempo e recursos, visão estratégica da saúde mental organizacional e atualizações automáticas conforme mudanças nas normas.</p>
+                            </div></div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-trigger">
+                                <span class="faq-question">O sistema é atualizado conforme mudanças na legislação?</span>
+                                <span class="faq-icon"></span>
+                            </button>
+                            <div class="faq-body"><div class="faq-body-inner">
+                                <p class="faq-answer">Sim, nosso sistema é constantemente atualizado para refletir as mais recentes mudanças na legislação e nas diretrizes de saúde ocupacional, garantindo conformidade contínua.</p>
+                            </div></div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- CTA FINAL -->
             <section class="ds-section" style="margin-bottom: 4rem;">
                 <div class="card" style="background: linear-gradient(135deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default); padding: 4rem; text-align: center;">
-                    <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 3rem); color: var(--text-primary); margin-bottom: 1.5rem; line-height: 1.1; font-style: italic;">Pronto para garantir a conformidade?</h2>
+                    <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.1; letter-spacing: -0.025em;">Pronto para garantir a conformidade?</h2>
                     <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 3rem; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">Comece hoje e proteja sua organização com inteligência artificial.</p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Quero Conhecer →</a>
-                        <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com Especialista</a>
+                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none; font-weight: 600;">Quero Conhecer →</a>
+                        <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; font-weight: 600;">Falar com Especialista</a>
                     </div>
                 </div>
             </section>
@@ -337,38 +361,29 @@
     </main>
 
     <!-- FOOTER -->
-        <footer class="ds-footer">
-            <div class="footer-inner">
-                <div class="footer-top">
-                    <div class="footer-brand">
-                        <img src="/assets/img/logo.png" alt="Fiter">
-                        <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
-                    </div>
-                    <div class="footer-nav">
-                        <div>
-                            <div class="footer-col-title">Soluções</div>
-                            <ul class="footer-links">
-                                <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
-                                <li><a href="/solucoes/educacao/">Educação</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="footer-col-title">Empresa</div>
-                            <ul class="footer-links">
-                                <li><a href="/sobre/">Sobre</a></li>
-                                <li><a href="/blog/">Blog</a></li>
-                                <li><a href="/contato/">Contato</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="footer-col-title">Conformidade</div>
-                            <ul class="footer-links">
-                                <li><a href="#">LGPD</a></li>
-                                <li><a href="#">Política de privacidade</a></li>
-                                <li><a href="#">Termos de uso</a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <footer class="ds-footer">
+        <div style="max-width: 800px; margin: 0 auto 3rem; text-align: center;">
+            <div style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary);">Fiter.</div>
+            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); line-height: 1.7; margin-top: 1rem; max-width: 480px; margin-left: auto; margin-right: auto;">DeepTech validada por USP e Mackenzie. Metodologia publicada no livro <em>Felicidade: Ciência de Dados</em>.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 2.5rem; max-width: 600px; margin: 0 auto 3rem;">
+            <div>
+                <p style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Produto</p>
+                <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+                    <a href="/produtos/pulse/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Pulse</a>
+                    <a href="/produtos/nr01/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Agente NR1</a>
+                    <a href="/produtos/portal-de-transparencia/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Portal de Transparência</a>
+                    <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Guia Prático</a>
+                    <a href="/solucoes/educacao/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Educação</a>
+                </div>
+            </div>
+            <div>
+                <p style="font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-secondary); margin-bottom: 1rem;">Empresa</p>
+                <div style="display: flex; flex-direction: column; gap: 0.625rem;">
+                    <a href="/sobre/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Sobre a Fiter</a>
+                    <a href="/clientes/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Clientes</a>
+                    <a href="/blog/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Blog</a>
+                    <a href="/contato/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; transition: color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Contato</a>
                 </div>
                 <div class="footer-divider"></div>
                 <div class="footer-bottom">

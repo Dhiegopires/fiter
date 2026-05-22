@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -342,6 +342,21 @@
                 </div>
             </a>
 
+            <a href="teste-afonso-2.0/" class="post-card" data-category="RH">
+                <div class="post-thumb">
+                    <span class="post-tag">RH</span>
+                    <img src="teste-afonso-2.0/WhatsApp Image 2026-05-07 at 12.38.52.jpeg" alt="É um titulo muito bacana criado por mim. " class="post-img">
+                </div>
+                <div class="post-body">
+                    <h3 class="post-title">É um titulo muito bacana criado por mim. </h3>
+                    <p class="post-excerpt">Estou fazendo um teste de um post test para ver como ficou a atualização das noticias.</p>
+                    <div class="post-meta">
+                        <span>18 de Maio, 2026</span>
+                        <span>10 min de leitura</span>
+                    </div>
+                </div>
+            </a>
+
             <a href="teste-dhiego/" class="post-card" data-category="RH">
                 <div class="post-thumb">
                     <span class="post-tag">RH</span>
@@ -406,7 +421,9 @@
         </footer>
 
     <script>
-        lucide.createIcons();
+        if (typeof lucide !== 'undefined') {
+            try { lucide.createIcons(); } catch (_) {}
+        }
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -436,8 +453,9 @@
             let visibleCount = 0;
             document.querySelectorAll('#blogGrid .post-card').forEach(card => {
                 const title = card.querySelector('.post-title').textContent.toLowerCase();
+                const desc = card.querySelector('.post-excerpt').textContent.toLowerCase();
                 const category = card.dataset.category || '';
-                const match = (!term || title.includes(term)) && (activeCategory === 'all' || category === activeCategory);
+                const match = (!term || title.includes(term) || desc.includes(term)) && (activeCategory === 'all' || category === activeCategory);
                 card.style.display = match ? '' : 'none';
                 if (match) visibleCount++;
             });

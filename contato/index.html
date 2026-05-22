@@ -22,10 +22,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/tailwind-config.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -296,6 +296,15 @@
                             <p style="font-size:0.875rem;color:var(--text-tertiary);line-height:1.6;">Se não fizer sentido para você, é uma boa conversa e nada mais.</p>
                         </div>
 
+    <main class="main-content" style="padding-top: 64px; min-height: 80vh;">
+        <div class="ds-container px-6">
+            <section class="ds-section" style="margin-top: 4rem; text-align: center;">
+                <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 1.5rem; color: var(--text-primary); letter-spacing: -0.025em;">Fale conosco</h1>
+                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem; font-size: 1.125rem;">Nossa equipe está pronta para demonstrar como a IA pode transformar os resultados da sua empresa.</p>
+                <div class="ds-form-container" style="max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.25rem; background: var(--bg-surface); padding: 3rem; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg); text-align: left;">
+                    <div>
+                        <label style="display: block; font-size: 0.7rem; color: var(--text-secondary); margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase;">Nome completo</label>
+                        <input type="text" class="input" placeholder="Seu nome" style="width: 100%; background: var(--bg-surface); border: 1px solid var(--border-default); padding: 0.75rem 1rem; border-radius: var(--radius-sm); color: var(--text-primary); outline: none; transition: border-color 0.2s; font-size: 0.9rem;">
                     </div>
 
                     <!-- Coluna direita — formulário -->
@@ -384,64 +393,50 @@
     </main>
 
     <!-- FOOTER -->
-        <footer class="ds-footer">
-            <div class="footer-inner">
-                <div class="footer-top">
-                    <div class="footer-brand">
-                        <img src="/assets/img/logo.png" alt="Fiter">
-                        <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
-                    </div>
-                    <div class="footer-nav">
-                        <div>
-                            <div class="footer-col-title">Soluções</div>
-                            <ul class="footer-links">
-                                <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
-                                <li><a href="/solucoes/educacao/">Educação</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="footer-col-title">Empresa</div>
-                            <ul class="footer-links">
-                                <li><a href="/sobre/">Sobre</a></li>
-                                <li><a href="/blog/">Blog</a></li>
-                                <li><a href="/contato/">Contato</a></li>
-                            </ul>
-                        </div>
-                        <div>
-                            <div class="footer-col-title">Conformidade</div>
-                            <ul class="footer-links">
-                                <li><a href="#">LGPD</a></li>
-                                <li><a href="#">Política de privacidade</a></li>
-                                <li><a href="#">Termos de uso</a></li>
-                            </ul>
-                        </div>
-                    </div>
+    <footer class="ds-footer">
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2 style="font-family: var(--font-serif); font-style: italic; font-size: 1.5rem; color: var(--text-primary); margin: 0;">Fiter.</h2>
+                    <p>DeepTech validada por USP e Mackenzie.</p>
                 </div>
-                <div class="footer-divider"></div>
-                <div class="footer-bottom">
-                    <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
-                    <span class="footer-copy" style="display:flex;align-items:center;gap:0.3rem;">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a> <span style="color:var(--text-tertiary);">&#10084;</span></span>
+                <div class="footer-nav">
+                    <div>
+                        <div class="footer-col-title">Produto</div>
+                        <ul class="footer-links">
+                            <li><a href="/produtos/pulse/">Pulse</a></li>
+                            <li><a href="/produtos/nr01/">Agente NR1</a></li>
+                            <li><a href="/produtos/portal-de-transparencia/">Portal de Transparência</a></li>
+                            <li><a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a></li>
+                            <li><a href="/solucoes/educacao/">Educação</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Empresa</div>
+                        <ul class="footer-links">
+                            <li><a href="/sobre/">Sobre a Fiter</a></li>
+                            <li><a href="/clientes/">Clientes</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/contato/">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Conformidade</div>
+                        <ul class="footer-links">
+                            <li><a href="#">LGPD</a></li>
+                            <li><a href="#">Política de privacidade</a></li>
+                            <li><a href="#">Termos de uso</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </footer>
-
-    <script>
-        lucide.createIcons();
-
-        const form = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const successScreen = document.getElementById('successScreen');
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            submitBtn.classList.add('is-loading');
-            submitBtn.disabled = true;
-
-            setTimeout(function() {
-                form.style.display = 'none';
-                successScreen.classList.add('is-visible');
-            }, 1200);
-        });
-    </script>
+            <div class="footer-divider"></div>
+            <div class="footer-bottom">
+                <span class="footer-copy">&copy; 2026 Fiter. Todos os direitos reservados.</span>
+                <span class="footer-copy" style="display:flex;align-items:center;gap:0.5rem;">Mackenzie · ABES · Sebrae for Startups</span>
+            </div>
+        </div>
+    </footer>
+    <script>lucide.createIcons();</script>
 </body>
 </html>
