@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth" data-theme="analytics">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fale com a Fiter — Agende uma Demonstração</title>
     <meta name="description" content="Agende uma demonstração da plataforma de engajamento Fiter. Fale com um especialista e veja como o Pulse, Agente NR1 e Pesquisa de Clima funcionam na sua realidade. Respondemos em até 1 dia útil.">
     <link rel="canonical" href="https://fiter.com.br/contato/">
+    <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Fale com a Fiter — Agende uma Demonstração">
     <meta property="og:description" content="Agende uma demonstração da plataforma de engajamento Fiter. Fale com um especialista e veja como o Pulse, Agente NR1 e Pesquisa de Clima funcionam na sua realidade. Respondemos em até 1 dia útil.">
     <meta property="og:url" content="https://fiter.com.br/contato/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fiter.com.br/assets/img/hero_dashboard.png">
 
     <script type="application/ld+json">
     {
@@ -22,7 +26,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
@@ -140,22 +144,6 @@
             line-height: 1.6;
         }
 
-        /* ── Info items ── */
-        .contact-info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-        }
-        .contact-info-icon {
-            width: 36px; height: 36px;
-            border-radius: var(--radius-md);
-            background: var(--bg-surface);
-            border: 1px solid var(--border-default);
-            display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0;
-            color: var(--accent-brand);
-        }
-
         @media (max-width: 768px) {
             .contact-layout { grid-template-columns: 1fr !important; gap: 3rem !important; }
             .form-grid { grid-template-columns: 1fr !important; }
@@ -163,13 +151,13 @@
         }
     </style>
 </head>
-<body data-theme="base">
+<body>
 
     <!-- NAV -->
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
 
         <ul class="nav-links">
 
@@ -221,7 +209,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -251,25 +239,61 @@
     </div>
 </nav>
 
-    <main class="main-content" style="padding-top: 64px; margin-bottom: 280px;">
+    <main class="main-content">
 
         <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+        <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
 
-        <section style="padding: 5rem 2rem 7rem; position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center;">
+        <section class="ds-section" style="padding-top:8rem;padding-bottom:7rem;">
+            <div class="contact-layout" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;">
 
-            <!-- Topo — título -->
-            <div style="max-width: 720px; margin-bottom: 4rem; text-align: center;">
-                <p data-reveal style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.12em;color:var(--accent-brand);margin-bottom:1rem;">Fale conosco</p>
-                <h1 data-reveal style="font-family:var(--font-serif);font-size:clamp(2.25rem,4vw,3.5rem);font-weight:800;letter-spacing:-0.03em;line-height:1.08;color:var(--text-primary);margin-bottom:1.25rem;--reveal-delay:0.05s;">
-                    Veja a Fiter funcionando para a sua realidade
-                </h1>
-                <p data-reveal style="font-size:1.05rem;color:var(--text-secondary);line-height:1.7;--reveal-delay:0.1s;">
-                    Nossa equipe especializada vai mostrar como a escuta contínua transforma dados em decisões. Sem enrolação.
-                </p>
-            </div>
+                <!-- Left — copy -->
+                <div style="padding-top:0.5rem;">
+                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;" data-reveal>Fale conosco</p>
+                    <h1 style="font-family:var(--font-serif);font-size:clamp(2.25rem,4vw,3.5rem);font-weight:800;letter-spacing:-0.03em;line-height:1.08;color:var(--text-primary);margin-bottom:1.25rem;--reveal-delay:0.05s;" data-reveal>
+                        Veja a Fiter funcionando para a sua realidade
+                    </h1>
+                    <p style="font-size:1.05rem;color:var(--text-secondary);line-height:1.7;margin-bottom:2.5rem;--reveal-delay:0.1s;" data-reveal>
+                        Um especialista mostra a plataforma ao vivo. Você vê como funciona com dados reais. Sem pitch de uma hora.
+                    </p>
 
-            <!-- Formulário -->
-            <div style="max-width: 720px;">
+                    <!-- What to expect -->
+                    <div style="display:flex;flex-direction:column;gap:1.25rem;" data-reveal style="--reveal-delay:0.15s;">
+
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--bg-surface);border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent-brand);">
+                                <i data-lucide="monitor" style="width:16px;height:16px;"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight:500;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.2rem;">Demonstração personalizada</div>
+                                <div style="color:var(--text-secondary);font-size:0.8rem;line-height:1.5;">Mostramos só o que é relevante para o seu setor e tamanho de equipe.</div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--bg-surface);border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent-brand);">
+                                <i data-lucide="message-circle" style="width:16px;height:16px;"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight:500;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.2rem;">Sem script engessado</div>
+                                <div style="color:var(--text-secondary);font-size:0.8rem;line-height:1.5;">Nossa equipe adapta a conversa à sua realidade, não ao contrário.</div>
+                            </div>
+                        </div>
+
+                        <div style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--bg-surface);border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent-brand);">
+                                <i data-lucide="clock" style="width:16px;height:16px;"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight:500;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.2rem;">Resposta em até 1 dia útil</div>
+                                <div style="color:var(--text-secondary);font-size:0.8rem;line-height:1.5;">Comprometimento real. Seus dados não serão compartilhados.</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right — form -->
                 <div data-reveal style="--reveal-delay:0.1s;">
                     <div style="background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;">
                         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%, var(--accent-glow) 0%, transparent 60%);pointer-events:none;" aria-hidden="true"></div>
@@ -344,10 +368,10 @@
                                 <a href="/" class="btn btn-secondary" style="margin-top:0.5rem;text-decoration:none;">Voltar ao início</a>
                             </div>
                         </div>
-                        </div>
                     </div>
                 </div>
 
+            </div>
         </section>
 
     </main>
@@ -357,25 +381,21 @@
         <div class="footer-inner">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <h2 style="font-family: var(--font-serif); font-style: italic; font-size: 1.5rem; color: var(--text-primary); margin: 0;">Fiter.</h2>
-                    <p>DeepTech validada por USP e Mackenzie.</p>
+                    <img src="/assets/img/fiter_logo.svg" alt="Fiter">
+                    <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
                 </div>
                 <div class="footer-nav">
                     <div>
-                        <div class="footer-col-title">Produto</div>
+                        <div class="footer-col-title">Soluções</div>
                         <ul class="footer-links">
-                            <li><a href="/produtos/pulse/">Pulse</a></li>
-                            <li><a href="/produtos/nr01/">Agente NR1</a></li>
-                            <li><a href="/produtos/portal-de-transparencia/">Portal de Transparência</a></li>
-                            <li><a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a></li>
+                            <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
                             <li><a href="/solucoes/educacao/">Educação</a></li>
                         </ul>
                     </div>
                     <div>
                         <div class="footer-col-title">Empresa</div>
                         <ul class="footer-links">
-                            <li><a href="/sobre/">Sobre a Fiter</a></li>
-                            <li><a href="/clientes/">Clientes</a></li>
+                            <li><a href="/sobre/">Sobre</a></li>
                             <li><a href="/blog/">Blog</a></li>
                             <li><a href="/contato/">Contato</a></li>
                         </ul>
@@ -383,20 +403,21 @@
                     <div>
                         <div class="footer-col-title">Conformidade</div>
                         <ul class="footer-links">
-                            <li><a href="#">LGPD</a></li>
-                            <li><a href="#">Política de privacidade</a></li>
-                            <li><a href="#">Termos de uso</a></li>
+                            <li><a href="/lgpd/">LGPD</a></li>
+                            <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>
+                            <li><a href="/termos-de-uso/">Termos de uso</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="footer-divider"></div>
             <div class="footer-bottom">
-                <span class="footer-copy">&copy; 2026 Fiter. Todos os direitos reservados.</span>
-                <span class="footer-copy" style="display:flex;align-items:center;gap:0.5rem;">Mackenzie · ABES · Sebrae for Startups</span>
+                <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
+                <span class="footer-copy" style="display:flex;align-items:center;gap:0.3rem;">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a> <span style="color:var(--text-tertiary);">&#10084;</span></span>
             </div>
         </div>
     </footer>
+
     <script>lucide.createIcons();</script>
 </body>
 </html>

@@ -1,3 +1,26 @@
+// Inline SVG logos so CSS currentColor controls the i-dot per theme
+(function inlineLogoSVGs() {
+    const imgs = document.querySelectorAll(
+        '.nav-logo img[src$=".svg"], .nav-panel-logo img[src$=".svg"], .footer-brand img[src$=".svg"]'
+    );
+    if (!imgs.length) return;
+    const url = imgs[0].src;
+    fetch(url).then(r => r.text()).then(svgText => {
+        const parser = new DOMParser();
+        imgs.forEach(img => {
+            const doc = parser.parseFromString(svgText, 'image/svg+xml');
+            const svg = doc.documentElement;
+            svg.style.height = img.style.height || '28px';
+            svg.style.width = 'auto';
+            svg.removeAttribute('width');
+            svg.removeAttribute('height');
+            svg.setAttribute('aria-hidden', 'true');
+            svg.setAttribute('focusable', 'false');
+            img.parentNode.replaceChild(svg, img);
+        });
+    }).catch(() => {});
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // Reveal Footer Logic
     function updateFooter() {

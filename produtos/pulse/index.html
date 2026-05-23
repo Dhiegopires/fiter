@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -6,28 +6,58 @@
     <title>Pulse — Engajamento e Felicidade via WhatsApp | Fiter</title>
     <meta name="description" content="Pulse survey de colaboradores em 8 cliques e 2 minutos direto no WhatsApp. Meça felicidade, engajamento e fit cultural com IA. Preveja turnover em tempo real. Sem app.">
     <link rel="canonical" href="https://fiter.com.br/produtos/pulse/">
+    <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
 
     <meta property="og:title" content="Pulse — Engajamento e Felicidade via WhatsApp | Fiter">
     <meta property="og:description" content="Pulse survey de colaboradores em 8 cliques e 2 minutos direto no WhatsApp. Meça felicidade, engajamento e fit cultural com IA. Preveja turnover em tempo real. Sem app.">
     <meta property="og:url" content="https://fiter.com.br/produtos/pulse/">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://fiter.com.br/assets/img/hero_dashboard.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fiter Pulse",
+      "operatingSystem": "Web, WhatsApp",
+      "applicationCategory": "BusinessApplication",
+      "description": "Pulse survey de colaboradores em 8 cliques e 2 minutos direto no WhatsApp. Meça felicidade, engajamento e fit cultural com IA.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BRL"
+      }
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
     <script src="/assets/js/main.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @media (max-width: 900px) {
+            .pulse-hero-grid { grid-template-columns: 1fr !important; }
+            .pulse-hero-visual { display: none !important; }
+        }
+        @media (max-width: 768px) {
+            .pulse-metrics-grid { grid-template-columns: 1fr 1fr !important; }
+            .pulse-features-grid { grid-template-columns: 1fr !important; }
+            .pulse-steps-grid { grid-template-columns: 1fr !important; }
+            .pulse-checklist-grid { grid-template-columns: 1fr !important; }
+        }
+    </style>
 </head>
-<body data-theme="base">
+<body data-theme="analytics">
 
     <!-- NAV -->
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
 
         <ul class="nav-links">
 
@@ -79,7 +109,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -111,221 +141,317 @@
 
     <main class="main-content" style="padding-top: 64px;">
 
-        <!-- HERO -->
-        <section class="ds-section relative flex flex-col md:flex-row items-start gap-8" style="margin-bottom: 8rem; padding-top: 5rem; padding-left: 2rem; padding-right: 2rem; width: 100%;">
-                <div class="flex-1 z-10">
-                    <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary); letter-spacing: -0.025em;">
-                        <strong>Pulse IA que mede <span style="color: var(--accent-brand);">felicidade</span> e prevê <span style="color: var(--accent-brand);">riscos</span> no trabalho</strong>
-                    </h1>
-                    <p style="font-size: 1.125rem; font-weight: 600; color: var(--text-secondary); max-width: 580px; margin-bottom: 2.5rem; line-height: 1.6;">
-                        A única <span style="color: var(--accent-brand);">IA</span> com algoritmos proprietários para medir <span style="color: var(--accent-brand);">satisfação, engajamento e riscos psicossociais</span>, garantindo 100% de conformidade com a <span style="color: var(--accent-brand);">NR-01.</span>
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://app.leadster.com.br/capture/G3ZFt6nQPufqCr0b" class="btn btn-primary btn-animate-chars" target="_blank" style="text-decoration: none; font-weight: 600;">EXPLORAR INSIGHTS</a>
-                        <a href="#diferenciais" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; font-weight: 600;">SAIBA MAIS</a>
-                    </div>
+        <!-- Ambient glow orbs -->
+        <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+        <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
 
-                    <!-- METRICS -->
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 4rem;">
-                        <div class="metric-card" style="text-align: left;">
-                            <div class="metric-value">-7%</div>
-                            <div class="metric-label" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-secondary); margin-top: 0.25rem;">NO ÍNDICE DE ABSENTAÍSMO MÉDIO</div>
-                            <div class="metric-sub" style="color: var(--text-tertiary); font-size: 0.75rem;">clientes Fiter</div>
-                        </div>
-                        <div class="metric-card" style="text-align: left;">
-                            <div class="metric-value">-11%</div>
-                            <div class="metric-label" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-secondary); margin-top: 0.25rem;">NO TURNOVER VOLUNTÁRIO</div>
-                            <div class="metric-sub" style="color: var(--text-tertiary); font-size: 0.75rem;">clientes Fiter</div>
-                        </div>
-                        <div class="metric-card" style="text-align: left;">
-                            <div class="metric-value">-6%</div>
-                            <div class="metric-label" style="font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-secondary); margin-top: 0.25rem;">NOS AFASTAMENTOS POR SAÚDE MENTAL</div>
-                            <div class="metric-sub" style="color: var(--text-tertiary); font-size: 0.75rem;">clientes Fiter</div>
-                        </div>
-                    </div>
-                    <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 1.5rem; font-weight: 600;">
-                        <span style="color: var(--accent-brand);">•</span> Colaboradores com alto nível de satisfação apresentam <span style="color: var(--accent-brand);">+31% de produtividade</span>
-                    </p>
-                </div>
-                <div class="flex-1 hidden md:flex items-center justify-center relative w-full h-full z-0">
-                    <style>
-                        @keyframes float-pulse { 0% { transform: translateY(0px); } 50% { transform: translateY(-15px); } 100% { transform: translateY(0px); } }
-                            .ds-footer { position: static; }
-    </style>
-                    <div style="position: relative; width: 100%; max-width: 500px; animation: float-pulse 6s ease-in-out infinite;">
-                        <div style="position: absolute; inset: -30px; background: radial-gradient(circle at center, var(--accent-brand) 0%, transparent 60%); opacity: 0.2; filter: blur(40px); z-index: -1;"></div>
-                        <img src="/assets/img/hero_dashboard.png" alt="Dashboard Pulse" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: var(--shadow-lg), 0 0 30px var(--glow-subtle); display: block;">
-                    </div>
-                </div>
-            </section>
+        <div style="position: relative; z-index: 1;">
 
-        <div class="ds-container px-6">
+            <!-- HERO -->
+            <section class="ds-section" style="padding-top: 5rem; margin-bottom: 0;">
+                <div class="pulse-hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; min-height: calc(100vh - 120px);">
 
-            <!-- PRODUTO: A SOLUÇÃO PULSE -->
-            <section id="produto" class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-16">
-                    <h2 class="ds-section-title" style="justify-content: center; text-transform: lowercase;">a solução <span style="color: var(--accent-brand); margin-left: 0.5rem; text-transform: lowercase;">pulse</span></h2>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px; margin: 1rem auto 0; font-weight: 600;">Inteligência Artificial aplicada de forma única, com algoritmos proprietários e exclusivos</p>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default); text-align: center; align-items: center;">
-                        <img src="https://lab.fiter.com.br/wp-content/uploads/2025/10/Generated-Image-October-21-2025-3_44PM-e1761072980672.png" alt="IFT" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1.5rem;">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary); font-weight: 600;">IFT</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6; font-weight: 600;">Índice de Felicidade no Trabalho</p>
-                    </div>
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default); text-align: center; align-items: center;">
-                        <img src="https://lab.fiter.com.br/wp-content/uploads/2025/10/ChatGPT-Image-21-de-out.-de-2025-16_06_55-1.png" alt="Health Score" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1.5rem;">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary); font-weight: 600;">Health Score</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6; font-weight: 600;">Bem-estar e Engajamento</p>
-                    </div>
-                    <div class="card" style="background: var(--bg-surface); border: 1px solid var(--border-default); text-align: center; align-items: center;">
-                        <img src="https://lab.fiter.com.br/wp-content/uploads/2025/10/ChatGPT-Image-21-de-out.-de-2025-16_04_58-e1761073579544.png" alt="Algoritimo pioneiro" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%; margin-bottom: 1.5rem;">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--text-primary); font-weight: 600;">Algoritimo pioneiro</h3>
-                        <p style="color: var(--text-secondary); line-height: 1.6; font-weight: 600;">Previsão de Riscos Psicossociais</p>
-                    </div>
-                </div>
-
-                <div style="margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                    <!-- Left: copy -->
                     <div>
-                        <img src="https://lab.fiter.com.br/wp-content/uploads/2025/10/Generated_Image_October_20__2025_-_6_04PM-removebg-preview-e1760994545754.png" alt="Pulse ilustração" style="width: 100%; max-width: 400px; margin: 0 auto; display: block;">
-                    </div>
-                    <div style="padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
-                        <h3 style="font-family: var(--font-serif); font-size: 1.75rem; color: var(--text-primary); margin-bottom: 1.5rem; font-weight: 600;">Com isso, o Pulse:</h3>
-                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-                            <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--text-secondary);">
-                                <span style="width: 24px; height: 24px; border-radius: 50%; background: var(--accent-brand); color: var(--accent-text); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0;">✓</span>
-                                Mede Satisfação e Engajamento de forma contínua;
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--text-secondary);">
-                                <span style="width: 24px; height: 24px; border-radius: 50%; background: var(--accent-brand); color: var(--accent-text); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0;">✓</span>
-                                Prevê afastamentos e absenteísmo antes que ocorram;
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--text-secondary);">
-                                <span style="width: 24px; height: 24px; border-radius: 50%; background: var(--accent-brand); color: var(--accent-text); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0;">✓</span>
-                                Gera laudos NR-01 em tempo real;
-                            </div>
-                            <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--text-secondary);">
-                                <span style="width: 24px; height: 24px; border-radius: 50%; background: var(--accent-brand); color: var(--accent-text); display: flex; align-items: center; justify-content: center; font-size: 0.85rem; flex-shrink: 0;">✓</span>
-                                Orienta líderes com dados preditivos para agir antes que o problema aconteça.
-                            </div>
+                        <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.5rem;">Pulse · Engajamento contínuo</p>
+                        <h1 data-reveal style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 2rem; color: var(--text-primary);">
+                            IA que mede felicidade<br>e prevê riscos no trabalho
+                        </h1>
+                        <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 3rem; line-height: 1.7; max-width: 82%;">
+                            A única IA com algoritmos proprietários para medir satisfação, engajamento e riscos psicossociais. 8 cliques, via WhatsApp, sem app. 100% de conformidade com a NR-01.
+                        </p>
+                        <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
+                            <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Agendar demonstração</a>
+                            <a href="#como-funciona" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Ver como funciona</a>
                         </div>
+                    </div>
+
+                    <!-- Right: dashboard image -->
+                    <div class="pulse-hero-visual" style="position: relative;">
+                        <div style="position: absolute; inset: -40px; background: radial-gradient(circle at center, rgba(59,130,246,0.15) 0%, transparent 65%); pointer-events: none; z-index: 0;"></div>
+                        <img src="/assets/img/hero_dashboard.png" alt="Dashboard Pulse" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: 0 40px 100px rgba(0,0,0,0.6); display: block; position: relative; z-index: 1;">
+                    </div>
+
+                </div>
+
+                <!-- Metrics bar -->
+                <div class="pulse-metrics-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden;">
+                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); --reveal-delay: 0s;">
+                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem;">−7%</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">no índice de absenteísmo médio</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">clientes Fiter</div>
+                    </div>
+                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); border-left: 1px solid var(--border-default); --reveal-delay: 0.07s;">
+                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem;">−11%</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">no turnover voluntário</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">clientes Fiter</div>
+                    </div>
+                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); border-left: 1px solid var(--border-default); --reveal-delay: 0.14s;">
+                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem;">−6%</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">nos afastamentos por saúde mental</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">clientes Fiter</div>
+                    </div>
+                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); border-left: 1px solid var(--border-default); --reveal-delay: 0.21s;">
+                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--accent-brand); line-height: 1; margin-bottom: 0.5rem;">+31%</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">de produtividade em equipes satisfeitas</div>
+                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">pesquisa USP e Mackenzie</div>
                     </div>
                 </div>
             </section>
 
-            <!-- DIFERENCIAIS: O PULSE EM AÇÃO -->
-            <section id="diferenciais" class="ds-section" style="margin-bottom: 8rem; padding: 4rem 2rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default);">
-                <div class="text-center mb-12">
-                        <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.5rem); color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 800; letter-spacing: -0.025em;">
-                            O <span style="color: var(--accent-brand);">pulse</span> em ação
-                        </h2>
-                </div>
-                <div style="display: flex; flex-direction: column; gap: 2rem;">
-                    <div class="card" style="background: var(--bg-base); border: 1px solid var(--border-default); display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: center;">
-                        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--bg-surface); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 2.5rem; color: var(--accent-brand); flex-shrink: 0;">1</div>
-                        <div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Coleta automática integrada no WhatsApp</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.6;">Perguntas que mudam automaticamente todo mês para que os colaboradores se autoavaliem e recebam devolutiva imediata.</p>
-                        </div>
-                        <img src="https://lab.fiter.com.br/wp-content/uploads/2025/10/Fier-removebg-preview.png" alt="Coleta WhatsApp" style="width: 100px; height: auto; display: none;">
-                    </div>
-                    <div class="card" style="background: var(--bg-base); border: 1px solid var(--border-default); display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: center;">
-                        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--bg-surface); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 2.5rem; color: var(--accent-brand); flex-shrink: 0;">2</div>
-                        <div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Análise Neural</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.6;">Algoritmos exclusivos processam os dados coletados, gerando análises completas e profundas dos participantes.</p>
-                        </div>
-                    </div>
-                    <div class="card" style="background: var(--bg-base); border: 1px solid var(--border-default); display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: center;">
-                        <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--bg-surface); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; font-family: var(--font-serif); font-size: 2.5rem; color: var(--accent-brand); flex-shrink: 0;">3</div>
-                        <div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600;">Insights e laudos integrados com RH e liderança</h3>
-                            <p style="color: var(--text-secondary); line-height: 1.6;">O Sistema produz e entrega relatórios completos, além de alertas e insights, tudo com conformidade garantida e em tempo real.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- METODOLOGIA / CTA -->
-            <section id="metodologia" class="ds-section" style="margin-bottom: 8rem;">
-                <div style="padding: 4rem 2rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); text-align: center;">
-                    <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 1rem; line-height: 1.1; letter-spacing: -0.025em;">
-                        solicite uma <span style="background: linear-gradient(180deg, rgb(18, 193, 255) 0%, rgb(56, 202, 253) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">demonstração</span>
+            <!-- A SOLUÇÃO PULSE -->
+            <section id="produto" class="ds-section" style="margin-top: 8rem; margin-bottom: 8rem;">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">A solução Pulse</p>
+                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary);">
+                        IA proprietária. Metodologia científica.<br>Resultado em 2 minutos.
                     </h2>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 2rem; line-height: 1.6; font-weight: 600;">E veja como transformar dados em ação para o bem-estar da sua equipe e a saúde do seu negócio.</p>
-                    <a href="https://app.leadster.com.br/capture/G3ZFt6nQPufqCr0b" class="btn btn-primary btn-animate-chars" target="_blank" style="text-decoration: none; font-weight: 600;">INICIAR JORNADA NEURAL</a>
                 </div>
 
-                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem;">
-                    <div class="card" style="background: var(--bg-base); border: 1px solid var(--border-default); text-align: center; align-items: center;">
-                        <span style="font-size: 2rem; margin-bottom: 1rem; display: block;">🔑</span>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--text-primary); font-weight: 600;">SEGURANÇA NEURAL</h3>
+                <!-- 3 algoritmos -->
+                <div class="pulse-features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem;">
+                    <div class="fade-up" style="padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); --reveal-delay: 0s;">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent-brand);">
+                            <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">IFT</h3>
+                        <p style="font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-brand); margin-bottom: 1rem;">Índice de Felicidade no Trabalho</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Algoritmo exclusivo que combina neurociência e ciência comportamental para calcular um índice preciso de felicidade por colaborador, equipe e empresa.</p>
                     </div>
-                    <div class="card" style="background: var(--bg-base); border: 1px solid var(--border-default); text-align: center; align-items: center;">
-                        <span style="font-size: 2rem; margin-bottom: 1rem; display: block;">🚀</span>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--text-primary); font-weight: 600;">DEPLOY INSTANTÂNEO</h3>
+                    <div class="fade-up" style="padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); --reveal-delay: 0.08s;">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
+                            <i data-lucide="activity" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Health Score</h3>
+                        <p style="font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #10b981; margin-bottom: 1rem;">Bem-estar e Engajamento</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Score contínuo de bem-estar organizacional que identifica sinais precoces de burnout, desmotivação e risco de absenteísmo antes que se tornem problemas.</p>
                     </div>
-                    <div class="card" style="background: var(--bg-base); border: 1px solid var(--border-default); text-align: center; align-items: center;">
-                        <span style="font-size: 2rem; margin-bottom: 1rem; display: block;">📈</span>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.1rem; color: var(--text-primary); font-weight: 600;">EVOLUÇÃO CONTÍNUA</h3>
+                    <div class="fade-up" style="padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); --reveal-delay: 0.16s;">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #a78bfa;">
+                            <i data-lucide="brain" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Algoritmo Pioneiro</h3>
+                        <p style="font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #a78bfa; margin-bottom: 1rem;">Previsão de Riscos Psicossociais</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Primeiro no Brasil a prever riscos psicossociais com até 90 dias de antecedência. Gera laudos NR-01 automáticos com conformidade jurídica garantida.</p>
+                    </div>
+                </div>
+
+                <!-- Com isso, o Pulse: checklist + mini dashboard -->
+                <div class="pulse-checklist-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 3.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
+                    <div>
+                        <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1.5rem;">Com isso, o Pulse:</p>
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #10b981;">
+                                    <i data-lucide="check" style="width: 12px; height: 12px;"></i>
+                                </span>
+                                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">Mede satisfação e engajamento de forma contínua</p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #10b981;">
+                                    <i data-lucide="check" style="width: 12px; height: 12px;"></i>
+                                </span>
+                                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">Prevê afastamentos e absenteísmo antes que ocorram</p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #10b981;">
+                                    <i data-lucide="check" style="width: 12px; height: 12px;"></i>
+                                </span>
+                                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">Gera laudos NR-01 em tempo real</p>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #10b981;">
+                                    <i data-lucide="check" style="width: 12px; height: 12px;"></i>
+                                </span>
+                                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">Orienta líderes com dados preditivos para agir antes que o problema aconteça</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mini dashboard preview -->
+                    <div style="background: #09090f; border: 1px solid rgba(59,130,246,0.18); border-radius: 16px; overflow: hidden; font-family: var(--font-mono);">
+                        <div style="background: #0d0d18; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0.65rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <div style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f57;"></div>
+                            <div style="width: 10px; height: 10px; border-radius: 50%; background: #febc2e;"></div>
+                            <div style="width: 10px; height: 10px; border-radius: 50%; background: #28c840;"></div>
+                            <div style="flex: 1; margin: 0 0.75rem; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 0.25rem 0.75rem; font-size: 0.55rem; color: rgba(255,255,255,0.3);">fiter.com.br/pulse/dashboard</div>
+                        </div>
+                        <div style="background: #0e0e1a; padding: 0.75rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <div>
+                                <div style="font-size: 0.7rem; font-weight: 700; color: #fff;">Fiter Pulse</div>
+                                <div style="font-size: 0.52rem; color: rgba(255,255,255,0.3); margin-top: 1px;">Maio 2026 · 342 respostas</div>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.35rem;">
+                                <span style="width: 7px; height: 7px; border-radius: 50%; background: #25d366; box-shadow: 0 0 7px rgba(37,211,102,0.65);"></span>
+                                <span style="font-size: 0.52rem; color: rgba(37,211,102,0.85);">ao vivo</span>
+                            </div>
+                        </div>
+                        <div style="padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: 0.9rem;">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem;">
+                                <div style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.24); border-radius: 10px; padding: 0.75rem 0.5rem; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: #3b82f6; line-height: 1;">87</div>
+                                    <div style="font-size: 0.5rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem;">IFT</div>
+                                </div>
+                                <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.24); border-radius: 10px; padding: 0.75rem 0.5rem; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: #10b981; line-height: 1;">82</div>
+                                    <div style="font-size: 0.5rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem;">Health</div>
+                                </div>
+                                <div style="background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.24); border-radius: 10px; padding: 0.75rem 0.5rem; text-align: center;">
+                                    <div style="font-size: 1.5rem; font-weight: 700; color: #a78bfa; line-height: 1;">91</div>
+                                    <div style="font-size: 0.5rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem;">Fit</div>
+                                </div>
+                            </div>
+                            <div style="background: rgba(245,158,11,0.07); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; padding: 0.65rem 0.8rem; display: flex; align-items: flex-start; gap: 0.5rem;">
+                                <span style="font-size: 0.75rem; flex-shrink: 0; line-height: 1.2; margin-top: 0.05rem;">⚠</span>
+                                <div>
+                                    <div style="font-size: 0.6rem; font-weight: 600; color: #f59e0b; margin-bottom: 0.15rem;">Risco de turnover detectado</div>
+                                    <div style="font-size: 0.52rem; color: rgba(255,255,255,0.38); line-height: 1.4;">3 pessoas · Operações · Queda 18 pts em 4 sem.</div>
+                                </div>
+                            </div>
+                            <div style="background: rgba(59,130,246,0.05); border: 1px solid rgba(59,130,246,0.12); border-radius: 10px; padding: 0.65rem 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
+                                <span style="font-size: 0.65rem; color: #3b82f6; flex-shrink: 0;">✦</span>
+                                <div style="font-size: 0.58rem; color: rgba(255,255,255,0.6); line-height: 1.5;">IA recomenda 1:1 com 3 colaboradores de Operações antes de 30/05</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- O PULSE EM AÇÃO -->
+            <section id="como-funciona" style="margin-bottom: 8rem; margin-inline: -2rem; padding: 7rem 5vw; background: var(--bg-surface); border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default);">
+                <div style="max-width: 1280px; margin: 0 auto;">
+                    <div style="text-align: center; margin-bottom: 4.5rem;">
+                        <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">O Pulse em ação</p>
+                        <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary);">
+                            Do envio ao plano de ação.<br>Tudo automático.
+                        </h2>
+                    </div>
+
+                    <div class="pulse-steps-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                        <div class="fade-up" style="--reveal-delay: 0s; padding: 2.5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--bg-base);">
+                            <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.75rem;">Passo 01</p>
+                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent-brand);">
+                                <i data-lucide="message-circle" style="width: 22px; height: 22px;"></i>
+                            </div>
+                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Coleta automática via WhatsApp</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Perguntas que mudam automaticamente todo mês. Colaboradores se autoavaliam e recebem devolutiva imediata. 8 cliques, 2 minutos, sem app.</p>
+                        </div>
+                        <div class="fade-up" style="--reveal-delay: 0.1s; padding: 2.5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--bg-base);">
+                            <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.75rem;">Passo 02</p>
+                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent-brand);">
+                                <i data-lucide="cpu" style="width: 22px; height: 22px;"></i>
+                            </div>
+                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Análise Neural</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Algoritmos exclusivos processam os dados coletados, gerando análises completas de IFT, Health Score e riscos psicossociais por departamento.</p>
+                        </div>
+                        <div class="fade-up" style="--reveal-delay: 0.2s; padding: 2.5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--bg-base);">
+                            <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.75rem;">Passo 03</p>
+                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent-brand);">
+                                <i data-lucide="bar-chart-2" style="width: 22px; height: 22px;"></i>
+                            </div>
+                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Insights e laudos integrados</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Relatórios completos, alertas automáticos e planos de ação gerados por IA entregues ao RH e à liderança. Conformidade NR-01 garantida em tempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- DIFERENCIAIS: Segurança, Deploy, Evolução -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                <div class="pulse-features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                    <div class="fade-up" style="--reveal-delay: 0s; padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent-brand);">
+                            <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Segurança Neural</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Anonimato por design. Gestores veem dados agregados, nunca individuais. 100% LGPD e NR-01. Arquitetura zero-knowledge por colaborador.</p>
+                    </div>
+                    <div class="fade-up" style="--reveal-delay: 0.08s; padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent-brand);">
+                            <i data-lucide="zap" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Deploy Instantâneo</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Do contrato ao primeiro diagnóstico em dias. Sem TI, sem burocracia. Importação da base, treinamento de 1h30 e primeira pesquisa no ar.</p>
+                    </div>
+                    <div class="fade-up" style="--reveal-delay: 0.16s; padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
+                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--accent-brand);">
+                            <i data-lucide="trending-up" style="width: 20px; height: 20px;"></i>
+                        </div>
+                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Evolução Contínua</h3>
+                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">As perguntas evoluem automaticamente todo mês. A IA aprende com cada ciclo e aperfeiçoa as predições ao longo do tempo.</p>
                     </div>
                 </div>
             </section>
 
             <!-- FAQ -->
             <section class="ds-section" style="margin-bottom: 8rem;">
-                <div class="text-center mb-12">
-                    <h2 class="ds-section-title">Perguntas frequentes</h2>
-                    <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 0.5rem; font-weight: 600;">Tire suas dúvidas sobre o Pulse e como ele pode transformar sua empresa.</p>
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">Perguntas frequentes</p>
+                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary);">
+                        Tudo o que você precisa<br>saber antes de contratar.
+                    </h2>
                 </div>
-                <div style="max-width: 760px; margin: 0 auto;">
-                    <div class="faq-list">
-                        <div class="faq-item">
-                            <button class="faq-trigger">
-                                <span class="faq-question">Os dados dos colaboradores são realmente anônimos?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <div class="faq-body"><div class="faq-body-inner">
-                                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus commodo nibh, ut elementum velit sollicitudin at. Donec suscipit commodo risus. Nunc vel orci eget ligula elementum consequat. Fusce velit erat, convallis scelerisque aliquet ut, facilisis egestas tellus. Quisque sit amet sapien placerat, ultricies sapien ut, vestibulum ex.</p>
-                            </div></div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger">
-                                <span class="faq-question">O Pulse funciona para empresas com equipes remotas?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <div class="faq-body"><div class="faq-body-inner">
-                                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus commodo nibh, ut elementum velit sollicitudin at. Donec suscipit commodo risus. Nunc vel orci eget ligula elementum consequat. Fusce velit erat, convallis scelerisque aliquet ut, facilisis egestas tellus. Quisque sit amet sapien placerat, ultricies sapien ut, vestibulum ex.</p>
-                            </div></div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger">
-                                <span class="faq-question">Quanto tempo leva para implementar o Pulse?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <div class="faq-body"><div class="faq-body-inner">
-                                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus commodo nibh, ut elementum velit sollicitudin at. Donec suscipit commodo risus. Nunc vel orci eget ligula elementum consequat. Fusce velit erat, convallis scelerisque aliquet ut, facilisis egestas tellus. Quisque sit amet sapien placerat, ultricies sapien ut, vestibulum ex.</p>
-                            </div></div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger">
-                                <span class="faq-question">Como o Pulse mede a felicidade dos colaboradores?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <div class="faq-body"><div class="faq-body-inner">
-                                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus commodo nibh, ut elementum velit sollicitudin at. Donec suscipit commodo risus. Nunc vel orci eget ligula elementum consequat. Fusce velit erat, convallis scelerisque aliquet ut, facilisis egestas tellus. Quisque sit amet sapien placerat, ultricies sapien ut, vestibulum ex.</p>
-                            </div></div>
-                        </div>
-                        <div class="faq-item">
-                            <button class="faq-trigger">
-                                <span class="faq-question">Qual o investimento necessário para usar o Pulse?</span>
-                                <span class="faq-icon"></span>
-                            </button>
-                            <div class="faq-body"><div class="faq-body-inner">
-                                <p class="faq-answer">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus commodo nibh, ut elementum velit sollicitudin at. Donec suscipit commodo risus. Nunc vel orci eget ligula elementum consequat. Fusce velit erat, convallis scelerisque aliquet ut, facilisis egestas tellus. Quisque sit amet sapien placerat, ultricies sapien ut, vestibulum ex.</p>
-                            </div></div>
-                        </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Os dados dos colaboradores são realmente anônimos?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Sim, por design estrutural. Gestores veem apenas dados agregados, nunca a resposta individual de um colaborador. O anonimato não é uma política: é uma limitação técnica intencional do sistema. Não é tecnicamente possível rastrear qual pessoa respondeu o quê. A Fiter é 100% em conformidade com a LGPD.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">O Pulse funciona para empresas com equipes remotas?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Sim. Como a coleta é feita inteiramente via WhatsApp, não importa onde o colaborador está: no escritório, em home office, no campo ou em outro estado. Basta ter o número de celular cadastrado. Sem app, sem link de acesso, sem VPN.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Quanto tempo leva para implementar o Pulse?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Do contrato ao primeiro diagnóstico em dias: assinatura → onboarding CS (importação da base de colaboradores) → treinamento de 1h30 com gestores → primeira pesquisa disparada. Sem projeto de meses, sem envolver TI.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Como o Pulse mede a felicidade dos colaboradores?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Por meio de 8 perguntas validadas cientificamente em teses de mestrado com USP e Mackenzie. As perguntas não foram escritas por uma equipe de produto. Foram testadas para medir exatamente o que dizem medir, sem viés de aquiescência ou de desejabilidade social. O respondente leva 2 minutos. O resultado aparece em tempo real no dashboard.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Qual o investimento necessário para usar o Pulse?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">O valor é por colaborador ativo/mês e varia conforme o tamanho da equipe. Fale com um especialista para receber uma proposta personalizada. Na maioria dos casos, o retorno acontece no mesmo dia.</p>
+                        </div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA FINAL -->
+            <section class="ds-section" style="margin-bottom: 4rem; padding: 5rem 3.5rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default); position: relative; overflow: hidden; text-align: center;">
+                <div aria-hidden="true" style="position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 500px; height: 300px; background: radial-gradient(circle, rgba(59,130,246,0.07) 0%, transparent 70%); pointer-events: none;"></div>
+                <div style="position: relative; z-index: 1; max-width: 600px; margin: 0 auto;">
+                    <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">Demonstração gratuita</p>
+                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary); margin-bottom: 1.25rem;">
+                        Solicite uma demonstração
+                    </h2>
+                    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto;">E veja como transformar dados em ação para o bem-estar da sua equipe e a saúde do seu negócio.</p>
+                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                        <a href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration: none; padding: 1rem 2.5rem;">Agendar demonstração</a>
+                        <a href="/solucoes/rh/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none; padding: 1rem 2.5rem;">Ver solução RH completa</a>
                     </div>
                 </div>
             </section>
@@ -336,14 +462,41 @@
     <!-- FOOTER -->
     <footer class="ds-footer">
         <div class="footer-inner">
-            <div class="footer-top" style="justify-content: center; margin-bottom: 1rem;">
-                <div class="footer-brand" style="gap: 0;">
-                    <div style="font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--text-primary);">Fiter.</div>
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="/assets/img/fiter_logo.svg" alt="Fiter">
+                    <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
+                </div>
+                <div class="footer-nav">
+                    <div>
+                        <div class="footer-col-title">Soluções</div>
+                        <ul class="footer-links">
+                            <li><a href="/solucoes/rh/">Recursos Humanos</a></li>
+                            <li><a href="/solucoes/educacao/">Educação</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Empresa</div>
+                        <ul class="footer-links">
+                            <li><a href="/sobre/">Sobre</a></li>
+                            <li><a href="/blog/">Blog</a></li>
+                            <li><a href="/contato/">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="footer-col-title">Conformidade</div>
+                        <ul class="footer-links">
+                            <li><a href="/lgpd/">LGPD</a></li>
+                            <li><a href="/politica-de-privacidade/">Política de privacidade</a></li>
+                            <li><a href="/termos-de-uso/">Termos de uso</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="footer-divider"></div>
-            <div class="footer-bottom" style="justify-content: center;">
-                <span class="footer-copy">&copy; 2025 FITER &mdash; Neurociência Aplicada ao Futuro do Trabalho</span>
+            <div class="footer-bottom">
+                <span class="footer-copy">© 2026 Fiter Tecnologia LTDA · Todos os direitos reservados.</span>
+                <span class="footer-copy" style="display:flex;align-items:center;gap:0.3rem;">Feito por <a href="https://vellumwire.com" target="_blank" rel="noopener" style="color:var(--text-secondary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-secondary)'">Vellumwire</a> <span style="color:var(--text-tertiary);">&#10084;</span></span>
             </div>
         </div>
     </footer>
