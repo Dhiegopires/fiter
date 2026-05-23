@@ -46,7 +46,7 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
@@ -60,12 +60,14 @@
         @media (max-width: 768px) {
             /* Urgency stats */
             .urgency-stats-grid { grid-template-columns: 1fr !important; }
+            .urgency-stats-grid > div[style*="border-right"] { border-right: none !important; border-bottom: 1px solid var(--border-default) !important; }
             /* Analytics charts */
             .analytics-grid { grid-template-columns: 1fr !important; }
             /* CTA form */
             .cta-grid { grid-template-columns: 1fr !important; }
             /* Sci-tiles */
             .sci-section-grid { grid-template-columns: 1fr !important; }
+            .sci-section-grid > div:last-child { margin-top: 0 !important; margin-right: 0 !important; margin-bottom: 0 !important; border-left: none !important; }
             /* Implementação sticky */
             .impl-grid { grid-template-columns: 1fr !important; }
             .impl-grid > div:first-child { position: static !important; }
@@ -73,6 +75,8 @@
             .product-grid { grid-template-columns: 1fr !important; }
             .product-grid > div[style*="order:1"],
             .product-grid > div[style*="order:2"] { order: unset !important; }
+            /* Featured testimonial */
+            .testi-featured { display: flex !important; flex-direction: column !important; gap: 2rem !important; }
         }
         @keyframes heroPulse {
             0%, 100% { opacity: 1; }

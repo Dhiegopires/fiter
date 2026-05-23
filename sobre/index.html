@@ -31,7 +31,14 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+        @media (max-width: 768px) {
+            .sobre-hero-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+            .sobre-stats-grid { grid-template-columns: 1fr 1fr !important; }
+            .sobre-science-grid { grid-template-columns: 1fr !important; }
+        }
+    </style>
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
@@ -132,7 +139,7 @@
 
         <!-- HERO -->
         <section class="ds-section" style="padding-top:8rem;padding-bottom:5rem;">
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+            <div class="sobre-hero-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
 
                 <!-- Copy -->
                 <div>
@@ -145,7 +152,7 @@
                 </div>
 
                 <!-- Stats grid -->
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+                <div class="sobre-stats-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
                     <div class="card fade-up" style="--reveal-delay:0.1s;text-align:center;padding:2rem 1.5rem;">
                         <div style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:var(--accent-brand);line-height:1;margin-bottom:0.5rem;">+500k</div>
                         <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.1em;">pessoas medidas</div>
@@ -171,7 +178,7 @@
         <section class="ds-section" style="padding-bottom:6rem;">
             <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;" data-reveal>O que nos move</p>
             <h2 style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.02em;color:var(--text-primary);margin-bottom:3rem;max-width:36rem;--reveal-delay:0.1s;" data-reveal>Pesquisa e Ciência na Prática</h2>
-            <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
+            <div class="sobre-science-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;">
 
                 <div class="card fade-up" style="--reveal-delay:0s;">
                     <h3 style="font-family:var(--font-serif);font-size:1.75rem;font-weight:700;letter-spacing:-0.02em;color:var(--text-primary);margin-bottom:1rem;">O que é uma DeepTech?</h3>
