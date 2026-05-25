@@ -92,6 +92,103 @@
             --accent-text: #ffffff;
         }
 
+        /* =========================================================
+           LIGHT THEME (sobre, contato)
+           ========================================================= */
+        [data-theme="light"] {
+            --semantic-color-background-base:          #ffffff;
+            --semantic-color-background-surface:       #f4f4f5;
+            --semantic-color-background-surface-hover: #e4e4e7;
+            --semantic-color-foreground-primary:       #09090b;
+            --semantic-color-foreground-secondary:     #52525b;
+            --semantic-color-foreground-tertiary:      #a1a1aa;
+            --semantic-color-border-subtle:  rgba(0,0,0,0.04);
+            --semantic-color-border-default: rgba(0,0,0,0.09);
+            --semantic-color-border-hover:   rgba(0,0,0,0.18);
+            --semantic-color-accent-brand: #3b82f6;
+            --semantic-color-accent-glow:  rgba(59,130,246,0.15);
+            --semantic-color-accent-text:  #ffffff;
+            --bg-base:          #ffffff;
+            --bg-surface:       #f4f4f5;
+            --bg-elevated:      #ececed;
+            --bg-surface-hover: #e4e4e7;
+            --text-primary:   #09090b;
+            --text-secondary: #52525b;
+            --text-tertiary:  #a1a1aa;
+            --border-default: rgba(0,0,0,0.09);
+            --border-subtle:  rgba(0,0,0,0.04);
+            --border-hover:   rgba(0,0,0,0.18);
+            --accent-brand: #3b82f6;
+            --accent-glow:  rgba(59,130,246,0.15);
+            --accent-text:  #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -1px rgba(0,0,0,0.04);
+            --shadow-lg: 0 10px 24px rgba(0,0,0,0.07), 0 4px 8px rgba(0,0,0,0.04);
+            --glow-subtle: 0 0 20px rgba(59,130,246,0.04);
+            --semantic-color-accent-glow-solid: rgba(59,130,246,0.04);
+            --accent-glow-solid: rgba(59,130,246,0.04);
+        }
+        /* Nav */
+        [data-theme="light"] .site-nav.scrolled {
+            background: rgba(255,255,255,0.94);
+            border-color: rgba(0,0,0,0.07);
+        }
+        [data-theme="light"] .nav-drop {
+            background: rgba(255,255,255,0.99);
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+        [data-theme="light"] .drop-link:hover { background: rgba(0,0,0,0.04); }
+        [data-theme="light"] .drop-divider    { background: rgba(0,0,0,0.06); }
+        [data-theme="light"] .nav-panel {
+            background: #ffffff;
+            border-left: 1px solid rgba(0,0,0,0.08);
+        }
+        [data-theme="light"] .nav-panel-logo  { border-bottom: 1px solid rgba(0,0,0,0.07); }
+        [data-theme="light"] .drawer-item      { border-bottom: 1px solid rgba(0,0,0,0.05); }
+        [data-theme="light"] .drawer-sub-inner { background: rgba(0,0,0,0.02); }
+        [data-theme="light"] .drawer-cta       { border-top: 1px solid rgba(0,0,0,0.07); }
+        [data-theme="light"] .nav-backdrop     { background: rgba(0,0,0,0.35); }
+        /* Cards */
+        [data-theme="light"] .card {
+            background: #f8f8f9;
+            border: 1px solid rgba(0,0,0,0.08);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        /* Buttons */
+        [data-theme="light"] .btn-ghost:hover { background-color: rgba(0,0,0,0.04); }
+        /* Logo */
+        [data-theme="light"] .nav-logo img { mix-blend-mode: normal; }
+        /* FAQ */
+        [data-theme="light"] .faq-item  { border-bottom-color: rgba(0,0,0,0.07); }
+        [data-theme="light"] .faq-body  { color: var(--text-secondary); }
+        /* Testimonials */
+        [data-theme="light"] .testi-card {
+            background: #f8f8f9;
+            border-color: rgba(0,0,0,0.08);
+        }
+        /* Footer */
+        [data-theme="light"] .ds-footer {
+            background: #f4f4f5;
+            border-top: 1px solid rgba(0,0,0,0.08);
+        }
+        /* Form inputs (contato inline overrides) */
+        [data-theme="light"] .form-input,
+        [data-theme="light"] .form-select,
+        [data-theme="light"] .form-textarea {
+            background: #ffffff;
+            border: 1px solid rgba(0,0,0,0.12);
+            color: #09090b;
+        }
+        [data-theme="light"] .form-input:focus,
+        [data-theme="light"] .form-select:focus,
+        [data-theme="light"] .form-textarea:focus {
+            background: #ffffff;
+            box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
+        }
+        [data-theme="light"] .form-input::placeholder { color: #a1a1aa; }
+        [data-theme="light"] .form-select option { background: #ffffff; color: #09090b; }
+
         * {
             box-sizing: border-box;
             margin: 0;

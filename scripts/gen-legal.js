@@ -16,12 +16,13 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
                 <div class="nav-drop">
                     <a class="drop-link" href="/produtos/pulse/"><div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div></a>
                     <a class="drop-link" href="/produtos/nr01/"><div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div></a>
-                    <a class="drop-link" href="/produtos/portal-de-transparencia/"><div><div class="drop-link-name">Portal de Transparência</div><div class="drop-link-tag">Dados abertos</div></div></a>
+                    <a class="drop-link" href="/produtos/portal-de-transparencia/"><div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Canal anônimo</div></div></a>
                     <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/"><div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div></a>
                 </div>
             </li>
             <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
             <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contato/">Contato</a></li>
         </ul>
         <div class="nav-right">
             <a class="btn btn-primary nav-cta btn-animate-chars" href="/contato/" style="text-decoration:none;">Agendar demonstração</a>
