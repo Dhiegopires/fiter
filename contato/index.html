@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth" data-theme="light">
+<html lang="pt-BR" class="scroll-smooth" data-theme="analytics">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,120 +34,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        /* ── Form DS ── */
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.25rem;
-        }
-        .form-grid .form-field-full { grid-column: 1 / -1; }
-        .form-field { display: flex; flex-direction: column; gap: 0.45rem; }
-        .form-label {
-            font-family: var(--font-mono);
-            font-size: 0.68rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-secondary);
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-        }
-        .form-label-required { color: var(--accent-brand); font-size: 0.7rem; line-height: 1; }
-        .form-input,
-        .form-select,
-        .form-textarea {
-            width: 100%;
-            background: #ffffff;
-            border: 1px solid rgba(0,0,0,0.12);
-            border-radius: var(--radius-md);
-            color: var(--text-primary);
-            font-family: var(--font-sans);
-            font-size: 0.9rem;
-            transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
-            outline: none;
-            appearance: none;
-            -webkit-appearance: none;
-        }
-        .form-input,
-        .form-select { padding: 0.75rem 1rem; height: 48px; }
-        .form-input::placeholder { color: var(--text-tertiary); }
-        .form-input:focus,
-        .form-select:focus,
-        .form-textarea:focus {
-            border-color: var(--accent-brand);
-            background: #ffffff;
-            box-shadow: 0 0 0 3px rgba(59,130,246,0.12);
-        }
-        .form-select-wrap { position: relative; display: flex; align-items: center; }
-        .form-select-chevron {
-            position: absolute;
-            right: 1rem; top: 0; bottom: 0;
-            display: flex; align-items: center;
-            pointer-events: none;
-            color: var(--text-tertiary);
-            transition: color 0.2s;
-        }
-        .form-select-wrap:focus-within .form-select-chevron { color: var(--accent-brand); }
-        .form-select { padding-right: 2.5rem; cursor: pointer; }
-        .form-select option { background: #ffffff; color: #09090b; }
-        .form-submit-row { display: flex; flex-direction: column; gap: 0.85rem; padding-top: 0.5rem; }
-        .form-confirm {
-            font-size: 0.75rem;
-            color: var(--text-tertiary);
-            line-height: 1.5;
-            display: flex;
-            align-items: flex-start;
-            gap: 0.5rem;
-        }
-        .form-confirm::before { content: '✓'; color: var(--color-success, #10b981); font-size: 0.7rem; margin-top: 0.1rem; flex-shrink: 0; }
-        .btn.is-loading { pointer-events: none; opacity: 0.7; position: relative; }
-        .btn.is-loading::after {
-            content: '';
-            position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
-            width: 14px; height: 14px;
-            border: 2px solid rgba(255,255,255,0.3);
-            border-top-color: white;
-            border-radius: 50%;
-            animation: spin 0.7s linear infinite;
-        }
-        @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
-        .form-success-screen {
-            display: none;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 1rem;
-            padding: 4rem 2rem;
-        }
-        .form-success-screen.is-visible { display: flex; }
-        .form-success-icon {
-            width: 56px; height: 56px;
-            border-radius: 50%;
-            background: rgba(16,185,129,0.12);
-            border: 1px solid rgba(16,185,129,0.3);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 1.5rem;
-            color: #10b981;
-        }
-        .form-success-title {
-            font-family: var(--font-serif);
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-        }
-        .form-success-sub {
-            font-size: 0.88rem;
-            color: var(--text-tertiary);
-            max-width: 320px;
-            line-height: 1.6;
-        }
-
         @media (max-width: 768px) {
             .contact-layout { grid-template-columns: 1fr !important; gap: 3rem !important; }
-            .form-grid { grid-template-columns: 1fr !important; }
-            .form-grid .form-field-full { grid-column: 1 !important; }
         }
     </style>
 </head>
@@ -247,6 +135,7 @@
         <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
 
         <section class="ds-section" style="padding-top:8rem;padding-bottom:7rem;">
+            <div class="ds-container">
             <div class="contact-layout" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;">
 
                 <!-- Left: copy -->
@@ -259,7 +148,7 @@
                     </p>
 
                     <!-- What to expect -->
-                    <div style="display:flex;flex-direction:column;gap:1.25rem;" data-reveal style="--reveal-delay:0.15s;">
+                    <div style="display:flex;flex-direction:column;gap:1.25rem;--reveal-delay:0.15s;" data-reveal>
 
                         <div style="display:flex;gap:1rem;align-items:flex-start;">
                             <div style="width:36px;height:36px;border-radius:var(--radius-md);background:var(--bg-surface);border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent-brand);">
@@ -372,6 +261,7 @@
                     </div>
                 </div>
 
+            </div>
             </div>
         </section>
 
