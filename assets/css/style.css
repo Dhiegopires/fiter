@@ -2419,3 +2419,55 @@
             .sp-metric { min-width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
             .bar-row { grid-template-columns: 80px 1fr 40px; }
         }
+
+        /* =========================================================
+           MOBILE: HERO (RH / Soluções)
+           ========================================================= */
+        @media (max-width: 900px) {
+            #hero-rh {
+                min-height: auto !important;
+                padding: 2rem 1rem;
+            }
+            #hero-rh-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2.5rem !important;
+                padding: 0;
+            }
+            #hero-rh-grid > div:first-child {
+                padding-left: 0 !important;
+            }
+            #hero-rh-grid p {
+                max-width: 100% !important;
+            }
+            #hero-rh-visual {
+                height: auto !important;
+                order: -1;
+            }
+            #hero-rh-visual .fade-up {
+                perspective: none !important;
+            }
+            #hero-rh-visual .fade-up > div {
+                transform: none !important;
+            }
+            #hero-rh-visual .fade-up > div > div:not([style*="position: absolute"]) {
+                max-width: min(320px, 80vw);
+                transform: none !important;
+            }
+            .urgency-strip {
+                flex-wrap: wrap;
+                gap: 0.45rem;
+                padding: 0.65rem 1rem;
+                margin-bottom: 1.5rem;
+            }
+            #fontes-credits {
+                text-align: left !important;
+            }
+            .urgency-cta {
+                flex: 1 1 100%;
+                text-align: center;
+                justify-content: center;
+            }
+            .urgency-body {
+                min-width: calc(100% - 5rem);
+            }
+        }
