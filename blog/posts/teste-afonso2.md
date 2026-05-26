@@ -7,7 +7,6 @@ readingTime: 10
 description: "Estou fazendo um teste de um post test para ver como ficou a atualização das noticias."
 author: "Sergio Fiter"
 authorInitials: "SF"
-image: "primata.jpeg"
 image: "girafa.jpeg"
 ---
 
