@@ -160,9 +160,10 @@
         .demo-flex { flex-direction:column; align-items:center; gap:2rem; }
         .demo-mockup { min-width:0 !important; max-width:100% !important; width:100%; }
     }
-    /* Neurolead chatbot: mais acima no index */
-    html[data-theme="analytics"] [class*="nld-"],
-    html[data-theme="analytics"] [id*="nld-"] {
+    /* Neurolead chatbot: mais acima no index (apenas o icone, nao o popup) */
+    html[data-theme="analytics"] .nld-chatbot > .nld-avatar,
+    html[data-theme="analytics"] .nld-chatbot > .nld-avatar-medium,
+    html[data-theme="analytics"] .nld-chatbot > .nld-avatar-small {
         bottom: 200px !important;
     }
     </style>
