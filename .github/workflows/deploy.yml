@@ -39,17 +39,18 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: /public_html/
+          dangerous-clean-slate: false
           exclude: |
-            .git*/
-            .git*
-            node_modules/
-            .md/
-            .claude/
-            blog/posts/
-            blog/_layout-post.html
-            blog/images/.gitkeep
-            blog/modelo-post.md
-            scripts/
-            *.md
-            project-seo-audit.html
-            fiter-seo-audit-v2.html
+            **/.git/**
+            **/.gitignore
+            **/node_modules/**
+            **/.md/**
+            **/.claude/**
+            **/blog/posts/**
+            **/blog/_layout-post.html
+            **/blog/images/.gitkeep
+            **/blog/modelo-post.md
+            **/scripts/**
+            **/*.md
+            **/project-seo-audit.html
+            **/fiter-seo-audit-v2.html
