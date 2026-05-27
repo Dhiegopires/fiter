@@ -1145,13 +1145,22 @@
         @media (max-width: 900px) {
             .nav-links, .nav-cta { display: none; }
             .nav-hamburger { display: flex; }
+
+            body.menu-open .nav-drawer {
+                z-index: 999999 !important;
+            }
+            body.menu-open .nld-chatbot,
+            body.menu-open [class*="nld-"],
+            body.menu-open [id*="leadster"],
+            body.menu-open [id*="neurolead"] {
+                display: none !important;
+                visibility: hidden !important;
+                pointer-events: none !important;
+            }
         }
 
         body.menu-open .site-nav {
             z-index: 999999 !important;
-        }
-        body.menu-open .nld-chatbot {
-            display: none !important;
         }
 
         /* =========================================================

@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.right = '0';
             document.body.style.width = '100%';
             document.body.style.touchAction = 'none';
-            document.querySelectorAll('.nld-chatbot').forEach(el => {
+            document.querySelectorAll('.nld-chatbot, [class*="nld-"], [id*="leadster"], [id*="neurolead"]').forEach(el => {
                 el.dataset.origDisplay = el.style.display || '';
                 el.style.display = 'none';
             });
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.right = '';
             document.body.style.width = '';
             document.body.style.touchAction = '';
-            document.querySelectorAll('.nld-chatbot').forEach(el => {
+            document.querySelectorAll('.nld-chatbot, [class*="nld-"], [id*="leadster"], [id*="neurolead"]').forEach(el => {
                 el.style.display = el.dataset.origDisplay || '';
                 delete el.dataset.origDisplay;
             });
