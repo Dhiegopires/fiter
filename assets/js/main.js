@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.right = '0';
             document.body.style.width = '100%';
             document.body.style.touchAction = 'none';
-            document.querySelectorAll('.nld-chatbot, .nld-chatbot *').forEach(el => {
-                el.dataset.origZ = el.style.zIndex || '';
-                el.style.zIndex = '180';
+            document.querySelectorAll('.nld-chatbot').forEach(el => {
+                el.dataset.origDisplay = el.style.display || '';
+                el.style.display = 'none';
             });
         }
         function closeMobile() {
@@ -124,9 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.right = '';
             document.body.style.width = '';
             document.body.style.touchAction = '';
-            document.querySelectorAll('.nld-chatbot, .nld-chatbot *').forEach(el => {
-                el.style.zIndex = el.dataset.origZ || '';
-                delete el.dataset.origZ;
+            document.querySelectorAll('.nld-chatbot').forEach(el => {
+                el.style.display = el.dataset.origDisplay || '';
+                delete el.dataset.origDisplay;
             });
             window.scrollTo(0, scrollPos);
         }

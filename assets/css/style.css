@@ -1150,9 +1150,8 @@
         body.menu-open .site-nav {
             z-index: 999999 !important;
         }
-        body.menu-open .nld-chatbot,
-        body.menu-open .nld-chatbot * {
-            z-index: 180 !important;
+        body.menu-open .nld-chatbot {
+            display: none !important;
         }
 
         /* =========================================================
