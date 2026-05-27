@@ -91,17 +91,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        let scrollPos = 0;
         function openMobile() {
+            scrollPos = window.scrollY;
             nav.classList.add('menu-open');
             drawer && drawer.setAttribute('aria-hidden', 'false');
             hamburger && hamburger.setAttribute('aria-expanded', 'true');
             document.body.style.overflow = 'hidden';
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollPos}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
         }
         function closeMobile() {
             nav.classList.remove('menu-open');
             drawer && drawer.setAttribute('aria-hidden', 'true');
             hamburger && hamburger.setAttribute('aria-expanded', 'false');
             document.body.style.overflow = '';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.left = '';
+            document.body.style.right = '';
+            window.scrollTo(0, scrollPos);
         }
         hamburger && hamburger.addEventListener('click', () => nav.classList.contains('menu-open') ? closeMobile() : openMobile());
         backdrop  && backdrop.addEventListener('click', closeMobile);
