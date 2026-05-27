@@ -161,10 +161,12 @@
         .demo-mockup { min-width:0 !important; max-width:100% !important; width:100%; }
     }
     /* Neurolead chatbot: mais acima no index (apenas o icone, nao o popup) */
-    html[data-theme="analytics"] .nld-chatbot > .nld-avatar,
-    html[data-theme="analytics"] .nld-chatbot > .nld-avatar-medium,
-    html[data-theme="analytics"] .nld-chatbot > .nld-avatar-small {
-        bottom: 200px !important;
+    @media (min-width: 901px) {
+        html[data-theme="analytics"] .nld-chatbot > .nld-avatar,
+        html[data-theme="analytics"] .nld-chatbot > .nld-avatar-medium,
+        html[data-theme="analytics"] .nld-chatbot > .nld-avatar-small {
+            bottom: 200px !important;
+        }
     }
     </style>
 </head>
