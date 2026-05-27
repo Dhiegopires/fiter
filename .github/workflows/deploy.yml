@@ -38,7 +38,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /public_html/
+          server-dir: /domains/fiter.com.br/public_html/
           dangerous-clean-slate: false
           exclude: |
             **/.git/**
