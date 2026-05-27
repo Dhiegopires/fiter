@@ -97,21 +97,37 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.add('menu-open');
             drawer && drawer.setAttribute('aria-hidden', 'false');
             hamburger && hamburger.setAttribute('aria-expanded', 'true');
+            document.body.classList.add('menu-open');
             document.body.style.overflow = 'hidden';
+            document.documentElement.style.overflow = 'hidden';
             document.body.style.position = 'fixed';
             document.body.style.top = `-${scrollPos}px`;
             document.body.style.left = '0';
             document.body.style.right = '0';
+            document.body.style.width = '100%';
+            document.body.style.touchAction = 'none';
+            document.querySelectorAll('.nld-chatbot, .nld-chatbot *').forEach(el => {
+                el.dataset.origZ = el.style.zIndex || '';
+                el.style.zIndex = '180';
+            });
         }
         function closeMobile() {
             nav.classList.remove('menu-open');
             drawer && drawer.setAttribute('aria-hidden', 'true');
             hamburger && hamburger.setAttribute('aria-expanded', 'false');
+            document.body.classList.remove('menu-open');
             document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
             document.body.style.position = '';
             document.body.style.top = '';
             document.body.style.left = '';
             document.body.style.right = '';
+            document.body.style.width = '';
+            document.body.style.touchAction = '';
+            document.querySelectorAll('.nld-chatbot, .nld-chatbot *').forEach(el => {
+                el.style.zIndex = el.dataset.origZ || '';
+                delete el.dataset.origZ;
+            });
             window.scrollTo(0, scrollPos);
         }
         hamburger && hamburger.addEventListener('click', () => nav.classList.contains('menu-open') ? closeMobile() : openMobile());

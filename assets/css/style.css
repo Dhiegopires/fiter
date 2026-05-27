@@ -1147,6 +1147,11 @@
             .nav-hamburger { display: flex; }
         }
 
+        body.menu-open .nld-chatbot,
+        body.menu-open .nld-chatbot * {
+            z-index: 180 !important;
+        }
+
         /* =========================================================
            TESTIMONIAL CARDS
            ========================================================= */
