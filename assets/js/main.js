@@ -238,4 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }, { threshold: 0.3 });
         document.querySelectorAll('.metric-card[data-metric]').forEach(el => obs.observe(el));
     })();
+
+    // Touch device detection (prevents sticky :hover on mobile)
+    if (!matchMedia('(hover: hover)').matches) {
+        document.documentElement.classList.add('touch');
+    }
 });

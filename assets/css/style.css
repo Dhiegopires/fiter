@@ -785,8 +785,8 @@
             --color-error-ring: rgba(239,68,68,0.12);
         }
 
-        html { overflow-x: hidden; }
-        body { overflow-x: hidden; }
+        html { overflow-x: clip; }
+        body { overflow-x: clip; }
         .ds-container { position: relative; z-index: 1; }
         .btn.w-full { width: 100%; }
 
@@ -876,8 +876,10 @@
             top: 50%;
             transform: translateY(-50%);
             z-index: 20;
-            width: 42px;
-            height: 42px;
+            min-width: 48px;
+            min-height: 48px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             background: rgba(255,255,255,0.04);
             border: 1px solid rgba(255,255,255,0.08);
@@ -985,7 +987,7 @@
             gap: 0.75rem;
             margin-left: auto;
         }
-        .nav-cta { font-size: 0.8rem; padding: 0.5rem 1.1rem; white-space: nowrap; }
+        .nav-cta { font-size: 0.8rem; padding: 0.7rem 1.1rem; white-space: nowrap; }
         .nav-drop {
             position: absolute;
             top: calc(100% + 1px);
@@ -1011,7 +1013,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
-            padding: 0.65rem 0.85rem;
+            padding: 0.8rem 0.85rem;
             border-radius: var(--radius-sm);
             text-decoration: none;
             transition: background 0.15s;
@@ -1036,7 +1038,7 @@
             background: none;
             border: none;
             cursor: pointer;
-            padding: 0.5rem;
+            padding: 0.75rem;
             margin-left: 0.5rem;
         }
         .nav-hamburger span {
@@ -1101,7 +1103,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0.85rem 0;
+            padding: 1.1rem 0;
             background: none;
             border: none;
             cursor: pointer;
@@ -1128,7 +1130,7 @@
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            padding: 0.55rem 0 0.55rem 0.5rem;
+            padding: 0.75rem 0 0.75rem 0.5rem;
             text-decoration: none;
             color: var(--text-tertiary);
             font-size: 0.85rem;
@@ -1137,7 +1139,7 @@
         .drawer-sub-link:hover { color: var(--text-primary); }
         .drawer-plain-link {
             display: block;
-            padding: 0.85rem 0;
+            padding: 1.1rem 0;
             color: var(--text-secondary);
             font-size: 0.9rem;
             text-decoration: none;
@@ -2544,6 +2546,32 @@
             transition: color 0.25s;
         }
         .showcase-row:hover .showcase-collapsed-tag { color: var(--accent-brand); }
+
+        /* Touch devices: prevent sticky hover effects */
+        @media (hover: none) and (pointer: coarse) {
+            .btn-primary:hover {
+                transform: none;
+                animation: breathingRing 3s ease-in-out infinite;
+                box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent-brand) 30%, transparent), 0 0 15px var(--accent-glow);
+            }
+            .btn-secondary:hover { transform: none; }
+            .btn-ghost:hover { transform: none; }
+            .drop-link:hover { background: transparent; }
+            .card:hover { transform: none; border-color: var(--border-subtle); }
+            .card:hover::before { opacity: 0; }
+            .testi-card:hover { transform: none; border-color: rgba(255,255,255,0.07); }
+            .metric-card:hover { transform: none; border-color: var(--border-subtle); }
+            .product-card:hover { transform: none; }
+            .logo-marquee:hover { animation-play-state: running; }
+            .logo-item:hover { transform: none; filter: grayscale(100%); opacity: .4; color: var(--text-secondary); }
+            .sp-marquee-track:hover { animation-play-state: running; }
+            .sp-marquee-item:hover { opacity: .28; filter: grayscale(1) brightness(3); }
+            .hero-nav-btn:hover { background: rgba(255,255,255,0.04); color: var(--text-secondary); border-color: rgba(255,255,255,0.08); }
+            .bar-track:hover .bar-tooltip { opacity: 0; transform: translateY(4px); }
+            .step-h:hover .step-h-num { background: var(--bg-base); border-color: rgba(255,255,255,0.12); color: var(--accent-brand); }
+            .step-v:hover .step-v-num { background: var(--bg-surface); border-color: rgba(255,255,255,0.1); color: var(--accent-brand); }
+            .urgency-cta:hover { background: transparent; color: var(--warning-text); border-color: var(--warning-border); }
+        }
         @media (max-width: 900px) {
             .showcase-row.is-open { grid-template-columns: 70px 0fr 1fr; }
             .showcase-visual { display: none; }

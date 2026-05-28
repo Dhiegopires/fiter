@@ -910,7 +910,7 @@
                 const isActive = i === activeIdx;
                 dot.setAttribute('aria-label', `Ir para ${p.name.replace('\n', ' ')}`);
                 if (isActive) dot.setAttribute('aria-current', 'true');
-                dot.style.cssText = `width:${isActive?'20px':'6px'};height:6px;border-radius:3px;border:none;padding:0;outline:none;background:${isActive?p.accent:'rgba(255,255,255,0.12)'};cursor:pointer;transition:all 0.3s ease;`;
+                dot.style.cssText = `width:${isActive?'20px':'6px'};height:6px;border-radius:3px;border:none;padding:12px 8px;background-clip:content-box;outline:none;background:${isActive?p.accent:'rgba(255,255,255,0.12)'};cursor:pointer;transition:all 0.3s ease;`;
                 dot.onclick = () => { activeIdx = i; render(); updateText(); };
                 dotsEl.appendChild(dot);
             });
