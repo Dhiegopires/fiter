@@ -78,9 +78,9 @@ posts.forEach(post => {
 
     // Fallback to default image if post has no image
     if (!imageFilename) {
-        const defaultPath = path.join(IMAGES_DIR, 'default.svg');
+        const defaultPath = path.join(IMAGES_DIR, 'defult.jpeg');
         if (fs.existsSync(defaultPath)) {
-            imageFilename = 'default.svg';
+            imageFilename = 'defult.jpeg';
             fs.copyFileSync(defaultPath, path.join(postDir, imageFilename));
         }
     }
