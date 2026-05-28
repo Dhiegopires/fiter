@@ -1154,9 +1154,7 @@
             body.menu-open [class*="nld-"],
             body.menu-open [id*="leadster"],
             body.menu-open [id*="neurolead"] {
-                display: none !important;
-                visibility: hidden !important;
-                pointer-events: none !important;
+                z-index: 1 !important;
             }
         }
 
