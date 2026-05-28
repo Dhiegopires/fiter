@@ -124,6 +124,7 @@ function head(title, desc, canonical) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="TH4kqZnapgxjblie2KFVRM3laak_fIKLUfN9Dm5b1YY">
     <title>${title} | Fiter</title>
     <meta name="description" content="${desc}">
     <link rel="canonical" href="${canonical}">
@@ -135,6 +136,13 @@ function head(title, desc, canonical) {
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>${STYLES}
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RL4MTL7XFE');
+    </script>
 </head>
 <body>`;
 }
@@ -392,7 +400,7 @@ ${SCRIPTS}
 </body>
 </html>`;
 
-const ROOT = 'c:/Users/Dhiego/Desktop/Github/fiter';
+const ROOT = '/home/afonso-jr/Documents/01 - Freelas/fiter';
 fs.mkdirSync(`${ROOT}/lgpd`, { recursive: true });
 fs.mkdirSync(`${ROOT}/politica-de-privacidade`, { recursive: true });
 fs.mkdirSync(`${ROOT}/termos-de-uso`, { recursive: true });
