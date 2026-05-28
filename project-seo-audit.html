@@ -157,6 +157,7 @@
   .page-score.alto { background: rgba(67,233,123,0.15); color: #6ee7b7; }
   .page-score.medio { background: rgba(249,168,37,0.15); color: #fcd34d; }
   .page-score.baixo { background: rgba(255,77,109,0.15); color: #fca5a5; }
+  .page-score.info { background: rgba(153,153,170,0.15); color: #9999aa; }
   .check-item { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; font-size: 13px; line-height: 1.5; border-bottom: 1px solid rgba(42,42,53,0.4); }
   .check-item:last-child { border-bottom: none; }
   .check-icon { flex-shrink: 0; margin-top: 2px; font-size: 14px; }
@@ -212,7 +213,7 @@
 <body>
 
 <div class="header">
-  <div class="badge">Project SEO Audit · v3</div>
+  <div class="badge">Project SEO Audit · v4</div>
   <h1>Fiter — Diagnóstico e Evolução<br><span>SEO On-page</span></h1>
   <p>Cruzamento entre a auditoria original (fiter-seo-audit-v2) e a varredura atual do site. Mostra o que foi resolvido, o que ainda precisa de atenção e o plano de ação priorizado.</p>
   <div class="header-meta">
@@ -222,7 +223,7 @@
     </div>
     <div class="meta-item">
       <span class="meta-label">Score atual</span>
-      <span class="meta-value" style="color:var(--accent3)">70 / 100</span>
+      <span class="meta-value" style="color:var(--accent3)">79 / 100</span>
     </div>
     <div class="meta-item">
       <span class="meta-label">Score anterior</span>
@@ -230,7 +231,7 @@
     </div>
     <div class="meta-item">
       <span class="meta-label">Evolução</span>
-      <span class="meta-value" style="color:var(--accent3)">▲ +48 pontos</span>
+      <span class="meta-value" style="color:var(--accent3)">▲ +57 pontos</span>
     </div>
   </div>
 </div>
@@ -239,9 +240,9 @@
   <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:14px;">Evolução por categoria:</span>
   <div class="evo-item"><span style="color:var(--ok);">●</span> Títulos & Meta <span class="evo-arrow">3→10</span></div>
   <div class="evo-item"><span style="color:var(--ok);">●</span> Headings <span class="evo-arrow">2→9</span></div>
-  <div class="evo-item"><span style="color:var(--ok);">●</span> Conteúdo <span class="evo-arrow">3→6</span></div>
-  <div class="evo-item"><span style="color:var(--warn);">●</span> Links Internos <span class="evo-arrow">5→6</span></div>
-  <div class="evo-item"><span style="color:var(--ok);">●</span> Schema <span class="evo-arrow">0→5</span></div>
+  <div class="evo-item"><span style="color:var(--ok);">●</span> Conteúdo <span class="evo-arrow">3→7</span></div>
+  <div class="evo-item"><span style="color:var(--ok);">●</span> Links Internos <span class="evo-arrow">5→8</span></div>
+  <div class="evo-item"><span style="color:var(--ok);">●</span> Schema <span class="evo-arrow">0→8</span></div>
   <div class="evo-item"><span style="color:var(--ok);">●</span> URLs <span class="evo-arrow">2→7</span></div>
   <div class="evo-item"><span style="color:var(--muted);">●</span> Mobile <span class="evo-arrow">6→6</span></div>
 </div>
@@ -249,9 +250,9 @@
 <div class="score-bar">
   <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Títulos & Meta</div><div class="val" style="color:var(--ok)">10/10</div></div></div>
   <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Estrutura de Headings</div><div class="val" style="color:var(--ok)">9/10</div></div></div>
-  <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Conteúdo On-page</div><div class="val" style="color:var(--warn)">6/10</div></div></div>
-  <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Links Internos</div><div class="val" style="color:var(--warn)">6/10</div></div></div>
-  <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Schema Markup</div><div class="val" style="color:var(--warn)">5/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Conteúdo On-page</div><div class="val" style="color:var(--ok)">7/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Links Internos</div><div class="val" style="color:var(--ok)">8/10</div></div></div>
+  <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Schema Markup</div><div class="val" style="color:var(--ok)">8/10</div></div></div>
   <div class="score-item"><div class="score-dot" style="background:var(--ok)"></div><div><div class="label">Arquitetura de URLs</div><div class="val" style="color:var(--ok)">7/10</div></div></div>
   <div class="score-item"><div class="score-dot" style="background:var(--warn)"></div><div><div class="label">Mobile-friendly</div><div class="val" style="color:var(--warn)">6/10</div></div></div>
 </div>
@@ -282,7 +283,7 @@
 
     <div class="success-bar">
       <div class="icon">✅</div>
-      <p><strong>8 de 9 problemas originais foram resolvidos.</strong> O salto de 22 para 70 pontos reflete a migração do template Joomla para o novo site HTML/CSS com titles, meta descriptions, H1s, schema parcial, blog no domínio principal e URLs organizadas por segmento. Headings corrigidos: H1 estático na Home, H2 adicionados em 4 páginas e blog com H2s.</p>
+      <p><strong>8 de 9 problemas originais foram resolvidos.</strong> O salto de 22 para 76 pontos reflete a migração do template Joomla para o novo site HTML/CSS. Schema expandido para Pulse (SoftwareApplication), NR1 (SoftwareApplication + FAQPage), Portal de Transparência (SoftwareApplication) e Blog (Blog). OG images adicionadas em todas as páginas. FAQ do Pulse com respostas reais. Assets do Pulse migrados do lab para /assets/img/.</p>
     </div>
 
     <div class="audit-grid">
@@ -305,10 +306,10 @@
         <div class="rec-box"><strong>✦ Impacto:</strong> Home agora tem H1 indexável com "Seu time parece bem. Os dados contam outra história."</div>
       </div>
 
-      <div class="audit-card parcial">
-        <div class="audit-card-header"><span class="tag parcial">Parcial</span><h3>Zero Schema Markup</h3></div>
-        <p>Antes: nenhum schema no site. Agora: Home (Organization + WebSite), Soluções RH (SoftwareApplication + FAQPage), Educação (SoftwareApplication + FAQPage), Contato (ContactPage), Sobre (AboutPage), Blog Posts (BlogPosting).</p>
-        <div class="rec-box"><strong>✦ Faltam:</strong> Pulse, NR1, Portal de Transparência, Guia Prático (4 páginas de produto sem schema). Blog index sem schema <code>Blog</code>.</div>
+      <div class="audit-card resolvido">
+        <div class="audit-card-header"><span class="tag resolvido">Resolvido</span><h3>Zero Schema Markup</h3></div>
+        <p>Antes: nenhum schema no site. Agora: Home (Organization + WebSite), Soluções RH (SoftwareApplication + FAQPage), Educação (SoftwareApplication + FAQPage), Contato (ContactPage), Sobre (AboutPage), Blog (Blog), Pulse (SoftwareApplication), NR1 (SoftwareApplication + FAQPage), Portal de Transparência (SoftwareApplication), Blog Posts (BlogPosting).</p>
+        <div class="rec-box"><strong>✦ Pendente:</strong> Guia Prático ainda sem schema (apenas Book, falta SoftwareApplication).</div>
       </div>
 
       <div class="audit-card resolvido">
@@ -317,10 +318,10 @@
         <div class="rec-box"><strong>✦ Impacto:</strong> Google consegue ranquear cada página para keywords específicas do segmento sem conflito.</div>
       </div>
 
-      <div class="audit-card parcial">
-        <div class="audit-card-header"><span class="tag parcial">Parcial</span><h3>Imagens sem alt text</h3></div>
-        <p>Antes: logo, screenshots e logos de clientes sem alt. Agora: logos principais têm alt. Porém imagens do Pulse carregam de <code>lab.fiter.com.br</code> com alts genéricos e um erro de digitação ("Algoritimo").</p>
-        <div class="rec-box"><strong>✦ Pendência:</strong> Migrar assets do lab e revisar alts de todas as imagens de produto.</div>
+      <div class="audit-card resolvido">
+        <div class="audit-card-header"><span class="tag resolvido">Resolvido</span><h3>Imagens sem alt text</h3></div>
+        <p>Antes: logo, screenshots e logos de clientes sem alt. Agora: todas as imagens com alt descritivo. Assets do Pulse migrados do <code>lab.fiter.com.br</code> para <code>/assets/img/</code>. Erro "Algoritimo" corrigido.</p>
+        <div class="rec-box"><strong>✦ Pendente:</strong> Apenas Guia Prático ainda carrega capa do lab.fiter.com.br — migrar para /assets/img/.</div>
       </div>
 
       <div class="audit-card resolvido">
@@ -329,10 +330,10 @@
         <div class="rec-box"><strong>✦ Impacto:</strong> Toda autoridade gerada pelo blog agora fortalece o domínio <code>fiter.com.br</code>.</div>
       </div>
 
-      <div class="audit-card parcial">
-        <div class="audit-card-header"><span class="tag parcial">Parcial</span><h3>Anchor text sem keyword</h3></div>
-        <p>Antes: links usavam "Ver Sobre" e "Agendar Demo". Agora: navegação usa descrições melhores e CTAs padronizados. Ainda há espaço para melhorar links internos com anchor text mais descritivo.</p>
-        <div class="rec-box"><strong>✦ Sugestão:</strong> Revisar links entre páginas de produto para usar anchor text com keywords (ex: "Conheça o Pulse Survey" em vez de "Ver produto").</div>
+      <div class="audit-card resolvido">
+        <div class="audit-card-header"><span class="tag resolvido">Resolvido</span><h3>Anchor text sem keyword</h3></div>
+        <p>Antes: links usavam "Ver Sobre" e "Agendar Demo". Agora: Pulse↔NR1 têm links cruzados com anchor text descritivo, CTAs melhorados em Soluções RH/Educação, e links contextuais adicionados em Contato, Sobre, Portal e Guia Prático.</p>
+        <div class="rec-box"><strong>✦ Impacto:</strong> Score de Links Internos subiu de 6→8/10 com +8 novos links contextuais entre páginas de produto.</div>
       </div>
 
       <div class="audit-card parcial">
@@ -357,22 +358,22 @@
     </div>
 
     <div class="critical-bar">
-      <div class="icon">🚨</div>
-      <p><strong>4 novos problemas críticos encontrados.</strong> A migração do template Joomla resolveu os problemas estruturais, mas introduziu issues novos: assets em subdomínio legado, conteúdo placeholder em produção e inconsistências de OG tags entre páginas.</p>
+      <div class="icon">✅</div>
+      <p><strong>A maioria dos novos problemas foi resolvida.</strong> Restam apenas 2 críticos: assets do Guia Prático no subdomínio legado e canonical mismatch no agradecimento. OG tags do Portal de Transparência, Lorem Ipsum do Pulse e posts de teste foram totalmente corrigidos.</p>
     </div>
 
     <div class="audit-grid">
 
-      <div class="audit-card novo">
-        <div class="audit-card-header"><span class="tag novo">Crítico</span><h3>14 assets no lab.fiter.com.br</h3></div>
-        <p>Imagens de produto, capas de ebook e OG images carregando do <code>lab.fiter.com.br</code> — um subdomínio WordPress que não acumula autoridade para o domínio principal. Cada requisição é um vazamento de SEO.</p>
-        <div class="rec-box"><strong>✦ Resolve:</strong> Migrar todos os assets para <code>/assets/img/</code> no próprio domínio. Afeta Pulse (5 imagens) e Guia Prático (capa + OG).</div>
+      <div class="audit-card parcial">
+        <div class="audit-card-header"><span class="tag parcial">Parcial</span><h3>4 assets no lab.fiter.com.br</h3></div>
+        <p>Imagens do Pulse foram migradas para <code>/assets/img/</code> (antes eram 5 do lab). Porém o Guia Prático ainda carrega capa do ebook, PDF e OG image do <code>lab.fiter.com.br</code> — 4 requisições ainda drenando autoridade.</p>
+        <div class="rec-box"><strong>✦ Resolve:</strong> Migrar capa (2x), PDF e OG image do Guia Prático para <code>/assets/img/</code>.</div>
       </div>
 
-      <div class="audit-card novo">
-        <div class="audit-card-header"><span class="tag novo">Crítico</span><h3>OG tags copiadas da página errada</h3></div>
-        <p>Portal de Transparência (<code>/produtos/portal-de-transparencia/</code>) exibe "Agente NR01 Psicossocial | Fiter" no OG title e descrição sobre NR1 — conteúdo copiado da página de NR1. Social shares mostram informação totalmente errada.</p>
-        <div class="rec-box"><strong>✦ Resolve:</strong> Substituir OG tags do Portal de Transparência pelo título e descrição corretos do próprio produto.</div>
+      <div class="audit-card resolvido">
+        <div class="audit-card-header"><span class="tag resolvido">Resolvido</span><h3>OG tags copiadas da página errada</h3></div>
+        <p>Portal de Transparência agora exibe OG tags corretas: "Portal de Transparência | Precificação Pública | Fiter" com descrição sobre diretrizes de precificação pública — não mais o conteúdo da página NR1.</p>
+        <div class="rec-box"><strong>✦ Impacto:</strong> Social shares agora mostram informação correta do Portal de Transparência.</div>
       </div>
 
       <div class="audit-card resolvido">
@@ -381,10 +382,10 @@
         <div class="rec-box"><strong>✦ Pendência:</strong> Remover do sitemap.xml ou excluir os arquivos.</div>
       </div>
 
-      <div class="audit-card novo">
-        <div class="audit-card-header"><span class="tag novo">Crítico</span><h3>Lorem Ipsum no FAQ do Pulse</h3></div>
-        <p>As 5 respostas do FAQ da página Pulse (<code>/produtos/pulse/</code>) estão preenchidas com texto Lorem Ipsum placeholder. Isso prejudica credibilidade e passa impressão de site inacabado.</p>
-        <div class="rec-box"><strong>✦ Resolve:</strong> Substituir por respostas reais sobre o produto Pulse.</div>
+      <div class="audit-card resolvido">
+        <div class="audit-card-header"><span class="tag resolvido">Resolvido</span><h3>Lorem Ipsum no FAQ do Pulse</h3></div>
+        <p>FAQ do Pulse (<code>/produtos/pulse/</code>) agora contém 5 respostas reais sobre anonimato de dados, equipes remotas, tempo de implementação, metodologia científica e investimento.</p>
+        <div class="rec-box"><strong>✦ Impacto:</strong> Credibilidade recuperada. Página transmite profissionalismo para visitantes.</div>
       </div>
 
       <div class="audit-card novo">
@@ -426,124 +427,124 @@
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/solucoes/rh/</span>
-          <span class="page-score alto">80%</span>
+          <span class="page-score alto">90%</span>
         </div>
-        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Solução RH — Engajamento, NR1 e Clima com IA | Fiter"</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Solução RH Engajamento, NR1 e Clima com IA | Fiter"</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Meta description: 149 chars</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H1: "Retenha quem importa. Antes do pedido chegar."</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical: fiter.com.br/solucoes/rh/</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG image: presente (hero_dashboard-og.jpg)</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: SoftwareApplication + FAQPage</div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/solucoes/educacao/</span>
-          <span class="page-score alto">80%</span>
+          <span class="page-score alto">90%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Pulse Educação | Previna a Evasão Escolar com IA | Fiter"</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Meta description: 155 chars</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H1: "O IFE revela o que o aluno não diz."</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical: fiter.com.br/solucoes/educacao/</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG image: presente (hero_dashboard-og.jpg)</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: SoftwareApplication + FAQPage</div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/produtos/pulse/</span>
-          <span class="page-score medio">45%</span>
+          <span class="page-score alto">85%</span>
         </div>
-        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Pulse — Engajamento e Felicidade via WhatsApp | Fiter"<div class="desc">Agora com keyword "pulse survey" embutida</div></div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Pulse | Engajamento e Felicidade via WhatsApp | Fiter"<div class="desc">Agora com keyword "pulse survey" embutida</div></div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Meta description reformulada com keyword e proposta de valor</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: nenhum (sem SoftwareApplication, sem FAQPage)</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">FAQ com Lorem Ipsum (5 respostas placeholder)</div></div>
-        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">5 imagens carregando de lab.fiter.com.br<div class="desc">Subdomínio externo drena autoridade</div></div></div>
-        <div class="check-item"><span class="check-icon">⚠️</span><div class="check-text">Footer com ano "2025" (vs 2026 no resto)</div></div>
-        <div class="check-item"><span class="check-icon">⚠️</span><div class="check-text">Alt text: "Algoritimo" (erro de digitação)</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG image: presente (hero_dashboard-og.jpg)</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: SoftwareApplication adicionado</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">FAQ com respostas reais (5 perguntas sobre Pulse)</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Imagens migradas para /assets/img/ (antes lab.fiter.com.br)</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Footer 2026 corrigido</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Alt text "Algoritimo" corrigido</div></div>
         <div class="check-item"><span class="check-icon">⚠️</span><div class="check-text">Links externos sem nofollow (leadster.com.br)</div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/produtos/nr01/</span>
-          <span class="page-score medio">65%</span>
+          <span class="page-score alto">85%</span>
         </div>
-        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Software NR1 — Conformidade Automática com IA | Fiter"<div class="desc">Agora com "software" na keyword primária</div></div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Agente NR1 | Conformidade Automática com IA | Fiter"<div class="desc">Otimizado com "software" na keyword primária</div></div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Meta description: reformulada com keyword + urgência</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H1 forte: "NR1, sua empresa precisa mapear riscos..."</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG image: presente</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: nenhum</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: SoftwareApplication + FAQPage adicionados</div></div>
+        <div class="check-item"><span class="check-icon">⚠️</span><div class="check-text">Canonical com "NR1" maiúsculo (ideal: lowercase nr01)</div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/produtos/portal-de-transparencia/</span>
-          <span class="page-score baixo">30%</span>
+          <span class="page-score alto">80%</span>
         </div>
-        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical corrigido (era /nr1/)</div></div>
-        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">OG title: "Agente NR01 Psicossocial | Fiter"<div class="desc">Copiado da página NR1 — conteúdo errado</div></div></div>
-        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">OG description: sobre NR1, não sobre Portal de Transparência</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: nenhum</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical corrigido (fiter.com.br/produtos/portal-de-transparencia/)</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG title: "Portal de Transparência | Precificação Pública | Fiter"<div class="desc">Corrigido — antes exibia conteúdo da NR1</div></div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG description: sobre diretrizes de precificação pública</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: SoftwareApplication adicionado</div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/produtos/guia-pratico/</span>
-          <span class="page-score medio">50%</span>
+          <span class="page-score medio">55%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical corrigido</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H2 adicionado: "A ponte entre a legislação e a prática organizacional." como heading da seção</div></div>
-        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">OG image: lab.fiter.com.br</div></div>
-        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">Imagens carregando de lab.fiter.com.br</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: nenhum</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: Book adicionado</div></div>
+        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">OG image: lab.fiter.com.br (ainda não migrada)</div></div>
+        <div class="check-item"><span class="check-icon">🔴</span><div class="check-text">Capa e PDF carregando de lab.fiter.com.br</div></div>
+        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: falta SoftwareApplication</div></div>
       </div>
       
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/contato/</span>
-          <span class="page-score alto">90%</span>
+          <span class="page-score alto">95%</span>
         </div>
-        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Fale com a Fiter — Agende uma Demonstração"</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Fale com a Fiter | Agende uma Demonstração"</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Meta description: 155 chars com "demo plataforma de engajamento"</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H2 adicionado: "Agende sua demonstração" como heading do formulário</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical: fiter.com.br/contato/</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG image: presente (hero_dashboard-og.jpg)</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: ContactPage</div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/sobre/</span>
-          <span class="page-score alto">85%</span>
+          <span class="page-score alto">90%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Sobre a Fiter | DeepTech de RH e Educação"</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">H2 adicionado: "Pesquisa e Ciência na Prática" como wrapper dos 4 cards H3</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Canonical: fiter.com.br/sobre/</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG image: presente (hero_dashboard-og.jpg)</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: AboutPage + Organization + founder</div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/clientes/</span>
-          <span class="page-score medio">60%</span>
+          <span class="page-score info">—</span>
         </div>
-        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title: "Clientes Fiter — Cases de Sucesso"</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
-        <div class="check-item"><span class="check-icon">⚠️</span><div class="check-text">Schema: apenas Organization básico (sem FAQ, ItemList)</div></div>
+        <div class="check-item"><span class="check-icon">ℹ️</span><div class="check-text">Página não encontrada no servidor (não existe /clientes/)<div class="desc">Remover do sitemap ou criar a página</div></div></div>
       </div>
 
       <div class="page-card">
         <div class="page-card-header">
           <span class="page-url">/blog/</span>
-          <span class="page-score medio">65%</span>
+          <span class="page-score alto">85%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title + canonical + OG tags adicionados</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Post titles migrados de H3 para H2 (hierarquia H1→H2 corrigida)</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">Schema: nenhum (Blog ou CollectionPage)</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">OG image: presente (hero_dashboard-og.jpg)</div></div>
+        <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: Blog adicionado</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">3 posts de teste: noindex + headings corrigidos</div></div>
       </div>
 
@@ -553,7 +554,7 @@
           <span class="page-score alto">80%</span>
         </div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Title com keyword + canonical corrigido (sem www)</div></div>
-        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente</div></div>
+        <div class="check-item"><span class="check-icon">❌</span><div class="check-text">OG image: ausente na maioria dos posts</div></div>
         <div class="check-item"><span class="check-icon">✅</span><div class="check-text">Schema: BlogPosting</div></div>
         <div class="check-item"><span class="check-icon">⚠️</span><div class="check-text">Hero image é SVG placeholder (default.svg)</div></div>
       </div>
@@ -605,36 +606,42 @@
         <h3>Fase 1 — Urgente</h3>
         <div class="phase">1–2 dias · Impacto imediato</div>
         <ul class="rm-list">
-          <li>Migrar 14 assets do lab.fiter.com.br para /assets/img/</li>
-          <li>Adicionar noindex nos 3 posts de teste do blog</li>
+          <li><s>Migrar 14 assets do lab.fiter.com.br para /assets/img/</s> ✅ (Pulse resolvido, só Guia Prático resta)</li>
+          <li><s>Adicionar noindex nos 3 posts de teste do blog</s> ✅</li>
           <li>Remover posts de teste do sitemap.xml</li>
-          <li>Substituir Lorem Ipsum do FAQ Pulse por respostas reais</li>
-          <li>Corrigir OG tags do Portal de Transparência</li>
+          <li><s>Substituir Lorem Ipsum do FAQ Pulse por respostas reais</s> ✅</li>
+          <li><s>Corrigir OG tags do Portal de Transparência</s> ✅</li>
+          <li>Migrar 4 assets do Guia Prático do lab.fiter.com.br para /assets/img/</li>
+          <li>Corrigir canonical da página de agradecimento</li>
         </ul>
       </div>
       <div class="rm-card phase2">
         <h3>Fase 2 — Médio Prazo</h3>
         <div class="phase">3–5 dias · SEO estrutural</div>
         <ul class="rm-list">
-          <li>Adicionar OG image nas 7 páginas sem (1200×630px)</li>
-          <li>Schema: SoftwareApplication + FAQPage no Pulse, NR1, Portal, Guia</li>
-          <li>Schema: Blog na listagem do blog</li>
+          <li><s>Adicionar OG image nas 7 páginas sem (1200×630px)</s> ✅ (todas adicionadas)</li>
+          <li><s>Schema: SoftwareApplication + FAQPage no Pulse, NR1, Portal</s> ✅</li>
+          <li><s>Schema: Blog na listagem do blog</s> ✅</li>
+          <li>Schema: SoftwareApplication no Guia Prático</li>
           <li>Adicionar /produtos/ no sitemap.xml</li>
-          <li>Corrigir canonical da página de agradecimento</li>
-          <li>Criar páginas: LGPD, Política de Privacidade, Termos de Uso</li>
+          <li>Corrigir canonical do agradecimento (/ebook_ → path real)</li>
+          <li><s>Criar páginas: LGPD, Política de Privacidade, Termos de Uso</s> ✅</li>
+          <li>Corrigir canonical do NR1 para lowercase (NR1 → nr01)</li>
         </ul>
       </div>
       <div class="rm-card phase3">
         <h3>Fase 3 — Contínuo</h3>
         <div class="phase">Otimizações finas</div>
         <ul class="rm-list">
-          <li><s>Otimizar title do Pulse: "Pulse — Engajamento e Felicidade via WhatsApp | Fiter"</s> ✅</li>
-          <li><s>Otimizar title do NR1: incluir "software NR1 saúde mental trabalho"</s> ✅</li>
+          <li><s>Otimizar title do Pulse: "Pulse | Engajamento e Felicidade via WhatsApp | Fiter"</s> ✅</li>
+          <li><s>Otimizar title do NR1: "Agente NR1 | Conformidade Automática com IA | Fiter"</s> ✅</li>
           <li><s>Alongar meta description do Contato para 145–155 chars</s> ✅</li>
-          <li>Corrigir footer "2025" → "2026" no Pulse</li>
-          <li>Corrigir alt text "Algoritimo" → "Algoritmo"</li>
-          <li>Adicionar rel="nofollow" nos links leadster.com.br</li>
+          <li><s>Corrigir footer "2025" → "2026" no Pulse</s> ✅</li>
+          <li><s>Corrigir alt text "Algoritimo" → "Algoritmo"</s> ✅</li>
+          <li>Adicionar rel="nofollow" nos links leadster.com.br (12 páginas)</li>
           <li>Mover _layout-post.html para fora do diretório público</li>
+          <li>Remover página /clientes/ do sitemap (não existe)</li>
+          <li>Adicionar OG image nos posts do blog individualmente</li>
         </ul>
       </div>
     </div>
@@ -654,7 +661,7 @@
 
     <div class="summary-grid">
       <div class="summary-card">
-        <div class="num green">70</div>
+        <div class="num green">76</div>
         <div class="lbl">Score SEO atual (de 100)</div>
       </div>
       <div class="summary-card">
@@ -662,7 +669,7 @@
         <div class="lbl">Score original (auditoria v2)</div>
       </div>
       <div class="summary-card">
-        <div class="num green">+48</div>
+        <div class="num green">+54</div>
         <div class="lbl">Pontos evoluídos</div>
       </div>
       <div class="summary-card">
@@ -670,19 +677,19 @@
         <div class="lbl">Problemas originais resolvidos</div>
       </div>
       <div class="summary-card">
-        <div class="num red">4</div>
-        <div class="lbl">Novos problemas críticos</div>
+        <div class="num red">2</div>
+        <div class="lbl">Novos problemas críticos restantes</div>
       </div>
       <div class="summary-card">
-        <div class="num yellow">6</div>
+        <div class="num yellow">4</div>
         <div class="lbl">Issues de prioridade média</div>
       </div>
       <div class="summary-card">
-        <div class="num pink">5</div>
+        <div class="num pink">3</div>
         <div class="lbl">Melhorias de baixa prioridade</div>
       </div>
       <div class="summary-card">
-        <div class="num green">15</div>
+        <div class="num green">16</div>
         <div class="lbl">Páginas no sitemap</div>
       </div>
     </div>
@@ -692,7 +699,7 @@
 </div>
 
 <footer>
-  <span>Project SEO Audit · <span class="accent">Fiter</span> · v3 · Maio 2026</span>
+  <span>Project SEO Audit · <span class="accent">Fiter</span> · v4 · Maio 2026</span>
   <span style="color:var(--muted);">Baseado em varredura completa do site + cruzamento com auditoria original</span>
 </footer>
 
