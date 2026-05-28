@@ -142,35 +142,21 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.add('menu-open');
             drawer && drawer.setAttribute('aria-hidden', 'false');
             hamburger && hamburger.setAttribute('aria-expanded', 'true');
+            document.documentElement.style.setProperty('--scroll-top', `-${scrollPos}px`);
+            document.documentElement.classList.add('menu-open');
             document.body.classList.add('menu-open');
-            document.body.style.overflow = 'hidden';
-            document.documentElement.style.overflow = 'hidden';
-            document.body.style.position = 'fixed';
-            document.body.style.top = `-${scrollPos}px`;
-            document.body.style.left = '0';
-            document.body.style.right = '0';
-            document.body.style.width = '100%';
-            document.body.style.touchAction = 'none';
         }
         function closeMobile() {
             nav.classList.remove('menu-open');
             drawer && drawer.setAttribute('aria-hidden', 'true');
             hamburger && hamburger.setAttribute('aria-expanded', 'false');
+            document.documentElement.classList.remove('menu-open');
             document.body.classList.remove('menu-open');
-            observeChatbot(true);
-            // requestAnimationFrame agrupa limpeza de estilos + scroll + restore chatbot
-            // na mesma moldura, evitando o flash visual de "ir ao topo"
             requestAnimationFrame(() => {
-                document.body.style.overflow = '';
-                document.documentElement.style.overflow = '';
-                document.body.style.position = '';
-                document.body.style.top = '';
-                document.body.style.left = '';
-                document.body.style.right = '';
-                document.body.style.width = '';
-                document.body.style.touchAction = '';
+                document.documentElement.style.removeProperty('--scroll-top');
                 window.scrollTo(0, scrollPos);
                 restoreChatbot();
+                observeChatbot(true);
             });
         }
         hamburger && hamburger.addEventListener('click', () => nav.classList.contains('menu-open') ? closeMobile() : openMobile());
