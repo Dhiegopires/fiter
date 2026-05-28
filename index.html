@@ -295,7 +295,7 @@
             <div class="hero-bottom-right">
                 <p id="heroDesc" style="color:var(--text-secondary); font-size:0.875rem; line-height:1.6; transition:opacity 0.22s ease;"></p>
                 <div class="hero-btns" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-                    <a id="heroSecondaryBtn" href="#" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;"></a>
+                    <a id="heroSecondaryBtn" href="#prova-social" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;">Como funciona →</a>
                     <a id="heroDemoBtn" href="/contato/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'hero_demo'})">Agendar Demo</a>
                 </div>
             </div>
@@ -907,7 +907,10 @@
             dotsEl.innerHTML = '';
             PRODUCTS.forEach((p, i) => {
                 const dot = document.createElement('button');
-                dot.style.cssText = `width:${i===activeIdx?'20px':'6px'};height:6px;border-radius:3px;border:none;padding:0;outline:none;background:${i===activeIdx?p.accent:'rgba(255,255,255,0.12)'};cursor:pointer;transition:all 0.3s ease;`;
+                const isActive = i === activeIdx;
+                dot.setAttribute('aria-label', `Ir para ${p.name.replace('\n', ' ')}`);
+                if (isActive) dot.setAttribute('aria-current', 'true');
+                dot.style.cssText = `width:${isActive?'20px':'6px'};height:6px;border-radius:3px;border:none;padding:0;outline:none;background:${isActive?p.accent:'rgba(255,255,255,0.12)'};cursor:pointer;transition:all 0.3s ease;`;
                 dot.onclick = () => { activeIdx = i; render(); updateText(); };
                 dotsEl.appendChild(dot);
             });
