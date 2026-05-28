@@ -92,71 +92,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         let scrollPos = 0;
-        let chatbotObserver = null;
-
-        function hideChatbot() {
-            document.querySelectorAll('.nld-chatbot, [class*="nld-"], [id*="leadster"], [id*="neurolead"]').forEach(el => {
-                el.dataset.origDisplay = el.style.display || '';
-                el.style.display = 'none';
-            });
-        }
-
-        function restoreChatbot() {
-            document.querySelectorAll('.nld-chatbot, [class*="nld-"], [id*="leadster"], [id*="neurolead"]').forEach(el => {
-                el.style.display = el.dataset.origDisplay || '';
-                delete el.dataset.origDisplay;
-            });
-        }
-
-        function observeChatbot(disconnect = false) {
-            if (disconnect) {
-                if (chatbotObserver) { chatbotObserver.disconnect(); chatbotObserver = null; }
-                return;
-            }
-            if (chatbotObserver) return;
-            chatbotObserver = new MutationObserver(mutations => {
-                for (const m of mutations) {
-                    for (const node of m.addedNodes) {
-                        if (node.nodeType !== 1) continue;
-                        const selector = '.nld-chatbot, [class*="nld-"], [id*="leadster"], [id*="neurolead"]';
-                        if (node.matches?.(selector)) {
-                            node.dataset.origDisplay = node.style.display || '';
-                            node.style.display = 'none';
-                        } else if (node.querySelectorAll) {
-                            node.querySelectorAll(selector).forEach(child => {
-                                child.dataset.origDisplay = child.style.display || '';
-                                child.style.display = 'none';
-                            });
-                        }
-                    }
-                }
-            });
-            chatbotObserver.observe(document.body, { childList: true, subtree: true });
-        }
 
         function openMobile() {
             scrollPos = window.scrollY;
-            // Esconder chatbot ANTES das mudanças de estilo do body
-            hideChatbot();
-            observeChatbot();
-            nav.classList.add('menu-open');
-            drawer && drawer.setAttribute('aria-hidden', 'false');
-            hamburger && hamburger.setAttribute('aria-expanded', 'true');
             document.documentElement.style.setProperty('--scroll-top', `-${scrollPos}px`);
             document.documentElement.classList.add('menu-open');
             document.body.classList.add('menu-open');
+            nav.classList.add('menu-open');
+            drawer && drawer.setAttribute('aria-hidden', 'false');
+            hamburger && hamburger.setAttribute('aria-expanded', 'true');
         }
         function closeMobile() {
+            document.documentElement.classList.remove('menu-open');
+            document.body.classList.remove('menu-open');
             nav.classList.remove('menu-open');
             drawer && drawer.setAttribute('aria-hidden', 'true');
             hamburger && hamburger.setAttribute('aria-expanded', 'false');
-            document.documentElement.classList.remove('menu-open');
-            document.body.classList.remove('menu-open');
             requestAnimationFrame(() => {
                 document.documentElement.style.removeProperty('--scroll-top');
                 window.scrollTo(0, scrollPos);
-                restoreChatbot();
-                observeChatbot(true);
             });
         }
         hamburger && hamburger.addEventListener('click', () => nav.classList.contains('menu-open') ? closeMobile() : openMobile());
