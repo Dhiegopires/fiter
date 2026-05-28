@@ -13,7 +13,7 @@
     <meta property="og:description" content="Pulse survey de colaboradores em 8 cliques e 2 minutos direto no WhatsApp. Meça felicidade, engajamento e fit cultural com IA. Preveja turnover em tempo real. Sem app.">
     <meta property="og:url" content="https://fiter.com.br/produtos/pulse/">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://fiter.com.br/assets/img/hero_dashboard.png">
+    <meta property="og:image" content="https://fiter.com.br/assets/img/hero_dashboard-og.jpg">
 
     <script type="application/ld+json">
     {
@@ -34,10 +34,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
-    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/main.min.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @media (max-width: 900px) {
@@ -178,7 +178,10 @@
                     <!-- Right: dashboard image -->
                     <div class="pulse-hero-visual" style="position: relative;">
                         <div style="position: absolute; inset: -40px; background: radial-gradient(circle at center, rgba(59,130,246,0.15) 0%, transparent 65%); pointer-events: none; z-index: 0;"></div>
-                        <img src="/assets/img/hero_dashboard.png" alt="Dashboard Pulse" loading="lazy" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: 0 40px 100px rgba(0,0,0,0.6); display: block; position: relative; z-index: 1;">
+                        <picture>
+                            <source srcset="/assets/img/hero_dashboard-400w.webp 400w, /assets/img/hero_dashboard-800w.webp 800w, /assets/img/hero_dashboard-og.webp 1024w" sizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1024px" type="image/webp">
+                            <img src="/assets/img/hero_dashboard-og.jpg" alt="Dashboard Pulse" loading="lazy" width="1024" height="1024" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: 0 40px 100px rgba(0,0,0,0.6); display: block; position: relative; z-index: 1;">
+                        </picture>
                     </div>
 
                 </div>

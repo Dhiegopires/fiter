@@ -22,7 +22,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run build:blog
+      - run: npm run build
 
       - name: Commit blog updates
         uses: stefanzweifel/git-auto-commit-action@v5

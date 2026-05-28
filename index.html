@@ -13,7 +13,7 @@
     <meta property="og:title" content="8 cliques. 2 minutos. Seu time revelado. | Fiter">
     <meta property="og:description" content="DeepTech validada por USP e Mackenzie. +500k pessoas medidas. Pulse, NR1, Pesquisa de Clima e Ouvidoria em uma plataforma. De startups à Marinha do Brasil.">
     <meta property="og:url" content="https://fiter.com.br/">
-    <meta property="og:image" content="https://fiter.com.br/assets/img/hero_dashboard.png">
+    <meta property="og:image" content="https://fiter.com.br/assets/img/hero_dashboard-og.jpg">
     <meta property="og:type" content="website">
 
     <script type="application/ld+json">
@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
     <script type="importmap">
@@ -56,7 +56,7 @@
       gtag('js', new Date());
       gtag('config', 'G-RL4MTL7XFE');
     </script>
-    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/main.min.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
     @keyframes hero-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.25;transform:scale(.6)} }
@@ -988,10 +988,11 @@
 <script type="module">
 import * as THREE from 'three';
 
-// ── Brain WebGL ──────────────────────────────────────────────────
 (function initBrain() {
     const canvas = document.getElementById('hero-brain-canvas');
     if (!canvas) return;
+
+    if (window.innerWidth < 768) return;
 
     function sectH() {
         const s = document.getElementById('hero-section');
@@ -1069,8 +1070,13 @@ import * as THREE from 'three';
         tX = ((e.clientY / window.innerHeight) - 0.5) * 0.7;
     }, { passive: true });
 
-    let autoRot = 0;
-    (function tick() {
+    let autoRot = 0, running = true;
+
+    function tick() {
+        if (!running) {
+            renderer.render(scene, camera);
+            return;
+        }
         requestAnimationFrame(tick);
         autoRot += 0.0004;
         cY += (tY - cY) * 0.045;
@@ -1078,15 +1084,40 @@ import * as THREE from 'three';
         brain.rotation.y = autoRot + cY;
         brain.rotation.x = cX * 0.45;
         renderer.render(scene, camera);
-    })();
+    }
+    tick();
 
-    window.addEventListener('resize', () => {
+    const heroSection = document.getElementById('hero-section');
+    const obs = new IntersectionObserver(([entry]) => {
+        running = entry.isIntersecting;
+        if (running) tick();
+    }, { threshold: 0 });
+    if (heroSection) obs.observe(heroSection);
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            running = false;
+        } else if (heroSection && heroSection.checkVisibility()) {
+            running = true;
+            tick();
+        }
+    });
+
+    function onResize() {
         const w = window.innerWidth, h = sectH();
         camera.aspect = w / h;
         camera.updateProjectionMatrix();
         renderer.setSize(w, h);
         brain.scale.setScalar(brainScale(w));
-    });
+    }
+    window.addEventListener('resize', onResize);
+
+    window.__disposeBrain = function () {
+        running = false;
+        if (obs) obs.disconnect();
+        window.removeEventListener('resize', onResize);
+        renderer.dispose();
+    };
 })();
 </script>
 

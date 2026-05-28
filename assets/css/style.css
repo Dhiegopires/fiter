@@ -818,6 +818,9 @@
             z-index: 0;
             opacity: 0.35;
         }
+        @media (max-width: 768px) {
+            #hero-brain-canvas { display: none; }
+        }
         @keyframes heroFloat {
             0%, 100% { transform: translateY(0px); }
             50%       { transform: translateY(-10px); }

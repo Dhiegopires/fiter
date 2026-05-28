@@ -2,10 +2,17 @@
   "name": "fiter-blog",
   "private": true,
   "scripts": {
-    "build:blog": "node scripts/build-blog.js"
+    "build:blog": "node scripts/build-blog.js",
+    "build:assets": "node scripts/build.js",
+    "build": "npm run build:blog && npm run build:assets"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
     "marked": "^15.0.0"
+  },
+  "devDependencies": {
+    "csso": "^5.0.5",
+    "sharp": "^0.34.5",
+    "terser": "^5.48.0"
   }
 }
