@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
-        <a class="nav-logo" href="/"><img src="/assets/img/logo.png" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
         <ul class="nav-links">
             <li class="nav-item has-drop" data-nav-item>
                 <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
@@ -32,7 +32,7 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo"><img src="/assets/img/logo.png" alt="Fiter" style="height:24px;width:auto;"></div>
+            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
                 <div class="drawer-sub"><div class="drawer-sub-inner">
@@ -60,7 +60,7 @@ const FOOTER = `<footer class="ds-footer">
     <div class="footer-inner">
         <div class="footer-top">
             <div class="footer-brand">
-                <img src="/assets/img/logo.png" alt="Fiter">
+                <img src="/assets/img/fiter_logo.svg" alt="Fiter">
                 <p>People analytics com IA e neurociência. +500k pessoas medidas.</p>
             </div>
             <div class="footer-nav">
