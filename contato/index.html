@@ -209,32 +209,32 @@
                             <h2 style="font-size:1rem;font-weight:500;color:var(--text-primary);margin-bottom:0.35rem;font-family:inherit;">Agende sua demonstração</h2>
                             <p style="font-size:0.8rem;color:var(--text-tertiary);margin-bottom:2rem;">Preencha os dados abaixo e entraremos em contato.</p>
 
-                            <form id="contactForm" class="form-grid" novalidate>
+                            <form id="contactForm" class="form-grid" novalidate onsubmit="return handleContactSubmit(event)">
 
                                 <div class="form-field form-field-full">
                                     <label class="form-label">Nome completo <span class="form-label-required">*</span></label>
-                                    <input type="text" class="form-input" placeholder="Seu nome completo" name="name" required>
+                                    <input type="text" class="form-input" placeholder="Seu nome completo" id="f-name" name="name" required>
                                 </div>
 
                                 <div class="form-field">
                                     <label class="form-label">E-mail corporativo <span class="form-label-required">*</span></label>
-                                    <input type="email" class="form-input" placeholder="nome@empresa.com.br" name="email" required>
+                                    <input type="email" class="form-input" placeholder="nome@empresa.com.br" id="f-email" name="email" required>
                                 </div>
 
                                 <div class="form-field">
                                     <label class="form-label">Empresa <span class="form-label-required">*</span></label>
-                                    <input type="text" class="form-input" placeholder="Sua empresa" name="company" required>
+                                    <input type="text" class="form-input" placeholder="Sua empresa" id="f-company" name="company" required>
                                 </div>
 
                                 <div class="form-field">
                                     <label class="form-label">Cargo</label>
-                                    <input type="text" class="form-input" placeholder="Seu cargo" name="role">
+                                    <input type="text" class="form-input" placeholder="Seu cargo" id="f-role" name="role">
                                 </div>
 
                                 <div class="form-field">
                                     <label class="form-label">Nº Funcionários / Alunos</label>
                                     <div class="form-select-wrap">
-                                        <select class="form-select" name="size">
+                                        <select class="form-select" id="f-size" name="size">
                                             <option value="" disabled selected>Selecione</option>
                                             <option value="ate50">Até 50</option>
                                             <option value="51-500">51 a 500</option>
@@ -248,7 +248,7 @@
                                 <div class="form-field form-field-full">
                                     <label class="form-label">Produto de interesse</label>
                                     <div class="form-select-wrap">
-                                        <select class="form-select" name="product">
+                                        <select class="form-select" id="f-product" name="product">
                                             <option value="" disabled selected>Selecione</option>
                                             <option value="rh">Solução RH</option>
                                             <option value="educacao">Solução Educação</option>
@@ -270,9 +270,12 @@
                             <!-- Success screen -->
                             <div class="form-success-screen" id="successScreen">
                                 <div class="form-success-icon">✓</div>
-                                <p class="form-success-title">Mensagem recebida!</p>
+                                <p class="form-success-title">E-mail enviado com sucesso!</p>
                                 <p class="form-success-sub">Nossa equipe vai entrar em contato em breve pelo e-mail informado.</p>
-                                <a href="/" class="btn btn-secondary" style="margin-top:0.5rem;text-decoration:none;">Voltar ao início</a>
+                                <div style="display:flex;gap:0.75rem;margin-top:0.5rem;">
+                                    <button type="button" class="btn btn-secondary" id="resetBtn" onclick="resetContactForm()" style="text-decoration:none;">Preencher novamente</button>
+                                    <a href="/" class="btn btn-primary" style="text-decoration:none;">Voltar ao início</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -326,6 +329,94 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+    const personalDomains = ['gmail','hotmail','yahoo','outlook','icloud','live','uol','bol','terra'];
+
+    function getError(el, value) {
+        if (!value || !value.trim()) return 'Preencher o campo';
+        if (el.name === 'email') {
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'E-mail inválido';
+            const domain = value.split('@')[1]?.split('.')[0]?.toLowerCase();
+            if (personalDomains.includes(domain)) return 'Use um e-mail corporativo';
+        }
+        return null;
+    }
+
+    function setFieldState(fieldEl, inputEl, error) {
+        const prev = fieldEl.querySelector('.form-error-msg, .form-success-msg');
+        if (prev) prev.remove();
+        fieldEl.classList.remove('is-error','is-success');
+        if (error) {
+            fieldEl.classList.add('is-error');
+            const msg = document.createElement('span');
+            msg.className = 'form-error-msg';
+            msg.textContent = '✕ ' + error;
+            const wrap = inputEl.closest('.form-select-wrap');
+            (wrap || inputEl).after(msg);
+        } else if (inputEl.value.trim()) {
+            fieldEl.classList.add('is-success');
+        }
+    }
+
+    function validateForm(form) {
+        let valid = true;
+        form.querySelectorAll('.form-input, .form-select').forEach(function (input) {
+            const field = input.closest('.form-field');
+            const error = getError(input, input.value);
+            if (field) setFieldState(field, input, error);
+            if (error) valid = false;
+        });
+        return valid;
+    }
+
+    function handleContactSubmit(e) {
+        e.preventDefault();
+        const form = document.getElementById('contactForm');
+        const submit = document.getElementById('submitBtn');
+        const success = document.getElementById('successScreen');
+        if (!validateForm(form)) return false;
+
+        submit.classList.add('is-loading');
+        submit.textContent = 'Enviando…';
+        if (window.gtag) gtag('event','generate_lead',{event_category:'form',event_label:'contact'});
+
+        emailjs.sendForm('service_6l71l5a', 'template_i5sns1v', form, 'kwwY3z3njMd_biYnD')
+            .then(function () {
+                form.style.display = 'none';
+                success.classList.add('is-visible');
+            })
+            .catch(function () {
+                submit.classList.remove('is-loading');
+                submit.textContent = 'Agendar demonstração';
+                alert('Ocorreu um erro ao enviar. Tente novamente.');
+            });
+        return false;
+    }
+
+    function resetContactForm() {
+        const form = document.getElementById('contactForm');
+        const submit = document.getElementById('submitBtn');
+        const success = document.getElementById('successScreen');
+        form.reset();
+        form.style.display = '';
+        form.querySelectorAll('.form-field').forEach(function (f) {
+            f.classList.remove('is-error', 'is-success');
+            var msg = f.querySelector('.form-error-msg, .form-success-msg');
+            if (msg) msg.remove();
+        });
+        submit.classList.remove('is-loading');
+        submit.textContent = 'Agendar demonstração';
+        success.classList.remove('is-visible');
+    }
+
+    document.querySelectorAll('#contactForm .form-input, #contactForm .form-select').forEach(function (input) {
+        input.addEventListener('blur', function () {
+            const field = this.closest('.form-field');
+            if (field) setFieldState(field, this, getError(this, this.value));
+        });
+    });
+    </script>
     <script>lucide.createIcons();</script>
 <script>(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","aFxKgoMOwAth4DHu5Q0WGCB5t")</script>
 </body>
