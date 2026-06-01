@@ -28,7 +28,7 @@ author: "Giovanna Dorigatti"
 authorInitials: "GD"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "guia-do-gro-imagem.jpeg"
+image: "guia-do-gro-imagem.jpg"
 ---
 # Guia do GRO e PGR para RH: Quais são as Reais Obrigações do Recursos Humanos?
 
