@@ -28,7 +28,7 @@ author: "Giovanna Dorigatti"
 authorInitials: "GD"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "defult.jpeg"
+image: "WhatsApp Image 2026-05-26 at 10.21.10.jpeg"
 ---
 
 
