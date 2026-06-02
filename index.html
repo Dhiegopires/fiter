@@ -295,6 +295,8 @@
             <div class="hero-bottom-right">
                 <p id="heroDesc" style="color:var(--text-secondary); font-size:0.875rem; line-height:1.6; transition:opacity 0.22s ease;"></p>
                 <div class="hero-btns" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+                    <a id="heroSegEmpresaBtn" href="/solucoes/rh/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;display:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_empresa'})">Sou uma Empresa →</a>
+                    <a id="heroSegEduBtn" href="/solucoes/educacao/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_educacao'})">Sou uma Universidade →</a>
                     <a id="heroSecondaryBtn" href="#prova-social" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;">Como funciona →</a>
                     <a id="heroDemoBtn" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'hero_demo'})">Agendar Demo</a>
                 </div>
@@ -417,6 +419,7 @@
                             <span><strong style="color:var(--text-primary);font-weight:500;">Agente NR1</strong> &mdash; conformidade automática</span>
                         </li>
                     </ul>
+                    <p style="font-size:0.72rem;color:var(--text-tertiary);line-height:1.5;font-style:italic;border-top:1px solid var(--border-subtle);padding-top:0.75rem;margin-top:0.25rem;">No Pulse, o colaborador faz uma autoanálise mensal. Na Pesquisa de Clima, avalia a empresa de forma 100% anônima.</p>
                     <span class="eco-link" style="color:#3b82f6;">Ver ecossistema RH <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
                 </a>
 
@@ -438,6 +441,24 @@
                     <span class="eco-link" style="color:#10b981;">Ver ecossistema Educação <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
                 </a>
 
+            </div>
+        </section>
+
+        <!-- AMBIDESTRIA FITER -->
+        <section class="ds-section" style="margin-bottom:8rem;">
+            <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para cada porte, uma resposta diferente</p>
+            <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Grande empresa ou PME.<br>A Fiter se adapta a você.</h2>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+                <div class="fade-up" style="--reveal-delay:0s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius-lg);">
+                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Grandes empresas</p>
+                    <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">Predição em escala e compliance robusto</h3>
+                    <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Monitoramento de turnover em massa, laudos NR1 por cargo e relatórios consolidados para o Ministério do Trabalho. Conformidade jurídica garantida para operações de centenas ou milhares de colaboradores.</p>
+                </div>
+                <div class="fade-up" style="--reveal-delay:0.12s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-lg);">
+                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Pequenas e médias empresas</p>
+                    <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">IA como RH Estratégico virtual</h3>
+                    <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Nossa IA atua como um RH Estratégico virtual — gerando planos de ação, predições de risco e diagnósticos sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
+                </div>
             </div>
         </section>
 
@@ -463,29 +484,29 @@
                     <div class="sci-tile fade-up" style="--reveal-delay:0s;">
                         <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
                         <div>
-                            <div class="sci-title">Publicação acadêmica</div>
-                            <div class="sci-sub" style="font-style:italic;">Felicidade: Ciência de Dados</div>
+                            <div class="sci-title">DNA Científico</div>
+                            <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
                         </div>
                     </div>
                     <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
-                        <div class="sci-icon"><i data-lucide="graduation-cap" style="width:16px;height:16px;"></i></div>
+                        <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
                         <div>
-                            <div class="sci-title">Validado academicamente</div>
-                            <div class="sci-sub">Teses de mestrado · USP e Mackenzie</div>
+                            <div class="sci-title">Liderança Prática</div>
+                            <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
                         </div>
                     </div>
                     <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
-                        <div class="sci-icon"><i data-lucide="brain" style="width:16px;height:16px;"></i></div>
+                        <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
                         <div>
-                            <div class="sci-title">Neurociência + ciência comportamental</div>
-                            <div class="sci-sub">Base científica em comportamento humano e bem-estar</div>
+                            <div class="sci-title">Ecossistema USP</div>
+                            <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
                         </div>
                     </div>
                     <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
-                        <div class="sci-icon"><i data-lucide="anchor" style="width:16px;height:16px;"></i></div>
+                        <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
                         <div>
-                            <div class="sci-title">Marinha do Brasil</div>
-                            <div class="sci-sub">Primeiro produto contratado pela divisão de submarinos nucleares</div>
+                            <div class="sci-title">Selos e Certificações</div>
+                            <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
                         </div>
                     </div>
                 </div>
@@ -772,12 +793,13 @@
             name: 'Fiter',
             tagline: 'People Analytics com IA',
             heading: 'Sua instituição parece bem.<br>Os dados contam outra história.',
-            desc: 'Plataforma brasileira de people analytics com IA e neurociência. Engajamento, compliance e diagnóstico em tempo real.',
+            desc: 'IA que monitora engajamento, fit cultural e clima em tempo real. Preveja rotatividade e evasão antes que aconteçam.',
             accent: '#ffffff',
             glowBg: 'rgba(255,255,255,0.07)',
             borderActive: 'rgba(255,255,255,0.18)',
             link: '#prova-social',
             linkLabel: 'Como funciona →',
+            segBtn: true,
         },
         {
             name: 'Recursos\nHumanos',
@@ -949,13 +971,25 @@
         const d = document.getElementById('heroDesc');
         const sec = document.getElementById('heroSecondaryBtn');
         const demo = document.getElementById('heroDemoBtn');
+        const segEmpresa = document.getElementById('heroSegEmpresaBtn');
+        const segEdu = document.getElementById('heroSegEduBtn');
         if (!h || !d) return;
         const isBlog = p.name === 'Blog';
+        const isSeg = !!p.segBtn;
         const setBtn = () => {
-            if (sec) { sec.href = p.link; splitBtnChars(sec, p.linkLabel); }
-            sec.className = 'btn ' + (isBlog ? 'btn-primary' : 'btn-secondary') + ' btn-animate-chars';
-            sec.style.textDecoration = 'none';
-            if (demo) demo.style.display = isBlog ? 'none' : '';
+            if (isSeg) {
+                if (sec) sec.style.display = 'none';
+                if (demo) demo.style.display = 'none';
+                if (segEmpresa) segEmpresa.style.display = '';
+                if (segEdu) segEdu.style.display = '';
+            } else {
+                if (segEmpresa) segEmpresa.style.display = 'none';
+                if (segEdu) segEdu.style.display = 'none';
+                if (sec) { sec.href = p.link; splitBtnChars(sec, p.linkLabel); sec.style.display = ''; }
+                sec.className = 'btn ' + (isBlog ? 'btn-primary' : 'btn-secondary') + ' btn-animate-chars';
+                sec.style.textDecoration = 'none';
+                if (demo) demo.style.display = isBlog ? 'none' : '';
+            }
         };
         if (animate === false) {
             h.innerHTML = p.heading;
