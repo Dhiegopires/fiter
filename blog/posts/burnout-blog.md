@@ -59,7 +59,7 @@ Quando essas características se instalam, os sintomas do burnout — *exaustão
 | **Absenteísmo** | Dados do *Instituto Gallup* revelam que profissionais em estado crônico de burnout apresentam **63% mais probabilidade de faltar ao trabalho**. |
 | **Presenteísmo** | O custo mais silencioso. O colaborador está fisicamente presente, porém cognitivamente esgotado. Pesquisas da *American Psychological Association (APA)* estimam que o estresse ocupacional custa à economia dos EUA mais de **500 bilhões de dólares anualmente** em perdas de produtividade. |
 
-> 💡 **Nota de Impacto:** Pesquisadores da *Universidade de Stanford* corroboram esse cenário, comprovando que o estresse no local de trabalho impõe custos de saúde pública quase tão elevados quanto o tabagismo passivo. Do ponto de vista financeiro, empresas que negligenciam a toxicidade arcam com prêmios de seguro-saúde mais altos e sofrem corrosão em suas margens de lucro devido à ineficiência.
+>  **Nota de Impacto:** Pesquisadores da *Universidade de Stanford* corroboram esse cenário, comprovando que o estresse no local de trabalho impõe custos de saúde pública quase tão elevados quanto o tabagismo passivo. Do ponto de vista financeiro, empresas que negligenciam a toxicidade arcam com prêmios de seguro-saúde mais altos e sofrem corrosão em suas margens de lucro devido à ineficiência.
 
 ---
 
