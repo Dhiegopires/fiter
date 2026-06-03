@@ -51,7 +51,7 @@ Antes de quantificar as perdas, é imperativo definir as causas. Um estudo abran
 4. **Competição predatória (*cutthroat*):** Estímulo à rivalidade destrutiva entre os membros da equipe.
 5. **Práticas abusivas de gestão:** Assédio moral e liderança pelo medo.
 
-Quando essas características se instalam, os sintomas do burnout — *exaustão crônica, distanciamento mental (cinismo) e queda drástica de eficácia* — disseminam-se de forma epidêmica. Consequentemente, o impacto financeiro atinge o balanço das organizações por meio de três vias principais:
+Quando essas características se instalam, os sintomas do burnout, exaustão crônica, distanciamento mental (cinismo) e queda drástica de eficácia, disseminam-se de forma epidêmica. Consequentemente, o impacto financeiro atinge o balanço das organizações por meio de três vias principais:
 
 | Canal de Impacto | Descrição e Estatísticas Relevantes |
 | :--- | :--- |
@@ -91,7 +91,7 @@ A superioridade prática da solução de pulso da Fiter em relação à pesquisa
 3. **Microintervenções Ágeis:** O modelo estático resulta em planos de ação lentos e genéricos. A telemetria contínua viabiliza correções de rota cirúrgicas e específicas por departamento.
 4. **Prevenção Efetiva do Burnout:** Em vez de mapear os colaboradores que já atingiram o esgotamento mental, a plataforma identifica os precursores do estresse antes que ocorra o colapso operacional.
 
-> **Exemplo Prático de Aplicação:** A adoção desse ecossistema permite aos diretores de RH mapear micro-oscilações de engajamento por meio do cruzamento constante de dados. Se o departamento de tecnologia, por exemplo, registrar uma queda abrupta nos indicadores de suporte da liderança — um precursor clássico do burnout —, o RH adquire a capacidade de intervir de maneira focada semanas antes que as primeiras licenças médicas sejam solicitadas.
+> **Exemplo Prático de Aplicação:** A adoção desse ecossistema permite aos diretores de RH mapear micro-oscilações de engajamento por meio do cruzamento constante de dados. Se o departamento de tecnologia, por exemplo, registrar uma queda abrupta nos indicadores de suporte da liderança, um precursor clássico do burnout, o RH adquire a capacidade de intervir de maneira focada semanas antes que as primeiras licenças médicas sejam solicitadas.
 
 ---
 
