@@ -7,7 +7,6 @@ const files = [
     'solucoes/rh/index.html',
     'solucoes/educacao/index.html',
     'produtos/index.html',
-    'produtos/portal-de-transparencia/index.html',
     'produtos/nr01/index.html',
     'produtos/pulse/index.html',
     'blog/index.html',
