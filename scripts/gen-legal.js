@@ -56,7 +56,7 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
 
 const FOOTER = `<div id="footer-placeholder"></div>
 <script>
-  fetch('/components/footer.html?v=4')
+  fetch('/components/footer.html?v=5')
     .then(r => r.text())
     .then(html => { document.getElementById('footer-placeholder').innerHTML = html; if (window.lucide) lucide.createIcons(); });
 </script>`;
