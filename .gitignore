@@ -1,5 +1,2 @@
 node_modules
-/assets/css/style.min.css
-/assets/js/main.min.js
-/assets/img/*.webp
 /assets/img/*-og.jpg

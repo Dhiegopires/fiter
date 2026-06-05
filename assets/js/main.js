@@ -34,6 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', updateFooter);
     updateFooter();
 
+    // Watch for footer injected asynchronously via fetch
+    const footerObserver = new MutationObserver(() => {
+        if (document.querySelector('.ds-footer')) {
+            updateFooter();
+            footerObserver.disconnect();
+        }
+    });
+    footerObserver.observe(document.body, { childList: true, subtree: true });
+
     // Button Character Animation Splitter
     document.querySelectorAll('.btn-animate-chars').forEach(btn => {
         const textNodes = Array.from(btn.childNodes).filter(node => node.nodeType === Node.TEXT_NODE);
