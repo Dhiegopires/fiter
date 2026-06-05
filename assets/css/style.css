@@ -774,6 +774,7 @@
             text-decoration: none;
             transition: opacity var(--transition-fast), color var(--transition-fast);
             display: inline-flex;
+            flex-shrink: 0;
         }
         .footer-social a:hover {
             opacity: 1;
@@ -785,6 +786,7 @@
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
+            flex-shrink: 0;
         }
         .footer-social a svg[data-filled] {
             fill: currentColor;

@@ -1,5 +1,5 @@
 // Inline SVG logos so CSS currentColor controls the i-dot per theme
-(function inlineLogoSVGs() {
+function inlineLogoSVGs() {
     const imgs = document.querySelectorAll(
         '.nav-logo img[src$=".svg"], .nav-panel-logo img[src$=".svg"], .footer-brand img[src$=".svg"]'
     );
@@ -19,7 +19,8 @@
             img.parentNode.replaceChild(svg, img);
         });
     }).catch(() => {});
-})();
+}
+inlineLogoSVGs();
 
 document.addEventListener('DOMContentLoaded', () => {
     // Reveal Footer Logic
@@ -38,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const footerObserver = new MutationObserver(() => {
         if (document.querySelector('.ds-footer')) {
             updateFooter();
+            inlineLogoSVGs();
             footerObserver.disconnect();
         }
     });

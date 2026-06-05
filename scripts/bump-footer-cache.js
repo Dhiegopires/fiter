@@ -17,8 +17,8 @@ const files = [
   'scripts/gen-legal.js',
 ];
 
-const OLD = "fetch('/components/footer.html?v=4')";
-const NEW = "fetch('/components/footer.html?v=5')";
+const OLD = "fetch('/components/footer.html?v=5')";
+const NEW = "fetch('/components/footer.html?v=6')";
 
 let count = 0;
 for (const rel of files) {
