@@ -1,6 +1,5 @@
 node_modules
 /assets/img/*-og.jpg
 
-# build artifacts (generated from assets/css/style.css and assets/js/main.js)
-/assets/css/style.min.css
-/assets/js/main.min.js
+# build artifacts — versionados para consistência entre ambientes
+# Regenerar com: npm run build:assets
