@@ -1,0 +1,350 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="TH4kqZnapgxjblie2KFVRM3laak_fIKLUfN9Dm5b1YY">
+    <title>People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão | Fiter Blog</title>
+    <meta name="description" content="Utilizando a ciência de dados e indicadores de comportamento para diminuir o turnover e reter talentos estratégicos.">
+    <link rel="canonical" href="https://fiter.com.br/blog/people-analytics-na-pratica/" />
+    <meta property="og:title" content="People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão | Fiter Blog" />
+    <meta property="og:description" content="Utilizando a ciência de dados e indicadores de comportamento para diminuir o turnover e reter talentos estratégicos." />
+    <meta property="og:url" content="https://fiter.com.br/blog/people-analytics-na-pratica/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Fiter" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão",
+      "author": { "@type": "Organization", "name": "Fiter" },
+      "publisher": { "@type": "Organization", "name": "Fiter", "url": "https://fiter.com.br" },
+      "url": "https://fiter.com.br/blog/people-analytics-na-pratica/"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .ds-footer { position: static; }
+
+        .article-body {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+        .article-body p { margin-bottom: 1.65rem; }
+        .article-body h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(1.35rem, 2vw, 1.75rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin-top: 3.5rem;
+            margin-bottom: 1.1rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.25rem;
+            margin-bottom: 1.65rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .article-body ul li { list-style: disc; padding-left: 0.25rem; }
+        .article-body ol li { list-style: decimal; padding-left: 0.25rem; }
+        .article-body strong { color: var(--text-primary); font-weight: 600; }
+        .article-body em { font-style: italic; }
+        .article-body a { color: var(--accent-brand); text-decoration: underline; text-underline-offset: 3px; }
+        .article-body a:hover { opacity: 0.8; }
+        .article-body blockquote {
+            border-left: 2px solid var(--accent-brand);
+            padding: 1rem 0 1rem 1.5rem;
+            margin: 2.5rem 0;
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .article-lead {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .share-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-top: 4rem;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            background: var(--bg-surface);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-md);
+            padding: 0.45rem 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .share-btn:hover { color: var(--text-primary); border-color: var(--border-hover); }
+    </style>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RL4MTL7XFE');
+    </script>
+</head>
+<body data-theme="studio">
+
+    <!-- NAV -->
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+
+        <ul class="nav-links">
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/solucoes/rh/">
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
+                    </a>
+                    <a class="drop-link" href="/solucoes/educacao/">
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/produtos/pulse/">
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/nr01/">
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">
+                        <div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/blog/">Blog</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
+            </div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
+                </div></div>
+            </div>
+
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+            <a class="drawer-plain-link" href="/contato/">Contato</a>
+
+            <div class="drawer-cta">
+                <a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+    <main class="main-content" style="padding-top: 64px;">
+
+        <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+
+        <div style="position: relative; z-index: 1;">
+
+            <!-- POST HEADER -->
+            <section style="padding-top: 5rem; padding-bottom: 2rem;">
+                <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem;">
+
+                    <!-- Breadcrumb -->
+                    <div style="margin-bottom:2.5rem;" data-reveal>
+                        <a href="/blog/" style="font-family:var(--font-mono);font-size:0.62rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-tertiary)'">← Blog</a>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3.25rem);font-weight:800;letter-spacing:-0.03em;line-height:1.08;color:var(--text-primary);margin-bottom:1.75rem;--reveal-delay:0.1s;">
+                        People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão
+                    </h1>
+
+                    <!-- Meta -->
+                    <div data-reveal style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;padding-bottom:2rem;border-bottom:1px solid var(--border-subtle);--reveal-delay:0.2s;">
+                        <div style="width:36px;height:36px;border-radius:50%;background:var(--bg-surface);border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.55rem;color:var(--text-tertiary);flex-shrink:0;letter-spacing:0.05em;">EF</div>
+                        <span style="font-size:0.875rem;font-weight:500;color:var(--text-primary);">Equipe Fiter</span>
+                        <span style="width:3px;height:3px;border-radius:50%;background:var(--border-default);flex-shrink:0;"></span>
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">08 de Junho, 2026</span>
+                        <span style="width:3px;height:3px;border-radius:50%;background:var(--border-default);flex-shrink:0;"></span>
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);display:flex;align-items:center;gap:0.3rem;"><i data-lucide="clock" style="width:11px;height:11px;"></i> 6 min de leitura</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- HERO IMAGE -->
+            
+        <section style="padding-bottom: 3rem;">
+            <div style="max-width: 960px; margin: 0 auto; padding: 0 2rem;">
+                <img src="cenario-de-people-analytics.jpg" alt="People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão" style="width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);display:block;">
+            </div>
+        </section>
+
+            <!-- ARTICLE BODY -->
+            <section style="padding-bottom: 5rem;">
+                <div style="max-width: 720px; margin: 0 auto; padding: 0 2rem;">
+
+                    <div class="article-body">
+                        <h1>People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão</h1>
+<p class="article-lead"><em>Utilizando a ciência de dados e indicadores de comportamento para diminuir o turnover e reter talentos estratégicos.</em></p>
+<p>Poucas situações geram tanto impacto negativo para uma liderança ou para o departamento de Recursos Humanos quanto o pedido de demissão surpresa de um talento estratégico. Além da perda imediata de capital intelectual e da desestabilização do moral da equipe, o custo financeiro é expressivo: estimativas de mercado apontam que repor um profissional de alta performance pode custar de 6 a 9 meses do seu salário nominal, considerando despesas com recrutamento, contratação, onboarding e a natural curva de aprendizado.</p>
+<p>Historicamente, a gestão de pessoas operou sob um modelo estritamente reativo. As empresas costumam investigar as razões do descontentamento apenas nas entrevistas de desligamento, um momento em que a decisão do profissional já está tomada e os custos da rotatividade já foram gerados. No entanto, o avanço tecnológico e a maturidade analítica trouxeram ferramentas capazes de transformar essa dinâmica, permitindo identificar os sinais de desgaste semanas ou meses antes de o colaborador formalizar sua saída. É nesse cenário que a intuição cede espaço à ciência de dados. Compreender o funcionamento do People Analytics e mapear as causas profundas do turnover são passos indispensáveis para construir uma estratégia de retenção preditiva e eficiente.</p>
+<hr>
+<h2>O Que é People Analytics?</h2>
+<p>Embora o termo frequentemente pareça associado apenas a grandes corporações de tecnologia, o <strong>People Analytics</strong> consiste, fundamentalmente, na coleta, organização e aplicação de dados demográficos, operacionais e comportamentais com o objetivo de otimizar decisões de negócios e a gestão de pessoas. </p>
+<p>Longe de significar uma vigilância excessiva sobre os colaboradores ou a sua redução a métricas frias, o processo baseia-se na conexão inteligente de pontos informacionais. Trata-se da transição definitiva do RH operacional para o RH estratégico: em vez de computar apenas indicadores retrospectivos (como a taxa de turnover do mês anterior), a organização passa a cruzar variáveis de desempenho, engajamento e clima para mapear padrões preditivos, descobrindo quem apresenta maior propensão à evasão e quais os fatores causais subjacentes.</p>
+<hr>
+<h2>As Reais Causas do Turnover no Contexto Corporativo</h2>
+<p>Para antecipar uma intenção de saída, é crucial entender as alavancas que impulsionam um talento a buscar o mercado externo. Estudos tanto acadêmicos quanto de consultorias organizacionais convergem para fatores fundamentais que, se não monitorados, resultam em desligamentos voluntários:</p>
+<ul>
+<li><strong>Liderança Ineficaz ou Desalinhada:</strong> O comportamento da liderança direta continua sendo um dos principais vetores de engajamento. Ruídos de comunicação e ausência de suporte geram atrito contínuo.</li>
+<li><strong>Falta de Perspectiva e Reconhecimento:</strong> Profissionais de alto rendimento que operam por longos períodos sem feedbacks claros, revisões de carreira ou novos desafios intelectuais tendem à estagnação e à busca por novas oportunidades.</li>
+<li><strong>Desalinhamento Cultural Prático:</strong> A discrepância entre os valores divulgados pela organização e a realidade prática vivenciada nas rotinas diárias da equipe corrói a confiança do colaborador.</li>
+<li><strong>Sobrecarga Crônica e Esgotamento:</strong> Times operando constantemente acima da capacidade operacional geram um ambiente propício ao esgotamento físico e mental, elevando exponencialmente o risco de pedidos de demissão repentinos.</li>
+</ul>
+<p>O maior desafio corporativo reside no fato de que essas causas costumam ser silenciosas. Ruídos e insatisfações raramente são verbalizados de forma explícita até que o colaborador já possua uma proposta de trabalho concorrente em mãos.</p>
+<hr>
+<h2>Identificando os Sinais de Alerta na Prática (O Modelo Preditivo)</h2>
+<p>Prever a evasão de talentos exige a superação de análises isoladas em favor de uma visão integrada e contínua do comportamento organizacional. Os sinais mais claros de que um profissional está se distanciando da empresa manifestam-se em mudanças sutis em suas rotinas de interação e entrega.</p>
+<ul>
+<li><strong>A Dimensão do Engajamento:</strong> No modelo tradicional e reativo, a insatisfação só é consolidada durante a entrevista de desligamento. Sob a ótica do People Analytics, o sistema sinaliza antecipadamente uma queda progressiva e consistente nas notas atribuídas ao e-NPS (<em>Employee Net Promoter Score</em>) individual ou do setor ao longo dos últimos três meses.</li>
+<li><strong>A Dimensão do Desempenho:</strong> Em vez de simplesmente constatar as entregas insuficientes no encerramento de um trimestre, a análise preditiva detecta oscilações abruptas no cumprimento de metas, retrações na produtividade histórica ou padrões atípicos de cumprimento de horários que divergem totalmente do comportamento usual do funcionário.</li>
+<li><strong>A Dimensão de Clima e Cultura:</strong> A percepção de risco deixa de depender do recebimento de queixas formais nos canais de RH. O indicador analítico aponta, por exemplo, a perda súbita de engajamento e a falta de adesão voluntária a pesquisas de pulso, dinâmicas de feedback e eventos de integração interna.</li>
+<li><strong>A Dimensão do Desenvolvimento:</strong> A insatisfação com a falta de crescimento profissional é antecipada ao rastrear métricas operacionais do RH, tais como a ausência prolongada de um Plano de Desenvolvimento Individual (PDI) atualizado ou o cancelamento sistemático e recorrente de reuniões individuais de alinhamento (1:1) por parte da liderança.</li>
+</ul>
+<hr>
+<h2>O Cruzamento Inteligente de Dados: Clima, e-NPS e Performance</h2>
+<p>A verdadeira inteligência preditiva surge quando a organização deixa de observar os indicadores de forma estanque e passa a correlacioná-los em tempo real. Uma matriz de risco automatizada fundamenta-se no monitoramento de três pilares centrais:</p>
+<ol>
+<li><strong>Pesquisas de Pulso frequentes:</strong> Indicam a oscilação do clima. Se um colaborador de alta performance que historicamente avaliava os processos da empresa com notas excelentes passa a atuar na faixa dos neutros ou detratores, o sistema gera um alerta contextual.</li>
+<li><strong>Indicador de e-NPS:</strong> Mede diretamente o orgulho de pertencer e a disposição em recomendar a empresa. Estatísticas demonstram que quedas acentuadas de e-NPS dentro de uma área costumam preceder picos de turnover em um intervalo de 60 a 90 dias.</li>
+<li><strong>Avaliações de Desempenho:</strong> Cruza-se este cenário com as avaliações de performance. Quando um profissional classificado como peça-chave (alto potencial e entrega consolidada) apresenta queda concomitante em seus indicadores de engajamento e performance, o sistema emite um diagnóstico objetivo de risco imediato. Há um desalinhamento em curso, e a janela de intervenção eficaz está aberta.</li>
+</ol>
+<blockquote>
+<p>&quot;O cruzamento automatizado de variáveis comportamentais e operacionais permite que o RH e os gestores seniores transformem dados brutos em inteligência preventiva, agindo na raiz da insatisfação antes que ela se converta em uma carta de demissão.&quot;</p>
+</blockquote>
+<hr>
+<h2>Estratégias Práticas para Reduzir a Rotatividade de Funcionários</h2>
+<p>Munidos de dados precisos, os líderes e o RH podem abandonar ações genéricas de retenção — como reajustes generalizados de benefícios — e implementar intervenções estruturadas e direcionadas:</p>
+<ul>
+<li><strong>Condução de <em>Stay Interviews</em> (Entrevistas de Permanência):</strong> Diante de um alerta emitido pelos dados de risco, o gestor direto deve agendar uma conversa estruturada com o colaborador. O objetivo é compreender, proativamente, quais fatores atuais sustentam sua motivação e quais pontos geram atrito, ajustando as expectativas antes que surja o desejo de buscar o mercado.</li>
+<li><strong>Desenvolvimento Focal de Lideranças:</strong> Se os relatórios de People Analytics apontam que um departamento ou equipe específica apresenta um índice de risco consideravelmente superior à média da empresa, a causa raiz raramente residirá em fatores macroeconômicos ou salariais. O diagnóstico indica a necessidade imediata de capacitação, mentoria ou intervenção na liderança daquela área específica.</li>
+<li><strong>Personalização das Ações de Engajamento:</strong> Diferentes perfis profissionais respondem a estímulos distintos. Enquanto profissionais de áreas técnicas (<em>Tech</em>) podem demonstrar maior sensibilidade à falta de projetos inovadores ou metodologias modernas, profissionais em posições de gestão podem se desmotivar por excesso de microgerenciamento ou falta de autonomia. O uso histórico dos dados individuais permite personalizar os planos de ação e os incentivos de carreira.</li>
+</ul>
+<p>A adoção de plataformas integradas que unificam gestão de desempenho, pesquisas de clima e indicadores comportamentais elimina a dependência de planilhas manuais e descentralizadas. Painéis atualizados em tempo real conferem agilidade ao RH, permitindo que a gestão de pessoas seja verdadeiramente orientada por dados e focada na sustentabilidade do negócio.</p>
+<hr>
+<h2>Curadoria Técnica</h2>
+<p>Este artigo contou com a curadoria técnica de <strong>Sergio Amad</strong>, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma completa que une performance, clima, engajamento e People Analytics em um só lugar, ajudando empresas a reterem seus melhores talentos por meio de dados precisos e gestão humanizada.</p>
+
+                    </div>
+
+                    <!-- Share bar -->
+                    <div class="share-bar">
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin-right:0.25rem;">Compartilhar</span>
+                        <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://fiter.com.br/blog/people-analytics-na-pratica/" target="_blank" rel="noopener">
+                            <i data-lucide="linkedin" style="width:12px;height:12px;"></i> LinkedIn
+                        </a>
+                    </div>
+
+                    <!-- CTA -->
+                    <div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
+                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
+                        <div style="position:relative;">
+                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Fiter Pulse</p>
+                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Veja como funciona na prática</h3>
+                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">87% de taxa de resposta via WhatsApp. Configure sua primeira pesquisa em menos de 10 minutos.</p>
+                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;">Agendar demonstração</a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('/components/footer.html?v=6')
+        .then(r => r.text())
+        .then(html => { document.getElementById('footer-placeholder').innerHTML = html; if (window.lucide) lucide.createIcons(); });
+    </script>
+
+</body>
+</html>
