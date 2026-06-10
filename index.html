@@ -113,7 +113,8 @@
     }
     /* Scientific proof tiles */
     .sci-tile { display:flex; gap:1.25rem; align-items:center; padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-default); flex:1; }
-    .sci-tile:last-child { border-bottom:none; }
+    .sci-tile:last-child { border-bottom:none; padding-bottom:0; }
+    .sci-narrative { padding:0 3.5rem; }
     .sci-icon { width:36px; height:36px; border-radius:8px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--accent-brand); }
     .sci-title { font-size:0.8125rem; font-weight:600; color:var(--text-primary); margin-bottom:0.25rem; line-height:1.3; }
     .sci-sub { font-size:0.78rem; color:var(--text-secondary); line-height:1.5; }
@@ -124,7 +125,8 @@
     @media(max-width:768px) {
         .sci-section-grid { grid-template-columns:1fr !important; gap:2.5rem !important; }
         .sci-section-grid > div:last-child { margin-top:0 !important; margin-right:0 !important; margin-bottom:0 !important; border-left:none !important; }
-        .sci-section { padding:2.5rem 1.5rem !important; }
+        .sci-section { padding:2.5rem 0 !important; }
+        .sci-narrative { padding:0 1.5rem !important; }
         .sci-tiles { margin:0 !important; border-left:none !important; border-top:1px solid var(--border-default); padding-top:1.5rem; }
     }
     /* Steps redesign */
@@ -472,14 +474,14 @@
         </section>
 
         <!-- CREDIBILIDADE CIENTÍFICA -->
-        <section class="ds-section sci-section" style="margin-bottom:8rem; padding:2.5rem 3.5rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
+        <section class="ds-section sci-section" style="margin-bottom:8rem; padding:2.5rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
             <!-- Glow decorativo -->
             <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
 
             <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
 
                 <!-- Esquerda: narrativa -->
-                <div>
+                <div class="sci-narrative">
                     <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
                     <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">
                         É deeptech com<br>DNA na USP.
@@ -489,7 +491,7 @@
                 </div>
 
                 <!-- Direita: proof tiles -->
-                <div class="sci-tiles" style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-2.5rem;margin-right:-3.5rem;margin-bottom:-2.5rem;overflow:hidden;">
+                <div class="sci-tiles" style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-2.5rem;margin-bottom:-2.5rem;overflow:hidden;">
                     <div class="sci-tile fade-up" style="--reveal-delay:0s;">
                         <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
                         <div>
