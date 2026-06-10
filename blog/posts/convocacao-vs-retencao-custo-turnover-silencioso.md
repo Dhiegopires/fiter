@@ -28,7 +28,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "convocacao-vs-retencao-custo-turnover-silencioso.webp"
+image: "convocacao-vs-retencao-custo-turnover-silencioso.jpg"
 ---
 
 
