@@ -140,6 +140,9 @@
     /* Ecosystem cards */
     .eco-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
     @media(max-width:680px) { .eco-grid { grid-template-columns:1fr; } }
+    /* Ambidestria grid */
+    .ambi-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+    @media(max-width:680px) { .ambi-grid { grid-template-columns:1fr; } }
     .eco-card { display:flex; flex-direction:column; background:var(--bg-surface); border:1px solid var(--border-default); border-radius:var(--radius-lg); padding:2.75rem; gap:1.25rem; transition:border-color .3s,box-shadow .3s; }
     .eco-rh:hover  { border-color:rgba(59,130,246,.3);  box-shadow:0 0 72px rgba(59,130,246,.07); }
     .eco-edu:hover { border-color:rgba(16,185,129,.3);  box-shadow:0 0 72px rgba(16,185,129,.07); }
@@ -416,11 +419,11 @@
                     <ul class="eco-products">
                         <li>
                             <span class="eco-dot" style="background:#3b82f6;"></span>
-                            <span><strong style="color:var(--text-primary);font-weight:500;">Pulse</strong> &mdash; felicidade e clima contínuos</span>
+                            <span><strong style="color:var(--text-primary);font-weight:500;">Pulse</strong> · felicidade e clima contínuos</span>
                         </li>
                         <li>
                             <span class="eco-dot" style="background:#f59e0b;"></span>
-                            <span><strong style="color:var(--text-primary);font-weight:500;">Agente NR1</strong> &mdash; conformidade automática</span>
+                            <span><strong style="color:var(--text-primary);font-weight:500;">Agente NR1</strong> · conformidade automática</span>
                         </li>
                     </ul>
                     <p style="font-size:0.72rem;color:var(--text-tertiary);line-height:1.5;font-style:italic;border-top:1px solid var(--border-subtle);padding-top:0.75rem;margin-top:0.25rem;">No Pulse, o colaborador faz uma autoanálise mensal. Na Pesquisa de Clima, avalia a empresa de forma 100% anônima.</p>
@@ -435,11 +438,11 @@
                     <ul class="eco-products">
                         <li>
                             <span class="eco-dot" style="background:#10b981;"></span>
-                            <span><strong style="color:var(--text-primary);font-weight:500;">Pulse Educação</strong> &mdash; mapeamento preventivo de evasão</span>
+                            <span><strong style="color:var(--text-primary);font-weight:500;">Pulse Educação</strong> · mapeamento preventivo de evasão</span>
                         </li>
                         <li>
                             <span class="eco-dot" style="background:#10b981;opacity:0.45;"></span>
-                            <span><strong style="color:var(--text-primary);font-weight:500;">CNE 3/2025</strong> &mdash; conformidade regulatória</span>
+                            <span><strong style="color:var(--text-primary);font-weight:500;">CNE 3/2025</strong> · conformidade regulatória</span>
                         </li>
                     </ul>
                     <span class="eco-link" style="color:#10b981;">Ver ecossistema Educação <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
@@ -452,7 +455,7 @@
         <section class="ds-section" style="margin-bottom:8rem;">
             <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para cada porte, uma resposta diferente</p>
             <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Grande empresa ou PME.<br>A Fiter se adapta a você.</h2>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+            <div class="ambi-grid">
                 <div class="fade-up" style="--reveal-delay:0s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius-lg);">
                     <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Grandes empresas</p>
                     <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">Predição em escala e compliance robusto</h3>
@@ -461,7 +464,7 @@
                 <div class="fade-up" style="--reveal-delay:0.12s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-lg);">
                     <p style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Pequenas e médias empresas</p>
                     <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">IA como RH Estratégico virtual</h3>
-                    <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Nossa IA atua como um RH Estratégico virtual — gerando planos de ação, predições de risco e diagnósticos sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
+                    <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Nossa IA atua como um RH Estratégico virtual, gerando planos de ação, predições de risco e diagnósticos, sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
                 </div>
             </div>
         </section>
@@ -858,7 +861,7 @@
                 </div>
                 <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.14);border-radius:8px;padding:0.45rem 0.7rem;display:flex;align-items:center;justify-content:space-between;">
                     <div>
-                        <div style="font-size:0.63rem;color:rgba(255,255,255,0.38);margin-bottom:0.1rem;">IFE — Evasão prevista</div>
+                        <div style="font-size:0.63rem;color:rgba(255,255,255,0.38);margin-bottom:0.1rem;">IFE · Evasão prevista</div>
                         <div style="font-family:var(--font-serif);font-size:1.25rem;font-weight:800;color:#10b981;line-height:1;">12,4%</div>
                     </div>
                     <div style="width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(16,185,129,0.28);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
