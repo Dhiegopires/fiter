@@ -1114,9 +1114,9 @@
             flex-direction: column;
             gap: 0.25rem;
         }
-        .site-nav.menu-open .nav-backdrop { opacity: 1; }
-        .site-nav.menu-open .nav-panel { transform: translateX(0); }
-        .site-nav.menu-open .nav-drawer { pointer-events: auto; }
+        body.menu-open .nav-backdrop { opacity: 1; }
+        body.menu-open .nav-panel { transform: translateX(0); }
+        body.menu-open .nav-drawer { pointer-events: auto; }
         .nav-panel-logo {
             font-family: var(--font-serif);
             font-size: 1.4rem;
@@ -1200,24 +1200,11 @@
 
         body.menu-open {
             overflow: hidden !important;
-            height: 100% !important;
-            position: fixed !important;
-            width: 100% !important;
-            top: var(--scroll-top);
-            left: 0;
-            right: 0;
             touch-action: none !important;
-            -webkit-overflow-scrolling: none !important;
             overscroll-behavior: none !important;
         }
         html.menu-open {
             overflow: hidden !important;
-            height: 100% !important;
-            position: fixed !important;
-            width: 100% !important;
-            top: 0;
-            left: 0;
-            right: 0;
             overscroll-behavior: none !important;
         }
 
