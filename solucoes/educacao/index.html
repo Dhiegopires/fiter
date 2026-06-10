@@ -7,7 +7,9 @@
     <title>Pulse Educação | Previna a Evasão Escolar com IA | Fiter</title>
     <meta name="description" content="Meça o Índice de Felicidade na Educação e preveja a evasão antes que ocorra. 8 cliques, 2 minutos. Alinhado à CNE 3/2025. Usado na USP e Fatec.">
     <link rel="canonical" href="https://fiter.com.br/solucoes/educacao/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <meta property="og:title" content="Pulse Educação | Previna a Evasão Escolar com IA | Fiter">
     <meta property="og:description" content="Meça o Índice de Felicidade na Educação e preveja a evasão antes que ocorra. 8 cliques, 2 minutos. Alinhado à CNE 3/2025. Usado na USP e Fatec.">
     <meta property="og:url" content="https://fiter.com.br/solucoes/educacao/">
@@ -167,7 +169,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
+            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
                 <div class="drawer-sub"><div class="drawer-sub-inner">
@@ -225,9 +227,9 @@
                 <p style="font-size:1.125rem;color:var(--text-secondary);margin-bottom:3rem;line-height:1.7;max-width:80%;">
                     8 perguntas via WhatsApp. IA que prevê evasão com 3 meses de antecedência. Dashboard por turma, curso e campus. Alinhado à CNE 3/2025.
                 </p>
-                <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-                    <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;">Falar com especialista</a>
+                <div class="hero-cta-group" style="display:flex;flex-wrap:wrap;gap:1rem;">
                     <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Ver demonstração ao vivo</a>
+                    <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;">Falar com especialista</a>
                 </div>
             </div>
 
@@ -424,21 +426,21 @@
             <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Instituições que confiam na Fiter</p>
             <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.25rem);color:var(--text-primary);font-weight:700;letter-spacing:-0.02em;">+500.000 alunos impactados</h2>
         </div>
-        <div class="sp-marquee-wrap">
-            <div class="sp-marquee-track">
-                <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">ANEC</div><div class="sp-logo-sub">Associação</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">UNIP</div><div class="sp-logo-sub">Universidade</div></div>
+        <div class="marquee-mask" style="overflow: hidden; white-space: nowrap; position: relative;">
+            <div class="logo-marquee">
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">ANEC</div>
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">UNIP</div>
                 <!-- duplicate set for seamless loop -->
-                <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">ANEC</div><div class="sp-logo-sub">Associação</div></div>
-                <div class="sp-marquee-item"><div class="sp-logo-text">UNIP</div><div class="sp-logo-sub">Universidade</div></div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
+                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">ANEC</div>
+                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">UNIP</div>
             </div>
         </div>
     </section>

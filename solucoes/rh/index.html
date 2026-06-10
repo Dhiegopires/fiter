@@ -7,7 +7,9 @@
     <title>Solução RH Engajamento, NR1 e Clima com IA | Fiter</title>
     <meta name="description" content="Pulse, Agente NR1, Pesquisa de Clima e Ouvidoria em uma só plataforma. 8 cliques, 2 minutos, via WhatsApp. Sem app. Fale com um especialista.">
     <link rel="canonical" href="https://fiter.com.br/solucoes/rh/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     
     <!-- Open Graph -->
     <meta property="og:title" content="Solução RH Engajamento, NR1 e Clima com IA | Fiter">
@@ -201,7 +203,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
+            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -250,10 +252,10 @@
                     <div class="urgency-strip" id="urgency-nr1">
                         <div class="urgency-icon">⚠</div>
                         <div class="urgency-body">
-                            <div class="urgency-headline">Prazo NR1: empresas têm até 26 de maio de 2026 para se adequar</div>
-                            <div class="urgency-sub">Fora da conformidade = exposição a processos trabalhistas. O Agente NR1 faz a adequação em minutos.</div>
+                            <div class="urgency-headline">Adequação à NR1 atrasada? Resolva isso agora mesmo.</div>
+                            <div class="urgency-sub">Saia da zona de risco de processos trabalhistas hoje. O Agente NR1 faz a sua adequação em minutos.</div>
                         </div>
-                        <a href="/produtos/nr01/" class="btn urgency-cta">Ver o Agente NR1 →</a>
+                        <a href="/produtos/nr01/" class="btn urgency-cta">VER O AGENTE NR1 ➔</a>
                         <button class="urgency-dismiss" aria-label="Fechar" onclick="this.closest('.urgency-strip').classList.add('is-dismissed')">✕</button>
                     </div>
                 </div>
@@ -268,9 +270,9 @@
                     <p style="font-size: 1.125rem; color: var(--text-secondary); margin-bottom: 3rem; line-height: 1.7; max-width: 80%;">
                         8 perguntas via WhatsApp sem app, sem login. Em 2 minutos o colaborador diz como está. O dashboard mostra felicidade, engajamento e fit cultural por área em tempo real, para você agir antes de perder o talento.
                     </p>
-                    <div style="display: flex; flex-wrap: wrap; gap: 1rem;">
-                        <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+                    <div class="hero-cta-group" style="display: flex; flex-wrap: wrap; gap: 1rem;">
                         <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Ver demonstração ao vivo</a>
+                        <a href="/contato/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
                     </div>
                 </div>
 
@@ -489,29 +491,32 @@
             </section>
 
             <!-- Social Proof: Marquee full bleed -->
-            <section style="margin-bottom: 8rem; margin-inline: -2rem;">
-                <p class="sp-label" style="padding-inline: 2rem;">87% de adesão porque é via WhatsApp e eles já usam</p>
-                <div class="sp-marquee-wrap">
-                    <div class="sp-marquee-track">
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Braspress</div><div class="sp-logo-sub">Logística</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Arcor</div><div class="sp-logo-sub">Alimentos</div></div>
-                        <div class="sp-marquee-item sp-featured"><div class="sp-logo-text">Marinha do Brasil</div><div class="sp-logo-sub">Defesa Nacional</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Sebrae</div><div class="sp-logo-sub">Empreendedorismo</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">ABES</div><div class="sp-logo-sub">Tecnologia</div></div>
+            <section style="margin-bottom: 0; margin-inline: -2rem; padding: 4rem 2rem; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); overflow: hidden; background: var(--bg-surface);">
+                <div class="flex flex-col items-center text-center mb-10">
+                    <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">De startups à Marinha do Brasil</p>
+                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--text-primary); font-weight: 700; letter-spacing: -0.02em;">+500.000 pessoas medidas</h2>
+                </div>
+                <div class="marquee-mask" style="overflow: hidden; white-space: nowrap; position: relative;">
+                    <div class="logo-marquee">
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">Sebrae</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">ABES</div>
                         <!-- duplicate set for seamless loop -->
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Braspress</div><div class="sp-logo-sub">Logística</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Kroton</div><div class="sp-logo-sub">Educação</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Arcor</div><div class="sp-logo-sub">Alimentos</div></div>
-                        <div class="sp-marquee-item sp-featured"><div class="sp-logo-text">Marinha do Brasil</div><div class="sp-logo-sub">Defesa Nacional</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">USP</div><div class="sp-logo-sub">Universidade</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Fatec</div><div class="sp-logo-sub">Tecnologia</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Mackenzie</div><div class="sp-logo-sub">Universidade</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">Sebrae</div><div class="sp-logo-sub">Empreendedorismo</div></div>
-                        <div class="sp-marquee-item"><div class="sp-logo-text">ABES</div><div class="sp-logo-sub">Tecnologia</div></div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
+                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">Sebrae</div>
+                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">ABES</div>
                     </div>
                 </div>
             </section>
@@ -549,7 +554,7 @@
                 
 
                 <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Fiter vs. o jeito<br>que todo mundo faz.</p>
-                <div style="overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.07);">
+                <div class="cmp-wrap" style="overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.07);">
                     <table class="cmp-table">
                         <thead>
                             <tr>
