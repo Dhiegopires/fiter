@@ -102,12 +102,14 @@
         .hero-btns .btn-primary { order:-1; }
     }
     @media(max-width:600px) {
-        #heroCardsWrap { width:240px !important; height:320px !important; }
+        #heroCardsWrap { width:240px !important; height:300px !important; }
         #heroHeading { font-size: clamp(1.75rem, 5.5vw, 2.25rem) !important; }
+        .hero-card-body { display:none !important; }
     }
     @media(max-width:490px) {
-        #heroCardsWrap { width:200px !important; height:267px !important; }
+        #heroCardsWrap { width:200px !important; height:260px !important; }
         #heroHeading { font-size: clamp(1.6rem, 5vw, 1.875rem) !important; }
+        .hero-card-body { display:none !important; }
     }
     /* Scientific proof tiles */
     .sci-tile { display:flex; gap:1.25rem; align-items:center; padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-default); flex:1; }
@@ -959,7 +961,7 @@
                     </div>
                     <span style="font-family:var(--font-mono);font-size:0.63rem;text-transform:uppercase;letter-spacing:0.1em;color:${p.accent};opacity:0.75;">Fiter</span>
                 </div>
-                ${p.body ? `<div style="flex:1;margin-top:0.875rem;overflow:hidden;">${p.body}</div>` : ''}
+                ${p.body ? `<div class="hero-card-body" style="flex:1;margin-top:0.875rem;overflow:hidden;">${p.body}</div>` : ''}
                 <div style="margin-top:auto;padding-top:${p.body ? '0.75rem' : '1.5rem'};">
                     <div style="font-family:var(--font-serif);font-size:${fontSize};font-weight:800;letter-spacing:-0.01em;color:var(--text-primary);line-height:1.1;margin-bottom:0.4rem;">
                         ${nameParts.map(l => `<span style="display:block;">${l}</span>`).join('')}
