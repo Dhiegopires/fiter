@@ -28,8 +28,8 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "convocacao-vs-retencao-custo-turnover-silencioso (2).jpg
-"
+image: "convocacao-vs-retencao-custo-turnover-silencioso (2).jpg"
+
 ---
 
 
@@ -64,7 +64,7 @@ Trazendo essa realidade para o universo de Recursos Humanos e Tecnologia, a refl
 
 **Qual é a telemetria que a sua empresa utiliza para monitorar o desgaste emocional, a sobrecarga mental e o nível de engajamento dos seus colaboradores?**
 
-Muitas vezes, a liderança foca exclusivamente na entrega de KPIs os "gols" ignorando o cansaço e a frustração, a "lesão muscular" que estão se acumulando nos bastidores.
+Muitas vezes, a liderança foca exclusivamente na entrega de KPIs — os "gols" — ignorando o cansaço e a frustração — a "lesão muscular" — que estão se acumulando nos bastidores.
 
 ---
 
