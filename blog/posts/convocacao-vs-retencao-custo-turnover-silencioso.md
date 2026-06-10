@@ -1,7 +1,7 @@
 ---
 # Título principal do artigo
 # Evite títulos muito longos (ideal: até 60 caracteres)
-title: "Convocação vs. Retenção: O custo do turnover silencioso
+title: "Convocação vs. Retenção: O custo do turnover silencioso"
 
 # URL do artigo
 # Use letras minúsculas e hífens
