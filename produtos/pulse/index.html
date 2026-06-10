@@ -184,13 +184,86 @@
                         <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);line-height:1.4;">Líder em IFT · Atendendo de grandes corporações a empresas em expansão desde 2021.</p>
                     </div>
 
-                    <!-- Right: dashboard image -->
-                    <div class="pulse-hero-visual" style="position: relative;">
-                        <div style="position: absolute; inset: -40px; background: radial-gradient(circle at center, rgba(59,130,246,0.15) 0%, transparent 65%); pointer-events: none; z-index: 0;"></div>
-                        <picture>
-                            <source srcset="/assets/img/hero_dashboard-400w.webp 400w, /assets/img/hero_dashboard-800w.webp 800w, /assets/img/hero_dashboard-og.webp 1024w" sizes="(max-width: 480px) 400px, (max-width: 900px) 800px, 1024px" type="image/webp">
-                            <img src="/assets/img/hero_dashboard-og.jpg" alt="Dashboard Pulse" loading="lazy" width="1024" height="1024" style="width: 100%; height: auto; border-radius: var(--radius-lg); border: 1px solid var(--border-default); box-shadow: 0 40px 100px rgba(0,0,0,0.6); display: block; position: relative; z-index: 1;">
-                        </picture>
+                    <!-- Right: dashboard mockup -->
+                    <div class="pulse-hero-visual" style="position:relative;">
+                        <div style="position:absolute;inset:-40px;background:radial-gradient(circle at center,rgba(59,130,246,0.15) 0%,transparent 65%);pointer-events:none;z-index:0;"></div>
+                        <div style="position:relative;z-index:1;background:#09090f;border:1px solid rgba(59,130,246,0.2);border-radius:16px;overflow:hidden;font-family:var(--font-mono);box-shadow:0 40px 100px rgba(0,0,0,0.6);">
+                            <!-- Browser chrome -->
+                            <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
+                                <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
+                                <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
+                                <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
+                                <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">fiter.com.br/pulse/dashboard</div>
+                            </div>
+                            <!-- Header -->
+                            <div style="background:#0e0e1a;padding:0.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                                <div>
+                                    <div style="font-size:0.95rem;font-weight:700;color:#fff;letter-spacing:-0.01em;">Fiter Pulse</div>
+                                    <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Maio 2026 · 342 respostas</div>
+                                </div>
+                                <div style="display:flex;align-items:center;gap:0.35rem;">
+                                    <span style="width:7px;height:7px;border-radius:50%;background:#25d366;box-shadow:0 0 7px rgba(37,211,102,0.65);"></span>
+                                    <span style="font-size:0.52rem;color:rgba(37,211,102,0.85);line-height:1;">ao vivo</span>
+                                </div>
+                            </div>
+                            <!-- Content -->
+                            <div style="padding:1.25rem;display:flex;flex-direction:column;gap:1rem;">
+                                <!-- Score + three tiles -->
+                                <div style="display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.05);">
+                                    <div style="text-align:center;">
+                                        <div style="font-family:var(--font-serif);font-size:3.5rem;font-weight:800;color:#3b82f6;line-height:1;">87</div>
+                                        <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-top:0.2rem;">IFT Score</div>
+                                        <div style="font-size:0.55rem;color:#10b981;margin-top:0.1rem;">↑ +5 pts</div>
+                                    </div>
+                                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem;">
+                                        <div style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.24);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
+                                            <div style="font-size:1.3rem;font-weight:700;color:#3b82f6;line-height:1;">87</div>
+                                            <div style="font-size:0.45rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">IFT</div>
+                                        </div>
+                                        <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.24);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
+                                            <div style="font-size:1.3rem;font-weight:700;color:#10b981;line-height:1;">82</div>
+                                            <div style="font-size:0.45rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">Health</div>
+                                        </div>
+                                        <div style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.24);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
+                                            <div style="font-size:1.3rem;font-weight:700;color:#a78bfa;line-height:1;">91</div>
+                                            <div style="font-size:0.45rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">Fit</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Sparkline -->
+                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:0.75rem 0.9rem;">
+                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Evolução mensal</div>
+                                    <svg width="100%" viewBox="0 0 260 52" fill="none" preserveAspectRatio="none" style="display:block;">
+                                        <defs><linearGradient id="pg-hero" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>
+                                        <polygon points="0,46 44,42 88,36 132,28 176,20 220,14 260,10 260,52 0,52" fill="url(#pg-hero)"/>
+                                        <polyline points="0,46 44,42 88,36 132,28 176,20 220,14 260,10" stroke="#3b82f6" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                                        <polyline points="0,38 260,38" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
+                                        <circle cx="260" cy="10" r="3" fill="#3b82f6"/>
+                                    </svg>
+                                    <div style="display:flex;justify-content:space-between;margin-top:0.3rem;">
+                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Dez</span>
+                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Jan</span>
+                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Fev</span>
+                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mar</span>
+                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Abr</span>
+                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mai</span>
+                                    </div>
+                                </div>
+                                <!-- Turnover alert -->
+                                <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.25);border-radius:10px;padding:0.65rem 0.8rem;display:flex;align-items:flex-start;gap:0.5rem;">
+                                    <span style="font-size:0.75rem;flex-shrink:0;line-height:1.2;margin-top:0.05rem;">⚠</span>
+                                    <div>
+                                        <div style="font-size:0.6rem;font-weight:600;color:#f59e0b;margin-bottom:0.15rem;">Risco de turnover detectado</div>
+                                        <div style="font-size:0.52rem;color:rgba(255,255,255,0.38);line-height:1.4;">3 pessoas · Operações · Queda 18 pts em 4 sem.</div>
+                                    </div>
+                                </div>
+                                <!-- AI action -->
+                                <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.14);border-radius:10px;padding:0.65rem 0.85rem;display:flex;align-items:center;gap:0.5rem;">
+                                    <span style="font-size:0.65rem;color:#3b82f6;flex-shrink:0;line-height:1;">✦</span>
+                                    <div style="font-size:0.58rem;color:rgba(255,255,255,0.6);line-height:1.5;">IA recomenda 1:1 com 3 colaboradores de Operações antes de 30/05</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
