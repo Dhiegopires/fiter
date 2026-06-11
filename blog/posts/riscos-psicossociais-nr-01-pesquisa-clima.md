@@ -1,7 +1,7 @@
 ---
 # Título principal do artigo
 # Evite títulos muito longos (ideal: até 60 caracteres)
-title: "Riscos Psicossociais na NR-01: Como a Pesquisa de Clima Ajuda no Mapeamento"
+title: "Riscos Psicossociais na NR1: Como a Pesquisa de Clima Ajuda no Mapeamento"
 
 # URL do artigo
 # Use letras minúsculas e hífens
