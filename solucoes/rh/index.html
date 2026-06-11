@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -71,6 +71,17 @@
             /* Sci-tiles */
             .sci-section-grid { grid-template-columns: 1fr !important; }
             .sci-section-grid > div:last-child { margin-top: 0 !important; margin-right: 0 !important; margin-bottom: 0 !important; border-left: none !important; }
+            .sci-narrative { padding: 0 1.5rem !important; }
+            .sci-section { padding-bottom: 2rem !important; }
+            /* Ambidestria grid */
+            .ambidestria-grid { grid-template-columns: 1fr !important; }
+            /* Donut chart mobile */
+            .donut-layout { display: flex !important; flex-direction: column !important; align-items: center !important; gap: 1.5rem !important; }
+            .donut-chart-wrap { width: 170px !important; height: 170px !important; }
+            .donut-center-value { font-size: 1.5rem !important; }
+            .donut-legend { flex-direction: row !important; flex-wrap: wrap; gap: 0.5rem 1rem; justify-content: center; }
+            /* Vchart header mobile */
+            .vchart-header { flex-direction: column; align-items: flex-start !important; gap: 0.5rem; }
             /* Implementação sticky */
             .impl-grid { grid-template-columns: 1fr !important; }
             .impl-grid > div:first-child { position: static !important; }
@@ -79,7 +90,8 @@
             .product-grid > div[style*="order:1"],
             .product-grid > div[style*="order:2"] { order: unset !important; }
             /* Featured testimonial */
-            .testi-featured { display: flex !important; flex-direction: column !important; gap: 2rem !important; }
+            .testi-featured { display: flex !important; flex-direction: column !important; gap: 0 !important; }
+            .testi-featured > div:last-child { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(255,255,255,0.08) !important; padding-top: 1.5rem !important; margin-top: 1.5rem !important; flex-direction: row !important; align-items: center !important; gap: 1rem !important; }
         }
         @keyframes heroPulse {
             0%, 100% { opacity: 1; }
@@ -89,8 +101,9 @@
         .ds-section-title::after { display: none; }
 
         /* Scientific proof tiles */
+        .sci-narrative { padding: 0 3.5rem; }
         .sci-tile { display:flex; gap:1.25rem; align-items:center; padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-default); flex:1; }
-        .sci-tile:last-child { border-bottom:none; }
+        .sci-tile:last-child { border-bottom:none; padding-bottom:0; }
         .sci-icon { width:36px; height:36px; border-radius:8px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--accent-brand); }
         .sci-title { font-size:0.8125rem; font-weight:600; color:var(--text-primary); margin-bottom:0.25rem; line-height:1.3; }
         .sci-sub { font-size:0.78rem; color:var(--text-secondary); line-height:1.5; }
@@ -102,7 +115,7 @@
 
         /* Donut Chart */
         .donut-chart-wrap { position: relative; width: 220px; height: 220px; flex-shrink: 0; }
-        .donut-chart-wrap svg { display: block; }
+        .donut-chart-wrap svg { display: block; width: 100%; height: 100%; }
         .donut-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; pointer-events: none; }
         .donut-center-value { font-family: var(--font-serif); font-size: 1.9rem; font-weight: 800; letter-spacing: -0.02em; color: var(--text-primary); line-height: 1; transition: all 0.18s ease; }
         .donut-center-label { font-family: var(--font-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-top: 0.3rem; transition: all 0.18s ease; }
@@ -133,6 +146,19 @@
         .vchart-legend { display: flex; gap: 1.25rem; flex-wrap: wrap; }
         .vchart-legend-item { display: flex; align-items: center; gap: 0.45rem; font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-tertiary); }
         .vchart-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+        /* Chart de dias: barras full-width, sem linha de meta */
+        .chart-days .bar-track { height: 10px; border-radius: 6px; }
+        .chart-days .bar-fill { border-radius: 6px; }
+        .chart-days .bar-track::after { display: none; }
+        .chart-days .bar-value-label { font-family: var(--font-mono); font-size: 0.75rem; white-space: nowrap; }
+        @media (max-width: 600px) {
+            .chart-days { padding-left: 0 !important; padding-right: 0 !important; overflow: hidden; }
+            .chart-days .chart-bars { padding: 0 1.5rem; }
+            .chart-days .bar-row { grid-template-columns: 1fr auto; margin-left: -1.5rem; margin-right: -1.5rem; }
+            .chart-days .bar-label { grid-column: 1; grid-row: 1; padding-left: 1.5rem; }
+            .chart-days .bar-value-label { grid-column: 2; grid-row: 1; align-self: center; padding-right: 1.5rem; }
+            .chart-days .bar-track { grid-column: 1 / -1; grid-row: 2; }
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
     <script>
@@ -237,7 +263,7 @@
                 <a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
             </div>
         </div>
-    </div>
+    </div>
     <main class="main-content" style="padding-top: 64px;">
 
         <!-- Ambient glow orbs -->
@@ -686,16 +712,16 @@
             </section>
 
             <!-- CREDIBILIDADE CIENTÍFICA -->
-            <section class="ds-section" style="margin-bottom:8rem; padding:4rem 3.5rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
+            <section class="ds-section sci-section" style="margin-bottom:8rem; padding:4rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
                 <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(59,130,246,0.05) 0%,transparent 70%);pointer-events:none;"></div>
                 <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
-                    <div>
+                    <div class="sci-narrative">
                         <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
                         <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">É deeptech com<br>DNA na USP.</h2>
                         <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
                         <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
                     </div>
-                    <div style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-4rem;margin-right:-3.5rem;margin-bottom:-4rem;overflow:hidden;">
+                    <div style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-4rem;margin-bottom:-4rem;overflow:hidden;">
                         <div class="sci-tile fade-up" style="--reveal-delay:0s;">
                             <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
                             <div>
@@ -732,7 +758,7 @@
             <section class="ds-section" style="margin-bottom:8rem;">
                 <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para cada porte, uma resposta diferente</p>
                 <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Grande empresa ou PME.<br>A Fiter se adapta a você.</h2>
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+                <div class="ambidestria-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
                     <div class="fade-up" style="--reveal-delay:0s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius-lg);">
                         <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Grandes empresas</p>
                         <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">Predição em escala e compliance robusto</h3>
@@ -1104,7 +1130,7 @@
                             <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;letter-spacing:-0.01em;color:var(--text-primary);margin-bottom:0.25rem;">Distribuição do bem-estar</h3>
                             <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;">Últimos 30 dias · 847 respondentes</p>
                         </div>
-                        <div style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;">
+                        <div class="donut-layout" style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;">
                             <div class="donut-chart-wrap" id="donut-rh" data-chart='[
                                 {"label":"Promotores","pct":48,"color":"#10b981"},
                                 {"label":"Neutros","pct":31,"color":"#3b82f6"},
@@ -1271,7 +1297,7 @@
                         <h2 style="font-size:clamp(2rem,3vw,2.75rem);font-family:var(--font-serif);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;" data-reveal>Do contrato ao primeiro<br>diagnóstico em dias.</h2>
                         <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:2.5rem;" data-fade>Sem TI. Sem burocracia. Do envio ao plano de ação, tudo automático.</p>
 
-                        <div class="chart-container">
+                        <div class="chart-container chart-days">
                             <div class="chart-bars">
                                 <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">Tempo até o 1º diagnóstico</div>
                                 <div class="bar-row" style="--bar-delay:0s;">
@@ -1508,8 +1534,8 @@
             const svgNS = 'http://www.w3.org/2000/svg';
             const svg = document.createElementNS(svgNS, 'svg');
             svg.setAttribute('viewBox', '0 0 220 220');
-            svg.setAttribute('width', '220');
-            svg.setAttribute('height', '220');
+            svg.setAttribute('width', '100%');
+            svg.setAttribute('height', '100%');
             const bg = document.createElementNS(svgNS, 'circle');
             bg.setAttribute('cx', CX); bg.setAttribute('cy', CY); bg.setAttribute('r', R);
             bg.setAttribute('fill', 'none');

@@ -2630,14 +2630,15 @@
             .urgency-card-icon { display: none; }
             .sp-metrics-strip { flex-wrap: wrap; }
             .sp-metric { min-width: 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
-            .chart-container { padding: 1.25rem; }
+            .chart-container { padding: 1.5rem !important; }
             .chart-container > div:first-child {
                 flex-direction: column;
                 align-items: flex-start !important;
-                gap: 0.25rem;
-                margin-bottom: 1.5rem !important;
+                gap: 0.4rem;
+                margin-bottom: 1.25rem !important;
             }
-            .chart-bars { gap: 1.4rem; }
+            .chart-container > div:first-child > div:last-child > span:first-child { display: none !important; }
+            .chart-bars { gap: 1.25rem; }
             .bar-row {
                 grid-template-columns: 1fr 36px;
                 grid-template-rows: auto auto;
