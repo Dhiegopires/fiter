@@ -5,7 +5,7 @@ title: "Riscos Psicossociais na NR-01: Como a Pesquisa de Clima Ajuda no Mapeame
 
 # URL do artigo
 # Use letras minúsculas e hífens
-slug: riscos-psicossociais-nr-01-pesquisa-clima
+slug: riscos-psicossociais-nr1-pesquisa-clima
 
 # Data de publicação
 # Formato: AAAA-MM-DD
