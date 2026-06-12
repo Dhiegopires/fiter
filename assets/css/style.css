@@ -1087,8 +1087,6 @@
             position: fixed;
             inset: 0;
             z-index: 190;
-            display: flex;
-            justify-content: flex-end;
             pointer-events: none;
         }
         .nav-backdrop {
@@ -1099,23 +1097,24 @@
             transition: opacity 0.3s ease;
         }
         .nav-panel {
-            position: relative;
+            position: absolute;
+            top: 0;
+            right: -320px;
+            bottom: 0;
             width: 320px;
             max-width: 100vw;
-            height: 100%;
             background: var(--bg-surface);
             border-left: 1px solid rgba(255,255,255,0.08);
             padding: 1.5rem;
             overflow-y: auto;
             overscroll-behavior: contain;
-            transform: translateX(100%);
-            transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
             display: flex;
             flex-direction: column;
             gap: 0.25rem;
+            transition: right 0.35s cubic-bezier(0.4,0,0.2,1);
         }
         body.menu-open .nav-backdrop { opacity: 1; }
-        body.menu-open .nav-panel { transform: translateX(0); }
+        body.menu-open .nav-panel { right: 0; }
         body.menu-open .nav-drawer { pointer-events: auto; }
         .nav-panel-logo {
             font-family: var(--font-serif);
