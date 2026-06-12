@@ -5,7 +5,7 @@
     "build:blog": "node scripts/build-blog.js",
     "build:assets": "node scripts/build.js",
     "build:sitemap": "node scripts/build-sitemap.js",
-    "build": "npm run build:blog && npm run build:assets && npm run build:sitemap"
+    "build": "npm run build:assets && npm run build:blog && npm run build:sitemap"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",

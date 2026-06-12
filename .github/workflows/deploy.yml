@@ -22,8 +22,7 @@ jobs:
 
       - run: npm ci
 
-      # assets/minificação versionados no repo, só gera blog
-      - run: npm run build:blog && npm run build:sitemap
+      - run: npm run build
 
       - name: Commit blog updates
         uses: stefanzweifel/git-auto-commit-action@v5
