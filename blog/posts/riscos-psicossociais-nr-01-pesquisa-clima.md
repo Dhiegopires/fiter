@@ -70,7 +70,7 @@ O maior gargalo para os profissionais de RH e Segurança do Trabalho é a coleta
 
 ## A Pesquisa de Clima como Evidência Legal no PGR
 
-A pesquisa de clima e saúde mental não é apenas um termômetro de satisfação; é uma ferramenta de auditoria interna. Quando bem estruturada, ela converte a percepção subjetiva dos colaboradores em *people analytics*, idicadores quantitativos que o Ministério do Trabalho e o Ministério Público do Trabalho (MPT) aceitam como evidência de monitoramento ativo.
+A pesquisa de clima e saúde mental não é apenas um termômetro de satisfação; é uma ferramenta de auditoria interna. Quando bem estruturada, ela converte a percepção subjetiva dos colaboradores em *people analytics*, indicadores quantitativos que o Ministério do Trabalho e o Ministério Público do Trabalho (MPT) aceitam como evidência de monitoramento ativo.
 
 Ao utilizar a pesquisa de clima com foco em fatores psicossociais, o RH consegue:
 
