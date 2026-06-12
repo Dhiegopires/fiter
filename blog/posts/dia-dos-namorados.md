@@ -19,7 +19,7 @@ readingTime: 4
 
 # Pequena descrição para SEO e cards sociais
 # Ideal: até 160 caracteres
-description: "O-que-o-Dia-dos-Namorados-ensina-sobre-felicidade-engajamento-e-retenção-nas-empresas"
+description: " O que o Dia dos Namorados ensina sobre felicidade, engajamento e retenção nas empresas"
 
 
 # Nome do autor
