@@ -108,7 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
         function openMobile() {
             scrollPos = window.scrollY;
 
+            document.documentElement.style.overflow = 'hidden';
+            document.documentElement.style.height = '100%';
+
             document.body.style.overflow = 'hidden';
+            document.body.style.height = '100%';
+            document.body.style.position = 'fixed';
+            document.body.style.width = '100%';
+            document.body.style.top = `-${scrollPos}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
             document.body.style.touchAction = 'none';
 
             drawer && drawer.style.setProperty('z-index', '2147483647', 'important');
@@ -132,13 +141,26 @@ document.addEventListener('DOMContentLoaded', () => {
             drawer && drawer.setAttribute('aria-hidden', 'true');
             hamburger && hamburger.setAttribute('aria-expanded', 'false');
 
-            document.body.style.overflow = '';
-            document.body.style.touchAction = '';
+            requestAnimationFrame(() => {
+                document.documentElement.style.overflow = '';
+                document.documentElement.style.height = '';
 
-            drawer && drawer.style.removeProperty('z-index');
+                document.body.style.overflow = '';
+                document.body.style.height = '';
+                document.body.style.position = '';
+                document.body.style.width = '';
+                document.body.style.top = '';
+                document.body.style.left = '';
+                document.body.style.right = '';
+                document.body.style.touchAction = '';
 
-            document.querySelectorAll(CHATBOT_SEL).forEach(el => {
-                el.style.removeProperty('z-index');
+                drawer && drawer.style.removeProperty('z-index');
+
+                document.querySelectorAll(CHATBOT_SEL).forEach(el => {
+                    el.style.removeProperty('z-index');
+                });
+
+                window.scrollTo(0, scrollPos);
             });
         }
         hamburger && hamburger.addEventListener('click', () => nav.classList.contains('menu-open') ? closeMobile() : openMobile());
