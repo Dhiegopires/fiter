@@ -28,7 +28,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "quiet-vacationing-engajamento.webp"
+image: "quiet-vacationing-engajamento-semmarca.webp"
 ---
 
 ---
