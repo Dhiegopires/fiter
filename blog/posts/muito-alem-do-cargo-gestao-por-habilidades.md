@@ -21,8 +21,6 @@ readingTime: 4
 # Ideal: até 160 caracteres
 description: "A perda de talentos brilhantes não se resolve apenas com pacotes de benefícios. Entenda por que as descrições de cargos rígidas estão esgotadas e descubra como a gestão focada em habilidades e a mobilidade interna podem transformar o engajamento e a retenção da sua equipe."
 
-```
-
 # Nome do autor
 author: "Equipe Fiter"
 
