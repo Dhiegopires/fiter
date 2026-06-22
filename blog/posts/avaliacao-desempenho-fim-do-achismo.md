@@ -28,7 +28,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "avaliacao-de-desempenho-fim-do-achismo.webp"
+image: "avaliacao-de-desempenho-fim-do-achismo (1).webp"
 ---
 
 
