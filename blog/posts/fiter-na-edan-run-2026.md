@@ -64,7 +64,7 @@ Os dados coletados provaram empiricamente que o esporte atua como um catalisador
 
 Para o mundo corporativo, o uso de ferramentas preditivas como as que a Fiter desenvolve é uma virada de chave para o **People Analytics**. Em vez de depender exclusivamente de pesquisas de clima anuais, que muitas vezes capturam apenas uma foto tardia da insatisfação, as lideranças ganham o poder de mensurar o termômetro de engajamento e felicidade em tempo real, permitindo intervenções ágeis e humanizadas.
 
-<img width="843" height="1264" alt="felicitometro-edanrun" src="https://github.com/user-attachments/assets/3eecc890-1668-4011-a00c-bc4a74d325d6" />
+<img width="400" alt="felicitometro-edanrun" src="https://github.com/user-attachments/assets/3eecc890-1668-4011-a00c-bc4a74d325d6" />
 
 
 ---
