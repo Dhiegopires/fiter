@@ -66,7 +66,7 @@ Para o mundo corporativo, o uso de ferramentas preditivas como as que a Fiter de
 
 
 <div align="center">
-  <img width="100" alt="felicitometro-edanrun" src="https://github.com/user-attachments/assets/3eecc890-1668-4011-a00c-bc4a74d325d6" />
+  <img width="250" alt="felicitometro-edanrun" src="https://github.com/user-attachments/assets/3eecc890-1668-4011-a00c-bc4a74d325d6" />
 </div>
 
 ---
