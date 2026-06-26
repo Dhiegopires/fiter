@@ -12,7 +12,7 @@ slug: "educacao-corporativa-upskilling-dados-rh"
 date: 2026-06-27
 
 # Categoria exibida no blog
-category: "Educação"
+category: "RH"
 
 # Tempo estimado de leitura em minutos
 readingTime: 3
