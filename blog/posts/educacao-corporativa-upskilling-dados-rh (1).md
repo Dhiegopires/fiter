@@ -9,7 +9,7 @@ slug: "educacao-corporativa-upskilling-dados-rh"
 
 # Data de publicação
 # Formato: AAAA-MM-DD
-date: 2026-06-24
+date: 2026-06-27
 
 # Categoria exibida no blog
 category: "Educação"
