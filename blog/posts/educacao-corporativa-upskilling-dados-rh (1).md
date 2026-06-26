@@ -27,7 +27,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "educacao-corporativa-upskilling-dados-rh.webp"
+image: "blog-26-06.webp"
 ---
 
 # Educação Corporativa de Alta Performance: Como Dados e Gestão de Desempenho Impulsionam o Aprendizado
