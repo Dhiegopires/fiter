@@ -71,6 +71,9 @@ A nossa metodologia baseia-se na combinação de três pilares fundamentais, pro
 
 * **Planos de Ação Automatizados para o Gestor:** Este é o coração da autonomia na ponta. A Inteligência Artificial da Fiter cruza os dados psicológicos coletados e formula planos de ação automáticos, práticos e hiperpersonalizados. O gestor recebe as instruções exatas e fundamentadas cientificamente do que precisa ser feito naquela semana para reverter a desmotivação ou potencializar os resultados de sua equipe específica.
 
+###Quer levar essa autonomia para os gestores da sua empresa e aliviar a rotina do seu setor? Clique aqui para saber mais sobre as nossas [Soluções RH](https://fiter.com.br/solucoes/rh/).
+
+
 ### Da Reação à Prevenção Estratégica
 
 Transferir a responsabilidade primária de cuidar do clima organizacional para a liderança, oferecendo o suporte analítico da Inteligência Artificial, não significa diminuir a importância dos Recursos Humanos. Ao contrário, significa elevar o RH ao seu patamar mais nobre.
