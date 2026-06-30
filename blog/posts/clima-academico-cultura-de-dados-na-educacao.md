@@ -75,7 +75,7 @@ Não é possível gerenciar aquilo que não se pode medir com clareza. As instit
 
 Investir em soluções tecnológicas capazes de mapear o clima, promover o feedback estruturado e analisar o engajamento através de inteligência de dados é o passo definitivo para transformar escolas e universidades em ambientes sustentáveis, inovadores e saudáveis. Cuidar de quem ensina e engajar quem aprende não é apenas uma missão pedagógica nobre, mas também a estratégia de negócios mais inteligente, madura e rentável que uma instituição de ensino pode adotar nos dias de hoje.
 
-Quer levar essa inteligência de dados para a sua instituição e revolucionar a sua gestão? [Clique aqui e conheça as soluções da Fiter Educação](https://fiter.com.br/solucoes/educacao/)..
+Quer levar essa inteligência de dados para a sua instituição e revolucionar a sua gestão? [Clique aqui e conheça as soluções da Fiter Educação](https://fiter.com.br/solucoes/educacao/).
 
 E se você gostou desta reflexão e quer entender, na prática, como o cruzamento de informações pode combater um dos maiores desafios do setor educacional, temos outra recomendação de leitura. Acesse o [Blog : Ciência de Dados do RH e Evasão Universitária](https://fiter.com.br/blog/ciencia-de-dados-do-rh-evasao-universitaria/) e descubra como expandimos esse debate!
 
