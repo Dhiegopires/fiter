@@ -80,6 +80,7 @@ Transferir a responsabilidade primária de cuidar do clima organizacional para a
 
 Quando a média gerência ganha autonomia para resolver atritos do dia a dia e ajustar rotas continuamente, o RH conquista tempo e foco para atuar de maneira preditiva. A equipe passa a desenhar políticas organizacionais, desenvolver a alta liderança e assegurar a governança corporativa sem a pressão do esgotamento. O RH deixa definitivamente de apagar incêndios para construir os alicerces de uma cultura previsível, escalável e profundamente humana.
 
+Se você gostou desta reflexão e quer aprofundar ainda mais sua visão sobre os novos desafios dos gestores na construção dessa cultura, que tal dar uma olhada neste outro blogpost sobre como engajar talentos e alinhar expectativas no cenário atual? Acesse o artigo Liderança na Era da Ambição Silenciosa disponível em [Blog : Liderança e a Era da Ambição Silenciosa](https://fiter.com.br/blog/lideranca-era-ambicao-silenciosa/) e veja como expandimos esse debate.
 ***
 
 Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma capaz de prever cenários, mensurar o clima via WhatsApp com base científica da USP e automatizar planos de ação usando Inteligência Artificial, transformando definitivamente a relação entre lideranças, empresas e colaboradores no mercado brasileiro.
