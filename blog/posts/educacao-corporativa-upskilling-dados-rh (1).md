@@ -62,7 +62,9 @@ Transformar dados comportamentais e técnicos em inteligência educacional exige
 
 A maturidade do desenvolvimento organizacional exige precisão analítica. Investir em educação corporativa sem métricas claras é contar com a sorte. Ao unir a filosofia do aprendizado contínuo com dados robustos de performance e feedbacks estruturados, o RH transforma o antigo centro de custo de treinamento em um investimento de altíssimo impacto para a receita da empresa. Ao focar em inteligência e personalização do aprendizado, as companhias não apenas garantem a retenção de seus talentos mais brilhantes, mas também constroem equipes incrivelmente resilientes e preparadas para qualquer cenário futuro.
 
-> **Quer saber como identificar exatamente quais competências sua equipe precisa desenvolver para alcançar a alta performance?** Conheça as soluções de Gestão de Desempenho e People Analytics da Fiter e descubra como transformar dados em desenvolvimento real e estratégico para o seu negócio.
+> **Quer saber como identificar exatamente quais competências sua equipe precisa desenvolver para alcançar a alta performance?** Conheça as [Soluções RH](https://fiter.com.br/solucoes/rh/) de Gestão de Desempenho e People Analytics da Fiter e descubra como transformar dados em desenvolvimento real e estratégico para o seu negócio .
+
+Se você gostou desta reflexão e quer aprofundar ainda mais sua visão sobre como conectar a análise de resultados ao desenvolvimento contínuo, que tal entender como usar isso na prática? Acesse o nosso [Blog : Avaliação de Desempenho: O Motor do Upskilling](https://fiter.com.br/blog/avaliacao-desempenho-motor-upskilling/) e veja como expandimos esse debate!
 
 ---
 
