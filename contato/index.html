@@ -31,6 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
     <script src="/assets/js/main.min.js" defer></script>
@@ -145,7 +146,7 @@
                 <a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
             </div>
         </div>
-    </div>
+    </div>
 
     <main class="main-content">
 
@@ -193,8 +194,8 @@
                                 <i data-lucide="clock" style="width:16px;height:16px;"></i>
                             </div>
                             <div>
-                                <div style="font-weight:500;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.2rem;">Resposta em até 1 dia útil</div>
-                                <div style="color:var(--text-secondary);font-size:0.8rem;line-height:1.5;">Comprometimento real. Seus dados não serão compartilhados.</div>
+                                <div style="font-weight:500;color:var(--text-primary);font-size:0.9rem;margin-bottom:0.2rem;">Agendamento instantâneo</div>
+                                <div style="color:var(--text-secondary);font-size:0.8rem;line-height:1.5;">Escolha o horário que funciona pra você, sem espera. Seus dados não serão compartilhados.</div>
                             </div>
                         </div>
 
@@ -210,82 +211,52 @@
 
                 </div>
 
-                <!-- Right: form -->
+                <!-- Right: Calendly + fallback -->
                 <div data-reveal style="--reveal-delay:0.1s;">
-                    <div style="background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;">
+                    <div style="background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:2.5rem;position:relative;overflow:hidden;margin-bottom:1.5rem;display:flex;flex-direction:column;align-items:center;text-align:center;gap:1.25rem;">
                         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 0%, var(--accent-glow) 0%, transparent 60%);pointer-events:none;" aria-hidden="true"></div>
-
                         <div style="position:relative;">
-                            <h2 style="font-size:1rem;font-weight:500;color:var(--text-primary);margin-bottom:0.35rem;font-family:inherit;">Agende sua demonstração</h2>
-                            <p style="font-size:0.8rem;color:var(--text-tertiary);margin-bottom:2rem;">Preencha os dados abaixo e entraremos em contato.</p>
+                            <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Escolha um horário</div>
+                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;max-width:24rem;">Agende diretamente na agenda do especialista. Sem espera, sem formulário.</p>
+                        </div>
+                        <a href="https://calendly.com/fiter_/fiter" onclick="if(window.Calendly){Calendly.initPopupWidget({url:'https://calendly.com/fiter_/fiter'});if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'contato_calendly_popup'});return false;}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem;position:relative;">Agendar no Calendly</a>
+                        <p style="font-size:0.75rem;color:var(--text-tertiary);line-height:1.5;position:relative;">30 minutos · resposta imediata após agendamento</p>
+                    </div>
 
-                            <form id="contactForm" class="form-grid" novalidate onsubmit="return handleContactSubmit(event)">
+                    <!-- Fallback: contato mínimo -->
+                    <div style="background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);padding:1.75rem;">
+                        <h3 style="font-size:0.9rem;font-weight:500;color:var(--text-primary);margin-bottom:0.35rem;">Prefere não agendar agora?</h3>
+                        <p style="font-size:0.8rem;color:var(--text-tertiary);margin-bottom:1.25rem;">Deixe seu e-mail e a gente entra em contato.</p>
 
-                                <div class="form-field form-field-full">
-                                    <label class="form-label">Nome completo <span class="form-label-required">*</span></label>
-                                    <input type="text" class="form-input" placeholder="Seu nome completo" id="f-name" name="name" required>
-                                </div>
+                        <form id="contactForm" class="form-grid" novalidate onsubmit="return handleContactSubmit(event)">
 
-                                <div class="form-field">
-                                    <label class="form-label">E-mail corporativo <span class="form-label-required">*</span></label>
-                                    <input type="email" class="form-input" placeholder="nome@empresa.com.br" id="f-email" name="email" required>
-                                </div>
+                            <div class="form-field form-field-full">
+                                <label class="form-label">Nome</label>
+                                <input type="text" class="form-input" placeholder="Seu nome (opcional)" id="f-name" name="name">
+                            </div>
 
-                                <div class="form-field">
-                                    <label class="form-label">Empresa <span class="form-label-required">*</span></label>
-                                    <input type="text" class="form-input" placeholder="Sua empresa" id="f-company" name="company" required>
-                                </div>
+                            <div class="form-field form-field-full">
+                                <label class="form-label">E-mail <span class="form-label-required">*</span></label>
+                                <input type="email" class="form-input" placeholder="seu@email.com" id="f-email" name="email" required>
+                            </div>
 
-                                <div class="form-field">
-                                    <label class="form-label">Cargo</label>
-                                    <input type="text" class="form-input" placeholder="Seu cargo" id="f-role" name="role">
-                                </div>
+                            <div class="form-submit-row form-field-full">
+                                <p class="form-confirm">Respondemos em até 1 dia útil. Seus dados não serão compartilhados.</p>
+                                <button type="submit" class="btn btn-secondary" id="submitBtn" style="width:100%;justify-content:center;">
+                                    Pedir para me chamarem
+                                </button>
+                            </div>
 
-                                <div class="form-field">
-                                    <label class="form-label">Nº Funcionários / Alunos</label>
-                                    <div class="form-select-wrap">
-                                        <select class="form-select" id="f-size" name="size">
-                                            <option value="" disabled selected>Selecione</option>
-                                            <option value="ate50">Até 50</option>
-                                            <option value="51-500">51 a 500</option>
-                                            <option value="501-1000">501 a 1.000</option>
-                                            <option value="mais1000">Mais de 1.000</option>
-                                        </select>
-                                        <span class="form-select-chevron"><i data-lucide="chevron-down" style="width:14px;height:14px;"></i></span>
-                                    </div>
-                                </div>
+                        </form>
 
-                                <div class="form-field form-field-full">
-                                    <label class="form-label">Produto de interesse</label>
-                                    <div class="form-select-wrap">
-                                        <select class="form-select" id="f-product" name="product">
-                                            <option value="" disabled selected>Selecione</option>
-                                            <option value="rh">Solução RH</option>
-                                            <option value="educacao">Solução Educação</option>
-                                            <option value="ambos">Ambos</option>
-                                        </select>
-                                        <span class="form-select-chevron"><i data-lucide="chevron-down" style="width:14px;height:14px;"></i></span>
-                                    </div>
-                                </div>
-
-                                <div class="form-submit-row form-field-full">
-                                    <p class="form-confirm">Respondemos em até 1 dia útil. Seus dados não serão compartilhados.</p>
-                                    <button type="submit" class="btn btn-primary" id="submitBtn" style="width:100%;justify-content:center;">
-                                        Agendar demonstração
-                                    </button>
-                                </div>
-
-                            </form>
-
-                            <!-- Success screen -->
-                            <div class="form-success-screen" id="successScreen">
-                                <div class="form-success-icon">✓</div>
-                                <p class="form-success-title">E-mail enviado com sucesso!</p>
-                                <p class="form-success-sub">Nossa equipe vai entrar em contato em breve pelo e-mail informado.</p>
-                                <div style="display:flex;gap:0.75rem;margin-top:0.5rem;">
-                                    <button type="button" class="btn btn-secondary" id="resetBtn" onclick="resetContactForm()" style="text-decoration:none;">Preencher novamente</button>
-                                    <a href="/" class="btn btn-primary" style="text-decoration:none;">Voltar ao início</a>
-                                </div>
+                        <!-- Success screen -->
+                        <div class="form-success-screen" id="successScreen">
+                            <div class="form-success-icon">✓</div>
+                            <p class="form-success-title">E-mail enviado com sucesso!</p>
+                            <p class="form-success-sub">Nossa equipe vai entrar em contato em breve pelo e-mail informado.</p>
+                            <div style="display:flex;gap:0.75rem;margin-top:0.5rem;">
+                                <button type="button" class="btn btn-secondary" id="resetBtn" onclick="resetContactForm()" style="text-decoration:none;">Preencher novamente</button>
+                                <a href="/" class="btn btn-primary" style="text-decoration:none;">Voltar ao início</a>
                             </div>
                         </div>
                     </div>
@@ -305,16 +276,14 @@
     .then(html => { document.getElementById('footer-placeholder').innerHTML = html; if (window.lucide) lucide.createIcons(); });
 </script>
 
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
-    const personalDomains = ['gmail','hotmail','yahoo','outlook','icloud','live','uol','bol','terra'];
-
     function getError(el, value) {
+        if (!el.required && !value.trim()) return null;
         if (!value || !value.trim()) return 'Preencher o campo';
         if (el.name === 'email') {
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'E-mail inválido';
-            const domain = value.split('@')[1]?.split('.')[0]?.toLowerCase();
-            if (personalDomains.includes(domain)) return 'Use um e-mail corporativo';
         }
         return null;
     }
@@ -355,7 +324,7 @@
 
         submit.classList.add('is-loading');
         submit.textContent = 'Enviando…';
-        if (window.gtag) gtag('event','generate_lead',{event_category:'form',event_label:'contact'});
+        if (window.gtag) gtag('event','generate_lead',{event_category:'form',event_label:'contact_fallback'});
 
         emailjs.sendForm('service_6l71l5a', 'template_i5sns1v', form, 'kwwY3z3njMd_biYnD')
             .then(function () {
@@ -364,7 +333,7 @@
             })
             .catch(function () {
                 submit.classList.remove('is-loading');
-                submit.textContent = 'Agendar demonstração';
+                submit.textContent = 'Pedir para me chamarem';
                 alert('Ocorreu um erro ao enviar. Tente novamente.');
             });
         return false;
@@ -382,9 +351,16 @@
             if (msg) msg.remove();
         });
         submit.classList.remove('is-loading');
-        submit.textContent = 'Agendar demonstração';
+        submit.textContent = 'Pedir para me chamarem';
         success.classList.remove('is-visible');
     }
+
+    // Calendly: dispara evento de conversão real quando o agendamento é concluído
+    window.addEventListener('message', function (e) {
+        if (e.data && e.data.event === 'calendly.event_scheduled' && window.gtag) {
+            gtag('event', 'generate_lead', { event_category: 'cta', event_label: 'contato_calendly_scheduled' });
+        }
+    });
 
     document.querySelectorAll('#contactForm .form-input, #contactForm .form-select').forEach(function (input) {
         input.addEventListener('blur', function () {
