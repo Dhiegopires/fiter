@@ -94,12 +94,14 @@ A lição que fica para a gestão de pessoas é clara: **organizações de suces
 
 ---
 
-## Construindo o RH do Futuro: Data-Driven e Profundamente Humano
-
+Construindo o RH do Futuro: Data-Driven e Profundamente Humano
 A presença da Fiter na Edan Run 2026 consolida uma visão clara sobre o futuro do mercado corporativo: a tecnologia mais avançada deve servir para tornar as organizações mais humanas. Os dados coletados no evento reforçam que, quando oferecemos suporte tecnológico, embasamento científico e uma rede de cuidado integrada, o ser humano é capaz de superar limites extraordinários com saúde e felicidade.
 
-Levar a inovação do esporte e a chancela científica da Universidade de São Paulo para dentro das empresas é o caminho para reduzir o *turnover*, elevar os índices de **eNPS** (Employee Net Promoter Score) e transformar o ambiente de trabalho em um espaço propício para a prosperidade mútua, do negócio e das pessoas.
+Levar a inovação do esporte e a chancela científica da Universidade de São Paulo para dentro das empresas é o caminho para reduzir o turnover, elevar os índices de eNPS (Employee Net Promoter Score) e transformar o ambiente de trabalho em um espaço propício para a prosperidade mútua, do negócio e das pessoas.
 
+Se você gostou deste conteúdo e quer aprofundar ainda mais sua visão sobre como estruturar um ambiente de trabalho seguro e saudável, que tal dar uma olhada neste outro blog sobre a correlação entre as diretrizes da NR1 e a saúde mental? Acesse o artigo [NR1 e Saúde Mental](https://fiter.com.br/blog/NR1-e-saude-mental/) onde expandimos esse debate.
+
+Quer levar essa transformação baseada em dados e cuidado humano para a sua instituição? Conheça a nossa suíte completa de produtos e descubra como impulsionar seus resultados através das nossas [Soluções RH](https://fiter.com.br/solucoes/rh/) e das nossas [Slouções Educação](https://fiter.com.br/solucoes/educacao/).
 ---
 
 
