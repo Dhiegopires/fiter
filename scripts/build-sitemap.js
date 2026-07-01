@@ -17,7 +17,6 @@ const staticPages = [
   { path: '/produtos/ouvidoria/', priority: 0.8, changefreq: 'monthly', lastmod: '2026-06-05' },
   { path: '/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/', priority: 0.8, changefreq: 'monthly', lastmod: '2026-06-05' },
   { path: '/sobre/',             priority: 0.9, changefreq: 'monthly', lastmod: '2026-06-05' },
-  { path: '/contato/',           priority: 0.9, changefreq: 'monthly', lastmod: '2026-06-05' },
   { path: '/blog/',              priority: 0.6, changefreq: 'weekly',  lastmod: '2026-06-05' },
 ];
 

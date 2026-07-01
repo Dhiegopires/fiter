@@ -11,7 +11,6 @@ const files = [
     'produtos/pulse/index.html',
     'blog/index.html',
     'sobre/index.html',
-    'contato/index.html',
     'clientes/index.html',
     'produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/index.html',
 ];

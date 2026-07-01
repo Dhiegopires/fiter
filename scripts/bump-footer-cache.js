@@ -4,7 +4,7 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 
 const files = [
-  'index.html','sobre/index.html','contato/index.html',
+  'index.html','sobre/index.html',
   'solucoes/rh/index.html','solucoes/educacao/index.html',
   'produtos/index.html','produtos/pulse/index.html','produtos/nr01/index.html',
   'produtos/pesquisa-de-clima/index.html','produtos/ouvidoria/index.html',

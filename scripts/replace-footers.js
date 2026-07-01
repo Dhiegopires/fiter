@@ -13,7 +13,6 @@ const PLACEHOLDER = `<div id="footer-placeholder"></div>
 const files = [
   'index.html',
   'sobre/index.html',
-  'contato/index.html',
   'solucoes/rh/index.html',
   'solucoes/educacao/index.html',
   'produtos/index.html',

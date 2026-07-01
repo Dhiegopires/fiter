@@ -21,7 +21,6 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             </li>
             <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
             <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-            <li class="nav-item"><a class="nav-link" href="/contato/">Contato</a></li>
         </ul>
         <div class="nav-right">
             <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
@@ -379,7 +378,6 @@ const targets = [
   `${ROOT}/index.html`,
   `${ROOT}/blog/index.html`,
   `${ROOT}/clientes/index.html`,
-  `${ROOT}/contato/index.html`,
   `${ROOT}/produtos/index.html`,
   `${ROOT}/sobre/index.html`,
   `${ROOT}/solucoes/rh/index.html`,
