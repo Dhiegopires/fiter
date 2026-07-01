@@ -161,8 +161,7 @@
         }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js"></script>
-    <script
+<script
         type="text/plain"
         data-category="analytics"
         data-src="https://t.contentsquare.net/uxa/cd11f6271f295.js"
@@ -1692,8 +1691,11 @@
 
     <script>lucide.createIcons();</script>
 <script>(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","aFxKgoMOwAth4DHu5Q0WGCB5t")</script>
-<script>
+<script type="module">
+import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js';
+
 CookieConsent.run({
+  mode: 'opt-out',
     guiOptions: {
       consentModal: {
         layout: 'box',
@@ -1705,7 +1707,7 @@ CookieConsent.run({
     },
     categories: {
       necessary: { enabled: true, readOnly: true },
-      analytics: { enabled: false }
+      analytics: { enabled: true }
     },
     language: {
       default: 'pt',

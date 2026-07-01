@@ -100,7 +100,6 @@ function head(title, desc, canonical) {
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>${STYLES}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js"></script>
     <script
         type="text/plain"
         data-category="analytics"
@@ -181,8 +180,11 @@ ${NAV}
 </main>
 ${FOOTER}
 ${SCRIPTS}
-<script>
+<script type="module">
+import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js';
+
 CookieConsent.run({
+  mode: 'opt-out',
     guiOptions: {
       consentModal: {
         layout: 'box',
@@ -194,7 +196,7 @@ CookieConsent.run({
     },
     categories: {
       necessary: { enabled: true, readOnly: true },
-      analytics: { enabled: false }
+      analytics: { enabled: true }
     },
     language: {
       default: 'pt',
@@ -308,8 +310,11 @@ ${NAV}
 </main>
 ${FOOTER}
 ${SCRIPTS}
-<script>
+<script type="module">
+import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js';
+
 CookieConsent.run({
+  mode: 'opt-out',
     guiOptions: {
       consentModal: {
         layout: 'box',
@@ -321,7 +326,7 @@ CookieConsent.run({
     },
     categories: {
       necessary: { enabled: true, readOnly: true },
-      analytics: { enabled: false }
+      analytics: { enabled: true }
     },
     language: {
       default: 'pt',
@@ -427,8 +432,11 @@ ${NAV}
 </main>
 ${FOOTER}
 ${SCRIPTS}
-<script>
+<script type="module">
+import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js';
+
 CookieConsent.run({
+  mode: 'opt-out',
     guiOptions: {
       consentModal: {
         layout: 'box',
@@ -440,7 +448,7 @@ CookieConsent.run({
     },
     categories: {
       necessary: { enabled: true, readOnly: true },
-      analytics: { enabled: false }
+      analytics: { enabled: true }
     },
     language: {
       default: 'pt',
