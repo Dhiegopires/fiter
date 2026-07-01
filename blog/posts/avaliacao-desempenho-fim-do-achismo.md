@@ -79,6 +79,9 @@ O verdadeiro RH estratégico atua como um facilitador, entregando as ferramentas
 
 Ao digitalizar e humanizar esse processo simultaneamente, o Recursos Humanos ganha tempo para atuar no que realmente importa: pensar estrategicamente o negócio, prever movimentos de mercado e cuidar genuinamente do bem-estar e da performance das pessoas. O segundo semestre está batendo à porta, e o momento de abandonar o achismo e abraçar a inteligência de dados na gestão de talentos é agora.
 
+Se você gostou deste conteúdo e quer aprofundar ainda mais sua visão sobre como desenvolver sua equipe guiado por dados, que tal dar uma olhada neste outro blog sobre [Educação Corporativa e Upskilling no RH](https://fiter.com.br/blog/educacao-corporativa-upskilling-dados-rh/), onde expandimos esse debate?
+
+E se o seu RH já está pronto para dar o próximo passo, abandonar o achismo e atuar com as ferramentas certas, venha conhecer a nossa suíte de produtos! Acesse as nossas [Soluções RH](https://fiter.com.br/solucoes/rh/) e descubra como podemos ajudar você a centralizar e potencializar a gestão de pessoas na sua empresa.
 ---
 
 > **Este artigo contou com a curadoria técnica de Sergio Amad**, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma capaz de revolucionar a maneira como as empresas engajam, avaliam e retêm seus maiores talentos por meio de tecnologia e inteligência de dados.
