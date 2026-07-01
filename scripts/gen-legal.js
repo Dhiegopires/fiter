@@ -99,6 +99,13 @@ function head(title, desc, canonical) {
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>${STYLES}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js"></script>
+    <script
+        type="text/plain"
+        data-category="analytics"
+        data-src="https://t.contentsquare.net/uxa/cd11f6271f295.js"
+    ></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -174,6 +181,36 @@ ${NAV}
 </main>
 ${FOOTER}
 ${SCRIPTS}
+<script>
+CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: 'box',
+        position: 'bottom right',
+        equalWeightButtons: true,
+        flipButtons: false,
+        modalOverlay: true
+      }
+    },
+    categories: {
+      necessary: { enabled: true, readOnly: true },
+      analytics: { enabled: false }
+    },
+    language: {
+      default: 'pt',
+      translations: {
+        pt: {
+          consentModal: {
+            title: '🍪 Este site usa cookies',
+            description: 'Utilizamos cookies próprios e de terceiros para melhorar sua experiência. Ao clicar em "Aceitar todos", você consente com o uso de todos os cookies.',
+            acceptAllBtn: 'Aceitar todos',
+            acceptNecessaryBtn: 'Recusar'
+          }
+        }
+      }
+    }
+});
+</script>
 </body>
 </html>`;
 
@@ -271,6 +308,36 @@ ${NAV}
 </main>
 ${FOOTER}
 ${SCRIPTS}
+<script>
+CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: 'box',
+        position: 'bottom right',
+        equalWeightButtons: true,
+        flipButtons: false,
+        modalOverlay: true
+      }
+    },
+    categories: {
+      necessary: { enabled: true, readOnly: true },
+      analytics: { enabled: false }
+    },
+    language: {
+      default: 'pt',
+      translations: {
+        pt: {
+          consentModal: {
+            title: '🍪 Este site usa cookies',
+            description: 'Utilizamos cookies próprios e de terceiros para melhorar sua experiência. Ao clicar em "Aceitar todos", você consente com o uso de todos os cookies.',
+            acceptAllBtn: 'Aceitar todos',
+            acceptNecessaryBtn: 'Recusar'
+          }
+        }
+      }
+    }
+});
+</script>
 </body>
 </html>`;
 
@@ -360,6 +427,36 @@ ${NAV}
 </main>
 ${FOOTER}
 ${SCRIPTS}
+<script>
+CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: 'box',
+        position: 'bottom right',
+        equalWeightButtons: true,
+        flipButtons: false,
+        modalOverlay: true
+      }
+    },
+    categories: {
+      necessary: { enabled: true, readOnly: true },
+      analytics: { enabled: false }
+    },
+    language: {
+      default: 'pt',
+      translations: {
+        pt: {
+          consentModal: {
+            title: '🍪 Este site usa cookies',
+            description: 'Utilizamos cookies próprios e de terceiros para melhorar sua experiência. Ao clicar em "Aceitar todos", você consente com o uso de todos os cookies.',
+            acceptAllBtn: 'Aceitar todos',
+            acceptNecessaryBtn: 'Recusar'
+          }
+        }
+      }
+    }
+});
+</script>
 </body>
 </html>`;
 

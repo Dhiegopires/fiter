@@ -45,7 +45,14 @@
             .clima-metrics-grid { grid-template-columns: 1fr !important; }
         }
     </style>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js"></script>
+    <script
+        type="text/plain"
+        data-category="analytics"
+        data-src="https://t.contentsquare.net/uxa/cd11f6271f295.js"
+    ></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -430,5 +437,34 @@
 
 <script>lucide.createIcons();</script>
 <script>(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","aFxKgoMOwAth4DHu5Q0WGCB5t")</script>
+<script>
+CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: 'box',
+        position: 'bottom right',
+        equalWeightButtons: true,
+        flipButtons: false,
+        modalOverlay: true
+      }
+    },
+    categories: {
+      necessary: { enabled: true, readOnly: true },
+      analytics: { enabled: false }
+    },
+    language: {
+      default: 'pt',
+      translations: {
+        pt: {
+          consentModal: {
+            title: '🍪 Este site usa cookies',
+            description: 'Utilizamos cookies próprios e de terceiros para melhorar sua experiência. Ao clicar em "Aceitar todos", você consente com o uso de todos os cookies.',
+            acceptAllBtn: 'Aceitar todos',
+            acceptNecessaryBtn: 'Recusar'
+          }
+        }
+      }
+    }
+});
 </body>
 </html>

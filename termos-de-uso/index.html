@@ -7,14 +7,12 @@
     <title>Termos de Uso | Fiter</title>
     <meta name="description" content="Termos e condições de uso da plataforma Fiter. Leia antes de contratar ou utilizar nossos serviços.">
     <link rel="canonical" href="https://fiter.com.br/termos-de-uso/">
-    <link rel="icon" href="/favicon.ico" sizes="any">
-    <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/assets/img/logo.png" type="image/png">
     <meta name="robots" content="noindex">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
+    <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/assets/js/tailwind-config.js"></script>
     <style>
@@ -32,6 +30,13 @@
     .legal-breadcrumb a:hover{color:var(--text-secondary);}
     .legal-highlight{background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-md);padding:1.25rem 1.5rem;margin:1.5rem 0;}
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
+    <script src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js"></script>
+    <script
+        type="text/plain"
+        data-category="analytics"
+        data-src="https://t.contentsquare.net/uxa/cd11f6271f295.js"
+    ></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -43,7 +48,7 @@
 <body>
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
-        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
         <ul class="nav-links">
             <li class="nav-item has-drop" data-nav-item>
                 <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
@@ -56,10 +61,7 @@
                 <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
                 <div class="nav-drop">
                     <a class="drop-link" href="/produtos/pulse/"><div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div></a>
-                    <a class="drop-link" href="/produtos/pulse-educacao/"><div><div class="drop-link-name">Pulse Educação</div><div class="drop-link-tag">Retenção de alunos</div></div></a>
-                    <a class="drop-link" href="/produtos/pesquisa-de-clima/"><div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico organizacional</div></div></a>
                     <a class="drop-link" href="/produtos/nr01/"><div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div></a>
-                    <a class="drop-link" href="/produtos/ouvidoria/"><div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Canal de ética com IA</div></div></a>
                     <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/"><div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div></a>
                 </div>
             </li>
@@ -71,11 +73,10 @@
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </div>
-</nav>
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
                 <div class="drawer-sub"><div class="drawer-sub-inner">
@@ -87,10 +88,7 @@
                 <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
                 <div class="drawer-sub"><div class="drawer-sub-inner">
                     <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
-                    <a class="drawer-sub-link" href="/produtos/pulse-educacao/">Pulse Educação</a>
-                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
                     <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
-                    <a class="drawer-sub-link" href="/produtos/ouvidoria/">Ouvidoria</a>
                     <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
                 </div></div>
             </div>
@@ -98,7 +96,8 @@
             <a class="drawer-plain-link" href="/blog/">Blog</a>
             <div class="drawer-cta"><a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;justify-content:center;">Agendar demonstração</a></div>
         </div>
-    </div>
+    </div>
+</nav>
 <main class="main-content" style="padding-top:64px;">
     <div class="ds-container px-6">
         <div class="legal-wrap">
@@ -183,7 +182,37 @@
     .then(html => { document.getElementById('footer-placeholder').innerHTML = html; if (window.lucide) lucide.createIcons(); });
 </script>
 <script src="https://unpkg.com/lucide@latest"></script>
-<script src="/assets/js/main.min.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)lucide.createIcons();});</script>
+<script>
+CookieConsent.run({
+    guiOptions: {
+      consentModal: {
+        layout: 'box',
+        position: 'bottom right',
+        equalWeightButtons: true,
+        flipButtons: false,
+        modalOverlay: true
+      }
+    },
+    categories: {
+      necessary: { enabled: true, readOnly: true },
+      analytics: { enabled: false }
+    },
+    language: {
+      default: 'pt',
+      translations: {
+        pt: {
+          consentModal: {
+            title: '🍪 Este site usa cookies',
+            description: 'Utilizamos cookies próprios e de terceiros para melhorar sua experiência. Ao clicar em "Aceitar todos", você consente com o uso de todos os cookies.',
+            acceptAllBtn: 'Aceitar todos',
+            acceptNecessaryBtn: 'Recusar'
+          }
+        }
+      }
+    }
+});
+</script>
 </body>
 </html>
