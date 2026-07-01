@@ -83,8 +83,11 @@ A tecnologia atua como a grande facilitadora de toda essa jornada complexa. Plat
 ---
 
 ## O Futuro da Gestão Estratégica
-
 Reter talentos no cenário corporativo contemporâneo exige uma mudança radical de paradigma. As empresas que prosperam e lideram seus mercados são aquelas que compreendem que o cuidado genuíno com o fator humano, apoiado por inteligência de dados, é o maior diferencial competitivo existente na atualidade. Adotar o fit cultural como o principal pilar de contratação e monitorar ativamente o clima organizacional através do People Analytics são os passos definitivos para criar equipes inovadoras, engajadas e de longa permanência.
+
+Se você gostou deste conteúdo e quer aprofundar ainda mais sua visão sobre como extrair e valorizar o potencial real dos seus colaboradores, que tal dar uma olhada neste outro blogpost sobre novas abordagens de desenvolvimento de talentos? Acesse o artigo Muito Além do Cargo: Gestão por Habilidades disponível em [Muito Além do Cargo: Como Desenvolver as Habilidades Reais do seu Time e Evitar a Rotatividade](https://fiter.com.br/blog/muito-alem-do-cargo-gestao-por-habilidades/) onde expandimos esse debate.
+
+Está pronto para dar o próximo passo na jornada de transformação e construir equipes de alta performance? Conheça a nossa suíte completa de produtos e descubra como podemos apoiar a sua organização através das nossas [Soluções RH](https://fiter.com.br/solucoes/rh/) e [Slouções Educação](https://fiter.com.br/solucoes/educacao/).
 
 > **Nota do Autor:**
 > Este artigo contou com a curadoria técnica de **Sergio Amad**, CEO da Fiter e especialista em inovação voltada para os Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma completa e orientada a dados, dedicada a revolucionar a experiência do colaborador, otimizar a avaliação de performance e transformar definitivamente os resultados das empresas através da gestão inteligente de pessoas.
