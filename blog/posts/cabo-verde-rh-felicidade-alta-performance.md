@@ -85,7 +85,7 @@ O esporte apenas torna esse fenômeno mais visível. Aquilo que observamos dentr
 
 ## Lições para a Gestão Contemporânea
 
-* **Marcas fortes** ajudam.
+* **Marcas fortes** ajudam. 
 * **Recursos financeiros** ajudam.
 * **Infraestrutura** ajuda.
 
