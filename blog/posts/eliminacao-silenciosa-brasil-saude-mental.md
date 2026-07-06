@@ -28,7 +28,7 @@ author: "Sergio Amad"
 authorInitials: "SA"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "eliminacao-silenciosa-brasil-saude-mental.webp"
+image: "eliminacao-silenciosa-brasil-saude-mental.jpeg"
 ---
 
 
