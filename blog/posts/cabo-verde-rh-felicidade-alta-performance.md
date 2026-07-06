@@ -12,7 +12,7 @@ slug: cabo-verde-rh-felicidade-alta-performance
 date: 2026-07-06
 
 # Categoria exibida no blog
-category: "Recursos Humanos"
+category: "RH"
 
 # Tempo estimado de leitura em minutos
 readingTime: 3
