@@ -32,7 +32,7 @@ image: "eliminacao-silenciosa-brasil-saude-mental.webp"
 ---
 
 
-# O Brasil não perdeu de 2 a 1 apenas no campo: A eliminação silenciosa que sofremos todos os dias
+# O Brasil não perdeu de 2 a 1 apenas no campo: A eliminação silenciosa que sofremos todos os dias 
 
 > **O choro de hoje é o cisco nos nossos olhos.** O que a Ciência da Felicidade e o Empreendedorismo exigem de nós para levantarmos a taça do desenvolvimento humano em 2030.
 
