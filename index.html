@@ -58,9 +58,9 @@
       mode: 'opt-out',
       guiOptions: {
         consentModal: {
-          layout: 'box',
-          position: 'bottom right',
-          equalWeightButtons: true,
+          layout: 'bar',
+          position: 'bottom',
+          equalWeightButtons: false,
           flipButtons: false,
           modalOverlay: true
         }
@@ -114,9 +114,10 @@
     @media(max-width:768px){ .problem-grid{grid-template-columns:1fr;gap:2rem} }
     .demo-option { width:100%; padding:.55rem .75rem; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:8px; color:rgba(255,255,255,.75); font-size:.78rem; cursor:pointer; text-align:left; transition:background .15s,border-color .15s; font-family:inherit; }
     .demo-option:hover { background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.18); }
-    .hero-bottom-bar { position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:space-between; align-items:flex-end; padding:2.25rem 3rem; border-top:1px solid var(--border-subtle); gap:3rem; z-index:2; }
-    .hero-bottom-right { flex-shrink:0; max-width:480px; display:flex; flex-direction:column; align-items:flex-end; gap:1.25rem; }
-    .hero-bottom-right p { text-align:right; }
+    .hero-product-card { padding: 1.25rem !important; }
+    .hero-bottom-bar { position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:space-between; align-items:flex-end; padding:2.25rem 3rem 2rem; border-top:1px solid var(--border-subtle); gap:3rem; z-index:2; }
+    .hero-bottom-right { flex-shrink:0; max-width:380px; display:flex; flex-direction:column; align-items:flex-end; gap:1.25rem; }
+    .hero-bottom-right p { text-align:left; text-wrap:pretty; width:100%; }
     .hero-nav-inline { display:none; position:static !important; transform:none !important; top:auto !important; left:auto !important; right:auto !important; }
     /* Metric cards: enhanced entrance */
     .metric-card.fade-up { transform: translateY(36px) scale(0.95); }
@@ -133,7 +134,7 @@
     @media(max-width:832px) {
         #hero-section { height:auto !important; padding-top:calc(64px + 2.5rem); display:flex !important; flex-direction:column; align-items:center; }
         .hero-card-wrap { position:relative !important; top:auto !important; left:auto !important; transform:none !important; }
-        .hero-bottom-bar { position:relative !important; bottom:auto !important; width:100%; flex-direction:column; align-items:center; gap:1.5rem; padding:1.75rem 1.5rem; text-align:center; margin-top:1.5rem; }
+        .hero-bottom-bar { position:relative !important; bottom:auto !important; width:100%; flex-direction:column; align-items:center; gap:1.5rem; padding:1.75rem 1.5rem 2rem; text-align:center; margin-top:1.5rem; }
         .hero-bottom-right { max-width:100%; align-items:center; }
         .hero-bottom-right p { text-align:center; max-width:42ch; }
         .hero-nav-side { display:none !important; }
@@ -154,7 +155,7 @@
     }
     /* Scientific proof tiles */
     .sci-tile { display:flex; gap:1.25rem; align-items:center; padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-default); flex:1; }
-    .sci-tile:last-child { border-bottom:none; padding-bottom:0; }
+    .sci-tile:last-child { border-bottom:none; }
     .sci-narrative { padding:0 3.5rem; }
     .sci-icon { width:36px; height:36px; border-radius:8px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.08); display:flex; align-items:center; justify-content:center; flex-shrink:0; color:var(--accent-brand); }
     .sci-title { font-size:0.8125rem; font-weight:600; color:var(--text-primary); margin-bottom:0.25rem; line-height:1.3; }
@@ -209,6 +210,14 @@
         .demo-flex { flex-direction:column; align-items:center; gap:2rem; }
         .demo-mockup { min-width:0 !important; max-width:100% !important; width:100%; }
     }
+    /* Cookie consent bar: slim full-width strip */
+    #cc-main .cm.bar { border-radius:0 !important; max-width:100% !important; margin:0 !important; }
+    #cc-main .cm__body { padding:0.875rem 2rem !important; flex-wrap:wrap; gap:1rem !important; }
+    #cc-main .cm__texts { flex:1; min-width:240px; }
+    #cc-main .cm__title { font-size:0.875rem !important; margin-bottom:0.25rem !important; }
+    #cc-main .cm__desc { font-size:0.8rem !important; line-height:1.5 !important; }
+    #cc-main .cm__btns { flex-direction:row !important; flex-wrap:wrap; gap:0.5rem !important; align-self:center; }
+    #cc-main .cm__btn { padding:0.5rem 1.25rem !important; font-size:0.8rem !important; }
     /* Neurolead chatbot: mais acima no index (apenas o icone, nao o popup) */
     @media (min-width: 901px) {
         html[data-theme="analytics"] .nld-chatbot > .nld-avatar,
@@ -220,6 +229,8 @@
     </style>
 </head>
 <body>
+
+<a href="#main-content" style="position:absolute;top:-999px;left:-999px;padding:0.5rem 1rem;background:var(--bg-surface);color:var(--text-primary);border:1px solid var(--border-default);border-radius:4px;font-size:0.875rem;z-index:9999;text-decoration:none;" onfocus="this.style.top='1rem';this.style.left='1rem';" onblur="this.style.top='-999px';this.style.left='-999px';">Pular para o conteúdo</a>
 
 <!-- NAV -->
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
@@ -271,7 +282,7 @@
         </ul>
 
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'nav_demo'})">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'nav_demo'})">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -315,15 +326,15 @@
         </div>
     </div>
 
-<main class="main-content">
+<main id="main-content" class="main-content">
     <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
     <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
     <!-- HERO -->
-    <section id="hero-section" class="relative" style="height:100vh; overflow:hidden; margin-top:-64px; margin-bottom:8rem; margin-left:-2rem; margin-right:-2rem;">
+    <section id="hero-section" class="relative" style="height:650px; overflow:hidden; margin-top:-64px; margin-bottom:0; margin-left:-2rem; margin-right:-2rem;">
         <canvas id="hero-brain-canvas"></canvas>
         <!-- Card centered exactly at sphere center -->
-        <div class="hero-card-wrap" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); display:flex; flex-direction:column; align-items:center; gap:1.25rem; z-index:1;">
-            <div id="heroCardsWrap" style="position:relative; width:300px; height:400px;"></div>
+        <div class="hero-card-wrap" style="position:absolute; top:50%; left:50%; transform:translate(-50%, calc(-50% - 80px)); display:flex; flex-direction:column; align-items:center; gap:1.25rem; z-index:1;">
+            <div id="heroCardsWrap" style="position:relative; width:260px; height:340px;"></div>
             <div style="display:flex; align-items:center; gap:0.75rem;">
                 <button class="hero-nav-btn hero-nav-inline" onclick="heroNav(-1)" aria-label="Anterior">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L6 8l4 5"/></svg>
@@ -343,52 +354,47 @@
         </button>
         <!-- Bottom bar -->
         <div class="hero-bottom-bar">
-            <div style="flex:1; max-width:860px;">
-                <h1 id="heroHeading" style="font-family:var(--font-serif); font-size:clamp(2.25rem,3vw,3.5rem); font-weight:800; letter-spacing:-0.03em; line-height:1.08; color:var(--text-primary); transition:opacity 0.22s ease;">Sua instituição parece bem.<br>Os dados contam outra história.</h1>
+            <div style="flex:1;">
+                <h1 id="heroHeading" style="font-family:var(--font-serif); font-size:clamp(2rem,2.6vw,3rem); font-weight:800; letter-spacing:-0.03em; line-height:1.08; color:var(--text-primary); transition:opacity 0.22s ease;">Clima e saúde mental do seu time,<br>medidos em 2 minutos pelo WhatsApp.</h1>
+                <p style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-tertiary);letter-spacing:0.06em;margin-top:1rem;">+500k pessoas medidas · Braspress · Kroton · Marinha do Brasil</p>
             </div>
             <div class="hero-bottom-right">
                 <p id="heroDesc" style="color:var(--text-secondary); font-size:0.875rem; line-height:1.6; transition:opacity 0.22s ease;"></p>
                 <div class="hero-btns" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
                     <a id="heroSegEmpresaBtn" href="/solucoes/rh/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_empresa'})">Sou uma Empresa →</a>
                     <a id="heroSegEduBtn" href="/solucoes/educacao/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;display:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_educacao'})">Sou uma Universidade →</a>
-                    <a id="heroSecondaryBtn" href="#prova-social" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;">Como funciona →</a>
-                    <a id="heroDemoBtn" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'hero_demo'})">Agendar Demo</a>
+                    <a id="heroSecondaryBtn" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'hero_guia'})">Baixar guia gratuito</a>
+                    <a id="heroDemoBtn" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'hero_demo'})">Agendar demonstração</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROVA SOCIAL (full width) -->
-    <section id="prova-social" style="margin-bottom: 0; margin-left: -2rem; margin-right: -2rem; padding: 4rem 2rem; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); overflow: hidden; background: var(--bg-surface);">
-        <div class="flex flex-col items-center text-center mb-10">
-            <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">De startups à Marinha do Brasil</p>
-            <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--text-primary); font-weight: 700; letter-spacing: -0.02em;">+500.000 pessoas medidas</h2>
-        </div>
-        <div class="marquee-mask" style="overflow: hidden; white-space: nowrap; position: relative;">
+    <!-- PROVA SOCIAL — strip compacta, junto ao hero na primeira dobra -->
+    <section id="prova-social" style="margin:0 -2rem; padding:2.5rem 2rem; border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); background:var(--bg-surface); overflow:hidden;">
+        <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;text-align:center;margin-bottom:0.75rem;">+500.000 pessoas medidas · De startups à Marinha do Brasil</p>
+        <div class="marquee-mask" style="overflow:hidden;white-space:nowrap;">
             <div class="logo-marquee">
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
-                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
-                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
-                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
-                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
+                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
+                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
+                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
+                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
             </div>
         </div>
     </section>
 
     <!-- O CUSTO DO SILÊNCIO -->
-    <section style="margin-bottom:8rem; margin-left:-2rem; margin-right:-2rem; padding:7rem 5vw 5rem; background:var(--bg-surface); border-bottom:1px solid var(--border-default); overflow:hidden; position:relative;">
-        <!-- Número decorativo de fundo -->
+    <section style="margin:0 -2rem; padding:7rem 5vw 5rem; background:var(--bg-surface); border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); overflow:hidden; position:relative;">
         <div aria-hidden="true" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);font-family:var(--font-serif);font-size:clamp(16rem,30vw,28rem);font-weight:800;color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;letter-spacing:-0.04em;">70%</div>
-
         <div style="position:relative;z-index:1;">
-            <!-- Topo: texto centralizado, sem max-width forçado -->
             <div style="text-align:center;margin-bottom:4rem;">
                 <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.5rem;">O problema que ninguém quer ver</p>
                 <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.875rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">
@@ -401,8 +407,6 @@
                     A pesquisa anual detecta o problema <em>após</em> o dano. A Fiter detecta <em>antes</em>.
                 </p>
             </div>
-
-            <!-- Stats: largura total da seção -->
             <div class="stats-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--border-default);border-radius:var(--radius-lg);overflow:hidden;">
                 <div class="stats-item fade-up" style="padding:2.5rem 3rem;border-right:1px solid var(--border-default);--reveal-delay:0s;">
                     <div style="font-family:var(--font-serif);font-size:3.25rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.75rem;">R$&nbsp;48k</div>
@@ -421,33 +425,146 @@
         </div>
     </section>
 
+    <!-- COMO FUNCIONA -->
+    <div class="ds-container lg:px-6" style="padding-top:5rem;">
+        <section id="como-funciona" class="ds-section" style="margin-bottom:4rem;">
+            <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Do dado à decisão.</p>
+            <div class="steps-h" data-steps>
+                <div class="step-h" style="--step-delay: 0s">
+                    <div class="step-icon">
+                        <i data-lucide="smartphone" style="width:20px;height:20px;color:rgba(255,255,255,0.8);"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title-row">
+                            <h3 class="step-h-title">Medir</h3>
+                            <span class="step-num">01</span>
+                        </div>
+                        <p class="step-h-body">8 cliques via WhatsApp. Sem app, sem login. Resposta em 2 minutos.</p>
+                    </div>
+                </div>
+                <div class="step-h" style="--step-delay: 0.12s">
+                    <div class="step-icon">
+                        <i data-lucide="bar-chart-2" style="width:20px;height:20px;color:rgba(255,255,255,0.8);"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title-row">
+                            <h3 class="step-h-title">Entender</h3>
+                            <span class="step-num">02</span>
+                        </div>
+                        <p class="step-h-body">IA entrega diagnóstico em tempo real: por área, por liderança e pelo porquê.</p>
+                    </div>
+                </div>
+                <div class="step-h" style="--step-delay: 0.24s">
+                    <div class="step-icon">
+                        <i data-lucide="zap" style="width:20px;height:20px;color:rgba(255,255,255,0.8);"></i>
+                    </div>
+                    <div class="step-content">
+                        <div class="step-title-row">
+                            <h3 class="step-h-title">Agir</h3>
+                            <span class="step-num">03</span>
+                        </div>
+                        <p class="step-h-body">Planos de ação gerados automaticamente. Sem analista, sem reunião de RH.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Demo interativo 8 cliques -->
+            <div class="demo-wrap" style="margin-top:4rem; padding:2.5rem; background:var(--bg-surface); border:1px solid var(--border-default); border-radius:var(--radius-lg);">
+                <div class="demo-flex" style="display:flex; gap:4rem; align-items:flex-start; flex-wrap:wrap;">
+                    <div style="flex:1; min-width:240px; display:flex; flex-direction:column; gap:2rem;">
+                        <div>
+                            <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Experimente agora</p>
+                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,2vw,2rem);font-weight:800;letter-spacing:-0.025em;color:var(--text-primary);line-height:1.1;">É exatamente isso que<br>seu colaborador recebe.</h3>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:0.625rem;">
+                            <div style="display:flex;align-items:center;gap:1rem;padding:0.875rem 1rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);">
+                                <span style="font-family:var(--font-serif);font-size:1.75rem;font-weight:800;color:var(--text-primary);line-height:1;flex-shrink:0;">8</span>
+                                <span style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.45;">perguntas via WhatsApp, e-mail ou app da Fiter<br><span style="color:var(--text-tertiary);font-size:0.75rem;">sem login, sem download, sem fricção</span></span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:1rem;padding:0.875rem 1rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);">
+                                <span style="font-family:var(--font-serif);font-size:1.75rem;font-weight:800;color:var(--text-primary);line-height:1;flex-shrink:0;">2<span style="font-size:1rem;">min</span></span>
+                                <span style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.45;">tempo médio de resposta<br><span style="color:var(--text-tertiary);font-size:0.75rem;">do envio à resposta completa</span></span>
+                            </div>
+                            <div style="display:flex;align-items:center;gap:1rem;padding:0.875rem 1rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);">
+                                <span style="font-family:var(--font-serif);font-size:1.75rem;font-weight:800;color:var(--text-primary);line-height:1;flex-shrink:0;">87<span style="font-size:1rem;">%</span></span>
+                                <span style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.45;">de taxa de adesão média<br><span style="color:var(--text-tertiary);font-size:0.75rem;">vs. 30-40% de ferramentas tradicionais</span></span>
+                            </div>
+                        </div>
+                        <div style="margin-top:auto;">
+                            <div id="demo-progress-wrap" style="display:flex;gap:4px;margin-bottom:0.5rem;"></div>
+                            <p id="demo-progress-label" style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-secondary);"></p>
+                        </div>
+                    </div>
+                    <div class="demo-mockup" style="flex:1; min-width:280px; max-width:340px;">
+                        <div style="background:#111; border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,0.07); box-shadow:0 24px 64px rgba(0,0,0,0.5);">
+                            <div style="background:#0a0a0a;padding:0.75rem 1rem;display:flex;align-items:center;gap:0.75rem;border-bottom:1px solid rgba(255,255,255,0.06);">
+                                <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;flex-shrink:0;">F</div>
+                                <div>
+                                    <div style="font-size:0.8125rem;font-weight:600;color:white;line-height:1.2;">Fiter</div>
+                                    <div style="font-size:0.65rem;color:rgba(255,255,255,0.35);">online agora</div>
+                                </div>
+                            </div>
+                            <div id="demo-chat" style="padding:1rem;min-height:180px;max-height:220px;overflow-y:auto;display:flex;flex-direction:column;gap:0.625rem;background:#0d1117;"></div>
+                            <div id="demo-options" style="padding:0.75rem;display:flex;flex-direction:column;gap:0.4rem;background:#0f0f0f;border-top:1px solid rgba(255,255,255,0.05);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA MID-PAGE -->
+        <div style="text-align:center;padding:2.5rem 1.5rem;margin-bottom:5rem;border-top:1px solid var(--border-subtle);">
+            <p style="font-size:0.9rem;color:var(--text-secondary);margin-bottom:1.5rem;">Viu o que acontece quando o time responde? Agora veja os dados na sua empresa.</p>
+            <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+                <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'midpage_como_funciona'})">Agendar demonstração</a>
+                <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'midpage_guia'})">Baixar guia gratuito</a>
+            </div>
+        </div>
+    </div>
+
     <div class="ds-container lg:px-6">
 
-        <!-- MÉTRICAS -->
-        <section class="ds-section" style="margin-bottom: 8rem;">
-            <div class="text-center mb-12">
-                
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; align-items: stretch;">
-                <div class="metric-card fade-up" data-metric="500" data-suffix="k+" style="--reveal-delay: 0s; text-align:center; align-items:center; justify-content:center;">
-                    <span class="metric-value">0</span>
-                    <span class="metric-label">pessoas medidas</span>
-                    <span class="metric-sub">Do Brasil inteiro, em organizações de todos os portes.</span>
+        <!-- CREDIBILIDADE CIENTÍFICA -->
+        <section class="ds-section sci-section" style="margin-bottom:8rem; padding:2.5rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
+            <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
+            <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
+                <div class="sci-narrative">
+                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
+                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">
+                        É deeptech com<br>DNA na USP.
+                    </h2>
+                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
+                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
                 </div>
-                <div class="metric-card fade-up" data-metric="8" data-suffix="" style="--reveal-delay: 0.08s; text-align:center; align-items:center; justify-content:center;">
-                    <span class="metric-value">0</span>
-                    <span class="metric-label">cliques por pesquisa</span>
-                    <span class="metric-sub">Da criação ao envio. Sem TI, sem burocracia.</span>
-                </div>
-                <div class="metric-card fade-up" data-metric="2" data-suffix=" min" style="--reveal-delay: 0.16s; text-align:center; align-items:center; justify-content:center;">
-                    <span class="metric-value">0</span>
-                    <span class="metric-label">para responder</span>
-                    <span class="metric-sub">Via WhatsApp. A taxa de adesão agradece.</span>
-                </div>
-                <div class="metric-card fade-up" data-metric="92" data-suffix="%" style="--reveal-delay: 0.24s; text-align:center; align-items:center; justify-content:center;">
-                    <span class="metric-value">0</span>
-                    <span class="metric-label">menos tempo no NR1</span>
-                    <span class="metric-sub">O que levava meses, o Agente faz em minutos.</span>
+                <div class="sci-tiles" style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-2.5rem;margin-bottom:-2.5rem;overflow:hidden;">
+                    <div class="sci-tile fade-up" style="--reveal-delay:0s;">
+                        <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">DNA Científico</div>
+                            <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
+                        </div>
+                    </div>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
+                        <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Liderança Prática</div>
+                            <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
+                        </div>
+                    </div>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
+                        <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Ecossistema USP</div>
+                            <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
+                        </div>
+                    </div>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
+                        <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Selos e Certificações</div>
+                            <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -498,168 +615,6 @@
             </div>
         </section>
 
-        <!-- AMBIDESTRIA FITER -->
-        <section class="ds-section" style="margin-bottom:8rem;">
-            <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para cada porte, uma resposta diferente</p>
-            <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Grande empresa ou PME.<br>A Fiter se adapta a&nbsp;você.</h2>
-            <div class="ambi-grid">
-                <div class="fade-up" style="--reveal-delay:0s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius-lg);">
-                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Grandes empresas</p>
-                    <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">Predição em escala e compliance robusto</h3>
-                    <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Monitoramento de turnover em massa, laudos NR1 por cargo e relatórios consolidados para o Ministério do Trabalho. Conformidade jurídica garantida para operações de centenas ou milhares de colaboradores.</p>
-                </div>
-                <div class="fade-up" style="--reveal-delay:0.12s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-lg);">
-                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Pequenas e médias empresas</p>
-                    <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">IA como RH Estratégico virtual</h3>
-                    <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Nossa IA atua como um RH Estratégico virtual, gerando planos de ação, predições de risco e diagnósticos, sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CREDIBILIDADE CIENTÍFICA -->
-        <section class="ds-section sci-section" style="margin-bottom:8rem; padding:2.5rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
-            <!-- Glow decorativo -->
-            <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
-
-            <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
-
-                <!-- Esquerda: narrativa -->
-                <div class="sci-narrative">
-                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
-                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">
-                        É deeptech com<br>DNA na USP.
-                    </h2>
-                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
-                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
-                </div>
-
-                <!-- Direita: proof tiles -->
-                <div class="sci-tiles" style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-2.5rem;margin-bottom:-2.5rem;overflow:hidden;">
-                    <div class="sci-tile fade-up" style="--reveal-delay:0s;">
-                        <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">DNA Científico</div>
-                            <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
-                        </div>
-                    </div>
-                    <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
-                        <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">Liderança Prática</div>
-                            <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
-                        </div>
-                    </div>
-                    <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
-                        <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">Ecossistema USP</div>
-                            <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
-                        </div>
-                    </div>
-                    <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
-                        <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">Selos e Certificações</div>
-                            <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- COMO FUNCIONA -->
-        <section id="como-funciona" class="ds-section" style="margin-bottom: 8rem;">
-            
-            <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Do dado à decisão.</p>
-            <div class="steps-h" data-steps>
-                <div class="step-h" style="--step-delay: 0s">
-                    <div class="step-icon">
-                        <i data-lucide="smartphone" style="width:20px;height:20px;color:rgba(255,255,255,0.8);"></i>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-title-row">
-                            <h3 class="step-h-title">Medir</h3>
-                            <span class="step-num">01</span>
-                        </div>
-                        <p class="step-h-body">8 cliques via WhatsApp. Sem app, sem login. Resposta em 2 minutos.</p>
-                    </div>
-                </div>
-                <div class="step-h" style="--step-delay: 0.12s">
-                    <div class="step-icon">
-                        <i data-lucide="bar-chart-2" style="width:20px;height:20px;color:rgba(255,255,255,0.8);"></i>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-title-row">
-                            <h3 class="step-h-title">Entender</h3>
-                            <span class="step-num">02</span>
-                        </div>
-                        <p class="step-h-body">IA entrega diagnóstico em tempo real: por área, por liderança, pelo porquê.</p>
-                    </div>
-                </div>
-                <div class="step-h" style="--step-delay: 0.24s">
-                    <div class="step-icon">
-                        <i data-lucide="zap" style="width:20px;height:20px;color:rgba(255,255,255,0.8);"></i>
-                    </div>
-                    <div class="step-content">
-                        <div class="step-title-row">
-                            <h3 class="step-h-title">Agir</h3>
-                            <span class="step-num">03</span>
-                        </div>
-                        <p class="step-h-body">Planos de ação gerados automaticamente. Sem analista, sem reunião de RH.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Demo interativo 8 cliques -->
-            <div class="demo-wrap" style="margin-top:4rem; padding:2.5rem; background:var(--bg-surface); border:1px solid var(--border-default); border-radius:var(--radius-lg);">
-                <div class="demo-flex" style="display:flex; gap:4rem; align-items:flex-start; flex-wrap:wrap;">
-                    <!-- Coluna esquerda -->
-                    <div style="flex:1; min-width:240px; display:flex; flex-direction:column; gap:2rem;">
-                        <div>
-                            <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Experimente agora</p>
-                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,2vw,2rem);font-weight:800;letter-spacing:-0.025em;color:var(--text-primary);line-height:1.1;">É exatamente isso que<br>seu colaborador recebe.</h3>
-                        </div>
-                        <div style="display:flex;flex-direction:column;gap:0.625rem;">
-                            <div style="display:flex;align-items:center;gap:1rem;padding:0.875rem 1rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);">
-                                <span style="font-family:var(--font-serif);font-size:1.75rem;font-weight:800;color:var(--text-primary);line-height:1;flex-shrink:0;">8</span>
-                                <span style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.45;">perguntas via WhatsApp, e-mail ou app da Fiter<br><span style="color:var(--text-tertiary);font-size:0.75rem;">sem login, sem download, sem fricção</span></span>
-                            </div>
-                            <div style="display:flex;align-items:center;gap:1rem;padding:0.875rem 1rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);">
-                                <span style="font-family:var(--font-serif);font-size:1.75rem;font-weight:800;color:var(--text-primary);line-height:1;flex-shrink:0;">2<span style="font-size:1rem;">min</span></span>
-                                <span style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.45;">tempo médio de resposta<br><span style="color:var(--text-tertiary);font-size:0.75rem;">do envio à resposta completa</span></span>
-                            </div>
-                            <div style="display:flex;align-items:center;gap:1rem;padding:0.875rem 1rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:var(--radius-md);">
-                                <span style="font-family:var(--font-serif);font-size:1.75rem;font-weight:800;color:var(--text-primary);line-height:1;flex-shrink:0;">87<span style="font-size:1rem;">%</span></span>
-                                <span style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.45;">de taxa de adesão média<br><span style="color:var(--text-tertiary);font-size:0.75rem;">vs. 30–40% de ferramentas tradicionais</span></span>
-                            </div>
-                        </div>
-                        <div style="margin-top:auto;">
-                            <div id="demo-progress-wrap" style="display:flex;gap:4px;margin-bottom:0.5rem;"></div>
-                            <p id="demo-progress-label" style="font-family:var(--font-mono);font-size:0.7rem;color:var(--text-secondary);"></p>
-                        </div>
-                    </div>
-                    <!-- Mockup WhatsApp -->
-                    <div class="demo-mockup" style="flex:1; min-width:280px; max-width:340px;">
-                        <div style="background:#111; border-radius:20px; overflow:hidden; border:1px solid rgba(255,255,255,0.07); box-shadow:0 24px 64px rgba(0,0,0,0.5);">
-                            <!-- Header chat -->
-                            <div style="background:#0a0a0a;padding:0.75rem 1rem;display:flex;align-items:center;gap:0.75rem;border-bottom:1px solid rgba(255,255,255,0.06);">
-                                <div style="width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,#25d366,#128c7e);display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;color:white;flex-shrink:0;">F</div>
-                                <div>
-                                    <div style="font-size:0.8125rem;font-weight:600;color:white;line-height:1.2;">Fiter</div>
-                                    <div style="font-size:0.65rem;color:rgba(255,255,255,0.35);">online agora</div>
-                                </div>
-                            </div>
-                            <!-- Mensagens -->
-                            <div id="demo-chat" style="padding:1rem;min-height:180px;max-height:220px;overflow-y:auto;display:flex;flex-direction:column;gap:0.625rem;background:#0d1117;"></div>
-                            <!-- Opções -->
-                            <div id="demo-options" style="padding:0.75rem;display:flex;flex-direction:column;gap:0.4rem;background:#0f0f0f;border-top:1px solid rgba(255,255,255,0.05);"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- DEPOIMENTOS -->
         <section class="ds-section" style="margin-bottom: 8rem;">
             
@@ -688,11 +643,14 @@
             </div>
         </section>
 
+        <!-- CTA POS-DEPOIMENTOS -->
+        <div style="text-align:center;padding:1rem 1.5rem 5rem;">
+            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'pos_depoimentos'})">Agendar demonstração</a>
+            <p style="margin-top:0.75rem;font-size:0.75rem;color:var(--text-tertiary);">30 minutos com um especialista. Sem compromisso.</p>
+        </div>
+
         <!-- FAQ -->
         <section class="ds-section" style="margin-bottom: 8rem;">
-            <div class="text-center mb-12">
-                
-            </div>
             <div style="max-width: 760px; margin: 0 auto;">
                 <div class="faq-list">
                     <div class="faq-item">
@@ -784,7 +742,7 @@
                     
                     <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'cta_final_calendly'})">Agendar no Calendly</a>
                     <p style="font-size:0.75rem;color:var(--text-tertiary);line-height:1.5;">30 minutos · resposta imediata após agendamento</p>
-                    <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem;color:var(--text-tertiary);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:1px;">Prefere enviar uma mensagem? <span style="color:var(--text-secondary);">Acesse a página de contato →</span></a>
+                    <a href="mailto:contato@fiter.com.br" style="font-size:0.8rem;color:var(--text-tertiary);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:1px;">Prefere enviar um e-mail? <span style="color:var(--text-secondary);">contato@fiter.com.br →</span></a>
                 </div>
             </div>
         </section>
@@ -809,14 +767,13 @@
         {
             name: 'Fiter',
             tagline: 'People Analytics com IA',
-            heading: 'Sua instituição parece bem.<br>Os dados contam outra história.',
-            desc: 'IA que monitora engajamento, fit cultural e clima em tempo real. Preveja rotatividade e evasão antes que aconteçam.',
+            heading: 'Clima e saúde mental do seu time,<br>medidos em 2 minutos pelo WhatsApp.',
+            desc: 'Pulse survey via WhatsApp. IA diagnóstica em tempo real. NR-1 automático. Metodologia validada por USP e Mackenzie.',
             accent: '#ffffff',
             glowBg: 'rgba(255,255,255,0.07)',
             borderActive: 'rgba(255,255,255,0.18)',
-            link: '#prova-social',
-            linkLabel: 'Como funciona →',
-            segBtn: true,
+            link: '/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/',
+            linkLabel: 'Baixar guia gratuito',
             body: `<div style="display:flex;flex-direction:column;gap:0.35rem;">
                 <a href="/produtos/pulse/" onclick="event.stopPropagation();" style="display:flex;align-items:center;gap:0.6rem;padding:0.5rem 0.7rem;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:8px;font-size:0.72rem;color:rgba(255,255,255,0.62);text-decoration:none;transition:background .15s,border-color .15s;" onmouseover="this.style.background='rgba(255,255,255,0.08)';this.style.borderColor='rgba(255,255,255,0.14)';" onmouseout="this.style.background='rgba(255,255,255,0.04)';this.style.borderColor='rgba(255,255,255,0.07)';">
                     <span style="width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,0.35);flex-shrink:0;"></span>
@@ -1010,15 +967,9 @@
                     <div style="width:30px;height:30px;border-radius:7px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
                         <div style="width:11px;height:11px;border-radius:2px;background:${p.accent};"></div>
                     </div>
-                    <span style="font-family:var(--font-mono);font-size:0.63rem;text-transform:uppercase;letter-spacing:0.1em;color:${p.accent};opacity:0.75;">Fiter</span>
+                    <span style="font-family:var(--font-mono);font-size:0.63rem;text-transform:uppercase;letter-spacing:0.1em;color:${p.accent};opacity:0.75;">${p.name.replace('\n', ' ')}</span>
                 </div>
-                ${p.body ? `<div class="hero-card-body" style="flex:1;margin-top:0.875rem;overflow:hidden;">${p.body}</div>` : ''}
-                <div style="margin-top:auto;padding-top:${p.body ? '0.75rem' : '1.5rem'};">
-                    <div style="font-family:var(--font-serif);font-size:${fontSize};font-weight:800;letter-spacing:-0.01em;color:var(--text-primary);line-height:1.1;margin-bottom:0.4rem;">
-                        ${nameParts.map(l => `<span style="display:block;">${l}</span>`).join('')}
-                    </div>
-                    <p style="font-size:0.78rem;color:var(--text-secondary);line-height:1.4;">${p.tagline}</p>
-                </div>
+                ${p.body ? `<div class="hero-card-body" style="flex:1;margin-top:0.875rem;overflow:hidden;">${p.body}</div>` : `<div style="flex:1;margin-top:0.875rem;display:flex;align-items:center;justify-content:center;"><span style="font-family:var(--font-serif);font-size:1.5rem;font-weight:800;color:var(--text-primary);">${p.name.replace('\n',' ')}</span></div>`}
             </div>
         `;
         addTiltToCard(el);
@@ -1086,6 +1037,15 @@
             heroEl.style.setProperty('--accent-brand', p.accent);
             heroEl.style.setProperty('--accent-text',  isLight ? '#050505' : '#ffffff');
             heroEl.style.setProperty('--accent-glow',  p.glowBg);
+        }
+        const navCta = document.querySelector('.nav-cta');
+        if (navCta) {
+            const p = PRODUCTS[activeIdx];
+            const isLight = p.accent === '#ffffff';
+            navCta.style.transition = 'background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease';
+            navCta.style.backgroundColor = p.accent;
+            navCta.style.color = isLight ? '#050505' : '#ffffff';
+            navCta.style.borderColor = p.accent;
         }
     }
 

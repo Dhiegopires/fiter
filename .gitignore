@@ -1,5 +1,6 @@
 node_modules
 /assets/img/*-og.jpg
+.claude
 
 # build artifacts — versionados para consistência entre ambientes
 # Regenerar com: npm run build:assets
