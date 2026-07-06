@@ -12,7 +12,7 @@ slug: eliminacao-silenciosa-brasil-saude-mental
 date: 2026-07-06
 
 # Categoria exibida no blog
-category: "Saúde Mental"
+category: "RH"
 
 # Tempo estimado de leitura em minutos
 readingTime: 3
