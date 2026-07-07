@@ -1,0 +1,391 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="TH4kqZnapgxjblie2KFVRM3laak_fIKLUfN9Dm5b1YY">
+    <title>Fit Cultural e Dados: Como Reter Talentos no RH | Fiter Blog</title>
+    <meta name="description" content="Descubra como a inteligência de dados e o fit cultural ajudam o RH a reter talentos, blindar a saúde mental e reduzir o turnover na sua empresa.">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="canonical" href="https://fiter.com.br/blog/fit-cultural-dados-retencao/" />
+    <meta property="og:title" content="Fit Cultural e Dados: Como Reter Talentos no RH | Fiter Blog" />
+    <meta property="og:description" content="Descubra como a inteligência de dados e o fit cultural ajudam o RH a reter talentos, blindar a saúde mental e reduzir o turnover na sua empresa." />
+    <meta property="og:url" content="https://fiter.com.br/blog/fit-cultural-dados-retencao/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Fiter" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "Fit Cultural e Dados: Como Reter Talentos no RH",
+      "author": { "@type": "Organization", "name": "Fiter" },
+      "publisher": { "@type": "Organization", "name": "Fiter", "url": "https://fiter.com.br" },
+      "url": "https://fiter.com.br/blog/fit-cultural-dados-retencao/"
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/assets/js/tailwind-config.js"></script>
+    <script src="/assets/js/main.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
+    <script async src="https://t.contentsquare.net/uxa/cd11f6271f295.js"></script>
+    <script type="module">
+    import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js';
+    CookieConsent.run({
+      mode: 'opt-out',
+      guiOptions: {
+        consentModal: {
+          layout: 'box',
+          position: 'bottom right',
+          equalWeightButtons: true,
+          flipButtons: false,
+          modalOverlay: true
+        }
+      },
+      categories: {
+        necessary: { enabled: true, readOnly: true },
+        analytics: { enabled: true }
+      },
+      language: {
+        default: 'pt',
+        translations: {
+          pt: {
+            consentModal: {
+              title: '\u{1F36A} Este site usa cookies',
+              description: 'Utilizamos cookies próprios e de terceiros para melhorar sua experiência. Ao clicar em "Aceitar todos", você consente com o uso de todos os cookies.',
+              acceptAllBtn: 'Aceitar todos',
+              acceptNecessaryBtn: 'Recusar'
+            }
+          }
+        }
+      },
+      onChange: function({ cookie }) {
+        if (!cookie.categories.includes('analytics')) {
+          window._uxa = window._uxa || [];
+          window._uxa.push(['stop']);
+        }
+      }
+    });
+    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RL4MTL7XFE');
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        .ds-footer { position: static; }
+
+        .article-body {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.85;
+        }
+        .article-body p { margin-bottom: 1.65rem; }
+        .article-body h2 {
+            font-family: var(--font-serif);
+            font-size: clamp(1.35rem, 2vw, 1.75rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin-top: 3.5rem;
+            margin-bottom: 1.1rem;
+        }
+        .article-body h3 {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-top: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .article-body ul,
+        .article-body ol {
+            padding-left: 1.25rem;
+            margin-bottom: 1.65rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.55rem;
+        }
+        .article-body ul li { list-style: disc; padding-left: 0.25rem; }
+        .article-body ol li { list-style: decimal; padding-left: 0.25rem; }
+        .article-body strong { color: var(--text-primary); font-weight: 600; }
+        .article-body em { font-style: italic; }
+        .article-body a { color: var(--accent-brand); text-decoration: underline; text-underline-offset: 3px; }
+        .article-body a:hover { opacity: 0.8; }
+        .article-body blockquote {
+            border-left: 2px solid var(--accent-brand);
+            padding: 1rem 0 1rem 1.5rem;
+            margin: 2.5rem 0;
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        .article-lead {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            line-height: 1.75;
+            font-weight: 300;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+        .share-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+            margin-top: 4rem;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            background: var(--bg-surface);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-md);
+            padding: 0.45rem 0.85rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        .share-btn:hover { color: var(--text-primary); border-color: var(--border-hover); }
+    </style>
+</head>
+<body data-theme="studio">
+
+    <!-- NAV -->
+<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+    <div class="nav-inner">
+
+        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+
+        <ul class="nav-links">
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/solucoes/rh/">
+                        <div><div class="drop-link-name">Recursos Humanos</div><div class="drop-link-tag">RH Corporativo</div></div>
+                    </a>
+                    <a class="drop-link" href="/solucoes/educacao/">
+                        <div><div class="drop-link-name">Educação</div><div class="drop-link-tag">IES e Redes de Ensino</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
+                    <a class="drop-link" href="/produtos/pulse/">
+                        <div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/pulse-educacao/">
+                        <div><div class="drop-link-name">Pulse Educação</div><div class="drop-link-tag">Retenção de alunos</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/pesquisa-de-clima/">
+                        <div><div class="drop-link-name">Pesquisa de Clima</div><div class="drop-link-tag">Diagnóstico organizacional</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/nr01/">
+                        <div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/ouvidoria/">
+                        <div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Canal de ética com IA</div></div>
+                    </a>
+                    <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">
+                        <div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div>
+                    </a>
+                </div>
+            </li>
+
+            <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
+            <li class="nav-item"><a class="nav-link active" href="/blog/">Blog</a></li>
+
+        </ul>
+
+        <div class="nav-right">
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_nav_demo'})">Agendar demonstração</a>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+    </div>
+
+</nav>
+    <!-- Mobile drawer -->
+    <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+        <div class="nav-backdrop" id="nav-backdrop"></div>
+        <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
+            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/solucoes/rh/">Recursos Humanos</a>
+                    <a class="drawer-sub-link" href="/solucoes/educacao/">Educação</a>
+                </div></div>
+            </div>
+
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Produtos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
+                    <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
+                    <a class="drawer-sub-link" href="/produtos/pulse-educacao/">Pulse Educação</a>
+                    <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
+                    <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                    <a class="drawer-sub-link" href="/produtos/ouvidoria/">Ouvidoria</a>
+                    <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
+                </div></div>
+            </div>
+
+            <a class="drawer-plain-link" href="/sobre/">Sobre</a>
+            <a class="drawer-plain-link" href="/blog/">Blog</a>
+
+            <div class="drawer-cta">
+                <a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_drawer_demo'})">Agendar demonstração</a>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content" style="padding-top: 64px;">
+
+        <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+
+        <div style="position: relative; z-index: 1;">
+
+            <!-- POST HEADER -->
+            <section style="padding-top: 5rem; padding-bottom: 2rem;">
+                <div style="max-width: 760px; margin: 0 auto; padding: 0 2rem;">
+
+                    <!-- Breadcrumb -->
+                    <div style="margin-bottom:2.5rem;" data-reveal>
+                        <a href="/blog/" style="font-family:var(--font-mono);font-size:0.62rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);text-decoration:none;transition:color 0.2s;" onmouseover="this.style.color='var(--text-primary)'" onmouseout="this.style.color='var(--text-tertiary)'">← Blog</a>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,4vw,3.25rem);font-weight:800;letter-spacing:-0.03em;line-height:1.08;color:var(--text-primary);margin-bottom:1.75rem;--reveal-delay:0.1s;">
+                        Fit Cultural e Dados: Como Reter Talentos no RH
+                    </h1>
+
+                    <!-- Meta -->
+                    <div data-reveal style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;padding-bottom:2rem;border-bottom:1px solid var(--border-subtle);--reveal-delay:0.2s;">
+                        <div style="width:36px;height:36px;border-radius:50%;background:var(--bg-surface);border:1px solid var(--border-default);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:0.55rem;color:var(--text-tertiary);flex-shrink:0;letter-spacing:0.05em;">EF</div>
+                        <span style="font-size:0.875rem;font-weight:500;color:var(--text-primary);">Equipe Fiter</span>
+                        <span style="width:3px;height:3px;border-radius:50%;background:var(--border-default);flex-shrink:0;"></span>
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">07 de Julho, 2026</span>
+                        <span style="width:3px;height:3px;border-radius:50%;background:var(--border-default);flex-shrink:0;"></span>
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);display:flex;align-items:center;gap:0.3rem;"><i data-lucide="clock" style="width:11px;height:11px;"></i> 4 min de leitura</span>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- HERO IMAGE -->
+            
+        <section style="padding-bottom: 3rem;">
+            <div style="max-width: 960px; margin: 0 auto; padding: 0 2rem;">
+                <img src="defult.jpeg" alt="Fit Cultural e Dados: Como Reter Talentos no RH" style="width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);display:block;">
+            </div>
+        </section>
+
+            <!-- ARTICLE BODY -->
+            <section style="padding-bottom: 5rem;">
+                <div style="max-width: 720px; margin: 0 auto; padding: 0 2rem;">
+
+                    <div class="article-body">
+                        <h1>Além do Fit Cultural: Como a Inteligência de Dados Transforma a Retenção e o Bem-Estar das Equipes</h1>
+<p class="article-lead">Se você atua na liderança de Recursos Humanos, provavelmente já se deparou com este cenário frustrante. Você atrai um talento brilhante, oferece um pacote de benefícios competitivo, realiza uma integração impecável e, poucos meses depois, percebe que o brilho nos olhos daquele profissional desapareceu. O engajamento cai, a produtividade acompanha a queda e, em pouco tempo, a carta de demissão chega à sua mesa.</p>
+<p>Qual foi o erro?</p>
+<p>Na maioria das vezes, a falha não está na competência técnica do colaborador e muito menos na intenção da empresa. A ruptura acontece em uma camada mais profunda e silenciosa, que é o alinhamento cultural. Hoje, o mercado de trabalho exige uma nova postura estratégica. Não basta apenas preencher vagas. É fundamental garantir que as pessoas certas estejam nos lugares certos, vivenciando um ambiente que preserve sua saúde mental e impulsione sua performance sustentável.</p>
+<p>Neste artigo, vamos explorar de forma detalhada e prática como a tecnologia e os dados deixaram de ser ferramentas frias para se tornarem os maiores aliados do RH na construção de um Employee Experience (Experiência do Colaborador) verdadeiramente humano e blindado contra a evasão de talentos.</p>
+<h2>A Raiz do Turnover e o Custo Invisível do Mau Alinhamento</h2>
+<p>Para compreendermos a solução, precisamos primeiro analisar a raiz do problema de forma pedagógica. Imagine a cultura organizacional como o solo de um jardim e o colaborador como uma semente. Por mais que a semente seja de altíssima qualidade e possua um potencial incrível, se o solo for incompatível com suas necessidades básicas de luz, água e nutrientes, ela não irá florescer. Pior ainda, ela tentará se adaptar forçadamente até esgotar toda a sua energia.</p>
+<p>No ambiente corporativo, esse esgotamento tem nome e se manifesta através da Síndrome de Burnout, do presenteísmo e da desmotivação crônica. Quando um profissional não possui fit cultural com a empresa, cada pequena interação diária gera um atrito invisível. A comunicação falha com a liderança, as expectativas não se cruzam e o senso de pertencimento jamais se consolida.</p>
+<p>O impacto financeiro desta realidade é severo. Substituir um colaborador custa extremamente caro para a companhia, envolvendo despesas de rescisão, tempo gasto em novos processos de recrutamento, horas dedicadas ao treinamento e a curva natural de aprendizado do novo contratado. Contudo, o impacto moral e psicológico na equipe que permanece é imensurável. A rotatividade frequente gera insegurança coletiva e sobrecarrega os profissionais que ficam, criando um ciclo vicioso de exaustão e novas demissões.</p>
+<h2>People Analytics: A Tradução de Dados em Cuidado Humano</h2>
+<p>É exatamente neste ponto crítico que a inovação tecnológica se faz estritamente necessária. Historicamente, o RH tomava decisões baseadas apenas na intuição ou em pesquisas de clima anuais, que funcionavam como uma fotografia antiga do passado. O problema central desse modelo é que o engajamento humano não é estático. Ele flutua semanalmente e é diretamente influenciado por metas, atitudes da liderança e pelo contexto pessoal de cada indivíduo.</p>
+<p>Com a consolidação do People Analytics (análise de dados voltada para gestão de pessoas), os gestores ganharam o poder inédito de antecipar problemas. É crucial entender que analisar dados de colaboradores não significa robotizar o setor. Pelo contrário, significa olhar para métricas precisas para ter a capacidade de oferecer um cuidado altamente personalizado.</p>
+<p>Ao utilizar plataformas inteligentes, o RH consegue cruzar dados de desempenho, registros de feedbacks contínuos e resultados de pesquisas de pulso. Isso permite identificar proativamente, por exemplo, se um departamento específico apresenta quedas bruscas de motivação antes mesmo que os atestados médicos ou os pedidos de demissão comecem a surgir. Os dados atuam, portanto, como um termômetro preventivo de saúde mental e de segurança psicológica.</p>
+<h2>Como Estruturar uma Estratégia de Retenção Baseada em Dados</h2>
+<p>Para transformar toda essa teoria em prática na sua organização, sugerimos um roteiro pedagógico de três passos fundamentais.</p>
+<ol>
+<li><p><strong>Avalie o Fit Cultural desde a Porta de Entrada</strong>
+O processo seletivo deve ir muito além da leitura do currículo. Utilize avaliações comportamentais e algoritmos inteligentes para mapear se os valores inegociáveis do candidato dialogam em harmonia com a missão e a rotina da sua empresa. Uma contratação culturalmente alinhada desde o primeiro dia reduz drasticamente a probabilidade de frustrações futuras.</p>
+</li>
+<li><p><strong>Substitua a Avaliação Anual pelo Pulso Contínuo</strong>
+Aguardar doze longos meses para perguntar como o seu colaborador se sente é um risco estratégico inaceitável nos dias de hoje. Implemente pesquisas curtas e frequentes. Busque entender como as equipes avaliam a comunicação interna, a clareza dos objetivos propostos e o suporte prático oferecido pelas lideranças. Esses dados coletados em tempo real permitem correções de rota rápidas, precisas e humanizadas.</p>
+</li>
+<li><p><strong>Fomente a Cultura do Feedback Transparente e Registrado</strong>
+A tecnologia deve ser usada para facilitar pontes de comunicação. Ferramentas digitais que registram feedbacks, formalizam reconhecimentos públicos e acompanham metas ajuda a criar um histórico palpável e justo da jornada do colaborador. Quando o profissional percebe que seu desenvolvimento é acompanhado de perto e com base em fatos, o seu senso de valorização dispara.</p>
+</li>
+</ol>
+<h2>O Papel da Fiter na Evolução Estratégica do seu RH</h2>
+<p>Entender a urgência de todas essas mudanças é o primeiro grande passo, mas tentar executá-las de forma manual ou através de planilhas desconexas é uma tarefa desgastante. É por esse motivo que a adoção de uma plataforma tecnológica especializada deixa de ser um luxo e passa a ser um diferencial competitivo obrigatório.</p>
+<p>As soluções desenvolvidas pela Fiter foram desenhadas meticulosamente para resolver exatamente esta dor corporativa. Através de um ecossistema digital integrado, ajudamos o seu departamento de RH a mapear o fit cultural com exatidão científica, analisar o clima organizacional em tempo real e promover um ciclo contínuo de gestão de desempenho que realmente faça sentido para os líderes e para os liderados.</p>
+<p>Nossa missão principal é fornecer a inteligência de dados necessária para que você, profissional de Recursos Humanos, tenha o seu tempo operacional liberado. Assim, você poderá focar naquilo que a tecnologia jamais poderá fazer no seu lugar, que é ouvir com empatia, acolher as demandas complexas e inspirar o crescimento das pessoas.</p>
+<h2>O Futuro do Trabalho é Humano e Guiado por Dados</h2>
+<p>Em resumo, blindar a saúde mental das equipes e reduzir as taxas de turnover não são tarefas que dependem de sorte ou da distribuição de pacotes de benefícios mágicos. O sucesso verdadeiro reside na consistência das boas práticas diárias, no respeito inegociável à cultura organizacional e na adoção de tecnologias inovadoras que ampliem a visão estratégica da sua gestão.</p>
+<p>Quando unimos o toque genuinamente humano à precisão analítica dos dados, deixamos de apenas gerenciar recursos e passamos a construir empresas onde as pessoas não apenas trabalham por obrigação, mas onde elas encontram propósito e desejam pertencer a longo prazo.</p>
+<hr>
+<p>Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma que une inteligência de dados e ciência comportamental para revolucionar a jornada do colaborador, conectando alta performance, engajamento contínuo e alinhamento cultural.</p>
+
+                    </div>
+
+                    <!-- Share bar -->
+                    <div class="share-bar">
+                        <span style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin-right:0.25rem;">Compartilhar</span>
+                        <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://fiter.com.br/blog/fit-cultural-dados-retencao/" target="_blank" rel="noopener">
+                            <i data-lucide="linkedin" style="width:12px;height:12px;"></i> LinkedIn
+                        </a>
+                    </div>
+
+                    <!-- CTA -->
+                    <div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
+                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
+                        <div style="position:relative;">
+                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Fiter Pulse</p>
+                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Veja como funciona na prática</h3>
+                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">87% de taxa de resposta via WhatsApp. Configure sua primeira pesquisa em menos de 10 minutos.</p>
+                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Agendar demonstração</a>
+                            <p style="margin-top:1.25rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch('/components/footer.html?v=6')
+        .then(r => r.text())
+        .then(html => { document.getElementById('footer-placeholder').innerHTML = html; if (window.lucide) lucide.createIcons(); });
+    </script>
+    <script>(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","aFxKgoMOwAth4DHu5Q0WGCB5t")</script>
+
+</body>
+</html>
