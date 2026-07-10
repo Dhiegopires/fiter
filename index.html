@@ -40,9 +40,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=14865bae">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script type="importmap">
     {
         "imports": {
@@ -58,7 +57,7 @@
       mode: 'opt-out',
       guiOptions: {
         consentModal: {
-          layout: 'bar',
+          layout: 'bar inline',
           position: 'bottom',
           equalWeightButtons: false,
           flipButtons: false,
@@ -151,17 +150,16 @@
         .hero-nav-inline { display:flex; }
         .hero-btns { flex-direction:column; align-items:stretch; width:100%; }
         .hero-btns .btn { width:100%; justify-content:center; }
+    #heroSegEmpresaBtn, #heroSegEduBtn { display: none; }
         .hero-btns .btn-primary { order:-1; }
     }
     @media(max-width:600px) {
-        #heroCardsWrap { width:240px !important; height:300px !important; }
         #heroHeading { font-size: clamp(1.75rem, 5.5vw, 2.25rem) !important; }
-        .hero-card-body { display:none !important; }
+        .hero-card-wrap { transform: scale(0.72) !important; transform-origin: top center; margin-bottom: -96px; }
     }
     @media(max-width:490px) {
-        #heroCardsWrap { width:200px !important; height:260px !important; }
         #heroHeading { font-size: clamp(1.6rem, 5vw, 1.875rem) !important; }
-        .hero-card-body { display:none !important; }
+        .hero-card-wrap { transform: scale(0.62) !important; transform-origin: top center; margin-bottom: -148px; }
     }
     /* Scientific proof tiles */
     .sci-tile { display:flex; gap:1.25rem; align-items:center; padding:1.25rem 1.5rem; border-bottom:1px solid var(--border-default); flex:1; }
@@ -175,11 +173,11 @@
     .sci-tile.fade-up.in-view { transform:translateX(0); opacity:1; }
     /* Credibility section responsive */
     @media(max-width:768px) {
-        .sci-section-grid { grid-template-columns:1fr !important; gap:2.5rem !important; }
+        .sci-section-grid { grid-template-columns:1fr !important; gap:0 !important; }
         .sci-section-grid > div:last-child { margin-top:0 !important; margin-right:0 !important; margin-bottom:0 !important; border-left:none !important; }
-        .sci-section { padding:2.5rem 0 !important; }
-        .sci-narrative { padding:0 1.5rem !important; }
-        .sci-tiles { margin:0 !important; border-left:none !important; border-top:1px solid var(--border-default); padding-top:1.5rem; }
+        .sci-section { padding:1.5rem 0 0 !important; margin-bottom:3rem !important; }
+        .sci-narrative { padding:0 1.5rem 1.5rem !important; }
+        .sci-tiles { margin:0 !important; border-left:none !important; border-top:1px solid var(--border-default); padding-top:0; }
     }
     /* Steps redesign */
     #como-funciona .steps-h { gap:1rem; }
@@ -209,7 +207,7 @@
     .eco-link { font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.08em; display:inline-flex; align-items:center; gap:0.4rem; margin-top:auto; padding-top:1.5rem; transition:gap .2s; }
     .eco-card:hover .eco-link { gap:0.65rem; }
     /* Stats grid mobile */
-    @media(max-width:640px) {
+    @media(max-width:768px) {
         .stats-grid { grid-template-columns:1fr !important; }
         .stats-item { border-right:none !important; padding:2rem 1.5rem !important; }
         .stats-item:not(:last-child) { border-bottom:1px solid var(--border-default) !important; }
@@ -228,6 +226,11 @@
     #cc-main .cm__desc { font-size:0.8rem !important; line-height:1.5 !important; }
     #cc-main .cm__btns { flex-direction:row !important; flex-wrap:wrap; gap:0.5rem !important; align-self:center; }
     #cc-main .cm__btn { padding:0.5rem 1.25rem !important; font-size:0.8rem !important; }
+    @media(max-width:640px) {
+        #cc-main .cm__body { padding:1.25rem !important; flex-direction:column !important; }
+        #cc-main .cm__btns { flex-direction:column !important; width:100% !important; }
+        #cc-main .cm__btn { width:100% !important; text-align:center !important; justify-content:center !important; }
+    }
     /* Neurolead chatbot: mais acima no index (apenas o icone, nao o popup) */
     @media (min-width: 901px) {
         html[data-theme="analytics"] .nld-chatbot > .nld-avatar,
@@ -240,22 +243,273 @@
     .bar-row.in-view .bar-fill { width: var(--bar-target); }
     /* Metric 4-col responsive */
     @media(max-width:900px) { .metric-4-grid { grid-template-columns:repeat(2,1fr) !important; } }
-    @media(max-width:500px) { .metric-4-grid { grid-template-columns:1fr !important; } }
+    @media(max-width:500px) {
+        .metric-4-grid { grid-template-columns:1fr !important; }
+        .metric-4-grid .metric-card { align-items:center; text-align:center; padding:1.75rem 1.25rem; }
+        .metric-4-grid .metric-value { font-size:clamp(3.2rem,14vw,4rem) !important; }
+    }
     /* Testimonials responsive */
     @media(max-width:680px) { .testi-grid { grid-template-columns:1fr !important; } .testi-featured { padding:1.75rem !important; } }
-    /* Comparison table responsive */
-    @media(max-width:640px) { .cmp-table thead th:first-child, .cmp-table tbody td:first-child { display:none; } .cmp-table thead th, .cmp-table tbody td { padding:0.65rem 0.6rem; font-size:0.78rem; } }
+    /* Metric 4-grid font size fix */
+    .metric-4-grid .metric-value { font-size: 2rem; }
+    /* Testimonial carousel */
+    .testi-carousel-wrap { overflow: hidden; }
+    .testi-carousel-track { display:flex; gap:1.5rem; transition:transform 0.5s cubic-bezier(0.4,0,0.2,1); will-change:transform; }
+    .testi-carousel-track .testi-card { flex:0 0 calc(33.333% - 1rem); min-width:0; opacity:1 !important; transform:none !important; transition:border-color 0.25s, box-shadow 0.3s !important; }
+    .testi-carousel-dots { display:flex; gap:0.5rem; align-items:center; }
+    .testi-carousel-dot { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.2); border:none; padding:0; cursor:pointer; transition:all 0.25s; flex-shrink:0; }
+    .testi-carousel-dot.active { width:18px; border-radius:3px; background:var(--accent-brand); }
+    .testi-carousel-btn { width:38px; height:38px; border-radius:50%; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); color:var(--text-secondary); display:inline-flex; align-items:center; justify-content:center; cursor:pointer; transition:all 0.2s; }
+    .testi-carousel-btn:hover { background:rgba(255,255,255,0.09); color:var(--text-primary); border-color:rgba(255,255,255,0.18); }
+    @media(max-width:860px) { .testi-carousel-track .testi-card { flex:0 0 calc(50% - 0.75rem); } }
+    /* Donut chart — design system */
+    .donut-chart-wrap { position:relative; width:260px; height:260px; margin:0 auto; }
+    .donut-chart-wrap svg { display:block; }
+    .donut-center { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; pointer-events:none; }
+    .donut-center-value { font-family:var(--font-serif); font-size:2.25rem; font-weight:800; letter-spacing:-0.02em; color:var(--text-primary); line-height:1; transition:all 0.18s ease; }
+    .donut-center-label { font-family:var(--font-mono); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-secondary); margin-top:0.35rem; transition:all 0.18s ease; }
+    .donut-legend { display:flex; flex-direction:column; gap:0.9rem; margin-top:2rem; }
+    .legend-item { display:flex; align-items:center; gap:0.75rem; cursor:pointer; transition:opacity 0.2s; }
+    .legend-dot { width:9px; height:9px; border-radius:50%; flex-shrink:0; transition:transform 0.2s; }
+    .legend-item:hover .legend-dot { transform:scale(1.5); }
+    .legend-label { font-size:0.85rem; color:var(--text-secondary); flex:1; transition:color 0.2s; }
+    .legend-item:hover .legend-label { color:var(--text-primary); }
+    .legend-pct { font-family:var(--font-mono); font-size:0.85rem; font-weight:600; min-width:36px; text-align:right; }
+    @media(max-width:540px) { .testi-carousel-track .testi-card { flex:0 0 100%; } }
+    /* Full-width strip */
+    .fw-strip { width:100vw; margin-left:calc(-50vw + 50%); position:relative; }
+    /* Donut responsive */
+    @media(max-width:640px) { .donut-section-grid { grid-template-columns:1fr !important; } }
+    /* FAQ 2-col */
+    .faq-2col { display:grid; grid-template-columns:280px 1fr; gap:5rem; align-items:start; }
+    @media(max-width:760px) { .faq-2col { grid-template-columns:1fr; gap:2rem; } }
+    /* ── SKIP LINK */
+    .skip-link { position:absolute; top:-999px; left:-999px; padding:0.5rem 1rem; background:var(--bg-surface); color:var(--text-primary); border:1px solid var(--border-default); border-radius:4px; font-size:0.875rem; z-index:9999; text-decoration:none; }
+    .skip-link:focus { top:1rem; left:1rem; }
+    /* ── HERO */
+    #hero-section { height:650px; overflow:hidden; margin-top:-64px; margin-bottom:0; margin-left:-2rem; margin-right:-2rem; }
+    .hero-card-wrap { position:absolute; top:50%; left:50%; transform:translate(-50%,calc(-50% - 80px)); display:flex; flex-direction:column; align-items:center; gap:1.25rem; z-index:1; }
+    #heroCardsWrap { position:relative; width:260px; height:340px; }
+    .hero-dots-row { display:flex; align-items:center; gap:0.75rem; }
+    #heroDots { display:flex; gap:6px; justify-content:center; }
+    .hero-nav-side--l { left:2rem; position:absolute; top:50%; transform:translateY(-50%); z-index:2; }
+    .hero-nav-side--r { right:2rem; position:absolute; top:50%; transform:translateY(-50%); z-index:2; }
+    .hero-bottom-left { flex:1; }
+    #heroHeading { font-family:var(--font-serif); font-size:clamp(2rem,2.6vw,3rem); font-weight:800; letter-spacing:-0.03em; line-height:1.08; color:var(--text-primary); transition:opacity 0.22s ease; }
+    #heroDesc { color:var(--text-secondary); font-size:0.875rem; line-height:1.6; transition:opacity 0.22s ease; }
+    .hero-btns { display:flex; gap:0.75rem; flex-wrap:wrap; }
+    /* ── PROVA SOCIAL */
+    #prova-social { margin:0 -2rem; padding:2.5rem 2rem; border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); background:var(--bg-surface); overflow:hidden; }
+    .ps-eyebrow { font-family:var(--font-mono); font-size:0.65rem; color:var(--accent-brand); text-transform:uppercase; letter-spacing:0.1em; text-align:center; margin-bottom:0.75rem; }
+    .marquee-mask { overflow:hidden; white-space:nowrap; }
+    .logo-sans-800 { font-family:var(--font-sans); font-weight:800; }
+    .logo-serif-700 { font-family:var(--font-serif); font-weight:700; }
+    .logo-mono-600t { font-family:var(--font-mono); font-weight:600; letter-spacing:-1px; }
+    .logo-sans-700 { font-family:var(--font-sans); font-weight:700; }
+    .logo-serif-400 { font-family:var(--font-serif); font-weight:400; }
+    .logo-mono-600 { font-family:var(--font-mono); font-weight:600; }
+    /* ── COMMON TEXT */
+    .eyebrow-brand { font-family:var(--font-mono); font-size:0.68rem; color:var(--accent-brand); text-transform:uppercase; letter-spacing:0.14em; }
+    .eyebrow-tertiary { font-family:var(--font-mono); font-size:0.65rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.12em; }
+    .section-h2 { font-family:var(--font-serif); font-size:clamp(2rem,3vw,2.5rem); font-weight:800; letter-spacing:-0.025em; line-height:1.1; color:var(--text-primary); }
+    .section-body { color:var(--text-secondary); font-size:1rem; line-height:1.75; }
+    .section-body--sm { color:var(--text-secondary); font-size:0.95rem; line-height:1.75; }
+    .text-footnote { font-family:var(--font-mono); font-size:0.62rem; color:var(--text-secondary); opacity:0.4; margin-top:1.25rem; text-align:right; }
+    /* ── PROBLEM SECTION */
+    .problem-section { margin:0 -2rem; padding:7rem 5vw 5rem; background:var(--bg-surface); border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); overflow:hidden; position:relative; }
+    .problem-bg-text { position:absolute; top:50%; left:50%; transform:translate(-50%,-52%); font-family:var(--font-serif); font-size:clamp(16rem,30vw,28rem); font-weight:800; color:rgba(255,255,255,0.025); line-height:1; pointer-events:none; user-select:none; white-space:nowrap; letter-spacing:-0.04em; }
+    .problem-content { position:relative; z-index:1; }
+    .problem-center { text-align:center; margin-bottom:4rem; }
+    .stats-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
+    .metric-card { position:relative; }
+    .metric-trend--danger { color:#ef4444; }
+    .metric-trend--warn { color:#f59e0b; }
+    /* ── CF SECTION */
+    .cf-heading { font-family:var(--font-serif); font-size:clamp(2rem,3vw,2.75rem); font-weight:800; letter-spacing:-0.025em; line-height:1.1; color:var(--text-primary); margin-bottom:3rem; }
+    .cf-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr)); gap:1.5rem; align-items:stretch; }
+    .container-pt { padding-top:5rem; }
+    .section-mb4 { margin-bottom:4rem; }
+    .section-mb5 { margin-bottom:5rem; }
+    .section-mb8 { margin-bottom:8rem; }
+    /* ── DEMO WIDGET */
+    .demo-wrap-inner { margin-top:0; background:var(--bg-surface); border:1px solid rgba(37,211,102,0.2); border-radius:var(--radius-lg); box-shadow:0 0 60px rgba(37,211,102,0.05); position:relative; overflow:hidden; display:flex; flex-direction:column; }
+    .demo-glow { position:absolute; top:-80px; left:-80px; width:300px; height:300px; background:radial-gradient(circle,rgba(37,211,102,0.07) 0%,transparent 65%); pointer-events:none; z-index:0; }
+    .demo-header { position:relative; z-index:1; padding:1.5rem 1.5rem 1rem; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .demo-header-eyebrow { font-family:var(--font-mono); font-size:0.63rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.4rem; }
+    .demo-header-meta { display:flex; align-items:baseline; gap:1.5rem; }
+    .demo-header-title { font-family:var(--font-serif); font-size:1rem; font-weight:800; color:var(--text-primary); }
+    .demo-header-badge { font-family:var(--font-mono); font-size:0.72rem; color:rgba(37,211,102,0.8); }
+    .demo-body { position:relative; z-index:1; padding:1.25rem; flex:1; }
+    .demo-mockup-wrap { background:#0d0d0d; border-radius:14px; overflow:hidden; border:1px solid rgba(255,255,255,0.07); box-shadow:0 12px 40px rgba(0,0,0,0.4); }
+    .demo-topbar { background:#0a0a0a; padding:0.65rem 0.875rem; display:flex; align-items:center; gap:0.65rem; border-bottom:1px solid rgba(255,255,255,0.06); }
+    .demo-avatar { width:30px; height:30px; border-radius:50%; background:linear-gradient(135deg,#25d366,#128c7e); display:flex; align-items:center; justify-content:center; font-size:0.7rem; font-weight:700; color:white; flex-shrink:0; }
+    .demo-sender-name { font-size:0.78rem; font-weight:600; color:white; line-height:1.2; }
+    .demo-sender-status { font-size:0.6rem; color:rgba(255,255,255,0.35); }
+    #demo-chat { padding:0.875rem; min-height:100px; max-height:180px; overflow-y:auto; display:flex; flex-direction:column; gap:0.5rem; background:#0d1117; }
+    #demo-options { padding:0.75rem; display:flex; flex-direction:column; gap:0.4rem; background:#0f0f0f; border-top:1px solid rgba(255,255,255,0.05); }
+    .demo-footer { position:relative; z-index:1; padding:0.75rem 1.5rem 1.25rem; display:flex; align-items:center; gap:0.75rem; }
+    #demo-progress-wrap { display:flex; gap:3px; flex:1; }
+    #demo-progress-label { font-family:var(--font-mono); font-size:0.62rem; color:var(--text-tertiary); flex-shrink:0; }
+    .steps-col { display:flex; flex-direction:column; gap:1rem; }
+    .step-icon i { width:20px; height:20px; color:rgba(255,255,255,0.8); }
+    /* ── MID CTA */
+    .mid-cta-wrap { background:var(--bg-surface); border:1px solid var(--border-default); border-radius:var(--radius-lg); padding:3.5rem; text-align:center; position:relative; overflow:hidden; margin-bottom:5rem; }
+    .mid-cta-glow { position:absolute; top:-80px; left:50%; transform:translateX(-50%); width:360px; height:360px; background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%); pointer-events:none; }
+    .mid-cta-inner { position:relative; z-index:1; }
+    .mid-cta-eyebrow { font-family:var(--font-mono); font-size:0.65rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.12em; margin-bottom:0.75rem; }
+    .mid-cta-h3 { font-family:var(--font-serif); font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800; letter-spacing:-0.025em; color:var(--text-primary); line-height:1.1; margin-bottom:0.875rem; }
+    .mid-cta-p { font-size:0.9rem; color:var(--text-secondary); max-width:38ch; margin:0 auto 2rem; line-height:1.65; }
+    /* ── SCI SECTION */
+    .sci-section-wrap { margin-bottom:8rem; padding:2.5rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden; }
+    .sci-bg-glow { position:absolute; top:-60px; right:-60px; width:380px; height:380px; background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%); pointer-events:none; }
+    .sci-section-inner { display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:stretch; position:relative; z-index:1; }
+    .sci-tiles-inner { display:flex; flex-direction:column; border-left:1px solid var(--border-default); margin-top:-2.5rem; margin-bottom:-2.5rem; overflow:hidden; }
+    .sci-body-text { color:var(--text-secondary); font-size:1rem; line-height:1.75; }
+    .sci-strong { color:var(--text-primary); font-weight:500; }
+    /* ── CHART SECTION */
+    .metric-4-grid-wrap { display:grid; grid-template-columns:repeat(4,1fr); gap:1.25rem; margin-bottom:2rem; }
+    .chart-header-row { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem; }
+    .chart-title-h3 { font-family:var(--font-serif); font-size:1.4rem; font-weight:700; letter-spacing:-0.01em; color:var(--text-primary); margin-bottom:0.3rem; }
+    .chart-subtitle { font-size:0.75rem; color:var(--text-tertiary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em; }
+    .chart-legend-meta { display:flex; align-items:center; gap:0.6rem; font-family:var(--font-mono); font-size:0.68rem; color:var(--text-tertiary); }
+    .chart-divider { display:inline-block; width:1px; height:14px; background:rgba(255,255,255,0.2); }
+    /* ── DONUT SECTION */
+    .donut-section-wrap { margin-bottom:5rem; padding:3rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden; }
+    .donut-bg-glow { position:absolute; top:-80px; right:-80px; width:380px; height:380px; background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%); pointer-events:none; }
+    .donut-inner { position:relative; z-index:1; }
+    .donut-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+    .donut-body-text { color:var(--text-secondary); font-size:0.95rem; line-height:1.75; margin-bottom:2rem; }
+    /* ── TESTIMONIALS */
+    .testi-header-row { display:flex; align-items:flex-end; justify-content:space-between; gap:1.5rem; margin-bottom:2.5rem; flex-wrap:wrap; }
+    .testi-controls { display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-top:1.75rem; }
+    /* ── COMPARISON */
+    .cmp-table-wrap { overflow-x:auto; border-radius:var(--radius-lg); border:1px solid rgba(255,255,255,0.08); }
+    /* ── CTA SECTION */
+    .cta-section-wrap { margin-bottom:4rem; padding:5rem 3.5rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden; }
+    .cta-bg-glow { position:absolute; top:-80px; right:-80px; width:400px; height:400px; background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%); pointer-events:none; }
+    .cta-grid-inner { display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; position:relative; z-index:1; }
+    .cta-left-text { color:var(--text-secondary); font-size:0.95rem; line-height:1.7; margin-bottom:2rem; }
+    .cta-checklist { display:flex; flex-direction:column; gap:0.75rem; }
+    .cta-check-item { display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--text-secondary); }
+    .cta-check-icon { color:var(--color-success); font-size:0.9rem; flex-shrink:0; }
+    .cta-note { margin-top:2rem; font-size:0.85rem; color:var(--text-tertiary); }
+    .cta-note a { color:var(--accent-brand); text-decoration:underline; text-underline-offset:3px; }
+    .cta-right-panel { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:1.5rem; padding:2.5rem 2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); }
+    .cta-panel-eyebrow { font-family:var(--font-mono); font-size:0.65rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem; }
+    .cta-panel-text { font-size:0.9rem; color:var(--text-secondary); line-height:1.6; max-width:28rem; }
+    .cta-btn-lg { padding:1rem 2.5rem; font-size:1rem; }
+    .cta-sub-note { font-size:0.75rem; color:var(--text-tertiary); line-height:1.5; }
+    .cta-email-link { font-size:0.8rem; color:var(--text-tertiary); text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:1px; }
+    .cta-email-link span { color:var(--text-secondary); }
+    /* ── FAQ */
+    .faq-left { padding-top:0.5rem; }
+    .faq-note { font-size:0.875rem; color:var(--text-tertiary); line-height:1.65; margin-top:1.25rem; }
+    .faq-note a { color:var(--accent-brand); text-decoration:underline; text-underline-offset:3px; }
+    /* ── HERO PRODUCT CARD (JS-built) */
+    .hc-glow { position:absolute; inset:0; background:radial-gradient(circle at 75% 15%,var(--hc-glow-bg,transparent) 0%,transparent 65%); pointer-events:none; border-radius:inherit; }
+    .hc-inner { position:relative; z-index:1; height:100%; display:flex; flex-direction:column; }
+    .hc-header { display:flex; align-items:center; gap:0.6rem; }
+    .hc-icon-wrap { width:30px; height:30px; border-radius:7px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.07); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .hc-icon { width:11px; height:11px; border-radius:2px; background:var(--hc-accent,currentColor); }
+    .hc-label { font-family:var(--font-mono); font-size:0.63rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--hc-accent,var(--text-secondary)); opacity:0.75; }
+    .hero-card-body { flex:1; margin-top:0.875rem; overflow:hidden; }
+    .hc-center { flex:1; margin-top:0.875rem; display:flex; align-items:center; justify-content:center; }
+    .hc-center-text { font-family:var(--font-serif); font-size:1.5rem; font-weight:800; color:var(--text-primary); }
+    /* ── RH CARD BODY */
+    .hc-panel { display:flex; flex-direction:column; gap:0.35rem; }
+    .hc-rh-block { background:rgba(59,130,246,0.07); border:1px solid rgba(59,130,246,0.18); border-radius:10px; padding:0.5rem 0.75rem; }
+    .hc-block-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:0.4rem; }
+    .hc-block-head-left { display:flex; align-items:center; gap:0.4rem; }
+    .hc-pulse-dot { width:5px; height:5px; border-radius:50%; background:#25d366; box-shadow:0 0 5px rgba(37,211,102,0.7); flex-shrink:0; }
+    .hc-rh-label { font-family:var(--font-mono); font-size:0.55rem; color:rgba(255,255,255,0.45); text-transform:uppercase; letter-spacing:0.1em; }
+    .hc-rh-resp { font-family:var(--font-mono); font-size:0.55rem; color:rgba(59,130,246,0.6); }
+    .hc-score-row { display:flex; align-items:baseline; gap:0.35rem; margin-bottom:0.4rem; }
+    .hc-score-num { font-family:var(--font-serif); font-size:1.6rem; font-weight:800; color:#fff; line-height:1; letter-spacing:-0.03em; }
+    .hc-score-unit { font-size:0.55rem; color:rgba(255,255,255,0.35); font-family:var(--font-mono); }
+    .hc-score-delta { margin-left:auto; font-family:var(--font-mono); font-size:0.6rem; color:#10b981; }
+    .hc-metrics { display:flex; flex-direction:column; gap:0.28rem; }
+    .hc-metric-row { display:flex; justify-content:space-between; align-items:center; }
+    .hc-metric-name { font-size:0.63rem; color:rgba(255,255,255,0.4); }
+    .hc-metric-val { font-family:var(--font-mono); font-size:0.6rem; color:rgba(59,130,246,0.9); }
+    .hc-metric-val--g { color:#10b981; }
+    .hc-tags-row { display:flex; gap:0.35rem; }
+    .hc-tag { flex:1; background:rgba(59,130,246,0.05); border:1px solid rgba(59,130,246,0.12); border-radius:7px; padding:0.35rem 0.5rem; text-align:center; }
+    .hc-tag-lbl { font-family:var(--font-mono); font-size:0.55rem; color:rgba(59,130,246,0.7); margin-bottom:0.1rem; }
+    .hc-tag-val { font-size:0.6rem; color:rgba(255,255,255,0.45); }
+    .hc-tag-val--g { color:#10b981; }
+    /* ── EDU CARD BODY */
+    .hc-edu-panel { display:flex; flex-direction:column; gap:0.25rem; }
+    .hc-edu-toprow { display:flex; align-items:center; justify-content:space-between; gap:0.4rem; }
+    .hc-edu-badge { display:inline-flex; align-items:center; gap:0.4rem; padding:0.22rem 0.55rem; background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.22); border-radius:6px; }
+    .hc-edu-dot { width:4px; height:4px; border-radius:50%; background:#10b981; flex-shrink:0; }
+    .hc-edu-badge-text { font-family:var(--font-mono); font-size:0.57rem; color:rgba(16,185,129,0.85); letter-spacing:0.08em; text-transform:uppercase; }
+    .hc-edu-cliques { display:inline-flex; align-items:center; gap:0.3rem; padding:0.22rem 0.5rem; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:6px; }
+    .hc-edu-cliques-num { font-family:var(--font-mono); font-size:0.63rem; font-weight:700; color:rgba(255,255,255,0.7); }
+    .hc-edu-cliques-lbl { font-size:0.57rem; color:rgba(255,255,255,0.35); }
+    .hc-edu-ife-wrap { background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.14); border-radius:8px; padding:0.45rem 0.7rem; display:flex; align-items:center; justify-content:space-between; }
+    .hc-edu-ife-sub { font-size:0.63rem; color:rgba(255,255,255,0.38); margin-bottom:0.1rem; }
+    .hc-edu-ife-val { font-family:var(--font-serif); font-size:1.25rem; font-weight:800; color:#10b981; line-height:1; }
+    .hc-edu-ife-icon { width:28px; height:28px; border-radius:50%; border:1.5px solid rgba(16,185,129,0.28); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .hc-edu-courses { background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); border-radius:8px; padding:0.45rem 0.7rem; display:flex; flex-direction:column; gap:0.32rem; }
+    .hc-edu-courses-lbl { font-family:var(--font-mono); font-size:0.56rem; color:rgba(255,255,255,0.25); text-transform:uppercase; letter-spacing:0.08em; }
+    .hc-edu-course-row { display:flex; align-items:center; gap:0.45rem; }
+    .hc-edu-course-name { font-size:0.63rem; color:rgba(255,255,255,0.45); width:70px; flex-shrink:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .hc-edu-bar-wrap { flex:1; height:3px; background:rgba(255,255,255,0.06); border-radius:2px; overflow:hidden; }
+    .hc-edu-bar { height:3px; border-radius:2px; }
+    .hc-edu-bar--r { width:72%; background:rgba(239,68,68,0.75); }
+    .hc-edu-bar--y { width:36%; background:rgba(251,191,36,0.75); }
+    .hc-edu-bar--g { width:20%; background:rgba(16,185,129,0.75); }
+    .hc-edu-pct { font-family:var(--font-mono); font-size:0.59rem; flex-shrink:0; }
+    .hc-edu-pct--r { color:rgba(239,68,68,0.8); }
+    .hc-edu-pct--y { color:rgba(251,191,36,0.8); }
+    .hc-edu-pct--g { color:rgba(16,185,129,0.8); }
+    .hc-edu-alert { background:rgba(239,68,68,0.06); border:1px solid rgba(239,68,68,0.16); border-radius:8px; padding:0.38rem 0.7rem; display:flex; align-items:center; gap:0.5rem; }
+    .hc-edu-alert-dot { width:4px; height:4px; border-radius:50%; background:rgba(239,68,68,0.8); flex-shrink:0; box-shadow:0 0 5px rgba(239,68,68,0.5); }
+    .hc-edu-alert-text { font-size:0.66rem; color:rgba(255,255,255,0.45); }
+    .hc-edu-alert-badge { margin-left:auto; font-family:var(--font-mono); font-size:0.58rem; color:rgba(239,68,68,0.65); }
+    /* ── DEMO renderChat */
+    .demo-committed-wrap { display:flex; flex-direction:column; gap:0.75rem; padding:0.25rem 0; }
+    .demo-committed-header { text-align:center; padding:0.5rem 0; }
+    .demo-committed-title { font-size:0.75rem; font-weight:600; color:rgba(255,255,255,0.85); margin-bottom:0.2rem; }
+    .demo-committed-stamp { font-family:var(--font-mono); font-size:0.6rem; color:rgba(255,255,255,0.3); }
+    .demo-commitment-box { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:8px; padding:0.75rem; }
+    .demo-commitment-lbl { font-family:var(--font-mono); font-size:0.58rem; color:rgba(255,255,255,0.3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.4rem; }
+    .demo-commitment-text { font-size:0.78rem; color:rgba(255,255,255,0.8); line-height:1.55; margin:0; font-style:italic; }
+    .demo-note { font-size:0.7rem; color:rgba(255,255,255,0.35); line-height:1.55; text-align:center; margin:0; }
+    .demo-analysis-wrap { display:flex; flex-direction:column; gap:0.625rem; }
+    .demo-analysis-hdr { font-family:var(--font-mono); font-size:0.58rem; color:rgba(255,255,255,0.25); text-align:center; padding-top:0.25rem; text-transform:uppercase; letter-spacing:0.08em; }
+    .demo-score-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.375rem; }
+    .demo-score-cell { border-radius:6px; padding:0.5rem 0.65rem; border:1px solid; }
+    .demo-score-cell--g { background:rgba(16,185,129,0.08); border-color:rgba(16,185,129,0.22); }
+    .demo-score-cell--y { background:rgba(245,158,11,0.08); border-color:rgba(245,158,11,0.22); }
+    .demo-score-cell--r { background:rgba(239,68,68,0.08); border-color:rgba(239,68,68,0.22); }
+    .demo-score-name { font-size:0.6rem; color:rgba(255,255,255,0.4); margin-bottom:0.2rem; }
+    .demo-score-lbl { font-size:0.72rem; font-weight:600; }
+    .demo-score-lbl--g { color:#10b981; }
+    .demo-score-lbl--y { color:#f59e0b; }
+    .demo-score-lbl--r { color:#ef4444; }
+    .demo-ai-insight { background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.09); border-radius:8px 8px 8px 3px; padding:0.75rem; margin-top:0.125rem; }
+    .demo-ai-source { font-family:var(--font-mono); font-size:0.58rem; color:rgba(255,255,255,0.3); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:0.45rem; }
+    .demo-ai-text { font-size:0.78rem; color:rgba(255,255,255,0.82); line-height:1.55; margin:0; }
+    .demo-textarea { width:100%; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:8px; color:rgba(255,255,255,0.85); font-family:inherit; font-size:0.78rem; padding:0.65rem 0.75rem; resize:none; min-height:68px; outline:none; line-height:1.5; box-sizing:border-box; }
+    .demo-option--submit { text-align:center; color:rgba(255,255,255,0.8); border-color:rgba(255,255,255,0.14); }
+    .demo-option--reset { text-align:center; color:rgba(255,255,255,0.45); }
+    .demo-answer-row { display:flex; gap:0.4rem; align-items:flex-start; opacity:0.45; }
+    .demo-answer-num { font-size:0.62rem; color:rgba(255,255,255,0.3); flex-shrink:0; line-height:1.9; }
+    .demo-answer-text { background:rgba(255,255,255,0.05); border-radius:8px; padding:0.35rem 0.55rem; font-size:0.7rem; color:rgba(255,255,255,0.6); line-height:1.35; }
+    .demo-q-bubble { background:rgba(37,211,102,0.09); border:1px solid rgba(37,211,102,0.16); border-radius:12px 12px 12px 3px; padding:0.75rem 0.9rem; font-size:0.8125rem; color:rgba(255,255,255,0.88); line-height:1.45; }
+    .demo-hint { font-family:var(--font-mono); font-size:0.57rem; color:rgba(255,255,255,0.22); text-transform:uppercase; letter-spacing:0.09em; margin-bottom:0.35rem; padding:0 0.1rem; }
     </style>
 </head>
 <body>
 
-<a href="#main-content" style="position:absolute;top:-999px;left:-999px;padding:0.5rem 1rem;background:var(--bg-surface);color:var(--text-primary);border:1px solid var(--border-default);border-radius:4px;font-size:0.875rem;z-index:9999;text-decoration:none;" onfocus="this.style.top='1rem';this.style.left='1rem';" onblur="this.style.top='-999px';this.style.left='-999px';">Pular para o conteúdo</a>
+<a href="#main-content" class="skip-link">Pular para o conteúdo</a>
 
 <!-- NAV -->
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter"></a>
 
         <ul class="nav-links">
 
@@ -301,7 +555,7 @@
         </ul>
 
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="#" style="text-decoration:none;" onclick="openCalendlyModal('nav_demo');return false;">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="#" onclick="openCalendlyModal('nav_demo');return false;">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -314,7 +568,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter"><button id="nav-close" class="nav-close" aria-label="Fechar menu"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -340,7 +594,7 @@
             <a class="drawer-plain-link" href="/blog/">Blog</a>
 
             <div class="drawer-cta">
-                <a class="btn btn-primary w-full" href="#" style="text-decoration:none; justify-content:center;" onclick="openCalendlyModal('drawer_demo');return false;">Agendar demonstração</a>
+                <a class="btn btn-primary w-full" href="#" onclick="openCalendlyModal('drawer_demo');return false;">Agendar demonstração</a>
             </div>
         </div>
     </div>
@@ -349,103 +603,103 @@
     <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
     <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
     <!-- HERO -->
-    <section id="hero-section" class="relative" style="height:650px; overflow:hidden; margin-top:-64px; margin-bottom:0; margin-left:-2rem; margin-right:-2rem;">
+    <section id="hero-section" class="relative">
         <canvas id="hero-brain-canvas"></canvas>
         <!-- Card centered exactly at sphere center -->
-        <div class="hero-card-wrap" style="position:absolute; top:50%; left:50%; transform:translate(-50%, calc(-50% - 80px)); display:flex; flex-direction:column; align-items:center; gap:1.25rem; z-index:1;">
-            <div id="heroCardsWrap" style="position:relative; width:260px; height:340px;"></div>
-            <div style="display:flex; align-items:center; gap:0.75rem;">
+        <div class="hero-card-wrap">
+            <div id="heroCardsWrap"></div>
+            <div class="hero-dots-row">
                 <button class="hero-nav-btn hero-nav-inline" onclick="heroNav(-1)" aria-label="Anterior">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L6 8l4 5"/></svg>
                 </button>
-                <div id="heroDots" style="display:flex; gap:6px; justify-content:center;"></div>
+                <div id="heroDots"></div>
                 <button class="hero-nav-btn hero-nav-inline" onclick="heroNav(1)" aria-label="Próximo">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l4 5-4 5"/></svg>
                 </button>
             </div>
         </div>
         <!-- Nav arrows laterais (desktop) -->
-        <button class="hero-nav-btn hero-nav-side" style="left:2rem; position:absolute; top:50%; transform:translateY(-50%); z-index:2;" onclick="heroNav(-1)" aria-label="Anterior">
+        <button class="hero-nav-btn hero-nav-side hero-nav-side--l" onclick="heroNav(-1)" aria-label="Anterior">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L6 8l4 5"/></svg>
         </button>
-        <button class="hero-nav-btn hero-nav-side" style="right:2rem; position:absolute; top:50%; transform:translateY(-50%); z-index:2;" onclick="heroNav(1)" aria-label="Próximo">
+        <button class="hero-nav-btn hero-nav-side hero-nav-side--r" onclick="heroNav(1)" aria-label="Próximo">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3l4 5-4 5"/></svg>
         </button>
         <!-- Bottom bar -->
         <div class="hero-bottom-bar">
-            <div style="flex:1;">
-                <h1 id="heroHeading" style="font-family:var(--font-serif); font-size:clamp(2rem,2.6vw,3rem); font-weight:800; letter-spacing:-0.03em; line-height:1.08; color:var(--text-primary); transition:opacity 0.22s ease;">Clima e saúde mental do seu time,<br>medidos em 2 minutos pelo WhatsApp.</h1>
+            <div class="hero-bottom-left">
+                <h1 id="heroHeading">Clima e saúde mental do seu time, <br>medidos em 2 minutos pelo WhatsApp.</h1>
             </div>
             <div class="hero-bottom-right">
-                <p id="heroDesc" style="color:var(--text-secondary); font-size:0.875rem; line-height:1.6; transition:opacity 0.22s ease;"></p>
-                <div class="hero-btns" style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-                    <a id="heroSegEmpresaBtn" href="/solucoes/rh/" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_empresa'})">Sou uma Empresa →</a>
-                    <a id="heroSegEduBtn" href="/solucoes/educacao/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;display:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_educacao'})">Sou uma Universidade →</a>
-                    <a id="heroDemoBtn" href="#" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="openCalendlyModal('hero_demo');return false;">Agendar demonstração</a>
-                    <a id="heroSecondaryBtn" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'hero_guia'})">Baixar guia gratuito</a>
+                <p id="heroDesc"></p>
+                <div class="hero-btns">
+                    <a id="heroSegEmpresaBtn" href="/solucoes/rh/" class="btn btn-primary btn-animate-chars" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_empresa'})">Sou uma Empresa →</a>
+                    <a id="heroSegEduBtn" href="/solucoes/educacao/" class="btn btn-secondary btn-animate-chars" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'seg_educacao'})">Sou uma Universidade →</a>
+                    <a id="heroDemoBtn" href="#" class="btn btn-primary btn-animate-chars" onclick="openCalendlyModal('hero_demo');return false;">Agendar demonstração</a>
+                    <a id="heroSecondaryBtn" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars" onclick="if(window.gtag)gtag('event','click',{event_category:'cta',event_label:'hero_guia'})">Baixar guia gratuito</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- PROVA SOCIAL — strip compacta, junto ao hero na primeira dobra -->
-    <section id="prova-social" style="margin:0 -2rem; padding:2.5rem 2rem; border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); background:var(--bg-surface); overflow:hidden;">
-        <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;text-align:center;margin-bottom:0.75rem;">+500.000 pessoas medidas · De startups à Marinha do Brasil</p>
-        <div class="marquee-mask" style="overflow:hidden;white-space:nowrap;">
+    <section id="prova-social">
+        <p class="ps-eyebrow">+500.000 pessoas medidas · De startups à Marinha do Brasil</p>
+        <div class="marquee-mask">
             <div class="logo-marquee">
-                <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
-                <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
-                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
-                <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
-                <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
-                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
-                <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
-                <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
-                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
-                <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
-                <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
-                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
+                <div class="logo-item logo-sans-800">BRASPRESS</div>
+                <div class="logo-item logo-serif-700">Kroton</div>
+                <div class="logo-item logo-mono-600t">ARCOR</div>
+                <div class="logo-item logo-sans-700">Marinha do Brasil</div>
+                <div class="logo-item logo-serif-400">USP</div>
+                <div class="logo-item logo-mono-600">Fatec</div>
+                <div class="logo-item logo-sans-800">BRASPRESS</div>
+                <div class="logo-item logo-serif-700">Kroton</div>
+                <div class="logo-item logo-mono-600t">ARCOR</div>
+                <div class="logo-item logo-sans-700">Marinha do Brasil</div>
+                <div class="logo-item logo-serif-400">USP</div>
+                <div class="logo-item logo-mono-600">Fatec</div>
             </div>
         </div>
     </section>
 
     <!-- O CUSTO DO SILÊNCIO -->
-    <section style="margin:0 -2rem; padding:7rem 5vw 5rem; background:var(--bg-surface); border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); overflow:hidden; position:relative;">
-        <div aria-hidden="true" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);font-family:var(--font-serif);font-size:clamp(16rem,30vw,28rem);font-weight:800;color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;letter-spacing:-0.04em;">70%</div>
-        <div style="position:relative;z-index:1;">
-            <div style="text-align:center;margin-bottom:4rem;">
-                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.5rem;">O problema que ninguém quer ver</p>
-                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.875rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">
+    <section class="problem-section">
+        <div aria-hidden="true" class="problem-bg-text">70%</div>
+        <div class="problem-content">
+            <div class="problem-center">
+                <p class="eyebrow-brand" style="margin-bottom:1.5rem;">O problema que ninguém quer ver</p>
+                <h2 data-reveal class="section-h2" style="margin-bottom:1.5rem;">
                     70% dos colaboradores brasileiros não estão engajados.
                 </h2>
-                <p style="color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto 0.625rem;">
+                <p class="section-body" style="max-width:560px;margin:0 auto 0.625rem;">
                     O maior risco não é o que você vê, é o colaborador que parece bem, entrega o mínimo e já está com um pé fora.
                 </p>
-                <p style="color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">
+                <p class="section-body" style="max-width:560px;margin:0 auto;">
                     A pesquisa anual detecta o problema <em>após</em> o dano. A Fiter detecta <em>antes</em>.
                 </p>
             </div>
-            <div class="stats-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
-                <div class="metric-card fade-up" style="--reveal-delay:0s;position:relative;">
+            <div class="stats-grid stats-grid-3">
+                <div class="metric-card fade-up" style="--reveal-delay:0s">
                     <span class="metric-value" style="font-size:2.75rem;">R$&nbsp;48k</span>
-                    <div class="metric-trend" style="color:#ef4444;">↑ custo crescente</div>
+                    <div class="metric-trend metric-trend--danger">↑ custo crescente</div>
                     <span class="metric-label">custo de substituição por colaborador desligado</span>
                     <span class="metric-sub">Fonte: SHRM</span>
                 </div>
-                <div class="metric-card fade-up" style="--reveal-delay:0.1s;position:relative;">
+                <div class="metric-card fade-up" style="--reveal-delay:0.1s">
                     <span class="metric-value" style="font-size:2.75rem;">34%</span>
-                    <div class="metric-trend" style="color:#ef4444;">→ invisível ao RH</div>
+                    <div class="metric-trend metric-trend--danger">→ invisível ao RH</div>
                     <span class="metric-label">dos desligamentos chegam sem nenhum sinal</span>
                     <span class="metric-sub">Gallup State of Global Workplace 2023</span>
                 </div>
-                <div class="metric-card fade-up" style="--reveal-delay:0.2s;position:relative;">
+                <div class="metric-card fade-up" style="--reveal-delay:0.2s">
                     <span class="metric-value" style="font-size:2.75rem;">1 ano</span>
-                    <div class="metric-trend" style="color:#f59e0b;">→ tarde demais para agir</div>
+                    <div class="metric-trend metric-trend--warn">→ tarde demais para agir</div>
                     <span class="metric-label">intervalo médio entre pesquisas de clima tradicionais</span>
                     <span class="metric-sub">Mercado BR médio</span>
                 </div>
             </div>
-            <p style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-secondary);opacity:0.4;margin-top:1.25rem;text-align:right;">Fontes: Gallup State of the Global Workplace 2023 · SHRM</p>
+            <p class="text-footnote">Fontes: Gallup State of the Global Workplace 2023 · SHRM</p>
         </div>
     </section>
 
@@ -453,7 +707,7 @@
     <div class="ds-container lg:px-6" style="padding-top:5rem;">
         <section id="como-funciona" class="ds-section" style="margin-bottom:4rem;">
             <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Do dado à decisão.</p>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;align-items:stretch;">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:1.5rem;align-items:stretch;">
 
                 <!-- ESQUERDA: Demo interativo -->
                 <div class="demo-wrap" style="margin-top:0;background:var(--bg-surface);border:1px solid rgba(37,211,102,0.2);border-radius:var(--radius-lg);box-shadow:0 0 60px rgba(37,211,102,0.05);position:relative;overflow:hidden;display:flex;flex-direction:column;">
@@ -532,7 +786,7 @@
             <div aria-hidden="true" style="position:absolute;top:-80px;left:50%;transform:translateX(-50%);width:360px;height:360px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
             <div style="position:relative;z-index:1;">
                 <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:0.75rem;">Próximo passo</p>
-                <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:-0.025em;color:var(--text-primary);line-height:1.1;margin-bottom:0.875rem;">Viu como funciona.<br>Agora veja com os dados do seu time.</h3>
+                <h3 style="font-family:var(--font-serif);font-size:clamp(1.5rem,2.5vw,2rem);font-weight:800;letter-spacing:-0.025em;color:var(--text-primary);line-height:1.1;margin-bottom:0.875rem;">Viu como funciona. <br>Agora veja com os dados do seu time.</h3>
                 <p style="font-size:0.9rem;color:var(--text-secondary);max-width:38ch;margin:0 auto 2rem;line-height:1.65;">30 minutos com um especialista. Sem pitch de uma hora. Você decide se faz sentido.</p>
                 <a href="#" class="btn btn-primary btn-animate-chars" style="text-decoration:none;" onclick="openCalendlyModal('midpage_como_funciona');return false;">Agendar demonstração</a>
             </div>
@@ -541,10 +795,55 @@
 
     <div class="ds-container lg:px-6">
 
+        <!-- CREDIBILIDADE CIENTÍFICA -->
+        <section class="ds-section sci-section" style="margin-bottom:8rem; padding:2.5rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
+            <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
+            <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
+                <div class="sci-narrative">
+                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
+                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">
+                        É deeptech com <br>DNA na USP.
+                    </h2>
+                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
+                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
+                </div>
+                <div class="sci-tiles" style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-2.5rem;margin-bottom:-2.5rem;overflow:hidden;">
+                    <div class="sci-tile fade-up" style="--reveal-delay:0s;">
+                        <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">DNA Científico</div>
+                            <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
+                        </div>
+                    </div>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
+                        <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Liderança Prática</div>
+                            <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
+                        </div>
+                    </div>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
+                        <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Ecossistema USP</div>
+                            <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
+                        </div>
+                    </div>
+                    <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
+                        <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
+                        <div>
+                            <div class="sci-title">Selos e Certificações</div>
+                            <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- RESULTADOS EM NÚMEROS -->
         <section class="ds-section" style="margin-bottom:5rem;">
             <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Resultados comprovados</p>
-            <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">O que acontece quando<br>seu time é ouvido de verdade.</h2>
+            <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">O que acontece quando <br>seu time é ouvido de verdade.</h2>
 
             <div class="metric-4-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-bottom:2rem;">
                 <div class="metric-card fade-up" data-metric="87" data-suffix="%" style="--reveal-delay:0s;position:relative;">
@@ -619,10 +918,65 @@
             </div>
         </section>
 
+        <!-- SAUDE DO TIME: DONUT CHART -->
+        <section class="ds-section" style="margin-bottom:5rem;padding:3rem;background:var(--bg-surface);border-radius:var(--radius-lg);border:1px solid var(--border-default);position:relative;overflow:hidden;">
+            <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
+            <div style="position:relative;z-index:1;">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Visibilidade em tempo real</p>
+                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,3vw,2.25rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:2.5rem;">Saúde do time. <br>Visível todo mês.</h2>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="donut-section-grid">
+                    <div>
+                        <div class="donut-chart-wrap" id="donut-clima" data-chart='[{"label":"Satisfeito","pct":52,"color":"#10b981"},{"label":"Neutro","pct":28,"color":"#3b82f6"},{"label":"Atenção","pct":13,"color":"#f59e0b"},{"label":"Em risco","pct":7,"color":"#ef4444"}]'></div>
+                    </div>
+                    <div>
+                        <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.75;margin-bottom:2rem;">Distribuição do índice de bem-estar coletado mensalmente pela Fiter. Passe o cursor sobre cada segmento para detalhar. Dados anonimizados e agregados em tempo real.</p>
+                        <div class="donut-legend" id="donut-legend-clima"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEPOIMENTOS -->
+        <section class="ds-section" style="margin-bottom:8rem;">
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:2.5rem;flex-wrap:wrap;">
+                <div>
+                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:0.75rem;">Depoimentos</p>
+                    <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);">Resultados reais. <br>Palavras deles.</p>
+                </div>
+            </div>
+
+            <div class="testi-carousel-wrap">
+                <div class="testi-carousel-track" id="testi-track">
+                    <div class="testi-card">
+                        <p class="testi-quote">"A Fiter <strong>transformou a forma como olhamos para a nossa operação.</strong> Antes, reagíamos aos desligamentos. Hoje, conseguimos prever e reter os melhores talentos antes que eles saiam."</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">CR</div>
+                            <div><div class="testi-name">Carlos Ramos</div><div class="testi-role">Diretor de RH · Braspress</div></div>
+                        </div>
+                    </div>
+                    <div class="testi-card">
+                        <p class="testi-quote">"Tínhamos um problema sério de evasão invisível. Com o <strong>mapeamento da Fiter, passamos a intervir antes do aluno pensar em trancar</strong> a matrícula."</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">MV</div>
+                            <div><div class="testi-name">Prof. Dr. Marcos Ventura</div><div class="testi-role">Reitor · USP / Fatec</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;margin-top:1.75rem;">
+                <button class="testi-carousel-btn" id="testi-prev" aria-label="Anterior"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+                <div class="testi-carousel-dots" id="testi-dots">
+                    <button class="testi-carousel-dot active" aria-label="Card 1"></button>
+                    <button class="testi-carousel-dot" aria-label="Card 2"></button>
+                </div>
+                <button class="testi-carousel-btn" id="testi-next" aria-label="Proximo"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+        </section>
+
         <!-- COMPARATIVO: Fiter vs. Pesquisa Anual -->
         <section class="ds-section" style="margin-bottom:5rem;">
             <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Por que Fiter</p>
-            <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Não é só uma pesquisa.<br>É inteligência contínua.</h2>
+            <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Não é só uma pesquisa. <br>É inteligência contínua.</h2>
             <div style="overflow-x:auto;border-radius:var(--radius-lg);border:1px solid rgba(255,255,255,0.08);">
                 <table class="cmp-table">
                     <thead>
@@ -630,7 +984,6 @@
                             <th></th>
                             <th>Pesquisa anual</th>
                             <th class="cmp-featured">Fiter</th>
-                            <th>GPTW</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -638,143 +991,50 @@
                             <td>Frequência</td>
                             <td>1x ao ano</td>
                             <td class="cmp-featured"><span class="cmp-check">Mensal, configurável</span></td>
-                            <td>1x ao ano</td>
                         </tr>
                         <tr>
                             <td>Canal de coleta</td>
                             <td>E-mail / formulário</td>
                             <td class="cmp-featured"><span class="cmp-check">WhatsApp · 8 cliques</span></td>
-                            <td>Formulário digital</td>
                         </tr>
                         <tr>
                             <td>Taxa de resposta</td>
                             <td>~22% média</td>
                             <td class="cmp-featured"><span class="cmp-check">87% média</span></td>
-                            <td>~35% (obrigatório)</td>
                         </tr>
                         <tr>
                             <td>Resultados</td>
                             <td>Semanas a meses</td>
                             <td class="cmp-featured"><span class="cmp-check">Tempo real</span></td>
-                            <td>2 a 3 meses</td>
                         </tr>
                         <tr>
                             <td>Predição de turnover</td>
                             <td><span class="cmp-cross"></span></td>
                             <td class="cmp-featured"><span class="cmp-check">IA preditiva</span></td>
-                            <td><span class="cmp-cross"></span></td>
                         </tr>
                         <tr>
                             <td>Plano de ação automático</td>
                             <td><span class="cmp-cross"></span></td>
                             <td class="cmp-featured"><span class="cmp-check">Gerado por IA</span></td>
-                            <td><span class="cmp-cross"></span></td>
                         </tr>
                         <tr>
                             <td>Conformidade NR1</td>
                             <td><span class="cmp-cross"></span></td>
                             <td class="cmp-featured"><span class="cmp-check">Integrado</span></td>
-                            <td><span class="cmp-cross"></span></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
 
-        <!-- CREDIBILIDADE CIENTÍFICA -->
-        <section class="ds-section sci-section" style="margin-bottom:8rem; padding:2.5rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
-            <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(255,255,255,0.04) 0%,transparent 70%);pointer-events:none;"></div>
-            <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
-                <div class="sci-narrative">
-                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
-                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">
-                        É deeptech com<br>DNA na USP.
-                    </h2>
-                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
-                    <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
-                </div>
-                <div class="sci-tiles" style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-2.5rem;margin-bottom:-2.5rem;overflow:hidden;">
-                    <div class="sci-tile fade-up" style="--reveal-delay:0s;">
-                        <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">DNA Científico</div>
-                            <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
-                        </div>
-                    </div>
-                    <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
-                        <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">Liderança Prática</div>
-                            <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
-                        </div>
-                    </div>
-                    <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
-                        <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">Ecossistema USP</div>
-                            <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
-                        </div>
-                    </div>
-                    <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
-                        <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
-                        <div>
-                            <div class="sci-title">Selos e Certificações</div>
-                            <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- DEPOIMENTOS -->
-        <section class="ds-section" style="margin-bottom: 8rem;">
-            <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Resultados reais.<br>Palavras deles.</p>
-
-            <div class="testi-featured fade-up" style="margin-bottom:1.5rem;--reveal-delay:0s;">
-                <p class="testi-featured-quote">"A Fiter <em>transformou a forma como olhamos para a nossa operação.</em> Antes, reagíamos aos desligamentos. Hoje, conseguimos prever e reter os nossos melhores talentos antes que eles saiam."</p>
-                <div class="testi-featured-author">
-                    <div class="testi-featured-avatar">CR</div>
-                    <div>
-                        <div class="testi-featured-name">Carlos Ramos</div>
-                        <div class="testi-featured-role">Diretor de RH · Braspress</div>
-                    </div>
-                    <div class="testi-featured-divider"></div>
-                    <div class="testi-featured-company">+3.000 colaboradores medidos mensalmente</div>
-                </div>
-            </div>
-
-            <div class="testi-grid" style="grid-template-columns:repeat(2,1fr);">
-                <div class="testi-card" style="--testi-delay: 0.15s">
-                    <p class="testi-quote">"Tínhamos um problema sério de evasão invisível. Com o <strong>mapeamento da Fiter, passamos a intervir antes do aluno pensar em trancar</strong> a matrícula."</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar">MV</div>
-                        <div>
-                            <div class="testi-name">Prof. Dr. Marcos Ventura</div>
-                            <div class="testi-role">Reitor · USP / Fatec</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-card" style="--testi-delay: 0.3s">
-                    <p class="testi-quote">"Em 30 dias de uso, <strong>nossa taxa de resposta saiu de 18% para 89%.</strong> O RH finalmente tem dados para tomar decisões com confiança."</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar">RL</div>
-                        <div>
-                            <div class="testi-name">Renata Lima</div>
-                            <div class="testi-role">CHRO · Kroton</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- CTA FINAL -->
         <section id="cta-section" class="ds-section cta-section" style="margin-bottom:4rem; padding:5rem 3.5rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
             <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none;"></div>
-            <div class="cta-grid" style="display:grid; grid-template-columns:1fr 1.2fr; gap:5rem; align-items:start; position:relative; z-index:1;">
+            <div class="cta-grid" style="display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; position:relative; z-index:1;">
                 <div>
                     <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
-                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">Veja o que<br>seu time<br>não está dizendo.</h2>
-                    <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;max-width:420px;margin-bottom:2rem;">30 minutos. Um especialista. Você entende se a Fiter resolve o que você precisa sem compromisso, sem pitch de uma hora.</p>
+                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">Veja o que <br>seu time <br>não está dizendo.</h2>
+                    <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:2rem;">30 minutos. Um especialista. Você entende se a Fiter resolve o que você precisa sem compromisso, sem pitch de uma hora.</p>
                     <div style="display:flex;flex-direction:column;gap:0.75rem;">
                         <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Plataforma real e não um slide</div>
                         <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Especialista que conhece as objeções</div>
@@ -782,7 +1042,7 @@
                     </div>
                     <p style="margin-top:2rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">Baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
                 </div>
-                <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2rem;padding:2rem 1.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
+                <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.5rem;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);">
                     <div>
                         <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Escolha um horário</div>
                         <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;max-width:28rem;">Agende diretamente na agenda do especialista. Sem espera, sem formulário.</p>
@@ -796,7 +1056,12 @@
 
         <!-- FAQ -->
         <section class="ds-section" style="margin-bottom: 8rem;">
-            <div style="max-width: 760px; margin: 0 auto;">
+            <div class="faq-2col">
+                <div style="padding-top:0.5rem;">
+                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:0.75rem;">FAQ</p>
+                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.25rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;">Perguntas <br>frequentes</h2>
+                    <p style="font-size:0.875rem;color:var(--text-tertiary);line-height:1.65;margin-top:1.25rem;">Ainda tem dúvidas? <br><a href="mailto:contato@fiter.com.br" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">Fale com a gente</a></p>
+                </div>
                 <div class="faq-list">
                     <div class="faq-item">
                         <button class="faq-trigger">
@@ -960,7 +1225,7 @@
         {
             name: 'Recursos\nHumanos',
             tagline: 'Gestão de pessoas inteligente',
-            heading: 'Antecipe o turnover<br>antes que aconteça.',
+            heading: 'Antecipe o turnover <br>antes que aconteça.',
             desc: 'Meça engajamento, felicidade e saúde mental do seu time em tempo real. Do pulso diário ao diagnóstico completo de RH.',
             accent: '#3b82f6',
             glowBg: 'rgba(59,130,246,0.13)',
@@ -1015,7 +1280,7 @@
         {
             name: 'Educação',
             tagline: 'Retenção de alunos com IA',
-            heading: 'Preveja a evasão antes<br>que o aluno desapareça.',
+            heading: 'Preveja a evasão antes <br>que o aluno desapareça.',
             desc: 'IFE em 8 cliques com alertas automáticos para coordenadores. Retenção de alunos com dados, não com achismo.',
             accent: '#10b981',
             glowBg: 'rgba(16,185,129,0.13)',
@@ -1223,8 +1488,8 @@
             if (isSeg) {
                 if (sec) sec.style.display = 'none';
                 if (demo) demo.style.display = 'none';
-                if (segEmpresa) segEmpresa.style.display = '';
-                if (segEdu) segEdu.style.display = '';
+                if (segEmpresa) segEmpresa.style.display = 'inline-flex';
+                if (segEdu) segEdu.style.display = 'inline-flex';
             } else {
                 if (segEmpresa) segEmpresa.style.display = 'none';
                 if (segEdu) segEdu.style.display = 'none';
@@ -1719,6 +1984,134 @@ import * as THREE from 'three';
             success.classList.add('is-visible');
         }, 1400);
     });
+})();
+</script>
+<script>
+// ── Donut Chart ──────────────────────────────────────────────────
+(function () {
+    var R = 100, STROKE = 22, CX = 130, CY = 130;
+    var circumference = 2 * Math.PI * R;
+
+    function buildDonutChart(wrapEl) {
+        var data = JSON.parse(wrapEl.dataset.chart);
+        var legendId = wrapEl.id.replace('donut-', 'donut-legend-');
+        var legendEl = document.getElementById(legendId);
+        if (!legendEl) return;
+
+        var svgNS = 'http://www.w3.org/2000/svg';
+        var svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('viewBox', '0 0 260 260');
+        svg.setAttribute('width', '260');
+        svg.setAttribute('height', '260');
+
+        var bg = document.createElementNS(svgNS, 'circle');
+        bg.setAttribute('cx', CX); bg.setAttribute('cy', CY); bg.setAttribute('r', R);
+        bg.setAttribute('fill', 'none');
+        bg.setAttribute('stroke', 'rgba(255,255,255,0.04)');
+        bg.setAttribute('stroke-width', STROKE);
+        svg.appendChild(bg);
+
+        var segments = [], offset = -90;
+        data.forEach(function(d, i) {
+            var frac = d.pct / 100;
+            var dash = frac * circumference;
+            var gap  = circumference - dash;
+            var startAngle = offset;
+            var circle = document.createElementNS(svgNS, 'circle');
+            circle.setAttribute('cx', CX); circle.setAttribute('cy', CY); circle.setAttribute('r', R);
+            circle.setAttribute('fill', 'none');
+            circle.setAttribute('stroke', d.color);
+            circle.setAttribute('stroke-width', STROKE);
+            circle.setAttribute('stroke-dasharray', '0 ' + circumference);
+            circle.setAttribute('stroke-dashoffset', (-startAngle / 360 * circumference).toString());
+            circle.setAttribute('stroke-linecap', 'butt');
+            circle.style.transition = 'stroke-dasharray 0.7s cubic-bezier(0.4,0,0.2,1) ' + (i * 0.12) + 's, stroke-width 0.2s ease, opacity 0.2s ease';
+            circle.style.transformOrigin = CX + 'px ' + CY + 'px';
+            svg.appendChild(circle);
+            segments.push({ circle: circle, dash: dash, gap: gap, d: d });
+            offset += frac * 360;
+        });
+        wrapEl.appendChild(svg);
+
+        var center = document.createElement('div');
+        center.className = 'donut-center';
+        center.innerHTML = '<div class="donut-center-value" id="' + wrapEl.id + '-cv">' + data[0].pct + '%</div><div class="donut-center-label" id="' + wrapEl.id + '-cl">' + data[0].label + '</div>';
+        wrapEl.appendChild(center);
+        var cv = document.getElementById(wrapEl.id + '-cv');
+        var cl = document.getElementById(wrapEl.id + '-cl');
+
+        data.forEach(function(d, i) {
+            var item = document.createElement('div');
+            item.className = 'legend-item';
+            item.innerHTML = '<span class="legend-dot" style="background:' + d.color + '"></span><span class="legend-label">' + d.label + '</span><span class="legend-pct" style="color:' + d.color + '">' + d.pct + '%</span>';
+            legendEl.appendChild(item);
+            item.addEventListener('mouseenter', function() { highlightSeg(i); });
+            item.addEventListener('mouseleave', resetHL);
+        });
+
+        segments.forEach(function(seg, i) {
+            seg.circle.style.cursor = 'pointer';
+            seg.circle.addEventListener('mouseenter', function() { highlightSeg(i); });
+            seg.circle.addEventListener('mouseleave', resetHL);
+        });
+
+        function highlightSeg(idx) {
+            var d = data[idx];
+            cv.textContent = d.pct + '%'; cl.textContent = d.label; cv.style.color = d.color;
+            segments.forEach(function(s, j) {
+                s.circle.setAttribute('stroke-width', j === idx ? STROKE + 6 : STROKE - 3);
+                s.circle.style.opacity = j === idx ? '1' : '0.35';
+            });
+            legendEl.querySelectorAll('.legend-item').forEach(function(it, j) { it.style.opacity = j === idx ? '1' : '0.35'; });
+        }
+        function resetHL() {
+            cv.textContent = data[0].pct + '%'; cl.textContent = data[0].label; cv.style.color = '';
+            segments.forEach(function(s) { s.circle.setAttribute('stroke-width', STROKE); s.circle.style.opacity = '1'; });
+            legendEl.querySelectorAll('.legend-item').forEach(function(it) { it.style.opacity = '1'; });
+        }
+
+        var donutObs = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (!e.isIntersecting) return;
+                donutObs.unobserve(e.target);
+                segments.forEach(function(s) { s.circle.setAttribute('stroke-dasharray', s.dash + ' ' + s.gap); });
+            });
+        }, { threshold: 0.3 });
+        donutObs.observe(wrapEl);
+    }
+
+    document.querySelectorAll('.donut-chart-wrap[data-chart]').forEach(buildDonutChart);
+})();
+
+// ── Testimonial Carousel ─────────────────────────────────────────
+(function () {
+    var track = document.getElementById('testi-track');
+    if (!track) return;
+    var cards = track.querySelectorAll('.testi-card');
+    var dots  = document.querySelectorAll('#testi-dots .testi-carousel-dot');
+    var total = cards.length;
+    var current = 0;
+
+    function getPerPage() {
+        return window.innerWidth <= 540 ? 1 : window.innerWidth <= 860 ? 2 : 3;
+    }
+    function update() {
+        var perPage = getPerPage();
+        var max = Math.max(0, total - perPage);
+        if (current > max) current = max;
+        if (current < 0) current = 0;
+        var cardW = cards[0].getBoundingClientRect().width;
+        var gap = parseFloat(getComputedStyle(track).gap) || 24;
+        track.style.transform = 'translateX(-' + (current * (cardW + gap)) + 'px)';
+        dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
+    }
+    document.getElementById('testi-prev').addEventListener('click', function() { current = Math.max(0, current - 1); update(); });
+    document.getElementById('testi-next').addEventListener('click', function() {
+        current = Math.min(Math.max(0, total - getPerPage()), current + 1); update();
+    });
+    dots.forEach(function(d, i) { d.addEventListener('click', function() { current = i; update(); }); });
+    window.addEventListener('resize', function() { update(); });
+    update();
 })();
 </script>
 <script>(function(a,b,c,d){try{var e=b.head||b.getElementsByTagName("head")[0];var f=b.createElement("script");f.setAttribute("src",c);f.setAttribute("charset","UTF-8");f.defer=true;a.neuroleadId=d;e.appendChild(f)}catch(g){}})(window,document,"https://cdn.leadster.com.br/neurolead/neurolead.min.js","aFxKgoMOwAth4DHu5Q0WGCB5t")</script>

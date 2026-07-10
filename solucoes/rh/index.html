@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -50,9 +50,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=14865bae">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -168,9 +167,9 @@
       mode: 'opt-out',
       guiOptions: {
         consentModal: {
-          layout: 'box',
-          position: 'bottom right',
-          equalWeightButtons: true,
+          layout: 'bar inline',
+          position: 'bottom',
+          equalWeightButtons: false,
           flipButtons: false,
           modalOverlay: true
         }
@@ -311,7 +310,7 @@
         <div style="position: relative; z-index: 1;">
 
             <!-- Hero -->
-            <section id="hero-rh" class="ds-section" style="display: flex; flex-direction: column; position: relative; overflow: hidden; min-height: calc(100vh - 64px);">
+            <section id="hero-rh" class="ds-section" style="display: flex; flex-direction: column; position: relative; min-height: 900px;">
                 <!-- Background network canvas -->
                 <canvas id="canvas-rh" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;"></canvas>
 
@@ -339,8 +338,7 @@
                         8 perguntas via WhatsApp sem app, sem login. Em 2 minutos o colaborador diz como está. O dashboard mostra felicidade, engajamento e fit cultural por área em tempo real, para você agir antes de perder o talento.
                     </p>
                     <div class="hero-cta-group" style="display: flex; flex-wrap: wrap; gap: 1rem;">
-                        <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Ver demonstração ao vivo</a>
-                        <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+                        <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Agendar demonstração</a>
                     </div>
                 </div>
 
@@ -558,33 +556,27 @@
                 </div>
             </section>
 
-            <!-- Social Proof: Marquee full bleed -->
-            <section style="margin-bottom: 0; margin-inline: -2rem; padding: 4rem 2rem; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); overflow: hidden; background: var(--bg-surface);">
-                <div class="flex flex-col items-center text-center mb-10">
-                    <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.75rem;">De startups à Marinha do Brasil</p>
-                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.25rem); color: var(--text-primary); font-weight: 700; letter-spacing: -0.02em;">+500.000 pessoas medidas</h2>
-                </div>
-                <div class="marquee-mask" style="overflow: hidden; white-space: nowrap; position: relative;">
+            <!-- PROVA SOCIAL -->
+            <section style="margin:0 -2rem; padding:2.5rem 2rem; border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); background:var(--bg-surface); overflow:hidden;">
+                <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;text-align:center;margin-bottom:0.75rem;">+500.000 pessoas medidas · De startups à Marinha do Brasil</p>
+                <div class="marquee-mask" style="overflow:hidden;white-space:nowrap;">
                     <div class="logo-marquee">
-                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
-                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
-                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
-                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
-                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
-                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
-                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
-                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">Sebrae</div>
-                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">ABES</div>
-                        <!-- duplicate set for seamless loop -->
-                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">BRASPRESS</div>
-                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
-                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px;">ARCOR</div>
-                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700; font-size: 1.25rem;">Marinha do Brasil</div>
-                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
-                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
-                        <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
-                        <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">Sebrae</div>
-                        <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">ABES</div>
+                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
+                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
+                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
+                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
+                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
+                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:600;">Mackenzie</div>
+                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Sebrae</div>
+                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">ABES</div>
+                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
+                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
+                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
+                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
+                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
+                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:600;">Mackenzie</div>
+                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Sebrae</div>
+                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">ABES</div>
                     </div>
                 </div>
             </section>
@@ -617,60 +609,64 @@
                 </div>
             </section>
 
-            <!-- Comparativo: Fiter vs alternativas -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                
+            <!-- CREDIBILIDADE CIENTÍFICA -->
+            <section class="ds-section sci-section" style="margin-bottom:8rem; padding:4rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
+                <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(59,130,246,0.05) 0%,transparent 70%);pointer-events:none;"></div>
+                <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
+                    <div class="sci-narrative">
+                        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
+                        <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">É deeptech com<br>DNA na USP.</h2>
+                        <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
+                        <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-4rem;margin-bottom:-4rem;overflow:hidden;">
+                        <div class="sci-tile fade-up" style="--reveal-delay:0s;">
+                            <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
+                            <div>
+                                <div class="sci-title">DNA Científico</div>
+                                <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
+                            </div>
+                        </div>
+                        <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
+                            <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
+                            <div>
+                                <div class="sci-title">Liderança Prática</div>
+                                <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
+                            </div>
+                        </div>
+                        <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
+                            <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
+                            <div>
+                                <div class="sci-title">Ecossistema USP</div>
+                                <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
+                            </div>
+                        </div>
+                        <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
+                            <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
+                            <div>
+                                <div class="sci-title">Selos e Certificações</div>
+                                <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Fiter vs. o jeito<br>que todo mundo faz.</p>
-                <div class="cmp-wrap" style="overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.07);">
-                    <table class="cmp-table">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th>Pesquisa tradicional</th>
-                                <th>GPTW / Consultoria</th>
-                                <th class="cmp-featured">Fiter</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Canal de resposta</td>
-                                <td><span class="cmp-cross">Formulário web ou papel</span></td>
-                                <td><span class="cmp-cross">Formulário web</span></td>
-                                <td class="cmp-featured"><span class="cmp-check">WhatsApp sem app</span></td>
-                            </tr>
-                            <tr>
-                                <td>Tempo de resposta</td>
-                                <td><span class="cmp-cross">15–30 minutos</span></td>
-                                <td><span class="cmp-cross">20–40 minutos</span></td>
-                                <td class="cmp-featured"><span class="cmp-check">2 minutos</span></td>
-                            </tr>
-                            <tr>
-                                <td>Taxa de adesão típica</td>
-                                <td><span class="cmp-cross">20–35%</span></td>
-                                <td><span class="cmp-cross">30–50%</span></td>
-                                <td class="cmp-featured"><span class="cmp-check">80–94%</span></td>
-                            </tr>
-                            <tr>
-                                <td>Resultado disponível</td>
-                                <td><span class="cmp-cross">Semanas</span></td>
-                                <td><span class="cmp-cross">Meses</span></td>
-                                <td class="cmp-featured"><span class="cmp-check">Tempo real</span></td>
-                            </tr>
-                            <tr>
-                                <td>Predição de turnover</td>
-                                <td><span class="cmp-cross">Não</span></td>
-                                <td><span class="cmp-cross">Não</span></td>
-                                <td class="cmp-featured"><span class="cmp-check">Sim até 90 dias</span></td>
-                            </tr>
-                            <tr>
-                                <td>Implementação</td>
-                                <td><span class="cmp-cross">Semanas ou meses</span></td>
-                                <td><span class="cmp-cross">1–3 meses</span></td>
-                                <td class="cmp-featured"><span class="cmp-check">Dias sem TI</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <!-- AMBIDESTRIA FITER -->
+            <section class="ds-section" style="margin-bottom:8rem;">
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para cada porte, uma resposta diferente</p>
+                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Grande empresa ou PME.<br>A Fiter se adapta a você.</h2>
+                <div class="ambidestria-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
+                    <div class="fade-up" style="--reveal-delay:0s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius-lg);">
+                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Grandes empresas</p>
+                        <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">Predição em escala e compliance robusto</h3>
+                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Monitoramento de turnover em massa, laudos NR1 por cargo e relatórios consolidados para o Ministério do Trabalho. Conformidade jurídica garantida para operações de centenas ou milhares de colaboradores.</p>
+                    </div>
+                    <div class="fade-up" style="--reveal-delay:0.12s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-lg);">
+                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Pequenas e médias empresas</p>
+                        <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">IA como RH Estratégico virtual</h3>
+                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Nossa IA atua como um RH Estratégico virtual — gerando planos de ação, predições de risco e diagnósticos sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
+                    </div>
                 </div>
             </section>
 
@@ -749,65 +745,65 @@
                 </div>
             </section>
 
-            <!-- CREDIBILIDADE CIENTÍFICA -->
-            <section class="ds-section sci-section" style="margin-bottom:8rem; padding:4rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
-                <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(59,130,246,0.05) 0%,transparent 70%);pointer-events:none;"></div>
-                <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
-                    <div class="sci-narrative">
-                        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
-                        <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">É deeptech com<br>DNA na USP.</h2>
-                        <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
-                        <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
-                    </div>
-                    <div style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-4rem;margin-bottom:-4rem;overflow:hidden;">
-                        <div class="sci-tile fade-up" style="--reveal-delay:0s;">
-                            <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
-                            <div>
-                                <div class="sci-title">DNA Científico</div>
-                                <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
-                            </div>
-                        </div>
-                        <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
-                            <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
-                            <div>
-                                <div class="sci-title">Liderança Prática</div>
-                                <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
-                            </div>
-                        </div>
-                        <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
-                            <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
-                            <div>
-                                <div class="sci-title">Ecossistema USP</div>
-                                <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
-                            </div>
-                        </div>
-                        <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
-                            <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
-                            <div>
-                                <div class="sci-title">Selos e Certificações</div>
-                                <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <!-- Depoimentos -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                
 
-            <!-- AMBIDESTRIA FITER -->
-            <section class="ds-section" style="margin-bottom:8rem;">
-                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para cada porte, uma resposta diferente</p>
-                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Grande empresa ou PME.<br>A Fiter se adapta a você.</h2>
-                <div class="ambidestria-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
-                    <div class="fade-up" style="--reveal-delay:0s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius-lg);">
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Grandes empresas</p>
-                        <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">Predição em escala e compliance robusto</h3>
-                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Monitoramento de turnover em massa, laudos NR1 por cargo e relatórios consolidados para o Ministério do Trabalho. Conformidade jurídica garantida para operações de centenas ou milhares de colaboradores.</p>
-                    </div>
-                    <div class="fade-up" style="--reveal-delay:0.12s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-lg);">
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Pequenas e médias empresas</p>
-                        <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">IA como RH Estratégico virtual</h3>
-                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Nossa IA atua como um RH Estratégico virtual — gerando planos de ação, predições de risco e diagnósticos sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Resultados reais.<br>Palavras deles.</p>
+
+                <!-- Featured -->
+                <div class="testi-featured fade-up" style="--reveal-delay:0.1s; margin-bottom: 2.5rem; display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: center;">
+                    <p class="testi-featured-quote" style="margin-bottom: 0;">
+                        "Implementamos em uma semana. Na segunda semana já tínhamos dados que levávamos meses para coletar. <em>A taxa de adesão superou 80% já na primeira pesquisa.</em> Nunca conseguimos isso com formulário web."
+                    </p>
+                    <div style="display: flex; flex-direction: column; gap: 1.25rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 3rem;">
+                        <div class="testi-featured-avatar" style="width: 56px; height: 56px; font-size: 1rem;">RO</div>
+                        <div>
+                            <div class="testi-featured-name">Renata Oliveira</div>
+                            <div class="testi-featured-role" style="margin-top: 0.25rem;">Diretora de RH</div>
+                            <div class="testi-featured-role" style="margin-top: 0.1rem; opacity: 0.55;">Braspress · Logística</div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Grid -->
+                <div class="testi-grid">
+
+                    <div class="testi-card fade-up" style="--testi-delay:0.05s;">
+                        <p class="testi-quote">"O Agente NR1 gerou os laudos de <strong>1.200 colaboradores em menos de um dia</strong>. O que nossa equipe de SST levaria três meses para fazer. E com rastreabilidade que o Ministério aceita."</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">CM</div>
+                            <div>
+                                <div class="testi-name">Carlos Mendes</div>
+                                <div class="testi-role">Gerente de SST · Arcor Brasil</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card fade-up" style="--testi-delay:0.12s;">
+                        <p class="testi-quote">"Substituímos o GPTW anual pela Pesquisa de Clima mensal da Fiter. <strong>Paramos de adivinhar o humor do time.</strong> Agora a IA já entrega o plano de ação junto com o diagnóstico."</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">PL</div>
+                            <div>
+                                <div class="testi-name">Patricia Lima</div>
+                                <div class="testi-role">CHRO · Kroton Educacional</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testi-card fade-up" style="--testi-delay:0.19s;">
+                        <p class="testi-quote">"Em 90 dias a IA apontou três equipes com risco de turnover. <strong>Retivemos quatro pessoas-chave</strong> antes que o pedido chegasse. Não sei quanto isso vale, mas sei que é muito mais do que pagamos."</p>
+                        <div class="testi-author">
+                            <div class="testi-avatar">MF</div>
+                            <div>
+                                <div class="testi-name">Marcos Ferreira</div>
+                                <div class="testi-role">VP de Pessoas · Sebrae-SP</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </section>
 
             <!-- Pulse -->
@@ -1209,121 +1205,62 @@
                 </div>
             </section>
 
-            <!-- Depoimentos -->
+            <!-- Comparativo: Fiter vs alternativas -->
             <section class="ds-section" style="margin-bottom: 8rem;">
                 
 
-                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Resultados reais.<br>Palavras deles.</p>
-
-                <!-- Featured -->
-                <div class="testi-featured fade-up" style="--reveal-delay:0.1s; margin-bottom: 2.5rem; display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: center;">
-                    <p class="testi-featured-quote" style="margin-bottom: 0;">
-                        "Implementamos em uma semana. Na segunda semana já tínhamos dados que levávamos meses para coletar. <em>A taxa de adesão superou 80% já na primeira pesquisa.</em> Nunca conseguimos isso com formulário web."
-                    </p>
-                    <div style="display: flex; flex-direction: column; gap: 1.25rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 3rem;">
-                        <div class="testi-featured-avatar" style="width: 56px; height: 56px; font-size: 1rem;">RO</div>
-                        <div>
-                            <div class="testi-featured-name">Renata Oliveira</div>
-                            <div class="testi-featured-role" style="margin-top: 0.25rem;">Diretora de RH</div>
-                            <div class="testi-featured-role" style="margin-top: 0.1rem; opacity: 0.55;">Braspress · Logística</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Grid -->
-                <div class="testi-grid">
-
-                    <div class="testi-card fade-up" style="--testi-delay:0.05s;">
-                        <p class="testi-quote">"O Agente NR1 gerou os laudos de <strong>1.200 colaboradores em menos de um dia</strong>. O que nossa equipe de SST levaria três meses para fazer. E com rastreabilidade que o Ministério aceita."</p>
-                        <div class="testi-author">
-                            <div class="testi-avatar">CM</div>
-                            <div>
-                                <div class="testi-name">Carlos Mendes</div>
-                                <div class="testi-role">Gerente de SST · Arcor Brasil</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testi-card fade-up" style="--testi-delay:0.12s;">
-                        <p class="testi-quote">"Substituímos o GPTW anual pela Pesquisa de Clima mensal da Fiter. <strong>Paramos de adivinhar o humor do time.</strong> Agora a IA já entrega o plano de ação junto com o diagnóstico."</p>
-                        <div class="testi-author">
-                            <div class="testi-avatar">PL</div>
-                            <div>
-                                <div class="testi-name">Patricia Lima</div>
-                                <div class="testi-role">CHRO · Kroton Educacional</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testi-card fade-up" style="--testi-delay:0.19s;">
-                        <p class="testi-quote">"Em 90 dias a IA apontou três equipes com risco de turnover. <strong>Retivemos quatro pessoas-chave</strong> antes que o pedido chegasse. Não sei quanto isso vale, mas sei que é muito mais do que pagamos."</p>
-                        <div class="testi-author">
-                            <div class="testi-avatar">MF</div>
-                            <div>
-                                <div class="testi-name">Marcos Ferreira</div>
-                                <div class="testi-role">VP de Pessoas · Sebrae-SP</div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- FAQ -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                
-
-                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Tudo o que você precisa<br>saber antes de contratar.</p>
-                <div class="faq-list">
-                    <div class="faq-item">
-                        <button class="faq-trigger">
-                            <span class="faq-question">Precisa instalar algum app ou sistema de TI?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-body"><div class="faq-body-inner">
-                            <p class="faq-answer">Não. A Fiter é um app de browser: o colaborador recebe o link via WhatsApp ou e-mail e responde direto no navegador, sem instalar nada. O painel do RH também é web. A implantação não envolve TI.</p>
-                        </div></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger">
-                            <span class="faq-question">Os dados ficam anônimos? Conformidade com LGPD?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-body"><div class="faq-body-inner">
-                            <p class="faq-answer">Sim. O anonimato é garantido por design gestores veem dados agregados, nunca a resposta individual de um colaborador. A Fiter é 100% em conformidade com a LGPD.</p>
-                        </div></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger">
-                            <span class="faq-question">Quanto tempo leva a implementação?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-body"><div class="faq-body-inner">
-                            <p class="faq-answer">Do contrato ao primeiro diagnóstico em dias. O processo é: assinatura → onboarding CS (importação da base) → treinamento de 1h30 → primeira pesquisa no ar. Sem projeto de meses.</p>
-                        </div></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger">
-                            <span class="faq-question">Posso contratar só um módulo?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-body"><div class="faq-body-inner">
-                            <p class="faq-answer">Sim. A suíte é 100% modular. Você pode começar apenas com a Ouvidoria, só com o Agente NR1 ou com a suíte completa. Não há obrigação de contratar tudo de uma vez.</p>
-                        </div></div>
-                    </div>
-                    <div class="faq-item">
-                        <button class="faq-trigger">
-                            <span class="faq-question">Qual a diferença do Pulse vs GPTW/pesquisa anual?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-body"><div class="faq-body-inner">
-                            <p class="faq-answer">GPTW é anual, demorado e o resultado chega quando o problema já ocorreu. O Pulse é mensal, dura 2 minutos, e o diagnóstico sai em tempo real com plano de ação gerado por IA. Você age no mês, não no ano seguinte.</p>
-                        </div></div>
-                    </div>
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Fiter vs. o jeito<br>que todo mundo faz.</p>
+                <div class="cmp-wrap" style="overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.07);">
+                    <table class="cmp-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Pesquisa tradicional</th>
+                                <th>GPTW / Consultoria</th>
+                                <th class="cmp-featured">Fiter</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Canal de resposta</td>
+                                <td><span class="cmp-cross">Formulário web ou papel</span></td>
+                                <td><span class="cmp-cross">Formulário web</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">WhatsApp sem app</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tempo de resposta</td>
+                                <td><span class="cmp-cross">15–30 minutos</span></td>
+                                <td><span class="cmp-cross">20–40 minutos</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">2 minutos</span></td>
+                            </tr>
+                            <tr>
+                                <td>Taxa de adesão típica</td>
+                                <td><span class="cmp-cross">20–35%</span></td>
+                                <td><span class="cmp-cross">30–50%</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">80–94%</span></td>
+                            </tr>
+                            <tr>
+                                <td>Resultado disponível</td>
+                                <td><span class="cmp-cross">Semanas</span></td>
+                                <td><span class="cmp-cross">Meses</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">Tempo real</span></td>
+                            </tr>
+                            <tr>
+                                <td>Predição de turnover</td>
+                                <td><span class="cmp-cross">Não</span></td>
+                                <td><span class="cmp-cross">Não</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">Sim até 90 dias</span></td>
+                            </tr>
+                            <tr>
+                                <td>Implementação</td>
+                                <td><span class="cmp-cross">Semanas ou meses</span></td>
+                                <td><span class="cmp-cross">1–3 meses</span></td>
+                                <td class="cmp-featured"><span class="cmp-check">Dias sem TI</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </section>
-
 
             <!-- Implementação -->
             <section class="ds-section" style="margin-bottom: 8rem;">
@@ -1396,10 +1333,65 @@
 
             </section>
 
+            <!-- FAQ -->
+            <section class="ds-section" style="margin-bottom: 8rem;">
+                
+
+                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Tudo o que você precisa<br>saber antes de contratar.</p>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Precisa instalar algum app ou sistema de TI?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Não. A Fiter é um app de browser: o colaborador recebe o link via WhatsApp ou e-mail e responde direto no navegador, sem instalar nada. O painel do RH também é web. A implantação não envolve TI.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Os dados ficam anônimos? Conformidade com LGPD?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Sim. O anonimato é garantido por design gestores veem dados agregados, nunca a resposta individual de um colaborador. A Fiter é 100% em conformidade com a LGPD.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Quanto tempo leva a implementação?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Do contrato ao primeiro diagnóstico em dias. O processo é: assinatura → onboarding CS (importação da base) → treinamento de 1h30 → primeira pesquisa no ar. Sem projeto de meses.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Posso contratar só um módulo?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">Sim. A suíte é 100% modular. Você pode começar apenas com a Ouvidoria, só com o Agente NR1 ou com a suíte completa. Não há obrigação de contratar tudo de uma vez.</p>
+                        </div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger">
+                            <span class="faq-question">Qual a diferença do Pulse vs GPTW/pesquisa anual?</span>
+                            <span class="faq-icon" aria-hidden="true"></span>
+                        </button>
+                        <div class="faq-body"><div class="faq-body-inner">
+                            <p class="faq-answer">GPTW é anual, demorado e o resultado chega quando o problema já ocorreu. O Pulse é mensal, dura 2 minutos, e o diagnóstico sai em tempo real com plano de ação gerado por IA. Você age no mês, não no ano seguinte.</p>
+                        </div></div>
+                    </div>
+                </div>
+            </section>
+
+
             <!-- CTA FINAL -->
             <section id="cta-section" class="ds-section" style="margin-bottom:4rem; padding:5rem 3.5rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
                 <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,0.06) 0%,transparent 70%);pointer-events:none;"></div>
-                <div class="cta-grid" style="display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;position:relative;z-index:1;">
+                <div class="cta-grid" style="display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:start;position:relative;z-index:1;">
                     <!-- Left -->
                     <div>
                         <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
@@ -1419,15 +1411,14 @@
                         <p style="margin-top:2rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">Baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
                     </div>
                     <!-- Right: Calendly CTA -->
-                    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:2rem;padding:2rem 1.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
+                    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.5rem;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);">
                         <div>
                             <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Escolha um horário</div>
                             <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;max-width:28rem;">Agende diretamente na agenda do especialista de RH. Sem espera, sem formulário.</p>
                         </div>
                         
-                        <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'cta_final_calendly_rh'})">Agendar no Calendly</a>
+                        <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'cta_final_calendly_rh'})">Agendar demonstração</a>
                         <p style="font-size:0.75rem;color:var(--text-tertiary);line-height:1.5;">30 minutos · resposta imediata após agendamento</p>
-                        <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem;color:var(--text-tertiary);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.12);padding-bottom:1px;">Prefere enviar uma mensagem? <span style="color:var(--text-secondary);">Acesse a página de contato →</span></a>
                     </div>
                 </div>
             </section>

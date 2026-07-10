@@ -30,9 +30,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=14865bae">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
     <script async src="https://t.contentsquare.net/uxa/cd11f6271f295.js"></script>
@@ -42,9 +41,9 @@
       mode: 'opt-out',
       guiOptions: {
         consentModal: {
-          layout: 'box',
-          position: 'bottom right',
-          equalWeightButtons: true,
+          layout: 'bar inline',
+          position: 'bottom',
+          equalWeightButtons: false,
           flipButtons: false,
           modalOverlay: true
         }
@@ -260,7 +259,7 @@
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter"></a>
 
         <ul class="nav-links">
 
@@ -306,7 +305,7 @@
         </ul>
 
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -319,7 +318,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter"><button id="nav-close" class="nav-close" aria-label="Fechar menu"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' aria-hidden='true'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -345,7 +344,7 @@
             <a class="drawer-plain-link" href="/blog/">Blog</a>
 
             <div class="drawer-cta">
-                <a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+                <a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             </div>
         </div>
     </div>
@@ -362,14 +361,14 @@
 
     <!-- SEARCH FILTER -->
     <section class="blog-filter-bar">
-        <div style="max-width: 560px; margin: 0 auto; padding: 0 1.5rem;">
-            <div style="position: relative; margin-bottom: 1.5rem;">
-                <i data-lucide="search" style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); width: 18px; height: 18px; color: var(--text-tertiary); pointer-events: none;"></i>
+        <div class="blog-search-wrap">
+            <div class="blog-search-rel">
+                <i data-lucide="search" class="blog-search-icon" aria-hidden="true"></i>
                 <input type="text" id="blogSearch" placeholder="Buscar por título..." class="blog-search-input">
             </div>
             <!-- CATEGORY_FILTER_START -->
 
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
+            <div class="blog-filter-pills">
                 <button class="filter-btn active" data-category="all">Todos</button>
                 
                 <button class="filter-btn" data-category="Educação">Educação</button>
@@ -384,7 +383,7 @@
 
     <!-- BLOG GRID -->
     <section class="blog-grid-section">
-        <div id="blogGrid" class="ds-container" style="padding: 0 1.5rem;">
+        <div id="blogGrid" class="ds-container">
             <!-- BLOG_GRID_START -->
 
             <a href="o-que-a-faculdade-nao-ensina-rh-2026/" class="post-card" data-category="Educação">
@@ -793,8 +792,8 @@
             </a>
             <!-- BLOG_GRID_END -->
         </div>
-        <div id="noResults" style="display: none; text-align: center; padding: 5rem 1.5rem;">
-            <p style="color: var(--text-tertiary); font-family: var(--font-mono); font-size: 0.875rem;">Nenhuma notícia encontrada.</p>
+        <div id="noResults">
+            <p class="no-results-msg">Nenhuma notícia encontrada.</p>
         </div>
     </section>
 
@@ -845,7 +844,7 @@
                 card.style.display = match ? '' : 'none';
                 if (match) visibleCount++;
             });
-            noResults.style.display = visibleCount === 0 ? '' : 'none';
+            noResults.style.display = visibleCount === 0 ? 'block' : 'none';
         }
 
         if (searchInput) searchInput.addEventListener('input', filterPosts);

@@ -20,9 +20,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=14865bae">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
@@ -134,9 +133,9 @@
       mode: 'opt-out',
       guiOptions: {
         consentModal: {
-          layout: 'box',
-          position: 'bottom right',
-          equalWeightButtons: true,
+          layout: 'bar inline',
+          position: 'bottom',
+          equalWeightButtons: false,
           flipButtons: false,
           modalOverlay: true
         }
@@ -241,7 +240,7 @@
     <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
 
     <!-- HERO - full viewport -->
-    <section id="hero-edu" class="ds-section" style="display:flex;flex-direction:column;position:relative;overflow:hidden;min-height:calc(100vh - 64px);">
+    <section id="hero-edu" class="ds-section" style="display:flex;flex-direction:column;position:relative;min-height:720px;">
         <!-- Background particle canvas (green) -->
         <canvas id="canvas-edu" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;"></canvas>
 
@@ -269,8 +268,7 @@
                     8 perguntas via WhatsApp. IA que prevê evasão com 3 meses de antecedência. Dashboard por turma, curso e campus. Alinhado à CNE 3/2025.
                 </p>
                 <div class="hero-cta-group" style="display:flex;flex-wrap:wrap;gap:1rem;">
-                    <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Ver demonstração ao vivo</a>
-                    <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-animate-chars" style="text-decoration:none;">Falar com especialista</a>
+                    <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;">Agendar demonstração</a>
                 </div>
             </div>
 
@@ -461,27 +459,23 @@
         </div>
     </section>
 
-    <!-- INSTITUIÇÕES (marquee) - segunda dobra, full-bleed -->
-    <section style="margin-left:-2rem;margin-right:-2rem;padding:4rem 5vw;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);overflow:hidden;background:var(--bg-surface);">
-        <div class="flex flex-col items-center text-center mb-10">
-            <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Instituições que confiam na Fiter</p>
-            <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.5rem,3vw,2.25rem);color:var(--text-primary);font-weight:700;letter-spacing:-0.02em;">+500.000 alunos impactados</h2>
-        </div>
-        <div class="marquee-mask" style="overflow: hidden; white-space: nowrap; position: relative;">
+    <!-- PROVA SOCIAL -->
+    <section style="margin:0 -2rem;padding:2.5rem 2rem;border-top:1px solid var(--border-default);border-bottom:1px solid var(--border-default);background:var(--bg-surface);overflow:hidden;">
+        <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;text-align:center;margin-bottom:0.75rem;">+500.000 alunos impactados · De IES a grandes redes de ensino</p>
+        <div class="marquee-mask" style="overflow:hidden;white-space:nowrap;">
             <div class="logo-marquee">
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
-                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">ANEC</div>
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">UNIP</div>
-                <!-- duplicate set for seamless loop -->
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 400;">USP</div>
-                <div class="logo-item" style="font-family: var(--font-mono); font-weight: 600;">Fatec</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 700;">Kroton</div>
-                <div class="logo-item" style="font-family: var(--font-serif); font-weight: 600;">Mackenzie</div>
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 700;">ANEC</div>
-                <div class="logo-item" style="font-family: var(--font-sans); font-weight: 800;">UNIP</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
+                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:600;">Mackenzie</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">ANEC</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">UNIP</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
+                <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">Fatec</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
+                <div class="logo-item" style="font-family:var(--font-serif);font-weight:600;">Mackenzie</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">ANEC</div>
+                <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">UNIP</div>
             </div>
         </div>
     </section>
@@ -1115,7 +1109,7 @@
     <!-- CTA FINAL - grid 2 colunas com formulário -->
     <section id="cta-edu-section" style="margin-left:-2rem;margin-right:-2rem;margin-bottom:0;padding:5rem 5vw;background:var(--bg-surface);border-top:1px solid var(--border-default);position:relative;overflow:hidden;">
         <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(16,185,129,0.06) 0%,transparent 70%);pointer-events:none;"></div>
-        <div class="cta-edu-grid" style="display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:start;position:relative;z-index:1;max-width:1200px;margin:0 auto;">
+        <div class="cta-edu-grid" style="display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:start;position:relative;z-index:1;max-width:1200px;margin:0 auto;">
             <!-- Left -->
             <div>
                 <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
@@ -1135,9 +1129,7 @@
             </div>
             <!-- Right: CTA -->
             <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.25rem;padding:3rem 2rem;background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
-                <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;width:100%;justify-content:center;padding:1rem;">Agendar no Calendly</a>
-                
-                <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="font-size:0.85rem;color:var(--text-tertiary);text-decoration:none;text-align:center;">Prefere enviar uma mensagem? Acesse a página de contato →</a>
+                <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;width:100%;justify-content:center;padding:1rem;">Agendar demonstração</a>
             </div>
         </div>
     </section>

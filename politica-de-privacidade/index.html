@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -13,8 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <style>
     .legal-wrap{max-width:740px;margin:0 auto;padding:6rem 0 8rem;}
     .legal-wrap h1{font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.03em;line-height:1.1;color:var(--text-primary);margin-bottom:0.75rem;}
@@ -38,9 +37,9 @@
       mode: 'opt-out',
       guiOptions: {
         consentModal: {
-          layout: 'box',
-          position: 'bottom right',
-          equalWeightButtons: true,
+          layout: 'bar inline',
+          position: 'bottom',
+          equalWeightButtons: false,
           flipButtons: false,
           modalOverlay: true
         }

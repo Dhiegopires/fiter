@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -30,9 +30,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=4f9b3f0c">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="/assets/js/tailwind-config.js"></script>
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=14865bae">
+    <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
     <script async src="https://t.contentsquare.net/uxa/cd11f6271f295.js"></script>
@@ -42,9 +41,9 @@
       mode: 'opt-out',
       guiOptions: {
         consentModal: {
-          layout: 'box',
-          position: 'bottom right',
-          equalWeightButtons: true,
+          layout: 'bar inline',
+          position: 'bottom',
+          equalWeightButtons: false,
           flipButtons: false,
           modalOverlay: true
         }
@@ -122,7 +121,7 @@
         .article-body ol li { list-style: decimal; padding-left: 0.25rem; }
         .article-body strong { color: var(--text-primary); font-weight: 600; }
         .article-body em { font-style: italic; }
-        .article-body a { color: var(--accent-brand); text-decoration: underline; text-underline-offset: 3px; }
+        .article-body a { color: #a78bfa; text-decoration: underline; text-underline-offset: 3px; }
         .article-body a:hover { opacity: 0.8; }
         .article-body blockquote {
             border-left: 2px solid var(--accent-brand);
@@ -146,6 +145,7 @@
         .share-bar {
             display: flex;
             align-items: center;
+            flex-wrap: wrap;
             gap: 0.75rem;
             padding: 1.5rem 0;
             border-top: 1px solid var(--border-subtle);
@@ -165,6 +165,7 @@
             border: 1px solid var(--border-default);
             border-radius: var(--radius-md);
             padding: 0.45rem 0.85rem;
+            min-height: 44px;
             cursor: pointer;
             text-decoration: none;
             transition: color 0.2s, border-color 0.2s;
@@ -316,9 +317,9 @@
                     <div class="article-body">
                         <h1>NR-1 e Saúde Mental Corporativa</h1>
 <h2>Adequação à NR-1: Por Que o RH Não Deve Carregar Sozinho o Peso da Saúde Mental Corporativa</h2>
-<p class="article-lead">A saúde mental deixou de ser apenas uma pauta de bem-estar para se tornar uma prioridade estratégica, jurídica e operacional dentro das empresas brasileiras. Com a atualização da <strong>NR-1</strong> e a crescente exigência sobre a gestão de riscos psicossociais no ambiente corporativo, departamentos de Recursos Humanos passaram a enfrentar um desafio que vai muito além da gestão de pessoas: garantir conformidade legal enquanto preservam a saúde emocional das equipes.</p>
+<p class="article-lead">A saúde mental deixou de ser apenas uma pauta de bem-estar para se tornar uma prioridade estratégica, jurídica e operacional dentro das empresas brasileiras. Com a atualização da <strong>NR-1</strong> e a crescente exigência sobre a gestão de <a href="/blog/riscos-psicossociais-trabalho-guia-rh/">riscos psicossociais</a> no ambiente corporativo, departamentos de Recursos Humanos passaram a enfrentar um desafio que vai muito além da gestão de pessoas: garantir conformidade legal enquanto preservam a saúde emocional das equipes.</p>
 <p>O problema é que muitas empresas ainda tentam lidar com essa responsabilidade utilizando métodos manuais, processos fragmentados e pesquisas esporádicas. O resultado? Sobrecarga operacional, insegurança jurídica e dificuldade em comprovar ações preventivas diante de auditorias ou fiscalizações.</p>
-<p>Segundo dados da <strong>Organização Mundial da Saúde (OMS)</strong>, transtornos relacionados à ansiedade e depressão geram uma perda estimada de US$ 1 trilhão por ano em produtividade global. No Brasil, o cenário é ainda mais sensível: o país lidera índices de ansiedade na América Latina e registra crescimento contínuo de afastamentos relacionados ao <em>Burnout</em> e adoecimento emocional.</p>
+<p>Segundo dados da <strong>Organização Mundial da Saúde (OMS)</strong>, transtornos relacionados à ansiedade e depressão geram uma perda estimada de US$ 1 trilhão por ano em produtividade global. No Brasil, o cenário é ainda mais sensível: o país lidera índices de ansiedade na América Latina e registra crescimento contínuo de afastamentos relacionados ao <em><a href="/blog/burnout-seguranca-psicologica-trabalho/">Burnout</a></em> e adoecimento emocional.</p>
 <p>Nesse contexto, a pergunta que líderes de RH precisam responder não é mais <em>“se”</em> devem agir, mas <em>“como”</em> fazer isso de maneira eficiente, contínua e sustentável.</p>
 <hr>
 <h3>A Nova Pressão Sobre o RH na Era da NR-1</h3>
@@ -365,7 +366,7 @@
 </ul>
 <p><em>Sem rastreabilidade, o risco jurídico aumenta significativamente.</em></p>
 <hr>
-<h3>People Analytics e IA: O Novo Aliado Estratégico do RH</h3>
+<h3><a href="/blog/people-analytics-na-pratica/">People Analytics</a> e IA: O Novo Aliado Estratégico do RH</h3>
 <p>É justamente nesse cenário que tecnologias preditivas ganham protagonismo. O conceito de <strong>People Analytics</strong> vem transformando a gestão de pessoas ao permitir que decisões estratégicas sejam tomadas com base em dados reais — e não apenas em percepção subjetiva.</p>
 <p>Segundo levantamento da <em>Deloitte</em>, empresas orientadas por People Analytics têm até <strong>82% mais chances</strong> de superar concorrentes em retenção de talentos e performance organizacional.</p>
 <p>Mais do que automatizar tarefas, a tecnologia reduz fricções operacionais e amplia a capacidade preventiva das organizações.</p>
@@ -414,8 +415,17 @@
                     <div class="share-bar">
                         <span style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-tertiary);margin-right:0.25rem;">Compartilhar</span>
                         <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url=https://fiter.com.br/blog/NR1-e-saude-mental/" target="_blank" rel="noopener">
-                            <i data-lucide="linkedin" style="width:12px;height:12px;"></i> LinkedIn
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn
                         </a>
+                        <a class="share-btn" href="#" target="_blank" rel="noopener" onclick="this.href='https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+location.href)">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp
+                        </a>
+                        <a class="share-btn" href="#" target="_blank" rel="noopener" onclick="this.href='https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title)">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg> X
+                        </a>
+                        <button class="share-btn" onclick="navigator.clipboard.writeText(location.href);var t=this;t.textContent='Copiado!';setTimeout(function(){t.textContent='Copiar link';},2000);" style="background:none;cursor:pointer;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;flex-shrink:0;"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg> Copiar link
+                        </button>
                     </div>
 
                     <!-- CTA -->
@@ -428,6 +438,27 @@
                             <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Agendar demonstração</a>
                             <p style="margin-top:1.25rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
                         </div>
+                    </div>
+
+                    <!-- LEIA TAMBEM -->
+                    <div style="margin-top:3.5rem;padding-top:3rem;border-top:1px solid var(--border-subtle);">
+                        <p style="font-family:var(--font-mono);font-size:0.62rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-tertiary);margin-bottom:1.5rem;">Leia também</p>
+                        <div style="display:flex;flex-direction:column;gap:1rem;">
+                            <a href="/blog/people-analytics-na-pratica/" style="display:flex;align-items:stretch;gap:0;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);text-decoration:none;overflow:hidden;transition:border-color 0.2s,transform 0.25s;" onmouseover="this.style.borderColor='var(--border-hover)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border-default)';this.style.transform=''"><div style="flex-shrink:0;width:130px;overflow:hidden;"><img src="/blog/people-analytics-na-pratica/cenario-de-people-analytics.jpg" alt="" style="width:100%;height:100%;min-height:90px;object-fit:cover;display:block;filter:brightness(0.8);"></div><div style="flex:1;padding:1rem 1.25rem;display:flex;flex-direction:column;justify-content:center;gap:0.35rem;min-width:0;"><span style="font-family:var(--font-mono);font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);">RH</span><span style="font-size:0.875rem;font-weight:500;color:var(--text-primary);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão</span><span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">08 Jun 2026 · 6 min</span></div></a>
+                            <a href="/blog/riscos-psicossociais-nr1-pesquisa-clima/" style="display:flex;align-items:stretch;gap:0;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);text-decoration:none;overflow:hidden;transition:border-color 0.2s,transform 0.25s;" onmouseover="this.style.borderColor='var(--border-hover)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border-default)';this.style.transform=''"><div style="flex-shrink:0;width:130px;overflow:hidden;"><img src="/blog/riscos-psicossociais-nr1-pesquisa-clima/riscos-psicossociais-nr-01-pesquisa-clima.webp" alt="" style="width:100%;height:100%;min-height:90px;object-fit:cover;display:block;filter:brightness(0.8);"></div><div style="flex:1;padding:1rem 1.25rem;display:flex;flex-direction:column;justify-content:center;gap:0.35rem;min-width:0;"><span style="font-family:var(--font-mono);font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);">NR1</span><span style="font-size:0.875rem;font-weight:500;color:var(--text-primary);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Riscos Psicossociais, NR1 e Pesquisa de Clima: o que o RH precisa saber</span><span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">11 Jun 2026 · 4 min</span></div></a>
+                            <a href="/blog/guia-do-gro-e-pgr/" style="display:flex;align-items:stretch;gap:0;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);text-decoration:none;overflow:hidden;transition:border-color 0.2s,transform 0.25s;" onmouseover="this.style.borderColor='var(--border-hover)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='var(--border-default)';this.style.transform=''"><div style="flex-shrink:0;width:130px;overflow:hidden;"><img src="/blog/guia-do-gro-e-pgr/groimage.jpg" alt="" style="width:100%;height:100%;min-height:90px;object-fit:cover;display:block;filter:brightness(0.8);"></div><div style="flex:1;padding:1rem 1.25rem;display:flex;flex-direction:column;justify-content:center;gap:0.35rem;min-width:0;"><span style="font-family:var(--font-mono);font-size:0.58rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);">GUIA</span><span style="font-size:0.875rem;font-weight:500;color:var(--text-primary);line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;">Guia completo do GRO e PGR para empresas brasileiras</span><span style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);">01 Jun 2026 · 5 min</span></div></a>
+                        </div>
+                    </div>
+
+                    <!-- NEWSLETTER -->
+                    <div style="margin-top:3.5rem;padding:2.25rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
+                        <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;letter-spacing:-0.02em;color:var(--text-primary);margin-bottom:0.45rem;">Receba os próximos artigos</h3>
+                        <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.5rem;">Conteúdo sobre RH, engajamento e bem-estar direto na sua caixa de entrada. Sem spam.</p>
+                        <form onsubmit="(function(e){e.preventDefault();var btn=e.target.querySelector('button'),ok=e.target.nextElementSibling;btn.disabled=true;btn.textContent='Enviando...';setTimeout(function(){e.target.style.display='none';ok.style.display='block';},800);})(event)" style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+                            <input type="email" required placeholder="seu@email.com.br" style="flex:1;min-width:200px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-md);padding:0.7rem 1rem;color:var(--text-primary);font-family:var(--font-sans);font-size:0.875rem;outline:none;transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--accent-brand)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+                            <button type="submit" class="btn btn-primary" style="white-space:nowrap;padding:0.7rem 1.5rem;font-size:0.875rem;">Assinar</button>
+                        </form>
+                        <p style="display:none;font-size:0.875rem;color:#10b981;margin-top:0.75rem;">Inscrito com sucesso!</p>
                     </div>
 
                 </div>
