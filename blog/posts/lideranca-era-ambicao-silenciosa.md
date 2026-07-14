@@ -84,10 +84,14 @@ Um líder moderno entende que sua principal função é remover os obstáculos q
 
 Para transformar a teoria em ação e blindar sua empresa contra a fuga de talentos, é necessário implementar mudanças estruturais e culturais:
 
-*   **Estabelecer canais contínuos de escuta:** Pesquisas de clima anuais são como tirar uma foto de um momento que já passou. O sentimento do colaborador é dinâmico. Adotar ciclos curtos de feedback e pesquisas de pulso permite que o RH identifique focos de desengajamento antes que eles se transformem em cartas de demissão.
+*   **Estabelecer canais contínuos de escuta:** Pesquisas de clima anuais são como tirar uma foto de um momento que já passou. O sentimento do colaborador é dinâmico. Adotar ciclos curtos de feedback e [pesquisas de pulso](https://fiter.com.br/produtos/pulse/) permite que o RH identifique focos de desengajamento antes que eles se transformem em cartas de demissão.
 *   **Desconstruir o mito do "subir na vida":** A área de Recursos Humanos deve liderar campanhas internas para valorizar o crescimento horizontal. Ampliar o escopo de um projeto, oferecer a oportunidade de aprender uma nova tecnologia ou permitir a mobilidade lateral entre departamentos são formas poderosas de manter profissionais brilhantes engajados e desafiados, respeitando seus limites pessoais.
 *   **Treinar a média gerência:** O RH deve fornecer as ferramentas e o repertório necessários para que os gestores saibam conduzir conversas difíceis sobre carreira e expectativas de forma empática e produtiva. A segurança psicológica deve ser a fundação sobre a qual toda a relação de trabalho é construída. O colaborador precisa se sentir seguro para dizer ao seu líder que não deseja uma promoção, sem que isso signifique o fim de sua jornada na empresa.
 
 O futuro do trabalho pertence às organizações que compreendem que o valor de um talento não se mede pela quantidade de horas extras trabalhadas ou pela ambição desmedida por poder. O valor real reside na capacidade de entregar soluções inovadoras de forma consistente. Ao alinhar as expectativas do negócio com os desejos humanos fundamentais de propósito e equilíbrio, sua empresa não apenas reterá os melhores profissionais do mercado. Ela se tornará o lugar onde todos eles desejam estar.
 
 > **Nota:** Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma focada em transformar a gestão de pessoas, unindo tecnologia de ponta, inteligência de dados e um profundo entendimento do comportamento humano para alavancar o engajamento e a performance nas empresas.
+
+---
+
+Leia também: [People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão](https://fiter.com.br/blog/people-analytics-na-pratica/) — saiba como usar dados reais para agir antes da carta de demissão chegar.

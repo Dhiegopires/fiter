@@ -65,9 +65,9 @@ O RH não espera que todos os candidatos sejam programadores seniores. A expecta
 
 Um dos conceitos mais cruciais que passam longe das grades curriculares tradicionais é o "Fit Cultural". Você pode ter um currículo impecável e notas máximas, mas se os seus valores não estiverem alinhados com os da organização, a contratação dificilmente se sustentará.
 
-Muitas jornadas falham nos primeiros meses não por incompetência técnica, mas por fricções de comportamento. O RH moderno, apoiado por dados e análises de People Analytics, mapeia profundamente como as suas crenças profissionais se conectam com a cultura da empresa. 
+Muitas jornadas falham nos primeiros meses não por incompetência técnica, mas por fricções de comportamento. O RH moderno, apoiado por dados e análises de [People Analytics](https://fiter.com.br/solucoes/rh/), mapeia profundamente como as suas crenças profissionais se conectam com a cultura da empresa. 
 
-Na Fiter, compreendemos profundamente essa dinâmica. O alto engajamento e a performance de excelência nascem exatamente desse "match" perfeito entre o que a empresa oferece como experiência (Employee Experience) e o que o colaborador traz como essência. Empresas inovadoras não buscam robôs corporativos; elas buscam pessoas que vibrem na mesma frequência de seus propósitos.
+Na [Fiter](https://fiter.com.br/solucoes/educacao/), compreendemos profundamente essa dinâmica. O alto engajamento e a performance de excelência nascem exatamente desse "match" perfeito entre o que a empresa oferece como experiência (Employee Experience) e o que o colaborador traz como essência. Empresas inovadoras não buscam robôs corporativos; elas buscam pessoas que vibrem na mesma frequência de seus propósitos.
 
 ## Aprender a Aprender: O Princípio do Lifelong Learning
 
@@ -86,3 +86,7 @@ Se você faz parte de um time de RH que busca justamente identificar, engajar e 
 ---
 
 Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma completa de gestão de performance e clima corporativo, ajudando empresas a conectarem propósitos, engajarem talentos e construírem ambientes de trabalho extraordinários e orientados a resultados.
+
+---
+
+Leia também: [Além do Fit Cultural: Como a Inteligência de Dados Transforma a Retenção](https://fiter.com.br/blog/fit-cultural-dados-retencao/) — como a tecnologia transforma dados em cuidado humano e reduz o turnover.

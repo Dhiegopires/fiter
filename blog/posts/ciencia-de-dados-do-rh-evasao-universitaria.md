@@ -45,7 +45,7 @@ A metodologia que vem salvando matrículas universitárias nasceu de uma premiss
 
 ## O Paralelo Estratégico: Employee Turnover vs. Student Churn
 
-No mundo corporativo, o abandono de emprego (*turnover*) foi mapeado cientificamente pelo *People Analytics*. A ciência de dados provou que um colaborador dá sinais de desengajamento meses antes de sair: queda no eNPS (*Employee Net Promoter Score*), isolamento da equipe e baixa produtividade.
+No mundo corporativo, o abandono de emprego (*turnover*) foi mapeado cientificamente pelo *[People Analytics](https://fiter.com.br/solucoes/educacao/)*. A ciência de dados provou que um colaborador dá sinais de desengajamento meses antes de sair: queda no eNPS (*Employee Net Promoter Score*), isolamento da equipe e baixa produtividade.
 
 No universo acadêmico, teorias clássicas de retenção, como o renomado Modelo de Integração de Vincent Tinto (referência global em evasão universitária), defendem exatamente a mesma lógica: o aluno não desiste por um único motivo repentino, mas por um processo gradual de desconexão acadêmica e social.
 
@@ -92,6 +92,10 @@ A inovação não está apenas na sala de aula, mas na forma como a instituiçã
 
 A sua IES está pronta para antecipar a evasão e transformar a retenção em previsibilidade financeira?
 
-**Agende uma demonstração com os especialistas da Fiter e descubra como aplicar a ciência de dados na proteção dos seus alunos hoje mesmo.**
+**[Agende uma demonstração com os especialistas da Fiter](https://calendly.com/fiter_/fiter) e descubra como aplicar a ciência de dados na proteção dos seus alunos hoje mesmo.**
+
+---
+
+Leia também: [O Que a Faculdade Não Ensina e o RH Espera em 2026](https://fiter.com.br/blog/o-que-a-faculdade-nao-ensina-rh-2026/) — as competências invisíveis que definem quem as instituições querem reter.
 
 ```

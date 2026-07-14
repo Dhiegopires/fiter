@@ -96,10 +96,14 @@ A transição de uma cultura focada no cumprimento de tarefas para uma cultura d
 
 * **Centralização da Jornada do Colaborador:** Cruzando o atingimento de metas operacionais com a evolução comportamental e técnica de forma transparente.
 * **Acompanhamento Automatizado do PDI:** Notificando tanto os líderes quanto os liderados sobre os prazos, os avanços e os gargalos de seus planos de ação, garantindo que o desenvolvimento não caia no esquecimento.
-* **Geração de People Analytics:** Entregando aos executivos painéis de dados que comprovam o retorno sobre o investimento do desenvolvimento interno quando comparado aos altíssimos custos de rotatividade e recontratação.
+* **Geração de [People Analytics](https://fiter.com.br/solucoes/rh/):** Entregando aos executivos painéis de dados que comprovam o retorno sobre o investimento do desenvolvimento interno quando comparado aos altíssimos custos de rotatividade e recontratação.
 
 Investir em "upskilling" por meio de ciclos de desempenho inteligentes não é mais um benefício opcional ou uma tendência passageira de gestão. Trata-se de uma estratégia fundamental de sobrevivência corporativa. Quando a sua empresa transforma a gestão de performance em um verdadeiro motor de desenvolvimento, ela deixa de comprar talentos cada vez mais caros e escassos no mercado para construir os líderes e especialistas do futuro dentro de casa.
 
 ---
 
 > *Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma de gestão de desempenho e engajamento que conecta o desenvolvimento humano aos resultados reais de negócio, ajudando empresas a construírem culturas de alta performance.*
+
+---
+
+Leia também: [Muito Além do Cargo: Como Desenvolver as Habilidades Reais do seu Time](https://fiter.com.br/blog/muito-alem-do-cargo-gestao-por-habilidades/) — estratégias práticas de mobilidade interna e retenção por competências.

@@ -36,7 +36,7 @@ image: "riscos-psicossociais-nr-01-pesquisa-clima.webp"
 
 # Riscos Psicossociais na NR1: Como a Pesquisa de Clima Ajuda no Mapeamento
 
-A nova era da gestão de **Saúde e Segurança do Trabalho (SST)** exige dos gestores e diretores de RH muito mais do que o controle de agentes físicos, químicos e biológicos. Com a modernização da **Norma Regulamentadora nº 01 (NR1)** e a implementação do **Gerenciamento de Riscos Ocupacionais (GRO)**, um novo e complexo desafio se estabeleceu: a necessidade de identificar, avaliar e mitigar os riscos psicossociais na NR1.
+A nova era da gestão de **Saúde e Segurança do Trabalho (SST)** exige dos gestores e diretores de RH muito mais do que o controle de agentes físicos, químicos e biológicos. Com a modernização da **Norma Regulamentadora nº 01 (NR1)** e a implementação do **Gerenciamento de Riscos Ocupacionais (GRO)**, um novo e complexo desafio se estabeleceu: a necessidade de identificar, avaliar e mitigar os riscos psicossociais na [NR1](https://fiter.com.br/produtos/nr01/).
 
 O que antes era tratado apenas como uma questão de engajamento ou "clima", agora é um requisito legal de conformidade. Neste cenário, mapear a saúde mental no trabalho deixou de ser um diferencial competitivo para se tornar o núcleo do **Programa de Gerenciamento de Riscos (PGR)**.
 
@@ -70,7 +70,7 @@ O maior gargalo para os profissionais de RH e Segurança do Trabalho é a coleta
 
 ## A Pesquisa de Clima como Evidência Legal no PGR
 
-A pesquisa de clima e saúde mental não é apenas um termômetro de satisfação; é uma ferramenta de auditoria interna. Quando bem estruturada, ela converte a percepção subjetiva dos colaboradores em *people analytics*, indicadores quantitativos que o Ministério do Trabalho e o Ministério Público do Trabalho (MPT) aceitam como evidência de monitoramento ativo.
+A [pesquisa de clima](https://fiter.com.br/produtos/pesquisa-de-clima/) e saúde mental não é apenas um termômetro de satisfação; é uma ferramenta de auditoria interna. Quando bem estruturada, ela converte a percepção subjetiva dos colaboradores em *people analytics*, indicadores quantitativos que o Ministério do Trabalho e o Ministério Público do Trabalho (MPT) aceitam como evidência de monitoramento ativo.
 
 Ao utilizar a pesquisa de clima com foco em fatores psicossociais, o RH consegue:
 
@@ -89,7 +89,7 @@ Para garantir que a sua avaliação tenha validade estratégica e legal, siga es
 3.  **Cruze dados demográficos e departamentais:** Segmente os resultados por área, tempo de casa e cargo. Isso permite identificar se o risco psicossocial é sistêmico (cultura da empresa) ou localizado (um líder específico).
 4.  **Insira os indicadores no Inventário de Riscos do PGR:** Classifique o nível de risco (Baixo, Médio, Alto) de cada departamento com base nos scores de estresse e percepção de liderança obtidos na pesquisa.
 5.  **Crie Planos de Ação baseados em dados:** Para áreas com alto risco, documente no PGR ações concretas, como "Treinamento de Comunicação Não-Violenta para a gerência X" ou "Revisão do modelo de metas do setor de Vendas".
-6.  **Estabeleça a periodicidade de reavaliação:** O GRO exige melhoria contínua. Aplique pesquisas de pulso trimestrais para monitorar a eficácia das ações implementadas e atualize o PGR conforme a evolução dos indicadores.
+6.  **Estabeleça a periodicidade de reavaliação:** O GRO exige melhoria contínua. Aplique [pesquisas de pulso](https://fiter.com.br/produtos/pulse/) trimestrais para monitorar a eficácia das ações implementadas e atualize o PGR conforme a evolução dos indicadores.
 
 ---
 
@@ -102,3 +102,7 @@ Ambientes onde os riscos psicossociais são mapeados e tratados de forma prediti
 ---
 
 > **Nota:** Este artigo contou com a curadoria técnica de **Sergio Amad**, CEO da Fiter e especialista em inovação voltada para os Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma suíte de soluções de RH, que ajuda empresas a conectar a gestão de performance, o engajamento e a conformidade legal através de inteligência de dados e *people analytics*.
+
+---
+
+Leia também: [Pesquisa de Clima vs. Pesquisa Pulse: Estratégias Complementares para a NR1](https://fiter.com.br/blog/clima-vs-pulse-diferencas-nr1/) — entenda como as duas metodologias se complementam para blindar sua empresa juridicamente.

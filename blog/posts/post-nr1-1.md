@@ -28,7 +28,7 @@ author: "Giovanna Dorigatti"
 authorInitials: "GD"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "nr1saude.png"
+image: "nr1saude.webp"
 ---
 
 
@@ -36,7 +36,7 @@ image: "nr1saude.png"
 
 ## Adequação à NR-1: Por Que o RH Não Deve Carregar Sozinho o Peso da Saúde Mental Corporativa
 
-A saúde mental deixou de ser apenas uma pauta de bem-estar para se tornar uma prioridade estratégica, jurídica e operacional dentro das empresas brasileiras. Com a atualização da **NR-1** e a crescente exigência sobre a gestão de riscos psicossociais no ambiente corporativo, departamentos de Recursos Humanos passaram a enfrentar um desafio que vai muito além da gestão de pessoas: garantir conformidade legal enquanto preservam a saúde emocional das equipes.
+A saúde mental deixou de ser apenas uma pauta de bem-estar para se tornar uma prioridade estratégica, jurídica e operacional dentro das empresas brasileiras. Com a atualização da **[NR-1](https://fiter.com.br/produtos/nr01/)** e a crescente exigência sobre a gestão de riscos psicossociais no ambiente corporativo, departamentos de Recursos Humanos passaram a enfrentar um desafio que vai muito além da gestão de pessoas: garantir conformidade legal enquanto preservam a saúde emocional das equipes.
 
 O problema é que muitas empresas ainda tentam lidar com essa responsabilidade utilizando métodos manuais, processos fragmentados e pesquisas esporádicas. O resultado? Sobrecarga operacional, insegurança jurídica e dificuldade em comprovar ações preventivas diante de auditorias ou fiscalizações.
 
@@ -100,7 +100,7 @@ Em uma eventual fiscalização ou ação trabalhista, não basta afirmar que a e
 
 ### People Analytics e IA: O Novo Aliado Estratégico do RH
 
-É justamente nesse cenário que tecnologias preditivas ganham protagonismo. O conceito de **People Analytics** vem transformando a gestão de pessoas ao permitir que decisões estratégicas sejam tomadas com base em dados reais — e não apenas em percepção subjetiva.
+É justamente nesse cenário que tecnologias preditivas ganham protagonismo. O conceito de **[People Analytics](https://fiter.com.br/solucoes/rh/)** vem transformando a gestão de pessoas ao permitir que decisões estratégicas sejam tomadas com base em dados reais — e não apenas em percepção subjetiva.
 
 Segundo levantamento da *Deloitte*, empresas orientadas por People Analytics têm até **82% mais chances** de superar concorrentes em retenção de talentos e performance organizacional.
 
@@ -155,3 +155,7 @@ O RH não precisa — e nem deveria — carregar sozinho o peso dessa transforma
 > **No fim, empresas fortes são construídas por pessoas saudáveis.**
 
 *Sua organização já está preparada para transformar saúde mental em estratégia — e não apenas em obrigação?*
+
+---
+
+Leia também: [Burnout e Segurança Psicológica: O Custo Oculto dos Ambientes Tóxicos](https://fiter.com.br/blog/burnout-seguranca-psicologica-trabalho/) — entenda como criar ambientes organizacionais resistentes ao esgotamento.

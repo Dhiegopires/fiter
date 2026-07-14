@@ -40,7 +40,7 @@ image: "Riscos-Psicossociais-no-Trabalho.webp"
 
 Se você atua na gestão de pessoas, provavelmente já percebeu que a saúde mental corporativa deixou de ser apenas um pacote de benefícios. Hoje, ela é o centro das discussões sobre gestão de risco, *compliance* e performance financeira.
 
-Com os índices de esgotamento profissional batendo recordes e a fiscalização regulatória se intensificando (incluindo as exigências do Programa de Gerenciamento de Riscos da NR1), mitigar os fatores que afetam a mente dos colaboradores tornou-se uma prioridade para o alto escalão.
+Com os índices de esgotamento profissional batendo recordes e a fiscalização regulatória se intensificando (incluindo as exigências do Programa de Gerenciamento de Riscos da [NR1](https://fiter.com.br/produtos/nr01/)), mitigar os fatores que afetam a mente dos colaboradores tornou-se uma prioridade para o alto escalão.
 
 O desafio atual de executivos e profissionais de Recursos Humanos não é oferecer soluções Superficiais, mas sim construir uma arquitetura organizacional que promova a alta performance sem esgotar seu principal ativo.
 
@@ -95,11 +95,11 @@ No aspecto legal, diretrizes como a **ISO 45003** (norma global de segurança ps
 
 Para resolver essa dor de negócios, a liderança precisa focar em processos inteligentes e contar com tecnologia especializada para transformar dados em ação. Veja por onde começar:
 
-* **Estruture uma Escuta Ativa Contínua:** A tradicional **Pesquisa de Clima** anual já não é suficiente para a velocidade do mercado. Implemente **pesquisas de pulso (Pulse)** frequentes para medir níveis de estresse, engajamento e a temperatura da equipe em tempo real, identificando os setores de maior risco com precisão cirúrgica.
+* **Estruture uma Escuta Ativa Contínua:** A tradicional **[Pesquisa de Clima](https://fiter.com.br/produtos/pesquisa-de-clima/)** anual já não é suficiente para a velocidade do mercado. Implemente **[pesquisas de pulso (Pulse)](https://fiter.com.br/produtos/pulse/)** frequentes para medir níveis de estresse, engajamento e a temperatura da equipe em tempo real, identificando os setores de maior risco com precisão cirúrgica.
 * **Mapeie e Previna Riscos (Compliance com a NR1):** O gerenciamento de riscos psicossociais já é uma exigência legal. Utilize plataformas que mapeiem a saúde mental da sua operação e gerem dados estruturados para compor o Programa de Gerenciamento de Riscos (PGR) da **NR1**, blindando a empresa contra passivos.
 * **Ajuste o Design do Trabalho e Treine a Liderança:** Trabalhe com os gestores para eliminar burocracias, revisar tarefas e desenvolver lideranças baseadas na inteligência emocional. Líderes destreinados são vetores de risco; já equipes seguras psicologicamente são as mais rentáveis.
-* **Estabeleça Tolerância Zero com uma Ouvidoria Segura:** A segurança psicológica exige um canal de denúncias (**Ouvidoria**) gerido de forma tecnológica e imparcial. A diretoria deve garantir que qualquer desvio ético, assédio ou comunicação violenta seja reportado e investigado com sigilo e rigor.
+* **Estabeleça Tolerância Zero com uma Ouvidoria Segura:** A segurança psicológica exige um canal de denúncias (**[Ouvidoria](https://fiter.com.br/produtos/ouvidoria/)**) gerido de forma tecnológica e imparcial. A diretoria deve garantir que qualquer desvio ético, assédio ou comunicação violenta seja reportado e investigado com sigilo e rigor.
 
-Proteger a saúde mental no trabalho é, na verdade, uma estratégia de otimização de performance. Ao gerenciar e neutralizar os riscos psicossociais, apoiando-se em um ecossistema completo de soluções de People Analytics, como o oferecido pela **Fiter**, sua empresa não apenas atende às exigências legais, mas constrói um ambiente onde a inovação e o alto desempenho acontecem de forma sustentável.
+Proteger a saúde mental no trabalho é, na verdade, uma estratégia de otimização de performance. Ao gerenciar e neutralizar os riscos psicossociais, apoiando-se em um ecossistema completo de soluções de People Analytics, como o oferecido pela **[Fiter](https://fiter.com.br/solucoes/rh/)**, sua empresa não apenas atende às exigências legais, mas constrói um ambiente onde a inovação e o alto desempenho acontecem de forma sustentável.
 
 > **Nota:** Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma completa de soluções de RH focada em performance, engajamento e People Analytics, ajudando empresas a mapearem riscos e construírem ambientes de trabalho sustentáveis e de alto desempenho.

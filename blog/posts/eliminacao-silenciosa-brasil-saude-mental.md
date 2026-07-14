@@ -28,7 +28,7 @@ author: "Sergio Amad"
 authorInitials: "SA"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "eliminacao-silenciosa-brasil-saude-mental.jpeg"
+image: "eliminacao-silenciosa-brasil-saude-mental.webp"
 ---
 
 
@@ -42,7 +42,7 @@ Essa eliminação não pode ser apenas motivo de lamentação. Ela deve ser o "c
 
 ## O Placar Invisível da Ciência de Dados
 
-Na Fiter, nossa matéria-prima é a ciência de dados da felicidade e do bem-estar corporativo. E o que os algoritmos e os indicadores nos mostram diariamente é um placar que deveria nos causar muito mais indignação do que qualquer tropeço esportivo. Enquanto a Noruega e outros países nórdicos levantam a taça anual do *World Happiness Report* com modelos baseados em confiança, autonomia e segurança psicológica, o Brasil sofre goleadas na saúde mental.
+Na [Fiter](https://fiter.com.br/solucoes/rh/), nossa matéria-prima é a ciência de dados da felicidade e do bem-estar corporativo. E o que os algoritmos e os indicadores nos mostram diariamente é um placar que deveria nos causar muito mais indignação do que qualquer tropeço esportivo. Enquanto a Noruega e outros países nórdicos levantam a taça anual do *World Happiness Report* com modelos baseados em confiança, autonomia e segurança psicológica, o Brasil sofre goleadas na saúde mental.
 
 Lideramos índices globais de ansiedade e somos vice-campeões mundiais em *Burnout*. Nossa gestão corporativa, em grande parte, ainda joga na retranca, presa a um esquema tático ultrapassado que confunde controle com produtividade e exaustão com engajamento.
 
@@ -66,3 +66,7 @@ Que 2030 não seja apenas o ano de buscar o hexacampeonato no campo, mas o ano e
 ### Sobre o Autor
 
 **Sérgio Amad** - *CEO da Fiter* Autor do IFT (Índice de Felicidade no Trabalho), do IFE (Índice de Felicidade na Educação) e do IFF (Índice de Felicidade no Esporte).
+
+---
+
+Leia também: [Burnout e Segurança Psicológica: O Custo Oculto dos Ambientes Tóxicos](https://fiter.com.br/blog/burnout-seguranca-psicologica-trabalho/) — como criar organizações onde o esgotamento mental simplesmente não encontra espaço.

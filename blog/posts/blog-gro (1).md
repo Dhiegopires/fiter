@@ -28,7 +28,7 @@ author: "Giovanna Dorigatti"
 authorInitials: "GD"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "groepgrimagem.jpg"
+image: "groepgrimagem.webp"
 ---
 
 

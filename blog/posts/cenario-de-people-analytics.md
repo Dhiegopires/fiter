@@ -28,7 +28,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "cenario-de-people-analytics.jpg"
+image: "cenario-de-people-analytics.webp"
 ---
 
 
@@ -44,7 +44,7 @@ Historicamente, a gestão de pessoas operou sob um modelo estritamente reativo. 
 
 ## O Que é People Analytics?
 
-Embora o termo frequentemente pareça associado apenas a grandes corporações de tecnologia, o **People Analytics** consiste, fundamentalmente, na coleta, organização e aplicação de dados demográficos, operacionais e comportamentais com o objetivo de otimizar decisões de negócios e a gestão de pessoas. 
+Embora o termo frequentemente pareça associado apenas a grandes corporações de tecnologia, o **[People Analytics](https://fiter.com.br/solucoes/rh/)** consiste, fundamentalmente, na coleta, organização e aplicação de dados demográficos, operacionais e comportamentais com o objetivo de otimizar decisões de negócios e a gestão de pessoas. 
 
 Longe de significar uma vigilância excessiva sobre os colaboradores ou a sua redução a métricas frias, o processo baseia-se na conexão inteligente de pontos informacionais. Trata-se da transição definitiva do RH operacional para o RH estratégico: em vez de computar apenas indicadores retrospectivos (como a taxa de turnover do mês anterior), a organização passa a cruzar variáveis de desempenho, engajamento e clima para mapear padrões preditivos, descobrindo quem apresenta maior propensão à evasão e quais os fatores causais subjacentes.
 
@@ -78,7 +78,7 @@ Prever a evasão de talentos exige a superação de análises isoladas em favor 
 
 A verdadeira inteligência preditiva surge quando a organização deixa de observar os indicadores de forma estanque e passa a correlacioná-los em tempo real. Uma matriz de risco automatizada fundamenta-se no monitoramento de três pilares centrais:
 
-1. **Pesquisas de Pulso frequentes:** Indicam a oscilação do clima. Se um colaborador de alta performance que historicamente avaliava os processos da empresa com notas excelentes passa a atuar na faixa dos neutros ou detratores, o sistema gera um alerta contextual.
+1. **[Pesquisas de Pulso](https://fiter.com.br/produtos/pulse/) frequentes:** Indicam a oscilação do clima. Se um colaborador de alta performance que historicamente avaliava os processos da empresa com notas excelentes passa a atuar na faixa dos neutros ou detratores, o sistema gera um alerta contextual.
 2. **Indicador de e-NPS:** Mede diretamente o orgulho de pertencer e a disposição em recomendar a empresa. Estatísticas demonstram que quedas acentuadas de e-NPS dentro de uma área costumam preceder picos de turnover em um intervalo de 60 a 90 dias.
 3. **Avaliações de Desempenho:** Cruza-se este cenário com as avaliações de performance. Quando um profissional classificado como peça-chave (alto potencial e entrega consolidada) apresenta queda concomitante em seus indicadores de engajamento e performance, o sistema emite um diagnóstico objetivo de risco imediato. Há um desalinhamento em curso, e a janela de intervenção eficaz está aberta.
 
@@ -101,3 +101,7 @@ A adoção de plataformas integradas que unificam gestão de desempenho, pesquis
 ## Curadoria Técnica
 
 Este artigo contou com a curadoria técnica de **Sergio Amad**, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma completa que une performance, clima, engajamento e People Analytics em um só lugar, ajudando empresas a reterem seus melhores talentos por meio de dados precisos e gestão humanizada.
+
+---
+
+Leia também: [Convocação vs. Retenção: O custo do turnover silencioso](https://fiter.com.br/blog/convocacao-vs-retencao-custo-turnover-silencioso/) — como o monitoramento contínuo transforma dados em retenção de talentos estratégicos.

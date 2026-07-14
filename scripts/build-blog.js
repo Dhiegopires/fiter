@@ -93,20 +93,20 @@ posts.forEach(post => {
         ctaBlock = `<div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
                         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
                         <div style="position:relative;">
-                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Fiter Pulse Educação</p>
-                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Veja como funciona na prática</h3>
-                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">Monitore clima acadêmico e evasão em tempo real via WhatsApp. Configure sua primeira pesquisa em menos de 10 minutos.</p>
-                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_educacao'})">Agendar demonstração</a>
+                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Software — Fiter Pulse Educação</p>
+                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">O software que identifica evasão antes que aconteça.</h3>
+                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">Fiter Pulse Educação é uma plataforma de software que envia pesquisas de pulso para alunos via WhatsApp — 8 cliques, sem app, sem login. O software mapeia engajamento acadêmico turma a turma e gera alertas automáticos de risco de evasão antes que o aluno desapareça.</p>
+                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_educacao'})">Ver demonstração do software</a>
                         </div>
                     </div>`;
     } else if (data.category === 'RH') {
         ctaBlock = `<div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
                         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
                         <div style="position:relative;">
-                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Fiter Pulse</p>
-                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Veja como funciona na prática</h3>
-                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">87% de taxa de resposta via WhatsApp. Configure sua primeira pesquisa em menos de 10 minutos.</p>
-                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Agendar demonstração</a>
+                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Software — Fiter Pulse</p>
+                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Seu RH ouve a equipe toda semana — em 8 cliques.</h3>
+                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">O software Fiter envia pesquisas de pulso pelo WhatsApp sem login, sem app. Seu time responde em 2 minutos e você recebe um painel de People Analytics com alertas de burnout, previsão de turnover e PDI gerado por IA — tudo em tempo real.</p>
+                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Ver demonstração do software</a>
                             <p style="margin-top:1.25rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
                         </div>
                     </div>`;
@@ -114,9 +114,9 @@ posts.forEach(post => {
         ctaBlock = `<div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
                         <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
                         <div style="position:relative;">
-                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Fiter Pulse</p>
-                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Veja como funciona na prática</h3>
-                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">87% de taxa de resposta via WhatsApp. Configure sua primeira pesquisa em menos de 10 minutos.</p>
+                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Plataforma Fiter</p>
+                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Software de People Analytics que cabe no WhatsApp.</h3>
+                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">A plataforma de software Fiter coleta feedback contínuo em 8 cliques via WhatsApp — sem login, sem app — e entrega um painel de People Analytics com alertas automáticos de burnout e previsão de turnover.</p>
                             <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_generico'})">Agendar demonstração</a>
                         </div>
                     </div>`;
@@ -136,6 +136,15 @@ posts.forEach(post => {
         imageSection = '';
     }
 
+    // Build related posts (same category first, then fill from others)
+    const sameCat = posts.filter(p => p.data.slug !== data.slug && p.data.category === data.category).slice(0, 3);
+    const otherCat = posts.filter(p => p.data.slug !== data.slug && p.data.category !== data.category).slice(0, 3 - sameCat.length);
+    const relatedPosts = [...sameCat, ...otherCat].slice(0, 3);
+    const relatedHtml = relatedPosts.map(r => `<a href="/blog/${r.data.slug}/" class="related-post-item">
+                                <span class="related-post-tag">${r.data.category}</span>
+                                <p class="related-post-title">${r.data.title}</p>
+                            </a>`).join('\n                            ');
+
     let pageHtml = layoutTemplate
         .replace(/\{\{PAGE_TITLE\}\}/g, `${data.title} | Fiter Blog`)
         .replace(/\{\{META_DESCRIPTION\}\}/g, data.description)
@@ -148,6 +157,7 @@ posts.forEach(post => {
         .replace(/\{\{AUTHOR_INITIALS\}\}/g, data.authorInitials)
         .replace(/\{\{IMAGE_SECTION\}\}/g, imageSection)
         .replace(/\{\{CTA_BLOCK\}\}/g, ctaBlock)
+        .replace(/\{\{RELATED_POSTS\}\}/g, relatedHtml)
         .replace(/\{\{CONTENT\}\}/g, htmlContent);
 
     fs.writeFileSync(path.join(postDir, 'index.html'), pageHtml, 'utf-8');

@@ -54,9 +54,9 @@ O impacto financeiro desta realidade é severo. Substituir um colaborador custa 
 
 É exatamente neste ponto crítico que a inovação tecnológica se faz estritamente necessária. Historicamente, o RH tomava decisões baseadas apenas na intuição ou em pesquisas de clima anuais, que funcionavam como uma fotografia antiga do passado. O problema central desse modelo é que o engajamento humano não é estático. Ele flutua semanalmente e é diretamente influenciado por metas, atitudes da liderança e pelo contexto pessoal de cada indivíduo.
 
-Com a consolidação do People Analytics (análise de dados voltada para gestão de pessoas), os gestores ganharam o poder inédito de antecipar problemas. É crucial entender que analisar dados de colaboradores não significa robotizar o setor. Pelo contrário, significa olhar para métricas precisas para ter a capacidade de oferecer um cuidado altamente personalizado.
+Com a consolidação do [People Analytics](https://fiter.com.br/solucoes/rh/) (análise de dados voltada para gestão de pessoas), os gestores ganharam o poder inédito de antecipar problemas. É crucial entender que analisar dados de colaboradores não significa robotizar o setor. Pelo contrário, significa olhar para métricas precisas para ter a capacidade de oferecer um cuidado altamente personalizado.
 
-Ao utilizar plataformas inteligentes, o RH consegue cruzar dados de desempenho, registros de feedbacks contínuos e resultados de pesquisas de pulso. Isso permite identificar proativamente, por exemplo, se um departamento específico apresenta quedas bruscas de motivação antes mesmo que os atestados médicos ou os pedidos de demissão comecem a surgir. Os dados atuam, portanto, como um termômetro preventivo de saúde mental e de segurança psicológica.
+Ao utilizar plataformas inteligentes, o RH consegue cruzar dados de desempenho, registros de feedbacks contínuos e resultados de [pesquisas de pulso](https://fiter.com.br/produtos/pulse/). Isso permite identificar proativamente, por exemplo, se um departamento específico apresenta quedas bruscas de motivação antes mesmo que os atestados médicos ou os pedidos de demissão comecem a surgir. Os dados atuam, portanto, como um termômetro preventivo de saúde mental e de segurança psicológica.
 
 ## Como Estruturar uma Estratégia de Retenção Baseada em Dados
 
@@ -88,3 +88,7 @@ Quando unimos o toque genuinamente humano à precisão analítica dos dados, dei
 ***
 
 Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma que une inteligência de dados e ciência comportamental para revolucionar a jornada do colaborador, conectando alta performance, engajamento contínuo e alinhamento cultural.
+
+---
+
+Leia também: [Liderança e a Era da Ambição Silenciosa](https://fiter.com.br/blog/lideranca-era-ambicao-silenciosa/) — como reter talentos que redefiniam o conceito de sucesso profissional.

@@ -28,7 +28,7 @@ author: "Giovanna Dorigatti"
 authorInitials: "GD"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "burnout.jpg"
+image: "burnout.webp"
 ---
 
 
@@ -82,7 +82,7 @@ Para combater o burnout de maneira preventiva, o C-Level necessita de **telemetr
 
 ## A Solução Fiter: Pesquisas de Pulso e Ação Preditiva
 
-Diante desse vácuo operacional, a tecnologia da **Fiter** transforma a teoria acadêmica em governança prática. A plataforma substitui os questionários exaustivos pelas chamadas *pesquisas de pulso*, que consistem em uma autoanálise mensal via WhatsApp resolvida em 2 minutos (8 cliques). Utilizando as escalas científicas IFT ou Satisfação, o sistema calcula o Fit Cultural e gera um PDI (Plano de Desenvolvimento Individual) imediato por inteligência generativa, sem necessidade de login ou download de aplicativos.
+Diante desse vácuo operacional, a tecnologia da **[Fiter](https://fiter.com.br/solucoes/rh/)** transforma a teoria acadêmica em governança prática. A plataforma substitui os questionários exaustivos pelas chamadas [*pesquisas de pulso*](https://fiter.com.br/produtos/pulse/), que consistem em uma autoanálise mensal via WhatsApp resolvida em 2 minutos (8 cliques). Utilizando as escalas científicas IFT ou Satisfação, o sistema calcula o Fit Cultural e gera um PDI (Plano de Desenvolvimento Individual) imediato por inteligência generativa, sem necessidade de login ou download de aplicativos.
 
 A superioridade prática da solução de pulso da Fiter em relação à pesquisa anual tradicional sustenta-se em quatro vantagens competitivas:
 
@@ -100,3 +100,7 @@ A superioridade prática da solução de pulso da Fiter em relação à pesquisa
 Em última análise, a cultura de uma empresa é definida estritamente pelos comportamentos que a diretoria tolera, recompensa e pune no dia a dia. Investir no monitoramento contínuo da segurança psicológica por meio de plataformas analíticas de pulso deixou de ser uma mera iniciativa de *employer branding*. Atualmente, trata-se de uma exigência de *compliance*, de gestão de riscos laborais e de sustentabilidade financeira.
 
 Empresas de vanguarda não terceirizam sua eficiência para a sorte ou para a suposta resistência infinita de seus colaboradores. Pelo contrário: elas projetam e monitoram uma infraestrutura organizacional robusta, na qual o burnout simplesmente não encontra espaço para se proliferar.
+
+---
+
+Quer aprofundar esse tema? Leia também: [NR-1 e Saúde Mental Corporativa: Por Que o RH Não Deve Carregar Sozinho esse Peso](https://fiter.com.br/blog/NR1-e-saude-mental/) e descubra como transformar conformidade legal em estratégia de cultura.

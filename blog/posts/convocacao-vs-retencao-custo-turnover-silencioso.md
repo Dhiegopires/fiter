@@ -28,7 +28,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "convocacao-vs-retencao-custo-turnover-silencioso (2).jpg"
+image: "convocacao-vs-retencao-custo-turnover-silencioso.webp"
 
 ---
 
@@ -86,7 +86,7 @@ O colaborador:
 - Cumpre apenas o estritamente necessário;
 - Atualiza silenciosamente seu perfil no LinkedIn.
 
-Muitas organizações ainda confiam na tradicional **Pesquisa de Clima Anual** como principal termômetro de satisfação.
+Muitas organizações ainda confiam na tradicional **[Pesquisa de Clima Anual](https://fiter.com.br/produtos/pesquisa-de-clima/)** como principal termômetro de satisfação.
 
 No entanto, medir o clima organizacional apenas uma vez por ano é o equivalente a avaliar o condicionamento físico de um atleta apenas em janeiro e esperar que ele esteja perfeitamente apto para disputar uma final de Copa do Mundo em julho.
 
@@ -175,3 +175,7 @@ Sob sua liderança, a Fiter desenvolveu uma plataforma que integra clima organiz
 Sua organização ainda depende de pesquisas anuais para entender o engajamento das equipes ou já iniciou a transição para modelos contínuos de monitoramento?
 
 A resposta para essa pergunta pode determinar quem permanecerá em campo quando chegar a hora de disputar os jogos mais importantes do negócio.
+
+---
+
+Leia também: [People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão](https://fiter.com.br/blog/people-analytics-na-pratica/) — veja como transformar dados de engajamento em retenção estratégica.

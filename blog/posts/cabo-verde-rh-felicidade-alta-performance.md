@@ -68,7 +68,7 @@ Entretanto, quando existe uma cultura organizacional capaz de gerar pertenciment
 
 ## Modelos Preditivos e a Cultura do Pertencimento
 
-Essa é justamente a base dos protocolos desenvolvidos pela **FIter**.
+Essa é justamente a base dos protocolos desenvolvidos pela **[Fiter](https://fiter.com.br/solucoes/rh/)**.
 
 Os modelos preditivos construídos a partir do IFT, do IFE e do IFF demonstram que indicadores como:
 * **Compatibilidade** com a atividade exercida;
@@ -99,4 +99,8 @@ Porque, quando esses fatores se conectam, a alta performance deixa de ser um eve
 
 ### Sobre o Autor
 
-**Sérgio Amad** *CEO da FIter* Autor do IFT (Índice de Felicidade no Trabalho), do IFE (Índice de Felicidade na Educação) e do IFF (Índice de Felicidade no Esporte).
+**Sérgio Amad** *CEO da Fiter* Autor do IFT (Índice de Felicidade no Trabalho), do IFE (Índice de Felicidade na Educação) e do IFF (Índice de Felicidade no Esporte).
+
+---
+
+Leia também: [A Eliminação Silenciosa que Sofremos Todos os Dias](https://fiter.com.br/blog/eliminacao-silenciosa-brasil-saude-mental/) — como a ciência da felicidade e os dados de bem-estar corporativo podem transformar o desenvolvimento humano no Brasil.

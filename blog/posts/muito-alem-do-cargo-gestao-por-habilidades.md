@@ -76,7 +76,7 @@ Se você reconhece essa dor no seu cenário atual e precisa agir, aqui estão di
 
 * **Mapeie o Inventário de Habilidades Ocultas:** Promova pesquisas ou entrevistas estruturadas para descobrir o que seus colaboradores sabem fazer fora do escopo oficial. Você ficará surpreso ao descobrir programadores com talentos para design ou profissionais de vendas com profundo conhecimento em análise de dados.
 * **Desconstrua Projetos em Desafios:** Quando surgir um novo grande projeto, não o entregue apenas para um departamento. Quebre-o em desafios menores e abra vagas internas temporárias para que pessoas de qualquer área possam contribuir algumas horas por semana, baseadas em suas habilidades.
-* **Transforme o Feedback em Rotina de Crescimento:** O feedback anual é uma autópsia do que já passou. O desenvolvimento real exige acompanhamento constante. Implemente conversas curtas e frequentes focadas exclusivamente em como a empresa pode ajudar aquele indivíduo a aprender a próxima habilidade da sua lista de interesses.
+* **Transforme o Feedback em Rotina de Crescimento:** O feedback anual é uma autópsia do que já passou. O desenvolvimento real exige acompanhamento constante. Implemente conversas curtas e frequentes — com suporte de [pesquisas de pulso](https://fiter.com.br/produtos/pulse/) — focadas em como a empresa pode ajudar aquele indivíduo a aprender a próxima habilidade da sua lista de interesses.
 * **Reconheça a Evolução, Não Apenas o Resultado Final:** Crie programas de incentivo que premiem colaboradores que se dedicaram a aprender uma nova ferramenta complexa ou que aceitaram mentorar colegas de outros setores. O esforço em direção ao aprendizado deve ser tão celebrado quanto a assinatura de um novo contrato.
 
 Quando uma organização entende que seu maior ativo não são as posições preenchidas no organograma, mas a capacidade humana de aprender e se adaptar, a mágica acontece. A rotatividade despenca porque o ambiente se torna intelectualmente estimulante e emocionalmente seguro.
@@ -86,3 +86,7 @@ Desenvolver as habilidades reais do seu time é assumir um compromisso público 
 ***
 
 Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a Fiter desenvolveu uma plataforma robusta que conecta propósito, engajamento e desempenho em tempo real, transformando a maneira como as empresas cuidam, desenvolvem e retêm os seus maiores talentos de forma inteligente e humana.
+
+---
+
+Leia também: [Avaliação de Desempenho: O Motor do Upskilling](https://fiter.com.br/blog/avaliacao-desempenho-motor-upskilling/) — como transformar o ciclo de avaliação em uma ferramenta real de desenvolvimento de habilidades.

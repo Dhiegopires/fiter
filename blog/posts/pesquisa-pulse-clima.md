@@ -29,7 +29,7 @@ author: "EQUIPE FITER"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "pesquisa-pulse-clima.jpg"
+image: "pesquisa-pulse-clima.webp"
 ---
 
 
@@ -42,9 +42,9 @@ image: "pesquisa-pulse-clima.jpg"
 
 No cenário atual de Recursos Humanos e Gestão de Pessoas, tomar decisões baseadas em suposições é um risco que nenhuma liderança B2B pode correr. Aceleração de mercado, retenção de talentos e a urgência por ambientes de trabalho psicologicamente seguros exigem dados precisos e em tempo real. 
 
-Quando o objetivo é mensurar o sentimento dos colaboradores, duas ferramentas se destacam: a **Pesquisa de Clima** e a **Pesquisa Pulse**. 
+Quando o objetivo é mensurar o sentimento dos colaboradores, duas ferramentas se destacam: a **[Pesquisa de Clima](https://fiter.com.br/produtos/pesquisa-de-clima/)** e a **[Pesquisa Pulse](https://fiter.com.br/produtos/pulse/)**. 
 
-Longe de serem concorrentes, elas funcionam de maneira integrada, atuando como o diagnóstico estrutural e o monitoramento contínuo da organização. Compreender a sinergia entre ambas, bem como a sua conexão com as exigências legais da **Norma Regulamentadora 1 (NR1)**, é o primeiro passo para transformar a cultura da sua empresa em um ativo estratégico de crescimento.
+Longe de serem concorrentes, elas funcionam de maneira integrada, atuando como o diagnóstico estrutural e o monitoramento contínuo da organização. Compreender a sinergia entre ambas, bem como a sua conexão com as exigências legais da **[Norma Regulamentadora 1 (NR1)](https://fiter.com.br/produtos/nr01/)**, é o primeiro passo para transformar a cultura da sua empresa em um ativo estratégico de crescimento.
 
 ---
 
@@ -116,3 +116,7 @@ Escolher entre a profundidade do Clima ou a agilidade da Pulse é uma decisão d
 Este artigo contou com a curadoria técnica de Sergio Amad, CEO da Fiter e especialista em inovação voltada para o Recursos Humanos. Sob sua liderança, a **Fiter** desenvolveu uma plataforma robusta e intuitiva que centraliza as duas soluções. Com os nossos módulos, torna-se possível estruturar grandes diagnósticos anuais e, simultaneamente, programar réguas automatizadas de pesquisas pulse para monitorar a saúde, o engajamento e a segurança do seu time em tempo real. 
 
 Transforme dados abstratos em decisões estratégicas que impulsionam o seu negócio, mantendo a sua operação segura e em total conformidade com as normas vigentes.
+
+---
+
+Leia também: [NR-1 e Saúde Mental Corporativa: Por Que o RH Não Deve Carregar Sozinho esse Peso](https://fiter.com.br/blog/NR1-e-saude-mental/) — como automatizar a gestão de riscos psicossociais de ponta a ponta.
