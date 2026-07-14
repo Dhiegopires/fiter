@@ -12,7 +12,7 @@ slug: ferias-escolares-saude-mental-papel-rh
 date: 2026-07-14
 
 # Categoria exibida no blog
-category: "Saúde Mental"
+category: "RH"
 
 # Tempo estimado de leitura em minutos
 readingTime: 4
