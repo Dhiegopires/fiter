@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="TH4kqZnapgxjblie2KFVRM3laak_fIKLUfN9Dm5b1YY">
-    <title>Software de Engajamento de Colaboradores | Fiter</title>
+    <title>Software de Engajamento de Colaboradores e Alunos | Fiter</title>
     <meta name="description" content="Meça felicidade, engajamento e saúde mental com IA e neurociência. Pulse survey em 8 cliques via WhatsApp, predição de turnover em tempo real.">
     <link rel="canonical" href="https://fiter.com.br/">
     <link rel="icon" href="/favicon.ico" sizes="any">
@@ -40,7 +40,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=33d68c0d">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=1f4ea2c2">
     <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script type="importmap">
     {
@@ -281,9 +281,7 @@
     /* Donut responsive */
     @media(max-width:640px) { .donut-section-grid { grid-template-columns:1fr !important; } }
     /* FAQ 2-col */
-    .faq-2col { display:grid; grid-template-columns:280px 1fr; gap:5rem; align-items:start; }
-    @media(max-width:760px) { .faq-2col { grid-template-columns:1fr; gap:2rem; } }
-    /* ── SKIP LINK */
+/* ── SKIP LINK */
     .skip-link { position:absolute; top:-999px; left:-999px; padding:0.5rem 1rem; background:var(--bg-surface); color:var(--text-primary); border:1px solid var(--border-default); border-radius:4px; font-size:0.875rem; z-index:9999; text-decoration:none; }
     .skip-link:focus { top:1rem; left:1rem; }
     /* ── HERO */
@@ -384,23 +382,6 @@
     .testi-controls { display:flex; align-items:center; justify-content:center; gap:0.75rem; margin-top:1.75rem; }
     /* ── COMPARISON */
     .cmp-table-wrap { overflow-x:auto; border-radius:var(--radius-lg); border:1px solid rgba(255,255,255,0.08); }
-    /* ── CTA SECTION */
-    .cta-section-wrap { margin-bottom:4rem; padding:5rem 3.5rem; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden; }
-    .cta-bg-glow { position:absolute; top:-80px; right:-80px; width:400px; height:400px; background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%); pointer-events:none; }
-    .cta-grid-inner { display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; position:relative; z-index:1; }
-    .cta-left-text { color:var(--text-secondary); font-size:0.95rem; line-height:1.7; margin-bottom:2rem; }
-    .cta-checklist { display:flex; flex-direction:column; gap:0.75rem; }
-    .cta-check-item { display:flex; align-items:center; gap:0.75rem; font-size:0.85rem; color:var(--text-secondary); }
-    .cta-check-icon { color:var(--color-success); font-size:0.9rem; flex-shrink:0; }
-    .cta-note { margin-top:2rem; font-size:0.85rem; color:var(--text-tertiary); }
-    .cta-note a { color:var(--accent-brand); text-decoration:underline; text-underline-offset:3px; }
-    .cta-right-panel { display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:1.5rem; padding:2.5rem 2rem; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); }
-    .cta-panel-eyebrow { font-family:var(--font-mono); font-size:0.65rem; color:var(--text-tertiary); text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.75rem; }
-    .cta-panel-text { font-size:0.9rem; color:var(--text-secondary); line-height:1.6; max-width:28rem; }
-    .cta-btn-lg { padding:1rem 2.5rem; font-size:1rem; }
-    .cta-sub-note { font-size:0.75rem; color:var(--text-tertiary); line-height:1.5; }
-    .cta-email-link { font-size:0.8rem; color:var(--text-tertiary); text-decoration:none; border-bottom:1px solid rgba(255,255,255,0.12); padding-bottom:1px; }
-    .cta-email-link span { color:var(--text-secondary); }
     /* ── FAQ */
     .faq-left { padding-top:0.5rem; }
     .faq-note { font-size:0.875rem; color:var(--text-tertiary); line-height:1.65; margin-top:1.25rem; }
@@ -549,6 +530,7 @@
                 </div>
             </li>
 
+            <li class="nav-item"><a class="nav-link" href="/#planos">Planos</a></li>
             <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
             <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
 
@@ -590,6 +572,7 @@
                 </div></div>
             </div>
 
+            <a class="drawer-plain-link" href="/#planos">Planos</a>
             <a class="drawer-plain-link" href="/sobre/">Sobre</a>
             <a class="drawer-plain-link" href="/blog/">Blog</a>
 
@@ -628,6 +611,7 @@
         <!-- Bottom bar -->
         <div class="hero-bottom-bar">
             <div class="hero-bottom-left">
+                <p class="eyebrow-brand hero-eyebrow">Fiter: plataforma de IA para RH e Educação</p>
                 <h1 id="heroHeading">Clima e saúde mental do seu time, <br>medidos em 2 minutos pelo WhatsApp.</h1>
             </div>
             <div class="hero-bottom-right">
@@ -1032,52 +1016,52 @@
         <!-- PLANOS -->
         <section id="planos" class="ds-section" aria-labelledby="planos-heading" style="padding-bottom: 64px;">
             <p style="font-family:var(--font-mono);font-size:0.65rem;text-transform:uppercase;letter-spacing:0.14em;color:var(--accent-brand);margin-bottom:1.25rem;">Planos</p>
-            <h2 id="planos-heading" data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.8rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;">Escolha o que<br>sua empresa precisa.</h2>
-            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;max-width:520px;margin-bottom:3rem;">Contrate só o que resolve seu desafio. Adicione módulos conforme o RH amadurece.</p>
+            <h2 id="planos-heading" data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.8rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;">Escolha o plano ideal<br>para o momento da sua empresa.</h2>
+            <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;max-width:520px;margin-bottom:3rem;">Do pulso mensal pelo WhatsApp à gestão completa com inteligência artificial.</p>
 
             <div class="plans-grid">
 
-                <!-- Essencial -->
+                <!-- Starter -->
                 <div class="plan-card">
-                    <p class="plan-tag">Essencial</p>
-                    <h3 class="plan-name">Fiter Pulse</h3>
-                    <p class="plan-desc">Pesquisas de pulso automáticas via WhatsApp. 8 cliques, sem app, sem login. Seu RH recebe um painel com People Analytics em tempo real.</p>
+                    <p class="plan-tag">Fiter Starter</p>
+                    <h3 class="plan-name">O pulso contínuo da sua equipe.</h3>
+                    <p class="plan-desc">Ideal para quem quer ouvir os colaboradores de forma ágil e sem burocracia. Pesquisas pelo WhatsApp, painel em tempo real e planos de ação no automático.</p>
                     <ul class="plan-features">
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Pesquisas mensais automáticas via WhatsApp</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Painel de engajamento em tempo real</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Alertas automáticos de risco de burnout</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>PDI gerado por IA após cada pulso</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>e-NPS e Fit Cultural por colaborador</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Pesquisas via WhatsApp em 2 minutos, sem app</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Autoavaliação com devolutiva mensal ao colaborador</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Painel de engajamento atualizado em tempo real</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Previsão de risco de turnover por setor</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Planos de ação gerados automaticamente por IA</li>
                     </ul>
                     <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-secondary plan-cta">Solicitar proposta</a>
                 </div>
 
-                <!-- Estratégico — featured -->
+                <!-- Pro — featured -->
                 <div class="plan-card plan-card--featured">
                     <span class="plan-badge">Mais escolhido</span>
-                    <p class="plan-tag">Estratégico</p>
-                    <h3 class="plan-name">Pulse + NR-1 + Clima</h3>
-                    <p class="plan-desc">Engajamento contínuo, conformidade NR-1 automatizada e Pesquisa de Clima profunda. A trilogia do RH moderno orientado por dados.</p>
+                    <p class="plan-tag">Fiter Pro</p>
+                    <h3 class="plan-name">Diagnóstico profundo e conformidade garantida.</h3>
+                    <p class="plan-desc">Para empresas que querem ir além do pulso, unindo a visão estratégica de clima com a segurança trabalhista.</p>
                     <ul class="plan-features">
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Tudo do plano Essencial</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Agente NR-1 — PGR gerado automaticamente</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Tudo do plano Starter</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Pesquisa de Clima anual, anônima e personalizável</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Agente NR1: laudos automáticos e PGR alinhado à lei</li>
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Dashboard de conformidade auditável</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Pesquisa de Clima organizacional profunda</li>
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Análise cruzada: clima × conformidade × NPS</li>
                     </ul>
                     <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars plan-cta">Solicitar proposta</a>
                 </div>
 
-                <!-- Suite -->
+                <!-- Premium -->
                 <div class="plan-card">
-                    <p class="plan-tag">Suite Fiter</p>
-                    <h3 class="plan-name">Suite Completa</h3>
-                    <p class="plan-desc">Todo o ecossistema Fiter integrado: clima, conformidade, ética e People Analytics avançado em uma plataforma de software única.</p>
+                    <p class="plan-tag">Fiter Premium</p>
+                    <h3 class="plan-name">O piloto automático do seu RH, com IA e ética.</h3>
+                    <p class="plan-desc">Para organizações maduras que buscam um ecossistema completo de escuta ativa, compliance e predição.</p>
                     <ul class="plan-features">
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Tudo do plano Estratégico</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Ouvidoria e canal de ética digital</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Tudo do plano Pro</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Ouvidoria: canal sigiloso com alertas automáticos à direção</li>
+                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Notify: consultor de IA que diagnostica e avisa os gestores sozinho</li>
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>People Analytics avançado e preditivo</li>
-                        <li class="plan-feature"><span class="plan-feature-check">✓</span>Previsão de turnover por inteligência artificial</li>
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Customer Success dedicado</li>
                     </ul>
                     <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-secondary plan-cta">Solicitar proposta</a>
@@ -1089,34 +1073,6 @@
         </section>
 
         <!-- CTA FINAL -->
-        <section id="cta-section" class="ds-section cta-section" style="margin:0 -2rem 4rem; padding:5rem 5vw; background:var(--bg-surface); position:relative; overflow:hidden;">
-            <img src="/assets/img/hero-saude-mental.webp" alt="" class="section-photo-bg" loading="lazy">
-            <div class="section-photo-overlay" aria-hidden="true"></div>
-            <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none;"></div>
-            <div class="cta-grid" style="display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; position:relative; z-index:1;">
-                <div>
-                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
-                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">Veja o que <br>seu time <br>não está dizendo.</h2>
-                    <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:2rem;">30 minutos. Um especialista. Você entende se a Fiter resolve o que você precisa sem compromisso, sem pitch de uma hora.</p>
-                    <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                        <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Plataforma real e não um slide</div>
-                        <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Especialista que conhece as objeções</div>
-                        <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Proposta no mesmo dia, se fizer sentido</div>
-                    </div>
-                    <p style="margin-top:2rem;font-size:0.85rem;color:var(--text-secondary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">Baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
-                </div>
-                <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.5rem;padding:2.5rem 2rem;background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
-                    <div>
-                        <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Escolha um horário</div>
-                        <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;max-width:28rem;">Agende diretamente na agenda do especialista. Sem espera, sem formulário.</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-animate-chars" style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem;" onclick="openCalendlyModal('cta_final');return false;">Agendar demonstração</a>
-                    <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;">30 minutos · resposta imediata após agendamento</p>
-                    <a href="mailto:contato@fiter.com.br" style="font-size:0.8rem;color:var(--text-secondary);text-decoration:none;border-bottom:1px solid var(--border-default);padding-bottom:1px;">Prefere enviar um e-mail? <span style="color:var(--text-primary);">contato@fiter.com.br →</span></a>
-                </div>
-            </div>
-        </section>
-
         <!-- FAQ -->
         <section class="ds-section" style="margin-bottom: 8rem;">
             <div class="faq-2col">
@@ -1185,6 +1141,35 @@
         </section>
 
     </div>
+
+    <!-- CTA FINAL -->
+    <section id="cta-section" class="cta-section" style="margin-left:-2rem; margin-right:-2rem; margin-bottom:calc(-4rem - 1px); padding:5rem 5vw; background:var(--bg-surface); border-top:1px solid var(--border-default); position:relative; overflow:hidden;">
+        <img src="/assets/img/hero-saude-mental.webp" alt="" class="section-photo-bg" loading="lazy">
+        <div class="section-photo-overlay" aria-hidden="true"></div>
+        <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(255,255,255,0.03) 0%,transparent 70%);pointer-events:none;"></div>
+        <div class="cta-grid" style="display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:start; position:relative; z-index:1; max-width:1200px; margin:0 auto;">
+            <div>
+                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
+                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">Veja o que <br>seu time <br>não está dizendo.</h2>
+                <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;margin-bottom:2rem;">30 minutos. Um especialista. Você entende se a Fiter resolve o que você precisa sem compromisso, sem pitch de uma hora.</p>
+                <div style="display:flex;flex-direction:column;gap:0.75rem;">
+                    <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Plataforma real e não um slide</div>
+                    <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Especialista que conhece as objeções</div>
+                    <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);"><span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Proposta no mesmo dia, se fizer sentido</div>
+                </div>
+                <p style="margin-top:2rem;font-size:0.85rem;color:var(--text-secondary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">Baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
+            </div>
+            <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.5rem;padding:2.5rem 2rem;background:var(--bg-elevated);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
+                <div>
+                    <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Escolha um horário</div>
+                    <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;max-width:28rem;">Agende diretamente na agenda do especialista. Sem espera, sem formulário.</p>
+                </div>
+                <a href="#" class="btn btn-primary btn-animate-chars" style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem;" onclick="openCalendlyModal('cta_final');return false;">Agendar demonstração</a>
+                <p style="font-size:0.75rem;color:var(--text-secondary);line-height:1.5;">30 minutos · resposta imediata após agendamento</p>
+                <a href="mailto:contato@fiter.com.br" style="font-size:0.8rem;color:var(--text-secondary);text-decoration:none;border-bottom:1px solid var(--border-default);padding-bottom:1px;">Prefere enviar um e-mail? <span style="color:var(--text-primary);">contato@fiter.com.br →</span></a>
+            </div>
+        </div>
+    </section>
 </main>
 
 <div id="calendly-modal" role="dialog" aria-modal="true" aria-label="Agendar demonstração">

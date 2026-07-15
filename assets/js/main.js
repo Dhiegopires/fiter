@@ -251,6 +251,226 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.metric-card[data-metric]').forEach(el => obs.observe(el));
     })();
 
+    // ── Hero background organic particle field ──────────────
+    (function () {
+        function hexToRgb(hex) {
+            hex = (hex || '').trim().replace('#', '');
+            if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+            const num = parseInt(hex, 16);
+            return `${(num >> 16) & 255},${(num >> 8) & 255},${num & 255}`;
+        }
+        function initParticleCanvas(canvas) {
+            const ctx = canvas.getContext('2d');
+            let W, H, nodes, raf, frame = 0;
+            const C = hexToRgb(getComputedStyle(canvas).getPropertyValue('--accent-brand') || '#3b82f6');
+            const N = 88;
+            const DIST = 120;
+
+            function resize() {
+                const r = canvas.getBoundingClientRect();
+                W = canvas.width  = r.width;
+                H = canvas.height = r.height;
+            }
+
+            function init() {
+                resize();
+                nodes = Array.from({ length: N }, (_, i) => ({
+                    x:  Math.random() * W,
+                    y:  Math.random() * H,
+                    vx: (Math.random() - 0.5) * 0.22,
+                    vy: (Math.random() - 0.5) * 0.22,
+                    r:  i < 6 ? 3.2 : i < 20 ? 2.0 : 1.3,
+                    a:  i < 6 ? 0.88 : i < 20 ? 0.50 : 0.22,
+                    ph: Math.random() * Math.PI * 2,
+                }));
+                if (raf) cancelAnimationFrame(raf);
+                loop();
+            }
+
+            function loop() {
+                frame++;
+                ctx.clearRect(0, 0, W, H);
+
+                for (const n of nodes) {
+                    n.x += n.vx + Math.sin(frame * 0.0035 + n.ph) * 0.12;
+                    n.y += n.vy + Math.cos(frame * 0.0028 + n.ph * 1.4) * 0.09;
+                    if (n.x < 0) n.x = W;  if (n.x > W) n.x = 0;
+                    if (n.y < 0) n.y = H;  if (n.y > H) n.y = 0;
+                }
+
+                for (let i = 0; i < nodes.length; i++) {
+                    for (let j = i + 1; j < nodes.length; j++) {
+                        const a = nodes[i], b = nodes[j];
+                        const dx = a.x - b.x, dy = a.y - b.y;
+                        const d2 = dx * dx + dy * dy;
+                        if (d2 < DIST * DIST) {
+                            ctx.globalAlpha = (1 - Math.sqrt(d2) / DIST) * 0.16;
+                            ctx.strokeStyle = `rgb(${C})`;
+                            ctx.lineWidth = 0.65;
+                            ctx.beginPath();
+                            ctx.moveTo(a.x, a.y);
+                            ctx.lineTo(b.x, b.y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+                ctx.globalAlpha = 1;
+
+                for (const n of nodes) {
+                    if (n.r >= 3) { ctx.shadowColor = `rgba(${C},0.65)`; ctx.shadowBlur = 14; }
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${C},${n.a})`;
+                    ctx.fill();
+                    if (n.r >= 3) ctx.shadowBlur = 0;
+                }
+
+                raf = requestAnimationFrame(loop);
+            }
+
+            window.addEventListener('resize', resize);
+            requestAnimationFrame(init);
+        }
+        document.querySelectorAll('.solution-hero-canvas').forEach(initParticleCanvas);
+    })();
+
+    // ── Vertical Bar Chart ───────────────────────────────────
+    (function () {
+        function buildVChart(areaEl) {
+            if (areaEl.querySelector('.vchart-col')) return;
+            const data    = JSON.parse(areaEl.dataset.chart);
+            const maxVal  = parseFloat(areaEl.dataset.max || 100);
+            const xEl     = document.getElementById(areaEl.id + '-x');
+            const grid = document.createElement('div');
+            grid.className = 'vchart-grid';
+            for (let i = 0; i < 6; i++) {
+                const line = document.createElement('div');
+                line.className = 'vchart-grid-line';
+                grid.appendChild(line);
+            }
+            areaEl.appendChild(grid);
+            data.forEach((d, i) => {
+                const col = document.createElement('div');
+                col.className = 'vchart-col';
+                const bar = document.createElement('div');
+                bar.className = 'vchart-bar';
+                bar.style.setProperty('--bar-delay', (i * 0.08) + 's');
+                bar.style.background = 'var(--accent-brand)';
+                bar.dataset.value = d.value;
+                bar.dataset.targetPct = (d.value / maxVal * 100).toFixed(1);
+                col.appendChild(bar);
+                areaEl.appendChild(col);
+                if (xEl) {
+                    const lbl = document.createElement('div');
+                    lbl.className = 'vchart-x-label';
+                    lbl.textContent = d.label;
+                    xEl.appendChild(lbl);
+                    col.addEventListener('mouseenter', () => lbl.style.color = 'var(--text-primary)');
+                    col.addEventListener('mouseleave', () => lbl.style.color = '');
+                }
+            });
+            const obs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (!e.isIntersecting) return;
+                    obs.unobserve(e.target);
+                    e.target.querySelectorAll('.vchart-bar').forEach(bar => {
+                        bar.style.height = bar.dataset.targetPct + '%';
+                    });
+                    setTimeout(() => e.target.classList.add('loaded'), 800);
+                });
+            }, { threshold: 0.2 });
+            obs.observe(areaEl);
+        }
+        document.querySelectorAll('.vchart-bars-area[data-chart]').forEach(buildVChart);
+    })();
+
+    // ── Donut Chart ──────────────────────────────────────────
+    (function () {
+        const R = 90, STROKE = 20, CX = 110, CY = 110;
+        const circumference = 2 * Math.PI * R;
+        function buildDonutChart(wrapEl) {
+            if (wrapEl.querySelector('svg')) return;
+            const data = JSON.parse(wrapEl.dataset.chart);
+            const legendId = wrapEl.id.replace('donut-', 'donut-legend-');
+            const legendEl = document.getElementById(legendId);
+            if (!legendEl) return;
+            const svgNS = 'http://www.w3.org/2000/svg';
+            const svg = document.createElementNS(svgNS, 'svg');
+            svg.setAttribute('viewBox', '0 0 220 220');
+            svg.setAttribute('width', '100%');
+            svg.setAttribute('height', '100%');
+            const bg = document.createElementNS(svgNS, 'circle');
+            bg.setAttribute('cx', CX); bg.setAttribute('cy', CY); bg.setAttribute('r', R);
+            bg.setAttribute('fill', 'none');
+            bg.setAttribute('stroke', 'rgba(255,255,255,0.04)');
+            bg.setAttribute('stroke-width', STROKE);
+            svg.appendChild(bg);
+            const segments = [];
+            let offset = -90;
+            data.forEach((d, i) => {
+                const frac = d.pct / 100;
+                const dash = frac * circumference;
+                const gap  = circumference - dash;
+                const circle = document.createElementNS(svgNS, 'circle');
+                circle.setAttribute('cx', CX); circle.setAttribute('cy', CY); circle.setAttribute('r', R);
+                circle.setAttribute('fill', 'none');
+                circle.setAttribute('stroke', d.color);
+                circle.setAttribute('stroke-width', STROKE);
+                circle.setAttribute('stroke-dasharray', `0 ${circumference}`);
+                circle.setAttribute('stroke-dashoffset', -offset / 360 * circumference);
+                circle.setAttribute('stroke-linecap', 'butt');
+                circle.style.transition = `stroke-dasharray 0.7s cubic-bezier(0.4,0,0.2,1) ${i * 0.12}s, stroke-width 0.2s ease, opacity 0.2s ease`;
+                circle.style.transformOrigin = `${CX}px ${CY}px`;
+                svg.appendChild(circle);
+                segments.push({ circle, dash, gap, d });
+                offset += frac * 360;
+            });
+            wrapEl.appendChild(svg);
+            const center = document.createElement('div');
+            center.className = 'donut-center';
+            center.innerHTML = `<div class="donut-center-value" id="${wrapEl.id}-cv">${data[0].pct}%</div><div class="donut-center-label" id="${wrapEl.id}-cl">${data[0].label}</div>`;
+            wrapEl.appendChild(center);
+            const cv = document.getElementById(`${wrapEl.id}-cv`);
+            const cl = document.getElementById(`${wrapEl.id}-cl`);
+            data.forEach((d, i) => {
+                const item = document.createElement('div');
+                item.className = 'legend-item';
+                item.innerHTML = `<span class="legend-dot" style="background:${d.color}"></span><span class="legend-label">${d.label}</span><span class="legend-pct" style="color:${d.color}">${d.pct}%</span>`;
+                legendEl.appendChild(item);
+                item.addEventListener('mouseenter', () => highlight(i));
+                item.addEventListener('mouseleave', reset);
+            });
+            segments.forEach(({ circle }, i) => {
+                circle.style.cursor = 'pointer';
+                circle.addEventListener('mouseenter', () => highlight(i));
+                circle.addEventListener('mouseleave', reset);
+            });
+            function highlight(idx) {
+                const d = data[idx];
+                cv.textContent = d.pct + '%'; cl.textContent = d.label; cv.style.color = d.color;
+                segments.forEach(({ circle }, j) => {
+                    circle.setAttribute('stroke-width', j === idx ? STROKE + 6 : STROKE - 3);
+                    circle.style.opacity = j === idx ? '1' : '0.35';
+                });
+                legendEl.querySelectorAll('.legend-item').forEach((item, j) => item.style.opacity = j === idx ? '1' : '0.35');
+            }
+            function reset() {
+                cv.textContent = data[0].pct + '%'; cl.textContent = data[0].label; cv.style.color = '';
+                segments.forEach(({ circle }) => { circle.setAttribute('stroke-width', STROKE); circle.style.opacity = '1'; });
+                legendEl.querySelectorAll('.legend-item').forEach(item => item.style.opacity = '1');
+            }
+            const donutObs = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    if (!e.isIntersecting) return;
+                    donutObs.unobserve(e.target);
+                    segments.forEach(({ circle, dash, gap }) => circle.setAttribute('stroke-dasharray', `${dash} ${gap}`));
+                });
+            }, { threshold: 0.3 });
+            donutObs.observe(wrapEl);
+        }
+        document.querySelectorAll('.donut-chart-wrap[data-chart]').forEach(buildDonutChart);
+    })();
+
     // Touch device detection (prevents sticky :hover on mobile)
     if (!matchMedia('(hover: hover)').matches) {
         document.documentElement.classList.add('touch');
