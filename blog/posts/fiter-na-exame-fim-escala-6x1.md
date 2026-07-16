@@ -60,9 +60,9 @@ O debate precisa ir muito além de simplesmente bater o ponto e contabilizar hor
 
 O reconhecimento do nosso estudo pela Revista Exame mostra que estamos no caminho certo ao unir pesquisa acadêmica de ponta e tecnologia aplicada aos desafios reais das empresas. A inovação é a chave para liderar times de alta performance sem abrir mão do elemento humano.
 
-Quer levar essa autonomia para os gestores da sua empresa e aliviar a rotina do seu setor? [Clique aqui para saber mais sobre as nossas Soluções RH acessando fiter.com.br](https://fiter.com.br) e descubra como a nossa tecnologia pode transformar a sua gestão de pessoas.
+Quer levar essa autonomia para os gestores da sua empresa e aliviar a rotina do seu setor? Clique aqui para saber mais sobre as nossas [Soluções RH](https://fiter.com.br/solucoes/rh/) e descubra como a nossa tecnologia pode transformar a sua gestão de pessoas.
 
-Se você gostou desta reflexão e quer aprofundar ainda mais sua visão sobre os novos desafios dos gestores na construção dessa cultura, que tal dar uma olhada neste outro blogpost sobre como engajar talentos e alinhar expectativas no cenário atual? [Acesse o artigo Férias Escolares, Saúde Mental e o Papel do RH disponível no nosso blog](https://fiter.com.br/blog/ferias-escolares-saude-mental-papel-rh/) e veja como expandimos esse debate.
+Se você gostou desta reflexão e quer aprofundar ainda mais sua visão sobre os novos desafios dos gestores na construção dessa cultura, que tal dar uma olhada neste outro blogpost sobre como engajar talentos e alinhar expectativas no cenário atual? Acesse o artigo [Férias Escolares, Saúde Mental e o Papel do RH](https://fiter.com.br/blog/ferias-escolares-saude-mental-papel-rh/) disponível no nosso blog e veja como expandimos esse debate.
 
 ---
 
