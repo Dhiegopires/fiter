@@ -28,7 +28,7 @@ author: "Equipe Fiter"
 authorInitials: "EF"
 
 # Nome da imagem dentro da pasta de blog/imagens
-image: "people-analytics-transformando-dados-estrategia.webp"
+image: "dd.webp"
 ---
 
 
