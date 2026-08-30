@@ -59,6 +59,9 @@
             --radius-lg: 12px;
             --radius-full: 9999px;
 
+            /* Inverse surface — light card for full-color logos/assets on the dark page */
+            --surface-inverse: #ffffff;
+
             /* Transitions */
             --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
             --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -956,10 +959,10 @@
             line-height: 1.4;
             margin: 0;
         }
-        /* Plans section */
+        /* Plans section — mobile-first: base rule = stacked single column */
         .plans-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
             gap: 1.5rem;
             margin-bottom: 1.5rem;
         }
@@ -988,27 +991,56 @@
             border-radius: 999px;
             white-space: nowrap;
         }
-        .plan-tag {
-            font-family: var(--font-mono);
-            font-size: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: var(--text-tertiary);
-            margin-bottom: 0.5rem;
-        }
-        .plan-name {
-            font-family: var(--font-serif);
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-        }
-        .plan-desc {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
+        .plan-header {
+            text-align: center;
+            padding-bottom: 1.5rem;
             margin-bottom: 1.5rem;
-            flex-grow: 1;
+            border-bottom: 1px solid var(--border-default);
+        }
+        .plan-title {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text-primary);
+            margin-bottom: 0.6rem;
+        }
+        .plan-modules-label {
+            font-family: var(--font-mono);
+            font-size: 0.62rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-tertiary);
+            margin-bottom: 1rem;
+        }
+        .plan-modules-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.6rem;
+        }
+        .plan-module-chip {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+            width: 68px;
+            padding: 0.65rem 0.4rem;
+            background: var(--bg-base);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-md);
+        }
+        .plan-module-chip svg {
+            width: 18px;
+            height: 18px;
+            color: var(--accent-brand);
+        }
+        .plan-module-chip span {
+            font-size: 0.6rem;
+            line-height: 1.2;
+            color: var(--text-secondary);
+            text-align: center;
         }
         .plan-features {
             list-style: none;
@@ -1016,6 +1048,7 @@
             flex-direction: column;
             gap: 0.5rem;
             margin-bottom: 2rem;
+            flex-grow: 1;
         }
         .plan-feature {
             font-size: 0.82rem;
@@ -1035,6 +1068,43 @@
             margin-top: 0.75rem;
             letter-spacing: 0.05em;
         }
+        .plans-trust {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-top: 3rem;
+            padding: 1.75rem 2rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-lg);
+        }
+        .plans-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+        .plans-trust-icon {
+            flex-shrink: 0;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--radius-md);
+            background: var(--bg-base);
+            color: var(--accent-brand);
+        }
+        .plans-trust-icon svg { width: 19px; height: 19px; }
+        .plans-trust-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+        .plans-trust-sub {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            line-height: 1.3;
+        }
         .plans-edu {
             margin-top: 2.5rem;
             padding: 1.5rem 2rem;
@@ -1042,8 +1112,8 @@
             border: 1px solid var(--border-default);
             border-radius: var(--radius-md);
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
             gap: 2rem;
         }
         .plans-edu-info { display: flex; flex-direction: column; gap: 0.3rem; }
@@ -1065,9 +1135,10 @@
             line-height: 1.5;
         }
         .plans-edu .btn { flex-shrink: 0; }
-        @media (max-width: 768px) {
-            .plans-grid { grid-template-columns: 1fr; }
-            .plans-edu { flex-direction: column; align-items: flex-start; }
+        @media (min-width: 769px) {
+            .plans-grid { grid-template-columns: repeat(3, 1fr); }
+            .plans-trust { grid-template-columns: repeat(4, 1fr); display: grid; }
+            .plans-edu { flex-direction: row; align-items: center; justify-content: space-between; }
         }
 
         /* ── SECTION PHOTO BACKGROUNDS */
@@ -2260,23 +2331,35 @@
         @keyframes scroll-logos { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .logo-marquee {
             display: flex;
-            width: 200%;
-            animation: scroll-logos 25s linear infinite;
+            width: max-content;
+            animation: scroll-logos 40s linear infinite;
         }
         .logo-marquee:hover { animation-play-state: paused; }
         .logo-item {
-            flex: 1;
+            flex: 0 0 auto;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 0 2rem;
-            opacity: 0.4;
-            filter: grayscale(100%);
-            transition: all 0.4s ease;
-            font-size: 1.75rem;
-            color: var(--text-secondary);
+            padding: 0 0.85rem;
         }
-        .logo-item:hover { opacity: 1; filter: grayscale(0%); color: var(--text-primary); transform: scale(1.05); }
+        .logo-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 168px;
+            height: 72px;
+            padding: 0.75rem 1.1rem;
+            background: color-mix(in srgb, var(--surface-inverse) 20%, transparent);
+            border-radius: var(--radius-md);
+            transition: transform 0.4s ease;
+        }
+        .logo-badge img {
+            height: 30px;
+            width: auto;
+            max-width: 100%;
+            display: block;
+        }
+        .logo-item:hover .logo-badge { transform: scale(1.05); }
         .marquee-mask {
             mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
             -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
@@ -2938,7 +3021,7 @@
             .metric-card:hover { transform: none; border-color: var(--border-subtle); }
             .product-card:hover { transform: none; }
             .logo-marquee:hover { animation-play-state: running; }
-            .logo-item:hover { transform: none; filter: grayscale(100%); opacity: .4; color: var(--text-secondary); }
+            .logo-item:hover .logo-badge { transform: none; }
             .sp-marquee-track:hover { animation-play-state: running; }
             .sp-marquee-item:hover { opacity: .28; filter: grayscale(1) brightness(3); }
             .hero-nav-btn:hover { background: rgba(255,255,255,0.04); color: var(--text-secondary); border-color: rgba(255,255,255,0.08); }

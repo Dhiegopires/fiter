@@ -176,7 +176,7 @@ const filterBadges = `
 // Generate blog listing cards
 const cardsHtml = posts.map((post, i) => {
     const cardImage = post.imageFilename
-        ? `<img src="${post.data.slug}/${post.imageFilename}" alt="${post.data.title}" class="post-img">`
+        ? `<img src="${post.data.slug}/${post.imageFilename}" alt="${post.data.title}" class="post-img" loading="lazy">`
         : '';
     return `
             <a href="${post.data.slug}/" class="post-card" data-category="${post.data.category}">
