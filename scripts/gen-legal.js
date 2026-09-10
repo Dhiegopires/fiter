@@ -16,6 +16,11 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
                 <div class="nav-drop">
                     <a class="drop-link" href="/produtos/pulse/"><div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div></a>
                     <a class="drop-link" href="/produtos/nr01/"><div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div></a>
+                </div>
+            </li>
+            <li class="nav-item has-drop" data-nav-item>
+                <button class="nav-link">Cursos <span class="nav-chevron">▾</span></button>
+                <div class="nav-drop">
                     <a class="drop-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/"><div><div class="drop-link-name">Guia Prático</div><div class="drop-link-tag">Gestão de Riscos Psicossociais</div></div></a>
                 </div>
             </li>
@@ -43,6 +48,11 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
                 <div class="drawer-sub"><div class="drawer-sub-inner">
                     <a class="drawer-sub-link" href="/produtos/pulse/">Pulse</a>
                     <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
+                </div></div>
+            </div>
+            <div class="drawer-item" data-drawer-item>
+                <button class="drawer-trigger">Cursos <span class="drawer-chevron">▾</span></button>
+                <div class="drawer-sub"><div class="drawer-sub-inner">
                     <a class="drawer-sub-link" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">Guia Prático</a>
                 </div></div>
             </div>
