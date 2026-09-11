@@ -28,7 +28,7 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
         </ul>
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </div>
@@ -58,7 +58,7 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             </div>
             <a class="drawer-plain-link" href="/sobre/">Sobre</a>
             <a class="drawer-plain-link" href="/blog/">Blog</a>
-            <div class="drawer-cta"><a class="btn btn-primary w-full" href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" style="text-decoration:none;justify-content:center;">Agendar demonstração</a></div>
+            <div class="drawer-cta"><a class="btn btn-primary w-full" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;justify-content:center;">Agendar demonstração</a></div>
         </div>
     </div>
 </nav>`;

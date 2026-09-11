@@ -120,7 +120,6 @@
     #calendly-modal { display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.8); backdrop-filter:blur(6px); align-items:center; justify-content:center; }
     #calendly-modal.open { display:flex; }
     #calendly-modal-inner { position:relative; width:min(860px,96vw); height:96vh; background:#111; border-radius:var(--radius-lg); overflow:hidden; box-shadow:0 40px 100px rgba(0,0,0,0.6); }
-    #calendly-frame { filter:invert(1) hue-rotate(180deg); }
     #calendly-close { position:absolute; top:0.75rem; right:0.75rem; z-index:10; width:32px; height:32px; border-radius:50%; background:rgba(255,255,255,0.12); border:none; cursor:pointer; font-size:1.1rem; color:rgba(255,255,255,0.8); line-height:1; }
     #calendly-close:hover { background:rgba(255,255,255,0.2); }
     .hero-bottom-bar { position:absolute; bottom:0; left:0; right:0; display:flex; justify-content:space-between; align-items:flex-end; padding:2.25rem 3rem 2rem; border-top:1px solid var(--border-subtle); gap:3rem; z-index:2; }
@@ -1083,7 +1082,7 @@
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Previsão de risco de turnover por setor</li>
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Planos de ação gerados automaticamente por IA</li>
                     </ul>
-                    <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-secondary plan-cta">Solicitar proposta</a>
+                    <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-secondary plan-cta">Solicitar proposta</a>
                 </div>
 
                 <!-- Pro — featured -->
@@ -1114,7 +1113,7 @@
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Dashboard de conformidade auditável</li>
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Análise cruzada: clima × conformidade × NPS</li>
                     </ul>
-                    <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars plan-cta">Solicitar proposta</a>
+                    <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars plan-cta">Solicitar proposta</a>
                 </div>
 
                 <!-- Premium -->
@@ -1148,7 +1147,7 @@
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>People Analytics avançado e preditivo</li>
                         <li class="plan-feature"><span class="plan-feature-check">✓</span>Customer Success dedicado</li>
                     </ul>
-                    <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-secondary plan-cta">Solicitar proposta</a>
+                    <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-secondary plan-cta">Solicitar proposta</a>
                 </div>
 
             </div>
@@ -1296,7 +1295,7 @@
 
 <script>
 (function() {
-    const CALENDLY_URL = 'https://calendly.com/fiter_/fiter?hide_gdpr_banner=1';
+    const CALENDLY_URL = 'https://meetings.hubspot.com/sergioamad/reuniao';
     let loaded = false;
 
     window.openCalendlyModal = function(label) {
@@ -1322,12 +1321,6 @@
 
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') closeCalendlyModal();
-    });
-
-    window.addEventListener('message', function(e) {
-        if (e.data && e.data.event === 'calendly.event_scheduled') {
-            if (window.gtag) gtag('event', 'generate_lead', { event_category: 'calendly', event_label: 'scheduled' });
-        }
     });
 })();
 </script>

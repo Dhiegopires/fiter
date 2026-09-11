@@ -96,7 +96,7 @@ posts.forEach(post => {
                             <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Software — Fiter Pulse Educação</p>
                             <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">O software que identifica evasão antes que aconteça.</h3>
                             <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">Fiter Pulse Educação é uma plataforma de software que envia pesquisas de pulso para alunos via WhatsApp — 8 cliques, sem app, sem login. O software mapeia engajamento acadêmico turma a turma e gera alertas automáticos de risco de evasão antes que o aluno desapareça.</p>
-                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_educacao'})">Ver demonstração do software</a>
+                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_educacao'})">Ver demonstração do software</a>
                         </div>
                     </div>`;
     } else if (data.category === 'RH') {
@@ -106,7 +106,7 @@ posts.forEach(post => {
                             <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Software — Fiter Pulse</p>
                             <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Seu RH ouve a equipe toda semana — em 8 cliques.</h3>
                             <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">O software Fiter envia pesquisas de pulso pelo WhatsApp sem login, sem app. Seu time responde em 2 minutos e você recebe um painel de People Analytics com alertas de burnout, previsão de turnover e PDI gerado por IA — tudo em tempo real.</p>
-                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Ver demonstração do software</a>
+                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Ver demonstração do software</a>
                             <p style="margin-top:1.25rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
                         </div>
                     </div>`;
@@ -117,7 +117,7 @@ posts.forEach(post => {
                             <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Plataforma Fiter</p>
                             <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Software de People Analytics que cabe no WhatsApp.</h3>
                             <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">A plataforma de software Fiter coleta feedback contínuo em 8 cliques via WhatsApp — sem login, sem app — e entrega um painel de People Analytics com alertas automáticos de burnout e previsão de turnover.</p>
-                            <a href="https://calendly.com/fiter_/fiter" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_generico'})">Agendar demonstração</a>
+                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_generico'})">Agendar demonstração</a>
                         </div>
                     </div>`;
     }

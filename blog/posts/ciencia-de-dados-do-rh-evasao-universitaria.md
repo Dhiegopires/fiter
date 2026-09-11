@@ -92,7 +92,7 @@ A inovação não está apenas na sala de aula, mas na forma como a instituiçã
 
 A sua IES está pronta para antecipar a evasão e transformar a retenção em previsibilidade financeira?
 
-**[Agende uma demonstração com os especialistas da Fiter](https://calendly.com/fiter_/fiter) e descubra como aplicar a ciência de dados na proteção dos seus alunos hoje mesmo.**
+**[Agende uma demonstração com os especialistas da Fiter](https://meetings.hubspot.com/sergioamad/reuniao) e descubra como aplicar a ciência de dados na proteção dos seus alunos hoje mesmo.**
 
 ---
 
