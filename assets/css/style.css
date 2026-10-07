@@ -3771,13 +3771,6 @@
         .ee-proof { margin: 0 -2rem; padding: 2.5rem 2rem; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); background: var(--bg-surface); overflow: hidden; }
         .ee-proof-label { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; margin-bottom: 0.75rem; }
         .ee-marquee-mask { overflow: hidden; white-space: nowrap; }
-        .ee-logo--sans { font-family: var(--font-sans); font-weight: 700; }
-        .ee-logo--sans-heavy { font-family: var(--font-sans); font-weight: 800; }
-        .ee-logo--serif { font-family: var(--font-serif); font-weight: 700; }
-        .ee-logo--serif-light { font-family: var(--font-serif); font-weight: 400; }
-        .ee-logo--serif-mid { font-family: var(--font-serif); font-weight: 600; }
-        .ee-logo--mono { font-family: var(--font-mono); font-weight: 600; }
-        .ee-logo--mono-tight { font-family: var(--font-mono); font-weight: 600; letter-spacing: -1px; }
 
         /* Problem */
         .ee-problem { position: relative; overflow: hidden; margin: 0 -2rem 5rem; padding: 4rem 1.5rem 3rem; background: var(--bg-surface); border-bottom: 1px solid var(--border-default); }
