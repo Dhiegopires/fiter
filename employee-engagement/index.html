@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Measure Happiness and Predict Churn with AI | Fiter</title>
+    <meta name="description" content="Fiter is automation that measures happiness and predicts churn in employees, students and customers. 8 questions on WhatsApp, 2 minutes, no app. AI warns you up to 3 months ahead.">
+    <link rel="canonical" href="https://fiter.com.br/employee-engagement/">
+    <link rel="alternate" hreflang="en" href="https://fiter.com.br/employee-engagement/">
+    <link rel="alternate" hreflang="pt-BR" href="https://fiter.com.br/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+    <meta property="og:title" content="Automation that measures happiness and predicts churn | Fiter">
+    <meta property="og:description" content="Employees, students and customers. 8 questions on WhatsApp, 2 minutes, no app. AI warns you up to 3 months before someone leaves.">
+    <meta property="og:url" content="https://fiter.com.br/employee-engagement/">
+    <meta property="og:image" content="https://fiter.com.br/assets/img/hero_dashboard-og.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Fiter",
+      "url": "https://fiter.com.br/employee-engagement/",
+      "inLanguage": "en",
+      "operatingSystem": "Web, WhatsApp",
+      "applicationCategory": "BusinessApplication",
+      "description": "Automation that measures happiness and predicts churn in employees, students and customers, through 8 questions on WhatsApp."
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=e32393d1">
+    <script src="/assets/js/main.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
+    <script async src="https://t.contentsquare.net/uxa/cd11f6271f295.js"></script>
+    <script type="module">
+    import 'https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.umd.js';
+    CookieConsent.run({
+      mode: 'opt-out',
+      guiOptions: { consentModal: { layout: 'bar inline', position: 'bottom', equalWeightButtons: false, flipButtons: false, modalOverlay: true } },
+      categories: { necessary: { enabled: true, readOnly: true }, analytics: { enabled: true } },
+      language: {
+        default: 'en',
+        translations: {
+          en: {
+            consentModal: {
+              title: 'This site uses cookies',
+              description: 'We use our own and third-party cookies to improve your experience. Click "Accept all" to allow all cookies.',
+              acceptAllBtn: 'Accept all',
+              acceptNecessaryBtn: 'Decline'
+            }
+          }
+        }
+      },
+      onChange: function({ cookie }) {
+        if (!cookie.categories.includes('analytics')) {
+          window._uxa = window._uxa || [];
+          window._uxa.push(['stop']);
+        }
+      }
+    });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RL4MTL7XFE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RL4MTL7XFE');
+    </script>
+</head>
+<body data-theme="analytics">
+<a href="#main-content" class="skip-link">Skip to content</a>
+
+<header>
+    <nav class="site-nav ee-nav" id="site-nav" aria-label="Main">
+        <div class="nav-inner">
+            <a class="nav-logo" href="/" aria-label="Fiter home"><img src="/assets/img/fiter_logo.svg" alt="Fiter" width="88" height="28"></a>
+            <div class="nav-right">
+                <a class="btn btn-primary nav-cta btn-animate-chars" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'nav',event_label:'en_nav_demo'})">Book a demo</a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main id="main-content" class="main-content" tabindex="-1">
+
+    <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
+    <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
+
+    <div class="ee-layer">
+
+        <section class="solution-hero solution-hero--compact" aria-labelledby="ee-hero-title">
+            <img src="/assets/img/rh-hero.webp" alt="" class="section-photo-bg" loading="eager">
+            <div class="section-photo-overlay" aria-hidden="true"></div>
+            <canvas class="solution-hero-canvas" aria-hidden="true"></canvas>
+
+            <div class="solution-hero-grid">
+
+                <div class="solution-hero-copy">
+                    <p class="eyebrow-brand hero-eyebrow ee-hero-eyebrow">Fiter · AI happiness analytics</p>
+                    <h1 id="ee-hero-title" data-reveal class="solution-hero-title ee-hero-title">Automation that measures happiness and predicts churn in employees, students and customers.</h1>
+                    <p class="solution-hero-desc">8 questions on WhatsApp, with no app and no login. In 2 minutes people tell you how they really feel. AI turns every answer into a live dashboard and warns you up to 3 months before someone leaves.</p>
+                    <div class="hero-cta-group">
+                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'en_hero_demo'})">Book a demo</a>
+                    </div>
+                </div>
+
+                <div class="solution-hero-visual solution-hero-visual--compact" aria-hidden="true">
+                    <div class="fade-up hero-mockup-perspective hero-mockup-perspective--phone ee-delay-1">
+                        <div class="hero-mockup-3d hero-mockup-3d--phone">
+                            <div class="hero-phone-btn hero-phone-btn--vol1"></div>
+                            <div class="hero-phone-btn hero-phone-btn--vol2"></div>
+                            <div class="hero-phone-btn hero-phone-btn--vol3"></div>
+                            <div class="hero-phone-btn hero-phone-btn--power"></div>
+                            <div class="hero-phone-frame">
+                                <div class="hero-phone-specular"></div>
+                                <div class="hero-phone-screen">
+                                    <div class="hero-phone-island">
+                                        <div class="hero-phone-island-notch"></div>
+                                        <div class="hero-phone-statusbar"><span>9:41</span><span>▐▐ 100%</span></div>
+                                    </div>
+                                    <div class="mockup-app-header">
+                                        <div>
+                                            <div class="mockup-app-title">Fiter</div>
+                                            <div class="mockup-app-subtitle">Dashboard · May 2026</div>
+                                        </div>
+                                        <div class="mockup-live">
+                                            <span class="mockup-live-dot mockup-live-dot--whatsapp"></span>
+                                            <span class="mockup-live-label mockup-live-label--whatsapp">live</span>
+                                        </div>
+                                    </div>
+                                    <div class="mockup-dashboard-body">
+                                        <div class="mockup-score-row">
+                                            <div class="mockup-score-tile mockup-score-tile--blue">
+                                                <div class="mockup-score-value">87</div>
+                                                <div class="mockup-score-label">Happi&shy;ness</div>
+                                            </div>
+                                            <div class="mockup-score-tile mockup-score-tile--green">
+                                                <div class="mockup-score-value">82</div>
+                                                <div class="mockup-score-label">Engage&shy;ment</div>
+                                            </div>
+                                            <div class="mockup-score-tile mockup-score-tile--purple">
+                                                <div class="mockup-score-value">91</div>
+                                                <div class="mockup-score-label">Culture fit</div>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-sparkline-card">
+                                            <div class="mockup-sparkline-title">90-day trend</div>
+                                            <svg width="100%" viewBox="0 0 260 60" fill="none" preserveAspectRatio="none" class="mockup-sparkline-svg">
+                                                <defs>
+                                                    <linearGradient id="ee-sg-hero" x1="0" y1="0" x2="0" y2="1">
+                                                        <stop offset="0%" class="ee-stop-blue-30"/>
+                                                        <stop offset="100%" class="ee-stop-blue-0"/>
+                                                    </linearGradient>
+                                                </defs>
+                                                <polygon points="0,50 44,43 88,44 132,30 176,22 220,13 260,8 260,60 0,60" fill="url(#ee-sg-hero)"/>
+                                                <polyline class="ee-spark-line" points="0,50 44,43 88,44 132,30 176,22 220,13 260,8" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                                                <circle class="ee-spark-dot" cx="260" cy="8" r="3.5"/>
+                                            </svg>
+                                            <div class="mockup-sparkline-axis"><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span></div>
+                                        </div>
+                                        <div class="mockup-alert mockup-alert--warning">
+                                            <span class="mockup-alert-icon">⚠</span>
+                                            <div>
+                                                <div class="mockup-alert-title">Turnover risk detected</div>
+                                                <div class="mockup-alert-desc">3 people · Operations team · down 18 pts in 4 weeks</div>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-bar-list">
+                                            <div class="mockup-bar-list-title">By department</div>
+                                            <div class="mockup-bar-row">
+                                                <span class="mockup-bar-label">Sales</span>
+                                                <div class="mockup-bar-track"><div class="mockup-bar-fill ee-bw-91"></div></div>
+                                                <span class="mockup-bar-value">91</span>
+                                            </div>
+                                            <div class="mockup-bar-row">
+                                                <span class="mockup-bar-label">IT</span>
+                                                <div class="mockup-bar-track"><div class="mockup-bar-fill ee-bw-85"></div></div>
+                                                <span class="mockup-bar-value">85</span>
+                                            </div>
+                                            <div class="mockup-bar-row">
+                                                <span class="mockup-bar-label">Operations</span>
+                                                <div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar-fill--warning ee-bw-61"></div></div>
+                                                <span class="mockup-bar-value mockup-bar-value--warning">61</span>
+                                            </div>
+                                        </div>
+                                        <div class="mockup-ai-card">
+                                            <div class="mockup-ai-header">
+                                                <span class="mockup-ai-icon">✦</span>
+                                                <span class="mockup-ai-label">AI-generated action</span>
+                                            </div>
+                                            <div class="mockup-ai-body">Book 1:1s with 3 people in Operations before May 30. Flight risk confirmed.</div>
+                                        </div>
+                                    </div>
+                                    <div class="hero-phone-bottomnav">
+                                        <div class="hero-phone-nav-item hero-phone-nav-item--active">
+                                            <div class="hero-phone-nav-icon"><div class="hero-phone-nav-icon-dot"></div></div>
+                                            <span class="hero-phone-nav-label">Dashboard</span>
+                                        </div>
+                                        <div class="hero-phone-nav-item"><div class="hero-phone-nav-tick"></div><span class="hero-phone-nav-label">Teams</span></div>
+                                        <div class="hero-phone-nav-item"><div class="hero-phone-nav-tick"></div><span class="hero-phone-nav-label">Reports</span></div>
+                                        <div class="hero-phone-nav-item"><div class="hero-phone-nav-tick"></div><span class="hero-phone-nav-label">Settings</span></div>
+                                    </div>
+                                    <div class="hero-phone-home-indicator"><span></span></div>
+                                </div>
+                            </div>
+                            <div class="hero-phone-side"></div>
+                        </div>
+                    </div>
+
+                    <div class="fade-up hero-floating-insight hero-floating-insight--phone ee-delay-5">
+                        <div class="hero-floating-insight-eyebrow">Live result</div>
+                        <div class="hero-floating-insight-grid">
+                            <div class="hero-floating-insight-col">
+                                <div class="hero-floating-insight-value">87%</div>
+                                <div class="hero-floating-insight-label">response<br> rate</div>
+                            </div>
+                            <div class="hero-floating-insight-col">
+                                <div class="hero-floating-insight-value hero-floating-insight-value--neutral">2min</div>
+                                <div class="hero-floating-insight-label">to<br> answer</div>
+                            </div>
+                        </div>
+                        <div class="hero-floating-insight-divider"></div>
+                        <div class="hero-floating-insight-trend">↑ +23 pts vs. web forms</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ee-proof" aria-label="Organisations that use Fiter">
+            <p class="ee-proof-label">500,000+ people measured · From startups to the Brazilian Navy</p>
+            <div class="marquee-mask ee-marquee-mask">
+                <div class="logo-marquee" aria-hidden="true">
+                    <div class="logo-item ee-logo--sans-heavy">BRASPRESS</div>
+                    <div class="logo-item ee-logo--serif">Kroton</div>
+                    <div class="logo-item ee-logo--mono-tight">ARCOR</div>
+                    <div class="logo-item ee-logo--sans">Brazilian Navy</div>
+                    <div class="logo-item ee-logo--serif-light">USP</div>
+                    <div class="logo-item ee-logo--serif-mid">Mackenzie</div>
+                    <div class="logo-item ee-logo--sans">Fatec</div>
+                    <div class="logo-item ee-logo--sans">Sebrae</div>
+                    <div class="logo-item ee-logo--mono">ABES</div>
+                    <div class="logo-item ee-logo--sans-heavy">BRASPRESS</div>
+                    <div class="logo-item ee-logo--serif">Kroton</div>
+                    <div class="logo-item ee-logo--mono-tight">ARCOR</div>
+                    <div class="logo-item ee-logo--sans">Brazilian Navy</div>
+                    <div class="logo-item ee-logo--serif-light">USP</div>
+                    <div class="logo-item ee-logo--serif-mid">Mackenzie</div>
+                    <div class="logo-item ee-logo--sans">Fatec</div>
+                    <div class="logo-item ee-logo--sans">Sebrae</div>
+                    <div class="logo-item ee-logo--mono">ABES</div>
+                </div>
+                <p class="sr-only">Braspress, Kroton, Arcor, the Brazilian Navy, USP, Mackenzie, Fatec, Sebrae and ABES.</p>
+            </div>
+        </section>
+
+        <section class="ee-problem" aria-labelledby="ee-problem-title">
+            <div class="ee-problem-bg" aria-hidden="true">3 mo</div>
+            <div class="ee-layer">
+                <div class="ee-center">
+                    <p class="ee-eyebrow">The problem nobody sees coming</p>
+                    <h2 id="ee-problem-title" data-reveal class="ee-h2">People don't warn you before they leave.<br> They just leave.</h2>
+                    <p class="ee-body ee-body--center">The employee who looks fine, the student who stops showing up, the customer who goes quiet. By the time a yearly survey catches it, they are already gone.</p>
+                    <p class="ee-body ee-body--center">Fiter catches it <em>before</em>, up to 3 months ahead.</p>
+                </div>
+                <div class="ee-stat-grid">
+                    <div class="ee-stat fade-up">
+                        <div class="ee-stat-value">34%</div>
+                        <div class="ee-stat-label">of resignations arrive with no visible warning sign to HR</div>
+                    </div>
+                    <div class="ee-stat fade-up ee-delay-1">
+                        <div class="ee-stat-value">60%</div>
+                        <div class="ee-stat-label">of university dropouts happen in the first year of the course</div>
+                    </div>
+                    <div class="ee-stat fade-up ee-delay-2">
+                        <div class="ee-stat-value">1 year</div>
+                        <div class="ee-stat-label">average gap between traditional surveys. Far too slow to act.</div>
+                    </div>
+                </div>
+                <p class="ee-sources">Sources: Gallup State of the Global Workplace 2023 · SHRM · Brazilian higher-education data</p>
+            </div>
+        </section>
+
+        <section class="ee-section" aria-labelledby="ee-aud-title">
+            <p class="ee-eyebrow">One engine, three audiences</p>
+            <h2 id="ee-aud-title" data-reveal class="ee-h2">The same 2-minute check-in.<br> Three kinds of churn, predicted.</h2>
+            <div class="ee-aud-grid">
+                <a class="ee-aud-card ee-aud-card--blue fade-up" href="#employees">
+                    <span class="ee-aud-tag">Employees</span>
+                    <h3 class="ee-aud-title">Predict turnover</h3>
+                    <p class="ee-aud-text">Monthly pulse on happiness, engagement and mental health. Turnover risk by team, up to 90 days ahead.</p>
+                    <span class="ee-aud-stat">−34% turnover in the first 90 days</span>
+                    <span class="ee-aud-more">See how <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="ee-aud-card ee-aud-card--green fade-up ee-delay-1" href="#students">
+                    <span class="ee-aud-tag">Students</span>
+                    <h3 class="ee-aud-title">Predict dropout</h3>
+                    <p class="ee-aud-text">A happiness index per class, course and campus. Coordinators get an alert 3 months before a student disappears.</p>
+                    <span class="ee-aud-stat">73% less dropout in one semester</span>
+                    <span class="ee-aud-more">See how <span aria-hidden="true">→</span></span>
+                </a>
+                <a class="ee-aud-card ee-aud-card--purple fade-up ee-delay-2" href="#customers">
+                    <span class="ee-aud-tag">Customers</span>
+                    <h3 class="ee-aud-title">Predict churn</h3>
+                    <p class="ee-aud-text">The same WhatsApp check-in, sent to your customers. Satisfaction by segment and an alert when an account starts going quiet.</p>
+                    <span class="ee-aud-stat">Same engine, same 2 minutes</span>
+                    <span class="ee-aud-more">See how <span aria-hidden="true">→</span></span>
+                </a>
+            </div>
+        </section>
+
+        <section id="employees" class="ee-section ee-anchor" aria-labelledby="ee-emp-title">
+            <div class="ee-product-grid">
+                <div>
+                    <p class="ee-eyebrow ee-eyebrow--blue">For employees · Turnover</p>
+                    <h2 id="ee-emp-title" class="ee-h2">Know who is about to quit.<br> Before the resignation letter.</h2>
+                    <p class="ee-lead">8 taps, 2 minutes, on WhatsApp, with no app. Fiter measures happiness, culture fit, mental health and productivity, and predicts turnover and absenteeism by department 90 days ahead.</p>
+                    <div class="ee-sub-grid">
+                        <div class="ee-sub-card ee-sub-card--blue">
+                            <p class="ee-sub-tag">Employee</p>
+                            <p class="ee-sub-text">A monthly self-assessment on WhatsApp in 2 minutes. They get their culture-fit score and an AI-generated personal development plan right away.</p>
+                        </div>
+                        <div class="ee-sub-card ee-sub-card--green">
+                            <p class="ee-sub-tag">HR and leaders</p>
+                            <p class="ee-sub-text">Turnover predictions and sick-leave alerts in one click. Every month, a team diagnosis with an AI action plan.</p>
+                        </div>
+                    </div>
+                    <a class="ee-text-link" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'en_employees_demo'})">See it with your own team <span aria-hidden="true">→</span></a>
+                </div>
+
+                <figure class="ee-win ee-win--blue" aria-label="Example Fiter employee dashboard">
+                    <div aria-hidden="true">
+                        <div class="ee-win-bar"><span class="ee-win-dot ee-win-dot--r"></span><span class="ee-win-dot ee-win-dot--y"></span><span class="ee-win-dot ee-win-dot--g"></span><span class="ee-win-url">fiter.com.br/pulse/dashboard</span></div>
+                        <div class="ee-win-head">
+                            <div><div class="ee-win-title">Fiter Pulse</div><div class="ee-win-sub">May 2026 · 342 answers</div></div>
+                            <div class="ee-live"><span class="ee-live-dot"></span>live</div>
+                        </div>
+                        <div class="ee-win-body">
+                            <div class="ee-tiles">
+                                <div class="ee-tile ee-tile--blue"><div class="ee-tile-value">87</div><div class="ee-tile-label">Happiness</div></div>
+                                <div class="ee-tile ee-tile--green"><div class="ee-tile-value">82</div><div class="ee-tile-label">Engagement</div></div>
+                                <div class="ee-tile ee-tile--purple"><div class="ee-tile-value">91</div><div class="ee-tile-label">Culture fit</div></div>
+                            </div>
+                            <div class="ee-panel">
+                                <div class="ee-panel-label">Trend · 90 days</div>
+                                <svg class="ee-spark" viewBox="0 0 260 48" fill="none" preserveAspectRatio="none">
+                                    <defs><linearGradient id="ee-pg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" class="ee-stop-blue-25"/><stop offset="100%" class="ee-stop-blue-0"/></linearGradient></defs>
+                                    <polygon points="0,38 44,32 88,33 132,22 176,14 220,8 260,4 260,48 0,48" fill="url(#ee-pg1)"/>
+                                    <polyline class="ee-spark-line" points="0,38 44,32 88,33 132,22 176,14 220,8 260,4" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
+                                    <circle class="ee-spark-dot" cx="260" cy="4" r="3"/>
+                                </svg>
+                                <div class="ee-axis"><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span></div>
+                            </div>
+                            <div class="ee-split">
+                                <div class="ee-alert">
+                                    <div class="ee-alert-title">⚠ Turnover detected</div>
+                                    <div class="ee-alert-text">3 people · Operations<br> down 18 pts in 4 weeks</div>
+                                </div>
+                                <div class="ee-panel ee-panel--blue">
+                                    <div class="ee-panel-label">By department</div>
+                                    <div class="ee-bar"><span class="ee-bar-label">Sales</span><span class="ee-bar-track"><span class="ee-bar-fill ee-w-91"></span></span><span class="ee-bar-num">91</span></div>
+                                    <div class="ee-bar ee-bar--warn"><span class="ee-bar-label">Operations</span><span class="ee-bar-track"><span class="ee-bar-fill ee-w-61"></span></span><span class="ee-bar-num">61</span></div>
+                                </div>
+                            </div>
+                            <div class="ee-ai">
+                                <span class="ee-ai-icon">✦</span>
+                                <div><div class="ee-ai-label">AI-generated action</div><div class="ee-ai-text">Book 1:1s with 3 people in Operations before May 30. Flight risk confirmed.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section id="students" class="ee-section ee-anchor" aria-labelledby="ee-stu-title">
+            <div class="ee-product-grid ee-product-grid--flip">
+                <div class="ee-product-copy">
+                    <p class="ee-eyebrow ee-eyebrow--green">For students · Dropout</p>
+                    <h2 id="ee-stu-title" class="ee-h2">3 months before.<br> Not after.</h2>
+                    <p class="ee-lead">Students answer 8 questions on WhatsApp between classes. AI follows each student's happiness index and alerts the coordinator up to 3 months before dropout, with the name, the current score and a suggested action plan.</p>
+                    <ul class="ee-checks">
+                        <li class="ee-check">Dashboard by class, course and campus</li>
+                        <li class="ee-check">87% student response rate</li>
+                        <li class="ee-check">No integration with the academic system required</li>
+                    </ul>
+                    <a class="ee-text-link" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'en_students_demo'})">See it for your institution <span aria-hidden="true">→</span></a>
+                </div>
+
+                <figure class="ee-win ee-win--green" aria-label="Example Fiter dropout alert panel">
+                    <div aria-hidden="true">
+                        <div class="ee-win-bar"><span class="ee-win-dot ee-win-dot--r"></span><span class="ee-win-dot ee-win-dot--y"></span><span class="ee-win-dot ee-win-dot--g"></span><span class="ee-win-url">fiter.com.br/education/alerts</span></div>
+                        <div class="ee-win-head">
+                            <div><div class="ee-win-title">Dropout alerts</div><div class="ee-win-sub">AI monitoring · Semester 1, 2026</div></div>
+                            <span class="ee-badge ee-badge--red">3 alerts today</span>
+                        </div>
+                        <div class="ee-win-body">
+                            <div class="ee-person ee-person--critical">
+                                <div class="ee-person-row">
+                                    <div><div class="ee-person-name">Ana Souza</div><div class="ee-person-meta">Software Dev, 3rd sem. · index 38</div></div>
+                                    <span class="ee-badge ee-badge--red">Critical</span>
+                                </div>
+                                <div class="ee-person-row ee-person-row--meta">
+                                    <span>Down 22 pts in 3 weeks</span>
+                                    <span class="ee-person-risk">Risk 78%</span>
+                                </div>
+                            </div>
+                            <div class="ee-person">
+                                <div class="ee-person-row">
+                                    <div><div class="ee-person-name">Carlos Lima</div><div class="ee-person-meta">Business, 4th sem. · index 51 · 42% risk</div></div>
+                                    <span class="ee-badge ee-badge--amber">Alert</span>
+                                </div>
+                            </div>
+                            <div class="ee-person">
+                                <div class="ee-person-row">
+                                    <div><div class="ee-person-name">Bruna Carvalho</div><div class="ee-person-meta">Engineering, 2nd sem. · index 74 · stable</div></div>
+                                    <span class="ee-badge ee-badge--green">OK</span>
+                                </div>
+                            </div>
+                            <div class="ee-ping">
+                                <span class="ee-live-dot"></span>
+                                <div><div class="ee-ai-text">WhatsApp sent to the course coordinator</div><div class="ee-ai-label">Just now · Ana Souza at critical risk</div></div>
+                            </div>
+                            <div class="ee-ai">
+                                <span class="ee-ai-icon">✦</span>
+                                <div><div class="ee-ai-label">AI-generated action</div><div class="ee-ai-text">Refer Ana Souza to student counselling. Chance of recovery with intervention: 84%.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section id="customers" class="ee-section ee-anchor" aria-labelledby="ee-cus-title">
+            <div class="ee-product-grid">
+                <div>
+                    <p class="ee-eyebrow ee-eyebrow--purple">For customers · Churn</p>
+                    <h2 id="ee-cus-title" class="ee-h2">Spot the customer<br> who is going quiet.</h2>
+                    <p class="ee-lead">Send the same 2-minute WhatsApp check-in to your customers. Fiter measures satisfaction and happiness by segment and flags the accounts drifting away, while there is still time to win them back.</p>
+                    <ul class="ee-checks">
+                        <li class="ee-check">Answered where your customers already are</li>
+                        <li class="ee-check">Churn risk by segment, plan or region</li>
+                        <li class="ee-check">An AI action plan for your account team</li>
+                    </ul>
+                    <a class="ee-text-link" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'en_customers_demo'})">See it with your customers <span aria-hidden="true">→</span></a>
+                </div>
+
+                <figure class="ee-win ee-win--purple" aria-label="Example Fiter customer health panel">
+                    <div aria-hidden="true">
+                        <div class="ee-win-bar"><span class="ee-win-dot ee-win-dot--r"></span><span class="ee-win-dot ee-win-dot--y"></span><span class="ee-win-dot ee-win-dot--g"></span><span class="ee-win-url">fiter.com.br/customers/health</span></div>
+                        <div class="ee-win-head">
+                            <div><div class="ee-win-title">Customer health</div><div class="ee-win-sub">Last 30 days · 1,180 answers</div></div>
+                            <div class="ee-live"><span class="ee-live-dot"></span>live</div>
+                        </div>
+                        <div class="ee-win-body">
+                            <div class="ee-tiles">
+                                <div class="ee-tile ee-tile--purple"><div class="ee-tile-value">84</div><div class="ee-tile-label">Satisfaction</div></div>
+                                <div class="ee-tile ee-tile--blue"><div class="ee-tile-value">61</div><div class="ee-tile-label">NPS</div></div>
+                                <div class="ee-tile ee-tile--amber"><div class="ee-tile-value">7%</div><div class="ee-tile-label">At risk</div></div>
+                            </div>
+                            <div class="ee-panel">
+                                <div class="ee-panel-label">Satisfaction by segment</div>
+                                <div class="ee-bar"><span class="ee-bar-label">SMB</span><span class="ee-bar-track"><span class="ee-bar-fill ee-w-88"></span></span><span class="ee-bar-num">88</span></div>
+                                <div class="ee-bar"><span class="ee-bar-label">Mid-market</span><span class="ee-bar-track"><span class="ee-bar-fill ee-w-85"></span></span><span class="ee-bar-num">85</span></div>
+                                <div class="ee-bar ee-bar--warn"><span class="ee-bar-label">Enterprise</span><span class="ee-bar-track"><span class="ee-bar-fill ee-w-64"></span></span><span class="ee-bar-num">64</span></div>
+                            </div>
+                            <div class="ee-alert">
+                                <div class="ee-alert-title">⚠ Churn risk detected</div>
+                                <div class="ee-alert-text">12 Enterprise accounts · satisfaction down 15 pts in 30 days</div>
+                            </div>
+                            <div class="ee-ai">
+                                <span class="ee-ai-icon">✦</span>
+                                <div><div class="ee-ai-label">AI-generated action</div><div class="ee-ai-text">Call the 12 Enterprise accounts this week. Main complaint: support response time.</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <section class="ee-section" aria-labelledby="ee-num-title">
+            <h2 id="ee-num-title" data-reveal class="ee-h2">Numbers our clients<br> get in practice.</h2>
+            <div class="ee-metric-grid">
+                <div class="metric-card" data-metric="87" data-suffix="%">
+                    <span class="metric-value">0%</span>
+                    <div class="metric-trend">↑ +23 pts vs. web forms</div>
+                    <span class="metric-label">Average response rate</span>
+                    <span class="metric-sub">people who answer</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">−34%</span>
+                    <div class="metric-trend">↓ employee turnover</div>
+                    <span class="metric-label">Less turnover</span>
+                    <span class="metric-sub">in the first 90 days</span>
+                </div>
+                <div class="metric-card" data-metric="73" data-suffix="%">
+                    <span class="metric-value">0%</span>
+                    <div class="metric-trend">↓ student dropout</div>
+                    <span class="metric-label">Less dropout</span>
+                    <span class="metric-sub">first semester, Fatec SP</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">+12 pts</span>
+                    <div class="metric-trend">↑ average gain</div>
+                    <span class="metric-label">eNPS improvement</span>
+                    <span class="metric-sub">3 months after rollout</span>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="ee-chart-head">
+                    <div>
+                        <h3 class="ee-chart-title">Response rate by channel</h3>
+                        <p class="ee-chart-sub">Same group of people, different channels</p>
+                    </div>
+                    <div class="ee-chart-goal"><span class="ee-chart-goal-line" aria-hidden="true"></span>Target 80%</div>
+                </div>
+                <div class="chart-bars">
+                    <div class="bar-row">
+                        <span class="bar-label">WhatsApp (Fiter)</span>
+                        <div class="bar-track"><div class="bar-fill ee-bt-87"><span class="bar-tooltip">87%</span></div></div>
+                        <span class="bar-value-label">87%</span>
+                    </div>
+                    <div class="bar-row ee-delay-07">
+                        <span class="bar-label">Email</span>
+                        <div class="bar-track"><div class="bar-fill ee-bt-34"><span class="bar-tooltip">34%</span></div></div>
+                        <span class="bar-value-label">34%</span>
+                    </div>
+                    <div class="bar-row ee-delay-14">
+                        <span class="bar-label">Web form</span>
+                        <div class="bar-track"><div class="bar-fill ee-bt-31"><span class="bar-tooltip">31%</span></div></div>
+                        <span class="bar-value-label">31%</span>
+                    </div>
+                    <div class="bar-row ee-delay-21">
+                        <span class="bar-label">Mobile app</span>
+                        <div class="bar-track"><div class="bar-fill ee-bt-22"><span class="bar-tooltip">22%</span></div></div>
+                        <span class="bar-value-label">22%</span>
+                    </div>
+                    <div class="bar-row ee-delay-28">
+                        <span class="bar-label">Paper</span>
+                        <div class="bar-track"><div class="bar-fill ee-bt-17"><span class="bar-tooltip">17%</span></div></div>
+                        <span class="bar-value-label">17%</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ee-section" aria-labelledby="ee-testi-title">
+            <h2 id="ee-testi-title" data-reveal class="ee-h2">Real results.<br> In their words.</h2>
+
+            <figure class="testi-featured ee-testi-featured fade-up ee-delay-1">
+                <blockquote class="testi-featured-quote ee-testi-quote">"We rolled it out in one week. By week two we had data that used to take us months to collect. <em>Response rate passed 80% on the very first survey.</em> We never got anywhere near that with web forms."</blockquote>
+                <figcaption class="ee-testi-author">
+                    <div class="testi-featured-avatar ee-testi-avatar" aria-hidden="true">RO</div>
+                    <div>
+                        <div class="testi-featured-name">Renata Oliveira</div>
+                        <div class="testi-featured-role">HR Director</div>
+                        <div class="testi-featured-role ee-testi-company">Braspress · Logistics</div>
+                    </div>
+                </figcaption>
+            </figure>
+
+            <div class="testi-grid">
+                <figure class="testi-card fade-up ee-delay-05">
+                    <blockquote class="testi-quote">"In 90 days the AI flagged three teams at risk of turnover. <strong>We kept four key people</strong> before the resignation ever came. I can't say exactly what that's worth, but it's far more than we pay."</blockquote>
+                    <figcaption class="testi-author">
+                        <div class="testi-avatar" aria-hidden="true">MF</div>
+                        <div><div class="testi-name">Marcos Ferreira</div><div class="testi-role">VP of People · Sebrae-SP</div></div>
+                    </figcaption>
+                </figure>
+                <figure class="testi-card fade-up ee-delay-12">
+                    <blockquote class="testi-quote">"We cut dropout by <strong>73% in the first semester</strong> with Fiter. The AI warned us about at-risk students three months ahead. Enough time to step in before the decision was final."</blockquote>
+                    <figcaption class="testi-author">
+                        <div class="testi-avatar" aria-hidden="true">RC</div>
+                        <div><div class="testi-name">Ricardo Carvalho</div><div class="testi-role">Academic Pro-Rector · Fatec SP</div></div>
+                    </figcaption>
+                </figure>
+                <figure class="testi-card fade-up ee-delay-19">
+                    <blockquote class="testi-quote">"We replaced the yearly engagement survey with Fiter's monthly one. <strong>We stopped guessing how the team feels.</strong> Now the AI delivers the action plan together with the diagnosis."</blockquote>
+                    <figcaption class="testi-author">
+                        <div class="testi-avatar" aria-hidden="true">PL</div>
+                        <div><div class="testi-name">Patricia Lima</div><div class="testi-role">CHRO · Kroton Educacional</div></div>
+                    </figcaption>
+                </figure>
+            </div>
+            <p class="ee-sources ee-sources--left">Quotes translated from Portuguese.</p>
+        </section>
+
+        <section class="ee-section" aria-labelledby="ee-data-title">
+            <h2 id="ee-data-title" data-reveal class="ee-h2">Every answer becomes data.<br> Live.</h2>
+            <div class="ee-analytics-grid">
+                <div class="chart-container ee-chart-pad">
+                    <p class="ee-eyebrow ee-eyebrow--sm">Wellbeing survey</p>
+                    <h3 class="ee-chart-title">Wellbeing distribution</h3>
+                    <p class="ee-chart-sub ee-chart-sub--gap">Last 30 days · 847 respondents</p>
+                    <div class="donut-layout">
+                        <div class="donut-chart-wrap" id="donut-en" data-chart='[
+                            {"label":"Promoters","pct":48,"color":"#10b981"},
+                            {"label":"Neutral","pct":31,"color":"#3b82f6"},
+                            {"label":"Attention","pct":13,"color":"#f59e0b"},
+                            {"label":"At risk","pct":8,"color":"#ef4444"}
+                        ]'></div>
+                        <div class="donut-legend" id="donut-legend-en"></div>
+                    </div>
+                </div>
+                <div class="chart-container ee-chart-pad">
+                    <div class="vchart-header">
+                        <div>
+                            <h3 class="ee-chart-title">eNPS over time</h3>
+                            <p class="ee-chart-sub">Average score · last 8 months</p>
+                        </div>
+                        <div class="vchart-legend">
+                            <div class="vchart-legend-item"><span class="vchart-legend-dot ee-dot-brand"></span>eNPS</div>
+                        </div>
+                    </div>
+                    <div class="vchart-bars-area" id="vchart-en-nps" data-chart='[
+                        {"label":"Oct","value":61},
+                        {"label":"Nov","value":67},
+                        {"label":"Dec","value":64},
+                        {"label":"Jan","value":72},
+                        {"label":"Feb","value":78},
+                        {"label":"Mar","value":75},
+                        {"label":"Apr","value":83},
+                        {"label":"May","value":89}
+                    ]' data-max="100"></div>
+                    <div class="vchart-x-axis" id="vchart-en-nps-x"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ee-section ee-sci sci-section" aria-labelledby="ee-sci-title">
+            <div class="ee-sci-glow" aria-hidden="true"></div>
+            <div class="ee-sci-grid">
+                <div class="sci-narrative">
+                    <p class="ee-eyebrow">Scientific foundation</p>
+                    <h2 id="ee-sci-title" data-reveal class="ee-h2">Deeptech with<br> roots at USP.</h2>
+                    <p class="ee-body fade-up ee-delay-15">The method was built over years of scientific research: master's theses with USP and Mackenzie, two of Brazil's leading universities, published in the book <cite>Felicidade: Ciência de Dados</cite> (Happiness: Data Science).</p>
+                    <p class="ee-body fade-up ee-delay-25">The questions were not written by a product team. They were <strong>scientifically tested</strong> to measure what they claim to measure. No bias, no guesswork.</p>
+                </div>
+                <div class="ee-sci-tiles">
+                    <div class="sci-tile fade-up">
+                        <div class="sci-icon"><i data-lucide="book-open" aria-hidden="true"></i></div>
+                        <div><div class="sci-title">Scientific DNA</div><div class="sci-sub">Method validated by master's theses and academic papers, published in <cite>Felicidade: Ciência de Dados</cite>. No statistical bias.</div></div>
+                    </div>
+                    <div class="sci-tile fade-up ee-delay-07">
+                        <div class="sci-icon"><i data-lucide="user" aria-hidden="true"></i></div>
+                        <div><div class="sci-title">Hands-on leadership</div><div class="sci-sub">Created by a founder who is both a university professor and a corporate HR executive.</div></div>
+                    </div>
+                    <div class="sci-tile fade-up ee-delay-14">
+                        <div class="sci-icon"><i data-lucide="building-2" aria-hidden="true"></i></div>
+                        <div><div class="sci-title">USP ecosystem</div><div class="sci-sub">Based at the USP Innovation Center. From SMEs to large corporations and the Brazilian Navy.</div></div>
+                    </div>
+                    <div class="sci-tile fade-up ee-delay-21">
+                        <div class="sci-icon"><i data-lucide="award" aria-hidden="true"></i></div>
+                        <div><div class="sci-title">Awards and seals</div><div class="sci-sub">INEX seal (ABES) for software integrity and innovation · Speed seal (SEBRAE) for technology excellence.</div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ee-section" aria-labelledby="ee-cmp-title">
+            <h2 id="ee-cmp-title" data-reveal class="ee-h2">Fiter vs. the way<br> everyone else does it.</h2>
+            <div class="cmp-wrap ee-cmp-wrap">
+                <table class="cmp-table">
+                    <thead>
+                        <tr>
+                            <th><span class="sr-only">Criteria</span></th>
+                            <th>Traditional survey</th>
+                            <th>Yearly survey / consultancy</th>
+                            <th class="cmp-featured">Fiter</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Channel</td>
+                            <td><span class="cmp-cross">Web form or paper</span></td>
+                            <td><span class="cmp-cross">Web form</span></td>
+                            <td class="cmp-featured"><span class="cmp-check">WhatsApp, no app</span></td>
+                        </tr>
+                        <tr>
+                            <td>Time to answer</td>
+                            <td><span class="cmp-cross">15–30 minutes</span></td>
+                            <td><span class="cmp-cross">20–40 minutes</span></td>
+                            <td class="cmp-featured"><span class="cmp-check">2 minutes</span></td>
+                        </tr>
+                        <tr>
+                            <td>Typical response rate</td>
+                            <td><span class="cmp-cross">20–35%</span></td>
+                            <td><span class="cmp-cross">30–50%</span></td>
+                            <td class="cmp-featured"><span class="cmp-check">80–94%</span></td>
+                        </tr>
+                        <tr>
+                            <td>Results available</td>
+                            <td><span class="cmp-cross">Weeks</span></td>
+                            <td><span class="cmp-cross">Months</span></td>
+                            <td class="cmp-featured"><span class="cmp-check">Real time</span></td>
+                        </tr>
+                        <tr>
+                            <td>Churn prediction</td>
+                            <td><span class="cmp-cross">No</span></td>
+                            <td><span class="cmp-cross">No</span></td>
+                            <td class="cmp-featured"><span class="cmp-check">Yes, up to 90 days ahead</span></td>
+                        </tr>
+                        <tr>
+                            <td>Setup</td>
+                            <td><span class="cmp-cross">Weeks or months</span></td>
+                            <td><span class="cmp-cross">1–3 months</span></td>
+                            <td class="cmp-featured"><span class="cmp-check">Days, no IT</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="ee-section" aria-labelledby="ee-impl-title">
+            <div class="ee-impl-grid">
+                <div class="ee-impl-sticky">
+                    <p class="ee-eyebrow" data-reveal>Implementation</p>
+                    <h2 id="ee-impl-title" class="ee-h2" data-reveal>From contract to first<br> diagnosis in days.</h2>
+                    <p class="ee-body ee-body--gap">No IT. No paperwork. From sending to action plan, everything is automatic.</p>
+                    <div class="chart-container chart-days">
+                        <div class="ee-days-label">Time to first diagnosis</div>
+                        <div class="chart-bars">
+                            <div class="bar-row">
+                                <span class="bar-label">Fiter</span>
+                                <div class="bar-track"><div class="bar-fill ee-bt-7"><span class="bar-tooltip">7 days</span></div></div>
+                                <span class="bar-value-label">7 days</span>
+                            </div>
+                            <div class="bar-row ee-delay-08">
+                                <span class="bar-label">Consultancy</span>
+                                <div class="bar-track"><div class="bar-fill ee-bt-62 ee-fill-dim"><span class="bar-tooltip">90 days</span></div></div>
+                                <span class="bar-value-label">90 days</span>
+                            </div>
+                            <div class="bar-row ee-delay-16">
+                                <span class="bar-label">Yearly survey</span>
+                                <div class="bar-track"><div class="bar-fill ee-bt-100 ee-fill-faint"><span class="bar-tooltip">365 days</span></div></div>
+                                <span class="bar-value-label">365 days</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ol class="steps-v ee-steps" data-steps>
+                    <li class="step-v">
+                        <div class="step-v-num">01</div>
+                        <div class="step-v-content"><p class="step-v-tag">Day 1</p><h3 class="step-v-title">Sign</h3><p class="step-v-body">Digital contract. No paperwork, no IT.</p></div>
+                    </li>
+                    <li class="step-v ee-delay-1">
+                        <div class="step-v-num">02</div>
+                        <div class="step-v-content"><p class="step-v-tag">Day 2</p><h3 class="step-v-title">Onboarding</h3><p class="step-v-body">We import your contact list and tailor the questions.</p></div>
+                    </li>
+                    <li class="step-v ee-delay-2">
+                        <div class="step-v-num">03</div>
+                        <div class="step-v-content"><p class="step-v-tag">Day 5</p><h3 class="step-v-title">Training</h3><p class="step-v-body">90 minutes with your managers. The platform is simple enough that you won't need more.</p></div>
+                    </li>
+                    <li class="step-v ee-delay-3">
+                        <div class="step-v-num">04</div>
+                        <div class="step-v-content"><p class="step-v-tag">Day 7</p><h3 class="step-v-title">Go live</h3><p class="step-v-body">First survey sent. Live diagnosis on the dashboard.</p></div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="ee-section" aria-labelledby="ee-faq-title">
+            <div class="faq-2col">
+                <div>
+                    <p class="ee-eyebrow">FAQ</p>
+                    <h2 id="ee-faq-title" data-reveal class="ee-h2 ee-h2--sm">Everything you<br> need to know.</h2>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="ee-faq-1"><span class="faq-question">Do people need to install an app?</span><span class="faq-icon" aria-hidden="true"></span></button>
+                        <div class="faq-body" id="ee-faq-1"><div class="faq-body-inner"><p class="faq-answer">No. People get a link on WhatsApp or email and answer right in the browser. Your dashboard is web-based too. Setup does not involve your IT team.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="ee-faq-2"><span class="faq-question">Are the answers anonymous?</span><span class="faq-icon" aria-hidden="true"></span></button>
+                        <div class="faq-body" id="ee-faq-2"><div class="faq-body-inner"><p class="faq-answer">Climate surveys are 100% anonymous: managers only see aggregated results, never an individual answer. The monthly Pulse is a personal self-assessment, which is what lets Fiter alert you about a specific person at risk.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="ee-faq-3"><span class="faq-question">How long does implementation take?</span><span class="faq-icon" aria-hidden="true"></span></button>
+                        <div class="faq-body" id="ee-faq-3"><div class="faq-body-inner"><p class="faq-answer">Days, not months. Contract, onboarding with our customer success team, a 90-minute training, and the first survey goes out.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="ee-faq-4"><span class="faq-question">Can we start with just one audience?</span><span class="faq-icon" aria-hidden="true"></span></button>
+                        <div class="faq-body" id="ee-faq-4"><div class="faq-body-inner"><p class="faq-answer">Yes. Fiter is modular. Start with employees, students or customers, and add the others when it makes sense.</p></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-trigger" aria-expanded="false" aria-controls="ee-faq-5"><span class="faq-question">How is this different from a yearly engagement survey?</span><span class="faq-icon" aria-hidden="true"></span></button>
+                        <div class="faq-body" id="ee-faq-5"><div class="faq-body-inner"><p class="faq-answer">A yearly survey takes long to answer and the results arrive after the problem has happened. Fiter runs every month, takes 2 minutes, and gives you a live diagnosis with an AI action plan. You act this month, not next year.</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta-section" class="ee-cta" aria-labelledby="ee-cta-title">
+            <img src="/assets/img/hero-saude-mental.webp" alt="" class="section-photo-bg" loading="lazy">
+            <div class="section-photo-overlay" aria-hidden="true"></div>
+            <div class="ee-cta-grid">
+                <div>
+                    <p class="ee-eyebrow">Free demo</p>
+                    <h2 id="ee-cta-title" data-reveal class="ee-h2">See what your people<br> aren't telling you.</h2>
+                    <p class="ee-body ee-body--gap">30 minutes with a specialist. You'll know whether Fiter solves what you need. No commitment, no hour-long pitch.</p>
+                    <ul class="ee-checks">
+                        <li class="ee-check">The real platform, not a slide deck</li>
+                        <li class="ee-check">A specialist who knows your objections</li>
+                        <li class="ee-check">A proposal the same day, if it makes sense</li>
+                    </ul>
+                </div>
+                <div class="ee-cta-box">
+                    <div>
+                        <p class="ee-eyebrow ee-eyebrow--muted">Pick a time</p>
+                        <p class="ee-body">Book straight into a specialist's calendar. No waiting, no forms.</p>
+                    </div>
+                    <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars ee-btn-lg" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'en_cta_demo'})">Book a demo</a>
+                    <p class="ee-small">30 minutes · instant confirmation</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer class="ee-footer">
+    <div class="ee-footer-inner">
+        <img src="/assets/img/fiter_logo.svg" alt="Fiter" width="70" height="22" loading="lazy">
+        <p class="ee-small">© 2026 Fiter · São Paulo, Brazil</p>
+        <ul class="ee-footer-links">
+            <li><a href="/">Fiter in Portuguese</a></li>
+            <li><a href="/politica-de-privacidade/">Privacy policy (Portuguese)</a></li>
+        </ul>
+    </div>
+</footer>
+
+<script>
+(function () {
+    var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in-view'); obs.unobserve(e.target); }
+        });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.bar-row, .steps-v').forEach(function (el) { obs.observe(el); });
+
+    // main.js toggles .is-open on click; mirror that state into aria-expanded after it runs
+    document.querySelectorAll('.faq-trigger').forEach(function (t) {
+        t.addEventListener('click', function () {
+            setTimeout(function () {
+                document.querySelectorAll('.faq-item').forEach(function (item) {
+                    var btn = item.querySelector('.faq-trigger');
+                    if (btn) btn.setAttribute('aria-expanded', item.classList.contains('is-open') ? 'true' : 'false');
+                });
+            }, 0);
+        });
+    });
+
+    if (window.lucide) lucide.createIcons();
+})();
+</script>
+</body>
+</html>
