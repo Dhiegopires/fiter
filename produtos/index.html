@@ -36,10 +36,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=d3ea2f08">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=b7ba4a46">
     <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/assets/js/lucide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
     <script async src="https://t.contentsquare.net/uxa/cd11f6271f295.js"></script>
     <script type="module">
@@ -90,6 +90,7 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9091218.js"></script>
 <!-- End of HubSpot Embed Code -->
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body data-theme="base">
 
@@ -97,7 +98,7 @@
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/" aria-label="Fiter"><img class="u-h-28px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"></a>
 
         <ul class="nav-links">
 
@@ -131,6 +132,9 @@
                     <a class="drop-link" href="/produtos/ouvidoria/">
                         <div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Canal de ética com IA</div></div>
                     </a>
+                    <a class="drop-link" href="/produtos/">
+                        <div><div class="drop-link-name">Todos os produtos</div><div class="drop-link-tag">Visão geral e comparação</div></div>
+                    </a>
                 </div>
             </li>
 
@@ -154,7 +158,7 @@
         </ul>
 
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars u-td-none" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -167,7 +171,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+            <div class="nav-panel-logo u-d-flex u-ai-center u-jc-space-between"><img class="u-h-24px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"><button class="u-bg-none u-border-none u-cursor-pointer u-c-text-secondary u-p-0_25rem u-d-flex u-ai-center u-jc-center" id="nav-close" aria-label="Fechar menu"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -185,6 +189,7 @@
                     <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
                     <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
                     <a class="drawer-sub-link" href="/produtos/ouvidoria/">Ouvidoria</a>
+                    <a class="drawer-sub-link" href="/produtos/">Todos os produtos</a>
                 </div></div>
             </div>
 
@@ -202,144 +207,144 @@
             <a class="drawer-plain-link" href="/blog/">Blog</a>
 
             <div class="drawer-cta">
-                <a class="btn btn-primary w-full" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+                <a class="btn btn-primary w-full u-td-none u-jc-center" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             </div>
         </div>
     </div>
 
 
-    <main class="main-content" style="padding-top: 64px;">
+    <main class="main-content u-pt-64px">
         <div class="ds-container px-6">
 
             <!-- HERO -->
-            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12" style="min-height: 60vh; margin-bottom: 8rem; border-bottom: 1px solid var(--border-default); padding-bottom: 4rem;">
+            <section class="ds-section relative flex flex-col md:flex-row items-center gap-12 u-minh-60vh u-mb-8rem u-border-bottom-1px-solid-border-default u-pb-4rem">
                 <div class="flex-1 z-10 text-center md:text-left">
-                    <h1 style="font-family: var(--font-serif); font-size: clamp(3rem, 5vw, 4.5rem); font-style: italic; font-weight: 400; line-height: 1.1; margin-bottom: 1.5rem; color: var(--text-primary);">
+                    <h1 class="u-ff-font-serif u-fs-clamp-3rem-5vw-4_5rem u-font-style-italic u-fw-400 u-lh-1_1 u-mb-1_5rem u-c-text-primary">
                         Cinco produtos. Uma decisão.
                     </h1>
-                    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 2.5rem; line-height: 1.6; margin-left: auto; margin-right: auto;" class="md:mx-0">
+                    <p class="md:mx-0 u-fs-1_125rem u-c-text-secondary u-maxw-600px u-mb-2_5rem u-lh-1_6 u-ml-auto u-mr-auto">
                         A pesquisa anual te dá um retrato de como era há seis meses. A Fiter te diz o que está acontecendo agora, via WhatsApp, em tempo real.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Ver demonstração</a>
-                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Falar com especialista</a>
+                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none">Ver demonstração</a>
+                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-animate-chars u-td-none">Falar com especialista</a>
                     </div>
                 </div>
             </section>
 
             <!-- PRODUTOS EM DETALHE -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
+            <section class="ds-section u-mb-8rem">
                 <div class="text-center mb-16">
                     <h2 class="ds-section-title">O que cada produto faz</h2>
                 </div>
                 
                 <div class="flex flex-col gap-12">
                     <!-- Produto 1: Pulse -->
-                    <div class="card p-8 md:p-12" style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); display: grid; grid-template-columns: 1fr ; gap: 3rem;">
+                    <div class="card p-8 md:p-12 u-bg-bg-surface u-mix-464e7 u-d-grid u-cols-1fr u-gap-3rem">
                         <div>
-                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Engajamento contínuo</div>
-                            <h3 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary); font-style: italic;">Pulse</h3>
-                            <div style="margin-bottom: 2rem;">
-                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase; font-size: 0.8rem;">Para o dono de empresa:</strong>
-                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">Saiba quem está prestes a sair, antes que saia. Em 8 cliques e 2 minutos via WhatsApp, o Pulse mede felicidade, fit cultural e saúde mental de cada colaborador e entrega um painel preditivo em tempo real. Sem app. Sem burocracia.</p>
-                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase; font-size: 0.8rem;">Para o RH:</strong>
-                                <p style="color: var(--text-secondary); line-height: 1.6;">Chega de esperar a demissão chegar. O Pulse monitora continuamente o engajamento do time e gera alertas automáticos sobre quem precisa de atenção, antes do problema virar custo.</p>
+                            <div class="u-ff-font-mono u-fs-0_7rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1rem u-bg-bg-base u-d-inline-block u-p-0_2rem-0_75rem u-mix-95f28">Engajamento contínuo</div>
+                            <h3 class="u-ff-font-serif u-fs-2_5rem u-mb-1_5rem u-c-text-primary u-font-style-italic">Pulse</h3>
+                            <div class="u-mb-2rem">
+                                <strong class="u-c-text-primary u-d-block u-mb-0_5rem u-ff-font-mono u-tt-uppercase u-fs-0_8rem">Para o dono de empresa:</strong>
+                                <p class="u-c-text-secondary u-lh-1_6 u-mb-1rem">Saiba quem está prestes a sair, antes que saia. Em 8 cliques e 2 minutos via WhatsApp, o Pulse mede felicidade, fit cultural e saúde mental de cada colaborador e entrega um painel preditivo em tempo real. Sem app. Sem burocracia.</p>
+                                <strong class="u-c-text-primary u-d-block u-mb-0_5rem u-ff-font-mono u-tt-uppercase u-fs-0_8rem">Para o RH:</strong>
+                                <p class="u-c-text-secondary u-lh-1_6">Chega de esperar a demissão chegar. O Pulse monitora continuamente o engajamento do time e gera alertas automáticos sobre quem precisa de atenção, antes do problema virar custo.</p>
                             </div>
-                            <a href="/produtos/pulse/" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Ver tudo sobre o Pulse →</a>
+                            <a href="/produtos/pulse/" class="btn btn-secondary btn-animate-chars text-center u-td-none u-w-fit-content">Ver tudo sobre o Pulse →</a>
                         </div>
-                        <div style="background: var(--bg-base); border-radius: var(--radius-md); padding: 2rem; border: 1px solid var(--border-default);">
-                            <h4 style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 1.5rem;">Funcionalidades incluídas:</h4>
-                            <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Pulse survey via WhatsApp, sem app</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Painel preditivo em tempo real</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Alertas automáticos de risco</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Fit cultural e saúde mental</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Plano de ação automático por IA</li>
+                        <div class="u-bg-bg-base u-p-2rem u-mix-9a6cf">
+                            <h4 class="u-ff-font-mono u-fs-0_8rem u-tt-uppercase u-ls-0_05em u-c-text-primary u-mb-1_5rem">Funcionalidades incluídas:</h4>
+                            <ul class="u-d-flex u-fdir-column u-gap-1rem u-c-text-secondary">
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Pulse survey via WhatsApp, sem app</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Painel preditivo em tempo real</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Alertas automáticos de risco</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Fit cultural e saúde mental</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Plano de ação automático por IA</li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Produto 2: Agente NR1 -->
-                    <div class="card p-8 md:p-12" style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); display: grid; grid-template-columns: 1fr ; gap: 3rem;">
+                    <div class="card p-8 md:p-12 u-bg-bg-surface u-mix-464e7 u-d-grid u-cols-1fr u-gap-3rem">
                         <div>
-                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Conformidade automática</div>
-                            <h3 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary); font-style: italic;">Agente NR1</h3>
-                            <div style="margin-bottom: 2rem;">
-                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase; font-size: 0.8rem;">Para o dono / diretor:</strong>
-                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">A NR1 exige laudos de risco para cada cargo. Fazer isso manualmente leva meses. O Agente NR1 faz em minutos, com integração direta ao Ministério do Trabalho, CID e OMS. 92% menos tempo. 100% de segurança jurídica.</p>
-                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase; font-size: 0.8rem;">Para RH de médio porte:</strong>
-                                <p style="color: var(--text-secondary); line-height: 1.6;">Seu RH não precisa virar especialista em medicina ocupacional. O Agente NR1 automatiza toda a conformidade da NR1 e ainda recalibra os riscos conforme os dados do Pulse.</p>
+                            <div class="u-ff-font-mono u-fs-0_7rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1rem u-bg-bg-base u-d-inline-block u-p-0_2rem-0_75rem u-mix-95f28">Conformidade automática</div>
+                            <h3 class="u-ff-font-serif u-fs-2_5rem u-mb-1_5rem u-c-text-primary u-font-style-italic">Agente NR1</h3>
+                            <div class="u-mb-2rem">
+                                <strong class="u-c-text-primary u-d-block u-mb-0_5rem u-ff-font-mono u-tt-uppercase u-fs-0_8rem">Para o dono / diretor:</strong>
+                                <p class="u-c-text-secondary u-lh-1_6 u-mb-1rem">A NR1 exige laudos de risco para cada cargo. Fazer isso manualmente leva meses. O Agente NR1 faz em minutos, com integração direta ao Ministério do Trabalho, CID e OMS. 92% menos tempo. 100% de segurança jurídica.</p>
+                                <strong class="u-c-text-primary u-d-block u-mb-0_5rem u-ff-font-mono u-tt-uppercase u-fs-0_8rem">Para RH de médio porte:</strong>
+                                <p class="u-c-text-secondary u-lh-1_6">Seu RH não precisa virar especialista em medicina ocupacional. O Agente NR1 automatiza toda a conformidade da NR1 e ainda recalibra os riscos conforme os dados do Pulse.</p>
                             </div>
-                            <a href="/produtos/nr01/" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Ver tudo sobre o Agente NR1 →</a>
+                            <a href="/produtos/nr01/" class="btn btn-secondary btn-animate-chars text-center u-td-none u-w-fit-content">Ver tudo sobre o Agente NR1 →</a>
                         </div>
-                        <div style="background: var(--bg-base); border-radius: var(--radius-md); padding: 2rem; border: 1px solid var(--border-default);">
-                            <div style="background: rgba(255, 69, 58, 0.1); border: 1px solid rgba(255, 69, 58, 0.3); border-radius: var(--radius-sm); padding: 1rem; margin-bottom: 1.5rem;">
-                                <p style="color: #ff453a; font-size: 0.875rem; line-height: 1.5;"><strong style="font-family: var(--font-mono); text-transform: uppercase; font-size: 0.75rem; display: block; margin-bottom: 0.25rem;">Urgência regulatória:</strong> O prazo para conformidade está chegando. Empresas não adequadas ficam expostas a processos trabalhistas.</p>
+                        <div class="u-bg-bg-base u-p-2rem u-mix-9a6cf">
+                            <div class="u-bg-rgba-255-69-58-0_1 u-mix-ca93a u-p-1rem u-mb-1_5rem">
+                                <p class="u-c-color-red-bright u-fs-0_875rem u-lh-1_5"><strong class="u-ff-font-mono u-tt-uppercase u-fs-0_75rem u-d-block u-mb-0_25rem">Urgência regulatória:</strong> O prazo para conformidade está chegando. Empresas não adequadas ficam expostas a processos trabalhistas.</p>
                             </div>
-                            <h4 style="font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-primary); margin-bottom: 1.5rem;">Funcionalidades incluídas:</h4>
-                            <ul style="display: flex; flex-direction: column; gap: 1rem; color: var(--text-secondary);">
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Análise de risco por cargo</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Layouts do Ministério do Trabalho</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Integração com CID e OMS</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Planos de ação automáticos</li>
-                                <li style="display: flex; align-items: flex-start; gap: 0.75rem;"><i data-lucide="check" style="width: 18px; height: 18px; color: var(--accent-brand); flex-shrink: 0; margin-top: 3px;"></i> Histórico auditável</li>
+                            <h4 class="u-ff-font-mono u-fs-0_8rem u-tt-uppercase u-ls-0_05em u-c-text-primary u-mb-1_5rem">Funcionalidades incluídas:</h4>
+                            <ul class="u-d-flex u-fdir-column u-gap-1rem u-c-text-secondary">
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Análise de risco por cargo</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Layouts do Ministério do Trabalho</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Integração com CID e OMS</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Planos de ação automáticos</li>
+                                <li class="u-d-flex u-ai-flex-start u-gap-0_75rem"><i class="u-w-18px u-h-18px u-c-accent-brand u-flex-shrink-0 u-mt-3px" data-lucide="check"></i> Histórico auditável</li>
                             </ul>
                         </div>
                     </div>
 
                     <!-- Produto 3: Pesquisa de Clima -->
-                    <div class="card p-8 md:p-12" style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); display: grid; grid-template-columns: 1fr; gap: 3rem;">
+                    <div class="card p-8 md:p-12 u-bg-bg-surface u-mix-464e7 u-d-grid u-cols-1fr u-gap-3rem">
                         <div>
-                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Diagnóstico mensal</div>
-                            <h3 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary); font-style: italic;">Pesquisa de Clima</h3>
-                            <div style="margin-bottom: 2rem;">
-                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase; font-size: 0.8rem;">Diferencial vs GPTW:</strong>
-                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">A Great Place to Work faz uma pesquisa por ano. A Fiter faz todo mês: anônima, via WhatsApp, com benchmarking de mercado e planos de ação automáticos gerados por IA. Você toma decisão hoje, não no próximo relatório anual.</p>
-                                <p style="color: var(--text-secondary); line-height: 1.6;">A Pesquisa de Clima da Fiter é anônima, roda mensalmente via WhatsApp e entrega um radar analítico com comparativo de mercado. A IA lê todos os comentários, classifica e cria planos de ação sem intervenção manual.</p>
+                            <div class="u-ff-font-mono u-fs-0_7rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1rem u-bg-bg-base u-d-inline-block u-p-0_2rem-0_75rem u-mix-95f28">Diagnóstico mensal</div>
+                            <h3 class="u-ff-font-serif u-fs-2_5rem u-mb-1_5rem u-c-text-primary u-font-style-italic">Pesquisa de Clima</h3>
+                            <div class="u-mb-2rem">
+                                <strong class="u-c-text-primary u-d-block u-mb-0_5rem u-ff-font-mono u-tt-uppercase u-fs-0_8rem">Diferencial vs GPTW:</strong>
+                                <p class="u-c-text-secondary u-lh-1_6 u-mb-1rem">A Great Place to Work faz uma pesquisa por ano. A Fiter faz todo mês: anônima, via WhatsApp, com benchmarking de mercado e planos de ação automáticos gerados por IA. Você toma decisão hoje, não no próximo relatório anual.</p>
+                                <p class="u-c-text-secondary u-lh-1_6">A Pesquisa de Clima da Fiter é anônima, roda mensalmente via WhatsApp e entrega um radar analítico com comparativo de mercado. A IA lê todos os comentários, classifica e cria planos de ação sem intervenção manual.</p>
                             </div>
                         </div>
-                        <div style="background: var(--bg-base); border-radius: var(--radius-md); padding: 2rem; border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; text-align: center;">
+                        <div class="u-bg-bg-base u-p-2rem u-mix-9a6cf u-d-flex u-ai-center u-jc-center u-ta-center">
                             <div>
-                                <i data-lucide="radar" style="width: 48px; height: 48px; color: var(--accent-brand); margin: 0 auto 1.5rem; opacity: 0.8;"></i>
-                                <p style="color: var(--text-secondary); line-height: 1.6; max-width: 300px; margin: 0 auto; font-style: italic;">Primeiro produto contratado pela divisão de submarinos nucleares da Marinha do Brasil.</p>
+                                <i class="u-w-48px u-h-48px u-c-accent-brand u-m-0-auto-1_5rem u-op-0_8" data-lucide="radar"></i>
+                                <p class="u-c-text-secondary u-lh-1_6 u-maxw-300px u-m-0-auto u-font-style-italic">Primeiro produto contratado pela divisão de submarinos nucleares da Marinha do Brasil.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Produto 4: Ouvidoria -->
-                    <div class="card p-8 md:p-12" style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); display: grid; grid-template-columns: 1fr; gap: 3rem;">
+                    <div class="card p-8 md:p-12 u-bg-bg-surface u-mix-464e7 u-d-grid u-cols-1fr u-gap-3rem">
                         <div>
-                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Conformidade legal</div>
-                            <h3 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary); font-style: italic;">Ouvidoria</h3>
-                            <div style="margin-bottom: 2rem;">
-                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">Canal legal. Funcionando em minutos.</p>
-                                <p style="color: var(--text-secondary); line-height: 1.6;">Empresas são obrigadas por lei a manter um canal seguro e anônimo para denúncias. A Ouvidoria Fiter atende essa exigência e ainda classifica automaticamente cada ocorrência por tipo: assédio, segurança, ética. Gera protocolo para o denunciante e mantém histórico completo para compliance e auditoria.</p>
+                            <div class="u-ff-font-mono u-fs-0_7rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1rem u-bg-bg-base u-d-inline-block u-p-0_2rem-0_75rem u-mix-95f28">Conformidade legal</div>
+                            <h3 class="u-ff-font-serif u-fs-2_5rem u-mb-1_5rem u-c-text-primary u-font-style-italic">Ouvidoria</h3>
+                            <div class="u-mb-2rem">
+                                <p class="u-c-text-secondary u-lh-1_6 u-mb-1rem">Canal legal. Funcionando em minutos.</p>
+                                <p class="u-c-text-secondary u-lh-1_6">Empresas são obrigadas por lei a manter um canal seguro e anônimo para denúncias. A Ouvidoria Fiter atende essa exigência e ainda classifica automaticamente cada ocorrência por tipo: assédio, segurança, ética. Gera protocolo para o denunciante e mantém histórico completo para compliance e auditoria.</p>
                             </div>
-                            <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Ver tudo sobre o Guia Prático →</a>
+                            <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars text-center u-td-none u-w-fit-content">Ver tudo sobre o Guia Prático →</a>
                         </div>
-                        <div style="background: var(--bg-base); border-radius: var(--radius-md); padding: 2rem; border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; text-align: center;">
+                        <div class="u-bg-bg-base u-p-2rem u-mix-9a6cf u-d-flex u-ai-center u-jc-center u-ta-center">
                             <div>
-                                <div style="display: inline-block; padding: 0.5rem 1rem; background: var(--bg-surface); border: 1px solid var(--accent-brand); border-radius: var(--radius-full); margin-bottom: 1.5rem; color: var(--text-primary); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">Disponível agora</div>
-                                <p style="color: var(--text-secondary); line-height: 1.6; max-width: 300px; margin: 0 auto;">Implemente hoje e garanta a segurança jurídica da sua organização.</p>
+                                <div class="u-d-inline-block u-p-0_5rem-1rem u-bg-bg-surface u-mix-0c863 u-mb-1_5rem u-c-text-primary u-ff-font-mono u-fs-0_75rem u-tt-uppercase">Disponível agora</div>
+                                <p class="u-c-text-secondary u-lh-1_6 u-maxw-300px u-m-0-auto">Implemente hoje e garanta a segurança jurídica da sua organização.</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Produto 5: Pulse Educação -->
-                    <div class="card p-8 md:p-12" style="background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); display: grid; grid-template-columns: 1fr; gap: 3rem;">
+                    <div class="card p-8 md:p-12 u-bg-bg-surface u-mix-464e7 u-d-grid u-cols-1fr u-gap-3rem">
                         <div>
-                            <div style="font-family: var(--font-mono); font-size: 0.7rem; color: #a855f7; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; background: var(--bg-base); display: inline-block; padding: 0.2rem 0.75rem; border-radius: var(--radius-full); border: 1px solid var(--border-default);">Retenção de alunos</div>
-                            <h3 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--text-primary); font-style: italic;">Pulse Educação</h3>
-                            <div style="margin-bottom: 2rem;">
-                                <strong style="color: var(--text-primary); display: block; margin-bottom: 0.5rem; font-family: var(--font-mono); text-transform: uppercase; font-size: 0.8rem;">Para reitor / gestor acadêmico:</strong>
-                                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 1rem;">Um aluno que vai evadir dá sinais antes. O Pulse Educação mede o Índice de Felicidade na Educação (IFE) em 8 cliques e 2 minutos, e prevê quais alunos estão em risco antes que peçam transferência ou simplesmente sumam.</p>
+                            <div class="u-ff-font-mono u-fs-0_7rem u-c-color-violet u-tt-uppercase u-ls-0_1em u-mb-1rem u-bg-bg-base u-d-inline-block u-p-0_2rem-0_75rem u-mix-95f28">Retenção de alunos</div>
+                            <h3 class="u-ff-font-serif u-fs-2_5rem u-mb-1_5rem u-c-text-primary u-font-style-italic">Pulse Educação</h3>
+                            <div class="u-mb-2rem">
+                                <strong class="u-c-text-primary u-d-block u-mb-0_5rem u-ff-font-mono u-tt-uppercase u-fs-0_8rem">Para reitor / gestor acadêmico:</strong>
+                                <p class="u-c-text-secondary u-lh-1_6 u-mb-1rem">Um aluno que vai evadir dá sinais antes. O Pulse Educação mede o Índice de Felicidade na Educação (IFE) em 8 cliques e 2 minutos, e prevê quais alunos estão em risco antes que peçam transferência ou simplesmente sumam.</p>
                             </div>
-                            <a href="/produtos/pulse-educacao/" class="btn btn-secondary btn-animate-chars text-center" style="text-decoration: none; width: fit-content;">Ver tudo sobre o Pulse Educação →</a>
+                            <a href="/produtos/pulse-educacao/" class="btn btn-secondary btn-animate-chars text-center u-td-none u-w-fit-content">Ver tudo sobre o Pulse Educação →</a>
                         </div>
-                        <div style="background: var(--bg-base); border-radius: var(--radius-md); padding: 2rem; border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; text-align: center;">
+                        <div class="u-bg-bg-base u-p-2rem u-mix-9a6cf u-d-flex u-ai-center u-jc-center u-ta-center">
                             <div>
-                                <i data-lucide="graduation-cap" style="width: 48px; height: 48px; color: #a855f7; margin: 0 auto 1.5rem; opacity: 0.8;"></i>
-                                <p style="color: var(--text-secondary); line-height: 1.6; max-width: 300px; margin: 0 auto; font-style: italic;">Usado na USP e Fatec, as mesmas instituições que ajudaram a validar cientificamente a metodologia.</p>
+                                <i class="u-w-48px u-h-48px u-c-color-violet u-m-0-auto-1_5rem u-op-0_8" data-lucide="graduation-cap"></i>
+                                <p class="u-c-text-secondary u-lh-1_6 u-maxw-300px u-m-0-auto u-font-style-italic">Usado na USP e Fatec, as mesmas instituições que ajudaram a validar cientificamente a metodologia.</p>
                             </div>
                         </div>
                     </div>
@@ -347,24 +352,24 @@
             </section>
 
             <!-- INTEGRAÇÕES -->
-            <section class="ds-section" style="margin-bottom: 8rem; text-align: center;">
-                <h2 class="ds-section-title" style="margin-bottom: 1rem;">Integra com o que você já usa</h2>
-                <p style="color: var(--text-secondary); font-size: 1.125rem; max-width: 600px; margin: 0 auto 3rem;">A Fiter conecta com os principais sistemas de HRIS e LMS do mercado. A implantação não interrompe a operação.</p>
-                <div style="display: flex; gap: 3rem; justify-content: center; align-items: center; flex-wrap: wrap; opacity: 0.5; filter: grayscale(100%);">
-                    <div style="font-family: var(--font-sans); font-weight: 800; font-size: 1.5rem;">Sênior</div>
-                    <div style="font-family: var(--font-serif); font-style: italic; font-size: 1.5rem;">Totvs</div>
-                    <div style="font-family: var(--font-mono); font-weight: 600; font-size: 1.5rem;">Sólides</div>
-                    <div style="font-family: var(--font-sans); font-weight: 700; font-size: 1.5rem;">Gupy</div>
-                    <div style="font-family: var(--font-serif); font-weight: 400; font-size: 1.5rem;">Moodle</div>
+            <section class="ds-section u-mb-8rem u-ta-center">
+                <h2 class="ds-section-title u-mb-1rem">Integra com o que você já usa</h2>
+                <p class="u-c-text-secondary u-fs-1_125rem u-maxw-600px u-m-0-auto-3rem">A Fiter conecta com os principais sistemas de HRIS e LMS do mercado. A implantação não interrompe a operação.</p>
+                <div class="u-d-flex u-gap-3rem u-jc-center u-ai-center u-fwrap-wrap u-op-0_5 u-filter-grayscale-100pct">
+                    <div class="u-ff-font-sans u-fw-800 u-fs-1_5rem">Sênior</div>
+                    <div class="u-ff-font-serif u-font-style-italic u-fs-1_5rem">Totvs</div>
+                    <div class="u-ff-font-mono u-fw-600 u-fs-1_5rem">Sólides</div>
+                    <div class="u-ff-font-sans u-fw-700 u-fs-1_5rem">Gupy</div>
+                    <div class="u-ff-font-serif u-fw-400 u-fs-1_5rem">Moodle</div>
                 </div>
             </section>
 
             <!-- CTA FINAL -->
-            <section class="ds-section" style="margin-bottom: 4rem;">
-                <div class="card" style="background: linear-gradient(135deg, var(--bg-surface) 0%, transparent 100%); border: 1px solid var(--border-default); padding: 4rem; text-align: center;">
-                    <h2 style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 3rem); color: var(--text-primary); margin-bottom: 1.5rem; line-height: 1.1; font-style: italic;">Veja a plataforma em funcionamento</h2>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; margin-bottom: 3rem; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">Uma demonstração de 30 minutos é suficiente para entender o que cada produto faz, e qual resolve o seu problema agora.</p>
-                    <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Solicitar demonstração</a>
+            <section class="ds-section u-mb-4rem">
+                <div class="card u-bg-linear-gradient-135d6cad9 u-border-1px-solid-border-default u-p-4rem u-ta-center">
+                    <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-3rem u-c-text-primary u-mb-1_5rem u-lh-1_1 u-font-style-italic">Veja a plataforma em funcionamento</h2>
+                    <p class="u-c-text-secondary u-fs-1_125rem u-mb-3rem u-lh-1_6 u-maxw-600px u-ml-auto u-mr-auto">Uma demonstração de 30 minutos é suficiente para entender o que cada produto faz, e qual resolve o seu problema agora.</p>
+                    <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none">Solicitar demonstração</a>
                 </div>
             </section>
 

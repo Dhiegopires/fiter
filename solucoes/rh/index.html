@@ -50,10 +50,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=d3ea2f08">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=b7ba4a46">
     <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/assets/js/lucide.min.js"></script>
     <style>
         @media (max-width: 900px) {
             .solution-hero-visual { display: none !important; }
@@ -61,7 +61,7 @@
         @media (max-width: 768px) {
             /* Urgency stats */
             .urgency-stats-grid { grid-template-columns: 1fr !important; }
-            .urgency-stats-grid > div[style*="border-right"] { border-right: none !important; border-bottom: 1px solid var(--border-default) !important; }
+            .urgency-stats-grid > .u-border-right-1px-solid-border-default { border-right: none !important; border-bottom: 1px solid var(--border-default) !important; }
             /* Analytics charts */
             .analytics-grid { grid-template-columns: 1fr !important; }
             /* CTA form */
@@ -85,8 +85,8 @@
             .impl-grid > div:first-child { position: static !important; }
             /* Product sections */
             .product-grid { grid-template-columns: 1fr !important; }
-            .product-grid > div[style*="order:1"],
-            .product-grid > div[style*="order:2"] { order: unset !important; }
+            .product-grid > .u-order-1,
+            .product-grid > .u-order-2 { order: unset !important; }
             /* Featured testimonial */
             .testi-featured { display: flex !important; flex-direction: column !important; gap: 0 !important; }
             .testi-featured > div:last-child { border-left: none !important; padding-left: 0 !important; border-top: 1px solid rgba(255,255,255,0.08) !important; padding-top: 1.5rem !important; margin-top: 1.5rem !important; flex-direction: row !important; align-items: center !important; gap: 1rem !important; }
@@ -208,13 +208,14 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9091218.js"></script>
 <!-- End of HubSpot Embed Code -->
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body data-theme="analytics">
     <!-- NAV -->
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/" aria-label="Fiter"><img class="u-h-28px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"></a>
 
         <ul class="nav-links">
 
@@ -248,6 +249,9 @@
                     <a class="drop-link" href="/produtos/ouvidoria/">
                         <div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Canal de ética com IA</div></div>
                     </a>
+                    <a class="drop-link" href="/produtos/">
+                        <div><div class="drop-link-name">Todos os produtos</div><div class="drop-link-tag">Visão geral e comparação</div></div>
+                    </a>
                 </div>
             </li>
 
@@ -271,7 +275,7 @@
         </ul>
 
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'nav',event_label:'rh_nav_demo'})">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars u-td-none" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'nav',event_label:'rh_nav_demo'})">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -284,7 +288,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+            <div class="nav-panel-logo u-d-flex u-ai-center u-jc-space-between"><img class="u-h-24px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"><button class="u-bg-none u-border-none u-cursor-pointer u-c-text-secondary u-p-0_25rem u-d-flex u-ai-center u-jc-center" id="nav-close" aria-label="Fechar menu"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -302,6 +306,7 @@
                     <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
                     <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
                     <a class="drawer-sub-link" href="/produtos/ouvidoria/">Ouvidoria</a>
+                    <a class="drawer-sub-link" href="/produtos/">Todos os produtos</a>
                 </div></div>
             </div>
 
@@ -319,21 +324,21 @@
             <a class="drawer-plain-link" href="/blog/">Blog</a>
 
             <div class="drawer-cta">
-                <a class="btn btn-primary w-full" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'nav',event_label:'rh_menu_demo'})">Agendar demonstração</a>
+                <a class="btn btn-primary w-full u-td-none u-jc-center" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'nav',event_label:'rh_menu_demo'})">Agendar demonstração</a>
             </div>
         </div>
     </div>
-    <main class="main-content" style="padding-top: 64px;">
+    <main class="main-content u-pt-64px">
 
         <!-- Ambient glow orbs -->
         <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
         <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
 
-        <div style="position: relative; z-index: 1;">
+        <div class="u-pos-relative u-z-1">
 
             <!-- Hero -->
             <section class="solution-hero solution-hero--compact">
-                <img src="/assets/img/rh-hero.webp" alt="" class="section-photo-bg" loading="eager">
+                <img src="/assets/img/rh-hero.webp" alt="Colaboradora respondendo pesquisa no celular no escritório" class="section-photo-bg" loading="eager">
                 <div class="section-photo-overlay" aria-hidden="true"></div>
                 <!-- Background network canvas -->
                 <canvas id="canvas-rh" class="solution-hero-canvas"></canvas>
@@ -371,7 +376,7 @@
                 <div class="solution-hero-visual solution-hero-visual--compact">
 
                     <!-- perspective wrapper -->
-                    <div class="fade-up hero-mockup-perspective hero-mockup-perspective--phone" style="--reveal-delay: 0.1s;">
+                    <div class="fade-up hero-mockup-perspective hero-mockup-perspective--phone u--reveal-delay-0_1s">
 
                         <!-- 3D root -->
                         <div class="hero-mockup-3d hero-mockup-3d--phone">
@@ -467,17 +472,17 @@
                                             <div class="mockup-bar-list-title">Por departamento</div>
                                             <div class="mockup-bar-row">
                                                 <span class="mockup-bar-label">Comercial</span>
-                                                <div class="mockup-bar-track"><div class="mockup-bar-fill" style="--bar-w: 91%;"></div></div>
+                                                <div class="mockup-bar-track"><div class="mockup-bar-fill u--bar-w-91pct"></div></div>
                                                 <span class="mockup-bar-value">91</span>
                                             </div>
                                             <div class="mockup-bar-row">
                                                 <span class="mockup-bar-label">TI</span>
-                                                <div class="mockup-bar-track"><div class="mockup-bar-fill" style="--bar-w: 85%;"></div></div>
+                                                <div class="mockup-bar-track"><div class="mockup-bar-fill u--bar-w-85pct"></div></div>
                                                 <span class="mockup-bar-value">85</span>
                                             </div>
                                             <div class="mockup-bar-row">
                                                 <span class="mockup-bar-label">Operações</span>
-                                                <div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar-fill--warning" style="--bar-w: 61%;"></div></div>
+                                                <div class="mockup-bar-track"><div class="mockup-bar-fill mockup-bar-fill--warning u--bar-w-61pct"></div></div>
                                                 <span class="mockup-bar-value mockup-bar-value--warning">61</span>
                                             </div>
                                         </div>
@@ -528,7 +533,7 @@
                     </div>
 
                     <!-- Floating insight card overlaid on phone bottom-right -->
-                    <div class="fade-up hero-floating-insight hero-floating-insight--phone" style="--reveal-delay: 0.5s;">
+                    <div class="fade-up hero-floating-insight hero-floating-insight--phone u--reveal-delay-0_5s">
                         <div class="hero-floating-insight-eyebrow">Resultado ao vivo</div>
                         <div class="hero-floating-insight-grid">
                             <div class="hero-floating-insight-col">
@@ -548,93 +553,93 @@
             </section>
 
             <!-- PROVA SOCIAL -->
-            <section style="margin:0 -2rem; padding:2.5rem 2rem; border-top:1px solid var(--border-default); border-bottom:1px solid var(--border-default); background:var(--bg-surface); overflow:hidden;">
-                <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;text-align:center;margin-bottom:0.75rem;">+500.000 pessoas medidas · De startups à Marinha do Brasil</p>
-                <div class="marquee-mask" style="overflow:hidden;white-space:nowrap;">
+            <section class="u-m-0-n2rem u-p-2_5rem-2rem u-border-top-1px-solid-border-default u-border-bottom-1px-solid-border-default u-bg-bg-surface u-overflow-hidden">
+                <p class="u-ff-font-mono u-fs-0_65rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-ta-center u-mb-0_75rem">+500.000 pessoas medidas · De startups à Marinha do Brasil</p>
+                <div class="marquee-mask u-overflow-hidden u-ws-nowrap">
                     <div class="logo-marquee">
-                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
-                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
-                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
-                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
-                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
-                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:600;">Mackenzie</div>
-                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Sebrae</div>
-                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">ABES</div>
-                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:800;">BRASPRESS</div>
-                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:700;">Kroton</div>
-                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;letter-spacing:-1px;">ARCOR</div>
-                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Marinha do Brasil</div>
-                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:400;">USP</div>
-                        <div class="logo-item" style="font-family:var(--font-serif);font-weight:600;">Mackenzie</div>
-                        <div class="logo-item" style="font-family:var(--font-sans);font-weight:700;">Sebrae</div>
-                        <div class="logo-item" style="font-family:var(--font-mono);font-weight:600;">ABES</div>
+                        <div class="logo-item u-ff-font-sans u-fw-800">BRASPRESS</div>
+                        <div class="logo-item u-ff-font-serif u-fw-700">Kroton</div>
+                        <div class="logo-item u-ff-font-mono u-fw-600 u-ls-n1px">ARCOR</div>
+                        <div class="logo-item u-ff-font-sans u-fw-700">Marinha do Brasil</div>
+                        <div class="logo-item u-ff-font-serif u-fw-400">USP</div>
+                        <div class="logo-item u-ff-font-serif u-fw-600">Mackenzie</div>
+                        <div class="logo-item u-ff-font-sans u-fw-700">Sebrae</div>
+                        <div class="logo-item u-ff-font-mono u-fw-600">ABES</div>
+                        <div class="logo-item u-ff-font-sans u-fw-800">BRASPRESS</div>
+                        <div class="logo-item u-ff-font-serif u-fw-700">Kroton</div>
+                        <div class="logo-item u-ff-font-mono u-fw-600 u-ls-n1px">ARCOR</div>
+                        <div class="logo-item u-ff-font-sans u-fw-700">Marinha do Brasil</div>
+                        <div class="logo-item u-ff-font-serif u-fw-400">USP</div>
+                        <div class="logo-item u-ff-font-serif u-fw-600">Mackenzie</div>
+                        <div class="logo-item u-ff-font-sans u-fw-700">Sebrae</div>
+                        <div class="logo-item u-ff-font-mono u-fw-600">ABES</div>
                     </div>
                 </div>
             </section>
 
 
             <!-- O CUSTO DO SILÊNCIO -->
-            <section style="margin-bottom:8rem; margin-inline:-2rem; padding:7rem 5vw 5rem; background:var(--bg-surface); border-bottom:1px solid var(--border-default); overflow:hidden; position:relative;">
-                <div aria-hidden="true" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-52%);font-family:var(--font-serif);font-size:clamp(16rem,30vw,28rem);font-weight:800;color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;user-select:none;white-space:nowrap;letter-spacing:-0.04em;">70%</div>
-                <div style="position:relative;z-index:1;">
-                    <div style="text-align:center;margin-bottom:4rem;">
-                        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.5rem;">O problema que o RH não consegue ver</p>
-                        <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.875rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">70% dos colaboradores brasileiros<br> não estão engajados.</h2>
-                        <p style="color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto 0.625rem;">O maior risco não é o colaborador que reclama, é o que parece bem, entrega o mínimo e já está com um pé fora.</p>
-                        <p style="color:var(--text-secondary);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;">A pesquisa anual detecta o problema <em>após</em> o dano. A Fiter detecta <em>antes</em>.</p>
+            <section class="u-mb-8rem u-margin-inline-n2rem u-p-7rem-5vw-5rem u-bg-bg-surface u-border-bottom-1px-solid-border-default u-overflow-hidden u-pos-relative">
+                <div class="u-pos-absolute u-top-50pct u-left-50pct u-transform-translate-50pct-52pct u-ff-font-serif u-fs-clamp-16rem-30vw-28rem u-fw-800 u-c-rgba-255-255-255-0_025 u-lh-1 u-pe-none u-user-select-none u-ws-nowrap u-ls-n0_04em" aria-hidden="true">70%</div>
+                <div class="u-pos-relative u-z-1">
+                    <div class="u-ta-center u-mb-4rem">
+                        <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_5rem">O problema que o RH não consegue ver</p>
+                        <h2 class="u-ff-font-serif u-fs-clamp-1_875rem-2_6vw-2_5rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_5rem" data-reveal>70% dos colaboradores brasileiros<br> não estão engajados.</h2>
+                        <p class="u-c-text-secondary u-fs-1rem u-lh-1_75 u-maxw-560px u-m-0-auto-0_625rem">O maior risco não é o colaborador que reclama, é o que parece bem, entrega o mínimo e já está com um pé fora.</p>
+                        <p class="u-c-text-secondary u-fs-1rem u-lh-1_75 u-maxw-560px u-m-0-auto">A pesquisa anual detecta o problema <em>após</em> o dano. A Fiter detecta <em>antes</em>.</p>
                     </div>
-                    <div class="urgency-stats-grid" style="display:grid;grid-template-columns:1fr 1fr 1fr;border:1px solid var(--border-default);border-radius:var(--radius-lg);overflow:hidden;">
-                        <div class="fade-up" style="padding:2.5rem 3rem;border-right:1px solid var(--border-default);--reveal-delay:0s;">
-                            <div style="font-family:var(--font-serif);font-size:3.25rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.75rem;">R$&nbsp;48k</div>
-                            <div style="font-size:0.875rem;color:var(--text-secondary);line-height:1.55;">custo médio de substituição por colaborador desligado no Brasil</div>
+                    <div class="urgency-stats-grid u-d-grid u-cols-1fr-1fr-1fr u-mix-464e7 u-overflow-hidden">
+                        <div class="fade-up u-p-2_5rem-3rem u-border-right-1px-solid-border-default u--reveal-delay-0s">
+                            <div class="u-ff-font-serif u-fs-3_25rem u-fw-800 u-c-text-primary u-lh-1 u-mb-0_75rem">R$&nbsp;48k</div>
+                            <div class="u-fs-0_875rem u-c-text-secondary u-lh-1_55">custo médio de substituição por colaborador desligado no Brasil</div>
                         </div>
-                        <div class="fade-up" style="padding:2.5rem 3rem;border-right:1px solid var(--border-default);--reveal-delay:0.1s;">
-                            <div style="font-family:var(--font-serif);font-size:3.25rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.75rem;">34%</div>
-                            <div style="font-size:0.875rem;color:var(--text-secondary);line-height:1.55;">dos pedidos de demissão chegam sem nenhum sinal perceptível ao RH</div>
+                        <div class="fade-up u-p-2_5rem-3rem u-border-right-1px-solid-border-default u--reveal-delay-0_1s">
+                            <div class="u-ff-font-serif u-fs-3_25rem u-fw-800 u-c-text-primary u-lh-1 u-mb-0_75rem">34%</div>
+                            <div class="u-fs-0_875rem u-c-text-secondary u-lh-1_55">dos pedidos de demissão chegam sem nenhum sinal perceptível ao RH</div>
                         </div>
-                        <div class="fade-up" style="padding:2.5rem 3rem;--reveal-delay:0.2s;">
-                            <div style="font-family:var(--font-serif);font-size:3.25rem;font-weight:800;color:var(--text-primary);line-height:1;margin-bottom:0.75rem;">1 ano</div>
-                            <div style="font-size:0.875rem;color:var(--text-secondary);line-height:1.55;">intervalo médio entre pesquisas de clima tradicionais. Tempo demais para agir.</div>
+                        <div class="fade-up u-p-2_5rem-3rem u--reveal-delay-0_2s">
+                            <div class="u-ff-font-serif u-fs-3_25rem u-fw-800 u-c-text-primary u-lh-1 u-mb-0_75rem">1 ano</div>
+                            <div class="u-fs-0_875rem u-c-text-secondary u-lh-1_55">intervalo médio entre pesquisas de clima tradicionais. Tempo demais para agir.</div>
                         </div>
                     </div>
-                    <p id="fontes-credits" style="font-family:var(--font-mono);font-size:0.62rem;color:var(--text-secondary);opacity:0.4;margin-top:1.25rem;text-align:right;">Fontes: Gallup State of the Global Workplace 2023 · SHRM</p>
+                    <p class="u-ff-font-mono u-fs-0_62rem u-c-text-secondary u-op-0_4 u-mt-1_25rem u-ta-right" id="fontes-credits">Fontes: Gallup State of the Global Workplace 2023 · SHRM</p>
                 </div>
             </section>
 
             <!-- CREDIBILIDADE CIENTÍFICA -->
-            <section class="ds-section sci-section" style="margin-bottom:8rem; padding:4rem 0; background:var(--bg-surface); border-radius:var(--radius-lg); border:1px solid var(--border-default); position:relative; overflow:hidden;">
-                <div aria-hidden="true" style="position:absolute;top:-60px;right:-60px;width:380px;height:380px;background:radial-gradient(circle,rgba(59,130,246,0.05) 0%,transparent 70%);pointer-events:none;"></div>
-                <div class="sci-section-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:stretch;position:relative;z-index:1;">
+            <section class="ds-section sci-section u-mb-8rem u-p-4rem-0 u-bg-bg-surface u-mix-d6dde u-pos-relative u-overflow-hidden">
+                <div class="u-pos-absolute u-top-n60px u-right-n60px u-w-380px u-h-380px u-bg-radial-gradient-circ2bdc5 u-pe-none" aria-hidden="true"></div>
+                <div class="sci-section-grid u-d-grid u-cols-1fr-1fr u-gap-5rem u-ai-stretch u-pos-relative u-z-1">
                     <div class="sci-narrative">
-                        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Base científica</p>
-                        <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">É deeptech com<br> DNA na USP.</h2>
-                        <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;margin-bottom:1.25rem;--reveal-delay:0.15s;">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
-                        <p class="fade-up" style="color:var(--text-secondary);font-size:1rem;line-height:1.75;--reveal-delay:0.25s;">As perguntas não foram escritas por uma equipe de produto. Foram <strong style="color:var(--text-primary);font-weight:500;">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
+                        <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Base científica</p>
+                        <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_5rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_5rem" data-reveal>É deeptech com<br> DNA na USP.</h2>
+                        <p class="fade-up u-c-text-secondary u-fs-1rem u-lh-1_75 u-mb-1_25rem u--reveal-delay-0_15s">A metodologia foi desenvolvida ao longo de anos de pesquisa científica. Teses de mestrado em parceria com USP e Mackenzie, publicadas no livro <em>Felicidade: Ciência de Dados</em>.</p>
+                        <p class="fade-up u-c-text-secondary u-fs-1rem u-lh-1_75 u--reveal-delay-0_25s">As perguntas não foram escritas por uma equipe de produto. Foram <strong class="u-c-text-primary u-fw-500">testadas cientificamente</strong> para medir o que dizem medir. Sem viés, sem achismo.</p>
                     </div>
-                    <div style="display:flex;flex-direction:column;border-left:1px solid var(--border-default);margin-top:-4rem;margin-bottom:-4rem;overflow:hidden;">
-                        <div class="sci-tile fade-up" style="--reveal-delay:0s;">
-                            <div class="sci-icon"><i data-lucide="book-open" style="width:16px;height:16px;"></i></div>
+                    <div class="u-d-flex u-fdir-column u-border-left-1px-solid-border-default u-mt-n4rem u-mb-n4rem u-overflow-hidden">
+                        <div class="sci-tile fade-up u--reveal-delay-0s">
+                            <div class="sci-icon"><i class="u-w-16px u-h-16px" data-lucide="book-open"></i></div>
                             <div>
                                 <div class="sci-title">DNA Científico</div>
-                                <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span style="font-style:italic;">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
+                                <div class="sci-sub">Metodologia validada por teses de mestrado e papers acadêmicos publicados no livro <span class="u-font-style-italic">Felicidade: Ciência de Dados</span>. Sem vieses estatísticos.</div>
                             </div>
                         </div>
-                        <div class="sci-tile fade-up" style="--reveal-delay:0.07s;">
-                            <div class="sci-icon"><i data-lucide="user" style="width:16px;height:16px;"></i></div>
+                        <div class="sci-tile fade-up u--reveal-delay-0_07s">
+                            <div class="sci-icon"><i class="u-w-16px u-h-16px" data-lucide="user"></i></div>
                             <div>
                                 <div class="sci-title">Liderança Prática</div>
                                 <div class="sci-sub">Idealizada por fundador que une professor universitário e executivo de RH de mercado.</div>
                             </div>
                         </div>
-                        <div class="sci-tile fade-up" style="--reveal-delay:0.14s;">
-                            <div class="sci-icon"><i data-lucide="building-2" style="width:16px;height:16px;"></i></div>
+                        <div class="sci-tile fade-up u--reveal-delay-0_14s">
+                            <div class="sci-icon"><i class="u-w-16px u-h-16px" data-lucide="building-2"></i></div>
                             <div>
                                 <div class="sci-title">Ecossistema USP</div>
                                 <div class="sci-sub">Sediados no Centro de Inovação da USP. De PMEs a gigantes corporativas e à Marinha do Brasil.</div>
                             </div>
                         </div>
-                        <div class="sci-tile fade-up" style="--reveal-delay:0.21s;">
-                            <div class="sci-icon"><i data-lucide="award" style="width:16px;height:16px;"></i></div>
+                        <div class="sci-tile fade-up u--reveal-delay-0_21s">
+                            <div class="sci-icon"><i class="u-w-16px u-h-16px" data-lucide="award"></i></div>
                             <div>
                                 <div class="sci-title">Selos e Certificações</div>
                                 <div class="sci-sub">Selo INEX (ABES) de integridade e inovação em software · Selo Speed (SEBRAE) de excelência tecnológica.</div>
@@ -645,31 +650,31 @@
             </section>
 
             <!-- AMBIDESTRIA FITER -->
-            <section class="ds-section" style="margin-bottom:8rem;">
-                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para cada porte, uma resposta diferente</p>
-                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Grande empresa ou PME.<br> A Fiter se adapta a você.</h2>
-                <div class="ambidestria-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;">
-                    <div class="fade-up" style="--reveal-delay:0s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.2);border-radius:var(--radius-lg);">
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Grandes empresas</p>
-                        <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">Predição em escala e compliance robusto</h3>
-                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Monitoramento de turnover em massa, laudos NR1 por cargo e relatórios consolidados para o Ministério do Trabalho. Conformidade jurídica garantida para operações de centenas ou milhares de colaboradores.</p>
+            <section class="ds-section u-mb-8rem">
+                <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Para cada porte, uma resposta diferente</p>
+                <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-3rem" data-reveal>Grande empresa ou PME.<br> A Fiter se adapta a você.</h2>
+                <div class="ambidestria-grid u-d-grid u-cols-1fr-1fr u-gap-1_5rem">
+                    <div class="fade-up u--reveal-delay-0s u-p-2_5rem u-bg-bg-surface u-mix-5e697">
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-color-blue u-tt-uppercase u-ls-0_14em u-mb-1rem">Grandes empresas</p>
+                        <h3 class="u-ff-font-serif u-fs-1_375rem u-fw-800 u-c-text-primary u-mb-0_75rem">Predição em escala e compliance robusto</h3>
+                        <p class="u-fs-0_9375rem u-c-text-secondary u-lh-1_65">Monitoramento de turnover em massa, laudos NR1 por cargo e relatórios consolidados para o Ministério do Trabalho. Conformidade jurídica garantida para operações de centenas ou milhares de colaboradores.</p>
                     </div>
-                    <div class="fade-up" style="--reveal-delay:0.12s;padding:2.5rem;background:var(--bg-surface);border:1px solid rgba(16,185,129,0.2);border-radius:var(--radius-lg);">
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">Pequenas e médias empresas</p>
-                        <h3 style="font-family:var(--font-serif);font-size:1.375rem;font-weight:800;color:var(--text-primary);margin-bottom:0.75rem;">IA como RH Estratégico virtual</h3>
-                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Nossa IA atua como um RH Estratégico virtual — gerando planos de ação, predições de risco e diagnósticos sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
+                    <div class="fade-up u--reveal-delay-0_12s u-p-2_5rem u-bg-bg-surface u-mix-7caaa">
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-color-success u-tt-uppercase u-ls-0_14em u-mb-1rem">Pequenas e médias empresas</p>
+                        <h3 class="u-ff-font-serif u-fs-1_375rem u-fw-800 u-c-text-primary u-mb-0_75rem">IA como RH Estratégico virtual</h3>
+                        <p class="u-fs-0_9375rem u-c-text-secondary u-lh-1_65">Nossa IA atua como um RH Estratégico virtual — gerando planos de ação, predições de risco e diagnósticos sem precisar contratar uma equipe de RH completa. Do resultado à decisão, sem intermediários.</p>
                     </div>
                 </div>
             </section>
 
 
             <!-- Metric Cards + Bar Chart -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
+            <section class="ds-section u-mb-8rem">
                 
 
-                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Números que os clientes<br> obtêm na prática.</p>
+                <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-3rem" data-reveal>Números que os clientes<br> obtêm na prática.</p>
 
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+                <div class="u-d-grid u-cols-repeat-auto-fit-minma6f8d u-gap-1_5rem u-mb-3rem">
                     <div class="metric-card" data-metric="87" data-suffix="%">
                         <span class="metric-value">0%</span>
                         <div class="metric-trend">↑ +23 pts vs. formulário</div>
@@ -698,40 +703,40 @@
 
                 <!-- Horizontal bar chart: canal comparison -->
                 <div class="chart-container">
-                    <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:2rem;">
+                    <div class="u-d-flex u-jc-space-between u-ai-flex-start u-mb-2rem">
                         <div>
-                            <h3 style="font-family:var(--font-serif); font-size:1.4rem; font-weight:700; letter-spacing:-0.01em; color:var(--text-primary); margin-bottom:0.3rem;">Taxa de resposta por canal</h3>
-                            <p style="font-size:0.75rem; color:var(--text-tertiary); font-family:var(--font-mono); text-transform:uppercase; letter-spacing:0.05em;">Comparativo mesma base de colaboradores</p>
+                            <h3 class="u-ff-font-serif u-fs-1_4rem u-fw-700 u-ls-n0_01em u-c-text-primary u-mb-0_3rem">Taxa de resposta por canal</h3>
+                            <p class="u-fs-0_75rem u-c-text-tertiary u-ff-font-mono u-tt-uppercase u-ls-0_05em">Comparativo mesma base de colaboradores</p>
                         </div>
-                        <div style="display:flex; align-items:center; gap:0.6rem; font-family:var(--font-mono); font-size:0.68rem; color:var(--text-tertiary);">
-                            <span style="display:inline-block; width:1px; height:14px; background:rgba(255,255,255,0.2);"></span>
+                        <div class="u-d-flex u-ai-center u-gap-0_6rem u-ff-font-mono u-fs-0_68rem u-c-text-tertiary">
+                            <span class="u-d-inline-block u-w-1px u-h-14px u-bg-rgba-255-255-255-0_2"></span>
                             Meta 80%
                         </div>
                     </div>
                     <div class="chart-bars">
-                        <div class="bar-row" style="--bar-delay:0s">
+                        <div class="bar-row u--bar-delay-0s">
                             <span class="bar-label">WhatsApp (Fiter)</span>
-                            <div class="bar-track"><div class="bar-fill" style="--bar-target:87%"><span class="bar-tooltip">87%</span></div></div>
+                            <div class="bar-track"><div class="bar-fill u--bar-target-87pct"><span class="bar-tooltip">87%</span></div></div>
                             <span class="bar-value-label">87%</span>
                         </div>
-                        <div class="bar-row" style="--bar-delay:0.07s">
+                        <div class="bar-row u--bar-delay-0_07s">
                             <span class="bar-label">E-mail</span>
-                            <div class="bar-track"><div class="bar-fill" style="--bar-target:34%"><span class="bar-tooltip">34%</span></div></div>
+                            <div class="bar-track"><div class="bar-fill u--bar-target-34pct"><span class="bar-tooltip">34%</span></div></div>
                             <span class="bar-value-label">34%</span>
                         </div>
-                        <div class="bar-row" style="--bar-delay:0.14s">
+                        <div class="bar-row u--bar-delay-0_14s">
                             <span class="bar-label">Formulário web</span>
-                            <div class="bar-track"><div class="bar-fill" style="--bar-target:31%"><span class="bar-tooltip">31%</span></div></div>
+                            <div class="bar-track"><div class="bar-fill u--bar-target-31pct"><span class="bar-tooltip">31%</span></div></div>
                             <span class="bar-value-label">31%</span>
                         </div>
-                        <div class="bar-row" style="--bar-delay:0.21s">
+                        <div class="bar-row u--bar-delay-0_21s">
                             <span class="bar-label">App mobile</span>
-                            <div class="bar-track"><div class="bar-fill" style="--bar-target:22%"><span class="bar-tooltip">22%</span></div></div>
+                            <div class="bar-track"><div class="bar-fill u--bar-target-22pct"><span class="bar-tooltip">22%</span></div></div>
                             <span class="bar-value-label">22%</span>
                         </div>
-                        <div class="bar-row" style="--bar-delay:0.28s">
+                        <div class="bar-row u--bar-delay-0_28s">
                             <span class="bar-label">Papel físico</span>
-                            <div class="bar-track"><div class="bar-fill" style="--bar-target:17%"><span class="bar-tooltip">17%</span></div></div>
+                            <div class="bar-track"><div class="bar-fill u--bar-target-17pct"><span class="bar-tooltip">17%</span></div></div>
                             <span class="bar-value-label">17%</span>
                         </div>
                     </div>
@@ -739,22 +744,22 @@
             </section>
 
             <!-- Depoimentos -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
+            <section class="ds-section u-mb-8rem">
                 
 
-                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Resultados reais.<br> Palavras deles.</p>
+                <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-3rem" data-reveal>Resultados reais.<br> Palavras deles.</p>
 
                 <!-- Featured -->
-                <div class="testi-featured fade-up" style="--reveal-delay:0.1s; margin-bottom: 2.5rem; display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: center;">
-                    <p class="testi-featured-quote" style="margin-bottom: 0;">
+                <div class="testi-featured fade-up u--reveal-delay-0_1s u-mb-2_5rem u-d-grid u-cols-1fr-280px u-gap-4rem u-ai-center">
+                    <p class="testi-featured-quote u-mb-0">
                         "Implementamos em uma semana. Na segunda semana já tínhamos dados que levávamos meses para coletar. <em>A taxa de adesão superou 80% já na primeira pesquisa.</em> Nunca conseguimos isso com formulário web."
                     </p>
-                    <div style="display: flex; flex-direction: column; gap: 1.25rem; border-left: 1px solid rgba(255,255,255,0.08); padding-left: 3rem;">
-                        <div class="testi-featured-avatar" style="width: 56px; height: 56px; font-size: 1rem;">RO</div>
+                    <div class="u-d-flex u-fdir-column u-gap-1_25rem u-border-left-1px-solid-rgba-255-2c0c0a u-pl-3rem">
+                        <div class="testi-featured-avatar u-w-56px u-h-56px u-fs-1rem">RO</div>
                         <div>
                             <div class="testi-featured-name">Renata Oliveira</div>
-                            <div class="testi-featured-role" style="margin-top: 0.25rem;">Diretora de RH</div>
-                            <div class="testi-featured-role" style="margin-top: 0.1rem; opacity: 0.55;">Braspress · Logística</div>
+                            <div class="testi-featured-role u-mt-0_25rem">Diretora de RH</div>
+                            <div class="testi-featured-role u-mt-0_1rem u-op-0_55">Braspress · Logística</div>
                         </div>
                     </div>
                 </div>
@@ -762,7 +767,7 @@
                 <!-- Grid -->
                 <div class="testi-grid">
 
-                    <div class="testi-card fade-up" style="--testi-delay:0.05s;">
+                    <div class="testi-card fade-up u--testi-delay-0_05s">
                         <p class="testi-quote">"O Agente NR1 gerou os laudos de <strong>1.200 colaboradores em menos de um dia</strong>. O que nossa equipe de SST levaria três meses para fazer. E com rastreabilidade que o Ministério aceita."</p>
                         <div class="testi-author">
                             <div class="testi-avatar">CM</div>
@@ -773,7 +778,7 @@
                         </div>
                     </div>
 
-                    <div class="testi-card fade-up" style="--testi-delay:0.12s;">
+                    <div class="testi-card fade-up u--testi-delay-0_12s">
                         <p class="testi-quote">"Substituímos o GPTW anual pela Pesquisa de Clima mensal da Fiter. <strong>Paramos de adivinhar o humor do time.</strong> Agora a IA já entrega o plano de ação junto com o diagnóstico."</p>
                         <div class="testi-author">
                             <div class="testi-avatar">PL</div>
@@ -784,7 +789,7 @@
                         </div>
                     </div>
 
-                    <div class="testi-card fade-up" style="--testi-delay:0.19s;">
+                    <div class="testi-card fade-up u--testi-delay-0_19s">
                         <p class="testi-quote">"Em 90 dias a IA apontou três equipes com risco de turnover. <strong>Retivemos quatro pessoas-chave</strong> antes que o pedido chegasse. Não sei quanto isso vale, mas sei que é muito mais do que pagamos."</p>
                         <div class="testi-author">
                             <div class="testi-avatar">MF</div>
@@ -800,96 +805,96 @@
             </section>
 
             <!-- Pulse -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
+            <section class="ds-section u-mb-8rem">
+                <div class="product-grid u-d-grid u-cols-1fr-1fr u-gap-4rem u-ai-center">
                     <div>
 
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">O problema: pesquisas anuais não evitam demissões voluntárias</p>
-                        <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">A auto análise contínua<br> que não cansa ninguém</p>
-                        <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:1.75rem;">8 cliques, 2 minutos, via WhatsApp, sem app. Mede felicidade, fit cultural, saúde mental e produtividade. A IA prevê turnover e absenteísmo por departamento com 90 dias de antecedência.</p>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:2rem;">
-                            <div style="padding:1.25rem;background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.12);border-radius:var(--radius-md);">
-                                <p style="font-family:var(--font-mono);font-size:0.6rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">Colaborador</p>
-                                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.55;">Autoanálise mensal via WhatsApp em 2 minutos. Usa as escalas IFT ou Satisfação, calcula o Fit Cultural e recebe um PDI imediato por IA generativa.</p>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-rgba-255-255-255-0_35 u-tt-uppercase u-ls-0_1em u-mb-0_75rem">O problema: pesquisas anuais não evitam demissões voluntárias</p>
+                        <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_5rem">A auto análise contínua<br> que não cansa ninguém</p>
+                        <p class="u-fs-1_0625rem u-lh-1_7 u-c-text-secondary u-mb-1_75rem">8 cliques, 2 minutos, via WhatsApp, sem app. Mede felicidade, fit cultural, saúde mental e produtividade. A IA prevê turnover e absenteísmo por departamento com 90 dias de antecedência.</p>
+                        <div class="u-d-grid u-cols-1fr-1fr u-gap-1rem u-mb-2rem">
+                            <div class="u-p-1_25rem u-bg-rgba-59-130-246-0_05 u-mix-c48a3">
+                                <p class="u-ff-font-mono u-fs-0_6rem u-c-color-blue u-tt-uppercase u-ls-0_08em u-mb-0_5rem">Colaborador</p>
+                                <p class="u-fs-0_8125rem u-c-text-secondary u-lh-1_55">Autoanálise mensal via WhatsApp em 2 minutos. Usa as escalas IFT ou Satisfação, calcula o Fit Cultural e recebe um PDI imediato por IA generativa.</p>
                             </div>
-                            <div style="padding:1.25rem;background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.12);border-radius:var(--radius-md);">
-                                <p style="font-family:var(--font-mono);font-size:0.6rem;color:#10b981;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.5rem;">RH e Líder</p>
-                                <p style="font-size:0.8125rem;color:var(--text-secondary);line-height:1.55;">Em 1 clique, acessa predições de turnover e alertas de afastamento. Mensalmente, recebe diagnóstico do time com planos de ação automáticos via IA.</p>
+                            <div class="u-p-1_25rem u-bg-rgba-16-185-129-0_05 u-mix-c2993">
+                                <p class="u-ff-font-mono u-fs-0_6rem u-c-color-success u-tt-uppercase u-ls-0_08em u-mb-0_5rem">RH e Líder</p>
+                                <p class="u-fs-0_8125rem u-c-text-secondary u-lh-1_55">Em 1 clique, acessa predições de turnover e alertas de afastamento. Mensalmente, recebe diagnóstico do time com planos de ação automáticos via IA.</p>
                             </div>
                         </div>
-                        <a href="/produtos/pulse/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_pulse_explorar'})">Explorar o Pulse <span>→</span></a>
+                        <a class="u-d-inline-flex u-ai-center u-gap-0_5rem u-fs-0_9375rem u-fw-600 u-c-accent u-td-none" href="/produtos/pulse/" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_pulse_explorar'})">Explorar o Pulse <span>→</span></a>
                     </div>
-                    <div style="background:#09090f;border:1px solid rgba(59,130,246,0.2);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
-                        <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
-                            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
-                            <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">fiter.com.br/pulse/dashboard</div>
+                    <div class="u-bg-mockup-bg-ink u-mix-aa7a8 u-overflow-hidden u-ff-font-mono">
+                        <div class="u-bg-mockup-bg-navy u-border-bottom-1px-solid-rgba-255-26adaa u-p-0_65rem-1rem u-d-flex u-ai-center u-gap-0_5rem">
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-close"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-minimize"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-maximize"></div>
+                            <div class="u-flex-1 u-m-0-0_75rem u-bg-rgba-255-255-255-0_06 u-radius-6px u-p-0_25rem-0_75rem u-fs-0_55rem u-c-rgba-255-255-255-0_3">fiter.com.br/pulse/dashboard</div>
                         </div>
-                        <div style="background:#0e0e1a;padding:0.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div class="u-bg-mockup-bg-indigo u-p-0_75rem-1_25rem u-d-flex u-jc-space-between u-ai-center u-border-bottom-1px-solid-rgba-255-240888">
                             <div>
-                                <div style="font-size:0.95rem;font-weight:700;color:#fff;letter-spacing:-0.01em;">Fiter Pulse</div>
-                                <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Maio 2026 · 342 respostas</div>
+                                <div class="u-fs-0_95rem u-fw-700 u-c-color-white u-ls-n0_01em">Fiter Pulse</div>
+                                <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_3 u-mt-1px">Maio 2026 · 342 respostas</div>
                             </div>
-                            <div style="display:flex;align-items:center;gap:0.35rem;">
-                                <span style="width:7px;height:7px;border-radius:50%;background:#25d366;box-shadow:0 0 7px rgba(37,211,102,0.65);"></span>
-                                <span style="font-size:0.52rem;color:rgba(37,211,102,0.85);">ao vivo</span>
+                            <div class="u-d-flex u-ai-center u-gap-0_35rem">
+                                <span class="u-w-7px u-h-7px u-radius-50pct u-bg-color-whatsapp u-box-shadow-0-0-7px-rgba-37-211-102-0_65"></span>
+                                <span class="u-fs-0_52rem u-c-rgba-37-211-102-0_85">ao vivo</span>
                             </div>
                         </div>
-                        <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.9rem;">
-                            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem;">
-                                <div style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.24);border-radius:10px;padding:0.75rem 0.5rem;text-align:center;">
-                                    <div style="font-size:1.5rem;font-weight:700;color:#3b82f6;line-height:1;">87</div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">Felicidade</div>
+                        <div class="u-p-1_1rem-1_25rem u-d-flex u-fdir-column u-gap-0_9rem">
+                            <div class="u-d-grid u-cols-1fr-1fr-1fr u-gap-0_6rem">
+                                <div class="u-bg-rgba-59-130-246-0_1 u-mix-0f439 u-p-0_75rem-0_5rem u-ta-center">
+                                    <div class="u-fs-1_5rem u-fw-700 u-c-color-blue u-lh-1">87</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">Felicidade</div>
                                 </div>
-                                <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.24);border-radius:10px;padding:0.75rem 0.5rem;text-align:center;">
-                                    <div style="font-size:1.5rem;font-weight:700;color:#10b981;line-height:1;">82</div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">Engajamento</div>
+                                <div class="u-bg-rgba-16-185-129-0_1 u-mix-550eb u-p-0_75rem-0_5rem u-ta-center">
+                                    <div class="u-fs-1_5rem u-fw-700 u-c-color-success u-lh-1">82</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">Engajamento</div>
                                 </div>
-                                <div style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.24);border-radius:10px;padding:0.75rem 0.5rem;text-align:center;">
-                                    <div style="font-size:1.5rem;font-weight:700;color:#a78bfa;line-height:1;">91</div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">Fit cultural</div>
+                                <div class="u-bg-rgba-139-92-246-0_1 u-mix-f65d8 u-p-0_75rem-0_5rem u-ta-center">
+                                    <div class="u-fs-1_5rem u-fw-700 u-c-color-purple u-lh-1">91</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">Fit cultural</div>
                                 </div>
                             </div>
-                            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:0.75rem 0.9rem;">
-                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Tendência · 90 dias</div>
-                                <svg width="100%" viewBox="0 0 260 48" fill="none" preserveAspectRatio="none" style="display:block;">
+                            <div class="u-bg-rgba-255-255-255-0_03 u-mix-72612 u-p-0_75rem-0_9rem">
+                                <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_28 u-tt-uppercase u-ls-0_06em u-mb-0_5rem">Tendência · 90 dias</div>
+                                <svg class="u-d-block" width="100%" viewBox="0 0 260 48" fill="none" preserveAspectRatio="none">
                                     <defs><linearGradient id="pg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>
                                     <polygon points="0,38 44,32 88,33 132,22 176,14 220,8 260,4 260,48 0,48" fill="url(#pg1)"/>
                                     <polyline points="0,38 44,32 88,33 132,22 176,14 220,8 260,4" stroke="#3b82f6" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
                                     <circle cx="260" cy="4" r="3" fill="#3b82f6" filter="drop-shadow(0 0 4px #3b82f6)"/>
                                 </svg>
-                                <div style="display:flex;justify-content:space-between;margin-top:0.3rem;">
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Fev</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mar</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Abr</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mai</span>
+                                <div class="u-d-flex u-jc-space-between u-mt-0_3rem">
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Fev</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Mar</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Abr</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Mai</span>
                                 </div>
                             </div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
-                                <div style="background:rgba(245,158,11,0.07);border:1px solid rgba(245,158,11,0.28);border-radius:10px;padding:0.65rem 0.75rem;">
-                                    <div style="font-size:0.6rem;font-weight:600;color:#f59e0b;margin-bottom:0.25rem;">⚠ Turnover detectado</div>
-                                    <div style="font-size:0.52rem;color:rgba(255,255,255,0.38);line-height:1.4;">3 pessoas · Operações<br> Queda de 18 pts em 4 sem.</div>
+                            <div class="u-d-grid u-cols-1fr-1fr u-gap-0_6rem">
+                                <div class="u-bg-rgba-245-158-11-0_07 u-mix-f8fe1 u-p-0_65rem-0_75rem">
+                                    <div class="u-fs-0_6rem u-fw-600 u-c-color-amber u-mb-0_25rem">⚠ Turnover detectado</div>
+                                    <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_38 u-lh-1_4">3 pessoas · Operações<br> Queda de 18 pts em 4 sem.</div>
                                 </div>
-                                <div style="background:rgba(59,130,246,0.05);border:1px solid rgba(59,130,246,0.12);border-radius:10px;padding:0.65rem 0.75rem;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.45rem;">Por depto</div>
-                                    <div style="display:flex;align-items:center;gap:0.4rem;margin-bottom:0.3rem;">
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.25);width:48px;flex-shrink:0;">Comercial</span>
-                                        <div style="flex:1;height:4px;background:rgba(255,255,255,0.07);border-radius:2px;"><div style="width:91%;height:100%;background:#3b82f6;border-radius:2px;"></div></div>
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.3);">91</span>
+                                <div class="u-bg-rgba-59-130-246-0_05 u-mix-457b3 u-p-0_65rem-0_75rem">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-tt-uppercase u-ls-0_05em u-mb-0_45rem">Por depto</div>
+                                    <div class="u-d-flex u-ai-center u-gap-0_4rem u-mb-0_3rem">
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_25 u-w-48px u-flex-shrink-0">Comercial</span>
+                                        <div class="u-flex-1 u-h-4px u-bg-rgba-255-255-255-0_07 u-radius-2px"><div class="u-w-91pct u-h-100pct u-bg-color-blue u-radius-2px"></div></div>
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_3">91</span>
                                     </div>
-                                    <div style="display:flex;align-items:center;gap:0.4rem;">
-                                        <span style="font-size:0.45rem;color:#f59e0b;width:48px;flex-shrink:0;">Operações</span>
-                                        <div style="flex:1;height:4px;background:rgba(255,255,255,0.07);border-radius:2px;"><div style="width:61%;height:100%;background:#f59e0b;border-radius:2px;"></div></div>
-                                        <span style="font-size:0.45rem;color:#f59e0b;">61</span>
+                                    <div class="u-d-flex u-ai-center u-gap-0_4rem">
+                                        <span class="u-fs-0_45rem u-c-color-amber u-w-48px u-flex-shrink-0">Operações</span>
+                                        <div class="u-flex-1 u-h-4px u-bg-rgba-255-255-255-0_07 u-radius-2px"><div class="u-w-61pct u-h-100pct u-bg-color-amber u-radius-2px"></div></div>
+                                        <span class="u-fs-0_45rem u-c-color-amber">61</span>
                                     </div>
                                 </div>
                             </div>
-                            <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.14);border-radius:10px;padding:0.65rem 0.9rem;display:flex;align-items:flex-start;gap:0.5rem;">
-                                <span style="font-size:0.7rem;color:#3b82f6;flex-shrink:0;line-height:1.2;">✦</span>
+                            <div class="u-bg-rgba-59-130-246-0_06 u-mix-f24fa u-p-0_65rem-0_9rem u-d-flex u-ai-flex-start u-gap-0_5rem">
+                                <span class="u-fs-0_7rem u-c-color-blue u-flex-shrink-0 u-lh-1_2">✦</span>
                                 <div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem;">Ação gerada por IA</div>
-                                    <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);line-height:1.55;">Agende 1:1 com 3 colaboradores de Operações antes de 30/05. Risco de perda confirmado.</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_28 u-tt-uppercase u-ls-0_05em u-mb-0_3rem">Ação gerada por IA</div>
+                                    <div class="u-fs-0_58rem u-c-rgba-255-255-255-0_65 u-lh-1_55">Agende 1:1 com 3 colaboradores de Operações antes de 30/05. Risco de perda confirmado.</div>
                                 </div>
                             </div>
                         </div>
@@ -898,82 +903,82 @@
             </section>
 
             <!-- Agente NR1 -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
-                    <div style="order:2;">
+            <section class="ds-section u-mb-8rem">
+                <div class="product-grid u-d-grid u-cols-1fr-1fr u-gap-4rem u-ai-center">
+                    <div class="u-order-2">
 
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">O problema: consultorias para laudos são caras, lentas e geram papéis engavetados</p>
-                        <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">Automação da NR1 de ponta a ponta</p>
-                        <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:2rem;">A maior dor do RH é processo manual. O Agente NR1 automatiza tudo de ponta a ponta: diagnóstico de riscos, geração de laudos, integração com Ministério do Trabalho, CID e OMS. A empresa sai conforme sem mover um dedo. 92% menos tempo, 100% de segurança jurídica.</p>
-                        <a href="/produtos/nr01/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_nr1_explorar'})">Explorar o Agente NR1 <span>→</span></a>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-rgba-255-255-255-0_35 u-tt-uppercase u-ls-0_1em u-mb-0_75rem">O problema: consultorias para laudos são caras, lentas e geram papéis engavetados</p>
+                        <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_5rem">Automação da NR1 de ponta a ponta</p>
+                        <p class="u-fs-1_0625rem u-lh-1_7 u-c-text-secondary u-mb-2rem">A maior dor do RH é processo manual. O Agente NR1 automatiza tudo de ponta a ponta: diagnóstico de riscos, geração de laudos, integração com Ministério do Trabalho, CID e OMS. A empresa sai conforme sem mover um dedo. 92% menos tempo, 100% de segurança jurídica.</p>
+                        <a class="u-d-inline-flex u-ai-center u-gap-0_5rem u-fs-0_9375rem u-fw-600 u-c-accent u-td-none" href="/produtos/nr01/" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_nr1_explorar'})">Explorar o Agente NR1 <span>→</span></a>
                     </div>
-                    <div style="order:1;background:#09090f;border:1px solid rgba(245,158,11,0.2);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
-                        <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
-                            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
-                            <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">fiter.com.br/agente-nr1</div>
+                    <div class="u-order-1 u-bg-mockup-bg-ink u-mix-2cc21 u-overflow-hidden u-ff-font-mono">
+                        <div class="u-bg-mockup-bg-navy u-border-bottom-1px-solid-rgba-255-26adaa u-p-0_65rem-1rem u-d-flex u-ai-center u-gap-0_5rem">
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-close"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-minimize"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-maximize"></div>
+                            <div class="u-flex-1 u-m-0-0_75rem u-bg-rgba-255-255-255-0_06 u-radius-6px u-p-0_25rem-0_75rem u-fs-0_55rem u-c-rgba-255-255-255-0_3">fiter.com.br/agente-nr1</div>
                         </div>
-                        <div style="background:#0e0e1a;padding:0.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div class="u-bg-mockup-bg-indigo u-p-0_75rem-1_25rem u-d-flex u-jc-space-between u-ai-center u-border-bottom-1px-solid-rgba-255-240888">
                             <div>
-                                <div style="font-size:0.62rem;color:rgba(245,158,11,0.8);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;">LAUDO NR1 · GERADO POR IA</div>
-                                <div style="font-size:0.95rem;font-weight:700;color:#fff;letter-spacing:-0.01em;">Cargo: Operador de Linha</div>
+                                <div class="u-fs-0_62rem u-c-rgba-245-158-11-0_8 u-tt-uppercase u-ls-0_05em u-mb-2px">LAUDO NR1 · GERADO POR IA</div>
+                                <div class="u-fs-0_95rem u-fw-700 u-c-color-white u-ls-n0_01em">Cargo: Operador de Linha</div>
                             </div>
-                            <div style="background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.4);border-radius:6px;padding:0.3rem 0.6rem;display:flex;align-items:center;">
-                                <span style="font-size:0.55rem;color:#10b981;font-weight:600;line-height:1;">✓ CONFORME</span>
+                            <div class="u-bg-rgba-16-185-129-0_15 u-mix-5bd39 u-p-0_3rem-0_6rem u-d-flex u-ai-center">
+                                <span class="u-fs-0_55rem u-c-color-success u-fw-600 u-lh-1">✓ CONFORME</span>
                             </div>
                         </div>
-                        <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.85rem;">
+                        <div class="u-p-1_1rem-1_25rem u-d-flex u-fdir-column u-gap-0_85rem">
                             <div>
-                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.65rem;">Análise de Riscos</div>
-                                <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
-                                    <span style="font-size:0.55rem;color:rgba(255,255,255,0.4);width:90px;flex-shrink:0;">Psicossocial</span>
-                                    <div style="flex:1;height:6px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;"><div style="width:84%;height:100%;background:rgba(16,185,129,0.7);border-radius:3px;"></div></div>
-                                    <span style="font-size:0.5rem;color:#10b981;width:28px;text-align:right;">84%</span>
+                                <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-tt-uppercase u-ls-0_06em u-mb-0_65rem">Análise de Riscos</div>
+                                <div class="u-d-flex u-ai-center u-gap-0_75rem u-mb-0_5rem">
+                                    <span class="u-fs-0_55rem u-c-rgba-255-255-255-0_4 u-w-90px u-flex-shrink-0">Psicossocial</span>
+                                    <div class="u-flex-1 u-h-6px u-bg-rgba-255-255-255-0_07 u-radius-3px u-overflow-hidden"><div class="u-w-84pct u-h-100pct u-bg-rgba-16-185-129-0_7 u-radius-3px"></div></div>
+                                    <span class="u-fs-0_5rem u-c-color-success u-w-28px u-ta-right">84%</span>
                                 </div>
-                                <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;">
-                                    <span style="font-size:0.55rem;color:rgba(255,255,255,0.4);width:90px;flex-shrink:0;">Ergonômico</span>
-                                    <div style="flex:1;height:6px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;"><div style="width:42%;height:100%;background:rgba(245,158,11,0.7);border-radius:3px;"></div></div>
-                                    <span style="font-size:0.5rem;color:#f59e0b;width:28px;text-align:right;">42%</span>
+                                <div class="u-d-flex u-ai-center u-gap-0_75rem u-mb-0_5rem">
+                                    <span class="u-fs-0_55rem u-c-rgba-255-255-255-0_4 u-w-90px u-flex-shrink-0">Ergonômico</span>
+                                    <div class="u-flex-1 u-h-6px u-bg-rgba-255-255-255-0_07 u-radius-3px u-overflow-hidden"><div class="u-w-42pct u-h-100pct u-bg-rgba-245-158-11-0_7 u-radius-3px"></div></div>
+                                    <span class="u-fs-0_5rem u-c-color-amber u-w-28px u-ta-right">42%</span>
                                 </div>
-                                <div style="display:flex;align-items:center;gap:0.75rem;">
-                                    <span style="font-size:0.55rem;color:rgba(255,255,255,0.4);width:90px;flex-shrink:0;">Físico-mec.</span>
-                                    <div style="flex:1;height:6px;background:rgba(255,255,255,0.07);border-radius:3px;overflow:hidden;"><div style="width:95%;height:100%;background:rgba(16,185,129,0.7);border-radius:3px;"></div></div>
-                                    <span style="font-size:0.5rem;color:#10b981;width:28px;text-align:right;">95%</span>
-                                </div>
-                            </div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.5rem;">
-                                <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.12);border-radius:8px;padding:0.55rem 0.5rem;text-align:center;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);margin-bottom:0.2rem;">Ministério</div>
-                                    <div style="font-size:0.62rem;color:#10b981;font-weight:600;">✓ OK</div>
-                                </div>
-                                <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.12);border-radius:8px;padding:0.55rem 0.5rem;text-align:center;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);margin-bottom:0.2rem;">CID</div>
-                                    <div style="font-size:0.62rem;color:#10b981;font-weight:600;">✓ OK</div>
-                                </div>
-                                <div style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.12);border-radius:8px;padding:0.55rem 0.5rem;text-align:center;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);margin-bottom:0.2rem;">OMS</div>
-                                    <div style="font-size:0.62rem;color:#10b981;font-weight:600;">✓ OK</div>
+                                <div class="u-d-flex u-ai-center u-gap-0_75rem">
+                                    <span class="u-fs-0_55rem u-c-rgba-255-255-255-0_4 u-w-90px u-flex-shrink-0">Físico-mec.</span>
+                                    <div class="u-flex-1 u-h-6px u-bg-rgba-255-255-255-0_07 u-radius-3px u-overflow-hidden"><div class="u-w-95pct u-h-100pct u-bg-rgba-16-185-129-0_7 u-radius-3px"></div></div>
+                                    <span class="u-fs-0_5rem u-c-color-success u-w-28px u-ta-right">95%</span>
                                 </div>
                             </div>
-                            <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.25);border-radius:10px;padding:0.75rem 1rem;display:flex;justify-content:space-between;align-items:center;">
+                            <div class="u-d-grid u-cols-1fr-1fr-1fr u-gap-0_5rem">
+                                <div class="u-bg-rgba-245-158-11-0_05 u-mix-6e185 u-p-0_55rem-0_5rem u-ta-center">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-mb-0_2rem">Ministério</div>
+                                    <div class="u-fs-0_62rem u-c-color-success u-fw-600">✓ OK</div>
+                                </div>
+                                <div class="u-bg-rgba-245-158-11-0_05 u-mix-6e185 u-p-0_55rem-0_5rem u-ta-center">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-mb-0_2rem">CID</div>
+                                    <div class="u-fs-0_62rem u-c-color-success u-fw-600">✓ OK</div>
+                                </div>
+                                <div class="u-bg-rgba-245-158-11-0_05 u-mix-6e185 u-p-0_55rem-0_5rem u-ta-center">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-mb-0_2rem">OMS</div>
+                                    <div class="u-fs-0_62rem u-c-color-success u-fw-600">✓ OK</div>
+                                </div>
+                            </div>
+                            <div class="u-bg-rgba-245-158-11-0_08 u-mix-bec1f u-p-0_75rem-1rem u-d-flex u-jc-space-between u-ai-center">
                                 <div>
-                                    <div style="font-size:0.52rem;color:rgba(245,158,11,0.7);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.2rem;">NR1 em vigor desde</div>
-                                    <div style="font-size:0.8rem;font-weight:700;color:#f59e0b;">26/05/2026</div>
+                                    <div class="u-fs-0_52rem u-c-rgba-245-158-11-0_7 u-tt-uppercase u-ls-0_05em u-mb-0_2rem">NR1 em vigor desde</div>
+                                    <div class="u-fs-0_8rem u-fw-700 u-c-color-amber">26/05/2026</div>
                                 </div>
-                                <div style="text-align:right;">
-                                    <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-bottom:0.2rem;">Laudos gerados</div>
-                                    <div style="font-size:1.2rem;font-weight:700;color:#fff;line-height:1;">1.247</div>
+                                <div class="u-ta-right">
+                                    <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_3 u-mb-0_2rem">Laudos gerados</div>
+                                    <div class="u-fs-1_2rem u-fw-700 u-c-color-white u-lh-1">1.247</div>
                                 </div>
                             </div>
-                            <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.14);border-radius:10px;padding:0.65rem 0.9rem;display:flex;align-items:center;gap:0.75rem;">
-                                <div style="text-align:center;padding-right:0.75rem;border-right:1px solid rgba(255,255,255,0.07);flex-shrink:0;">
-                                    <div style="font-size:1.2rem;font-weight:700;color:#10b981;line-height:1;">92%</div>
-                                    <div style="font-size:0.45rem;color:rgba(255,255,255,0.3);margin-top:0.15rem;">menos tempo</div>
+                            <div class="u-bg-rgba-16-185-129-0_06 u-mix-5313c u-p-0_65rem-0_9rem u-d-flex u-ai-center u-gap-0_75rem">
+                                <div class="u-ta-center u-pr-0_75rem u-border-right-1px-solid-rgba-255-2bb80f u-flex-shrink-0">
+                                    <div class="u-fs-1_2rem u-fw-700 u-c-color-success u-lh-1">92%</div>
+                                    <div class="u-fs-0_45rem u-c-rgba-255-255-255-0_3 u-mt-0_15rem">menos tempo</div>
                                 </div>
                                 <div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.04em;margin-bottom:0.2rem;">IA gerou em</div>
-                                    <div style="font-size:0.62rem;color:rgba(255,255,255,0.65);">3 min 14s vs. 40h manual</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_28 u-tt-uppercase u-ls-0_04em u-mb-0_2rem">IA gerou em</div>
+                                    <div class="u-fs-0_62rem u-c-rgba-255-255-255-0_65">3 min 14s vs. 40h manual</div>
                                 </div>
                             </div>
                         </div>
@@ -982,85 +987,85 @@
             </section>
 
             <!-- Micro-copy: distinção Pulse vs Pesquisa de Clima -->
-            <div style="margin-bottom:3rem;padding:1.25rem 1.75rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius-md);display:flex;align-items:flex-start;gap:0.75rem;">
-                <span style="font-size:1rem;flex-shrink:0;margin-top:0.1rem;">💡</span>
-                <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;margin:0;"><strong style="color:var(--text-primary);">Pulse vs Pesquisa de Clima:</strong> No Fiter Pulse, o colaborador faz uma autoanálise mensal da sua própria jornada. Na Pesquisa de Clima, ele avalia a empresa de forma 100% anônima.</p>
+            <div class="u-mb-3rem u-p-1_25rem-1_75rem u-bg-rgba-255-255-255-0_02 u-mix-40ad6 u-d-flex u-ai-flex-start u-gap-0_75rem">
+                <span class="u-fs-1rem u-flex-shrink-0 u-mt-0_1rem">💡</span>
+                <p class="u-fs-0_875rem u-c-text-secondary u-lh-1_6 u-m-0"><strong class="u-c-text-primary">Pulse vs Pesquisa de Clima:</strong> No Fiter Pulse, o colaborador faz uma autoanálise mensal da sua própria jornada. Na Pesquisa de Clima, ele avalia a empresa de forma 100% anônima.</p>
             </div>
 
             <!-- Pesquisa de Clima -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
+            <section class="ds-section u-mb-8rem">
+                <div class="product-grid u-d-grid u-cols-1fr-1fr u-gap-4rem u-ai-center">
                     <div>
 
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">O problema: relatórios de clima em PDF demoram meses e nascem desatualizados</p>
-                        <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">Pesquisa de clima com IA e Plano de ação em tempo real</p>
-                        <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:2rem;">Anônima, via WhatsApp, com benchmarking de mercado. A IA gera planos de ação automáticos calibrados ao diagnóstico de cada equipe. Saia do GPTW que chega tarde demais.</p>
-                        <a href="/produtos/pesquisa-de-clima/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_clima_explorar'})">Conhecer a Pesquisa de Clima da Fiter <span>→</span></a>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-rgba-255-255-255-0_35 u-tt-uppercase u-ls-0_1em u-mb-0_75rem">O problema: relatórios de clima em PDF demoram meses e nascem desatualizados</p>
+                        <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_5rem">Pesquisa de clima com IA e Plano de ação em tempo real</p>
+                        <p class="u-fs-1_0625rem u-lh-1_7 u-c-text-secondary u-mb-2rem">Anônima, via WhatsApp, com benchmarking de mercado. A IA gera planos de ação automáticos calibrados ao diagnóstico de cada equipe. Saia do GPTW que chega tarde demais.</p>
+                        <a class="u-d-inline-flex u-ai-center u-gap-0_5rem u-fs-0_9375rem u-fw-600 u-c-accent u-td-none" href="/produtos/pesquisa-de-clima/" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_clima_explorar'})">Conhecer a Pesquisa de Clima da Fiter <span>→</span></a>
                     </div>
-                    <div style="background:#09090f;border:1px solid rgba(59,130,246,0.18);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
-                        <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
-                            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
-                            <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">fiter.com.br/pesquisa-de-clima</div>
+                    <div class="u-bg-mockup-bg-ink u-mix-d2d63 u-overflow-hidden u-ff-font-mono">
+                        <div class="u-bg-mockup-bg-navy u-border-bottom-1px-solid-rgba-255-26adaa u-p-0_65rem-1rem u-d-flex u-ai-center u-gap-0_5rem">
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-close"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-minimize"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-maximize"></div>
+                            <div class="u-flex-1 u-m-0-0_75rem u-bg-rgba-255-255-255-0_06 u-radius-6px u-p-0_25rem-0_75rem u-fs-0_55rem u-c-rgba-255-255-255-0_3">fiter.com.br/pesquisa-de-clima</div>
                         </div>
-                        <div style="background:#0e0e1a;padding:0.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div class="u-bg-mockup-bg-indigo u-p-0_75rem-1_25rem u-d-flex u-jc-space-between u-ai-center u-border-bottom-1px-solid-rgba-255-240888">
                             <div>
-                                <div style="font-size:0.95rem;font-weight:700;color:#fff;letter-spacing:-0.01em;">Clima Organizacional</div>
-                                <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Diagnóstico mensal · Maio 2026</div>
+                                <div class="u-fs-0_95rem u-fw-700 u-c-color-white u-ls-n0_01em">Clima Organizacional</div>
+                                <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_3 u-mt-1px">Diagnóstico mensal · Maio 2026</div>
                             </div>
-                            <div style="background:rgba(59,130,246,0.15);border:1px solid rgba(59,130,246,0.3);border-radius:6px;padding:0.3rem 0.6rem;display:flex;align-items:center;">
-                                <span style="font-size:0.55rem;color:#3b82f6;line-height:1;">Mensal ↑</span>
+                            <div class="u-bg-rgba-59-130-246-0_15 u-mix-6d9be u-p-0_3rem-0_6rem u-d-flex u-ai-center">
+                                <span class="u-fs-0_55rem u-c-color-blue u-lh-1">Mensal ↑</span>
                             </div>
                         </div>
-                        <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.9rem;">
-                            <div style="display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center;">
-                                <div style="text-align:center;">
-                                    <div style="font-size:2.75rem;font-weight:800;color:#3b82f6;line-height:1;font-family:var(--font-serif);">89</div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-top:0.2rem;">eNPS Score</div>
-                                    <div style="font-size:0.52rem;color:#10b981;margin-top:0.15rem;">↑ +7 pts</div>
+                        <div class="u-p-1_1rem-1_25rem u-d-flex u-fdir-column u-gap-0_9rem">
+                            <div class="u-d-grid u-cols-auto-1fr u-gap-1_25rem u-ai-center">
+                                <div class="u-ta-center">
+                                    <div class="u-fs-2_75rem u-fw-800 u-c-color-blue u-lh-1 u-ff-font-serif">89</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_3 u-mt-0_2rem">eNPS Score</div>
+                                    <div class="u-fs-0_52rem u-c-color-success u-mt-0_15rem">↑ +7 pts</div>
                                 </div>
                                 <div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.45rem;">vs. benchmark</div>
-                                    <div style="margin-bottom:0.35rem;">
-                                        <div style="display:flex;justify-content:space-between;margin-bottom:0.15rem;">
-                                            <span style="font-size:0.5rem;color:rgba(255,255,255,0.4);">Fiter</span>
-                                            <span style="font-size:0.5rem;color:#3b82f6;">89</span>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-tt-uppercase u-ls-0_05em u-mb-0_45rem">vs. benchmark</div>
+                                    <div class="u-mb-0_35rem">
+                                        <div class="u-d-flex u-jc-space-between u-mb-0_15rem">
+                                            <span class="u-fs-0_5rem u-c-rgba-255-255-255-0_4">Fiter</span>
+                                            <span class="u-fs-0_5rem u-c-color-blue">89</span>
                                         </div>
-                                        <div style="height:5px;background:rgba(255,255,255,0.07);border-radius:2px;overflow:hidden;"><div style="width:89%;height:100%;background:#3b82f6;border-radius:2px;"></div></div>
+                                        <div class="u-h-5px u-bg-rgba-255-255-255-0_07 u-radius-2px u-overflow-hidden"><div class="u-w-89pct u-h-100pct u-bg-color-blue u-radius-2px"></div></div>
                                     </div>
                                     <div>
-                                        <div style="display:flex;justify-content:space-between;margin-bottom:0.15rem;">
-                                            <span style="font-size:0.5rem;color:rgba(255,255,255,0.25);">GPTW médio</span>
-                                            <span style="font-size:0.5rem;color:rgba(255,255,255,0.3);">42</span>
+                                        <div class="u-d-flex u-jc-space-between u-mb-0_15rem">
+                                            <span class="u-fs-0_5rem u-c-rgba-255-255-255-0_25">GPTW médio</span>
+                                            <span class="u-fs-0_5rem u-c-rgba-255-255-255-0_3">42</span>
                                         </div>
-                                        <div style="height:5px;background:rgba(255,255,255,0.07);border-radius:2px;overflow:hidden;"><div style="width:42%;height:100%;background:rgba(255,255,255,0.2);border-radius:2px;"></div></div>
+                                        <div class="u-h-5px u-bg-rgba-255-255-255-0_07 u-radius-2px u-overflow-hidden"><div class="u-w-42pct u-h-100pct u-bg-rgba-255-255-255-0_2 u-radius-2px"></div></div>
                                     </div>
                                 </div>
                             </div>
-                            <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:0.75rem 0.9rem;">
-                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Evolução mensal</div>
-                                <svg width="100%" viewBox="0 0 260 52" fill="none" preserveAspectRatio="none" style="display:block;">
+                            <div class="u-bg-rgba-255-255-255-0_03 u-mix-72612 u-p-0_75rem-0_9rem">
+                                <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-tt-uppercase u-ls-0_06em u-mb-0_5rem">Evolução mensal</div>
+                                <svg class="u-d-block" width="100%" viewBox="0 0 260 52" fill="none" preserveAspectRatio="none">
                                     <defs><linearGradient id="cg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3b82f6" stop-opacity="0.2"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/></linearGradient></defs>
                                     <polygon points="0,46 44,40 88,37 132,28 176,20 220,13 260,8 260,52 0,52" fill="url(#cg1)"/>
                                     <polyline points="0,46 44,40 88,37 132,28 176,20 220,13 260,8" stroke="#3b82f6" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
                                     <polyline points="0,36 260,36" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
                                     <circle cx="260" cy="8" r="3" fill="#3b82f6"/>
                                 </svg>
-                                <div style="display:flex;justify-content:space-between;margin-top:0.3rem;">
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Dez</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Jan</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Fev</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mar</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Abr</span>
-                                    <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mai</span>
+                                <div class="u-d-flex u-jc-space-between u-mt-0_3rem">
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Dez</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Jan</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Fev</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Mar</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Abr</span>
+                                    <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Mai</span>
                                 </div>
                             </div>
-                            <div style="background:rgba(59,130,246,0.06);border:1px solid rgba(59,130,246,0.14);border-radius:10px;padding:0.65rem 0.9rem;display:flex;align-items:flex-start;gap:0.5rem;">
-                                <span style="font-size:0.7rem;color:#3b82f6;flex-shrink:0;line-height:1.2;">✦</span>
+                            <div class="u-bg-rgba-59-130-246-0_06 u-mix-f24fa u-p-0_65rem-0_9rem u-d-flex u-ai-flex-start u-gap-0_5rem">
+                                <span class="u-fs-0_7rem u-c-color-blue u-flex-shrink-0 u-lh-1_2">✦</span>
                                 <div>
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.28);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.3rem;">Plano de ação gerado por IA</div>
-                                    <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);line-height:1.55;">3 iniciativas para equipe Comercial · Prioridade: reconhecimento. Impacto estimado: +11 pts em 60 dias.</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_28 u-tt-uppercase u-ls-0_05em u-mb-0_3rem">Plano de ação gerado por IA</div>
+                                    <div class="u-fs-0_58rem u-c-rgba-255-255-255-0_65 u-lh-1_55">3 iniciativas para equipe Comercial · Prioridade: reconhecimento. Impacto estimado: +11 pts em 60 dias.</div>
                                 </div>
                             </div>
                         </div>
@@ -1069,73 +1074,73 @@
             </section>
 
             <!-- Ouvidoria -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;" class="product-grid">
-                    <div style="order:2;">
+            <section class="ds-section u-mb-8rem">
+                <div class="product-grid u-d-grid u-cols-1fr-1fr u-gap-4rem u-ai-center">
+                    <div class="u-order-2">
 
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:rgba(255,255,255,0.35);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">O problema: canais manuais sofrem com triagens lentas e risco de vazamento</p>
-                        <p style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">Canal anônimo obrigatório.<br> Governança completa.</p>
-                        <p style="font-size:1.0625rem;line-height:1.7;color:var(--text-secondary);margin-bottom:2rem;">A IA coleta, analisa e classifica cada ocorrência automaticamente por tipo e urgência antes de qualquer analista ler. Assédio, segurança, ética: cada caso priorizado para agilizar quem vai tratar. Obrigação legal para empresas com mais de 300 colaboradores. Canal anônimo, compliance e rastreabilidade garantidos.</p>
-                        <a href="/produtos/ouvidoria/" style="display:inline-flex;align-items:center;gap:0.5rem;font-size:0.9375rem;font-weight:600;color:var(--accent);text-decoration:none;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_ouvidoria_explorar'})">Conhecer a Ouvidoria <span>→</span></a>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-rgba-255-255-255-0_35 u-tt-uppercase u-ls-0_1em u-mb-0_75rem">O problema: canais manuais sofrem com triagens lentas e risco de vazamento</p>
+                        <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_5rem">Canal anônimo obrigatório.<br> Governança completa.</p>
+                        <p class="u-fs-1_0625rem u-lh-1_7 u-c-text-secondary u-mb-2rem">A IA coleta, analisa e classifica cada ocorrência automaticamente por tipo e urgência antes de qualquer analista ler. Assédio, segurança, ética: cada caso priorizado para agilizar quem vai tratar. Obrigação legal para empresas com mais de 300 colaboradores. Canal anônimo, compliance e rastreabilidade garantidos.</p>
+                        <a class="u-d-inline-flex u-ai-center u-gap-0_5rem u-fs-0_9375rem u-fw-600 u-c-accent u-td-none" href="/produtos/ouvidoria/" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_ouvidoria_explorar'})">Conhecer a Ouvidoria <span>→</span></a>
                     </div>
-                    <div style="order:1;background:#09090f;border:1px solid rgba(139,92,246,0.18);border-radius:16px;overflow:hidden;font-family:var(--font-mono);">
-                        <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
-                            <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
-                            <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
-                            <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">fiter.com.br/ouvidoria</div>
+                    <div class="u-order-1 u-bg-mockup-bg-ink u-mix-fc0f1 u-overflow-hidden u-ff-font-mono">
+                        <div class="u-bg-mockup-bg-navy u-border-bottom-1px-solid-rgba-255-26adaa u-p-0_65rem-1rem u-d-flex u-ai-center u-gap-0_5rem">
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-close"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-minimize"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-maximize"></div>
+                            <div class="u-flex-1 u-m-0-0_75rem u-bg-rgba-255-255-255-0_06 u-radius-6px u-p-0_25rem-0_75rem u-fs-0_55rem u-c-rgba-255-255-255-0_3">fiter.com.br/ouvidoria</div>
                         </div>
-                        <div style="background:#0e0e1a;padding:0.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <div class="u-bg-mockup-bg-indigo u-p-0_75rem-1_25rem u-d-flex u-jc-space-between u-ai-center u-border-bottom-1px-solid-rgba-255-240888">
                             <div>
-                                <div style="font-size:0.95rem;font-weight:700;color:#fff;letter-spacing:-0.01em;">Ouvidoria</div>
-                                <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Painel de Compliance · Maio 2026</div>
+                                <div class="u-fs-0_95rem u-fw-700 u-c-color-white u-ls-n0_01em">Ouvidoria</div>
+                                <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_3 u-mt-1px">Painel de Compliance · Maio 2026</div>
                             </div>
-                            <div style="background:rgba(139,92,246,0.15);border:1px solid rgba(139,92,246,0.3);border-radius:6px;padding:0.3rem 0.6rem;display:flex;align-items:center;">
-                                <span style="font-size:0.55rem;color:#a78bfa;line-height:1;">100% anônimo</span>
+                            <div class="u-bg-rgba-139-92-246-0_15 u-mix-97979 u-p-0_3rem-0_6rem u-d-flex u-ai-center">
+                                <span class="u-fs-0_55rem u-c-color-purple u-lh-1">100% anônimo</span>
                             </div>
                         </div>
-                        <div style="padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:0.85rem;">
-                            <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:0.3rem;">
-                                <div style="background:rgba(139,92,246,0.12);border:1px solid rgba(139,92,246,0.25);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-bottom:0.2rem;">Recebido</div>
-                                    <div style="font-size:1rem;font-weight:700;color:#a78bfa;line-height:1;">12</div>
+                        <div class="u-p-1_1rem-1_25rem u-d-flex u-fdir-column u-gap-0_85rem">
+                            <div class="u-d-grid u-cols-1fr-auto-1fr-auto-1fr u-ai-center u-gap-0_3rem">
+                                <div class="u-bg-rgba-139-92-246-0_12 u-mix-7a499 u-p-0_55rem-0_4rem u-ta-center">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_3 u-mb-0_2rem">Recebido</div>
+                                    <div class="u-fs-1rem u-fw-700 u-c-color-purple u-lh-1">12</div>
                                 </div>
-                                <span style="font-size:0.7rem;color:rgba(139,92,246,0.5);">→</span>
-                                <div style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-bottom:0.2rem;">IA Classificou</div>
-                                    <div style="font-size:1rem;font-weight:700;color:#f59e0b;line-height:1;">12</div>
+                                <span class="u-fs-0_7rem u-c-rgba-139-92-246-0_5">→</span>
+                                <div class="u-bg-rgba-245-158-11-0_08 u-mix-1d2fc u-p-0_55rem-0_4rem u-ta-center">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_3 u-mb-0_2rem">IA Classificou</div>
+                                    <div class="u-fs-1rem u-fw-700 u-c-color-amber u-lh-1">12</div>
                                 </div>
-                                <span style="font-size:0.7rem;color:rgba(16,185,129,0.5);">→</span>
-                                <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.25);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-bottom:0.2rem;">Resolvido</div>
-                                    <div style="font-size:1rem;font-weight:700;color:#10b981;line-height:1;">11</div>
-                                </div>
-                            </div>
-                            <div style="display:flex;flex-direction:column;gap:0.4rem;">
-                                <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.05em;">Ocorrências recentes</div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:0.55rem 0.75rem;display:flex;justify-content:space-between;align-items:center;">
-                                    <div>
-                                        <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);">Assédio moral · Anônimo</div>
-                                        <div style="font-size:0.48rem;color:rgba(255,255,255,0.25);margin-top:0.1rem;">Aberto 2h atrás</div>
-                                    </div>
-                                    <div style="background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.3);border-radius:4px;padding:0.15rem 0.4rem;font-size:0.48rem;color:#f59e0b;flex-shrink:0;">Em análise</div>
-                                </div>
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:8px;padding:0.55rem 0.75rem;display:flex;justify-content:space-between;align-items:center;">
-                                    <div>
-                                        <div style="font-size:0.58rem;color:rgba(255,255,255,0.65);">Condição de trabalho · Anônimo</div>
-                                        <div style="font-size:0.48rem;color:rgba(255,255,255,0.25);margin-top:0.1rem;">Resolvido em 18h</div>
-                                    </div>
-                                    <div style="background:rgba(16,185,129,0.12);border:1px solid rgba(16,185,129,0.3);border-radius:4px;padding:0.15rem 0.4rem;font-size:0.48rem;color:#10b981;flex-shrink:0;">Resolvido</div>
+                                <span class="u-fs-0_7rem u-c-rgba-16-185-129-0_5">→</span>
+                                <div class="u-bg-rgba-16-185-129-0_1 u-mix-b38f3 u-p-0_55rem-0_4rem u-ta-center">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_3 u-mb-0_2rem">Resolvido</div>
+                                    <div class="u-fs-1rem u-fw-700 u-c-color-success u-lh-1">11</div>
                                 </div>
                             </div>
-                            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.6rem;">
-                                <div style="background:rgba(139,92,246,0.07);border:1px solid rgba(139,92,246,0.15);border-radius:10px;padding:0.65rem 0.75rem;text-align:center;">
-                                    <div style="font-size:1.3rem;font-weight:700;color:#a78bfa;line-height:1;">92%</div>
-                                    <div style="font-size:0.48rem;color:rgba(255,255,255,0.3);margin-top:0.2rem;">taxa de resolução</div>
+                            <div class="u-d-flex u-fdir-column u-gap-0_4rem">
+                                <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-tt-uppercase u-ls-0_05em">Ocorrências recentes</div>
+                                <div class="u-bg-rgba-255-255-255-0_03 u-mix-6b87d u-p-0_55rem-0_75rem u-d-flex u-jc-space-between u-ai-center">
+                                    <div>
+                                        <div class="u-fs-0_58rem u-c-rgba-255-255-255-0_65">Assédio moral · Anônimo</div>
+                                        <div class="u-fs-0_48rem u-c-rgba-255-255-255-0_25 u-mt-0_1rem">Aberto 2h atrás</div>
+                                    </div>
+                                    <div class="u-bg-rgba-245-158-11-0_15 u-mix-33dab u-p-0_15rem-0_4rem u-fs-0_48rem u-c-color-amber u-flex-shrink-0">Em análise</div>
                                 </div>
-                                <div style="background:rgba(16,185,129,0.07);border:1px solid rgba(16,185,129,0.15);border-radius:10px;padding:0.65rem 0.75rem;text-align:center;">
-                                    <div style="font-size:1.3rem;font-weight:700;color:#10b981;line-height:1;">18h</div>
-                                    <div style="font-size:0.48rem;color:rgba(255,255,255,0.3);margin-top:0.2rem;">tempo médio</div>
+                                <div class="u-bg-rgba-255-255-255-0_03 u-mix-6b87d u-p-0_55rem-0_75rem u-d-flex u-jc-space-between u-ai-center">
+                                    <div>
+                                        <div class="u-fs-0_58rem u-c-rgba-255-255-255-0_65">Condição de trabalho · Anônimo</div>
+                                        <div class="u-fs-0_48rem u-c-rgba-255-255-255-0_25 u-mt-0_1rem">Resolvido em 18h</div>
+                                    </div>
+                                    <div class="u-bg-rgba-16-185-129-0_12 u-mix-a4e1d u-p-0_15rem-0_4rem u-fs-0_48rem u-c-color-success u-flex-shrink-0">Resolvido</div>
+                                </div>
+                            </div>
+                            <div class="u-d-grid u-cols-1fr-1fr u-gap-0_6rem">
+                                <div class="u-bg-rgba-139-92-246-0_07 u-mix-29afc u-p-0_65rem-0_75rem u-ta-center">
+                                    <div class="u-fs-1_3rem u-fw-700 u-c-color-purple u-lh-1">92%</div>
+                                    <div class="u-fs-0_48rem u-c-rgba-255-255-255-0_3 u-mt-0_2rem">taxa de resolução</div>
+                                </div>
+                                <div class="u-bg-rgba-16-185-129-0_07 u-mix-b6664 u-p-0_65rem-0_75rem u-ta-center">
+                                    <div class="u-fs-1_3rem u-fw-700 u-c-color-success u-lh-1">18h</div>
+                                    <div class="u-fs-0_48rem u-c-rgba-255-255-255-0_3 u-mt-0_2rem">tempo médio</div>
                                 </div>
                             </div>
                         </div>
@@ -1144,20 +1149,20 @@
             </section>
 
             <!-- Analytics -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
+            <section class="ds-section u-mb-8rem">
 
-                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Cada resposta vira dado.<br> Ao vivo.</p>
+                <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-3rem" data-reveal>Cada resposta vira dado.<br> Ao vivo.</p>
 
-                <div class="analytics-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+                <div class="analytics-grid u-d-grid u-cols-1fr-1fr u-gap-2rem">
 
                     <!-- Donut Chart -->
-                    <div class="chart-container" style="padding:2.5rem;">
-                        <div style="margin-bottom:2rem;">
-                            <p style="font-family:var(--font-mono);font-size:0.62rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.5rem;">Pesquisa de Clima</p>
-                            <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;letter-spacing:-0.01em;color:var(--text-primary);margin-bottom:0.25rem;">Distribuição do bem-estar</h3>
-                            <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.05em;">Últimos 30 dias · 847 respondentes</p>
+                    <div class="chart-container u-p-2_5rem">
+                        <div class="u-mb-2rem">
+                            <p class="u-ff-font-mono u-fs-0_62rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-0_5rem">Pesquisa de Clima</p>
+                            <h3 class="u-ff-font-serif u-fs-1_3rem u-fw-700 u-ls-n0_01em u-c-text-primary u-mb-0_25rem">Distribuição do bem-estar</h3>
+                            <p class="u-ff-font-mono u-fs-0_68rem u-c-text-tertiary u-tt-uppercase u-ls-0_05em">Últimos 30 dias · 847 respondentes</p>
                         </div>
-                        <div class="donut-layout" style="display:grid;grid-template-columns:auto 1fr;gap:2.5rem;align-items:center;">
+                        <div class="donut-layout u-d-grid u-cols-auto-1fr u-gap-2_5rem u-ai-center">
                             <div class="donut-chart-wrap" id="donut-rh" data-chart='[
                                 {"label":"Promotores","pct":48,"color":"#10b981"},
                                 {"label":"Neutros","pct":31,"color":"#3b82f6"},
@@ -1169,15 +1174,15 @@
                     </div>
 
                     <!-- Vertical Bar Chart -->
-                    <div class="chart-container" style="padding:2.5rem;">
+                    <div class="chart-container u-p-2_5rem">
                         <div class="vchart-header">
                             <div>
-                                <h3 style="font-family:var(--font-serif);font-size:1.3rem;font-weight:700;letter-spacing:-0.01em;color:var(--text-primary);margin-bottom:0.25rem;">Evolução do eNPS</h3>
-                                <p style="font-size:0.72rem;color:var(--text-tertiary);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:0.05em;">Score médio: últimos 8 meses</p>
+                                <h3 class="u-ff-font-serif u-fs-1_3rem u-fw-700 u-ls-n0_01em u-c-text-primary u-mb-0_25rem">Evolução do eNPS</h3>
+                                <p class="u-fs-0_72rem u-c-text-tertiary u-ff-font-mono u-tt-uppercase u-ls-0_05em">Score médio: últimos 8 meses</p>
                             </div>
                             <div class="vchart-legend">
                                 <div class="vchart-legend-item">
-                                    <span class="vchart-legend-dot" style="background:var(--accent-brand)"></span>
+                                    <span class="vchart-legend-dot u-bg-accent-brand"></span>
                                     eNPS
                                 </div>
                             </div>
@@ -1199,11 +1204,11 @@
             </section>
 
             <!-- Comparativo: Fiter vs alternativas -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
+            <section class="ds-section u-mb-8rem">
                 
 
-                <p data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">Fiter vs. o jeito<br> que todo mundo faz.</p>
-                <div class="cmp-wrap" style="overflow-x: auto; border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.07);">
+                <p class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-3rem" data-reveal>Fiter vs. o jeito<br> que todo mundo faz.</p>
+                <div class="cmp-wrap u-overflow-x-auto u-mix-1978e">
                     <table class="cmp-table">
                         <thead>
                             <tr>
@@ -1256,31 +1261,31 @@
             </section>
 
             <!-- Implementação -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
+            <section class="ds-section u-mb-8rem">
 
-                <div class="impl-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;">
+                <div class="impl-grid u-d-grid u-cols-1fr-1fr u-gap-5rem u-ai-start">
 
-                    <div style="position: sticky; top: 6rem;">
-                        <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;" data-reveal>Implementação</p>
-                        <h2 style="font-size:clamp(2rem,3vw,2.75rem);font-family:var(--font-serif);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;" data-reveal>Do contrato ao primeiro<br> diagnóstico em dias.</h2>
-                        <p style="color:var(--text-secondary);font-size:0.9rem;line-height:1.7;margin-bottom:2.5rem;" data-fade>Sem TI. Sem burocracia. Do envio ao plano de ação, tudo automático.</p>
+                    <div class="u-pos-sticky u-top-6rem">
+                        <p class="u-ff-font-mono u-fs-0_75rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-0_75rem" data-reveal>Implementação</p>
+                        <h2 class="u-fs-clamp-2rem-3vw-2_75rem u-ff-font-serif u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1rem" data-reveal>Do contrato ao primeiro<br> diagnóstico em dias.</h2>
+                        <p class="u-c-text-secondary u-fs-0_9rem u-lh-1_7 u-mb-2_5rem" data-fade>Sem TI. Sem burocracia. Do envio ao plano de ação, tudo automático.</p>
 
                         <div class="chart-container chart-days">
                             <div class="chart-bars">
-                                <div style="font-family:var(--font-mono);font-size:0.6rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">Tempo até o 1º diagnóstico</div>
-                                <div class="bar-row" style="--bar-delay:0s;">
+                                <div class="u-ff-font-mono u-fs-0_6rem u-c-text-tertiary u-tt-uppercase u-ls-0_08em u-mb-0_75rem">Tempo até o 1º diagnóstico</div>
+                                <div class="bar-row u--bar-delay-0s">
                                     <span class="bar-label">Fiter</span>
-                                    <div class="bar-track"><div class="bar-fill" style="--bar-target:7%;"><span class="bar-tooltip">7 dias</span></div></div>
+                                    <div class="bar-track"><div class="bar-fill u--bar-target-7pct"><span class="bar-tooltip">7 dias</span></div></div>
                                     <span class="bar-value-label">7 dias</span>
                                 </div>
-                                <div class="bar-row" style="--bar-delay:0.08s;">
+                                <div class="bar-row u--bar-delay-0_08s">
                                     <span class="bar-label">Consultoria</span>
-                                    <div class="bar-track"><div class="bar-fill" style="--bar-target:62%; opacity:0.3;"><span class="bar-tooltip">90 dias</span></div></div>
+                                    <div class="bar-track"><div class="bar-fill u--bar-target-62pct u-op-0_3"><span class="bar-tooltip">90 dias</span></div></div>
                                     <span class="bar-value-label">90 dias</span>
                                 </div>
-                                <div class="bar-row" style="--bar-delay:0.16s;">
+                                <div class="bar-row u--bar-delay-0_16s">
                                     <span class="bar-label">GPTW / anual</span>
-                                    <div class="bar-track"><div class="bar-fill" style="--bar-target:100%; opacity:0.18;"><span class="bar-tooltip">365 dias</span></div></div>
+                                    <div class="bar-track"><div class="bar-fill u--bar-target-100pct u-op-0_18"><span class="bar-tooltip">365 dias</span></div></div>
                                     <span class="bar-value-label">365 dias</span>
                                 </div>
                             </div>
@@ -1288,7 +1293,7 @@
                     </div>
 
                     <div class="steps-v" data-steps>
-                        <div class="step-v" style="--step-delay:0s">
+                        <div class="step-v u--step-delay-0s">
                             <div class="step-v-num">01</div>
                             <div class="step-v-content">
                                 <p class="step-v-tag">Dia 1</p>
@@ -1296,7 +1301,7 @@
                                 <p class="step-v-body">Contrato digital. Sem burocracia, sem TI.</p>
                             </div>
                         </div>
-                        <div class="step-v" style="--step-delay:0.1s">
+                        <div class="step-v u--step-delay-0_1s">
                             <div class="step-v-num">02</div>
                             <div class="step-v-content">
                                 <p class="step-v-tag">Dia 2</p>
@@ -1304,7 +1309,7 @@
                                 <p class="step-v-body">Importação da base de colaboradores e personalização das perguntas.</p>
                             </div>
                         </div>
-                        <div class="step-v" style="--step-delay:0.2s">
+                        <div class="step-v u--step-delay-0_2s">
                             <div class="step-v-num">03</div>
                             <div class="step-v-content">
                                 <p class="step-v-tag">Dia 5</p>
@@ -1312,7 +1317,7 @@
                                 <p class="step-v-body">1h30 com os gestores. A plataforma é simples o suficiente pra não precisar de mais.</p>
                             </div>
                         </div>
-                        <div class="step-v" style="--step-delay:0.3s">
+                        <div class="step-v u--step-delay-0_3s">
                             <div class="step-v-num">04</div>
                             <div class="step-v-content">
                                 <p class="step-v-tag">Dia 7</p>
@@ -1327,12 +1332,12 @@
             </section>
 
             <!-- FAQ -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
+            <section class="ds-section u-mb-8rem">
                 <div class="faq-2col">
                     <div>
-                        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1rem;">FAQ</p>
-                        <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.25rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1rem;">Tudo o que você<br> precisa saber.</h2>
-                        <p style="font-size:0.875rem;color:var(--text-tertiary);line-height:1.65;margin-top:1.25rem;">Ainda tem dúvidas? <br><a href="mailto:contato@fiter.com.br" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">Fale com a gente</a></p>
+                        <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1rem">FAQ</p>
+                        <h2 class="u-ff-font-serif u-fs-clamp-1_75rem-2_6vw-2_25rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1rem" data-reveal>Tudo o que você<br> precisa saber.</h2>
+                        <p class="u-fs-0_875rem u-c-text-tertiary u-lh-1_65 u-mt-1_25rem">Ainda tem dúvidas? <br><a class="u-c-accent-brand u-td-underline u-text-underline-offset-3px" href="mailto:contato@fiter.com.br">Fale com a gente</a></p>
                     </div>
                 <div class="faq-list">
                     <div class="faq-item">
@@ -1386,38 +1391,38 @@
 
 
             <!-- CTA FINAL -->
-            <section id="cta-section" class="ds-section" style="max-width:none; margin-left:-2rem; margin-right:-2rem; margin-bottom:calc(-4rem - 1px); padding:5rem 5vw; background:var(--bg-surface); border-top:1px solid var(--border-default); position:relative; overflow:hidden;">
-                <img src="/assets/img/hero-saude-mental.webp" alt="" class="section-photo-bg" loading="lazy">
+            <section id="cta-section" class="ds-section u-maxw-none u-ml-n2rem u-mr-n2rem u-mb-calc-4rem-n-1px u-p-5rem-5vw u-bg-bg-surface u-border-top-1px-solid-border-default u-pos-relative u-overflow-hidden">
+                <img src="/assets/img/hero-saude-mental.webp" alt="Mesa de trabalho com caneca, notebook e luminária acesa" class="section-photo-bg" loading="lazy">
                 <div class="section-photo-overlay" aria-hidden="true"></div>
-                <div aria-hidden="true" style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;background:radial-gradient(circle,rgba(59,130,246,0.06) 0%,transparent 70%);pointer-events:none;"></div>
-                <div class="cta-grid" style="display:grid;grid-template-columns:1.2fr 1fr;gap:4rem;align-items:start;position:relative;z-index:1;max-width:1200px;margin:0 auto;">
+                <div class="u-pos-absolute u-top-n80px u-right-n80px u-w-400px u-h-400px u-bg-radial-gradient-circf529e u-pe-none" aria-hidden="true"></div>
+                <div class="cta-grid u-d-grid u-cols-1_2fr-1fr u-gap-4rem u-ai-start u-pos-relative u-z-1 u-maxw-1200px u-m-0-auto">
                     <!-- Left -->
                     <div>
-                        <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Demonstração gratuita</p>
-                        <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(1.75rem,2.6vw,2.5rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.25rem;">Veja o que seu time<br> não está dizendo.</h2>
-                        <p style="color:var(--text-secondary);font-size:0.95rem;line-height:1.7;max-width:420px;margin-bottom:2rem;">30 minutos. Um especialista. Você entende se a Fiter resolve o que você precisa, sem compromisso, sem pitch de uma hora.</p>
-                        <div style="display:flex;flex-direction:column;gap:0.75rem;">
-                            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
-                                <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Plataforma real, não um slide
+                        <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Demonstração gratuita</p>
+                        <h2 class="u-ff-font-serif u-fs-clamp-1_75rem-2_6vw-2_5rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_25rem" data-reveal>Veja o que seu time<br> não está dizendo.</h2>
+                        <p class="u-c-text-secondary u-fs-0_95rem u-lh-1_7 u-maxw-420px u-mb-2rem">30 minutos. Um especialista. Você entende se a Fiter resolve o que você precisa, sem compromisso, sem pitch de uma hora.</p>
+                        <div class="u-d-flex u-fdir-column u-gap-0_75rem">
+                            <div class="u-d-flex u-ai-center u-gap-0_75rem u-fs-0_85rem u-c-text-secondary">
+                                <span class="u-c-color-success u-fs-0_9rem u-flex-shrink-0">✓</span> Plataforma real, não um slide
                             </div>
-                            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
-                                <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Especialista que conhece as objeções do RH
+                            <div class="u-d-flex u-ai-center u-gap-0_75rem u-fs-0_85rem u-c-text-secondary">
+                                <span class="u-c-color-success u-fs-0_9rem u-flex-shrink-0">✓</span> Especialista que conhece as objeções do RH
                             </div>
-                            <div style="display:flex;align-items:center;gap:0.75rem;font-size:0.85rem;color:var(--text-secondary);">
-                                <span style="color:#10b981;font-size:0.9rem;flex-shrink:0;">✓</span> Proposta no mesmo dia, se fizer sentido
+                            <div class="u-d-flex u-ai-center u-gap-0_75rem u-fs-0_85rem u-c-text-secondary">
+                                <span class="u-c-color-success u-fs-0_9rem u-flex-shrink-0">✓</span> Proposta no mesmo dia, se fizer sentido
                             </div>
                         </div>
-                        <p style="margin-top:2rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'content',event_label:'rh_cta_guia'})">Baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
+                        <p class="u-mt-2rem u-fs-0_85rem u-c-text-tertiary">Ainda avaliando? <a class="u-c-accent-brand u-td-underline u-text-underline-offset-3px" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'content',event_label:'rh_cta_guia'})">Baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
                     </div>
                     <!-- Right: Agendar demonstração -->
-                    <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:1.5rem;padding:2.5rem 2rem;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-lg);">
+                    <div class="u-d-flex u-fdir-column u-ai-center u-jc-center u-ta-center u-gap-1_5rem u-p-2_5rem-2rem u-bg-rgba-255-255-255-0_03 u-mix-4a9f0">
                         <div>
-                            <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Escolha um horário</div>
-                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;max-width:28rem;">Agende diretamente na agenda do especialista de RH. Sem espera, sem formulário.</p>
+                            <div class="u-ff-font-mono u-fs-0_65rem u-c-text-tertiary u-tt-uppercase u-ls-0_1em u-mb-0_75rem">Escolha um horário</div>
+                            <p class="u-fs-0_9rem u-c-text-secondary u-lh-1_6 u-maxw-28rem">Agende diretamente na agenda do especialista de RH. Sem espera, sem formulário.</p>
                         </div>
                         
-                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;padding:1rem 2.5rem;font-size:1rem;" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_cta_demo'})">Agendar demonstração</a>
-                        <p style="font-size:0.75rem;color:var(--text-tertiary);line-height:1.5;">30 minutos · resposta imediata após agendamento</p>
+                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none u-p-1rem-2_5rem u-fs-1rem" onclick="if(window.gtag)gtag('event','cta_click',{event_category:'cta',event_label:'rh_cta_demo'})">Agendar demonstração</a>
+                        <p class="u-fs-0_75rem u-c-text-tertiary u-lh-1_5">30 minutos · resposta imediata após agendamento</p>
                     </div>
                 </div>
             </section>

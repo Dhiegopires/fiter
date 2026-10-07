@@ -2,6 +2,7 @@
 # Título principal do artigo
 # Evite títulos muito longos (ideal: até 60 caracteres)
 title: "Muito Além do Cargo: Como Desenvolver as Habilidades Reais do seu Time e Evitar a Rotatividade"
+seoTitle: "Muito Além do Cargo: Gestão por Habilidades e Retenção"
 
 # URL do artigo
 # Use letras minúsculas e hífens
@@ -19,7 +20,7 @@ readingTime: 4
 
 # Pequena descrição para SEO e cards sociais
 # Ideal: até 160 caracteres
-description: "A perda de talentos brilhantes não se resolve apenas com pacotes de benefícios. Entenda por que as descrições de cargos rígidas estão esgotadas e descubra como a gestão focada em habilidades e a mobilidade interna podem transformar o engajamento e a retenção da sua equipe."
+description: "Benefícios não seguram talentos sozinhos. Entenda por que cargos rígidos se esgotaram e como gestão por habilidades e mobilidade interna elevam a retenção."
 
 # Nome do autor
 author: "Equipe Fiter"

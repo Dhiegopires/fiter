@@ -10,7 +10,9 @@ function inlineLogoSVGs() {
         imgs.forEach(img => {
             const doc = parser.parseFromString(svgText, 'image/svg+xml');
             const svg = doc.documentElement;
-            svg.style.height = img.style.height || '28px';
+            // altura definida no <img> (classe utilitária u-h-*) ou 28px padrão
+            const hasHeight = [...img.classList].some(c => c.startsWith('u-h-'));
+            svg.style.height = hasHeight ? getComputedStyle(img).height : '28px';
             svg.style.width = 'auto';
             svg.removeAttribute('width');
             svg.removeAttribute('height');
@@ -435,7 +437,9 @@ document.addEventListener('DOMContentLoaded', () => {
             data.forEach((d, i) => {
                 const item = document.createElement('div');
                 item.className = 'legend-item';
-                item.innerHTML = `<span class="legend-dot" style="background:${d.color}"></span><span class="legend-label">${d.label}</span><span class="legend-pct" style="color:${d.color}">${d.pct}%</span>`;
+                item.innerHTML = `<span class="legend-dot"></span><span class="legend-label">${d.label}</span><span class="legend-pct">${d.pct}%</span>`;
+                item.querySelector('.legend-dot').style.background = d.color;
+                item.querySelector('.legend-pct').style.color = d.color;
                 legendEl.appendChild(item);
                 item.addEventListener('mouseenter', () => highlight(i));
                 item.addEventListener('mouseleave', reset);

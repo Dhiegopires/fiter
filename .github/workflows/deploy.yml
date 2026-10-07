@@ -53,4 +53,5 @@ jobs:
             --exclude='project-seo-audit.html' \
             --exclude='fiter-seo-audit-v2.html' \
             --exclude='.ftp-deploy-sync-state.json' \
+            --exclude='.seo-check.json' \
             ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:/home/u312193603/domains/fiter.com.br/public_html/

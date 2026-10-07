@@ -1,7 +1,7 @@
 ---
 # Título principal do artigo
 # Evite títulos muito longos (ideal: até 60 caracteres)
-title: "Pesquisa de Clima vs. Pesquisa Pulse: Estratégias Complementares para a Gestão de Pessoas e Conformidade com a NR1"
+title: "Pesquisa de Clima vs. Pesquisa Pulse: Diferenças e a NR1"
 
 # URL do artigo
 # Use letras minúsculas e hífens
@@ -19,8 +19,7 @@ readingTime: 4
 
 # Pequena descrição para SEO e cards sociais
 # Ideal: até 160 caracteres
-description: "Entenda as diferenças cruciais entre as duas metodologias, saiba como elas blindam a sua empresa juridicamente e descubra como o ecossistema Fiter potencializa a sua tomada de decisão.
-"
+description: "Entenda as diferenças entre pesquisa de clima e pesquisa pulse, como elas protegem sua empresa na NR1 e como a Fiter apoia a tomada de decisão."
 
 # Nome do autor
 author: "EQUIPE FITER"

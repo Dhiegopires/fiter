@@ -19,7 +19,7 @@ readingTime: 4
 
 # Pequena descrição para SEO e cards sociais
 # Ideal: até 160 caracteres
-description: "A evasão de alunos é um dos maiores ralos financeiros do Ensino Superior. Entenda como as tecnologias de análise preditiva do RH estão sendo aplicadas para identificar comportamentos de risco precocemente e revolucionar a retenção de estudantes na sua IES."
+description: "A evasão é um dos maiores ralos financeiros do Ensino Superior. Veja como a análise preditiva identifica alunos em risco e melhora a retenção na sua IES."
 
 # Nome do autor
 author: "Equipe Fiter"

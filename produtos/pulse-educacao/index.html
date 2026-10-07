@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="TH4kqZnapgxjblie2KFVRM3laak_fIKLUfN9Dm5b1YY">
     <title>Pulse Educação | Engajamento e Felicidade via WhatsApp | Fiter</title>
-    <meta name="description" content="Pulse survey de alunos em 8 cliques e 2 minutos direto no WhatsApp. Meça o Índice de Felicidade no Ensino (IFE) com IA. Preveja evasão escolar em tempo real. Sem app.">
+    <meta name="description" content="Pulse survey de alunos em 8 cliques pelo WhatsApp, sem app. Meça o Índice de Felicidade no Ensino (IFE) com IA e preveja a evasão em tempo real.">
     <link rel="canonical" href="https://fiter.com.br/produtos/pulse-educacao/">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/assets/img/fiter_logo_fi.svg" type="image/svg+xml">
@@ -36,10 +36,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=d3ea2f08">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=b7ba4a46">
     <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/assets/js/lucide.min.js"></script>
     <style>
         @media (max-width: 900px) {
             .pulse-hero-grid { grid-template-columns: 1fr !important; }
@@ -102,6 +102,7 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9091218.js"></script>
 <!-- End of HubSpot Embed Code -->
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body data-theme="analytics">
 
@@ -109,7 +110,7 @@
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/" aria-label="Fiter"><img class="u-h-28px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"></a>
 
         <ul class="nav-links">
 
@@ -143,6 +144,9 @@
                     <a class="drop-link" href="/produtos/ouvidoria/">
                         <div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Canal de ética com IA</div></div>
                     </a>
+                    <a class="drop-link" href="/produtos/">
+                        <div><div class="drop-link-name">Todos os produtos</div><div class="drop-link-tag">Visão geral e comparação</div></div>
+                    </a>
                 </div>
             </li>
 
@@ -166,7 +170,7 @@
         </ul>
 
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars u-td-none" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -179,7 +183,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+            <div class="nav-panel-logo u-d-flex u-ai-center u-jc-space-between"><img class="u-h-24px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"><button class="u-bg-none u-border-none u-cursor-pointer u-c-text-secondary u-p-0_25rem u-d-flex u-ai-center u-jc-center" id="nav-close" aria-label="Fechar menu"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -197,6 +201,7 @@
                     <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
                     <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
                     <a class="drawer-sub-link" href="/produtos/ouvidoria/">Ouvidoria</a>
+                    <a class="drawer-sub-link" href="/produtos/">Todos os produtos</a>
                 </div></div>
             </div>
 
@@ -214,120 +219,120 @@
             <a class="drawer-plain-link" href="/blog/">Blog</a>
 
             <div class="drawer-cta">
-                <a class="btn btn-primary w-full" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+                <a class="btn btn-primary w-full u-td-none u-jc-center" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             </div>
         </div>
     </div>
 
 
-    <main class="main-content" style="padding-top: 64px;">
+    <main class="main-content u-pt-64px">
 
         <!-- Ambient glow orbs -->
         <div class="glow-orb glow-orb-tl" aria-hidden="true"></div>
         <div class="glow-orb glow-orb-br" aria-hidden="true"></div>
 
-        <div style="position: relative; z-index: 1;">
+        <div class="u-pos-relative u-z-1">
 
             <!-- HERO -->
-            <section class="ds-section" style="padding-top: 5rem; margin-bottom: 0;">
-                <div class="pulse-hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; min-height: calc(100vh - 120px);">
+            <section class="ds-section u-pt-5rem u-mb-0">
+                <div class="pulse-hero-grid u-d-grid u-cols-1fr-1fr u-gap-4rem u-ai-center u-minh-calc-100vh-n-120px">
 
                     <!-- Left: copy -->
                     <div>
-                        <div style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.35rem 0.9rem;background:rgba(16,185,129,0.08);border:1px solid rgba(16,185,129,0.2);border-radius:100px;margin-bottom:1.5rem;">
-                            <span style="font-size:0.85rem;">🧬</span>
-                            <span style="font-family:var(--font-mono);font-size:0.6rem;color:#10b981;text-transform:uppercase;letter-spacing:0.1em;">Tecnologia proprietária de IA preditiva para a coordenação acadêmica</span>
+                        <div class="u-d-inline-flex u-ai-center u-gap-0_5rem u-p-0_35rem-0_9rem u-bg-rgba-16-185-129-0_08 u-mix-644e0 u-mb-1_5rem">
+                            <span class="u-fs-0_85rem">🧬</span>
+                            <span class="u-ff-font-mono u-fs-0_6rem u-c-color-success u-tt-uppercase u-ls-0_1em">Tecnologia proprietária de IA preditiva para a coordenação acadêmica</span>
                         </div>
-                        <h1 data-reveal style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 2rem; color: var(--text-primary);">
+                        <h1 class="u-ff-font-serif u-fs-clamp-2_5rem-4vw-3_75rem-9920c u-fw-800 u-ls-n0_03em u-lh-1_1 u-mb-2rem u-c-text-primary" data-reveal>
                             Sua instituição parece bem.<br>Os dados contam outra história.
                         </h1>
-                        <p style="font-size: 1rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.75; max-width: 88%;">
-                            Se a sua coordenação acadêmica ainda mede o clima com pesquisas estáticas que as pessoas detestam responder, você está olhando pelo retrovisor. O Fiter Pulse une a precisão da <strong style="color:var(--text-primary);">Escala IFE</strong> validada em tese científica ao poder da IA Generativa. Em 2 minutos via WhatsApp, seu aluno faz uma autoanálise guiada e a sua coordenação acadêmica ganha inteligência para antecipar afastamentos e evitar a evasão antes que aconteçam.
+                        <p class="u-fs-1rem u-c-text-secondary u-mb-2rem u-lh-1_75 u-maxw-88pct">
+                            Se a sua coordenação acadêmica ainda mede o clima com pesquisas estáticas que as pessoas detestam responder, você está olhando pelo retrovisor. O Fiter Pulse une a precisão da <strong class="u-c-text-primary">Escala IFE</strong> validada em tese científica ao poder da IA Generativa. Em 2 minutos via WhatsApp, seu aluno faz uma autoanálise guiada e a sua coordenação acadêmica ganha inteligência para antecipar afastamentos e evitar a evasão antes que aconteçam.
                         </p>
-                        <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
-                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration: none;">Quero uma demonstração com especialistas →</a>
-                            <a href="#como-funciona" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Como funciona</a>
+                        <div class="u-d-flex u-fwrap-wrap u-gap-1rem u-mb-1_25rem">
+                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none">Quero uma demonstração com especialistas →</a>
+                            <a href="#como-funciona" class="btn btn-secondary btn-animate-chars u-td-none">Como funciona</a>
                         </div>
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);line-height:1.4;">Líder em IFE · Atendendo de grandes universidades a redes de ensino em expansão desde 2021.</p>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-text-tertiary u-lh-1_4">Líder em IFE · Atendendo de grandes universidades a redes de ensino em expansão desde 2021.</p>
                     </div>
 
                     <!-- Right: dashboard mockup -->
-                    <div class="pulse-hero-visual" style="position:relative;">
-                        <div style="position:absolute;inset:-40px;background:radial-gradient(circle at center,rgba(16,185,129,0.15) 0%,transparent 65%);pointer-events:none;z-index:0;"></div>
-                        <div style="position:relative;z-index:1;background:#09090f;border:1px solid rgba(16,185,129,0.2);border-radius:16px;overflow:hidden;font-family:var(--font-mono);box-shadow:0 40px 100px rgba(0,0,0,0.6);">
+                    <div class="pulse-hero-visual u-pos-relative">
+                        <div class="u-pos-absolute u-inset-n40px u-bg-radial-gradient-circ3ae94 u-pe-none u-z-0"></div>
+                        <div class="u-pos-relative u-z-1 u-bg-mockup-bg-ink u-mix-53966 u-overflow-hidden u-ff-font-mono u-box-shadow-0-40px-100px-rgba-0-0-0-0_6">
                             <!-- Browser chrome -->
-                            <div style="background:#0d0d18;border-bottom:1px solid rgba(255,255,255,0.06);padding:0.65rem 1rem;display:flex;align-items:center;gap:0.5rem;">
-                                <div style="width:10px;height:10px;border-radius:50%;background:#ff5f57;"></div>
-                                <div style="width:10px;height:10px;border-radius:50%;background:#febc2e;"></div>
-                                <div style="width:10px;height:10px;border-radius:50%;background:#28c840;"></div>
-                                <div style="flex:1;margin:0 0.75rem;background:rgba(255,255,255,0.06);border-radius:6px;padding:0.25rem 0.75rem;font-size:0.55rem;color:rgba(255,255,255,0.3);">fiter.com.br/pulse-educacao/dashboard</div>
+                            <div class="u-bg-mockup-bg-navy u-border-bottom-1px-solid-rgba-255-26adaa u-p-0_65rem-1rem u-d-flex u-ai-center u-gap-0_5rem">
+                                <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-close"></div>
+                                <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-minimize"></div>
+                                <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-maximize"></div>
+                                <div class="u-flex-1 u-m-0-0_75rem u-bg-rgba-255-255-255-0_06 u-radius-6px u-p-0_25rem-0_75rem u-fs-0_55rem u-c-rgba-255-255-255-0_3">fiter.com.br/pulse-educacao/dashboard</div>
                             </div>
                             <!-- Header -->
-                            <div style="background:#0e0e1a;padding:0.75rem 1.25rem;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,0.05);">
+                            <div class="u-bg-mockup-bg-indigo u-p-0_75rem-1_25rem u-d-flex u-jc-space-between u-ai-center u-border-bottom-1px-solid-rgba-255-240888">
                                 <div>
-                                    <div style="font-size:0.95rem;font-weight:700;color:#fff;letter-spacing:-0.01em;">Fiter Pulse Educação</div>
-                                    <div style="font-size:0.52rem;color:rgba(255,255,255,0.3);margin-top:1px;">Maio 2026 · 1.240 respostas</div>
+                                    <div class="u-fs-0_95rem u-fw-700 u-c-color-white u-ls-n0_01em">Fiter Pulse Educação</div>
+                                    <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_3 u-mt-1px">Maio 2026 · 1.240 respostas</div>
                                 </div>
-                                <div style="display:flex;align-items:center;gap:0.35rem;">
-                                    <span style="width:7px;height:7px;border-radius:50%;background:#25d366;box-shadow:0 0 7px rgba(37,211,102,0.65);"></span>
-                                    <span style="font-size:0.52rem;color:rgba(37,211,102,0.85);line-height:1;">ao vivo</span>
+                                <div class="u-d-flex u-ai-center u-gap-0_35rem">
+                                    <span class="u-w-7px u-h-7px u-radius-50pct u-bg-color-whatsapp u-box-shadow-0-0-7px-rgba-37-211-102-0_65"></span>
+                                    <span class="u-fs-0_52rem u-c-rgba-37-211-102-0_85 u-lh-1">ao vivo</span>
                                 </div>
                             </div>
                             <!-- Content -->
-                            <div style="padding:1.25rem;display:flex;flex-direction:column;gap:1rem;">
+                            <div class="u-p-1_25rem u-d-flex u-fdir-column u-gap-1rem">
                                 <!-- Score + three tiles -->
-                                <div style="display:grid;grid-template-columns:auto 1fr;gap:1.25rem;align-items:center;padding-bottom:1rem;border-bottom:1px solid rgba(255,255,255,0.05);">
-                                    <div style="text-align:center;">
-                                        <div style="font-family:var(--font-serif);font-size:2.5rem;font-weight:800;color:#10b981;line-height:1;">87</div>
-                                        <div style="font-size:0.5rem;color:rgba(255,255,255,0.3);margin-top:0.2rem;">IFE Score</div>
-                                        <div style="font-size:0.55rem;color:#10b981;margin-top:0.1rem;">↑ +5 pts</div>
+                                <div class="u-d-grid u-cols-auto-1fr u-gap-1_25rem u-ai-center u-pb-1rem u-border-bottom-1px-solid-rgba-255-240888">
+                                    <div class="u-ta-center">
+                                        <div class="u-ff-font-serif u-fs-2_5rem u-fw-800 u-c-color-success u-lh-1">87</div>
+                                        <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_3 u-mt-0_2rem">IFE Score</div>
+                                        <div class="u-fs-0_55rem u-c-color-success u-mt-0_1rem">↑ +5 pts</div>
                                     </div>
-                                    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.4rem;">
-                                        <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.24);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
-                                            <div style="font-size:1.05rem;font-weight:700;color:#10b981;line-height:1;">87</div>
-                                            <div style="font-size:0.45rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">IFE</div>
+                                    <div class="u-d-grid u-cols-1fr-1fr-1fr u-gap-0_4rem">
+                                        <div class="u-bg-rgba-16-185-129-0_1 u-mix-6bede u-p-0_55rem-0_4rem u-ta-center">
+                                            <div class="u-fs-1_05rem u-fw-700 u-c-color-success u-lh-1">87</div>
+                                            <div class="u-fs-0_45rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">IFE</div>
                                         </div>
-                                        <div style="background:rgba(59,130,246,0.1);border:1px solid rgba(59,130,246,0.24);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
-                                            <div style="font-size:1.05rem;font-weight:700;color:#3b82f6;line-height:1;">82</div>
-                                            <div style="font-size:0.45rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">Engajamento</div>
+                                        <div class="u-bg-rgba-59-130-246-0_1 u-mix-b1d37 u-p-0_55rem-0_4rem u-ta-center">
+                                            <div class="u-fs-1_05rem u-fw-700 u-c-color-blue u-lh-1">82</div>
+                                            <div class="u-fs-0_45rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">Engajamento</div>
                                         </div>
-                                        <div style="background:rgba(139,92,246,0.1);border:1px solid rgba(139,92,246,0.24);border-radius:8px;padding:0.55rem 0.4rem;text-align:center;">
-                                            <div style="font-size:1.05rem;font-weight:700;color:#a78bfa;line-height:1;">91</div>
-                                            <div style="font-size:0.45rem;color:rgba(255,255,255,0.35);margin-top:0.2rem;">Fit Cultural</div>
+                                        <div class="u-bg-rgba-139-92-246-0_1 u-mix-5e075 u-p-0_55rem-0_4rem u-ta-center">
+                                            <div class="u-fs-1_05rem u-fw-700 u-c-color-purple u-lh-1">91</div>
+                                            <div class="u-fs-0_45rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">Fit Cultural</div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Sparkline -->
-                                <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:10px;padding:0.75rem 0.9rem;">
-                                    <div style="font-size:0.5rem;color:rgba(255,255,255,0.25);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.5rem;">Evolução mensal do IFE</div>
-                                    <svg width="100%" viewBox="0 0 260 52" fill="none" preserveAspectRatio="none" style="display:block;">
+                                <div class="u-bg-rgba-255-255-255-0_03 u-mix-72612 u-p-0_75rem-0_9rem">
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_25 u-tt-uppercase u-ls-0_06em u-mb-0_5rem">Evolução mensal do IFE</div>
+                                    <svg class="u-d-block" width="100%" viewBox="0 0 260 52" fill="none" preserveAspectRatio="none">
                                         <defs><linearGradient id="pg-hero-edu" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#10b981" stop-opacity="0.2"/><stop offset="100%" stop-color="#10b981" stop-opacity="0"/></linearGradient></defs>
                                         <polygon points="0,46 44,42 88,36 132,28 176,20 220,14 260,10 260,52 0,52" fill="url(#pg-hero-edu)"/>
                                         <polyline points="0,46 44,42 88,36 132,28 176,20 220,14 260,10" stroke="#10b981" stroke-width="1.8" fill="none" stroke-linejoin="round"/>
                                         <polyline points="0,38 260,38" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="4 3" fill="none"/>
                                         <circle cx="260" cy="10" r="3" fill="#10b981"/>
                                     </svg>
-                                    <div style="display:flex;justify-content:space-between;margin-top:0.3rem;">
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Dez</span>
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Jan</span>
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Fev</span>
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mar</span>
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Abr</span>
-                                        <span style="font-size:0.45rem;color:rgba(255,255,255,0.15);">Mai</span>
+                                    <div class="u-d-flex u-jc-space-between u-mt-0_3rem">
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Dez</span>
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Jan</span>
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Fev</span>
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Mar</span>
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Abr</span>
+                                        <span class="u-fs-0_45rem u-c-rgba-255-255-255-0_15">Mai</span>
                                     </div>
                                 </div>
                                 <!-- Evasion alert -->
-                                <div style="background:rgba(239,68,68,0.07);border:1px solid rgba(239,68,68,0.25);border-radius:10px;padding:0.65rem 0.8rem;display:flex;align-items:flex-start;gap:0.5rem;">
-                                    <span style="font-size:0.75rem;flex-shrink:0;line-height:1.2;margin-top:0.05rem;">⚠</span>
+                                <div class="u-bg-rgba-239-68-68-0_07 u-mix-c50aa u-p-0_65rem-0_8rem u-d-flex u-ai-flex-start u-gap-0_5rem">
+                                    <span class="u-fs-0_75rem u-flex-shrink-0 u-lh-1_2 u-mt-0_05rem">⚠</span>
                                     <div>
-                                        <div style="font-size:0.6rem;font-weight:600;color:#ef4444;margin-bottom:0.15rem;">Risco de evasão detectado</div>
-                                        <div style="font-size:0.52rem;color:rgba(255,255,255,0.38);line-height:1.4;">3 alunos · ADS 3° período · IFE caiu 18 pts em 4 sem.</div>
+                                        <div class="u-fs-0_6rem u-fw-600 u-c-color-red u-mb-0_15rem">Risco de evasão detectado</div>
+                                        <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_38 u-lh-1_4">3 alunos · ADS 3° período · IFE caiu 18 pts em 4 sem.</div>
                                     </div>
                                 </div>
                                 <!-- AI action -->
-                                <div style="background:rgba(16,185,129,0.06);border:1px solid rgba(16,185,129,0.14);border-radius:10px;padding:0.65rem 0.85rem;display:flex;align-items:center;gap:0.5rem;">
-                                    <span style="font-size:0.65rem;color:#10b981;flex-shrink:0;line-height:1;">✦</span>
-                                    <div style="font-size:0.58rem;color:rgba(255,255,255,0.6);line-height:1.5;">IA recomenda plano de ação com 3 alunos de ADS 3° período antes de 30/05</div>
+                                <div class="u-bg-rgba-16-185-129-0_06 u-mix-5313c u-p-0_65rem-0_85rem u-d-flex u-ai-center u-gap-0_5rem">
+                                    <span class="u-fs-0_65rem u-c-color-success u-flex-shrink-0 u-lh-1">✦</span>
+                                    <div class="u-fs-0_58rem u-c-rgba-255-255-255-0_6 u-lh-1_5">IA recomenda plano de ação com 3 alunos de ADS 3° período antes de 30/05</div>
                                 </div>
                             </div>
                         </div>
@@ -336,158 +341,158 @@
                 </div>
 
                 <!-- Metrics bar -->
-                <div class="pulse-metrics-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); overflow: hidden;">
-                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); --reveal-delay: 0s;">
-                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem;">−7%</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">no índice de absenteísmo médio</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">instituições clientes</div>
+                <div class="pulse-metrics-grid u-d-grid u-cols-repeat-4-1fr-e2fe0 u-mt-5rem u-mix-464e7 u-overflow-hidden">
+                    <div class="fade-up u-p-2rem-2_5rem u-bg-bg-surface u--reveal-delay-0s">
+                        <div class="u-ff-font-serif u-fs-2_75rem u-fw-800 u-c-text-primary u-lh-1 u-mb-0_5rem">−7%</div>
+                        <div class="u-ff-font-mono u-fs-0_62rem u-tt-uppercase u-ls-0_08em u-c-text-secondary u-lh-1_4">no índice de absenteísmo médio</div>
+                        <div class="u-ff-font-mono u-fs-0_56rem u-c-text-tertiary u-mt-0_4rem">instituições clientes</div>
                     </div>
-                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); border-left: 1px solid var(--border-default); --reveal-delay: 0.07s;">
-                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem;">−11%</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">na evasão escolar voluntária</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">instituições clientes</div>
+                    <div class="fade-up u-p-2rem-2_5rem u-bg-bg-surface u-border-left-1px-solid-border-default u--reveal-delay-0_07s">
+                        <div class="u-ff-font-serif u-fs-2_75rem u-fw-800 u-c-text-primary u-lh-1 u-mb-0_5rem">−11%</div>
+                        <div class="u-ff-font-mono u-fs-0_62rem u-tt-uppercase u-ls-0_08em u-c-text-secondary u-lh-1_4">na evasão escolar voluntária</div>
+                        <div class="u-ff-font-mono u-fs-0_56rem u-c-text-tertiary u-mt-0_4rem">instituições clientes</div>
                     </div>
-                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); border-left: 1px solid var(--border-default); --reveal-delay: 0.14s;">
-                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--text-primary); line-height: 1; margin-bottom: 0.5rem;">−6%</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">nos afastamentos por saúde mental</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">instituições clientes</div>
+                    <div class="fade-up u-p-2rem-2_5rem u-bg-bg-surface u-border-left-1px-solid-border-default u--reveal-delay-0_14s">
+                        <div class="u-ff-font-serif u-fs-2_75rem u-fw-800 u-c-text-primary u-lh-1 u-mb-0_5rem">−6%</div>
+                        <div class="u-ff-font-mono u-fs-0_62rem u-tt-uppercase u-ls-0_08em u-c-text-secondary u-lh-1_4">nos afastamentos por saúde mental</div>
+                        <div class="u-ff-font-mono u-fs-0_56rem u-c-text-tertiary u-mt-0_4rem">instituições clientes</div>
                     </div>
-                    <div class="fade-up" style="padding: 2rem 2.5rem; background: var(--bg-surface); border-left: 1px solid var(--border-default); --reveal-delay: 0.21s;">
-                        <div style="font-family: var(--font-serif); font-size: 2.75rem; font-weight: 800; color: var(--accent-brand); line-height: 1; margin-bottom: 0.5rem;">+31%</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); line-height: 1.4;">de engajamento em turmas satisfeitas</div>
-                        <div style="font-family: var(--font-mono); font-size: 0.56rem; color: var(--text-tertiary); margin-top: 0.4rem;">pesquisa USP e Mackenzie</div>
+                    <div class="fade-up u-p-2rem-2_5rem u-bg-bg-surface u-border-left-1px-solid-border-default u--reveal-delay-0_21s">
+                        <div class="u-ff-font-serif u-fs-2_75rem u-fw-800 u-c-accent-brand u-lh-1 u-mb-0_5rem">+31%</div>
+                        <div class="u-ff-font-mono u-fs-0_62rem u-tt-uppercase u-ls-0_08em u-c-text-secondary u-lh-1_4">de engajamento em turmas satisfeitas</div>
+                        <div class="u-ff-font-mono u-fs-0_56rem u-c-text-tertiary u-mt-0_4rem">pesquisa USP e Mackenzie</div>
                     </div>
                 </div>
             </section>
 
             <!-- A DOR -->
-            <section class="ds-section" style="margin-top:8rem;margin-bottom:8rem;">
-                <div style="max-width:760px;">
-                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">A dor que ninguém quer ver</p>
-                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:1.5rem;">O "ponto cego" que custa<br>caro para a sua operação.</h2>
-                    <p style="font-size:1.0625rem;color:var(--text-secondary);line-height:1.75;margin-bottom:1.25rem;">Como gestores e educadores, nós sabemos: a maioria das pesquisas de clima tradicionais colhe dados obsoletos ou vira um mural de reclamações sem saída. Quando o relatório finalmente chega à mesa da diretoria, o aluno já pediu transferência ou trancou a matrícula.</p>
-                    <p style="font-size:1.0625rem;color:var(--text-secondary);line-height:1.75;">A Fiter nasceu em 2021 para resolver esse problem-solution fit. Não avaliamos a instituição de forma genérica, guiamos o aluno em uma jornada pedagógica de autoanálise. O resultado? <strong style="color:var(--text-primary);">Dados limpos, éticos e acionáveis em tempo real.</strong></p>
+            <section class="ds-section u-mt-8rem u-mb-8rem">
+                <div class="u-maxw-760px">
+                    <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">A dor que ninguém quer ver</p>
+                    <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_5rem" data-reveal>O "ponto cego" que custa<br>caro para a sua operação.</h2>
+                    <p class="u-fs-1_0625rem u-c-text-secondary u-lh-1_75 u-mb-1_25rem">Como gestores e educadores, nós sabemos: a maioria das pesquisas de clima tradicionais colhe dados obsoletos ou vira um mural de reclamações sem saída. Quando o relatório finalmente chega à mesa da diretoria, o aluno já pediu transferência ou trancou a matrícula.</p>
+                    <p class="u-fs-1_0625rem u-c-text-secondary u-lh-1_75">A Fiter nasceu em 2021 para resolver esse problem-solution fit. Não avaliamos a instituição de forma genérica, guiamos o aluno em uma jornada pedagógica de autoanálise. O resultado? <strong class="u-c-text-primary">Dados limpos, éticos e acionáveis em tempo real.</strong></p>
                 </div>
             </section>
 
             <!-- ECOSSISTEMA DIRETO DA FÁBRICA -->
-            <section id="produto" class="ds-section" style="margin-top: 0; margin-bottom: 8rem;">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">Direto da fábrica</p>
-                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary);">
+            <section id="produto" class="ds-section u-mt-0 u-mb-8rem">
+                <div class="u-ta-center u-mb-4rem">
+                    <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Direto da fábrica</p>
+                    <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem-2c439 u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary" data-reveal>
                         Ciência de ponta. Tecnologia proprietária.<br>Sem intermediários.
                     </h2>
                 </div>
 
                 <!-- 3 pilares -->
-                <div class="pulse-features-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 4rem;">
-                    <div class="fade-up" style="padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); --reveal-delay: 0s;">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16,185,129,0.12); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                            <i data-lucide="heart" style="width: 20px; height: 20px;"></i>
+                <div class="pulse-features-grid u-d-grid u-cols-repeat-3-1fr u-gap-1_5rem u-mb-4rem">
+                    <div class="fade-up u-p-2_5rem u-bg-bg-surface u-mix-464e7 u--reveal-delay-0s">
+                        <div class="u-w-44px u-h-44px u-bg-rgba-16-185-129-0_12 u-mix-df20c u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                            <i class="u-w-20px u-h-20px" data-lucide="heart"></i>
                         </div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Escala IFE</h3>
-                        <p style="font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #10b981; margin-bottom: 1rem;">Índice de Felicidade no Ensino</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">O framework científico definitivo que traduz bem-estar, saúde mental e fit cultural em indicadores reais de engajamento e aprendizado calculados por aluno, turma e instituição.</p>
+                        <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_5rem">Escala IFE</h3>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-tt-uppercase u-ls-0_08em u-c-color-success u-mb-1rem">Índice de Felicidade no Ensino</p>
+                        <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">O framework científico definitivo que traduz bem-estar, saúde mental e fit cultural em indicadores reais de engajamento e aprendizado calculados por aluno, turma e instituição.</p>
                     </div>
-                    <div class="fade-up" style="padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); --reveal-delay: 0.08s;">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(59,130,246,0.12); border: 1px solid rgba(59,130,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #3b82f6;">
-                            <i data-lucide="book-open" style="width: 20px; height: 20px;"></i>
+                    <div class="fade-up u-p-2_5rem u-bg-bg-surface u-mix-464e7 u--reveal-delay-0_08s">
+                        <div class="u-w-44px u-h-44px u-bg-rgba-59-130-246-0_12 u-mix-af1de u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-blue">
+                            <i class="u-w-20px u-h-20px" data-lucide="book-open"></i>
                         </div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Validação Científica</h3>
-                        <p style="font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #3b82f6; margin-bottom: 1rem;">Base acadêmica e literária</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Metodologia validada em tese acadêmica. Perguntas testadas cientificamente para medir o que dizem medir, sem viés e sem achismo.</p>
+                        <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_5rem">Validação Científica</h3>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-tt-uppercase u-ls-0_08em u-c-color-blue u-mb-1rem">Base acadêmica e literária</p>
+                        <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">Metodologia validada em tese acadêmica. Perguntas testadas cientificamente para medir o que dizem medir, sem viés e sem achismo.</p>
                     </div>
-                    <div class="fade-up" style="padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg); --reveal-delay: 0.16s;">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(139,92,246,0.12); border: 1px solid rgba(139,92,246,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #a78bfa;">
-                            <i data-lucide="sliders" style="width: 20px; height: 20px;"></i>
+                    <div class="fade-up u-p-2_5rem u-bg-bg-surface u-mix-464e7 u--reveal-delay-0_16s">
+                        <div class="u-w-44px u-h-44px u-bg-rgba-139-92-246-0_12 u-mix-ad50e u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-purple">
+                            <i class="u-w-20px u-h-20px" data-lucide="sliders"></i>
                         </div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem;">Elasticidade Operacional</h3>
-                        <p style="font-family: var(--font-mono); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.08em; color: #a78bfa; margin-bottom: 1rem;">Do ensino básico ao ensino superior</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Nossa tecnologia se ajusta perfeitamente à sua realidade, seja uma grande universidade com milhares de alunos ou uma escola média estruturando seu crescimento.</p>
+                        <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_5rem">Elasticidade Operacional</h3>
+                        <p class="u-ff-font-mono u-fs-0_65rem u-tt-uppercase u-ls-0_08em u-c-color-purple u-mb-1rem">Do ensino básico ao ensino superior</p>
+                        <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">Nossa tecnologia se ajusta perfeitamente à sua realidade, seja uma grande universidade com milhares de alunos ou uma escola média estruturando seu crescimento.</p>
                     </div>
                 </div>
 
                 <!-- Perspectiva dual: Aluno vs Coordenação -->
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:2rem;">
-                    <div style="padding:1.75rem;background:var(--bg-surface);border:1px solid rgba(16,185,129,0.18);border-radius:var(--radius-lg);">
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#10b981;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Experiência do Aluno</p>
-                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Autoanálise mensal via WhatsApp em 2 minutos (8 cliques). Usa as escalas científicas IFE ou Satisfação, calcula o Fit Cultural e gera um PDI (Plano de Desenvolvimento Individual) imediato por inteligência generativa, sem login e sem app.</p>
+                <div class="u-d-grid u-cols-1fr-1fr u-gap-1_25rem u-mb-2rem">
+                    <div class="u-p-1_75rem u-bg-bg-surface u-mix-785e2">
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-color-success u-tt-uppercase u-ls-0_1em u-mb-0_75rem">Experiência do Aluno</p>
+                        <p class="u-fs-0_9375rem u-c-text-secondary u-lh-1_65">Autoanálise mensal via WhatsApp em 2 minutos (8 cliques). Usa as escalas científicas IFE ou Satisfação, calcula o Fit Cultural e gera um PDI (Plano de Desenvolvimento Individual) imediato por inteligência generativa, sem login e sem app.</p>
                     </div>
-                    <div style="padding:1.75rem;background:var(--bg-surface);border:1px solid rgba(59,130,246,0.18);border-radius:var(--radius-lg);">
-                        <p style="font-family:var(--font-mono);font-size:0.65rem;color:#3b82f6;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.75rem;">Experiência da Coordenação Acadêmica e Professores</p>
-                        <p style="font-size:0.9375rem;color:var(--text-secondary);line-height:1.65;">Em 1 clique e 1 minuto, a coordenação acadêmica acessa predições de evasão e alertas de risco. Mensalmente, o gestor/professor recebe um diagnóstico da turma com planos de ação automáticos via IA.</p>
+                    <div class="u-p-1_75rem u-bg-bg-surface u-mix-f42ba">
+                        <p class="u-ff-font-mono u-fs-0_65rem u-c-color-blue u-tt-uppercase u-ls-0_1em u-mb-0_75rem">Experiência da Coordenação Acadêmica e Professores</p>
+                        <p class="u-fs-0_9375rem u-c-text-secondary u-lh-1_65">Em 1 clique e 1 minuto, a coordenação acadêmica acessa predições de evasão e alertas de risco. Mensalmente, o gestor/professor recebe um diagnóstico da turma com planos de ação automáticos via IA.</p>
                     </div>
                 </div>
 
                 <!-- Com isso, o Pulse: checklist + mini dashboard -->
-                <div class="pulse-checklist-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; padding: 3.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
+                <div class="pulse-checklist-grid u-d-grid u-cols-1fr-1fr u-gap-4rem u-ai-center u-p-3_5rem u-bg-bg-surface u-mix-464e7">
                     <div>
-                        <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 1.5rem;">Com isso, o Pulse:</p>
-                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
-                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                                <span style="width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #10b981;">
-                                    <i data-lucide="check" style="width: 12px; height: 12px;"></i>
+                        <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_12em u-mb-1_5rem">Com isso, o Pulse:</p>
+                        <div class="u-d-flex u-fdir-column u-gap-1_25rem">
+                            <div class="u-d-flex u-ai-flex-start u-gap-1rem">
+                                <span class="u-w-22px u-h-22px u-bg-rgba-16-185-129-0_15 u-mix-6f4df u-d-flex u-ai-center u-jc-center u-flex-shrink-0 u-mt-2px u-c-color-success">
+                                    <i class="u-w-12px u-h-12px" data-lucide="check"></i>
                                 </span>
-                                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">Mede satisfação e engajamento de forma contínua</p>
+                                <p class="u-c-text-secondary u-fs-1rem u-lh-1_65 u-m-0">Mede satisfação e engajamento de forma contínua</p>
                             </div>
-                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                                <span style="width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #10b981;">
-                                    <i data-lucide="check" style="width: 12px; height: 12px;"></i>
+                            <div class="u-d-flex u-ai-flex-start u-gap-1rem">
+                                <span class="u-w-22px u-h-22px u-bg-rgba-16-185-129-0_15 u-mix-6f4df u-d-flex u-ai-center u-jc-center u-flex-shrink-0 u-mt-2px u-c-color-success">
+                                    <i class="u-w-12px u-h-12px" data-lucide="check"></i>
                                 </span>
-                                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">Prevê evasão e absenteísmo antes que ocorram</p>
+                                <p class="u-c-text-secondary u-fs-1rem u-lh-1_65 u-m-0">Prevê evasão e absenteísmo antes que ocorram</p>
                             </div>
-                            <div style="display: flex; align-items: flex-start; gap: 1rem;">
-                                <span style="width: 22px; height: 22px; border-radius: 50%; background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; color: #10b981;">
-                                    <i data-lucide="check" style="width: 12px; height: 12px;"></i>
+                            <div class="u-d-flex u-ai-flex-start u-gap-1rem">
+                                <span class="u-w-22px u-h-22px u-bg-rgba-16-185-129-0_15 u-mix-6f4df u-d-flex u-ai-center u-jc-center u-flex-shrink-0 u-mt-2px u-c-color-success">
+                                    <i class="u-w-12px u-h-12px" data-lucide="check"></i>
                                 </span>
-                                <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.65; margin: 0;">Orienta professores e líderes com dados preditivos para agir antes que o problema aconteça</p>
+                                <p class="u-c-text-secondary u-fs-1rem u-lh-1_65 u-m-0">Orienta professores e líderes com dados preditivos para agir antes que o problema aconteça</p>
                             </div>
                         </div>
                     </div>
 
                     <!-- Mini dashboard preview -->
-                    <div style="background: #09090f; border: 1px solid rgba(16,185,129,0.18); border-radius: 16px; overflow: hidden; font-family: var(--font-mono);">
-                        <div style="background: #0d0d18; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 0.65rem 1rem; display: flex; align-items: center; gap: 0.5rem;">
-                            <div style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f57;"></div>
-                            <div style="width: 10px; height: 10px; border-radius: 50%; background: #febc2e;"></div>
-                            <div style="width: 10px; height: 10px; border-radius: 50%; background: #28c840;"></div>
-                            <div style="flex: 1; margin: 0 0.75rem; background: rgba(255,255,255,0.06); border-radius: 6px; padding: 0.25rem 0.75rem; font-size: 0.55rem; color: rgba(255,255,255,0.3);">fiter.com.br/pulse-educacao/dashboard</div>
+                    <div class="u-bg-mockup-bg-ink u-mix-c96a0 u-overflow-hidden u-ff-font-mono">
+                        <div class="u-bg-mockup-bg-navy u-border-bottom-1px-solid-rgba-255-26adaa u-p-0_65rem-1rem u-d-flex u-ai-center u-gap-0_5rem">
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-close"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-minimize"></div>
+                            <div class="u-w-10px u-h-10px u-radius-50pct u-bg-window-dot-maximize"></div>
+                            <div class="u-flex-1 u-m-0-0_75rem u-bg-rgba-255-255-255-0_06 u-radius-6px u-p-0_25rem-0_75rem u-fs-0_55rem u-c-rgba-255-255-255-0_3">fiter.com.br/pulse-educacao/dashboard</div>
                         </div>
-                        <div style="background: #0e0e1a; padding: 0.75rem 1.25rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                        <div class="u-bg-mockup-bg-indigo u-p-0_75rem-1_25rem u-d-flex u-jc-space-between u-ai-center u-border-bottom-1px-solid-rgba-255-240888">
                             <div>
-                                <div style="font-size: 0.7rem; font-weight: 700; color: #fff;">Fiter Pulse Educação</div>
-                                <div style="font-size: 0.52rem; color: rgba(255,255,255,0.3); margin-top: 1px;">Maio 2026 · 1.240 respostas</div>
+                                <div class="u-fs-0_7rem u-fw-700 u-c-color-white">Fiter Pulse Educação</div>
+                                <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_3 u-mt-1px">Maio 2026 · 1.240 respostas</div>
                             </div>
-                            <div style="display: flex; align-items: center; gap: 0.35rem;">
-                                <span style="width: 7px; height: 7px; border-radius: 50%; background: #25d366; box-shadow: 0 0 7px rgba(37,211,102,0.65);"></span>
-                                <span style="font-size: 0.52rem; color: rgba(37,211,102,0.85);">ao vivo</span>
+                            <div class="u-d-flex u-ai-center u-gap-0_35rem">
+                                <span class="u-w-7px u-h-7px u-radius-50pct u-bg-color-whatsapp u-box-shadow-0-0-7px-rgba-37-211-102-0_65"></span>
+                                <span class="u-fs-0_52rem u-c-rgba-37-211-102-0_85">ao vivo</span>
                             </div>
                         </div>
-                        <div style="padding: 1.1rem 1.25rem; display: flex; flex-direction: column; gap: 0.9rem;">
-                            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.6rem;">
-                                <div style="background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.24); border-radius: 10px; padding: 0.75rem 0.5rem; text-align: center;">
-                                    <div style="font-size: 1.5rem; font-weight: 700; color: #10b981; line-height: 1;">87</div>
-                                    <div style="font-size: 0.5rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem;">IFE</div>
+                        <div class="u-p-1_1rem-1_25rem u-d-flex u-fdir-column u-gap-0_9rem">
+                            <div class="u-d-grid u-cols-1fr-1fr-1fr u-gap-0_6rem">
+                                <div class="u-bg-rgba-16-185-129-0_1 u-mix-550eb u-p-0_75rem-0_5rem u-ta-center">
+                                    <div class="u-fs-1_5rem u-fw-700 u-c-color-success u-lh-1">87</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">IFE</div>
                                 </div>
-                                <div style="background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.24); border-radius: 10px; padding: 0.75rem 0.5rem; text-align: center;">
-                                    <div style="font-size: 1.5rem; font-weight: 700; color: #3b82f6; line-height: 1;">82</div>
-                                    <div style="font-size: 0.5rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem;">Engajamento</div>
+                                <div class="u-bg-rgba-59-130-246-0_1 u-mix-0f439 u-p-0_75rem-0_5rem u-ta-center">
+                                    <div class="u-fs-1_5rem u-fw-700 u-c-color-blue u-lh-1">82</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">Engajamento</div>
                                 </div>
-                                <div style="background: rgba(139,92,246,0.1); border: 1px solid rgba(139,92,246,0.24); border-radius: 10px; padding: 0.75rem 0.5rem; text-align: center;">
-                                    <div style="font-size: 1.5rem; font-weight: 700; color: #a78bfa; line-height: 1;">91</div>
-                                    <div style="font-size: 0.5rem; color: rgba(255,255,255,0.35); margin-top: 0.2rem;">Fit Cultural</div>
+                                <div class="u-bg-rgba-139-92-246-0_1 u-mix-f65d8 u-p-0_75rem-0_5rem u-ta-center">
+                                    <div class="u-fs-1_5rem u-fw-700 u-c-color-purple u-lh-1">91</div>
+                                    <div class="u-fs-0_5rem u-c-rgba-255-255-255-0_35 u-mt-0_2rem">Fit Cultural</div>
                                 </div>
                             </div>
-                            <div style="background: rgba(239,68,68,0.07); border: 1px solid rgba(239,68,68,0.25); border-radius: 10px; padding: 0.65rem 0.8rem; display: flex; align-items: flex-start; gap: 0.5rem;">
-                                <span style="font-size: 0.75rem; flex-shrink: 0; line-height: 1.2; margin-top: 0.05rem;">⚠</span>
+                            <div class="u-bg-rgba-239-68-68-0_07 u-mix-c50aa u-p-0_65rem-0_8rem u-d-flex u-ai-flex-start u-gap-0_5rem">
+                                <span class="u-fs-0_75rem u-flex-shrink-0 u-lh-1_2 u-mt-0_05rem">⚠</span>
                                 <div>
-                                    <div style="font-size: 0.6rem; font-weight: 600; color: #ef4444; margin-bottom: 0.15rem;">Risco de evasão detectado</div>
-                                    <div style="font-size: 0.52rem; color: rgba(255,255,255,0.38); line-height: 1.4;">3 alunos · ADS 3° · IFE caiu 18 pts em 4 sem.</div>
+                                    <div class="u-fs-0_6rem u-fw-600 u-c-color-red u-mb-0_15rem">Risco de evasão detectado</div>
+                                    <div class="u-fs-0_52rem u-c-rgba-255-255-255-0_38 u-lh-1_4">3 alunos · ADS 3° · IFE caiu 18 pts em 4 sem.</div>
                                 </div>
                             </div>
-                            <div style="background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.12); border-radius: 10px; padding: 0.65rem 0.85rem; display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="font-size: 0.65rem; color: #10b981; flex-shrink: 0;">✦</span>
-                                <div style="font-size: 0.58rem; color: rgba(255,255,255,0.6); line-height: 1.5;">IA recomenda plano de ação para 3 alunos de ADS 3° antes de 30/05</div>
+                            <div class="u-bg-rgba-16-185-129-0_05 u-mix-b6b32 u-p-0_65rem-0_85rem u-d-flex u-ai-center u-gap-0_5rem">
+                                <span class="u-fs-0_65rem u-c-color-success u-flex-shrink-0">✦</span>
+                                <div class="u-fs-0_58rem u-c-rgba-255-255-255-0_6 u-lh-1_5">IA recomenda plano de ação para 3 alunos de ADS 3° antes de 30/05</div>
                             </div>
                         </div>
                     </div>
@@ -495,120 +500,120 @@
             </section>
 
             <!-- COMO FUNCIONA -->
-            <section id="como-funciona" style="margin-bottom: 8rem; margin-inline: -2rem; padding: 7rem 5vw; background: var(--bg-surface); border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default);">
-                <div style="max-width: 1280px; margin: 0 auto;">
-                    <div style="text-align: center; margin-bottom: 4.5rem;">
-                        <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">O Pulse em ação</p>
-                        <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary);">
+            <section class="u-mb-8rem u-margin-inline-n2rem u-p-7rem-5vw u-bg-bg-surface u-border-top-1px-solid-border-default u-border-bottom-1px-solid-border-default" id="como-funciona">
+                <div class="u-maxw-1280px u-m-0-auto">
+                    <div class="u-ta-center u-mb-4_5rem">
+                        <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">O Pulse em ação</p>
+                        <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem-2c439 u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary" data-reveal>
                             A simplicidade por fora,<br>a robustez por dentro.
                         </h2>
                     </div>
 
-                    <div class="pulse-steps-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
-                        <div class="fade-up" style="--reveal-delay: 0s; padding: 2.5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--bg-base);">
-                            <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.75rem;">Passo 01</p>
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                                <i data-lucide="settings" style="width: 22px; height: 22px;"></i>
+                    <div class="pulse-steps-grid u-d-grid u-cols-repeat-2-1fr u-gap-2rem">
+                        <div class="fade-up u--reveal-delay-0s u-p-2_5rem u-mix-464e7 u-bg-bg-base">
+                            <p class="u-ff-font-mono u-fs-0_62rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1_75rem">Passo 01</p>
+                            <div class="u-w-48px u-h-48px u-bg-rgba-16-185-129-0_1 u-mix-ade20 u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                                <i class="u-w-22px u-h-22px" data-lucide="settings"></i>
                             </div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Setup Inteligente</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Sua instituição assina o termo de adesão. Nossa IA analisa seu segmento e cultura, recomendando as personalizações ideais e emitindo um plano de comunicação sob medida.</p>
+                            <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">Setup Inteligente</h3>
+                            <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">Sua instituição assina o termo de adesão. Nossa IA analisa seu segmento e cultura, recomendando as personalizações ideais e emitindo um plano de comunicação sob medida.</p>
                         </div>
-                        <div class="fade-up" style="--reveal-delay: 0.1s; padding: 2.5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--bg-base);">
-                            <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.75rem;">Passo 02</p>
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                                <i data-lucide="send" style="width: 22px; height: 22px;"></i>
+                        <div class="fade-up u--reveal-delay-0_1s u-p-2_5rem u-mix-464e7 u-bg-bg-base">
+                            <p class="u-ff-font-mono u-fs-0_62rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1_75rem">Passo 02</p>
+                            <div class="u-w-48px u-h-48px u-bg-rgba-16-185-129-0_1 u-mix-ade20 u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                                <i class="u-w-22px u-h-22px" data-lucide="send"></i>
                             </div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Disparo Invisível via API</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Sem planilhas manuais. O robô da Fiter envia mensagens automáticas e personalizadas via WhatsApp, e-mail ou QR Code. O aluno não precisa baixar nenhum aplicativo.</p>
+                            <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">Disparo Invisível via API</h3>
+                            <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">Sem planilhas manuais. O robô da Fiter envia mensagens automáticas e personalizadas via WhatsApp, e-mail ou QR Code. O aluno não precisa baixar nenhum aplicativo.</p>
                         </div>
-                        <div class="fade-up" style="--reveal-delay: 0.2s; padding: 2.5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--bg-base);">
-                            <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.75rem;">Passo 03</p>
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                                <i data-lucide="smartphone" style="width: 22px; height: 22px;"></i>
+                        <div class="fade-up u--reveal-delay-0_2s u-p-2_5rem u-mix-464e7 u-bg-bg-base">
+                            <p class="u-ff-font-mono u-fs-0_62rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1_75rem">Passo 03</p>
+                            <div class="u-w-48px u-h-48px u-bg-rgba-16-185-129-0_1 u-mix-ade20 u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                                <i class="u-w-22px u-h-22px" data-lucide="smartphone"></i>
                             </div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">8 Cliques, 2 Minutos</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">O aluno responde a uma autoanálise rápida. Na mesma hora, a IA Generativa devolve o seu índice IFE e um PDI (Plano de Desenvolvimento Individual) personalizado em tempo real.</p>
+                            <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">8 Cliques, 2 Minutos</h3>
+                            <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">O aluno responde a uma autoanálise rápida. Na mesma hora, a IA Generativa devolve o seu índice IFE e um PDI (Plano de Desenvolvimento Individual) personalizado em tempo real.</p>
                         </div>
-                        <div class="fade-up" style="--reveal-delay: 0.3s; padding: 2.5rem; border: 1px solid var(--border-default); border-radius: var(--radius-lg); background: var(--bg-base);">
-                            <p style="font-family: var(--font-mono); font-size: 0.62rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.75rem;">Passo 04</p>
-                            <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                                <i data-lucide="refresh-cw" style="width: 22px; height: 22px;"></i>
+                        <div class="fade-up u--reveal-delay-0_3s u-p-2_5rem u-mix-464e7 u-bg-bg-base">
+                            <p class="u-ff-font-mono u-fs-0_62rem u-c-accent-brand u-tt-uppercase u-ls-0_1em u-mb-1_75rem">Passo 04</p>
+                            <div class="u-w-48px u-h-48px u-bg-rgba-16-185-129-0_1 u-mix-ade20 u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                                <i class="u-w-22px u-h-22px" data-lucide="refresh-cw"></i>
                             </div>
-                            <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Ciclo Evolutivo</h3>
-                            <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">No mês seguinte, o robô retorna com novas perguntas dinâmicas, atualiza o gráfico do aluno e colhe novos insights, mantendo o processo vivo e a inteligência sempre crescendo.</p>
+                            <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">Ciclo Evolutivo</h3>
+                            <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">No mês seguinte, o robô retorna com novas perguntas dinâmicas, atualiza o gráfico do aluno e colhe novos insights, mantendo o processo vivo e a inteligência sempre crescendo.</p>
                         </div>
                     </div>
                 </div>
             </section>
 
             <!-- PAINEL DIRETORIA ESCOLAR -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div style="margin-bottom:3rem;">
-                    <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Para a diretoria escolar</p>
-                    <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:0.75rem;">1 clique, 1 minuto,<br>governança completa.</h2>
-                    <p style="font-size:1rem;color:var(--text-secondary);line-height:1.7;max-width:560px;">Esqueça os relatórios densos de Excel. Nosso ecossistema foi feito para a tomada de decisão ágil e distribuída.</p>
+            <section class="ds-section u-mb-8rem">
+                <div class="u-mb-3rem">
+                    <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Para a diretoria escolar</p>
+                    <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-0_75rem" data-reveal>1 clique, 1 minuto,<br>governança completa.</h2>
+                    <p class="u-fs-1rem u-c-text-secondary u-lh-1_7 u-maxw-560px">Esqueça os relatórios densos de Excel. Nosso ecossistema foi feito para a tomada de decisão ágil e distribuída.</p>
                 </div>
-                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
-                    <div class="fade-up" style="--reveal-delay: 0s; padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                            <i data-lucide="layout-dashboard" style="width: 20px; height: 20px;"></i>
+                <div class="u-d-grid u-cols-repeat-2-1fr u-gap-1_5rem">
+                    <div class="fade-up u--reveal-delay-0s u-p-2_5rem u-bg-bg-surface u-mix-464e7">
+                        <div class="u-w-44px u-h-44px u-bg-rgba-16-185-129-0_1 u-mix-df20c u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                            <i class="u-w-20px u-h-20px" data-lucide="layout-dashboard"></i>
                         </div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Visão Macro e Micro Dinâmica</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Monitore campi, polos de EAD, unidades ou cursos específicos em uma única tela. Com drill-down da instituição inteira até o nível de uma única sala de aula.</p>
+                        <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">Visão Macro e Micro Dinâmica</h3>
+                        <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">Monitore campi, polos de EAD, unidades ou cursos específicos em uma única tela. Com drill-down da instituição inteira até o nível de uma única sala de aula.</p>
                     </div>
-                    <div class="fade-up" style="--reveal-delay: 0.08s; padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                            <i data-lucide="shield-check" style="width: 20px; height: 20px;"></i>
+                    <div class="fade-up u--reveal-delay-0_08s u-p-2_5rem u-bg-bg-surface u-mix-464e7">
+                        <div class="u-w-44px u-h-44px u-bg-rgba-16-185-129-0_1 u-mix-df20c u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                            <i class="u-w-20px u-h-20px" data-lucide="shield-check"></i>
                         </div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Diagnósticos Individuais e Éticos</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Graças ao algoritmo proprietário de autoanálise, o Super Admin identifica vulnerabilidades na operação sem invadir a individualidade do aluno. Anonimato por design.</p>
+                        <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">Diagnósticos Individuais e Éticos</h3>
+                        <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">Graças ao algoritmo proprietário de autoanálise, o Super Admin identifica vulnerabilidades na operação sem invadir a individualidade do aluno. Anonimato por design.</p>
                     </div>
-                    <div class="fade-up" style="--reveal-delay: 0.16s; padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                            <i data-lucide="bell" style="width: 20px; height: 20px;"></i>
+                    <div class="fade-up u--reveal-delay-0_16s u-p-2_5rem u-bg-bg-surface u-mix-464e7">
+                        <div class="u-w-44px u-h-44px u-bg-rgba-16-185-129-0_1 u-mix-df20c u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                            <i class="u-w-20px u-h-20px" data-lucide="bell"></i>
                         </div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Agentes de IA e Sistema Notify</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">Nossa tecnologia atua como um analista de risco contínuo. Os agentes processam todos os pulses e enviam diagnósticos automáticos diretamente para o coordenador de cada curso ou diretoria.</p>
+                        <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">Agentes de IA e Sistema Notify</h3>
+                        <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">Nossa tecnologia atua como um analista de risco contínuo. Os agentes processam todos os pulses e enviam diagnósticos automáticos diretamente para o coordenador de cada curso ou diretoria.</p>
                     </div>
-                    <div class="fade-up" style="--reveal-delay: 0.24s; padding: 2.5rem; background: var(--bg-surface); border: 1px solid var(--border-default); border-radius: var(--radius-lg);">
-                        <div style="width: 44px; height: 44px; border-radius: 10px; background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: #10b981;">
-                            <i data-lucide="trending-up" style="width: 20px; height: 20px;"></i>
+                    <div class="fade-up u--reveal-delay-0_24s u-p-2_5rem u-bg-bg-surface u-mix-464e7">
+                        <div class="u-w-44px u-h-44px u-bg-rgba-16-185-129-0_1 u-mix-df20c u-d-flex u-ai-center u-jc-center u-mb-1_5rem u-c-color-success">
+                            <i class="u-w-20px u-h-20px" data-lucide="trending-up"></i>
                         </div>
-                        <h3 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 0.75rem;">Planos de Ação Preditivos</h3>
-                        <p style="color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.65;">O gestor recebe não apenas métricas, mas predições baseadas em ciência de dados e planos de ação direcionados. Sua instituição atua de forma cirúrgica e preventiva, nunca reativa.</p>
+                        <h3 class="u-ff-font-serif u-fs-1_25rem u-fw-700 u-c-text-primary u-mb-0_75rem">Planos de Ação Preditivos</h3>
+                        <p class="u-c-text-secondary u-fs-0_9375rem u-lh-1_65">O gestor recebe não apenas métricas, mas predições baseadas em ciência de dados e planos de ação direcionados. Sua instituição atua de forma cirúrgica e preventiva, nunca reativa.</p>
                     </div>
                 </div>
             </section>
 
             <!-- FLEXÍVEL POR NATUREZA -->
-            <section class="ds-section" style="margin-bottom:8rem;">
-                <p style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent-brand);text-transform:uppercase;letter-spacing:0.14em;margin-bottom:1.25rem;">Flexível por natureza</p>
-                <h2 data-reveal style="font-family:var(--font-serif);font-size:clamp(2rem,3vw,2.75rem);font-weight:800;letter-spacing:-0.025em;line-height:1.1;color:var(--text-primary);margin-bottom:3rem;">A tecnologia que respeita<br>o tamanho do seu desafio.</h2>
-                <p style="font-size:1.0625rem;color:var(--text-secondary);line-height:1.75;max-width:680px;margin-bottom:3rem;">Entendemos que a coordenação acadêmica de uma escola de ensino básico, de uma rede técnica ou de uma universidade possuem dores diferentes. O Fiter Pulse não exige que você mude seus processos é a nossa plataforma que se molda à cultura da sua instituição.</p>
-                <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
-                    <div class="fade-up" style="--reveal-delay:0s;padding:2rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
-                        <div style="font-size:1.5rem;margin-bottom:1rem;">🛡️</div>
-                        <h3 style="font-family:var(--font-serif);font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;">Evite Passivos e Afastamentos</h3>
-                        <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">Monitore riscos de saúde mental em tempo real e apoie sua comunidade escolar.</p>
+            <section class="ds-section u-mb-8rem">
+                <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Flexível por natureza</p>
+                <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-3rem" data-reveal>A tecnologia que respeita<br>o tamanho do seu desafio.</h2>
+                <p class="u-fs-1_0625rem u-c-text-secondary u-lh-1_75 u-maxw-680px u-mb-3rem">Entendemos que a coordenação acadêmica de uma escola de ensino básico, de uma rede técnica ou de uma universidade possuem dores diferentes. O Fiter Pulse não exige que você mude seus processos é a nossa plataforma que se molda à cultura da sua instituição.</p>
+                <div class="u-d-grid u-cols-repeat-3-1fr-823d0 u-gap-1_5rem">
+                    <div class="fade-up u--reveal-delay-0s u-p-2rem u-bg-bg-surface u-mix-464e7">
+                        <div class="u-fs-1_5rem u-mb-1rem">🛡️</div>
+                        <h3 class="u-ff-font-serif u-fs-1_125rem u-fw-700 u-c-text-primary u-mb-0_5rem">Evite Passivos e Afastamentos</h3>
+                        <p class="u-fs-0_875rem u-c-text-secondary u-lh-1_6">Monitore riscos de saúde mental em tempo real e apoie sua comunidade escolar.</p>
                     </div>
-                    <div class="fade-up" style="--reveal-delay:0.1s;padding:2rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
-                        <div style="font-size:1.5rem;margin-bottom:1rem;">📉</div>
-                        <h3 style="font-family:var(--font-serif);font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;">Derrube a Evasão</h3>
-                        <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">Identifique o desengajamento semanas antes de ele se transformar em um trancamento de matrícula.</p>
+                    <div class="fade-up u--reveal-delay-0_1s u-p-2rem u-bg-bg-surface u-mix-464e7">
+                        <div class="u-fs-1_5rem u-mb-1rem">📉</div>
+                        <h3 class="u-ff-font-serif u-fs-1_125rem u-fw-700 u-c-text-primary u-mb-0_5rem">Derrube a Evasão</h3>
+                        <p class="u-fs-0_875rem u-c-text-secondary u-lh-1_6">Identifique o desengajamento semanas antes de ele se transformar em um trancamento de matrícula.</p>
                     </div>
-                    <div class="fade-up" style="--reveal-delay:0.2s;padding:2rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);">
-                        <div style="font-size:1.5rem;margin-bottom:1rem;">📊</div>
-                        <h3 style="font-family:var(--font-serif);font-size:1.125rem;font-weight:700;color:var(--text-primary);margin-bottom:0.5rem;">Cultura Guiada por Dados</h3>
-                        <p style="font-size:0.875rem;color:var(--text-secondary);line-height:1.6;">Conecte a felicidade e o bem-estar no ensino aos resultados reais de aprendizado e performance.</p>
+                    <div class="fade-up u--reveal-delay-0_2s u-p-2rem u-bg-bg-surface u-mix-464e7">
+                        <div class="u-fs-1_5rem u-mb-1rem">📊</div>
+                        <h3 class="u-ff-font-serif u-fs-1_125rem u-fw-700 u-c-text-primary u-mb-0_5rem">Cultura Guiada por Dados</h3>
+                        <p class="u-fs-0_875rem u-c-text-secondary u-lh-1_6">Conecte a felicidade e o bem-estar no ensino aos resultados reais de aprendizado e performance.</p>
                     </div>
                 </div>
             </section>
 
             <!-- FAQ -->
-            <section class="ds-section" style="margin-bottom: 8rem;">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">Perguntas frequentes</p>
-                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary);">
+            <section class="ds-section u-mb-8rem">
+                <div class="u-ta-center u-mb-3rem">
+                    <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Perguntas frequentes</p>
+                    <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem-2c439 u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary" data-reveal>
                         Tudo o que você precisa<br>saber antes de contratar.
                     </h2>
                 </div>
@@ -653,18 +658,18 @@
             </section>
 
             <!-- CTA FINAL -->
-            <section class="ds-section" style="margin-bottom: 4rem; padding: 5rem 3.5rem; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px solid var(--border-default); position: relative; overflow: hidden; text-align: center;">
-                <div aria-hidden="true" style="position: absolute; top: -80px; left: 50%; transform: translateX(-50%); width: 500px; height: 300px; background: radial-gradient(circle, rgba(16,185,129,0.07) 0%, transparent 70%); pointer-events: none;"></div>
-                <div style="position: relative; z-index: 1; max-width: 600px; margin: 0 auto;">
-                    <p style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--accent-brand); text-transform: uppercase; letter-spacing: 0.14em; margin-bottom: 1.25rem;">Pronto para transformar?</p>
-                    <h2 data-reveal style="font-family: var(--font-serif); font-size: clamp(2rem, 3vw, 2.75rem); font-weight: 800; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-primary); margin-bottom: 1.25rem;">
+            <section class="ds-section u-mb-4rem u-p-5rem-3_5rem u-bg-bg-surface u-mix-d6dde u-pos-relative u-overflow-hidden u-ta-center">
+                <div class="u-pos-absolute u-top-n80px u-left-50pct u-transform-translatex-50pct u-w-500px u-h-300px u-bg-radial-gradient-circ7ebf5 u-pe-none" aria-hidden="true"></div>
+                <div class="u-pos-relative u-z-1 u-maxw-600px u-m-0-auto">
+                    <p class="u-ff-font-mono u-fs-0_68rem u-c-accent-brand u-tt-uppercase u-ls-0_14em u-mb-1_25rem">Pronto para transformar?</p>
+                    <h2 class="u-ff-font-serif u-fs-clamp-2rem-3vw-2_75rem-2c439 u-fw-800 u-ls-n0_025em u-lh-1_1 u-c-text-primary u-mb-1_25rem" data-reveal>
                         Seja o líder da transformação<br>baseada em dados na sua instituição de ensino.
                     </h2>
-                    <p style="color: var(--text-secondary); font-size: 1rem; line-height: 1.7; margin-bottom: 2.5rem; max-width: 480px; margin-left: auto; margin-right: auto;">Agende uma conversa pedagógica com nossos especialistas.</p>
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom:1.5rem;">
-                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration: none; padding: 1rem 2.5rem;">Agendar Demonstração Prática da Tecnologia →</a>
+                    <p class="u-c-text-secondary u-fs-1rem u-lh-1_7 u-mb-2_5rem u-maxw-480px u-ml-auto u-mr-auto">Agende uma conversa pedagógica com nossos especialistas.</p>
+                    <div class="u-d-flex u-jc-center u-gap-1rem u-fwrap-wrap u-mb-1_5rem">
+                        <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none u-p-1rem-2_5rem">Agendar Demonstração Prática da Tecnologia →</a>
                     </div>
-                    <p style="font-family:var(--font-mono);font-size:0.65rem;color:var(--text-tertiary);">Descubra em minutos como o Fiter Pulse se adapta ao seu cenário atual.</p>
+                    <p class="u-ff-font-mono u-fs-0_65rem u-c-text-tertiary">Descubra em minutos como o Fiter Pulse se adapta ao seu cenário atual.</p>
                 </div>
             </section>
 

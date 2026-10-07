@@ -20,10 +20,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&family=Geist:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/style.min.css?v=d3ea2f08">
+    <link rel="stylesheet" href="/assets/css/style.min.css?v=b7ba4a46">
     <link rel="stylesheet" href="/assets/css/tailwind.min.css">
     <script src="/assets/js/main.min.js" defer></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="/assets/js/lucide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@v3.1.0/dist/cookieconsent.css">
     <script async src="https://t.contentsquare.net/uxa/cd11f6271f295.js"></script>
     <script type="module">
@@ -74,6 +74,7 @@
 <!-- Start of HubSpot Embed Code -->
 <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/9091218.js"></script>
 <!-- End of HubSpot Embed Code -->
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body data-theme="base">
 
@@ -81,7 +82,7 @@
 <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
 
-        <a class="nav-logo" href="/" aria-label="Fiter"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/" aria-label="Fiter"><img class="u-h-28px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"></a>
 
         <ul class="nav-links">
 
@@ -115,6 +116,9 @@
                     <a class="drop-link" href="/produtos/ouvidoria/">
                         <div><div class="drop-link-name">Ouvidoria</div><div class="drop-link-tag">Canal de ética com IA</div></div>
                     </a>
+                    <a class="drop-link" href="/produtos/">
+                        <div><div class="drop-link-name">Todos os produtos</div><div class="drop-link-tag">Visão geral e comparação</div></div>
+                    </a>
                 </div>
             </li>
 
@@ -138,7 +142,7 @@
         </ul>
 
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars u-td-none" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
@@ -151,7 +155,7 @@
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo" style="display:flex;align-items:center;justify-content:space-between;"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"><button id="nav-close" aria-label="Fechar menu" style="background:none;border:none;cursor:pointer;color:var(--text-secondary);padding:0.25rem;display:flex;align-items:center;justify-content:center;"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
+            <div class="nav-panel-logo u-d-flex u-ai-center u-jc-space-between"><img class="u-h-24px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"><button class="u-bg-none u-border-none u-cursor-pointer u-c-text-secondary u-p-0_25rem u-d-flex u-ai-center u-jc-center" id="nav-close" aria-label="Fechar menu"><svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'/><line x1='6' y1='6' x2='18' y2='18'/></svg></button></div>
 
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
@@ -169,6 +173,7 @@
                     <a class="drawer-sub-link" href="/produtos/pesquisa-de-clima/">Pesquisa de Clima</a>
                     <a class="drawer-sub-link" href="/produtos/nr01/">Agente NR1</a>
                     <a class="drawer-sub-link" href="/produtos/ouvidoria/">Ouvidoria</a>
+                    <a class="drawer-sub-link" href="/produtos/">Todos os produtos</a>
                 </div></div>
             </div>
 
@@ -186,35 +191,35 @@
             <a class="drawer-plain-link" href="/blog/">Blog</a>
 
             <div class="drawer-cta">
-                <a class="btn btn-primary w-full" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none; justify-content:center;">Agendar demonstração</a>
+                <a class="btn btn-primary w-full u-td-none u-jc-center" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             </div>
         </div>
     </div>
 
 
-    <main class="main-content" style="padding-top: 64px;">
+    <main class="main-content u-pt-64px">
         <div class="ds-container px-6">
 
             <!-- CONFIRMATION -->
-            <section class="ds-section" style="min-height: 70vh; display: flex; align-items: center; justify-content: center; margin-bottom: 4rem;">
-                <div style="max-width: 640px; text-align: center;">
-                    <div style="width: 80px; height: 80px; border-radius: 50%; background: var(--bg-surface); border: 1px solid var(--border-default); display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; color: var(--accent-brand);">
-                        <i data-lucide="check" style="width: 40px; height: 40px;"></i>
+            <section class="ds-section u-minh-70vh u-d-flex u-ai-center u-jc-center u-mb-4rem">
+                <div class="u-maxw-640px u-ta-center">
+                    <div class="u-w-80px u-h-80px u-bg-bg-surface u-mix-17f53 u-d-flex u-ai-center u-jc-center u-m-0-auto-2rem u-c-accent-brand">
+                        <i class="u-w-40px u-h-40px" data-lucide="check"></i>
                     </div>
-                    <h1 style="font-family: var(--font-serif); font-size: clamp(2.5rem, 4vw, 3.5rem); color: var(--text-primary); font-weight: 400; font-style: italic; margin-bottom: 2rem; line-height: 1.1;">
+                    <h1 class="u-ff-font-serif u-fs-clamp-2_5rem-4vw-3_5rem u-c-text-primary u-fw-400 u-font-style-italic u-mb-2rem u-lh-1_1">
                         Hey, Obrigada!
                     </h1>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                        Ficamos felizes em saber que você prioriza a saúde mental e a segurança no ambiente de trabalho. O seu <strong style="color: var(--text-primary);">Guia Prático de Gestão dos Riscos Psicossociais</strong> já está a caminho do seu E-mail. Este material foi desenvolvido para ser uma ferramenta estratégica na sua rotina de gestão e conformidade com a NR1.
+                    <p class="u-c-text-secondary u-fs-1_125rem u-lh-1_7 u-mb-1_5rem">
+                        Ficamos felizes em saber que você prioriza a saúde mental e a segurança no ambiente de trabalho. O seu <strong class="u-c-text-primary">Guia Prático de Gestão dos Riscos Psicossociais</strong> já está a caminho do seu E-mail. Este material foi desenvolvido para ser uma ferramenta estratégica na sua rotina de gestão e conformidade com a NR1.
                     </p>
-                    <p style="color: var(--text-secondary); font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                        Enquanto você aguarda, que tal explorar outros conteúdos técnicos em <a href="/blog/" style="color: var(--accent-brand); text-decoration: underline;">nosso blog</a>? Continue acompanhando a <strong style="color: var(--text-primary);">Fiter</strong> para ficar por dentro das melhores práticas em Saúde e Segurança do Trabalho. Boa leitura e conte conosco para transformar a cultura da sua empresa!
+                    <p class="u-c-text-secondary u-fs-1_125rem u-lh-1_7 u-mb-1_5rem">
+                        Enquanto você aguarda, que tal explorar outros conteúdos técnicos em <a class="u-c-accent-brand u-td-underline" href="/blog/">nosso blog</a>? Continue acompanhando a <strong class="u-c-text-primary">Fiter</strong> para ficar por dentro das melhores práticas em Saúde e Segurança do Trabalho. Boa leitura e conte conosco para transformar a cultura da sua empresa!
                     </p>
-                    <p style="color: var(--text-tertiary); font-size: 0.9rem; line-height: 1.6; font-style: italic;">
+                    <p class="u-c-text-tertiary u-fs-0_9rem u-lh-1_6 u-font-style-italic">
                         Ah, não se esqueça, se você não recebeu ainda, verifique a sua caixa de spam!
                     </p>
-                    <div style="margin-top: 3rem;">
-                        <a href="/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars" style="text-decoration: none;">Voltar ao Guia</a>
+                    <div class="u-mt-3rem">
+                        <a href="/guia-pratico-de-gestao-dos-riscos-psicossociais/" class="btn btn-secondary btn-animate-chars u-td-none">Voltar ao Guia</a>
                     </div>
                 </div>
             </section>

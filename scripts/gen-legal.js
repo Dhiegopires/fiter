@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação principal">
     <div class="nav-inner">
-        <a class="nav-logo" href="/"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:28px;width:auto;"></a>
+        <a class="nav-logo" href="/"><img class="u-h-28px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"></a>
         <ul class="nav-links">
             <li class="nav-item has-drop" data-nav-item>
                 <button class="nav-link">Soluções <span class="nav-chevron">▾</span></button>
@@ -28,14 +28,14 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
         </ul>
         <div class="nav-right">
-            <a class="btn btn-primary nav-cta btn-animate-chars" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">Agendar demonstração</a>
+            <a class="btn btn-primary nav-cta btn-animate-chars u-td-none" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
             <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </div>
     <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
         <div class="nav-backdrop" id="nav-backdrop"></div>
         <div class="nav-panel" role="dialog" aria-label="Menu de navegação">
-            <div class="nav-panel-logo"><img src="/assets/img/fiter_logo.svg" alt="Fiter" style="height:24px;width:auto;"></div>
+            <div class="nav-panel-logo"><img class="u-h-24px u-w-auto" src="/assets/img/fiter_logo.svg" alt="Fiter"></div>
             <div class="drawer-item" data-drawer-item>
                 <button class="drawer-trigger">Soluções <span class="drawer-chevron">▾</span></button>
                 <div class="drawer-sub"><div class="drawer-sub-inner">
@@ -58,7 +58,7 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             </div>
             <a class="drawer-plain-link" href="/sobre/">Sobre</a>
             <a class="drawer-plain-link" href="/blog/">Blog</a>
-            <div class="drawer-cta"><a class="btn btn-primary w-full" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" style="text-decoration:none;justify-content:center;">Agendar demonstração</a></div>
+            <div class="drawer-cta"><a class="btn btn-primary w-full u-td-none u-jc-center" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a></div>
         </div>
     </div>
 </nav>`;
@@ -70,7 +70,7 @@ const FOOTER = `<div id="footer-placeholder"></div>
     .then(html => { document.getElementById('footer-placeholder').innerHTML = html; if (window.lucide) lucide.createIcons(); });
 </script>`;
 
-const SCRIPTS = `<script src="https://unpkg.com/lucide@latest"></script>
+const SCRIPTS = `<script src="/assets/js/lucide.min.js"></script>
 <script src="/assets/js/main.js" defer></script>
 <script>document.addEventListener('DOMContentLoaded',()=>{if(window.lucide)lucide.createIcons();});</script>`;
 
@@ -156,6 +156,7 @@ function head(title, desc, canonical) {
       gtag('js', new Date());
       gtag('config', 'G-RL4MTL7XFE');
     </script>
+    <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>`;
 }
@@ -167,7 +168,7 @@ const lgpd = head(
   'https://fiter.com.br/lgpd/'
 ) + `
 ${NAV}
-<main class="main-content" style="padding-top:64px;">
+<main class="main-content u-pt-64px">
     <div class="ds-container px-6">
         <div class="legal-wrap">
             <div class="legal-breadcrumb">
@@ -176,25 +177,25 @@ ${NAV}
             <h1>LGPD na Fiter</h1>
             <span class="legal-date">Última atualização: maio de 2026</span>
 
-            <p>A <strong style="color:var(--text-primary);">Lei Geral de Proteção de Dados Pessoais</strong> (Lei nº 13.709/2018 — LGPD) regula o tratamento de dados pessoais no Brasil. A Fiter está comprometida com o cumprimento integral dessa lei e com a transparência no uso das informações que trata.</p>
+            <p>A <strong class="u-c-text-primary">Lei Geral de Proteção de Dados Pessoais</strong> (Lei nº 13.709/2018 — LGPD) regula o tratamento de dados pessoais no Brasil. A Fiter está comprometida com o cumprimento integral dessa lei e com a transparência no uso das informações que trata.</p>
 
             <h2>O que é a LGPD?</h2>
             <p>A LGPD é a lei brasileira de proteção de dados, inspirada no GDPR europeu. Ela define regras para coleta, armazenamento, uso, compartilhamento e eliminação de dados pessoais — qualquer informação que identifique ou possa identificar uma pessoa natural.</p>
             <p>A lei garante direitos aos titulares dos dados e impõe obrigações às organizações que os tratam, com o objetivo de proteger a privacidade e a liberdade individual.</p>
 
             <h2>Papel da Fiter</h2>
-            <p>A Fiter atua como <strong style="color:var(--text-primary);">operadora</strong> de dados quando processa informações de colaboradores em nome das empresas clientes, e como <strong style="color:var(--text-primary);">controladora</strong> quando trata dados de seus próprios clientes e visitantes do site.</p>
+            <p>A Fiter atua como <strong class="u-c-text-primary">operadora</strong> de dados quando processa informações de colaboradores em nome das empresas clientes, e como <strong class="u-c-text-primary">controladora</strong> quando trata dados de seus próprios clientes e visitantes do site.</p>
 
             <div class="legal-highlight">
-                <p style="margin:0;"><strong style="color:var(--text-primary);">Dado sensível no contexto Fiter:</strong> as respostas às pesquisas de bem-estar e saúde mental são classificadas como dados sensíveis pela LGPD. Tratamos essas informações de forma anonimizada — gestores nunca têm acesso à resposta individual de nenhum colaborador.</p>
+                <p class="u-m-0"><strong class="u-c-text-primary">Dado sensível no contexto Fiter:</strong> as respostas às pesquisas de bem-estar e saúde mental são classificadas como dados sensíveis pela LGPD. Tratamos essas informações de forma anonimizada — gestores nunca têm acesso à resposta individual de nenhum colaborador.</p>
             </div>
 
             <h2>Bases legais que utilizamos</h2>
             <ul>
-                <li><strong style="color:var(--text-primary);">Execução de contrato</strong> — tratamento necessário para prestar os serviços contratados.</li>
-                <li><strong style="color:var(--text-primary);">Consentimento</strong> — quando solicitamos dados diretamente ao titular para finalidades específicas.</li>
-                <li><strong style="color:var(--text-primary);">Legítimo interesse</strong> — para melhorias de produto, segurança e prevenção de fraudes.</li>
-                <li><strong style="color:var(--text-primary);">Cumprimento de obrigação legal</strong> — como no caso do Agente NR1, que apoia a conformidade com normas do Ministério do Trabalho.</li>
+                <li><strong class="u-c-text-primary">Execução de contrato</strong> — tratamento necessário para prestar os serviços contratados.</li>
+                <li><strong class="u-c-text-primary">Consentimento</strong> — quando solicitamos dados diretamente ao titular para finalidades específicas.</li>
+                <li><strong class="u-c-text-primary">Legítimo interesse</strong> — para melhorias de produto, segurança e prevenção de fraudes.</li>
+                <li><strong class="u-c-text-primary">Cumprimento de obrigação legal</strong> — como no caso do Agente NR1, que apoia a conformidade com normas do Ministério do Trabalho.</li>
             </ul>
 
             <h2>Seus direitos como titular</h2>
@@ -218,7 +219,7 @@ ${NAV}
             <h2>Autoridade Nacional de Proteção de Dados (ANPD)</h2>
             <p>Se considerar que seus direitos não foram atendidos adequadamente, você pode apresentar reclamação à <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">ANPD</a> — a autoridade reguladora da LGPD no Brasil.</p>
 
-            <p style="margin-top:2rem;">Para detalhes completos sobre como coletamos e usamos seus dados, consulte nossa <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+            <p class="u-mt-2rem">Para detalhes completos sobre como coletamos e usamos seus dados, consulte nossa <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
         </div>
     </div>
 </main>
@@ -234,7 +235,7 @@ const privacidade = head(
   'https://fiter.com.br/politica-de-privacidade/'
 ) + `
 ${NAV}
-<main class="main-content" style="padding-top:64px;">
+<main class="main-content u-pt-64px">
     <div class="ds-container px-6">
         <div class="legal-wrap">
             <div class="legal-breadcrumb">
@@ -243,26 +244,26 @@ ${NAV}
             <h1>Política de Privacidade</h1>
             <span class="legal-date">Última atualização: maio de 2026</span>
 
-            <p>A <strong style="color:var(--text-primary);">Fiter Tecnologia LTDA</strong> ("Fiter", "nós") é uma empresa brasileira de people analytics. Esta Política descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
+            <p>A <strong class="u-c-text-primary">Fiter Tecnologia LTDA</strong> ("Fiter", "nós") é uma empresa brasileira de people analytics. Esta Política descreve como coletamos, usamos, armazenamos e protegemos seus dados pessoais, em conformidade com a LGPD (Lei nº 13.709/2018).</p>
 
             <h2>1. Quem somos</h2>
             <p>Fiter Tecnologia LTDA — empresa com sede em São Paulo/SP. Dúvidas sobre esta Política: <a href="mailto:privacidade@fiter.com.br">privacidade@fiter.com.br</a>.</p>
 
             <h2>2. Dados que coletamos</h2>
-            <p><strong style="color:var(--text-primary);">Clientes (empresas contratantes):</strong></p>
+            <p><strong class="u-c-text-primary">Clientes (empresas contratantes):</strong></p>
             <ul>
                 <li>Nome, e-mail e telefone do responsável pelo contrato</li>
                 <li>Dados da empresa (razão social, CNPJ, segmento)</li>
                 <li>Dados de faturamento e pagamento</li>
                 <li>Dados de uso da plataforma (logs de acesso, funcionalidades utilizadas)</li>
             </ul>
-            <p><strong style="color:var(--text-primary);">Colaboradores e alunos (usuários das pesquisas):</strong></p>
+            <p><strong class="u-c-text-primary">Colaboradores e alunos (usuários das pesquisas):</strong></p>
             <ul>
                 <li>Número de telefone (para envio via WhatsApp)</li>
-                <li>Respostas às pesquisas — tratadas de forma <strong style="color:var(--text-primary);">anonimizada</strong> antes de serem apresentadas aos gestores</li>
+                <li>Respostas às pesquisas — tratadas de forma <strong class="u-c-text-primary">anonimizada</strong> antes de serem apresentadas aos gestores</li>
                 <li>Metadados de resposta (data, hora, tempo de resposta) — sem identificação individual</li>
             </ul>
-            <p><strong style="color:var(--text-primary);">Visitantes do site:</strong></p>
+            <p><strong class="u-c-text-primary">Visitantes do site:</strong></p>
             <ul>
                 <li>Dados de navegação via cookies analíticos (páginas visitadas, tempo de sessão)</li>
                 <li>Dados fornecidos voluntariamente em formulários de contato</li>
@@ -280,15 +281,15 @@ ${NAV}
 
             <h2>4. Anonimização das respostas</h2>
             <div class="legal-highlight">
-                <p style="margin:0;">As respostas individuais dos colaboradores e alunos são <strong style="color:var(--text-primary);">sempre anonimizadas</strong> antes de serem apresentadas aos gestores. Grupos com menos de 5 respondentes não são exibidos para evitar identificação por exclusão. Nenhum gestor tem acesso à resposta individual de nenhuma pessoa.</p>
+                <p class="u-m-0">As respostas individuais dos colaboradores e alunos são <strong class="u-c-text-primary">sempre anonimizadas</strong> antes de serem apresentadas aos gestores. Grupos com menos de 5 respondentes não são exibidos para evitar identificação por exclusão. Nenhum gestor tem acesso à resposta individual de nenhuma pessoa.</p>
             </div>
 
             <h2>5. Compartilhamento de dados</h2>
             <p>Não vendemos dados pessoais. Compartilhamos apenas com:</p>
             <ul>
-                <li><strong style="color:var(--text-primary);">Meta (WhatsApp Business API)</strong> — para envio das pesquisas</li>
-                <li><strong style="color:var(--text-primary);">Provedores de infraestrutura em nuvem</strong> — armazenamento e processamento seguro</li>
-                <li><strong style="color:var(--text-primary);">Autoridades competentes</strong> — quando exigido por lei ou ordem judicial</li>
+                <li><strong class="u-c-text-primary">Meta (WhatsApp Business API)</strong> — para envio das pesquisas</li>
+                <li><strong class="u-c-text-primary">Provedores de infraestrutura em nuvem</strong> — armazenamento e processamento seguro</li>
+                <li><strong class="u-c-text-primary">Autoridades competentes</strong> — quando exigido por lei ou ordem judicial</li>
             </ul>
             <p>Todos os fornecedores são contratualmente obrigados a tratar os dados com o mesmo nível de proteção que aplicamos.</p>
 
@@ -331,7 +332,7 @@ const termos = head(
   'https://fiter.com.br/termos-de-uso/'
 ) + `
 ${NAV}
-<main class="main-content" style="padding-top:64px;">
+<main class="main-content u-pt-64px">
     <div class="ds-container px-6">
         <div class="legal-wrap">
             <div class="legal-breadcrumb">
@@ -340,20 +341,20 @@ ${NAV}
             <h1>Termos de Uso</h1>
             <span class="legal-date">Última atualização: maio de 2026</span>
 
-            <p>Estes Termos regulam o acesso e uso dos produtos e serviços da <strong style="color:var(--text-primary);">Fiter Tecnologia LTDA</strong> ("Fiter"). Ao contratar ou utilizar qualquer produto Fiter, você concorda com estes Termos.</p>
+            <p>Estes Termos regulam o acesso e uso dos produtos e serviços da <strong class="u-c-text-primary">Fiter Tecnologia LTDA</strong> ("Fiter"). Ao contratar ou utilizar qualquer produto Fiter, você concorda com estes Termos.</p>
 
             <h2>1. Serviços</h2>
             <p>A Fiter oferece uma plataforma de people analytics composta por:</p>
             <ul>
-                <li><strong style="color:var(--text-primary);">Pulse</strong> — pulse survey contínuo via WhatsApp para medir engajamento e bem-estar</li>
-                <li><strong style="color:var(--text-primary);">Agente NR1</strong> — geração automatizada de laudos de risco psicossocial em conformidade com a NR1</li>
-                <li><strong style="color:var(--text-primary);">Pulse Educação</strong> — medição do Índice de Felicidade na Educação (IFE) e predição de evasão</li>
-                <li><strong style="color:var(--text-primary);">Portal de Transparência</strong> — dashboard de gestão e relatórios de clima organizacional</li>
+                <li><strong class="u-c-text-primary">Pulse</strong> — pulse survey contínuo via WhatsApp para medir engajamento e bem-estar</li>
+                <li><strong class="u-c-text-primary">Agente NR1</strong> — geração automatizada de laudos de risco psicossocial em conformidade com a NR1</li>
+                <li><strong class="u-c-text-primary">Pulse Educação</strong> — medição do Índice de Felicidade na Educação (IFE) e predição de evasão</li>
+                <li><strong class="u-c-text-primary">Portal de Transparência</strong> — dashboard de gestão e relatórios de clima organizacional</li>
             </ul>
             <p>Os serviços são prestados sob modelo de assinatura (SaaS) e podem ser modificados ou descontinuados mediante aviso prévio de 30 dias.</p>
 
             <h2>2. Elegibilidade</h2>
-            <p>Os serviços são destinados a <strong style="color:var(--text-primary);">pessoas jurídicas</strong> (empresas e instituições de ensino). Ao contratar, o representante declara ter poderes legais para vincular a organização a estes Termos e à <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
+            <p>Os serviços são destinados a <strong class="u-c-text-primary">pessoas jurídicas</strong> (empresas e instituições de ensino). Ao contratar, o representante declara ter poderes legais para vincular a organização a estes Termos e à <a href="/politica-de-privacidade/">Política de Privacidade</a>.</p>
 
             <h2>3. Obrigações do cliente</h2>
             <ul>

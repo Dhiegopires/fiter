@@ -43,6 +43,10 @@ const posts = files.map(file => {
 
     // Convert markdown to HTML
     let htmlContent = marked.parse(mdContent);
+    // O layout já renderiza data.title como <h1>; o "# título" do markdown viraria um segundo H1
+    htmlContent = htmlContent
+        .replace(/<h1[^>]*>[\s\S]*?<\/h1>\s*/, '')
+        .replace(/<h1([^>]*)>([\s\S]*?)<\/h1>/g, '<h2$1>$2</h2>');
     // Style the first paragraph as lead
     htmlContent = htmlContent.replace('<p>', '<p class="article-lead">');
 
@@ -90,34 +94,34 @@ posts.forEach(post => {
     // Build CTA block (varia por categoria)
     let ctaBlock;
     if (data.category === 'Educação') {
-        ctaBlock = `<div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
-                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
-                        <div style="position:relative;">
-                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Software — Fiter Pulse Educação</p>
-                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">O software que identifica evasão antes que aconteça.</h3>
-                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">Fiter Pulse Educação é uma plataforma de software que envia pesquisas de pulso para alunos via WhatsApp — 8 cliques, sem app, sem login. O software mapeia engajamento acadêmico turma a turma e gera alertas automáticos de risco de evasão antes que o aluno desapareça.</p>
-                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_educacao'})">Ver demonstração do software</a>
+        ctaBlock = `<div class="u-mt-3_5rem u-p-2_5rem u-bg-bg-surface u-mix-464e7 u-pos-relative u-overflow-hidden" data-reveal>
+                        <div class="u-pos-absolute u-inset-0 u-bg-radial-gradient-elli7c445 u-pe-none" aria-hidden="true"></div>
+                        <div class="u-pos-relative">
+                            <p class="u-ff-font-mono u-fs-0_6rem u-tt-uppercase u-ls-0_1em u-c-accent-brand u-mb-0_75rem">Software — Fiter Pulse Educação</p>
+                            <h3 class="u-ff-font-serif u-fs-clamp-1_25rem-2vw-1_65rem u-fw-800 u-ls-n0_02em u-lh-1_15 u-c-text-primary u-mb-0_85rem">O software que identifica evasão antes que aconteça.</h3>
+                            <p class="u-fs-0_9rem u-c-text-secondary u-lh-1_6 u-mb-1_75rem">Fiter Pulse Educação é uma plataforma de software que envia pesquisas de pulso para alunos via WhatsApp — 8 cliques, sem app, sem login. O software mapeia engajamento acadêmico turma a turma e gera alertas automáticos de risco de evasão antes que o aluno desapareça.</p>
+                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none u-d-inline-flex" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_educacao'})">Ver demonstração do software</a>
                         </div>
                     </div>`;
     } else if (data.category === 'RH') {
-        ctaBlock = `<div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
-                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
-                        <div style="position:relative;">
-                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Software — Fiter Pulse</p>
-                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Seu RH ouve a equipe toda semana — em 8 cliques.</h3>
-                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">O software Fiter envia pesquisas de pulso pelo WhatsApp sem login, sem app. Seu time responde em 2 minutos e você recebe um painel de People Analytics com alertas de burnout, previsão de turnover e PDI gerado por IA — tudo em tempo real.</p>
-                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Ver demonstração do software</a>
-                            <p style="margin-top:1.25rem;font-size:0.85rem;color:var(--text-tertiary);">Ainda avaliando? <a href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/" style="color:var(--accent-brand);text-decoration:underline;text-underline-offset:3px;">baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
+        ctaBlock = `<div class="u-mt-3_5rem u-p-2_5rem u-bg-bg-surface u-mix-464e7 u-pos-relative u-overflow-hidden" data-reveal>
+                        <div class="u-pos-absolute u-inset-0 u-bg-radial-gradient-elli7c445 u-pe-none" aria-hidden="true"></div>
+                        <div class="u-pos-relative">
+                            <p class="u-ff-font-mono u-fs-0_6rem u-tt-uppercase u-ls-0_1em u-c-accent-brand u-mb-0_75rem">Software — Fiter Pulse</p>
+                            <h3 class="u-ff-font-serif u-fs-clamp-1_25rem-2vw-1_65rem u-fw-800 u-ls-n0_02em u-lh-1_15 u-c-text-primary u-mb-0_85rem">Seu RH ouve a equipe toda semana — em 8 cliques.</h3>
+                            <p class="u-fs-0_9rem u-c-text-secondary u-lh-1_6 u-mb-1_75rem">O software Fiter envia pesquisas de pulso pelo WhatsApp sem login, sem app. Seu time responde em 2 minutos e você recebe um painel de People Analytics com alertas de burnout, previsão de turnover e PDI gerado por IA — tudo em tempo real.</p>
+                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none u-d-inline-flex" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_rh'})">Ver demonstração do software</a>
+                            <p class="u-mt-1_25rem u-fs-0_85rem u-c-text-tertiary">Ainda avaliando? <a class="u-c-accent-brand u-td-underline u-text-underline-offset-3px" href="/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/">baixe o Guia Gratuito de Gestão de Riscos Psicossociais →</a></p>
                         </div>
                     </div>`;
     } else {
-        ctaBlock = `<div data-reveal style="margin-top:3.5rem;padding:2.5rem;background:var(--bg-surface);border:1px solid var(--border-default);border-radius:var(--radius-lg);position:relative;overflow:hidden;">
-                        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 80% 50%, var(--accent-glow) 0%, transparent 65%);pointer-events:none;" aria-hidden="true"></div>
-                        <div style="position:relative;">
-                            <p style="font-family:var(--font-mono);font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent-brand);margin-bottom:0.75rem;">Plataforma Fiter</p>
-                            <h3 style="font-family:var(--font-serif);font-size:clamp(1.25rem,2vw,1.65rem);font-weight:800;letter-spacing:-0.02em;line-height:1.15;color:var(--text-primary);margin-bottom:0.85rem;">Software de People Analytics que cabe no WhatsApp.</h3>
-                            <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.6;margin-bottom:1.75rem;">A plataforma de software Fiter coleta feedback contínuo em 8 cliques via WhatsApp — sem login, sem app — e entrega um painel de People Analytics com alertas automáticos de burnout e previsão de turnover.</p>
-                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars" style="text-decoration:none;display:inline-flex;" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_generico'})">Agendar demonstração</a>
+        ctaBlock = `<div class="u-mt-3_5rem u-p-2_5rem u-bg-bg-surface u-mix-464e7 u-pos-relative u-overflow-hidden" data-reveal>
+                        <div class="u-pos-absolute u-inset-0 u-bg-radial-gradient-elli7c445 u-pe-none" aria-hidden="true"></div>
+                        <div class="u-pos-relative">
+                            <p class="u-ff-font-mono u-fs-0_6rem u-tt-uppercase u-ls-0_1em u-c-accent-brand u-mb-0_75rem">Plataforma Fiter</p>
+                            <h3 class="u-ff-font-serif u-fs-clamp-1_25rem-2vw-1_65rem u-fw-800 u-ls-n0_02em u-lh-1_15 u-c-text-primary u-mb-0_85rem">Software de People Analytics que cabe no WhatsApp.</h3>
+                            <p class="u-fs-0_9rem u-c-text-secondary u-lh-1_6 u-mb-1_75rem">A plataforma de software Fiter coleta feedback contínuo em 8 cliques via WhatsApp — sem login, sem app — e entrega um painel de People Analytics com alertas automáticos de burnout e previsão de turnover.</p>
+                            <a href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-animate-chars u-td-none u-d-inline-flex" onclick="if(window.gtag)gtag('event','generate_lead',{event_category:'cta',event_label:'blog_post_cta_generico'})">Agendar demonstração</a>
                         </div>
                     </div>`;
     }
@@ -127,26 +131,43 @@ posts.forEach(post => {
     let imageSection;
     if (imageFilename) {
         imageSection = `
-        <section style="padding-bottom: 3rem;">
-            <div style="max-width: 960px; margin: 0 auto; padding: 0 2rem;">
-                <img src="${imageFilename}" alt="${data.title}" style="width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:var(--radius-lg);border:1px solid var(--border-subtle);display:block;">
+        <section class="u-pb-3rem">
+            <div class="u-maxw-960px u-m-0-auto u-p-0-2rem">
+                <img class="u-w-100pct u-ar-16-7 u-fit-cover u-mix-530cb u-d-block" src="${imageFilename}" alt="${data.title}">
             </div>
         </section>`;
     } else {
         imageSection = '';
     }
 
-    // Build related posts (same category first, then fill from others)
-    const sameCat = posts.filter(p => p.data.slug !== data.slug && p.data.category === data.category).slice(0, 3);
-    const otherCat = posts.filter(p => p.data.slug !== data.slug && p.data.category !== data.category).slice(0, 3 - sameCat.length);
+    // Related posts: vizinhos cronológicos na mesma categoria (anterior, próximo, seguinte),
+    // para que todo post receba links internos — não só os 3 mais recentes
+    const pickNeighbors = (list, n) => {
+        const others = list.filter(p => p.data.slug !== data.slug);
+        if (others.length <= n) return others;
+        const idx = list.findIndex(p => p.data.slug === data.slug);
+        const start = Math.max(0, Math.min(idx - 1, others.length - n));
+        return others.slice(start, start + n);
+    };
+    const sameCatList = posts.filter(p => p.data.category === data.category);
+    const sameCat = pickNeighbors(sameCatList, 3);
+    const otherCat = pickNeighbors(posts.filter(p => p.data.category !== data.category || p.data.slug === data.slug), 3 - sameCat.length);
     const relatedPosts = [...sameCat, ...otherCat].slice(0, 3);
     const relatedHtml = relatedPosts.map(r => `<a href="/blog/${r.data.slug}/" class="related-post-item">
                                 <span class="related-post-tag">${r.data.category}</span>
                                 <p class="related-post-title">${r.data.title}</p>
                             </a>`).join('\n                            ');
 
+    // <title> até 60 caracteres: seoTitle (opcional no frontmatter) ou title, sufixo só se couber
+    const baseTitle = data.seoTitle || data.title;
+    const pageTitle = [`${baseTitle} | Fiter Blog`, `${baseTitle} | Fiter`, baseTitle].find(t => t.length <= 60) || baseTitle;
+    const ogImage = imageFilename
+        ? `https://fiter.com.br/blog/${data.slug}/${imageFilename}`
+        : 'https://fiter.com.br/assets/img/hero_dashboard-og.jpg';
+
     let pageHtml = layoutTemplate
-        .replace(/\{\{PAGE_TITLE\}\}/g, `${data.title} | Fiter Blog`)
+        .replace(/\{\{PAGE_TITLE\}\}/g, pageTitle)
+        .replace(/\{\{OG_IMAGE\}\}/g, ogImage)
         .replace(/\{\{META_DESCRIPTION\}\}/g, data.description)
         .replace(/\{\{SLUG\}\}/g, data.slug)
         .replace(/\{\{CATEGORY\}\}/g, data.category)
@@ -167,7 +188,7 @@ posts.forEach(post => {
 // Generate category filter badges
 const categories = [...new Set(posts.map(p => p.data.category))];
 const filterBadges = `
-            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem;">
+            <div class="u-d-flex u-fwrap-wrap u-jc-center u-gap-0_75rem">
                 <button class="filter-btn active" data-category="all">Todos</button>
                 ${categories.map(cat => `
                 <button class="filter-btn" data-category="${cat}">${cat}</button>`).join('\n')}

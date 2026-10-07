@@ -2,6 +2,7 @@
 # Título principal do artigo
 # Evite títulos muito longos (ideal: até 60 caracteres)
 title: "Saúde Mental e Engajamento: O Novo Padrão e Exigência para Escolas e Faculdades de Sucesso"
+seoTitle: "Saúde Mental e Engajamento: O Novo Padrão na Educação"
 
 # URL do artigo
 # Use letras minúsculas e hifens

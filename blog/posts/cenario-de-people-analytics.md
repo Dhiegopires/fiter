@@ -2,6 +2,7 @@
 # Título principal do artigo
 # Evite títulos muito longos (ideal: até 60 caracteres)
 title: "People Analytics na Prática: Como Prever e Evitar o Pedido de Demissão"
+seoTitle: "People Analytics na Prática: Como Prever Pedidos de Demissão"
 
 # URL do artigo
 # Use letras minúsculas e hífens

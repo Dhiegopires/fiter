@@ -20,10 +20,6 @@ const staticPages = [
   { path: '/blog/',              priority: 0.6, changefreq: 'weekly',  lastmod: '2026-06-05' },
 ];
 
-const orphanPosts = [
-  { slug: 'guia-do-gro-e-pgr', date: '2026-06-01' },
-];
-
 function getBlogPosts() {
   if (!fs.existsSync(POSTS_DIR)) return [];
 
@@ -40,7 +36,7 @@ function getBlogPosts() {
 
 function buildSitemap() {
   const blogPosts = getBlogPosts();
-  const allPosts = [...blogPosts, ...orphanPosts];
+  const allPosts = blogPosts;
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
   xml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
