@@ -394,6 +394,8 @@
             text-decoration: none;
             border: 1px solid transparent;
             font-family: var(--font-sans);
+            max-width: 100%;
+            text-align: center;
         }
 
         .btn-primary {
@@ -614,9 +616,14 @@
         }
         .btn-text {
             display: inline-flex;
+            flex-wrap: wrap;
+            justify-content: center;
             white-space: pre;
-            overflow: hidden;
             line-height: 1.2;
+        }
+        .btn-word {
+            display: inline-flex;
+            overflow: hidden;
             padding-bottom: 0.1em;
             margin-bottom: -0.1em;
         }
@@ -1526,6 +1533,8 @@
             border-bottom: 1px solid rgba(255,255,255,0.07);
         }
         .nav-panel-logo img, .nav-panel-logo svg { mix-blend-mode: screen; color: var(--accent-brand); }
+        .logo-dot-neutral .nav-logo svg,
+        .logo-dot-neutral .nav-panel-logo svg { color: var(--text-secondary); }
         .drawer-item { border-bottom: 1px solid rgba(255,255,255,0.05); }
         .drawer-trigger {
             width: 100%;

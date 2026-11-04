@@ -67,6 +67,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://fiter.com.br/global/</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://fiter.com.br/blog/alem-do-salario-estrategias-retencao/</loc>
     <lastmod>2026-08-05</lastmod>
     <changefreq>monthly</changefreq>

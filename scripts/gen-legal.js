@@ -14,8 +14,8 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             <li class="nav-item has-drop" data-nav-item>
                 <button class="nav-link">Produtos <span class="nav-chevron">▾</span></button>
                 <div class="nav-drop">
-                    <a class="drop-link" href="/produtos/pulse/"><div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Engajamento contínuo</div></div></a>
-                    <a class="drop-link" href="/produtos/nr01/"><div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Conformidade automática</div></div></a>
+                    <a class="drop-link" href="/produtos/pulse/"><div><div class="drop-link-name">Pulse</div><div class="drop-link-tag">Pesquisa pulse de engajamento</div></div></a>
+                    <a class="drop-link" href="/produtos/nr01/"><div><div class="drop-link-name">Agente NR1</div><div class="drop-link-tag">Software NR1 e riscos psicossociais</div></div></a>
                 </div>
             </li>
             <li class="nav-item has-drop" data-nav-item>
@@ -26,6 +26,7 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             </li>
             <li class="nav-item"><a class="nav-link" href="/sobre/">Sobre</a></li>
             <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="/global/" hreflang="en">Global</a></li>
         </ul>
         <div class="nav-right">
             <a class="btn btn-primary nav-cta btn-animate-chars u-td-none" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a>
@@ -58,6 +59,7 @@ const NAV = `<nav class="site-nav" id="site-nav" aria-label="Navegação princip
             </div>
             <a class="drawer-plain-link" href="/sobre/">Sobre</a>
             <a class="drawer-plain-link" href="/blog/">Blog</a>
+            <a class="drawer-plain-link" href="/global/" hreflang="en">Global</a>
             <div class="drawer-cta"><a class="btn btn-primary w-full u-td-none u-jc-center" href="https://meetings.hubspot.com/sergioamad/reuniao" target="_blank" rel="noopener noreferrer">Agendar demonstração</a></div>
         </div>
     </div>

@@ -24,6 +24,28 @@ function inlineLogoSVGs() {
 }
 inlineLogoSVGs();
 
+// Texto do botão letra a letra (animação de hover), agrupado por palavra:
+// o botão quebra linha entre palavras no mobile em vez de vazar da tela
+function buildBtnText(text) {
+    const wrapper = document.createElement('span');
+    wrapper.className = 'btn-text';
+    let i = 0;
+    text.split(/(?<= )/).forEach(word => {
+        const w = document.createElement('span');
+        w.className = 'btn-word';
+        [...word].forEach(char => {
+            const span = document.createElement('span');
+            span.className = 'char';
+            span.textContent = char;
+            span.dataset.char = char;
+            span.style.transitionDelay = `${i++ * 0.015}s`;
+            w.appendChild(span);
+        });
+        wrapper.appendChild(w);
+    });
+    return wrapper;
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Reveal Footer Logic
     function updateFooter() {
@@ -53,17 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (textNodes.length === 0) return;
         const text = textNodes.map(n => n.textContent).join('').trim();
         btn.innerHTML = '';
-        const wrapper = document.createElement('span');
-        wrapper.className = 'btn-text';
-        [...text].forEach((char, i) => {
-            const span = document.createElement('span');
-            span.className = 'char';
-            span.textContent = char;
-            span.dataset.char = char;
-            span.style.transitionDelay = `${i * 0.015}s`;
-            wrapper.appendChild(span);
-        });
-        btn.appendChild(wrapper);
+        btn.appendChild(buildBtnText(text));
     });
 
     // Theme Switcher
