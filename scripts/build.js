@@ -25,18 +25,19 @@ function walkHtml(dir, files = []) {
     return files;
 }
 
-function injectCssHash(hash) {
-    const htmlFiles = walkHtml(ROOT);
-    let count = 0;
-    const linkRegex = /href="\/assets\/css\/style\.min\.css(?:\?v=[^"]*)?"/g;
-    const replacement = `href="/assets/css/style.min.css?v=${hash}"`;
+const md5 = buf => crypto.createHash('md5').update(buf).digest('hex').slice(0, 8);
 
-    for (const file of htmlFiles) {
-        let content = fs.readFileSync(file, 'utf-8');
-        if (!linkRegex.test(content)) continue;
-        content = content.replace(linkRegex, replacement);
-        fs.writeFileSync(file, content, 'utf-8');
-        count++;
+// Acrescenta ?v=<hash do conteúdo> nas referências ao asset em todo HTML.
+// O Cloudflare guarda assets estáticos por 7 dias: sem o hash, um deploy pode
+// servir CSS novo com JS velho (foi o que duplicou o texto dos botões).
+function injectHash(urlPath, hash) {
+    const esc = urlPath.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const re = new RegExp(`(href|src)="${esc}(?:\\?v=[^"]*)?"`, 'g');
+    let count = 0;
+    for (const file of walkHtml(ROOT)) {
+        const content = fs.readFileSync(file, 'utf-8');
+        const next = content.replace(re, `$1="${urlPath}?v=${hash}"`);
+        if (next !== content) { fs.writeFileSync(file, next, 'utf-8'); count++; }
     }
     return count;
 }
@@ -54,8 +55,8 @@ async function build() {
         const newSize = (Buffer.byteLength(minified) / 1024).toFixed(1);
         console.log(`    ✓ style.css → style.min.css  (${origSize} KB → ${newSize} KB)`);
 
-        const hash = crypto.createHash('md5').update(minified).digest('hex').slice(0, 8);
-        const n = injectCssHash(hash);
+        const hash = md5(minified);
+        const n = injectHash('/assets/css/style.min.css', hash);
         console.log(`    ✓ Cache-busting: ?v=${hash} em ${n} HTML`);
     } else {
         console.warn('    ⚠ style.css não encontrado');
@@ -70,8 +71,17 @@ async function build() {
         const origSize = (Buffer.byteLength(js) / 1024).toFixed(1);
         const newSize = (Buffer.byteLength(result.code) / 1024).toFixed(1);
         console.log(`    ✓ main.js → main.min.js  (${origSize} KB → ${newSize} KB)`);
+
+        const n = injectHash('/assets/js/main.min.js', md5(result.code));
+        console.log(`    ✓ Cache-busting: ?v=${md5(result.code)} em ${n} HTML`);
     } else {
         console.warn('    ⚠ main.js não encontrado');
+    }
+
+    // ── Favicons ─────────────────────────────────────────
+    for (const icon of ['/assets/img/fiter_logo_fi.svg', '/favicon.ico', '/apple-touch-icon.png']) {
+        const file = path.join(ROOT, icon);
+        if (fs.existsSync(file)) injectHash(icon, md5(fs.readFileSync(file)));
     }
 
     // ── Imagens ──────────────────────────────────────────

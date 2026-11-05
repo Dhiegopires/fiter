@@ -619,7 +619,10 @@
             flex-wrap: wrap;
             justify-content: center;
             white-space: pre;
+            overflow: hidden;
             line-height: 1.2;
+            padding-bottom: 0.1em;
+            margin-bottom: -0.1em;
         }
         .btn-word {
             display: inline-flex;
