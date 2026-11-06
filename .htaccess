@@ -1,3 +1,26 @@
 # Post renomeado: slug antigo ainda tem backlinks
 Redirect 301 /blog/guia-do-gro-e-pgr/ https://fiter.com.br/blog/papel-estrategico-rh-gro-pgr/
 Redirect 301 /employee-engagement/ https://fiter.com.br/global/
+
+# URLs do site antigo (template) e páginas removidas: davam 404
+Redirect 301 /contato.html https://fiter.com.br/
+Redirect 301 /contato/ https://fiter.com.br/
+Redirect 301 /produto.html https://fiter.com.br/produtos/
+
+# Site anterior (WordPress): páginas na raiz que ranqueavam no Google e
+# viraram 404 quando foram para /produtos/. Origem: GA4, páginas de destino 2025-2026.
+RedirectMatch 301 ^/nr01/?$ https://fiter.com.br/produtos/nr01/
+RedirectMatch 301 ^/(pulse|pulse-2|pulse-by-fiter)/?$ https://fiter.com.br/produtos/pulse/
+RedirectMatch 301 ^/pulse-educacao/?$ https://fiter.com.br/produtos/pulse-educacao/
+RedirectMatch 301 ^/pesquisa-de-clima/?$ https://fiter.com.br/produtos/pesquisa-de-clima/
+RedirectMatch 301 ^/ouvidoria/?$ https://fiter.com.br/produtos/ouvidoria/
+RedirectMatch 301 ^/portal-de-transparencia/?$ https://fiter.com.br/produtos/portal-de-transparencia/
+RedirectMatch 301 ^/(guia-pratico-de-gestao-dos-riscos-psicossociais(-2)?|ebook_guia-pratico-de-gestao-dos-riscos-psicossociais)/?$ https://fiter.com.br/produtos/guia-pratico-de-gestao-dos-riscos-psicossociais/
+RedirectMatch 301 ^/materiais/?$ https://fiter.com.br/blog/
+RedirectMatch 301 ^/(evento-selo-h-2026|contato|confirmado-e-book-sho|confirmado-certificacao-sho)/?$ https://fiter.com.br/
+
+# Posts renomeados ou removidos
+Redirect 301 /blog/gro-e-pgr-guia/ https://fiter.com.br/blog/papel-estrategico-rh-gro-pgr/
+Redirect 301 /blog/quais-sao-as-reais-obrigacoes-do-recursos-humanos/ https://fiter.com.br/blog/papel-estrategico-rh-gro-pgr/
+Redirect 301 /blog/ia-fit-cultural-retencao-talentos/ https://fiter.com.br/blog/fit-cultural-dados-retencao/
+Redirect 301 /blog/riscos-psicossociais-nr-01-pesquisa-clima/ https://fiter.com.br/blog/riscos-psicossociais-nr1-pesquisa-clima/
